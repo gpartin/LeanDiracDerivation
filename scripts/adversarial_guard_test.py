@@ -33,9 +33,38 @@ def assert_rejected(name: str, source: str) -> None:
         path.unlink(missing_ok=True)
 
 
+def assert_dependency_output_rejected(name: str, output: str) -> None:
+    _, errors = guard.decode_lean_dependency_output(output)
+    if not errors:
+        raise AssertionError(f"dependency-path bypass was accepted: {name}")
+
+
 def main() -> int:
     for name, source in FIXTURES.items():
         assert_rejected(name, source)
+    assert_dependency_output_rejected(
+        "multiple_lib_lean_markers",
+        "/tmp/lib/lean/Unapproved/lib/lean/LeanDirac/Publication.olean\n",
+    )
+    assert_dependency_output_rejected(
+        "same_module_outside_approved_root",
+        "/tmp/foreign/lib/lean/LeanDirac/Publication.olean\n",
+    )
+    assert_dependency_output_rejected(
+        "fake_init_outside_toolchain", "/tmp/foreign/lib/lean/Foo/Init.olean\n"
+    )
+    approved = (
+        guard.ROOT
+        / ".lake"
+        / "build"
+        / "lib"
+        / "lean"
+        / "LeanDirac"
+        / "Publication.olean"
+    ).resolve()
+    assert_dependency_output_rejected(
+        "duplicate_approved_module", f"{approved}\n{approved}\n"
+    )
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

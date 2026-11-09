@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import subprocess
+from functools import lru_cache
 from pathlib import Path
 
 
@@ -99,6 +100,44 @@ def canonical_import_modules(path: Path) -> tuple[list[str], list[str]]:
     return modules, errors
 
 
+@lru_cache(maxsize=1)
+def approved_init_dependency() -> Path:
+    completed = subprocess.run(
+        ["lake", "env", "lean", "--print-prefix"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    prefix = Path(completed.stdout.strip()).resolve()
+    return (prefix / "lib" / "lean" / "Init.olean").resolve()
+
+
+def decode_lean_dependency_output(output: str) -> tuple[list[str], list[str]]:
+    """Decode only modules from this repository's exact Lean build root."""
+    modules: list[str] = []
+    errors: list[str] = []
+    approved_root = (ROOT / ".lake" / "build" / "lib" / "lean").resolve()
+    for raw in output.splitlines():
+        candidate = raw.strip()
+        if not candidate.endswith(".olean"):
+            continue
+        dependency = Path(candidate).resolve()
+        if dependency == approved_init_dependency():
+            continue
+        try:
+            relative = dependency.relative_to(approved_root)
+        except ValueError:
+            errors.append(f"dependency outside approved Lean build root: {raw}")
+            continue
+        module = ".".join(relative.with_suffix("").parts)
+        modules.append(module)
+    duplicates = sorted({module for module in modules if modules.count(module) > 1})
+    if duplicates:
+        errors.append(f"duplicate direct Lean dependencies: {duplicates}")
+    return sorted(modules), errors
+
+
 def lean_direct_imports(path: Path) -> tuple[list[str], list[str]]:
     """Ask Lean itself which direct modules the source imports.
 
@@ -119,22 +158,7 @@ def lean_direct_imports(path: Path) -> tuple[list[str], list[str]]:
             + completed.stdout
             + completed.stderr
         ]
-
-    modules: list[str] = []
-    errors: list[str] = []
-    for raw in completed.stdout.splitlines():
-        normalized = raw.strip().replace("\\", "/")
-        if not normalized.endswith(".olean"):
-            continue
-        marker = "/lib/lean/"
-        if marker not in normalized:
-            errors.append(f"unrecognized Lean dependency path: {raw}")
-            continue
-        module_path = normalized.rsplit(marker, 1)[1][:-len(".olean")]
-        module = module_path.replace("/", ".")
-        if module != "Init":
-            modules.append(module)
-    return sorted(set(modules)), errors
+    return decode_lean_dependency_output(completed.stdout)
 
 
 def require_imports(path: Path, expected: list[str], errors: list[str], label: str) -> None:
