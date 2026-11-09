@@ -103,6 +103,7 @@ lake update
 lake build
 lake build LeanDiracAudit
 python scripts/production_guard.py
+python scripts/adversarial_guard_test.py
 ```
 
 The axiom report may contain Lean's standard foundations
