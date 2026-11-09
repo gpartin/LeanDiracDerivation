@@ -14,7 +14,8 @@ remain outside this repository.
 |---|---|---|
 | `DIRAC-001` | **PASS** | One public proof root and a closed, auditable dependency chain. |
 | `DIRAC-002` | **PASS** | A nonnegative two-field complex-C3 action with geometry-derived exterior-area transport and a concrete prepared eight-corner background. |
-| `DIRAC-003` | **NEXT** | Derive both reciprocal governing equation families from the frozen action. |
+| `DIRAC-003` | **PASS** | Exact state and velocity variations derive the reciprocal Psi and chi Euler-Lagrange force and momentum families on the concrete C19 bond map. |
+| `DIRAC-004` | **NEXT** | Derive the action-compatible reversible native time update. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -52,8 +53,8 @@ Recovering its exact higher-zoom scalar response remains open.
 |---:|---|---|---|---|
 | 1 | `DIRAC-001` | Authority boundary | **PASS** | One public root; no experimental or superseded dependency enters the production graph. |
 | 2 | `DIRAC-002` | Native action | **PASS** | A positive two-field action, derived geometric transport, coefficient provenance and a cleared no-bolt-on review. |
-| 3 | `DIRAC-003` | Native equations | **NEXT** | Vary the frozen action and prove exactly two reciprocal Euler-Lagrange equation families. |
-| 4 | `DIRAC-004` | Native time | OPEN | Derive and verify the action-compatible reversible second-order update. |
+| 3 | `DIRAC-003` | Native equations | **PASS** | Vary the frozen action and prove exactly two reciprocal Euler-Lagrange equation families. |
+| 4 | `DIRAC-004` | Native time | **NEXT** | Derive and verify the action-compatible reversible second-order update. |
 | 5 | `DIRAC-005` | Native sector | OPEN | Derive the invariant eight-site sector and retain every native copy. |
 | 6 | `DIRAC-006` | Native symbol | OPEN | Derive finite-lattice transport coefficients from lattice characters. |
 | 7 | `DIRAC-007` | Paired readout | OPEN | Build a lossless first-order readout from native displacement and velocity. |
@@ -78,6 +79,7 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
+LeanDirac/Dirac003.lean                DIRAC-003 action variation and equations
 LeanDirac/Dirac002.lean                DIRAC-002 contracts
 LeanDirac/PreparedBackground.lean      conditional eight-corner state
 LeanDirac/NativeAction.lean            frozen action and positivity
@@ -103,12 +105,15 @@ python scripts/production_guard.py
 ```
 
 The axiom report may contain Lean's standard foundations
-`propext`, `Classical.choice` and `Quot.sound`. It must not contain custom
-axioms, `sorry` or `admit`.
+`propext`, `Classical.choice` and `Quot.sound`. The production guard executes
+the audit and fails on any other dependency, or on `sorry`, `admit` or a custom
+`axiom` in any production Lean module.
 
 ## Claim boundary
 
 This repository records a noncanonical mathematical research candidate.
-`DIRAC-002` admits an action; `DIRAC-003` and every later physics statement
-remain unproved until their own gates pass. No downstream stage inherits a
-pass from historical work outside this production repository.
+`DIRAC-003` derives the two weak Euler-Lagrange equation families from the
+frozen action. It does not yet supply the native discrete time update, an
+invariant spinor sector, a Dirac operator, an electron or physical spin. No
+downstream stage inherits a pass from historical work outside this production
+repository.

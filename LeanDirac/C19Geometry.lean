@@ -2,7 +2,11 @@ import LeanDirac.Foundation
 
 namespace LeanDirac
 
-/-! DIRAC-001 substrate geometry: six face and twelve edge neighbors. -/
+/-!
+DIRAC-001 substrate geometry. C19 consists of the owning center site plus
+eighteen neighbors: six face neighbors and twelve edge neighbors. This module
+indexes those eighteen neighbors; the center is represented by `Site` itself.
+-/
 
 abbrev C19Neighbor := Fin 18
 
@@ -31,5 +35,20 @@ theorem c19_weight_positive (neighbor : C19Neighbor) :
     0 < c19Weight neighbor := by
   unfold c19Weight
   split <;> norm_num
+
+structure C19Lattice (Site : Type) where
+  neighbor : Site → C19Neighbor → Site
+
+abbrev C19Edge (Site : Type) := Site × C19Neighbor
+
+def c19Bond (geometry : C19Lattice Site) (edge : C19Edge Site) : Bond Site where
+  source := edge.1
+  target := geometry.neighbor edge.1 edge.2
+  weight := c19Weight edge.2
+
+theorem c19_bond_weight_positive (geometry : C19Lattice Site)
+    (edge : C19Edge Site) :
+    0 < (c19Bond geometry edge).weight :=
+  c19_weight_positive edge.2
 
 end LeanDirac

@@ -21,6 +21,15 @@ theorem dirac002_positive_two_field_action
   exact ⟨hamiltonian_nonnegative chi0 B state velocity bond
     hchi hB hweight, state_has_exactly_two_field_families state⟩
 
+theorem dirac002_positive_c19_two_field_action
+    [Fintype Site]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) (hchi : 0 < chi0) (hB : 0 ≤ B) :
+    0 ≤ c19Hamiltonian chi0 B state velocity geometry ∧
+      state = ⟨state.psi, state.chi⟩ := by
+  exact ⟨c19_hamiltonian_nonnegative chi0 B state velocity geometry hchi hB,
+    state_has_exactly_two_field_families state⟩
+
 theorem dirac002_prepared_geometry :
     (∀ corner : CubeCorner,
       wedge (tetraCorner corner) (companion corner) = unitArea) ∧

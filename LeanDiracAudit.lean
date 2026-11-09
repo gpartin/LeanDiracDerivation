@@ -1,8 +1,9 @@
 import LeanDirac.Publication
 
 #print axioms LeanDirac.dirac001_native_framework
-#print axioms LeanDirac.dirac002_positive_two_field_action
+#print axioms LeanDirac.dirac002_positive_c19_two_field_action
 #print axioms LeanDirac.dirac002_prepared_geometry
 #print axioms LeanDirac.cubic_unit_area_forces_wedge
-#print axioms LeanDirac.current_highest_gate_is_dirac002
+#print axioms LeanDirac.dirac003_c19_two_reciprocal_action_variations
+#print axioms LeanDirac.current_highest_gate_is_dirac003
 
