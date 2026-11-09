@@ -43,10 +43,13 @@ EXPECTED_LOCKED_FILES = {
 
 AUDITED_THEOREMS = {
     "LeanDirac.dirac001_native_framework",
-    "LeanDirac.dirac002_positive_c19_two_field_action",
+    "LeanDirac.periodic_c19_neighbor_reverse",
+    "LeanDirac.c19_reverse_bond_target",
+    "LeanDirac.dirac002_positive_periodic_c19_two_field_action",
     "LeanDirac.dirac002_prepared_geometry",
     "LeanDirac.cubic_unit_area_forces_wedge",
     "LeanDirac.dirac003_c19_two_reciprocal_action_variations",
+    "LeanDirac.dirac003_periodic_c19_stationarity_iff_two_equations",
     "LeanDirac.current_highest_gate_is_dirac003",
 }
 
@@ -65,12 +68,46 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(normalized).hexdigest()
 
 
-def import_lines(path: Path) -> list[str]:
-    return [
-        line.strip()
-        for line in path.read_text(encoding="utf-8").splitlines()
-        if line.strip().startswith("import ")
-    ]
+def import_modules(path: Path) -> tuple[list[str], list[str]]:
+    """Parse the deliberately strict one-module-per-line import header.
+
+    Production modules may use only `import Module.Name` with one ASCII space.
+    Any other line beginning with the `import` token is rejected, including
+    tabs, multiple modules, and attempted continuation syntax.
+    """
+    modules: list[str] = []
+    errors: list[str] = []
+    relative = path.relative_to(ROOT)
+    lines = path.read_text(encoding="utf-8").splitlines()
+    valid = re.compile(r"^import ([A-Za-z_][A-Za-z0-9_.]*)$")
+    import_token = re.compile(r"^\s*import\b")
+
+    index = 0
+    while index < len(lines):
+        match = valid.fullmatch(lines[index])
+        if match is None:
+            break
+        modules.append(match.group(1))
+        index += 1
+
+    # A blank line terminates the complete import header. Requiring it makes
+    # a newline-continuation such as `import Allowed\n  Unapproved` fail closed.
+    if index >= len(lines) or lines[index] != "":
+        errors.append(f"noncanonical import header termination: {relative}:{index + 1}")
+
+    for number, line in enumerate(lines, 1):
+        if import_token.match(line) and valid.fullmatch(line) is None:
+            errors.append(f"noncanonical import syntax: {relative}:{number}")
+        if number > index + 1 and import_token.match(line):
+            errors.append(f"import outside canonical header: {relative}:{number}")
+    return modules, errors
+
+
+def require_imports(path: Path, expected: list[str], errors: list[str], label: str) -> None:
+    modules, syntax_errors = import_modules(path)
+    errors.extend(syntax_errors)
+    if modules != expected:
+        errors.append(f"{label} crosses its approved dependency boundary")
 
 
 def validate_axioms() -> list[str]:
@@ -159,29 +196,25 @@ def validate() -> list[str]:
         if re.search(rf"\b{forbidden}\b", production_text):
             errors.append(f"forbidden proof token present: {forbidden}")
 
-    if import_lines(ROOT / "LeanDirac.lean") != ["import LeanDirac.Publication"]:
-        errors.append("public facade has more than the one approved import")
-
-    if import_lines(ROOT / "LeanDirac" / "Dirac001.lean") != [
-        "import LeanDirac.C19Geometry"
-    ]:
-        errors.append("DIRAC-001 crosses its foundation/C19 dependency boundary")
-
-    if import_lines(ROOT / "LeanDirac" / "Dirac002.lean") != [
-        "import LeanDirac.Dirac001",
-        "import LeanDirac.PreparedBackground",
-    ]:
-        errors.append("DIRAC-002 crosses its approved dependency boundary")
-
-    if import_lines(ROOT / "LeanDirac" / "Dirac003.lean") != [
-        "import LeanDirac.Dirac002"
-    ]:
-        errors.append("DIRAC-003 crosses its approved dependency boundary")
-
-    if import_lines(ROOT / "LeanDirac" / "Publication.lean") != [
-        "import LeanDirac.Dirac003"
-    ]:
-        errors.append("publication root does not stop at DIRAC-003")
+    require_imports(
+        ROOT / "LeanDirac.lean", ["LeanDirac.Publication"], errors, "public facade"
+    )
+    require_imports(
+        ROOT / "LeanDirac" / "Dirac001.lean",
+        ["LeanDirac.C19Geometry"], errors, "DIRAC-001"
+    )
+    require_imports(
+        ROOT / "LeanDirac" / "Dirac002.lean",
+        ["LeanDirac.Dirac001", "LeanDirac.PreparedBackground"], errors, "DIRAC-002"
+    )
+    require_imports(
+        ROOT / "LeanDirac" / "Dirac003.lean",
+        ["LeanDirac.Dirac002"], errors, "DIRAC-003"
+    )
+    require_imports(
+        ROOT / "LeanDirac" / "Publication.lean",
+        ["LeanDirac.Dirac003"], errors, "publication root"
+    )
 
     errors.extend(validate_axioms())
 

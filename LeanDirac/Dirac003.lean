@@ -391,6 +391,21 @@ structure NativeTrajectory (Site : Type) where
   state : ℝ → State Site
   velocity : ℝ → Velocity Site
 
+def HasStateVelocityAt (trajectory : NativeTrajectory Site) (t : ℝ) : Prop :=
+  ∀ site component,
+    AnalyticHasDerivAt
+      (fun tau => ((trajectory.state tau).psi site component).re)
+      ((trajectory.velocity t).psiDot site component).re t ∧
+    AnalyticHasDerivAt
+      (fun tau => ((trajectory.state tau).psi site component).im)
+      ((trajectory.velocity t).psiDot site component).im t ∧
+    AnalyticHasDerivAt
+      (fun tau => ((trajectory.state tau).chi site component).re)
+      ((trajectory.velocity t).chiDot site component).re t ∧
+    AnalyticHasDerivAt
+      (fun tau => ((trajectory.state tau).chi site component).im)
+      ((trajectory.velocity t).chiDot site component).im t
+
 def PsiEulerLagrangeEquationAt [Fintype Site] [Fintype Edge]
     (chi0 : ℝ) (bond : Edge → Bond Site)
     (trajectory : NativeTrajectory Site) (t : ℝ) : Prop :=
@@ -411,8 +426,51 @@ structure TwoEulerLagrangeEquationFamiliesAt
     [Fintype Site] [Fintype Edge]
     (chi0 B : ℝ) (bond : Edge → Bond Site)
     (trajectory : NativeTrajectory Site) (t : ℝ) : Prop where
+  stateVelocity : HasStateVelocityAt trajectory t
   psiEquation : PsiEulerLagrangeEquationAt chi0 bond trajectory t
   chiEquation : ChiEulerLagrangeEquationAt chi0 B bond trajectory t
+
+structure NativeActionStationaryAt
+    [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (bond : Edge → Bond Site)
+    (trajectory : NativeTrajectory Site) (t : ℝ) : Prop where
+  stateVelocity : HasStateVelocityAt trajectory t
+  psiFirstVariation : ∀ etaPsi : Site → C3,
+    AnalyticHasDerivAt
+      (fun tau => psiMomentumPair (trajectory.velocity tau) etaPsi)
+      (lagrangianStateFirstVariation chi0 (trajectory.state t)
+        (purePsiDirection etaPsi) bond) t
+  chiFirstVariation : ∀ etaChi : Site → C3,
+    AnalyticHasDerivAt
+      (fun tau => chiMomentumPair B (trajectory.velocity tau) etaChi)
+      (lagrangianStateFirstVariation chi0 (trajectory.state t)
+        (pureChiDirection etaChi) bond) t
+
+theorem native_action_stationarity_iff_two_equations
+    [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (bond : Edge → Bond Site)
+    (trajectory : NativeTrajectory Site) (t : ℝ) :
+    NativeActionStationaryAt chi0 B bond trajectory t ↔
+      TwoEulerLagrangeEquationFamiliesAt chi0 B bond trajectory t := by
+  constructor
+  · intro stationary
+    exact
+      { stateVelocity := stationary.stateVelocity
+        psiEquation := by
+          intro etaPsi
+          exact stationary.psiFirstVariation etaPsi
+        chiEquation := by
+          intro etaChi
+          exact stationary.chiFirstVariation etaChi }
+  · intro equations
+    exact
+      { stateVelocity := equations.stateVelocity
+        psiFirstVariation := by
+          intro etaPsi
+          exact equations.psiEquation etaPsi
+        chiFirstVariation := by
+          intro etaChi
+          exact equations.chiEquation etaChi }
 
 theorem dirac003_two_reciprocal_action_variations
     [Fintype Site] [Fintype Edge]
@@ -476,6 +534,60 @@ theorem dirac003_c19_two_reciprocal_action_variations
     (dirac003_two_reciprocal_action_variations
       (Site := Site) (Edge := C19Edge Site)
       chi0 B state velocity (c19Bond geometry))
+
+theorem dirac003_c19_stationarity_iff_two_equations
+    [Fintype Site]
+    (chi0 B : ℝ) (geometry : C19Lattice Site)
+    (trajectory : NativeTrajectory Site) (t : ℝ) :
+    NativeActionStationaryAt chi0 B (c19Bond geometry) trajectory t ↔
+      TwoEulerLagrangeEquationFamiliesAt
+        chi0 B (c19Bond geometry) trajectory t :=
+  native_action_stationarity_iff_two_equations
+    chi0 B (c19Bond geometry) trajectory t
+
+theorem dirac003_periodic_c19_two_reciprocal_action_variations
+    (L : ℕ) [NeZero L]
+    (chi0 B : ℝ) (state : State (PeriodicCubicSite L))
+    (velocity : Velocity (PeriodicCubicSite L)) :
+    (∀ etaPsi : PeriodicCubicSite L → C3,
+      AnalyticHasDerivAt
+        (fun eps : ℝ => c19Lagrangian chi0 B
+          (stateLine state (purePsiDirection etaPsi) eps) velocity
+          (periodicC19Geometry L))
+        (psiEulerLagrangeForce chi0 state
+          (c19Bond (periodicC19Geometry L)) etaPsi) 0) ∧
+    (∀ etaChi : PeriodicCubicSite L → C3,
+      AnalyticHasDerivAt
+        (fun eps : ℝ => c19Lagrangian chi0 B
+          (stateLine state (pureChiDirection etaChi) eps) velocity
+          (periodicC19Geometry L))
+        (chiEulerLagrangeForce chi0 state
+          (c19Bond (periodicC19Geometry L)) etaChi) 0) ∧
+    (∀ etaPsi : PeriodicCubicSite L → C3,
+      AnalyticHasDerivAt
+        (fun eps : ℝ => c19Lagrangian chi0 B state
+          (velocityLine velocity (purePsiVelocity etaPsi) eps)
+          (periodicC19Geometry L))
+        (psiMomentumPair velocity etaPsi) 0) ∧
+    (∀ etaChi : PeriodicCubicSite L → C3,
+      AnalyticHasDerivAt
+        (fun eps : ℝ => c19Lagrangian chi0 B state
+          (velocityLine velocity (pureChiVelocity etaChi) eps)
+          (periodicC19Geometry L))
+        (chiMomentumPair B velocity etaChi) 0) ∧
+    state = ⟨state.psi, state.chi⟩ :=
+  dirac003_c19_two_reciprocal_action_variations
+    chi0 B state velocity (periodicC19Geometry L)
+
+theorem dirac003_periodic_c19_stationarity_iff_two_equations
+    (L : ℕ) [NeZero L] (chi0 B : ℝ)
+    (trajectory : NativeTrajectory (PeriodicCubicSite L)) (t : ℝ) :
+    NativeActionStationaryAt chi0 B
+        (c19Bond (periodicC19Geometry L)) trajectory t ↔
+      TwoEulerLagrangeEquationFamiliesAt chi0 B
+        (c19Bond (periodicC19Geometry L)) trajectory t :=
+  dirac003_c19_stationarity_iff_two_equations
+    chi0 B (periodicC19Geometry L) trajectory t
 
 end
 end LeanDirac

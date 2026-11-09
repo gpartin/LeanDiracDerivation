@@ -14,7 +14,7 @@ remain outside this repository.
 |---|---|---|
 | `DIRAC-001` | **PASS** | One public proof root and a closed, auditable dependency chain. |
 | `DIRAC-002` | **PASS** | A nonnegative two-field complex-C3 action with geometry-derived exterior-area transport and a concrete prepared eight-corner background. |
-| `DIRAC-003` | **PASS** | Exact state and velocity variations derive the reciprocal Psi and chi Euler-Lagrange force and momentum families on the concrete C19 bond map. |
+| `DIRAC-003` | **PASS** | Exact state and velocity variations derive both reciprocal equation families on a periodic cubic C19 realization; local weak stationarity is proved equivalent to those equations for state-derivative-compatible trajectories. |
 | `DIRAC-004` | **NEXT** | Derive the action-compatible reversible native time update. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
@@ -53,7 +53,7 @@ Recovering its exact higher-zoom scalar response remains open.
 |---:|---|---|---|---|
 | 1 | `DIRAC-001` | Authority boundary | **PASS** | One public root; no experimental or superseded dependency enters the production graph. |
 | 2 | `DIRAC-002` | Native action | **PASS** | A positive two-field action, derived geometric transport, coefficient provenance and a cleared no-bolt-on review. |
-| 3 | `DIRAC-003` | Native equations | **PASS** | Vary the frozen action and prove exactly two reciprocal Euler-Lagrange equation families. |
+| 3 | `DIRAC-003` | Native equations | **PASS** | Vary the frozen action, enforce state/velocity compatibility, and prove local weak stationarity equivalent to exactly two reciprocal Euler-Lagrange equation families on periodic C19 geometry. |
 | 4 | `DIRAC-004` | Native time | **NEXT** | Derive and verify the action-compatible reversible second-order update. |
 | 5 | `DIRAC-005` | Native sector | OPEN | Derive the invariant eight-site sector and retain every native copy. |
 | 6 | `DIRAC-006` | Native symbol | OPEN | Derive finite-lattice transport coefficients from lattice characters. |
@@ -113,7 +113,10 @@ the audit and fails on any other dependency, or on `sorry`, `admit` or a custom
 
 This repository records a noncanonical mathematical research candidate.
 `DIRAC-003` derives the two weak Euler-Lagrange equation families from the
-frozen action. It does not yet supply the native discrete time update, an
-invariant spinor sector, a Dirac operator, an electron or physical spin. No
-downstream stage inherits a pass from historical work outside this production
-repository.
+frozen action. Its public theorem uses the offset-defined periodic cubic C19
+realization, proves reverse-bond consistency, requires the reported velocity
+to equal the componentwise state derivative, and proves equivalence between
+local weak action stationarity and the two equation families. It does not yet
+supply the native discrete time update, an invariant spinor sector, a Dirac
+operator, an electron or physical spin. No downstream stage inherits a pass
+from historical work outside this production repository.
