@@ -37,6 +37,7 @@ EXPECTED_LOCKED_FILES = {
     "LeanDirac/Dirac001.lean",
     "LeanDirac/Dirac002.lean",
     "LeanDirac/Dirac003.lean",
+    "LeanDirac/Dirac003Contract.lean",
     "LeanDirac/Publication.lean",
     "LeanDirac.lean",
     "LeanDiracAudit.lean",
@@ -52,6 +53,10 @@ AUDITED_THEOREMS = {
     "LeanDirac.psi_test_variation_is_lagrangian_derivative",
     "LeanDirac.integrated_stationarity_forces_euler_lagrange",
     "LeanDirac.dirac003_c19_equations_from_actual_stationary_action",
+    "LeanDirac.psi_action_increment_integrand_definition_is_exact",
+    "LeanDirac.chi_action_increment_integrand_definition_is_exact",
+    "LeanDirac.psi_stationarity_definition_is_exact",
+    "LeanDirac.chi_stationarity_definition_is_exact",
     "LeanDirac.current_highest_gate_is_dirac003",
 }
 
@@ -225,42 +230,6 @@ def validate_axioms() -> list[str]:
     return errors
 
 
-def validate_dirac003_variational_boundary() -> list[str]:
-    """Fail closed if stationarity is redefined to contain the answer."""
-    errors: list[str] = []
-    source = (ROOT / "LeanDirac" / "Dirac003.lean").read_text(encoding="utf-8")
-
-    required_fragments = (
-        "def HasStationaryPsiAction",
-        "def HasStationaryChiAction",
-        "psiActionIncrement",
-        "chiActionIncrement",
-        "hasDerivAt_integral_of_dominated_loc_of_lip",
-        "integral_mul_deriv_eq_neg_deriv_mul",
-        "ae_eq_zero_of_integral_contDiff_smul_eq_zero",
-        "theorem dirac003_c19_equations_from_actual_stationary_action",
-    )
-    for fragment in required_fragments:
-        if fragment not in source:
-            errors.append(f"DIRAC-003 variational bridge missing: {fragment}")
-
-    psi_start = source.find("def HasStationaryPsiAction")
-    chi_start = source.find("def HasStationaryChiAction")
-    next_start = source.find("theorem psi_action_increment_pointwise_hasDerivAt")
-    if min(psi_start, chi_start, next_start) < 0 or not psi_start < chi_start < next_start:
-        errors.append("DIRAC-003 stationarity definitions cannot be audited")
-    else:
-        stationarity_definitions = source[psi_start:next_start]
-        if "EulerLagrange" in stationarity_definitions:
-            errors.append("DIRAC-003 stationarity definition contains the target equations")
-        if "AnalyticHasDerivAt" not in stationarity_definitions:
-            errors.append("DIRAC-003 stationarity is not an action derivative")
-
-    if re.search(r":=\s*True\b|by\s+trivial\b", source):
-        errors.append("DIRAC-003 contains a vacuous proposition or proof")
-    return errors
-
-
 def validate() -> list[str]:
     errors: list[str] = []
     lock = load(LOCK)
@@ -333,12 +302,15 @@ def validate() -> list[str]:
         ["LeanDirac.Dirac002"], errors, "DIRAC-003"
     )
     require_imports(
+        ROOT / "LeanDirac" / "Dirac003Contract.lean",
+        ["LeanDirac.Dirac003"], errors, "DIRAC-003 definitional contract"
+    )
+    require_imports(
         ROOT / "LeanDirac" / "Publication.lean",
-        ["LeanDirac.Dirac003"], errors, "publication root"
+        ["LeanDirac.Dirac003Contract"], errors, "publication root"
     )
 
     errors.extend(validate_axioms())
-    errors.extend(validate_dirac003_variational_boundary())
 
     return errors
 
