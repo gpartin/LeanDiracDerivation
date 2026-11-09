@@ -99,18 +99,12 @@ scripts/production_guard.py            dependency/hash/status guard
 Install Lean through `elan`, then run:
 
 ```bash
-python scripts/install_hooks.py
 lake update
 lake build
 lake build LeanDiracAudit
 python scripts/production_guard.py
+python scripts/adversarial_guard_test.py
 ```
-
-The installer configures this checkout to use the versioned `.githooks`
-directory. Every commit then runs `scripts/precommit_audit.py`, which rejects
-unstaged or untracked inputs and requires the Lean build, axiom audit,
-production guard and adversarial proof-boundary tests to pass against the
-exact staged tree.
 
 The axiom report may contain Lean's standard foundations
 `propext`, `Classical.choice` and `Quot.sound`. The production guard executes
