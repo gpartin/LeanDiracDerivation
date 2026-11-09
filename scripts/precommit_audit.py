@@ -44,7 +44,35 @@ def require_exact_staged_tree() -> None:
         )
 
 
+def require_hook_installation() -> None:
+    configured = subprocess.run(
+        ["git", "config", "--get", "core.hooksPath"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    ).stdout.strip()
+    if configured != ".githooks":
+        raise SystemExit(
+            "PRECOMMIT_AUDIT_FAIL: repository hook is not active; run "
+            "`python scripts/install_hooks.py`"
+        )
+
+    attribute = subprocess.run(
+        ["git", "check-attr", "eol", "--", ".githooks/pre-commit"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.strip()
+    if not attribute.endswith(": lf"):
+        raise SystemExit(
+            "PRECOMMIT_AUDIT_FAIL: .githooks/pre-commit is not forced to LF"
+        )
+
+
 def main() -> int:
+    require_hook_installation()
     require_exact_staged_tree()
     run(["git", "diff", "--cached", "--check"])
     run(["lake", "build"])
