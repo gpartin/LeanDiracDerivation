@@ -2,20 +2,19 @@
   "schema_version": "1.0.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-003",
-  "next_gate": "DIRAC-004",
-  "completed": 3,
+  "highest_passed_gate": "DIRAC-002",
+  "next_gate": "DIRAC-003",
+  "completed": 2,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
-    "DIRAC-002": "LeanDirac/Dirac002.lean",
-    "DIRAC-003": "LeanDirac/Dirac003.lean"
+    "DIRAC-002": "LeanDirac/Dirac002.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
     "DIRAC-002": "PASS",
-    "DIRAC-003": "PASS",
-    "DIRAC-004": "NEXT",
+    "DIRAC-003": "NEXT",
+    "DIRAC-004": "OPEN",
     "DIRAC-005": "OPEN",
     "DIRAC-006": "OPEN",
     "DIRAC-007": "OPEN",

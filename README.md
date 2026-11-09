@@ -14,8 +14,7 @@ remain outside this repository.
 |---|---|---|
 | `DIRAC-001` | **PASS** | One public proof root and a closed, auditable dependency chain. |
 | `DIRAC-002` | **PASS** | A nonnegative two-field complex-C3 action with geometry-derived exterior-area transport and a concrete prepared eight-corner background. |
-| `DIRAC-003` | **PASS** | Exact state and velocity variations derive both reciprocal equation families on a periodic cubic C19 realization; local weak stationarity is proved equivalent to those equations for state-derivative-compatible trajectories. |
-| `DIRAC-004` | **NEXT** | Derive the action-compatible reversible native time update. |
+| `DIRAC-003` | **NEXT** | Derive both reciprocal Euler–Lagrange equation families from genuinely vanishing action variation. Earlier first-variation identities are retained only in Git history because they did not close this bridge. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -53,8 +52,8 @@ Recovering its exact higher-zoom scalar response remains open.
 |---:|---|---|---|---|
 | 1 | `DIRAC-001` | Authority boundary | **PASS** | One public root; no experimental or superseded dependency enters the production graph. |
 | 2 | `DIRAC-002` | Native action | **PASS** | A positive two-field action, derived geometric transport, coefficient provenance and a cleared no-bolt-on review. |
-| 3 | `DIRAC-003` | Native equations | **PASS** | Vary the frozen action, enforce state/velocity compatibility, and prove local weak stationarity equivalent to exactly two reciprocal Euler-Lagrange equation families on periodic C19 geometry. |
-| 4 | `DIRAC-004` | Native time | **NEXT** | Derive and verify the action-compatible reversible second-order update. |
+| 3 | `DIRAC-003` | Native equations | **NEXT** | Derive both reciprocal Euler–Lagrange equation families from vanishing action variation without defining stationarity to be those equations. |
+| 4 | `DIRAC-004` | Native time | OPEN | Derive and verify the action-compatible reversible second-order update. |
 | 5 | `DIRAC-005` | Native sector | OPEN | Derive the invariant eight-site sector and retain every native copy. |
 | 6 | `DIRAC-006` | Native symbol | OPEN | Derive finite-lattice transport coefficients from lattice characters. |
 | 7 | `DIRAC-007` | Paired readout | OPEN | Build a lossless first-order readout from native displacement and velocity. |
@@ -79,7 +78,6 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
-LeanDirac/Dirac003.lean                DIRAC-003 action variation and equations
 LeanDirac/Dirac002.lean                DIRAC-002 contracts
 LeanDirac/PreparedBackground.lean      conditional eight-corner state
 LeanDirac/NativeAction.lean            frozen action and positivity
@@ -112,11 +110,10 @@ the audit and fails on any other dependency, or on `sorry`, `admit` or a custom
 ## Claim boundary
 
 This repository records a noncanonical mathematical research candidate.
-`DIRAC-003` derives the two weak Euler-Lagrange equation families from the
-frozen action. Its public theorem uses the offset-defined periodic cubic C19
-realization, proves reverse-bond consistency, requires the reported velocity
-to equal the componentwise state derivative, and proves equivalence between
-local weak action stationarity and the two equation families. It does not yet
-supply the native discrete time update, an invariant spinor sector, a Dirac
-operator, an electron or physical spin. No downstream stage inherits a pass
-from historical work outside this production repository.
+`DIRAC-003` is not admitted. The previous implementation proved useful state
+and velocity first-variation identities, but its stationarity predicate already
+contained the Euler-Lagrange equations. That circular bridge has been removed
+from the production graph. A passing DIRAC-003 must begin with independently
+vanishing action variation and derive the two equation families. The native
+discrete time update, invariant spinor sector, Dirac operator, electron and
+physical spin remain downstream open work.

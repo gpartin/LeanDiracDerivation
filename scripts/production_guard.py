@@ -1,4 +1,4 @@
-"""Fail closed if the admitted DIRAC-001/002/003 proof boundary drifts."""
+"""Fail closed if the admitted DIRAC-001/002 proof boundary drifts."""
 
 from __future__ import annotations
 
@@ -17,13 +17,12 @@ REVIEW = ROOT / "project" / "no_bolton_review.json"
 EXPECTED_GATE_MODULES = {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
-    "DIRAC-003": "LeanDirac/Dirac003.lean",
 }
 
 EXPECTED_GATES = {
-    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 4)},
-    "DIRAC-004": "NEXT",
-    **{f"DIRAC-{index:03d}": "OPEN" for index in range(5, 16)},
+    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 3)},
+    "DIRAC-003": "NEXT",
+    **{f"DIRAC-{index:03d}": "OPEN" for index in range(4, 16)},
 }
 
 EXPECTED_LOCKED_FILES = {
@@ -35,7 +34,6 @@ EXPECTED_LOCKED_FILES = {
     "LeanDirac/PreparedBackground.lean",
     "LeanDirac/Dirac001.lean",
     "LeanDirac/Dirac002.lean",
-    "LeanDirac/Dirac003.lean",
     "LeanDirac/Publication.lean",
     "LeanDirac.lean",
     "LeanDiracAudit.lean",
@@ -48,9 +46,7 @@ AUDITED_THEOREMS = {
     "LeanDirac.dirac002_positive_periodic_c19_two_field_action",
     "LeanDirac.dirac002_prepared_geometry",
     "LeanDirac.cubic_unit_area_forces_wedge",
-    "LeanDirac.dirac003_c19_two_reciprocal_action_variations",
-    "LeanDirac.dirac003_periodic_c19_stationarity_iff_two_equations",
-    "LeanDirac.current_highest_gate_is_dirac003",
+    "LeanDirac.current_highest_gate_is_dirac002",
 }
 
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
@@ -68,7 +64,7 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(normalized).hexdigest()
 
 
-def import_modules(path: Path) -> tuple[list[str], list[str]]:
+def canonical_import_modules(path: Path) -> tuple[list[str], list[str]]:
     """Parse the deliberately strict one-module-per-line import header.
 
     Production modules may use only `import Module.Name` with one ASCII space.
@@ -103,11 +99,57 @@ def import_modules(path: Path) -> tuple[list[str], list[str]]:
     return modules, errors
 
 
+def lean_direct_imports(path: Path) -> tuple[list[str], list[str]]:
+    """Ask Lean itself which direct modules the source imports.
+
+    This is the security boundary. It follows Lean whitespace and comment
+    syntax, so blank lines, block comments, tabs, and continued module lists
+    cannot disagree with the guard's interpretation.
+    """
+    completed = subprocess.run(
+        ["lake", "env", "lean", "--deps", str(path.relative_to(ROOT))],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if completed.returncode != 0:
+        return [], [
+            f"Lean dependency parse failed: {path.relative_to(ROOT)}:\n"
+            + completed.stdout
+            + completed.stderr
+        ]
+
+    modules: list[str] = []
+    errors: list[str] = []
+    for raw in completed.stdout.splitlines():
+        normalized = raw.strip().replace("\\", "/")
+        if not normalized.endswith(".olean"):
+            continue
+        marker = "/lib/lean/"
+        if marker not in normalized:
+            errors.append(f"unrecognized Lean dependency path: {raw}")
+            continue
+        module_path = normalized.rsplit(marker, 1)[1][:-len(".olean")]
+        module = module_path.replace("/", ".")
+        if module != "Init":
+            modules.append(module)
+    return sorted(set(modules)), errors
+
+
 def require_imports(path: Path, expected: list[str], errors: list[str], label: str) -> None:
-    modules, syntax_errors = import_modules(path)
+    modules, syntax_errors = canonical_import_modules(path)
     errors.extend(syntax_errors)
     if modules != expected:
-        errors.append(f"{label} crosses its approved dependency boundary")
+        errors.append(f"{label} has noncanonical import formatting")
+
+    compiler_modules, compiler_errors = lean_direct_imports(path)
+    errors.extend(compiler_errors)
+    if compiler_modules != sorted(expected):
+        errors.append(
+            f"{label} crosses its approved dependency boundary: "
+            f"Lean reports {compiler_modules}, expected {sorted(expected)}"
+        )
 
 
 def validate_axioms() -> list[str]:
@@ -159,11 +201,11 @@ def validate() -> list[str]:
         errors.append("action lock must be immutable and noncanonical")
     if lock.get("field_families") != 2:
         errors.append("action does not declare exactly two field families")
-    if status.get("highest_passed_gate") != "DIRAC-003":
-        errors.append("status does not stop at DIRAC-003")
-    if status.get("next_gate") != "DIRAC-004":
-        errors.append("DIRAC-004 is not the next gate")
-    if status.get("completed") != 3 or status.get("total") != 15:
+    if status.get("highest_passed_gate") != "DIRAC-002":
+        errors.append("status does not stop at DIRAC-002")
+    if status.get("next_gate") != "DIRAC-003":
+        errors.append("DIRAC-003 is not the next gate")
+    if status.get("completed") != 2 or status.get("total") != 15:
         errors.append("gate completion counts are incorrect")
     if status.get("gates") != EXPECTED_GATES:
         errors.append("complete fifteen-gate status map is incorrect")
@@ -177,8 +219,8 @@ def validate() -> list[str]:
     locked_files = lock.get("files", {})
     if set(locked_files) != EXPECTED_LOCKED_FILES:
         errors.append("action lock does not contain exactly the approved proof files")
-    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac003":
-        errors.append("action lock does not name the DIRAC-003 publication theorem")
+    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac002":
+        errors.append("action lock does not name the DIRAC-002 publication theorem")
 
     for relative, expected in locked_files.items():
         path = ROOT / relative
@@ -189,6 +231,15 @@ def validate() -> list[str]:
 
     production_paths = sorted((ROOT / "LeanDirac").rglob("*.lean"))
     production_paths.extend([ROOT / "LeanDirac.lean", ROOT / "LeanDiracAudit.lean"])
+    actual_production_files = {
+        path.relative_to(ROOT).as_posix() for path in production_paths
+    }
+    if actual_production_files != EXPECTED_LOCKED_FILES:
+        errors.append(
+            "production source tree differs from the exact approved file set: "
+            f"extra={sorted(actual_production_files - EXPECTED_LOCKED_FILES)}, "
+            f"missing={sorted(EXPECTED_LOCKED_FILES - actual_production_files)}"
+        )
     production_text = "\n".join(
         path.read_text(encoding="utf-8") for path in production_paths
     )
@@ -208,12 +259,8 @@ def validate() -> list[str]:
         ["LeanDirac.Dirac001", "LeanDirac.PreparedBackground"], errors, "DIRAC-002"
     )
     require_imports(
-        ROOT / "LeanDirac" / "Dirac003.lean",
-        ["LeanDirac.Dirac002"], errors, "DIRAC-003"
-    )
-    require_imports(
         ROOT / "LeanDirac" / "Publication.lean",
-        ["LeanDirac.Dirac003"], errors, "publication root"
+        ["LeanDirac.Dirac002"], errors, "publication root"
     )
 
     errors.extend(validate_axioms())
@@ -229,8 +276,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_GUARD_PASS")
-    print("highest_passed_gate=DIRAC-003")
-    print("next_gate=DIRAC-004")
+    print("highest_passed_gate=DIRAC-002")
+    print("next_gate=DIRAC-003")
     return 0
 
 
