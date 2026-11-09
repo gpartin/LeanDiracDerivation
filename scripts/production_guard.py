@@ -18,12 +18,13 @@ REVIEW = ROOT / "project" / "no_bolton_review.json"
 EXPECTED_GATE_MODULES = {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
+    "DIRAC-003": "LeanDirac/Dirac003.lean",
 }
 
 EXPECTED_GATES = {
-    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 3)},
-    "DIRAC-003": "NEXT",
-    **{f"DIRAC-{index:03d}": "OPEN" for index in range(4, 16)},
+    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 4)},
+    "DIRAC-004": "NEXT",
+    **{f"DIRAC-{index:03d}": "OPEN" for index in range(5, 16)},
 }
 
 EXPECTED_LOCKED_FILES = {
@@ -35,6 +36,7 @@ EXPECTED_LOCKED_FILES = {
     "LeanDirac/PreparedBackground.lean",
     "LeanDirac/Dirac001.lean",
     "LeanDirac/Dirac002.lean",
+    "LeanDirac/Dirac003.lean",
     "LeanDirac/Publication.lean",
     "LeanDirac.lean",
     "LeanDiracAudit.lean",
@@ -47,7 +49,10 @@ AUDITED_THEOREMS = {
     "LeanDirac.dirac002_positive_periodic_c19_two_field_action",
     "LeanDirac.dirac002_prepared_geometry",
     "LeanDirac.cubic_unit_area_forces_wedge",
-    "LeanDirac.current_highest_gate_is_dirac002",
+    "LeanDirac.psi_test_variation_is_lagrangian_derivative",
+    "LeanDirac.integrated_stationarity_forces_euler_lagrange",
+    "LeanDirac.dirac003_c19_equations_from_actual_stationary_action",
+    "LeanDirac.current_highest_gate_is_dirac003",
 }
 
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
@@ -220,6 +225,42 @@ def validate_axioms() -> list[str]:
     return errors
 
 
+def validate_dirac003_variational_boundary() -> list[str]:
+    """Fail closed if stationarity is redefined to contain the answer."""
+    errors: list[str] = []
+    source = (ROOT / "LeanDirac" / "Dirac003.lean").read_text(encoding="utf-8")
+
+    required_fragments = (
+        "def HasStationaryPsiAction",
+        "def HasStationaryChiAction",
+        "psiActionIncrement",
+        "chiActionIncrement",
+        "hasDerivAt_integral_of_dominated_loc_of_lip",
+        "integral_mul_deriv_eq_neg_deriv_mul",
+        "ae_eq_zero_of_integral_contDiff_smul_eq_zero",
+        "theorem dirac003_c19_equations_from_actual_stationary_action",
+    )
+    for fragment in required_fragments:
+        if fragment not in source:
+            errors.append(f"DIRAC-003 variational bridge missing: {fragment}")
+
+    psi_start = source.find("def HasStationaryPsiAction")
+    chi_start = source.find("def HasStationaryChiAction")
+    next_start = source.find("theorem psi_action_increment_pointwise_hasDerivAt")
+    if min(psi_start, chi_start, next_start) < 0 or not psi_start < chi_start < next_start:
+        errors.append("DIRAC-003 stationarity definitions cannot be audited")
+    else:
+        stationarity_definitions = source[psi_start:next_start]
+        if "EulerLagrange" in stationarity_definitions:
+            errors.append("DIRAC-003 stationarity definition contains the target equations")
+        if "AnalyticHasDerivAt" not in stationarity_definitions:
+            errors.append("DIRAC-003 stationarity is not an action derivative")
+
+    if re.search(r":=\s*True\b|by\s+trivial\b", source):
+        errors.append("DIRAC-003 contains a vacuous proposition or proof")
+    return errors
+
+
 def validate() -> list[str]:
     errors: list[str] = []
     lock = load(LOCK)
@@ -230,11 +271,11 @@ def validate() -> list[str]:
         errors.append("action lock must be immutable and noncanonical")
     if lock.get("field_families") != 2:
         errors.append("action does not declare exactly two field families")
-    if status.get("highest_passed_gate") != "DIRAC-002":
-        errors.append("status does not stop at DIRAC-002")
-    if status.get("next_gate") != "DIRAC-003":
-        errors.append("DIRAC-003 is not the next gate")
-    if status.get("completed") != 2 or status.get("total") != 15:
+    if status.get("highest_passed_gate") != "DIRAC-003":
+        errors.append("status does not stop at DIRAC-003")
+    if status.get("next_gate") != "DIRAC-004":
+        errors.append("DIRAC-004 is not the next gate")
+    if status.get("completed") != 3 or status.get("total") != 15:
         errors.append("gate completion counts are incorrect")
     if status.get("gates") != EXPECTED_GATES:
         errors.append("complete fifteen-gate status map is incorrect")
@@ -248,8 +289,8 @@ def validate() -> list[str]:
     locked_files = lock.get("files", {})
     if set(locked_files) != EXPECTED_LOCKED_FILES:
         errors.append("action lock does not contain exactly the approved proof files")
-    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac002":
-        errors.append("action lock does not name the DIRAC-002 publication theorem")
+    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac003":
+        errors.append("action lock does not name the DIRAC-003 publication theorem")
 
     for relative, expected in locked_files.items():
         path = ROOT / relative
@@ -288,11 +329,16 @@ def validate() -> list[str]:
         ["LeanDirac.Dirac001", "LeanDirac.PreparedBackground"], errors, "DIRAC-002"
     )
     require_imports(
+        ROOT / "LeanDirac" / "Dirac003.lean",
+        ["LeanDirac.Dirac002"], errors, "DIRAC-003"
+    )
+    require_imports(
         ROOT / "LeanDirac" / "Publication.lean",
-        ["LeanDirac.Dirac002"], errors, "publication root"
+        ["LeanDirac.Dirac003"], errors, "publication root"
     )
 
     errors.extend(validate_axioms())
+    errors.extend(validate_dirac003_variational_boundary())
 
     return errors
 
@@ -305,8 +351,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_GUARD_PASS")
-    print("highest_passed_gate=DIRAC-002")
-    print("next_gate=DIRAC-003")
+    print("highest_passed_gate=DIRAC-003")
+    print("next_gate=DIRAC-004")
     return 0
 
 

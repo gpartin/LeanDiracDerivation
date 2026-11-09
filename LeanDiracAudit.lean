@@ -6,5 +6,8 @@ import LeanDirac.Publication
 #print axioms LeanDirac.dirac002_positive_periodic_c19_two_field_action
 #print axioms LeanDirac.dirac002_prepared_geometry
 #print axioms LeanDirac.cubic_unit_area_forces_wedge
-#print axioms LeanDirac.current_highest_gate_is_dirac002
+#print axioms LeanDirac.psi_test_variation_is_lagrangian_derivative
+#print axioms LeanDirac.integrated_stationarity_forces_euler_lagrange
+#print axioms LeanDirac.dirac003_c19_equations_from_actual_stationary_action
+#print axioms LeanDirac.current_highest_gate_is_dirac003
 
