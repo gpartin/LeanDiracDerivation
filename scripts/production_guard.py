@@ -122,7 +122,12 @@ def decode_lean_dependency_output(output: str) -> tuple[list[str], list[str]]:
         candidate = raw.strip()
         if not candidate.endswith(".olean"):
             continue
-        dependency = Path(candidate).resolve()
+        dependency_path = Path(candidate)
+        dependency = (
+            dependency_path
+            if dependency_path.is_absolute()
+            else ROOT / dependency_path
+        ).resolve()
         if dependency == approved_init_dependency():
             continue
         try:

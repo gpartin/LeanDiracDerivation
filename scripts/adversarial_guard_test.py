@@ -39,6 +39,16 @@ def assert_dependency_output_rejected(name: str, output: str) -> None:
         raise AssertionError(f"dependency-path bypass was accepted: {name}")
 
 
+def assert_relative_approved_dependency() -> None:
+    modules, errors = guard.decode_lean_dependency_output(
+        ".lake/build/lib/lean/LeanDirac/Publication.olean\n"
+    )
+    if errors or modules != ["LeanDirac.Publication"]:
+        raise AssertionError(
+            f"valid ROOT-relative dependency rejected: modules={modules}, errors={errors}"
+        )
+
+
 def main() -> int:
     for name, source in FIXTURES.items():
         assert_rejected(name, source)
@@ -65,6 +75,7 @@ def main() -> int:
     assert_dependency_output_rejected(
         "duplicate_approved_module", f"{approved}\n{approved}\n"
     )
+    assert_relative_approved_dependency()
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 
