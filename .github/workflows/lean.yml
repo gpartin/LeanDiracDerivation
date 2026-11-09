@@ -16,3 +16,5 @@ jobs:
         run: lake build LeanDiracAudit
       - name: Production guard
         run: python scripts/production_guard.py
+      - name: Adversarial dependency-boundary tests
+        run: python scripts/adversarial_guard_test.py
