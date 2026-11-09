@@ -58,7 +58,11 @@ def load(path: Path) -> dict:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    # Git stores these proof sources with LF endings. Normalize a Windows
+    # checkout before hashing so the lock identifies repository content,
+    # not the host platform's checkout convention.
+    normalized = path.read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(normalized).hexdigest()
 
 
 def import_lines(path: Path) -> list[str]:
