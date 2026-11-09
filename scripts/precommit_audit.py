@@ -20,6 +20,16 @@ def run(command: list[str]) -> None:
     subprocess.run(command, cwd=ROOT, check=True)
 
 
+def staged_tree_id() -> str:
+    return subprocess.run(
+        ["git", "write-tree"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.strip()
+
+
 def require_exact_staged_tree() -> None:
     unstaged = subprocess.run(
         ["git", "diff", "--quiet", "--exit-code"], cwd=ROOT, check=False
@@ -74,12 +84,17 @@ def require_hook_installation() -> None:
 def main() -> int:
     require_hook_installation()
     require_exact_staged_tree()
+    audited_tree = staged_tree_id()
     run(["git", "diff", "--cached", "--check"])
     run(["lake", "build"])
     run(["lake", "build", "LeanDiracAudit"])
     run([sys.executable, "scripts/production_guard.py"])
     run([sys.executable, "scripts/adversarial_guard_test.py"])
     require_exact_staged_tree()
+    if staged_tree_id() != audited_tree:
+        raise SystemExit(
+            "PRECOMMIT_AUDIT_FAIL: staged tree changed while checks were running"
+        )
     print("PRECOMMIT_AUDIT_PASS")
     return 0
 
