@@ -82,7 +82,9 @@ LeanDirac/Dirac002.lean                DIRAC-002 contracts
 LeanDirac/PreparedBackground.lean      conditional eight-corner state
 LeanDirac/NativeAction.lean            frozen action and positivity
 LeanDirac/ExteriorArea.lean            derived wedge transport
-LeanDirac/CubeGeometry.lean            eight-corner geometry
+LeanDirac/Dirac001.lean                DIRAC-001 native-framework contract
+LeanDirac/CubeGeometry.lean            DIRAC-002 eight-corner geometry
+LeanDirac/C19Geometry.lean             DIRAC-001 substrate geometry
 LeanDirac/Foundation.lean              two fields and kinetic law
 LeanDiracAudit.lean                    axiom report
 project/                               immutable status and provenance

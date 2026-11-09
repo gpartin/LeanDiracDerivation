@@ -3,7 +3,7 @@ import LeanDirac.Dirac002
 namespace LeanDirac
 
 /-!
-Sole public proof root. DIRAC-001 is enforced by this one-way import chain;
+Sole public proof root. DIRAC-002 imports the explicit DIRAC-001 gate module;
 DIRAC-002 is the highest currently admitted mathematical gate.
 -/
 

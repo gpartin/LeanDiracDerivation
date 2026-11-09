@@ -36,6 +36,12 @@ def validate() -> list[str]:
         errors.append("status does not stop at DIRAC-002")
     if status.get("next_gate") != "DIRAC-003":
         errors.append("DIRAC-003 is not the next gate")
+    expected_gate_modules = {
+        "DIRAC-001": "LeanDirac/Dirac001.lean",
+        "DIRAC-002": "LeanDirac/Dirac002.lean",
+    }
+    if status.get("gate_modules") != expected_gate_modules:
+        errors.append("gate-to-module map is missing or incorrect")
     if review.get("status") != "PASS_ZERO_CRITICAL_HIGH":
         errors.append("no-bolt-on review is not cleared")
     if review.get("critical_findings") or review.get("high_findings"):
@@ -59,6 +65,21 @@ def validate() -> list[str]:
     imports = (ROOT / "LeanDirac.lean").read_text(encoding="utf-8")
     if imports.strip() != "import LeanDirac.Publication\n\n/-! Sole production facade for the LFM-to-Dirac derivation. -/":
         errors.append("public facade has more than the one approved import")
+
+    dirac001 = (ROOT / "LeanDirac" / "Dirac001.lean").read_text(
+        encoding="utf-8"
+    )
+    dirac001_imports = [
+        line for line in dirac001.splitlines() if line.startswith("import ")
+    ]
+    if dirac001_imports != ["import LeanDirac.C19Geometry"]:
+        errors.append("DIRAC-001 crosses its foundation/C19 dependency boundary")
+
+    dirac002 = (ROOT / "LeanDirac" / "Dirac002.lean").read_text(
+        encoding="utf-8"
+    )
+    if "import LeanDirac.Dirac001" not in dirac002.splitlines()[:4]:
+        errors.append("DIRAC-002 does not explicitly import DIRAC-001")
 
     return errors
 

@@ -1,8 +1,13 @@
+import LeanDirac.Dirac001
 import LeanDirac.PreparedBackground
 
 namespace LeanDirac
 
-/-! DIRAC-002: reduced positive two-field action, with no Dirac claim yet. -/
+/-!
+DIRAC-002: reduced positive two-field action and prepared geometry.
+
+This gate depends explicitly on DIRAC-001 and makes no Dirac claim yet.
+-/
 
 noncomputable section
 
