@@ -13,6 +13,7 @@ stationarity predicate.
 -/
 
 noncomputable section
+open MeasureTheory
 
 def ExpectedPsiActionIncrementIntegrand
     [Fintype Site] [Fintype Edge]
@@ -63,7 +64,10 @@ def ExpectedStationaryPsiAction
     (chi0 B : ℝ) (bond : Edge → Bond Site)
     (trajectory : NativeTrajectory Site) (etaPsi : Site → C3) : Prop :=
   ∀ test : SchwartzMap ℝ ℝ,
-    AnalyticHasDerivAt
+    @HasDerivAt ℝ inferInstance ℝ
+      Real.normedAddCommGroup.toAddCommGroup
+      RCLike.toInnerProductSpaceReal.toModule
+      inferInstance inferInstance
       (ExpectedPsiActionIncrement chi0 B bond trajectory etaPsi test) 0 0
 
 def ExpectedStationaryChiAction
@@ -71,7 +75,10 @@ def ExpectedStationaryChiAction
     (chi0 B : ℝ) (bond : Edge → Bond Site)
     (trajectory : NativeTrajectory Site) (etaChi : Site → C3) : Prop :=
   ∀ test : SchwartzMap ℝ ℝ,
-    AnalyticHasDerivAt
+    @HasDerivAt ℝ inferInstance ℝ
+      Real.normedAddCommGroup.toAddCommGroup
+      RCLike.toInnerProductSpaceReal.toModule
+      inferInstance inferInstance
       (ExpectedChiActionIncrement chi0 B bond trajectory etaChi test) 0 0
 
 theorem psi_action_increment_integrand_definition_is_exact
