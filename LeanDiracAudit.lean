@@ -9,5 +9,9 @@ import LeanDirac.Publication
 #print axioms LeanDirac.psi_test_variation_is_lagrangian_derivative
 #print axioms LeanDirac.integrated_stationarity_forces_euler_lagrange
 #print axioms LeanDirac.dirac003_c19_equations_from_actual_stationary_action
+#print axioms LeanDirac.psi_action_increment_integrand_definition_is_exact
+#print axioms LeanDirac.chi_action_increment_integrand_definition_is_exact
+#print axioms LeanDirac.psi_stationarity_definition_is_exact
+#print axioms LeanDirac.chi_stationarity_definition_is_exact
 #print axioms LeanDirac.current_highest_gate_is_dirac003
 

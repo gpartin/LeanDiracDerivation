@@ -79,6 +79,7 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
+LeanDirac/Dirac003Contract.lean         exact non-circular stationarity contract
 LeanDirac/Dirac003.lean                stationary-action Euler--Lagrange proof
 LeanDirac/Dirac002.lean                DIRAC-002 contracts
 LeanDirac/PreparedBackground.lean      conditional eight-corner state
@@ -102,6 +103,7 @@ lake update
 lake build
 lake build LeanDiracAudit
 python scripts/production_guard.py
+python scripts/adversarial_guard_test.py
 ```
 
 The axiom report may contain Lean's standard foundations
@@ -117,6 +119,9 @@ compatible trajectories. It does not assert that an arbitrary trajectory is
 stationary or that a solution exists. Unlike the retired attempt, stationarity
 is the derivative of the actual time-integrated action increment; it does not
 contain either Euler--Lagrange equation. The proof obtains the local equations
-through integration by parts and the fundamental lemma. The native discrete
+through integration by parts and the fundamental lemma. A separate Lean
+definitional contract repeats the expected action-increment formula and fails
+to compile if either target equation is inserted directly, hidden behind an
+alias, or expanded inside stationarity. The native discrete
 time update, invariant spinor sector, Dirac operator, electron and physical
 spin remain downstream open work.

@@ -1,4 +1,4 @@
-import LeanDirac.Dirac003
+import LeanDirac.Dirac003Contract
 
 namespace LeanDirac
 
