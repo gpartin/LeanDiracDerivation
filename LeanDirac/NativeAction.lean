@@ -1,4 +1,5 @@
 import LeanDirac.ExteriorArea
+import LeanDirac.C19Geometry
 
 namespace LeanDirac
 
@@ -26,6 +27,20 @@ def hamiltonian [Fintype Site] [Fintype Edge]
     (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
     (bond : Edge → Bond Site) : ℝ :=
   kinetic B velocity + potential chi0 state bond
+
+def c19Potential [Fintype Site]
+    (chi0 : ℝ) (state : State Site) (geometry : C19Lattice Site) : ℝ :=
+  potential (Edge := C19Edge Site) chi0 state (c19Bond geometry)
+
+def c19Lagrangian [Fintype Site]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) : ℝ :=
+  lagrangian (Edge := C19Edge Site) chi0 B state velocity (c19Bond geometry)
+
+def c19Hamiltonian [Fintype Site]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) : ℝ :=
+  hamiltonian (Edge := C19Edge Site) chi0 B state velocity (c19Bond geometry)
 
 theorem site_potential_nonnegative
     (chi0 : ℝ) (state : State Site) (site : Site) :
@@ -55,6 +70,13 @@ theorem hamiltonian_nonnegative [Fintype Site] [Fintype Edge]
     0 ≤ hamiltonian chi0 B state velocity bond := by
   exact add_nonneg (kinetic_nonnegative B velocity hB)
     (potential_nonnegative chi0 state bond hchi hweight)
+
+theorem c19_hamiltonian_nonnegative [Fintype Site]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) (hchi : 0 < chi0) (hB : 0 ≤ B) :
+    0 ≤ c19Hamiltonian chi0 B state velocity geometry := by
+  exact hamiltonian_nonnegative chi0 B state velocity (c19Bond geometry)
+    hchi hB (fun edge => le_of_lt (c19_bond_weight_positive geometry edge))
 
 theorem total_capacity_coefficients_unique
     (a mu chi0 : ℝ) (hunit : 4 * a = 1)
