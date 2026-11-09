@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-002",
+  "status": "PASS_ZERO_CRITICAL_HIGH",
+  "critical_findings": [],
+  "high_findings": [],
+  "absent_structures": [
+    "independent spinor register",
+    "Dirac matrices supplied upstream",
+    "projector register",
+    "independent link field",
+    "held track",
+    "Kato kinetic rule",
+    "frame target",
+    "runtime projection"
+  ],
+  "derived_structures": {
+    "exterior_area": "alternation plus equal cubic-plane normalization",
+    "local_coefficients": "total-capacity quartic, unit response and vacuum balance",
+    "prepared_track": "constant wedge of each tetrahedral corner and its native companion"
+  },
+  "open_but_nonblocking_for_dirac_002": [
+    "exact Euler-Lagrange variation (DIRAC-003)",
+    "higher-zoom scalar flat-octic recovery",
+    "free-Dirac limit",
+    "physical electron and spin validation"
+  ]
+}
+

@@ -1,0 +1,18 @@
+name: Lean proof
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          build: true
+      - name: Axiom audit
+        run: lake build LeanDiracAudit
+      - name: Production guard
+        run: python scripts/production_guard.py

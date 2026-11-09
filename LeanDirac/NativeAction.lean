@@ -1,0 +1,73 @@
+import LeanDirac.ExteriorArea
+
+namespace LeanDirac
+
+/-! Frozen noncanonical DIRAC-002 action. -/
+
+noncomputable section
+open BigOperators
+
+def sitePotential (chi0 : ℝ) (state : State Site) (site : Site) : ℝ :=
+  let rhoPsi := density (state.psi site)
+  let rhoChi := density (state.chi site)
+  (rhoChi - chi0^2)^2 / 4 + rhoChi * rhoPsi / 2 + rhoPsi^2 / 4
+
+def potential [Fintype Site] [Fintype Edge]
+    (chi0 : ℝ) (state : State Site) (bond : Edge → Bond Site) : ℝ :=
+  (∑ site, sitePotential chi0 state site) +
+    ∑ edge, exteriorAreaBond chi0 state (bond edge)
+
+def lagrangian [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) : ℝ :=
+  kinetic B velocity - potential chi0 state bond
+
+def hamiltonian [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) : ℝ :=
+  kinetic B velocity + potential chi0 state bond
+
+theorem site_potential_nonnegative
+    (chi0 : ℝ) (state : State Site) (site : Site) :
+    0 ≤ sitePotential chi0 state site := by
+  unfold sitePotential
+  dsimp
+  have hp := density_nonnegative (state.psi site)
+  have hx := density_nonnegative (state.chi site)
+  positivity
+
+theorem potential_nonnegative [Fintype Site] [Fintype Edge]
+    (chi0 : ℝ) (state : State Site) (bond : Edge → Bond Site)
+    (hchi : 0 < chi0) (hweight : ∀ edge, 0 ≤ (bond edge).weight) :
+    0 ≤ potential chi0 state bond := by
+  unfold potential
+  apply add_nonneg
+  · exact Finset.sum_nonneg (fun site _ =>
+      site_potential_nonnegative chi0 state site)
+  · exact Finset.sum_nonneg (fun edge _ =>
+      exterior_area_bond_nonnegative chi0 state (bond edge)
+        hchi (hweight edge))
+
+theorem hamiltonian_nonnegative [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (hchi : 0 < chi0) (hB : 0 ≤ B)
+    (hweight : ∀ edge, 0 ≤ (bond edge).weight) :
+    0 ≤ hamiltonian chi0 B state velocity bond := by
+  exact add_nonneg (kinetic_nonnegative B velocity hB)
+    (potential_nonnegative chi0 state bond hchi hweight)
+
+theorem total_capacity_coefficients_unique
+    (a mu chi0 : ℝ) (hunit : 4 * a = 1)
+    (hvacuum : 2 * mu = chi0^2) :
+    a = 1/4 ∧ mu = chi0^2/2 := by
+  constructor <;> linarith
+
+theorem total_capacity_expansion (rhoChi rhoPsi chi0 : ℝ) :
+    (rhoChi + rhoPsi)^2 / 4 - chi0^2 * rhoChi / 2 + chi0^4 / 4 =
+      (rhoChi - chi0^2)^2 / 4 +
+        rhoChi * rhoPsi / 2 + rhoPsi^2 / 4 := by
+  ring
+
+end
+end LeanDirac
+
