@@ -1,0 +1,7 @@
+import LeanDirac.Publication
+
+#print axioms LeanDirac.dirac002_positive_two_field_action
+#print axioms LeanDirac.dirac002_prepared_geometry
+#print axioms LeanDirac.cubic_unit_area_forces_wedge
+#print axioms LeanDirac.current_highest_gate_is_dirac002
+
