@@ -3,133 +3,119 @@ import LeanDirac.Dirac003
 namespace LeanDirac
 
 /-!
-Independent definitional contracts for the DIRAC-003 proof boundary.
+Independent source-shape contracts for the local DIRAC-003 boundary.
 
-These definitions deliberately repeat the expected action-increment and
-stationarity shapes without referring to the corresponding DIRAC-003
-definitions.  The `Iff.rfl`/`rfl` proofs below therefore fail if a target
-equation is added directly, hidden behind an alias, or expanded inline in a
-stationarity predicate.
+Each expected curve is written directly from the native Lagrangian rather
+than through a force, momentum, Euler--Lagrange equation, or stationarity
+predicate. The derivative theorems therefore check that the admitted force
+and momentum readouts are genuinely derivatives of the declared action.
 -/
 
 noncomputable section
-open MeasureTheory
 
-def ExpectedPsiActionIncrementIntegrand
+def ExpectedPsiStateCurve
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaPsi : Site → C3)
-    (test : SchwartzMap ℝ ℝ) (eps t : ℝ) : ℝ :=
-  let direction := scaleC3Field (test t) etaPsi
-  let velocityDirection := scaleC3Field (deriv test t) etaPsi
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaPsi : Site → C3) (eps : ℝ) : ℝ :=
   lagrangian chi0 B
-      (stateLine (trajectory.state t) (purePsiDirection direction) eps)
-      (velocityLine (trajectory.velocity t)
-        (purePsiVelocity velocityDirection) eps) bond -
-    lagrangian chi0 B (trajectory.state t) (trajectory.velocity t) bond
+    (stateLine state (purePsiDirection etaPsi) eps) velocity bond
 
-def ExpectedChiActionIncrementIntegrand
+def ExpectedChiStateCurve
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaChi : Site → C3)
-    (test : SchwartzMap ℝ ℝ) (eps t : ℝ) : ℝ :=
-  let direction := scaleC3Field (test t) etaChi
-  let velocityDirection := scaleC3Field (deriv test t) etaChi
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaChi : Site → C3) (eps : ℝ) : ℝ :=
   lagrangian chi0 B
-      (stateLine (trajectory.state t) (pureChiDirection direction) eps)
-      (velocityLine (trajectory.velocity t)
-        (pureChiVelocity velocityDirection) eps) bond -
-    lagrangian chi0 B (trajectory.state t) (trajectory.velocity t) bond
+    (stateLine state (pureChiDirection etaChi) eps) velocity bond
 
-def ExpectedPsiActionIncrement
+def ExpectedPsiVelocityCurve
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaPsi : Site → C3)
-    (test : SchwartzMap ℝ ℝ) (eps : ℝ) : ℝ :=
-  ∫ t : ℝ,
-    ExpectedPsiActionIncrementIntegrand
-      chi0 B bond trajectory etaPsi test eps t
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaPsi : Site → C3) (eps : ℝ) : ℝ :=
+  lagrangian chi0 B state
+    (velocityLine velocity (purePsiVelocity etaPsi) eps) bond
 
-def ExpectedChiActionIncrement
+def ExpectedChiVelocityCurve
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaChi : Site → C3)
-    (test : SchwartzMap ℝ ℝ) (eps : ℝ) : ℝ :=
-  ∫ t : ℝ,
-    ExpectedChiActionIncrementIntegrand
-      chi0 B bond trajectory etaChi test eps t
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaChi : Site → C3) (eps : ℝ) : ℝ :=
+  lagrangian chi0 B state
+    (velocityLine velocity (pureChiVelocity etaChi) eps) bond
 
-def ExpectedStationaryPsiAction
+theorem psi_state_curve_is_raw_lagrangian
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaPsi : Site → C3) : Prop :=
-  ∀ test : SchwartzMap ℝ ℝ,
-    @HasDerivAt ℝ inferInstance ℝ
-      Real.normedAddCommGroup.toAddCommGroup
-      RCLike.toInnerProductSpaceReal.toModule
-      inferInstance inferInstance
-      (ExpectedPsiActionIncrement chi0 B bond trajectory etaPsi test) 0 0
-
-def ExpectedStationaryChiAction
-    [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaChi : Site → C3) : Prop :=
-  ∀ test : SchwartzMap ℝ ℝ,
-    @HasDerivAt ℝ inferInstance ℝ
-      Real.normedAddCommGroup.toAddCommGroup
-      RCLike.toInnerProductSpaceReal.toModule
-      inferInstance inferInstance
-      (ExpectedChiActionIncrement chi0 B bond trajectory etaChi test) 0 0
-
-theorem psi_action_increment_integrand_definition_is_exact
-    [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaPsi : Site → C3) :
-    psiActionIncrementIntegrand chi0 B bond trajectory etaPsi =
-      ExpectedPsiActionIncrementIntegrand
-        chi0 B bond trajectory etaPsi := by
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaPsi : Site → C3) :
+    ExpectedPsiStateCurve chi0 B state velocity bond etaPsi =
+      fun eps : ℝ => lagrangian chi0 B
+        (stateLine state (purePsiDirection etaPsi) eps) velocity bond := by
   rfl
 
-theorem chi_action_increment_integrand_definition_is_exact
+theorem chi_state_curve_is_raw_lagrangian
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaChi : Site → C3) :
-    chiActionIncrementIntegrand chi0 B bond trajectory etaChi =
-      ExpectedChiActionIncrementIntegrand
-        chi0 B bond trajectory etaChi := by
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaChi : Site → C3) :
+    ExpectedChiStateCurve chi0 B state velocity bond etaChi =
+      fun eps : ℝ => lagrangian chi0 B
+        (stateLine state (pureChiDirection etaChi) eps) velocity bond := by
   rfl
 
-theorem psi_action_increment_definition_is_exact
+theorem psi_velocity_curve_is_raw_lagrangian
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaPsi : Site → C3) :
-    psiActionIncrement chi0 B bond trajectory etaPsi =
-      ExpectedPsiActionIncrement chi0 B bond trajectory etaPsi := by
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaPsi : Site → C3) :
+    ExpectedPsiVelocityCurve chi0 B state velocity bond etaPsi =
+      fun eps : ℝ => lagrangian chi0 B state
+        (velocityLine velocity (purePsiVelocity etaPsi) eps) bond := by
   rfl
 
-theorem chi_action_increment_definition_is_exact
+theorem chi_velocity_curve_is_raw_lagrangian
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaChi : Site → C3) :
-    chiActionIncrement chi0 B bond trajectory etaChi =
-      ExpectedChiActionIncrement chi0 B bond trajectory etaChi := by
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaChi : Site → C3) :
+    ExpectedChiVelocityCurve chi0 B state velocity bond etaChi =
+      fun eps : ℝ => lagrangian chi0 B state
+        (velocityLine velocity (pureChiVelocity etaChi) eps) bond := by
   rfl
 
-theorem psi_stationarity_definition_is_exact
+theorem psi_state_curve_derivative_is_native_force
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaPsi : Site → C3) :
-    HasStationaryPsiAction chi0 B bond trajectory etaPsi ↔
-      ExpectedStationaryPsiAction chi0 B bond trajectory etaPsi := by
-  rfl
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaPsi : Site → C3) :
+    AnalyticHasDerivAt
+      (ExpectedPsiStateCurve chi0 B state velocity bond etaPsi)
+      (psiEulerLagrangeForce chi0 state bond etaPsi) 0 := by
+  exact psi_force_is_full_action_variation
+    chi0 B state velocity bond etaPsi
 
-theorem chi_stationarity_definition_is_exact
+theorem chi_state_curve_derivative_is_native_force
     [Fintype Site] [Fintype Edge]
-    (chi0 B : ℝ) (bond : Edge → Bond Site)
-    (trajectory : NativeTrajectory Site) (etaChi : Site → C3) :
-    HasStationaryChiAction chi0 B bond trajectory etaChi ↔
-      ExpectedStationaryChiAction chi0 B bond trajectory etaChi := by
-  rfl
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaChi : Site → C3) :
+    AnalyticHasDerivAt
+      (ExpectedChiStateCurve chi0 B state velocity bond etaChi)
+      (chiEulerLagrangeForce chi0 state bond etaChi) 0 := by
+  exact chi_force_is_full_action_variation
+    chi0 B state velocity bond etaChi
+
+theorem psi_velocity_curve_derivative_is_native_momentum
+    [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaPsi : Site → C3) :
+    AnalyticHasDerivAt
+      (ExpectedPsiVelocityCurve chi0 B state velocity bond etaPsi)
+      (psiMomentumPair velocity etaPsi) 0 := by
+  exact psi_momentum_is_full_action_velocity_variation
+    chi0 B state velocity bond etaPsi
+
+theorem chi_velocity_curve_derivative_is_native_momentum
+    [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) (etaChi : Site → C3) :
+    AnalyticHasDerivAt
+      (ExpectedChiVelocityCurve chi0 B state velocity bond etaChi)
+      (chiMomentumPair B velocity etaChi) 0 := by
+  exact chi_momentum_is_full_action_velocity_variation
+    chi0 B state velocity bond etaChi
 
 end
 end LeanDirac

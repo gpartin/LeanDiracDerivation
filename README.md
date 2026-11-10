@@ -14,8 +14,9 @@ remain outside this repository.
 |---|---|---|
 | `DIRAC-001` | **PASS** | One public proof root and a closed, auditable dependency chain. |
 | `DIRAC-002` | **PASS** | A nonnegative two-field complex-C3 action with geometry-derived exterior-area transport and a concrete prepared eight-corner background. |
-| `DIRAC-003` | **PASS** | For compatible regular trajectories, genuine stationarity of the time-integrated action implies both reciprocal Euler–Lagrange equation families. The proof differentiates the actual action increment, integrates by parts and applies the fundamental lemma. |
-| `DIRAC-004` | **NEXT** | Derive the action-compatible reversible native time update. |
+| `DIRAC-003` | **PASS** | Independent arbitrary variations of the actual local action produce the native Ψ and χ force and momentum families. No all-time trajectory, decay assumption or continuum equation is used at this lattice-first gate. |
+| `DIRAC-004` | **PASS** | A two-step discrete action is built from the frozen kinetic energy and potential. Lean proves its stationary point is uniquely the explicit centered C19 update, proves exact reversibility, and proves both reciprocal equations for every complex-C3 field variation. |
+| `DIRAC-005` | **NEXT** | Derive the invariant eight-site sector and retain every native copy. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -53,9 +54,9 @@ Recovering its exact higher-zoom scalar response remains open.
 |---:|---|---|---|---|
 | 1 | `DIRAC-001` | Authority boundary | **PASS** | One public root; no experimental or superseded dependency enters the production graph. |
 | 2 | `DIRAC-002` | Native action | **PASS** | A positive two-field action, derived geometric transport, coefficient provenance and a cleared no-bolt-on review. |
-| 3 | `DIRAC-003` | Native equations | **PASS** | Derive both reciprocal Euler–Lagrange equation families from actual stationary action, independent variations, integration by parts and the fundamental lemma. |
-| 4 | `DIRAC-004` | Native time | **NEXT** | Derive and verify the action-compatible reversible second-order update. |
-| 5 | `DIRAC-005` | Native sector | OPEN | Derive the invariant eight-site sector and retain every native copy. |
+| 3 | `DIRAC-003` | Native equations | **PASS** | Derive the Ψ and χ force and conjugate-momentum families by independent arbitrary variations of the same local action. |
+| 4 | `DIRAC-004` | Native time | **PASS** | Derive the centered update as the unique stationary point of the discrete two-step action; prove reversibility and both equations for arbitrary field variations. |
+| 5 | `DIRAC-005` | Native sector | **NEXT** | Derive the invariant eight-site sector and retain every native copy. |
 | 6 | `DIRAC-006` | Native symbol | OPEN | Derive finite-lattice transport coefficients from lattice characters. |
 | 7 | `DIRAC-007` | Paired readout | OPEN | Build a lossless first-order readout from native displacement and velocity. |
 | 8 | `DIRAC-008` | Native first-order operator | OPEN | Construct the first-order operator from action and cube data only. |
@@ -79,8 +80,10 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
-LeanDirac/Dirac003Contract.lean         exact non-circular stationarity contract
-LeanDirac/Dirac003.lean                stationary-action Euler--Lagrange proof
+LeanDirac/Dirac004DiscreteAction.lean  discrete action/update equivalence
+LeanDirac/Dirac004.lean                force-coordinate/update algebra
+LeanDirac/Dirac003Contract.lean         independent raw-action curve contract
+LeanDirac/Dirac003.lean                local two-field action-variation proof
 LeanDirac/Dirac002.lean                DIRAC-002 contracts
 LeanDirac/PreparedBackground.lean      conditional eight-corner state
 LeanDirac/NativeAction.lean            frozen action and positivity
@@ -114,14 +117,12 @@ the audit and fails on any other dependency, or on `sorry`, `admit` or a custom
 ## Claim boundary
 
 This repository records a noncanonical mathematical research candidate.
-`DIRAC-003` is admitted only as a conditional variational theorem for regular,
-compatible trajectories. It does not assert that an arbitrary trajectory is
-stationary or that a solution exists. Unlike the retired attempt, stationarity
-is the derivative of the actual time-integrated action increment; it does not
-contain either Euler--Lagrange equation. The proof obtains the local equations
-through integration by parts and the fundamental lemma. A separate Lean
-definitional contract repeats the expected action-increment formula and fails
-to compile if either target equation is inserted directly, hidden behind an
-alias, or expanded inside stationarity. The native discrete
-time update, invariant spinor sector, Dirac operator, electron and physical
-spin remain downstream open work.
+`DIRAC-003` is a local variational theorem: it identifies the two native force
+and momentum families as derivatives of the same declared action. It does not
+claim formation, background selection or a continuum trajectory.
+`DIRAC-004` constructs the actual two-step discrete action, differentiates it
+under arbitrary combined field variations, and proves that stationarity is
+equivalent to the explicit centered update. It also proves exact reversibility
+and both equation families for every field direction. It does not yet prove
+long-time numerical stability, an invariant spinor sector, a Dirac operator,
+an electron, or physical spin; those remain downstream work.

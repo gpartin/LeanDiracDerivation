@@ -3,17 +3,13 @@ import LeanDirac.Dirac002
 namespace LeanDirac
 
 /-!
-DIRAC-003 derives the two reciprocal weak Euler--Lagrange equation families
-from the frozen DIRAC-002 action.  It first proves the independent state and
-velocity derivatives of the native Lagrangian.  It then perturbs compatible
-trajectories by smooth test functions, differentiates the actual
-time-integrated action increment under explicit domination hypotheses,
-integrates by parts, and invokes the fundamental lemma of the calculus of
-variations.
-
-The result is conditional on ordinary regularity and genuine stationarity;
-it neither defines stationarity to be the equations nor asserts existence of
-a stationary trajectory.  No time integrator or Dirac claim is made.
+DIRAC-003 derives the reciprocal local force and conjugate-momentum families
+from independent state and velocity variations of the frozen DIRAC-002
+action. The admitted gate is pointwise on the finite lattice and applies to
+every state and velocity; it assumes no all-time decay, continuum equation or
+stationary trajectory. A more restrictive global weak-form theorem remains
+below as an auxiliary result, not as the production proof boundary. No time
+integrator or Dirac claim is made.
 -/
 
 noncomputable section
@@ -1064,6 +1060,79 @@ theorem dirac003_c19_equations_from_actual_stationary_action
     exact chi_integrated_stationarity_of_actual_action
       chi0 B (c19Bond geometry) trajectory etaChi (chiData etaChi)
       (hChiStationary etaChi) (hChiControl etaChi)
+
+/-!
+The admitted DIRAC-003 boundary is local and lattice-first.  It does not
+require a trajectory extending over all real time, decay of a running state,
+or a continuum equation.  It records the four independent derivatives of
+the same native Lagrangian: state and velocity variations for each of the two
+field families.  The older global weak-form theorem above remains a valid
+auxiliary theorem, but is not the production gate.
+-/
+
+structure LocalTwoFieldVariationCertificate
+    [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) : Prop where
+  psiState : ∀ etaPsi : Site → C3,
+    AnalyticHasDerivAt
+      (fun eps : ℝ => lagrangian chi0 B
+        (stateLine state (purePsiDirection etaPsi) eps) velocity bond)
+      (psiEulerLagrangeForce chi0 state bond etaPsi) 0
+  chiState : ∀ etaChi : Site → C3,
+    AnalyticHasDerivAt
+      (fun eps : ℝ => lagrangian chi0 B
+        (stateLine state (pureChiDirection etaChi) eps) velocity bond)
+      (chiEulerLagrangeForce chi0 state bond etaChi) 0
+  psiVelocity : ∀ etaPsi : Site → C3,
+    AnalyticHasDerivAt
+      (fun eps : ℝ => lagrangian chi0 B state
+        (velocityLine velocity (purePsiVelocity etaPsi) eps) bond)
+      (psiMomentumPair velocity etaPsi) 0
+  chiVelocity : ∀ etaChi : Site → C3,
+    AnalyticHasDerivAt
+      (fun eps : ℝ => lagrangian chi0 B state
+        (velocityLine velocity (pureChiVelocity etaChi) eps) bond)
+      (chiMomentumPair B velocity etaChi) 0
+  combined : ∀ (stateDirection : State Site)
+      (velocityDirection : Velocity Site),
+    AnalyticHasDerivAt
+      (fun eps : ℝ => lagrangian chi0 B
+        (stateLine state stateDirection eps)
+        (velocityLine velocity velocityDirection eps) bond)
+      (lagrangianStateFirstVariation chi0 state stateDirection bond +
+        kineticVelocityFirstVariation B velocity velocityDirection) 0
+
+theorem dirac003_local_variations_from_actual_action
+    [Fintype Site] [Fintype Edge]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (bond : Edge → Bond Site) :
+    LocalTwoFieldVariationCertificate chi0 B state velocity bond := by
+  constructor
+  · exact fun etaPsi =>
+      psi_force_is_full_action_variation
+        chi0 B state velocity bond etaPsi
+  · exact fun etaChi =>
+      chi_force_is_full_action_variation
+        chi0 B state velocity bond etaChi
+  · exact fun etaPsi =>
+      psi_momentum_is_full_action_velocity_variation
+        chi0 B state velocity bond etaPsi
+  · exact fun etaChi =>
+      chi_momentum_is_full_action_velocity_variation
+        chi0 B state velocity bond etaChi
+  · exact fun stateDirection velocityDirection =>
+      lagrangian_state_velocity_hasDerivAt chi0 B state stateDirection
+        velocity velocityDirection bond
+
+theorem dirac003_c19_local_variations_from_actual_action
+    [Fintype Site]
+    (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) :
+    LocalTwoFieldVariationCertificate chi0 B state velocity
+      (c19Bond geometry) :=
+  dirac003_local_variations_from_actual_action
+    chi0 B state velocity (c19Bond geometry)
 
 end
 end LeanDirac
