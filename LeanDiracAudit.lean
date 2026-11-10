@@ -32,6 +32,9 @@ import LeanDirac.Publication
 #print axioms LeanDirac.native_next_preserves_eight_site_sector
 #print axioms LeanDirac.native_unit_cell_coordinate_count
 #print axioms LeanDirac.native_unit_cell_two_layer_coordinate_count
+#print axioms LeanDirac.recover_aligned_eight_site_amplitudes
+#print axioms LeanDirac.aligned_eight_site_state_from_amplitudes_injective
+#print axioms LeanDirac.aligned_recovered_state_of_in_eight_site_sector
 #print axioms LeanDirac.cube_corner_coordinate_injective
 #print axioms LeanDirac.cube_c19_neighbor_is_periodic_c19
 #print axioms LeanDirac.c19_direction_has_declared_class
@@ -57,4 +60,16 @@ import LeanDirac.Publication
 #print axioms LeanDirac.product_amplitude_first_order_expansion
 #print axioms LeanDirac.dirac006_native_transport_symbol
 #print axioms LeanDirac.current_highest_gate_is_dirac006
+#print axioms LeanDirac.rebuild_previous_after_native_readout
+#print axioms LeanDirac.rebuild_after_native_readout
+#print axioms LeanDirac.native_readout_after_rebuild
+#print axioms LeanDirac.state_difference_velocity_preserves_eight_site_sector
+#print axioms LeanDirac.native_paired_readout_preserves_eight_site_sector
+#print axioms LeanDirac.rebuild_previous_preserves_eight_site_sector
+#print axioms LeanDirac.rebuild_native_layers_preserves_eight_site_sector
+#print axioms LeanDirac.native_running_sector_coordinate_roundtrip
+#print axioms LeanDirac.native_coordinate_running_sector_roundtrip
+#print axioms LeanDirac.native_unit_cell_running_coordinate_count
+#print axioms LeanDirac.dirac007_lossless_native_paired_readout
+#print axioms LeanDirac.current_highest_gate_is_dirac007
 

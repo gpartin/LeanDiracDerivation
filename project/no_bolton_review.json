@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "gate": "DIRAC-006",
+  "gate": "DIRAC-007",
   "status": "PASS_ZERO_CRITICAL_HIGH",
   "critical_findings": [],
   "high_findings": [],
@@ -24,14 +24,16 @@
     "prepared_track": "all six face products and the constant wedge of each tetrahedral corner with its native companion are proved; formation or dynamic selection is not claimed",
     "native_equations": "independent arbitrary Psi and chi state/velocity derivatives of the same local action, with no trajectory-decay or continuum assumption",
     "native_time": "the unique stationary point of the two-step discrete action; arbitrary-direction force representation, exact centered recurrence and reversibility are proved",
-    "native_sector": "on the period-two C19 unit cell, the prepared tetrahedral Psi rays and native companion chi rays define an exact sixteen-complex-coordinate state slice (eight Psi amplitudes plus eight chi amplitudes); the two-layer centered phase space has thirty-two complex coordinates; the complete local and bond action variation has zero normal block and the unrestricted update preserves it",
+    "native_sector": "on the period-two C19 unit cell, the prepared tetrahedral Psi rays and native companion chi rays define a sector with exact amplitude extraction and reconstruction; injectivity proves one unique set of sixteen complex coordinates per state slice, and the two-layer centered phase space has thirty-two; the complete local and bond action variation has zero normal block and the unrestricted update preserves it",
     "c19_unit_cell": "the explicit cube neighbor table is proved equal, under the corner-coordinate map, to the declared period-two periodic C19 neighbor operation; its six face directions and twelve edge directions have the declared weights",
-    "native_transport_symbol": "an explicit Bloch-modulated native Psi/chi state over a period-two ray background is constructed; its actual exterior-area bonds reduce to the product chiAmplitude*psiAmplitude and yield the nonnegative local infinite-lattice C19 character symbol, zero first moment and isotropic second moment 12 in the action's declared relative-weight normalization"
+    "native_transport_symbol": "an explicit Bloch-modulated native Psi/chi state over a period-two ray background is constructed; its actual exterior-area bonds reduce to the product chiAmplitude*psiAmplitude and yield the nonnegative local infinite-lattice C19 character symbol, zero first moment and isotropic second moment 12 in the action's declared relative-weight normalization",
+    "native_paired_readout": "for every nonzero timestep, the two complete committed Psi/chi layers and the complete current-state-plus-backward-interval-velocity description are exact inverses; the two-layer sector, running sector and thirty-two complex coordinate functions are connected by explicit equivalences in both directions"
   },
-  "readout_only_structures": {},
-  "open_but_nonblocking_for_dirac_006": [
+  "readout_only_structures": {
+    "native_running_state": "a lossless coordinate change of the two native committed layers using the previous-to-current interval velocity, not a new field, spinor, equation, same-time derivative claim or selector"
+  },
+  "open_but_nonblocking_for_dirac_007": [
     "derive any four-component selection and independent closure from the finite-lattice operator",
-    "derive a lossless native first-order readout from displacement and velocity (DIRAC-007)",
     "derive the complete local-plus-transport first-order operator",
     "higher-zoom scalar flat-octic recovery",
     "free-Dirac limit",

@@ -27,6 +27,32 @@ abbrev Cell8 := Fin 8 → ℂ
 abbrev NativeUnitCellCoordinate := Fin 8 ⊕ Fin 8
 abbrev NativeUnitCellTwoLayerCoordinate :=
   NativeUnitCellCoordinate ⊕ NativeUnitCellCoordinate
+abbrev NativeUnitCellAmplitudes := Cell8 × Cell8
+
+def nativeUnitCellAmplitudeCoordinates
+    (amplitudes : NativeUnitCellAmplitudes) :
+    NativeUnitCellCoordinate → ℂ
+  | Sum.inl corner => amplitudes.1 corner
+  | Sum.inr corner => amplitudes.2 corner
+
+def nativeUnitCellCoordinatesAmplitude
+    (coordinates : NativeUnitCellCoordinate → ℂ) :
+    NativeUnitCellAmplitudes :=
+  (fun corner => coordinates (Sum.inl corner),
+    fun corner => coordinates (Sum.inr corner))
+
+def nativeUnitCellAmplitudeCoordinateEquiv :
+    NativeUnitCellAmplitudes ≃ (NativeUnitCellCoordinate → ℂ) where
+  toFun := nativeUnitCellAmplitudeCoordinates
+  invFun := nativeUnitCellCoordinatesAmplitude
+  left_inv := by
+    intro amplitudes
+    rcases amplitudes with ⟨psiAmplitude, chiAmplitude⟩
+    rfl
+  right_inv := by
+    intro coordinates
+    funext coordinate
+    cases coordinate <;> rfl
 
 theorem native_unit_cell_coordinate_count :
     Fintype.card NativeUnitCellCoordinate = 16 := by
@@ -50,6 +76,15 @@ def alignedEightSiteState (psiAmplitude chiAmplitude : Cell8) :
 def InEightSiteSector (state : State CubeCorner) : Prop :=
   ∃ psiAmplitude chiAmplitude,
     state = alignedEightSiteState psiAmplitude chiAmplitude
+
+def alignedEightSiteStateFromAmplitudes
+    (amplitudes : NativeUnitCellAmplitudes) : State CubeCorner :=
+  alignedEightSiteState amplitudes.1 amplitudes.2
+
+def recoverEightSiteAmplitudes
+    (state : State CubeCorner) : NativeUnitCellAmplitudes :=
+  (fun corner => c3Inner (tetraCorner corner) (state.psi corner),
+    fun corner => c3Inner (companion corner) (state.chi corner))
 
 def ComplexNormalTo (u eta : C3) : Prop := c3Inner u eta = 0
 
@@ -519,6 +554,58 @@ theorem companion_density_one (corner : CubeCorner) :
       sqrt_three_pow_five, sqrt_three_pow_six, sqrt_three_pow_eight,
       sqrt_two_pow_four]
 
+theorem recover_aligned_eight_site_amplitudes
+    (amplitudes : NativeUnitCellAmplitudes) :
+    recoverEightSiteAmplitudes
+        (alignedEightSiteStateFromAmplitudes amplitudes) = amplitudes := by
+  rcases amplitudes with ⟨psiAmplitude, chiAmplitude⟩
+  apply Prod.ext <;> funext corner
+  · simp [recoverEightSiteAmplitudes,
+      alignedEightSiteStateFromAmplitudes, alignedEightSiteState,
+      c3_inner_scale_right, c3_inner_self, tetra_corner_density_one]
+  · simp [recoverEightSiteAmplitudes,
+      alignedEightSiteStateFromAmplitudes, alignedEightSiteState,
+      c3_inner_scale_right, c3_inner_self, companion_density_one]
+
+theorem aligned_eight_site_state_from_amplitudes_injective :
+    Function.Injective alignedEightSiteStateFromAmplitudes := by
+  intro first second hequal
+  calc
+    first = recoverEightSiteAmplitudes
+        (alignedEightSiteStateFromAmplitudes first) :=
+      (recover_aligned_eight_site_amplitudes first).symm
+    _ = recoverEightSiteAmplitudes
+        (alignedEightSiteStateFromAmplitudes second) := congrArg _ hequal
+    _ = second := recover_aligned_eight_site_amplitudes second
+
+theorem aligned_recovered_state_of_in_eight_site_sector
+    (state : State CubeCorner) (hstate : InEightSiteSector state) :
+    alignedEightSiteStateFromAmplitudes
+        (recoverEightSiteAmplitudes state) = state := by
+  rcases hstate with ⟨psiAmplitude, chiAmplitude, rfl⟩
+  change alignedEightSiteStateFromAmplitudes
+      (recoverEightSiteAmplitudes
+        (alignedEightSiteStateFromAmplitudes
+          (psiAmplitude, chiAmplitude))) =
+    alignedEightSiteStateFromAmplitudes (psiAmplitude, chiAmplitude)
+  rw [recover_aligned_eight_site_amplitudes]
+
+abbrev EightSiteSectorState :=
+  { state : State CubeCorner // InEightSiteSector state }
+
+def nativeUnitCellAmplitudeSectorEquiv :
+    NativeUnitCellAmplitudes ≃ EightSiteSectorState where
+  toFun amplitudes :=
+    ⟨alignedEightSiteStateFromAmplitudes amplitudes,
+      ⟨amplitudes.1, amplitudes.2, rfl⟩⟩
+  invFun sectorState := recoverEightSiteAmplitudes sectorState.1
+  left_inv := recover_aligned_eight_site_amplitudes
+  right_inv := by
+    intro sectorState
+    apply Subtype.ext
+    exact aligned_recovered_state_of_in_eight_site_sector
+      sectorState.1 sectorState.2
+
 def psiAccelerationAmplitude [Fintype Edge]
     (chi0 B : ℝ) (psiAmplitude chiAmplitude : Cell8)
     (bond : Edge → Bond CubeCorner) : Cell8 :=
@@ -720,6 +807,13 @@ def cubeC19Geometry : C19Lattice CubeCorner where
 structure Dirac005Certificate [Fintype Edge]
     (chi0 B dt : ℝ) (bond : Edge → Bond CubeCorner)
     (previous current : State CubeCorner) : Prop where
+  amplitudeRecovery : ∀ amplitudes : NativeUnitCellAmplitudes,
+    recoverEightSiteAmplitudes
+        (alignedEightSiteStateFromAmplitudes amplitudes) = amplitudes
+  sectorReconstruction : ∀ state : State CubeCorner,
+    InEightSiteSector state →
+      alignedEightSiteStateFromAmplitudes
+        (recoverEightSiteAmplitudes state) = state
   stateSliceCoordinateCount : Fintype.card NativeUnitCellCoordinate = 16
   twoLayerCoordinateCount :
     Fintype.card NativeUnitCellTwoLayerCoordinate = 32
@@ -738,6 +832,8 @@ theorem dirac005_native_sector [Fintype Edge]
     (chi0 B dt : ℝ) (hB : B ≠ 0) (bond : Edge → Bond CubeCorner)
     (previous current : State CubeCorner) :
     Dirac005Certificate chi0 B dt bond previous current where
+  amplitudeRecovery := recover_aligned_eight_site_amplitudes
+  sectorReconstruction := aligned_recovered_state_of_in_eight_site_sector
   stateSliceCoordinateCount := native_unit_cell_coordinate_count
   twoLayerCoordinateCount := native_unit_cell_two_layer_coordinate_count
   psiCrossBlockZero := fun psiAmplitude chiAmplitude eta hnormal =>
