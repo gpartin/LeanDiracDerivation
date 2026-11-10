@@ -2,16 +2,17 @@
   "schema_version": "1.0.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-005",
-  "next_gate": "DIRAC-006",
-  "completed": 5,
+  "highest_passed_gate": "DIRAC-006",
+  "next_gate": "DIRAC-007",
+  "completed": 6,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
     "DIRAC-003": "LeanDirac/Dirac003.lean",
     "DIRAC-004": "LeanDirac/Dirac004DiscreteAction.lean",
-    "DIRAC-005": "LeanDirac/Dirac005.lean"
+    "DIRAC-005": "LeanDirac/Dirac005.lean",
+    "DIRAC-006": "LeanDirac/Dirac006.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -19,8 +20,8 @@
     "DIRAC-003": "PASS",
     "DIRAC-004": "PASS",
     "DIRAC-005": "PASS",
-    "DIRAC-006": "NEXT",
-    "DIRAC-007": "OPEN",
+    "DIRAC-006": "PASS",
+    "DIRAC-007": "NEXT",
     "DIRAC-008": "OPEN",
     "DIRAC-009": "OPEN",
     "DIRAC-010": "OPEN",
@@ -30,5 +31,5 @@
     "DIRAC-014": "OPEN",
     "DIRAC-015": "OPEN"
   },
-  "claim_boundary": "DIRAC-005 proves a cumulative nonzero-timestep discrete-action update and an invariant sixteen-complex-coordinate period-two unit-cell sector. It does not yet prove a repeated-lattice sector, native four-component selection, free Dirac equation, electron, physical spin, formation or canonical framework."
+  "claim_boundary": "DIRAC-006 cumulatively proves the declared positive candidate action and complete prepared cube geometry, its local variations, the nonzero-timestep action update, an invariant sixteen-complex-coordinate state slice (thirty-two across the two committed layers), and the exact local C19 character symbol of an explicitly constructed Bloch-modulated native Psi/chi state over a period-two ray background. The candidate action and prepared background are starting hypotheses, not derived origin claims. The chain does not yet prove a native four-component selection, complete first-order operator, free Dirac equation, electron, physical spin, formation or canonical framework."
 }

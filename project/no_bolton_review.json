@@ -1,9 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "gate": "DIRAC-005",
+  "gate": "DIRAC-006",
   "status": "PASS_ZERO_CRITICAL_HIGH",
   "critical_findings": [],
   "high_findings": [],
+  "declared_starting_hypotheses": [
+    "the noncanonical positive two-field action, including its exterior-area normalization",
+    "the already-running eight-corner Psi/chi ray preparation"
+  ],
   "absent_structures": [
     "independent spinor register",
     "Dirac matrices supplied upstream",
@@ -15,19 +19,20 @@
     "runtime projection"
   ],
   "derived_structures": {
-    "exterior_area": "alternation plus equal cubic-plane normalization",
-    "local_coefficients": "total-capacity quartic, unit response and vacuum balance",
-    "prepared_track": "constant wedge of each tetrahedral corner and its native companion",
+    "exterior_area": "the wedge is the unit-normalized map within the declared diagonal alternating family; the exterior-area action itself is an explicit candidate starting hypothesis, not a claimed unique consequence of a deeper law",
+    "local_coefficients": "the declared total-capacity quartic expands exactly and is positive; deeper uniqueness of the complete action normalization is not claimed",
+    "prepared_track": "all six face products and the constant wedge of each tetrahedral corner with its native companion are proved; formation or dynamic selection is not claimed",
     "native_equations": "independent arbitrary Psi and chi state/velocity derivatives of the same local action, with no trajectory-decay or continuum assumption",
     "native_time": "the unique stationary point of the two-step discrete action; arbitrary-direction force representation, exact centered recurrence and reversibility are proved",
-    "native_sector": "on the period-two C19 unit cell, the prepared tetrahedral Psi rays and native companion chi rays define an exact sixteen-complex-coordinate sector (eight Psi amplitudes plus eight chi amplitudes); the complete local and bond action variation has zero normal block and the unrestricted update preserves it",
-    "c19_unit_cell": "the explicit cube neighbor table is proved equal, under the corner-coordinate map, to the declared period-two periodic C19 neighbor operation; its six face directions and twelve edge directions have the declared weights"
+    "native_sector": "on the period-two C19 unit cell, the prepared tetrahedral Psi rays and native companion chi rays define an exact sixteen-complex-coordinate state slice (eight Psi amplitudes plus eight chi amplitudes); the two-layer centered phase space has thirty-two complex coordinates; the complete local and bond action variation has zero normal block and the unrestricted update preserves it",
+    "c19_unit_cell": "the explicit cube neighbor table is proved equal, under the corner-coordinate map, to the declared period-two periodic C19 neighbor operation; its six face directions and twelve edge directions have the declared weights",
+    "native_transport_symbol": "an explicit Bloch-modulated native Psi/chi state over a period-two ray background is constructed; its actual exterior-area bonds reduce to the product chiAmplitude*psiAmplitude and yield the nonnegative local infinite-lattice C19 character symbol, zero first moment and isotropic second moment 12 in the action's declared relative-weight normalization"
   },
   "readout_only_structures": {},
-  "open_but_nonblocking_for_dirac_005": [
+  "open_but_nonblocking_for_dirac_006": [
     "derive any four-component selection and independent closure from the finite-lattice operator",
-    "lift the period-two unit-cell sector to the repeated lattice/Bloch problem",
-    "finite-lattice symbol and transport coefficients (DIRAC-006)",
+    "derive a lossless native first-order readout from displacement and velocity (DIRAC-007)",
+    "derive the complete local-plus-transport first-order operator",
     "higher-zoom scalar flat-octic recovery",
     "free-Dirac limit",
     "physical electron and spin validation"
