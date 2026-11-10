@@ -29,7 +29,10 @@ import LeanDirac.Publication
 #print axioms LeanDirac.aligned_psi_cross_block_zero
 #print axioms LeanDirac.aligned_chi_cross_block_zero
 #print axioms LeanDirac.native_next_preserves_eight_site_sector
-#print axioms LeanDirac.every_cell_retains_two_four_component_copies
+#print axioms LeanDirac.native_unit_cell_coordinate_count
+#print axioms LeanDirac.cube_corner_coordinate_injective
+#print axioms LeanDirac.cube_c19_neighbor_is_periodic_c19
+#print axioms LeanDirac.c19_direction_has_declared_class
 #print axioms LeanDirac.cube_c19_neighbor_reverse
 #print axioms LeanDirac.dirac005_c19_native_sector
 #print axioms LeanDirac.current_highest_gate_is_dirac005

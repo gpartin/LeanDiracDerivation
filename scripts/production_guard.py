@@ -78,8 +78,11 @@ AUDITED_THEOREMS = {
     "LeanDirac.aligned_psi_cross_block_zero",
     "LeanDirac.aligned_chi_cross_block_zero",
     "LeanDirac.native_next_preserves_eight_site_sector",
-    "LeanDirac.every_cell_retains_two_four_component_copies",
+    "LeanDirac.native_unit_cell_coordinate_count",
+    "LeanDirac.cube_corner_coordinate_injective",
     "LeanDirac.cube_c19_neighbor_reverse",
+    "LeanDirac.cube_c19_neighbor_is_periodic_c19",
+    "LeanDirac.c19_direction_has_declared_class",
     "LeanDirac.dirac005_c19_native_sector",
     "LeanDirac.current_highest_gate_is_dirac005",
 }

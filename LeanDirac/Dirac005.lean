@@ -3,7 +3,7 @@ import LeanDirac.Dirac004DiscreteAction
 namespace LeanDirac
 
 /-!
-DIRAC-005: exact native eight-site sector.
+DIRAC-005: exact native period-two unit-cell sector.
 
 The sector in this file is not imposed during evolution.  It is the bundle
 in which the two native fields at each cube corner lie on the prepared
@@ -12,16 +12,21 @@ action-derived force of DIRAC-003/004 and proves that every force component
 normal to that bundle is zero.  The positive diagonal kinetic form then
 keeps the unrestricted centered update inside the same bundle.
 
-The eight complex corner amplitudes are also decomposed into both rank-four
-eigenspaces of a cube-derived flavor involution.  Neither copy is discarded
-or selected here.
+There are two independent complex amplitudes at each of the eight sites: one
+for `Psi` and one for `chi`, hence sixteen complex coordinates in this sector.
+No four-component split is supplied at this gate; it must be derived from the
+native finite-lattice operator downstream.
 -/
 
 noncomputable section
 open BigOperators Complex
 
 abbrev Cell8 := Fin 8 → ℂ
-abbrev Cell4 := Fin 4 → ℂ
+abbrev NativeUnitCellCoordinate := Fin 8 ⊕ Fin 8
+
+theorem native_unit_cell_coordinate_count :
+    Fintype.card NativeUnitCellCoordinate = 16 := by
+  decide
 
 def c3ScaleComplex (a : ℂ) (u : C3) : C3 :=
   fun component => a * u component
@@ -377,8 +382,10 @@ def rayResidual (u z : C3) : C3 :=
 
 theorem c3_inner_self (u : C3) :
     c3Inner u u = (density u : ℂ) := by
-  apply Complex.ext <;>
-    simp [c3Inner, density, Fin.sum_univ_succ, Complex.normSq]
+  apply Complex.ext
+  · simp [c3Inner, density, Fin.sum_univ_succ, Complex.normSq]
+  · simp [c3Inner, density, Fin.sum_univ_succ, Complex.normSq]
+    ring
 
 theorem c3_inner_sub_right_general (u v z : C3) :
     c3Inner u (c3Sub v z) = c3Inner u v - c3Inner u z := by
@@ -622,7 +629,10 @@ theorem native_next_preserves_eight_site_sector [Fintype Edge]
       accelerationChi]
     ring
 
-/-! Both four-component copies of the eight-amplitude cell are retained. -/
+/-!
+Period-two C19 geometry.  This connects the eight-site table used by the
+sector proof to the already declared periodic C19 coordinate geometry.
+-/
 
 def cellFlip0 : Fin 8 → Fin 8
   | 0 => 4 | 1 => 5 | 2 => 6 | 3 => 7
@@ -639,6 +649,24 @@ def cellFlip2 : Fin 8 → Fin 8
 def cellBit2 : Fin 8 → Nat
   | 0 | 2 | 4 | 6 => 0
   | _ => 1
+
+def cellBit0 : Fin 8 → Nat
+  | 0 | 1 | 2 | 3 => 0
+  | _ => 1
+
+def cellBit1 : Fin 8 → Nat
+  | 0 | 1 | 4 | 5 => 0
+  | _ => 1
+
+def cubeCornerCoordinate (corner : CubeCorner) : PeriodicCubicSite 2
+  | 0 => cellBit0 corner
+  | 1 => cellBit1 corner
+  | _ => cellBit2 corner
+
+theorem cube_corner_coordinate_injective :
+    Function.Injective cubeCornerCoordinate := by
+  intro a b
+  fin_cases a <;> fin_cases b <;> decide
 
 def cubeC19Neighbor (corner : CubeCorner)
     (direction : C19Neighbor) : CubeCorner :=
@@ -657,149 +685,29 @@ theorem cube_c19_neighbor_reverse (corner : CubeCorner)
   fin_cases corner <;> fin_cases direction <;>
     rfl
 
+theorem cube_c19_neighbor_is_periodic_c19 (corner : CubeCorner)
+    (direction : C19Neighbor) :
+    cubeCornerCoordinate (cubeC19Neighbor corner direction) =
+      periodicC19Neighbor 2 (cubeCornerCoordinate corner) direction := by
+  funext axis
+  fin_cases corner <;> fin_cases direction <;> fin_cases axis <;>
+    decide
+
+def c19NonzeroAxisCount (direction : C19Neighbor) : Nat :=
+  (Finset.univ.filter (fun axis : Fin 3 => c19Coord axis direction ≠ 0)).card
+
+theorem c19_direction_has_declared_class (direction : C19Neighbor) :
+    (direction.val < 6 ∧ c19NonzeroAxisCount direction = 1 ∧
+      c19Weight direction = 2) ∨
+    (6 ≤ direction.val ∧ c19NonzeroAxisCount direction = 2 ∧
+      c19Weight direction = 1) := by
+  fin_cases direction <;>
+    norm_num [c19Weight]
+  all_goals decide
+
 def cubeC19Geometry : C19Lattice CubeCorner where
   neighbor := cubeC19Neighbor
   neighbor_reverse := cube_c19_neighbor_reverse
-
-def cellFlavorSign (corner : Fin 8) : ℝ :=
-  if cellBit2 corner % 2 = 0 then 1 else -1
-
-def cellFlavor (a : Cell8) : Cell8 := fun corner =>
-  I * (cellFlavorSign corner : ℂ) * a (cellFlip1 (cellFlip2 corner))
-
-def cellAdd (a b : Cell8) : Cell8 := fun corner => a corner + b corner
-def cellSub (a b : Cell8) : Cell8 := fun corner => a corner - b corner
-def cellScale (z : ℂ) (a : Cell8) : Cell8 := fun corner => z * a corner
-
-theorem cell_flavor_involution (a : Cell8) :
-    cellFlavor (cellFlavor a) = a := by
-  funext corner
-  fin_cases corner <;>
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] <;>
-    ring_nf <;> rw [Complex.I_sq] <;> ring
-
-def cellMinus (a : Cell8) : Cell8 :=
-  cellScale (1/2 : ℂ) (cellSub a (cellFlavor a))
-
-def cellPlus (a : Cell8) : Cell8 :=
-  cellScale (1/2 : ℂ) (cellAdd a (cellFlavor a))
-
-theorem cell_copies_sum (a : Cell8) :
-    cellAdd (cellMinus a) (cellPlus a) = a := by
-  funext corner
-  simp [cellMinus, cellPlus, cellAdd, cellSub, cellScale]
-  ring
-
-theorem cell_minus_has_negative_flavor (a : Cell8) :
-    cellFlavor (cellMinus a) = cellScale (-1) (cellMinus a) := by
-  funext corner
-  fin_cases corner <;>
-    simp [cellMinus, cellSub, cellScale, cellFlavor, cellFlavorSign,
-      cellFlip1, cellFlip2, cellBit2] <;>
-    ring_nf <;> rw [Complex.I_sq] <;> ring
-
-theorem cell_plus_has_positive_flavor (a : Cell8) :
-    cellFlavor (cellPlus a) = cellPlus a := by
-  funext corner
-  fin_cases corner <;>
-    simp [cellPlus, cellAdd, cellScale, cellFlavor, cellFlavorSign,
-      cellFlip1, cellFlip2, cellBit2] <;>
-    ring_nf <;> rw [Complex.I_sq] <;> ring
-
-def cellEmbedMinus (z : Cell4) : Cell8
-  | 0 => z 0 | 1 => z 1 | 2 => -I * z 1 | 3 => I * z 0
-  | 4 => z 2 | 5 => z 3 | 6 => -I * z 3 | _ => I * z 2
-
-def cellEmbedPlus (z : Cell4) : Cell8
-  | 0 => z 0 | 1 => z 1 | 2 => I * z 1 | 3 => -I * z 0
-  | 4 => z 2 | 5 => z 3 | 6 => I * z 3 | _ => -I * z 2
-
-def cellCoordinates (a : Cell8) : Cell4
-  | 0 => a 0 | 1 => a 1 | 2 => a 4 | _ => a 5
-
-theorem cell_embed_minus_injective : Function.Injective cellEmbedMinus := by
-  intro a b h
-  funext component
-  fin_cases component
-  · exact congrFun h 0
-  · exact congrFun h 1
-  · exact congrFun h 4
-  · exact congrFun h 5
-
-theorem cell_embed_plus_injective : Function.Injective cellEmbedPlus := by
-  intro a b h
-  funext component
-  fin_cases component
-  · exact congrFun h 0
-  · exact congrFun h 1
-  · exact congrFun h 4
-  · exact congrFun h 5
-
-theorem cell_minus_reconstructs_from_four (a : Cell8)
-    (h : cellFlavor a = cellScale (-1) a) :
-    cellEmbedMinus (cellCoordinates a) = a := by
-  funext corner
-  fin_cases corner
-  · rfl
-  · rfl
-  · have hc := congrFun h 2
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
-      cellScale] at hc
-    have hn := congrArg (fun z : ℂ => -z) hc
-    simpa [cellEmbedMinus, cellCoordinates] using hn
-  · have hc := congrFun h 3
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
-      cellScale] at hc
-    simpa [cellEmbedMinus, cellCoordinates] using hc
-  · rfl
-  · rfl
-  · have hc := congrFun h 6
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
-      cellScale] at hc
-    have hn := congrArg (fun z : ℂ => -z) hc
-    simpa [cellEmbedMinus, cellCoordinates] using hn
-  · have hc := congrFun h 7
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
-      cellScale] at hc
-    simpa [cellEmbedMinus, cellCoordinates] using hc
-
-theorem cell_plus_reconstructs_from_four (a : Cell8)
-    (h : cellFlavor a = a) :
-    cellEmbedPlus (cellCoordinates a) = a := by
-  funext corner
-  fin_cases corner
-  · rfl
-  · rfl
-  · have hc := congrFun h 2
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
-    simpa [cellEmbedPlus, cellCoordinates] using hc
-  · have hc := congrFun h 3
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
-    simpa [cellEmbedPlus, cellCoordinates] using hc
-  · rfl
-  · rfl
-  · have hc := congrFun h 6
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
-    simpa [cellEmbedPlus, cellCoordinates] using hc
-  · have hc := congrFun h 7
-    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
-    simpa [cellEmbedPlus, cellCoordinates] using hc
-
-def RetainsTwoFourComponentCopies (a : Cell8) : Prop :=
-    cellAdd (cellMinus a) (cellPlus a) = a ∧
-    cellFlavor (cellMinus a) = cellScale (-1) (cellMinus a) ∧
-    cellFlavor (cellPlus a) = cellPlus a ∧
-    cellEmbedMinus (cellCoordinates (cellMinus a)) = cellMinus a ∧
-    cellEmbedPlus (cellCoordinates (cellPlus a)) = cellPlus a
-
-theorem every_cell_retains_two_four_component_copies (a : Cell8) :
-    RetainsTwoFourComponentCopies a := by
-  unfold RetainsTwoFourComponentCopies
-  exact ⟨cell_copies_sum a,
-    cell_minus_has_negative_flavor a,
-    cell_plus_has_positive_flavor a,
-    cell_minus_reconstructs_from_four _ (cell_minus_has_negative_flavor a),
-    cell_plus_reconstructs_from_four _ (cell_plus_has_positive_flavor a)⟩
 
 structure Dirac005Certificate [Fintype Edge]
     (chi0 B dt : ℝ) (bond : Edge → Bond CubeCorner)
@@ -814,7 +722,6 @@ structure Dirac005Certificate [Fintype Edge]
       (alignedEightSiteState psiAmplitude chiAmplitude) bond eta = 0
   updateClosure : InEightSiteSector previous → InEightSiteSector current →
     InEightSiteSector (nativeNextState chi0 B dt bond previous current)
-  bothCopies : ∀ a : Cell8, RetainsTwoFourComponentCopies a
 
 theorem dirac005_native_sector [Fintype Edge]
     (chi0 B dt : ℝ) (hB : B ≠ 0) (bond : Edge → Bond CubeCorner)
@@ -827,7 +734,6 @@ theorem dirac005_native_sector [Fintype Edge]
   updateClosure := fun hprevious hcurrent =>
     native_next_preserves_eight_site_sector chi0 B dt hB bond
       previous current hprevious hcurrent
-  bothCopies := every_cell_retains_two_four_component_copies
 
 theorem dirac005_c19_native_sector
     (dt : ℝ) (previous current : State CubeCorner) :
