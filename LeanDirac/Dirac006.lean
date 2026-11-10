@@ -3,14 +3,18 @@ import LeanDirac.Dirac005
 namespace LeanDirac
 
 /-!
-DIRAC-006: native finite-lattice transport symbol.
+DIRAC-006: native repeated-lattice local transport symbol.
 
 This gate does not choose four components.  It first restricts the admitted
 two-field bond energy to the invariant unit-cell sector from DIRAC-005.  The
 result is an exact scalar bond energy for the native product amplitude
 `chiAmplitude * psiAmplitude`.  The C19 lattice character then gives the
 finite-momentum coefficient of that transport directly from the eighteen
-declared neighbor directions and their weights.
+declared neighbor directions and their weights.  The repeated-lattice result
+below is proved on an actual native `State`: each site carries the admitted
+Psi ray and companion chi ray, while the product amplitude carries the lattice
+character.  The scalar restricted-bond calculation is therefore a lemma in
+the native proof, not a replacement model.
 -/
 
 noncomputable section
@@ -228,6 +232,175 @@ theorem repeated_character_energy_has_c19_symbol
   intro direction _
   ring
 
+/-!
+Native repeated-state bridge.  `cornerAt` may be any labeling by the eight
+admitted rays; in particular it may be the period-two corner labeling used by
+DIRAC-005.  No ray label evolves independently: it only specifies the prepared
+native Psi/chi state whose bond energy is evaluated below.
+-/
+
+def integerParityBit (coordinate : ℤ) : Bool :=
+  decide (coordinate % 2 = 1)
+
+theorem integer_parity_bit_add_one (coordinate : ℤ) :
+    integerParityBit (coordinate + 1) = !integerParityBit coordinate := by
+  by_cases h : coordinate % 2 = 1
+  · have hnext : (coordinate + 1) % 2 ≠ 1 := by omega
+    simp [integerParityBit, h, hnext]
+  · have hzero : coordinate % 2 = 0 := by omega
+    have hnext : (coordinate + 1) % 2 = 1 := by omega
+    simp [integerParityBit, hzero, hnext]
+
+theorem integer_parity_bit_add_neg_one (coordinate : ℤ) :
+    integerParityBit (coordinate + -1) = !integerParityBit coordinate := by
+  by_cases h : coordinate % 2 = 1
+  · have hnext : (coordinate + -1) % 2 ≠ 1 := by omega
+    simp [integerParityBit, h, hnext]
+  · have hzero : coordinate % 2 = 0 := by omega
+    have hnext : (coordinate + -1) % 2 = 1 := by omega
+    simp [integerParityBit, hzero, hnext]
+
+def cornerFromParity : Bool → Bool → Bool → CubeCorner
+  | false, false, false => 0
+  | false, false, true => 1
+  | false, true, false => 2
+  | false, true, true => 3
+  | true, false, false => 4
+  | true, false, true => 5
+  | true, true, false => 6
+  | true, true, true => 7
+
+def periodTwoCornerAt (site : InfiniteCubicSite) : CubeCorner :=
+  cornerFromParity (integerParityBit (site 0))
+    (integerParityBit (site 1)) (integerParityBit (site 2))
+
+theorem period_two_corner_neighbor (site : InfiniteCubicSite)
+    (direction : C19Neighbor) :
+    periodTwoCornerAt (infiniteC19Neighbor site direction) =
+      cubeC19Neighbor (periodTwoCornerAt site) direction := by
+  fin_cases direction <;>
+    simp [periodTwoCornerAt, infiniteC19Neighbor, c19Coord,
+      cubeC19Neighbor, integer_parity_bit_add_one,
+      integer_parity_bit_add_neg_one, cornerFromParity] <;>
+    cases h0 : integerParityBit (site 0) <;>
+    cases h1 : integerParityBit (site 1) <;>
+    cases h2 : integerParityBit (site 2) <;>
+    rfl
+
+def repeatedAlignedCharacterState
+    (cornerAt : InfiniteCubicSite → CubeCorner)
+    (psiAmplitude chiAmplitude : ℂ) (momentum : LatticeMomentum) :
+    State InfiniteCubicSite where
+  psi site := c3ScaleComplex
+    (cubicLatticeCharacter momentum site * psiAmplitude)
+    (tetraCorner (cornerAt site))
+  chi site := c3ScaleComplex chiAmplitude (companion (cornerAt site))
+
+def infiniteC19Bond (site : InfiniteCubicSite)
+    (direction : C19Neighbor) : Bond InfiniteCubicSite where
+  source := site
+  target := infiniteC19Neighbor site direction
+  weight := c19Weight direction
+
+theorem repeated_aligned_character_area
+    (cornerAt : InfiniteCubicSite → CubeCorner)
+    (psiAmplitude chiAmplitude : ℂ) (momentum : LatticeMomentum)
+    (site : InfiniteCubicSite) :
+    wedge
+      ((repeatedAlignedCharacterState cornerAt psiAmplitude chiAmplitude
+        momentum).chi site)
+      ((repeatedAlignedCharacterState cornerAt psiAmplitude chiAmplitude
+        momentum).psi site) =
+      c3ScaleComplex
+        (-(cubicLatticeCharacter momentum site *
+          (chiAmplitude * psiAmplitude))) unitArea := by
+  rw [show
+      (repeatedAlignedCharacterState cornerAt psiAmplitude chiAmplitude
+        momentum).chi site =
+          c3ScaleComplex chiAmplitude (companion (cornerAt site)) by rfl,
+    show
+      (repeatedAlignedCharacterState cornerAt psiAmplitude chiAmplitude
+        momentum).psi site =
+          c3ScaleComplex
+            (cubicLatticeCharacter momentum site * psiAmplitude)
+            (tetraCorner (cornerAt site)) by rfl,
+    wedge_scale_left, wedge_scale_right, wedge_companion_tetra]
+  funext component
+  simp [c3ScaleComplex, c3Neg]
+  ring
+
+theorem repeated_aligned_native_bond_is_restricted
+    (chi0 : ℝ) (cornerAt : InfiniteCubicSite → CubeCorner)
+    (psiAmplitude chiAmplitude : ℂ) (momentum : LatticeMomentum)
+    (site : InfiniteCubicSite) (direction : C19Neighbor) :
+    exteriorAreaBond chi0
+      (repeatedAlignedCharacterState cornerAt psiAmplitude chiAmplitude
+        momentum)
+      (infiniteC19Bond site direction) =
+      restrictedBondEnergy chi0 (c19Weight direction)
+        (cubicLatticeCharacter momentum site *
+          (chiAmplitude * psiAmplitude))
+        (cubicLatticeCharacter momentum
+          (infiniteC19Neighbor site direction) *
+            (chiAmplitude * psiAmplitude)) := by
+  unfold exteriorAreaBond restrictedBondEnergy infiniteC19Bond
+  rw [repeated_aligned_character_area, repeated_aligned_character_area]
+  congr 1
+  rw [show difference
+      (c3ScaleComplex
+        (-(cubicLatticeCharacter momentum site *
+          (chiAmplitude * psiAmplitude))) unitArea)
+      (c3ScaleComplex
+        (-(cubicLatticeCharacter momentum
+          (infiniteC19Neighbor site direction) *
+            (chiAmplitude * psiAmplitude))) unitArea) =
+      c3ScaleComplex
+        (cubicLatticeCharacter momentum site *
+            (chiAmplitude * psiAmplitude) -
+          cubicLatticeCharacter momentum
+            (infiniteC19Neighbor site direction) *
+              (chiAmplitude * psiAmplitude)) unitArea by
+        funext component
+        simp [difference, c3ScaleComplex]
+        ring]
+  exact density_scaled_unit_area _
+
+def nativeRepeatedCharacterTransportEnergy
+    (chi0 : ℝ) (cornerAt : InfiniteCubicSite → CubeCorner)
+    (psiAmplitude chiAmplitude : ℂ) (momentum : LatticeMomentum)
+    (site : InfiniteCubicSite) : ℝ :=
+  ∑ direction,
+    exteriorAreaBond chi0
+      (repeatedAlignedCharacterState cornerAt psiAmplitude chiAmplitude
+        momentum)
+      (infiniteC19Bond site direction)
+
+theorem native_repeated_state_energy_has_c19_symbol
+    (chi0 : ℝ) (cornerAt : InfiniteCubicSite → CubeCorner)
+    (psiAmplitude chiAmplitude : ℂ) (momentum : LatticeMomentum)
+    (site : InfiniteCubicSite) :
+    nativeRepeatedCharacterTransportEnergy chi0 cornerAt
+        psiAmplitude chiAmplitude momentum site =
+      Complex.normSq (chiAmplitude * psiAmplitude) /
+          (2 * chi0^2) * c19TransportSymbol momentum := by
+  unfold nativeRepeatedCharacterTransportEnergy c19TransportSymbol
+  simp_rw [repeated_aligned_native_bond_is_restricted]
+  simp_rw [repeated_character_bond_factorization]
+  rw [Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro direction _
+  ring
+
+theorem native_period_two_state_energy_has_c19_symbol
+    (chi0 : ℝ) (psiAmplitude chiAmplitude : ℂ)
+    (momentum : LatticeMomentum) (site : InfiniteCubicSite) :
+    nativeRepeatedCharacterTransportEnergy chi0 periodTwoCornerAt
+        psiAmplitude chiAmplitude momentum site =
+      Complex.normSq (chiAmplitude * psiAmplitude) /
+          (2 * chi0^2) * c19TransportSymbol momentum :=
+  native_repeated_state_energy_has_c19_symbol chi0 periodTwoCornerAt
+    psiAmplitude chiAmplitude momentum site
+
 def productTangent (psi0 chi0 dPsi dChi : ℂ) : ℂ :=
   chi0 * dPsi + psi0 * dChi
 
@@ -253,6 +426,9 @@ structure Dirac006Certificate : Prop where
   characterShift : ∀ momentum site direction,
     cubicLatticeCharacter momentum (infiniteC19Neighbor site direction) =
       cubicLatticeCharacter momentum site * c19Character momentum direction
+  periodTwoCornerNeighbor : ∀ site direction,
+    periodTwoCornerAt (infiniteC19Neighbor site direction) =
+      cubeC19Neighbor (periodTwoCornerAt site) direction
   firstMomentZero : ∀ axis, c19FirstMoment axis = 0
   isotropicSecondMoment : ∀ axis other,
     c19SecondMoment axis other = if axis = other then 12 else 0
@@ -262,6 +438,18 @@ structure Dirac006Certificate : Prop where
   repeatedLatticeFactorization : ∀ chi0 q momentum site,
     repeatedCharacterTransportEnergy chi0 q momentum site =
       Complex.normSq q / (2 * chi0^2) * c19TransportSymbol momentum
+  nativeRepeatedStateFactorization : ∀ chi0 cornerAt
+      psiAmplitude chiAmplitude momentum site,
+    nativeRepeatedCharacterTransportEnergy chi0 cornerAt
+        psiAmplitude chiAmplitude momentum site =
+      Complex.normSq (chiAmplitude * psiAmplitude) /
+          (2 * chi0^2) * c19TransportSymbol momentum
+  nativePeriodTwoStateFactorization : ∀ chi0 psiAmplitude
+      chiAmplitude momentum site,
+    nativeRepeatedCharacterTransportEnergy chi0 periodTwoCornerAt
+        psiAmplitude chiAmplitude momentum site =
+      Complex.normSq (chiAmplitude * psiAmplitude) /
+          (2 * chi0^2) * c19TransportSymbol momentum
   nativeProductLinearization : ∀ psi0 chi0 dPsi dChi eps,
     (chi0 + eps * dChi) * (psi0 + eps * dPsi) - chi0 * psi0 =
       eps * productTangent psi0 chi0 dPsi dChi +
@@ -273,10 +461,15 @@ theorem dirac006_native_transport_symbol : Dirac006Certificate where
   zeroMomentum := c19_transport_symbol_zero
   integerWeightsMatch := c19_weight_is_integer_weight
   characterShift := cubic_character_neighbor
+  periodTwoCornerNeighbor := period_two_corner_neighbor
   firstMomentZero := c19_first_moment_zero
   isotropicSecondMoment := c19_second_moment_isotropic
   characterFactorization := restricted_character_energy_has_c19_symbol
   repeatedLatticeFactorization := repeated_character_energy_has_c19_symbol
+  nativeRepeatedStateFactorization :=
+    native_repeated_state_energy_has_c19_symbol
+  nativePeriodTwoStateFactorization :=
+    native_period_two_state_energy_has_c19_symbol
   nativeProductLinearization := product_amplitude_first_order_expansion
 
 end

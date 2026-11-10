@@ -3,14 +3,25 @@ import LeanDirac.Dirac006
 namespace LeanDirac
 
 /-!
-Sole public proof root. DIRAC-005 imports the explicit DIRAC-001 through 004
-gate modules and is the highest currently admitted mathematical gate.  The
-public certificate is cumulative: it retains DIRAC-004's nonzero-step action
-update theorem as well as DIRAC-005's invariant-sector theorem.
+Sole public proof root through DIRAC-006.  The public certificate is explicitly
+cumulative: it retains the native framework, positive candidate action and
+prepared geometry, arbitrary local action variations, nonzero-step discrete
+action update, invariant unit-cell sector and native repeated-state transport
+symbol.
 -/
 
 structure CumulativeDirac005Certificate
     (dt : ℝ) (previous current : State CubeCorner) : Prop where
+  nativeFramework :
+    chi0 = 19 ∧
+    kappa = 1 / 63 ∧
+    chiKineticNormalization = 1197 ∧
+    current = ⟨current.psi, current.chi⟩ ∧
+    ∀ neighbor : C19Neighbor, 0 < c19Weight neighbor
+  candidateActionAndGeometry : Dirac002Certificate
+  localActionVariations : ∀ velocity : Velocity CubeCorner,
+    LocalTwoFieldVariationCertificate chi0 chiKineticNormalization
+      current velocity (c19Bond cubeC19Geometry)
   discreteActionUpdate :
     DiscreteActionUpdateCertificate chi0 chiKineticNormalization dt
       (c19Bond cubeC19Geometry) previous current
@@ -31,6 +42,11 @@ structure CumulativeDirac005Certificate
 theorem current_highest_gate_is_dirac005
     (dt : ℝ) (previous current : State CubeCorner) (hdt : dt ≠ 0) :
     CumulativeDirac005Certificate dt previous current where
+  nativeFramework := dirac001_native_framework current
+  candidateActionAndGeometry := dirac002_candidate_action_and_geometry
+  localActionVariations := fun velocity =>
+    dirac003_c19_local_variations_from_actual_action
+      chi0 chiKineticNormalization current velocity cubeC19Geometry
   discreteActionUpdate :=
     dirac004_c19_update_iff_discrete_action_stationary
       dt cubeC19Geometry previous current hdt

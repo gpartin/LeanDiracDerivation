@@ -13,9 +13,11 @@ normal to that bundle is zero.  The positive diagonal kinetic form then
 keeps the unrestricted centered update inside the same bundle.
 
 There are two independent complex amplitudes at each of the eight sites: one
-for `Psi` and one for `chi`, hence sixteen complex coordinates in this sector.
-No four-component split is supplied at this gate; it must be derived from the
-native finite-lattice operator downstream.
+for `Psi` and one for `chi`, hence sixteen complex coordinates on each committed
+state slice.  The centered second-order update carries two such slices, hence
+thirty-two complex phase-space coordinates.  No four-component split is
+supplied at this gate; it must be derived from the native finite-lattice
+operator downstream.
 -/
 
 noncomputable section
@@ -23,9 +25,15 @@ open BigOperators Complex
 
 abbrev Cell8 := Fin 8 → ℂ
 abbrev NativeUnitCellCoordinate := Fin 8 ⊕ Fin 8
+abbrev NativeUnitCellTwoLayerCoordinate :=
+  NativeUnitCellCoordinate ⊕ NativeUnitCellCoordinate
 
 theorem native_unit_cell_coordinate_count :
     Fintype.card NativeUnitCellCoordinate = 16 := by
+  decide
+
+theorem native_unit_cell_two_layer_coordinate_count :
+    Fintype.card NativeUnitCellTwoLayerCoordinate = 32 := by
   decide
 
 def c3ScaleComplex (a : ℂ) (u : C3) : C3 :=
@@ -712,6 +720,9 @@ def cubeC19Geometry : C19Lattice CubeCorner where
 structure Dirac005Certificate [Fintype Edge]
     (chi0 B dt : ℝ) (bond : Edge → Bond CubeCorner)
     (previous current : State CubeCorner) : Prop where
+  stateSliceCoordinateCount : Fintype.card NativeUnitCellCoordinate = 16
+  twoLayerCoordinateCount :
+    Fintype.card NativeUnitCellTwoLayerCoordinate = 32
   psiCrossBlockZero : ∀ psiAmplitude chiAmplitude eta,
     PsiNormalDirection eta →
     psiEulerLagrangeForce chi0
@@ -727,6 +738,8 @@ theorem dirac005_native_sector [Fintype Edge]
     (chi0 B dt : ℝ) (hB : B ≠ 0) (bond : Edge → Bond CubeCorner)
     (previous current : State CubeCorner) :
     Dirac005Certificate chi0 B dt bond previous current where
+  stateSliceCoordinateCount := native_unit_cell_coordinate_count
+  twoLayerCoordinateCount := native_unit_cell_two_layer_coordinate_count
   psiCrossBlockZero := fun psiAmplitude chiAmplitude eta hnormal =>
     aligned_psi_cross_block_zero chi0 psiAmplitude chiAmplitude bond eta hnormal
   chiCrossBlockZero := fun psiAmplitude chiAmplitude eta hnormal =>
