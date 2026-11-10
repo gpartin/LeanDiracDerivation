@@ -13,5 +13,10 @@ import LeanDirac.Publication
 #print axioms LeanDirac.chi_action_increment_integrand_definition_is_exact
 #print axioms LeanDirac.psi_stationarity_definition_is_exact
 #print axioms LeanDirac.chi_stationarity_definition_is_exact
-#print axioms LeanDirac.current_highest_gate_is_dirac003
+#print axioms LeanDirac.psi_acceleration_real_coordinate
+#print axioms LeanDirac.chi_acceleration_real_coordinate
+#print axioms LeanDirac.native_next_is_reversible
+#print axioms LeanDirac.centered_difference_native_next
+#print axioms LeanDirac.dirac004_c19_reversible_action_update
+#print axioms LeanDirac.current_highest_gate_is_dirac004
 
