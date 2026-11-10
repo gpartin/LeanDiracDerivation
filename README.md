@@ -16,7 +16,8 @@ remain outside this repository.
 | `DIRAC-002` | **PASS** | A nonnegative two-field complex-C3 action with geometry-derived exterior-area transport and a concrete prepared eight-corner background. |
 | `DIRAC-003` | **PASS** | Independent arbitrary variations of the actual local action produce the native Ψ and χ force and momentum families. No all-time trajectory, decay assumption or continuum equation is used at this lattice-first gate. |
 | `DIRAC-004` | **PASS** | A two-step discrete action is built from the frozen kinetic energy and potential. Lean proves its stationary point is uniquely the explicit centered C19 update, proves exact reversibility, and proves both reciprocal equations for every complex-C3 field variation. |
-| `DIRAC-005` | **NEXT** | Derive the invariant eight-site sector and retain every native copy. |
+| `DIRAC-005` | **PASS** | The unrestricted action-derived C19 update preserves the full eight-site tetrahedral Ψ/χ ray-amplitude sector. Its exact normal cross block is zero, and all eight amplitudes—including both lossless four-coordinate algebraic copies—are retained without a runtime projection or selector. |
+| `DIRAC-006` | **NEXT** | Derive the finite-lattice transport symbol inside the admitted sector. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -56,8 +57,8 @@ Recovering its exact higher-zoom scalar response remains open.
 | 2 | `DIRAC-002` | Native action | **PASS** | A positive two-field action, derived geometric transport, coefficient provenance and a cleared no-bolt-on review. |
 | 3 | `DIRAC-003` | Native equations | **PASS** | Derive the Ψ and χ force and conjugate-momentum families by independent arbitrary variations of the same local action. |
 | 4 | `DIRAC-004` | Native time | **PASS** | Derive the centered update as the unique stationary point of the discrete two-step action; prove reversibility and both equations for arbitrary field variations. |
-| 5 | `DIRAC-005` | Native sector | **NEXT** | Derive the invariant eight-site sector and retain every native copy. |
-| 6 | `DIRAC-006` | Native symbol | OPEN | Derive finite-lattice transport coefficients from lattice characters. |
+| 5 | `DIRAC-005` | Native sector | **PASS** | Prove the action-derived update closes on the eight-site Ψ/χ ray-amplitude sector; calculate the normal cross block and retain all eight amplitudes and both four-coordinate copies. |
+| 6 | `DIRAC-006` | Native symbol | **NEXT** | Derive finite-lattice transport coefficients from lattice characters. |
 | 7 | `DIRAC-007` | Paired readout | OPEN | Build a lossless first-order readout from native displacement and velocity. |
 | 8 | `DIRAC-008` | Native first-order operator | OPEN | Construct the first-order operator from action and cube data only. |
 | 9 | `DIRAC-009` | Native Clifford algebra | OPEN | Derive mass grading, three transports, their square and anticommutators. |
@@ -80,6 +81,7 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
+LeanDirac/Dirac005.lean                invariant eight-site sector and copy retention
 LeanDirac/Dirac004DiscreteAction.lean  discrete action/update equivalence
 LeanDirac/Dirac004.lean                force-coordinate/update algebra
 LeanDirac/Dirac003Contract.lean         independent raw-action curve contract
@@ -123,6 +125,11 @@ claim formation, background selection or a continuum trajectory.
 `DIRAC-004` constructs the actual two-step discrete action, differentiates it
 under arbitrary combined field variations, and proves that stationarity is
 equivalent to the explicit centered update. It also proves exact reversibility
-and both equation families for every field direction. It does not yet prove
-long-time numerical stability, an invariant spinor sector, a Dirac operator,
-an electron, or physical spin; those remain downstream work.
+and both equation families for every field direction. `DIRAC-005` then proves
+that the complete eight-site tetrahedral ray-amplitude bundle is invariant
+under that unrestricted update for arbitrary native bond amplitudes, and that
+its exact normal force block vanishes. The two four-coordinate decompositions
+are lossless algebraic readouts of the retained eight amplitudes; this gate
+does not yet prove that either copy is a Dirac spinor or that each copy closes
+independently under the later linearized symbol. Long-time stability, a Dirac
+operator, an electron and physical spin remain downstream work.

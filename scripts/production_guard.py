@@ -1,4 +1,4 @@
-"""Fail closed if the admitted DIRAC-001 through DIRAC-004 boundary drifts."""
+"""Fail closed if the admitted DIRAC-001 through DIRAC-005 boundary drifts."""
 
 from __future__ import annotations
 
@@ -20,12 +20,13 @@ EXPECTED_GATE_MODULES = {
     "DIRAC-002": "LeanDirac/Dirac002.lean",
     "DIRAC-003": "LeanDirac/Dirac003.lean",
     "DIRAC-004": "LeanDirac/Dirac004DiscreteAction.lean",
+    "DIRAC-005": "LeanDirac/Dirac005.lean",
 }
 
 EXPECTED_GATES = {
-    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 5)},
-    "DIRAC-005": "NEXT",
-    **{f"DIRAC-{index:03d}": "OPEN" for index in range(6, 16)},
+    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 6)},
+    "DIRAC-006": "NEXT",
+    **{f"DIRAC-{index:03d}": "OPEN" for index in range(7, 16)},
 }
 
 EXPECTED_LOCKED_FILES = {
@@ -41,6 +42,7 @@ EXPECTED_LOCKED_FILES = {
     "LeanDirac/Dirac003Contract.lean",
     "LeanDirac/Dirac004.lean",
     "LeanDirac/Dirac004DiscreteAction.lean",
+    "LeanDirac/Dirac005.lean",
     "LeanDirac/Publication.lean",
     "LeanDirac.lean",
     "LeanDiracAudit.lean",
@@ -73,7 +75,13 @@ AUDITED_THEOREMS = {
     "LeanDirac.native_next_is_discrete_action_stationary",
     "LeanDirac.discrete_stationarity_determines_native_next",
     "LeanDirac.dirac004_c19_update_iff_discrete_action_stationary",
-    "LeanDirac.current_highest_gate_is_dirac004",
+    "LeanDirac.aligned_psi_cross_block_zero",
+    "LeanDirac.aligned_chi_cross_block_zero",
+    "LeanDirac.native_next_preserves_eight_site_sector",
+    "LeanDirac.every_cell_retains_two_four_component_copies",
+    "LeanDirac.cube_c19_neighbor_reverse",
+    "LeanDirac.dirac005_c19_native_sector",
+    "LeanDirac.current_highest_gate_is_dirac005",
 }
 
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
@@ -256,11 +264,11 @@ def validate() -> list[str]:
         errors.append("action lock must be immutable and noncanonical")
     if lock.get("field_families") != 2:
         errors.append("action does not declare exactly two field families")
-    if status.get("highest_passed_gate") != "DIRAC-004":
-        errors.append("status does not stop at DIRAC-004")
-    if status.get("next_gate") != "DIRAC-005":
-        errors.append("DIRAC-005 is not the next gate")
-    if status.get("completed") != 4 or status.get("total") != 15:
+    if status.get("highest_passed_gate") != "DIRAC-005":
+        errors.append("status does not stop at DIRAC-005")
+    if status.get("next_gate") != "DIRAC-006":
+        errors.append("DIRAC-006 is not the next gate")
+    if status.get("completed") != 5 or status.get("total") != 15:
         errors.append("gate completion counts are incorrect")
     if status.get("gates") != EXPECTED_GATES:
         errors.append("complete fifteen-gate status map is incorrect")
@@ -274,8 +282,8 @@ def validate() -> list[str]:
     locked_files = lock.get("files", {})
     if set(locked_files) != EXPECTED_LOCKED_FILES:
         errors.append("action lock does not contain exactly the approved proof files")
-    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac004":
-        errors.append("action lock does not name the DIRAC-004 publication theorem")
+    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac005":
+        errors.append("action lock does not name the DIRAC-005 publication theorem")
 
     for relative, expected in locked_files.items():
         path = ROOT / relative
@@ -330,8 +338,12 @@ def validate() -> list[str]:
         ["LeanDirac.Dirac004"], errors, "DIRAC-004 discrete-action closure"
     )
     require_imports(
+        ROOT / "LeanDirac" / "Dirac005.lean",
+        ["LeanDirac.Dirac004DiscreteAction"], errors, "DIRAC-005"
+    )
+    require_imports(
         ROOT / "LeanDirac" / "Publication.lean",
-        ["LeanDirac.Dirac004DiscreteAction"], errors, "publication root"
+        ["LeanDirac.Dirac005"], errors, "publication root"
     )
 
     errors.extend(validate_axioms())
@@ -347,8 +359,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_GUARD_PASS")
-    print("highest_passed_gate=DIRAC-004")
-    print("next_gate=DIRAC-005")
+    print("highest_passed_gate=DIRAC-005")
+    print("next_gate=DIRAC-006")
     return 0
 
 

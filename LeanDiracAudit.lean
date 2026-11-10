@@ -26,5 +26,11 @@ import LeanDirac.Publication
 #print axioms LeanDirac.native_next_is_discrete_action_stationary
 #print axioms LeanDirac.discrete_stationarity_determines_native_next
 #print axioms LeanDirac.dirac004_c19_update_iff_discrete_action_stationary
-#print axioms LeanDirac.current_highest_gate_is_dirac004
+#print axioms LeanDirac.aligned_psi_cross_block_zero
+#print axioms LeanDirac.aligned_chi_cross_block_zero
+#print axioms LeanDirac.native_next_preserves_eight_site_sector
+#print axioms LeanDirac.every_cell_retains_two_four_component_copies
+#print axioms LeanDirac.cube_c19_neighbor_reverse
+#print axioms LeanDirac.dirac005_c19_native_sector
+#print axioms LeanDirac.current_highest_gate_is_dirac005
 

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "gate": "DIRAC-004",
+  "gate": "DIRAC-005",
   "status": "PASS_ZERO_CRITICAL_HIGH",
   "critical_findings": [],
   "high_findings": [],
@@ -19,10 +19,15 @@
     "local_coefficients": "total-capacity quartic, unit response and vacuum balance",
     "prepared_track": "constant wedge of each tetrahedral corner and its native companion",
     "native_equations": "independent arbitrary Psi and chi state/velocity derivatives of the same local action, with no trajectory-decay or continuum assumption",
-    "native_time": "the unique stationary point of the two-step discrete action; arbitrary-direction force representation, exact centered recurrence and reversibility are proved"
+    "native_time": "the unique stationary point of the two-step discrete action; arbitrary-direction force representation, exact centered recurrence and reversibility are proved",
+    "native_sector": "the prepared tetrahedral Psi ray and native companion chi ray define an exact eight-amplitude sector because the complete local and bond action variation has zero normal block; the unrestricted update preserves it"
   },
-  "open_but_nonblocking_for_dirac_004": [
-    "invariant eight-site native sector (DIRAC-005)",
+  "readout_only_structures": {
+    "copy_retention": "a declared cube-coordinate involution losslessly decomposes all eight retained amplitudes into two four-coordinate eigenspaces; it does not enter the action or update, and its dynamical/Dirac interpretation remains open"
+  },
+  "open_but_nonblocking_for_dirac_005": [
+    "independent closure and physical interpretation of the two algebraic four-coordinate copies",
+    "finite-lattice symbol and transport coefficients (DIRAC-006)",
     "higher-zoom scalar flat-octic recovery",
     "free-Dirac limit",
     "physical electron and spin validation"

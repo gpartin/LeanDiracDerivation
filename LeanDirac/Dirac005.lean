@@ -1,0 +1,841 @@
+import LeanDirac.Dirac004DiscreteAction
+
+namespace LeanDirac
+
+/-!
+DIRAC-005: exact native eight-site sector.
+
+The sector in this file is not imposed during evolution.  It is the bundle
+in which the two native fields at each cube corner lie on the prepared
+tetrahedral ray and its companion ray.  The proof below starts from the
+action-derived force of DIRAC-003/004 and proves that every force component
+normal to that bundle is zero.  The positive diagonal kinetic form then
+keeps the unrestricted centered update inside the same bundle.
+
+The eight complex corner amplitudes are also decomposed into both rank-four
+eigenspaces of a cube-derived flavor involution.  Neither copy is discarded
+or selected here.
+-/
+
+noncomputable section
+open BigOperators Complex
+
+abbrev Cell8 := Fin 8 → ℂ
+abbrev Cell4 := Fin 4 → ℂ
+
+def c3ScaleComplex (a : ℂ) (u : C3) : C3 :=
+  fun component => a * u component
+
+def c3Inner (u v : C3) : ℂ :=
+  ∑ component, star (u component) * v component
+
+def alignedEightSiteState (psiAmplitude chiAmplitude : Cell8) :
+    State CubeCorner where
+  psi corner := c3ScaleComplex (psiAmplitude corner) (tetraCorner corner)
+  chi corner := c3ScaleComplex (chiAmplitude corner) (companion corner)
+
+def InEightSiteSector (state : State CubeCorner) : Prop :=
+  ∃ psiAmplitude chiAmplitude,
+    state = alignedEightSiteState psiAmplitude chiAmplitude
+
+def ComplexNormalTo (u eta : C3) : Prop := c3Inner u eta = 0
+
+def PsiNormalDirection (eta : CubeCorner → C3) : Prop :=
+  ∀ corner, ComplexNormalTo (tetraCorner corner) (eta corner)
+
+def ChiNormalDirection (eta : CubeCorner → C3) : Prop :=
+  ∀ corner, ComplexNormalTo (companion corner) (eta corner)
+
+@[simp] theorem wedge_companion_tetra (corner : CubeCorner) :
+    wedge (companion corner) (tetraCorner corner) = c3Neg unitArea := by
+  have h := tetra_wedge_companion_constant corner
+  funext component
+  have hc := congrFun h component
+  fin_cases component <;> simp [wedge, c3Neg] at hc ⊢ <;>
+    rw [← hc] <;> ring
+
+theorem c3_inner_unitArea_wedge_planar_companion
+    (u eta : C3) (hu2 : u 2 = 0) :
+    c3Inner unitArea
+      (wedge (fun
+        | 0 => -star (u 1)
+        | 1 => star (u 0)
+        | _ => 0) eta) = -c3Inner u eta := by
+  apply Complex.ext <;>
+    simp [c3Inner, Fin.sum_univ_succ, unitArea, wedge, hu2] <;> ring
+
+theorem c3_inner_unitArea_wedge_planar
+    (u eta : C3) (hu2 : u 2 = 0) :
+    c3Inner unitArea (wedge eta u) =
+      -c3Inner (fun
+        | 0 => -star (u 1)
+        | 1 => star (u 0)
+        | _ => 0) eta := by
+  apply Complex.ext <;>
+    simp [c3Inner, Fin.sum_univ_succ, unitArea, wedge, hu2] <;> ring
+
+theorem c3_inner_unitArea_wedge_companion
+    (corner : CubeCorner) (eta : C3) :
+    c3Inner unitArea (wedge (companion corner) eta) =
+      -c3Inner (tetraCorner corner) eta := by
+  apply c3_inner_unitArea_wedge_planar_companion
+  fin_cases corner <;>
+    simp [tetraCorner, tetraRay0, tetraRay1, tetraRay2, tetraRay3,
+      c3Of, c3Neg]
+
+theorem c3_inner_unitArea_wedge_tetra
+    (corner : CubeCorner) (eta : C3) :
+    c3Inner unitArea (wedge eta (tetraCorner corner)) =
+      -c3Inner (companion corner) eta := by
+  apply c3_inner_unitArea_wedge_planar
+  fin_cases corner <;>
+    simp [tetraCorner, tetraRay0, tetraRay1, tetraRay2, tetraRay3,
+      c3Of, c3Neg]
+
+theorem c3_real_pair_eq_inner_re (u v : C3) :
+    c3RealPair u v = (c3Inner u v).re := by
+  simp [c3RealPair, c3Inner]
+
+theorem c3_inner_scale_left (a : ℂ) (u v : C3) :
+    c3Inner (c3ScaleComplex a u) v = star a * c3Inner u v := by
+  unfold c3Inner c3ScaleComplex
+  rw [Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro component _
+  simp
+  ring
+
+theorem wedge_scale_left (a : ℂ) (u v : C3) :
+    wedge (c3ScaleComplex a u) v = c3ScaleComplex a (wedge u v) := by
+  funext component
+  fin_cases component <;> simp [wedge, c3ScaleComplex] <;> ring
+
+theorem wedge_scale_right (a : ℂ) (u v : C3) :
+    wedge u (c3ScaleComplex a v) = c3ScaleComplex a (wedge u v) := by
+  funext component
+  fin_cases component <;> simp [wedge, c3ScaleComplex] <;> ring
+
+theorem aligned_wedge (psiAmplitude chiAmplitude : Cell8)
+    (corner : CubeCorner) :
+    wedge ((alignedEightSiteState psiAmplitude chiAmplitude).chi corner)
+      ((alignedEightSiteState psiAmplitude chiAmplitude).psi corner) =
+      c3ScaleComplex (-(chiAmplitude corner * psiAmplitude corner)) unitArea := by
+  rw [show (alignedEightSiteState psiAmplitude chiAmplitude).chi corner =
+      c3ScaleComplex (chiAmplitude corner) (companion corner) by rfl,
+    show (alignedEightSiteState psiAmplitude chiAmplitude).psi corner =
+      c3ScaleComplex (psiAmplitude corner) (tetraCorner corner) by rfl,
+    wedge_scale_left, wedge_scale_right, wedge_companion_tetra]
+  funext component
+  simp [c3ScaleComplex, c3Neg]
+  ring
+
+theorem aligned_psi_normal_local_pair_zero
+    (psiAmplitude chiAmplitude : Cell8) (eta : CubeCorner → C3)
+    (hnormal : PsiNormalDirection eta) (corner : CubeCorner) :
+    c3RealPair
+      ((alignedEightSiteState psiAmplitude chiAmplitude).psi corner)
+      (eta corner) = 0 := by
+  rw [c3_real_pair_eq_inner_re]
+  change (c3Inner (c3ScaleComplex (psiAmplitude corner)
+    (tetraCorner corner)) (eta corner)).re = 0
+  rw [c3_inner_scale_left,
+    hnormal corner]
+  simp
+
+theorem aligned_chi_normal_local_pair_zero
+    (psiAmplitude chiAmplitude : Cell8) (eta : CubeCorner → C3)
+    (hnormal : ChiNormalDirection eta) (corner : CubeCorner) :
+    c3RealPair
+      ((alignedEightSiteState psiAmplitude chiAmplitude).chi corner)
+      (eta corner) = 0 := by
+  rw [c3_real_pair_eq_inner_re]
+  change (c3Inner (c3ScaleComplex (chiAmplitude corner)
+    (companion corner)) (eta corner)).re = 0
+  rw [c3_inner_scale_left,
+    hnormal corner]
+  simp
+
+theorem c3_inner_sub_right (u v z : C3) :
+    c3Inner u (difference v z) = c3Inner u z - c3Inner u v := by
+  unfold c3Inner difference
+  rw [← Finset.sum_sub_distrib]
+  apply Finset.sum_congr rfl
+  intro component _
+  ring
+
+theorem c3_inner_scale_left_general (a : ℂ) (u v : C3) :
+    c3Inner (c3ScaleComplex a u) v = star a * c3Inner u v :=
+  c3_inner_scale_left a u v
+
+theorem aligned_psi_normal_wedge_pair_zero
+    (psiAmplitude chiAmplitude : Cell8) (eta : CubeCorner → C3)
+    (hnormal : PsiNormalDirection eta) (corner : CubeCorner) :
+    c3Inner unitArea
+      (wedge
+        ((alignedEightSiteState psiAmplitude chiAmplitude).chi corner)
+        (eta corner)) = 0 := by
+  rw [show (alignedEightSiteState psiAmplitude chiAmplitude).chi corner =
+      c3ScaleComplex (chiAmplitude corner) (companion corner) by rfl,
+    wedge_scale_left]
+  rw [show c3Inner unitArea
+      (c3ScaleComplex (chiAmplitude corner)
+        (wedge (companion corner) (eta corner))) =
+      chiAmplitude corner * c3Inner unitArea
+        (wedge (companion corner) (eta corner)) by
+        unfold c3Inner c3ScaleComplex
+        rw [Finset.mul_sum]
+        apply Finset.sum_congr rfl
+        intro component _
+        ring,
+    c3_inner_unitArea_wedge_companion, hnormal corner]
+  simp
+
+theorem aligned_chi_normal_wedge_pair_zero
+    (psiAmplitude chiAmplitude : Cell8) (eta : CubeCorner → C3)
+    (hnormal : ChiNormalDirection eta) (corner : CubeCorner) :
+    c3Inner unitArea
+      (wedge (eta corner)
+        ((alignedEightSiteState psiAmplitude chiAmplitude).psi corner)) = 0 := by
+  rw [show (alignedEightSiteState psiAmplitude chiAmplitude).psi corner =
+      c3ScaleComplex (psiAmplitude corner) (tetraCorner corner) by rfl,
+    wedge_scale_right]
+  rw [show c3Inner unitArea
+      (c3ScaleComplex (psiAmplitude corner)
+        (wedge (eta corner) (tetraCorner corner))) =
+      psiAmplitude corner * c3Inner unitArea
+        (wedge (eta corner) (tetraCorner corner)) by
+        unfold c3Inner c3ScaleComplex
+        rw [Finset.mul_sum]
+        apply Finset.sum_congr rfl
+        intro component _
+        ring,
+    c3_inner_unitArea_wedge_tetra, hnormal corner]
+  simp
+
+theorem aligned_psi_normal_bond_pair_zero
+    (psiAmplitude chiAmplitude : Cell8) (eta : CubeCorner → C3)
+    (hnormal : PsiNormalDirection eta) (edge : Bond CubeCorner) :
+    c3RealPair
+      (bondAreaDifference (alignedEightSiteState psiAmplitude chiAmplitude) edge)
+      (bondAreaFirstVariation (alignedEightSiteState psiAmplitude chiAmplitude)
+        (purePsiDirection eta) edge) = 0 := by
+  rw [c3_real_pair_eq_inner_re]
+  unfold bondAreaDifference bondAreaFirstVariation
+  rw [aligned_wedge, aligned_wedge]
+  rw [show wedgeFirstVariation
+      (alignedEightSiteState psiAmplitude chiAmplitude)
+      (purePsiDirection eta) edge.source =
+      wedge ((alignedEightSiteState psiAmplitude chiAmplitude).chi edge.source)
+        (eta edge.source) by
+        funext component
+        fin_cases component <;>
+          simp [wedgeFirstVariation, purePsiDirection, c3Add, c3Zero, wedge],
+    show wedgeFirstVariation
+      (alignedEightSiteState psiAmplitude chiAmplitude)
+      (purePsiDirection eta) edge.target =
+      wedge ((alignedEightSiteState psiAmplitude chiAmplitude).chi edge.target)
+        (eta edge.target) by
+        funext component
+        fin_cases component <;>
+          simp [wedgeFirstVariation, purePsiDirection, c3Add, c3Zero, wedge]]
+  rw [show difference
+      (c3ScaleComplex (-(chiAmplitude edge.source * psiAmplitude edge.source)) unitArea)
+      (c3ScaleComplex (-(chiAmplitude edge.target * psiAmplitude edge.target)) unitArea) =
+      c3ScaleComplex
+        (chiAmplitude edge.source * psiAmplitude edge.source -
+          chiAmplitude edge.target * psiAmplitude edge.target) unitArea by
+        funext component; simp [difference, c3ScaleComplex]; ring]
+  rw [c3_inner_scale_left_general]
+  rw [c3_inner_sub_right,
+    aligned_psi_normal_wedge_pair_zero _ _ eta hnormal edge.source,
+    aligned_psi_normal_wedge_pair_zero _ _ eta hnormal edge.target]
+  simp
+
+theorem aligned_chi_normal_bond_pair_zero
+    (psiAmplitude chiAmplitude : Cell8) (eta : CubeCorner → C3)
+    (hnormal : ChiNormalDirection eta) (edge : Bond CubeCorner) :
+    c3RealPair
+      (bondAreaDifference (alignedEightSiteState psiAmplitude chiAmplitude) edge)
+      (bondAreaFirstVariation (alignedEightSiteState psiAmplitude chiAmplitude)
+        (pureChiDirection eta) edge) = 0 := by
+  rw [c3_real_pair_eq_inner_re]
+  unfold bondAreaDifference bondAreaFirstVariation
+  rw [aligned_wedge, aligned_wedge]
+  rw [show wedgeFirstVariation
+      (alignedEightSiteState psiAmplitude chiAmplitude)
+      (pureChiDirection eta) edge.source =
+      wedge (eta edge.source)
+        ((alignedEightSiteState psiAmplitude chiAmplitude).psi edge.source) by
+        funext component
+        fin_cases component <;>
+          simp [wedgeFirstVariation, pureChiDirection, c3Add, c3Zero, wedge],
+    show wedgeFirstVariation
+      (alignedEightSiteState psiAmplitude chiAmplitude)
+      (pureChiDirection eta) edge.target =
+      wedge (eta edge.target)
+        ((alignedEightSiteState psiAmplitude chiAmplitude).psi edge.target) by
+        funext component
+        fin_cases component <;>
+          simp [wedgeFirstVariation, pureChiDirection, c3Add, c3Zero, wedge]]
+  rw [show difference
+      (c3ScaleComplex (-(chiAmplitude edge.source * psiAmplitude edge.source)) unitArea)
+      (c3ScaleComplex (-(chiAmplitude edge.target * psiAmplitude edge.target)) unitArea) =
+      c3ScaleComplex
+        (chiAmplitude edge.source * psiAmplitude edge.source -
+          chiAmplitude edge.target * psiAmplitude edge.target) unitArea by
+        funext component; simp [difference, c3ScaleComplex]; ring]
+  rw [c3_inner_scale_left_general]
+  rw [c3_inner_sub_right,
+    aligned_chi_normal_wedge_pair_zero _ _ eta hnormal edge.source,
+    aligned_chi_normal_wedge_pair_zero _ _ eta hnormal edge.target]
+  simp
+
+theorem aligned_psi_cross_block_zero [Fintype Edge]
+    (chi0 : ℝ) (psiAmplitude chiAmplitude : Cell8)
+    (bond : Edge → Bond CubeCorner) (eta : CubeCorner → C3)
+    (hnormal : PsiNormalDirection eta) :
+    psiEulerLagrangeForce chi0
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond eta = 0 := by
+  unfold psiEulerLagrangeForce lagrangianStateFirstVariation
+  simp only [potentialFirstVariation, purePsiDirection,
+    sitePotentialFirstVariation]
+  rw [show (∑ site : CubeCorner,
+      let rhoPsi := density
+        ((alignedEightSiteState psiAmplitude chiAmplitude).psi site)
+      let rhoChi := density
+        ((alignedEightSiteState psiAmplitude chiAmplitude).chi site)
+      (rhoChi - chi0 ^ 2 + rhoPsi) *
+          c3RealPair
+            ((alignedEightSiteState psiAmplitude chiAmplitude).chi site) c3Zero +
+        (rhoChi + rhoPsi) *
+          c3RealPair
+            ((alignedEightSiteState psiAmplitude chiAmplitude).psi site)
+            (eta site)) = 0 by
+      apply Finset.sum_eq_zero
+      intro site _
+      rw [aligned_psi_normal_local_pair_zero _ _ eta hnormal site]
+      simp [c3RealPair, c3Zero]]
+  change -(0 + ∑ edge : Edge,
+    exteriorAreaBondFirstVariation chi0
+      (alignedEightSiteState psiAmplitude chiAmplitude)
+      (purePsiDirection eta) (bond edge)) = 0
+  rw [show (∑ edge : Edge,
+      exteriorAreaBondFirstVariation chi0
+        (alignedEightSiteState psiAmplitude chiAmplitude)
+        (purePsiDirection eta) (bond edge)) = 0 by
+      apply Finset.sum_eq_zero
+      intro edge _
+      unfold exteriorAreaBondFirstVariation
+      rw [aligned_psi_normal_bond_pair_zero _ _ eta hnormal (bond edge)]
+      ring]
+  ring
+
+theorem aligned_chi_cross_block_zero [Fintype Edge]
+    (chi0 : ℝ) (psiAmplitude chiAmplitude : Cell8)
+    (bond : Edge → Bond CubeCorner) (eta : CubeCorner → C3)
+    (hnormal : ChiNormalDirection eta) :
+    chiEulerLagrangeForce chi0
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond eta = 0 := by
+  unfold chiEulerLagrangeForce lagrangianStateFirstVariation
+  simp only [potentialFirstVariation, pureChiDirection,
+    sitePotentialFirstVariation]
+  rw [show (∑ site : CubeCorner,
+      let rhoPsi := density
+        ((alignedEightSiteState psiAmplitude chiAmplitude).psi site)
+      let rhoChi := density
+        ((alignedEightSiteState psiAmplitude chiAmplitude).chi site)
+      (rhoChi - chi0 ^ 2 + rhoPsi) *
+          c3RealPair
+            ((alignedEightSiteState psiAmplitude chiAmplitude).chi site)
+            (eta site) +
+        (rhoChi + rhoPsi) *
+          c3RealPair
+            ((alignedEightSiteState psiAmplitude chiAmplitude).psi site) c3Zero) = 0 by
+      apply Finset.sum_eq_zero
+      intro site _
+      rw [aligned_chi_normal_local_pair_zero _ _ eta hnormal site]
+      simp [c3RealPair, c3Zero]]
+  change -(0 + ∑ edge : Edge,
+    exteriorAreaBondFirstVariation chi0
+      (alignedEightSiteState psiAmplitude chiAmplitude)
+      (pureChiDirection eta) (bond edge)) = 0
+  rw [show (∑ edge : Edge,
+      exteriorAreaBondFirstVariation chi0
+        (alignedEightSiteState psiAmplitude chiAmplitude)
+        (pureChiDirection eta) (bond edge)) = 0 by
+      apply Finset.sum_eq_zero
+      intro edge _
+      unfold exteriorAreaBondFirstVariation
+      rw [aligned_chi_normal_bond_pair_zero _ _ eta hnormal (bond edge)]
+      ring]
+  ring
+
+def c3Sub (u v : C3) : C3 := fun component => u component - v component
+
+def rayResidual (u z : C3) : C3 :=
+  c3Sub z (c3ScaleComplex (c3Inner u z) u)
+
+theorem c3_inner_self (u : C3) :
+    c3Inner u u = (density u : ℂ) := by
+  apply Complex.ext <;>
+    simp [c3Inner, density, Fin.sum_univ_succ, Complex.normSq]
+
+theorem c3_inner_sub_right_general (u v z : C3) :
+    c3Inner u (c3Sub v z) = c3Inner u v - c3Inner u z := by
+  unfold c3Inner c3Sub
+  rw [← Finset.sum_sub_distrib]
+  apply Finset.sum_congr rfl
+  intro component _
+  ring
+
+theorem c3_inner_scale_right (a : ℂ) (u v : C3) :
+    c3Inner u (c3ScaleComplex a v) = a * c3Inner u v := by
+  unfold c3Inner c3ScaleComplex
+  rw [Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro component _
+  ring
+
+theorem ray_residual_normal (u z : C3) (hnorm : density u = 1) :
+    ComplexNormalTo u (rayResidual u z) := by
+  unfold ComplexNormalTo rayResidual
+  rw [c3_inner_sub_right_general, c3_inner_scale_right,
+    c3_inner_self, hnorm]
+  norm_num
+
+theorem c3_real_pair_self (u : C3) : c3RealPair u u = density u := by
+  rw [c3_real_pair_eq_inner_re, c3_inner_self]
+  simp
+
+theorem c3_real_pair_scale_left_zero (a : ℂ) (u v : C3)
+    (h : c3Inner u v = 0) :
+    c3RealPair (c3ScaleComplex a u) v = 0 := by
+  rw [c3_real_pair_eq_inner_re, c3_inner_scale_left, h]
+  simp
+
+theorem ray_plus_residual (u z : C3) :
+    c3Add (c3ScaleComplex (c3Inner u z) u) (rayResidual u z) = z := by
+  funext component
+  simp [c3Add, c3ScaleComplex, rayResidual, c3Sub]
+
+theorem c3_real_pair_with_residual (u z : C3)
+    (hnorm : density u = 1) :
+    c3RealPair z (rayResidual u z) = density (rayResidual u z) := by
+  calc
+    c3RealPair z (rayResidual u z) =
+        c3RealPair
+          (c3Add (c3ScaleComplex (c3Inner u z) u) (rayResidual u z))
+          (rayResidual u z) := by rw [ray_plus_residual]
+    _ = c3RealPair (c3ScaleComplex (c3Inner u z) u) (rayResidual u z) +
+        c3RealPair (rayResidual u z) (rayResidual u z) := by
+          change c3RealPair
+            (fun component =>
+              c3ScaleComplex (c3Inner u z) u component +
+                rayResidual u z component)
+            (rayResidual u z) = _
+          rw [c3_real_pair_add_left]
+    _ = density (rayResidual u z) := by
+      rw [c3_real_pair_scale_left_zero _ _ _
+          (ray_residual_normal u z hnorm),
+        c3_real_pair_self]
+      ring
+
+theorem density_zero_implies_c3_zero (u : C3) (h : density u = 0) :
+    u = c3Zero := by
+  have hsum := h
+  simp [density, Fin.sum_univ_succ, Complex.normSq] at hsum
+  funext component
+  fin_cases component <;> apply Complex.ext <;> simp [c3Zero] <;>
+    nlinarith [sq_nonneg (u 0).re, sq_nonneg (u 0).im,
+      sq_nonneg (u 1).re, sq_nonneg (u 1).im,
+      sq_nonneg (u 2).re, sq_nonneg (u 2).im]
+
+def singleSiteField (selected : CubeCorner) (z : C3) : CubeCorner → C3 :=
+  fun site => if site = selected then z else c3Zero
+
+theorem single_site_psi_normal (selected : CubeCorner) (z : C3)
+    (h : ComplexNormalTo (tetraCorner selected) z) :
+    PsiNormalDirection (singleSiteField selected z) := by
+  intro site
+  by_cases hs : site = selected
+  · subst hs
+    simpa [singleSiteField] using h
+  · simp [singleSiteField, hs, ComplexNormalTo, c3Inner, c3Zero]
+
+theorem single_site_chi_normal (selected : CubeCorner) (z : C3)
+    (h : ComplexNormalTo (companion selected) z) :
+    ChiNormalDirection (singleSiteField selected z) := by
+  intro site
+  by_cases hs : site = selected
+  · subst hs
+    simpa [singleSiteField] using h
+  · simp [singleSiteField, hs, ComplexNormalTo, c3Inner, c3Zero]
+
+theorem psi_momentum_single_site [Fintype CubeCorner]
+    (velocity : Velocity CubeCorner) (selected : CubeCorner) (z : C3) :
+    psiMomentumPair velocity (singleSiteField selected z) =
+      c3RealPair (velocity.psiDot selected) z := by
+  unfold psiMomentumPair
+  rw [Finset.sum_eq_single selected]
+  · simp [singleSiteField]
+  · intro other _ hne
+    simp [singleSiteField, hne, c3RealPair, c3Zero]
+  · simp
+
+theorem chi_momentum_single_site [Fintype CubeCorner]
+    (B : ℝ) (velocity : Velocity CubeCorner) (selected : CubeCorner) (z : C3) :
+    chiMomentumPair B velocity (singleSiteField selected z) =
+      B * c3RealPair (velocity.chiDot selected) z := by
+  unfold chiMomentumPair
+  rw [Finset.sum_eq_single selected]
+  · simp [singleSiteField]
+  · intro other _ hne
+    simp [singleSiteField, hne, c3RealPair, c3Zero]
+  · simp
+
+theorem companion_density_one (corner : CubeCorner) :
+    density (companion corner) = 1 := by
+  fin_cases corner <;>
+    simp [density, Fin.sum_univ_succ, companion, tetraCorner,
+      tetraRay0, tetraRay1, tetraRay2, tetraRay3, c3Of, c3Neg,
+      tetraA, tetraB, omega, omegaBar, Complex.normSq] <;>
+    field_simp [sqrt_three_ne_zero] <;> ring_nf <;>
+    nlinarith [sqrt_three_sq, sqrt_two_sq, sqrt_three_pow_four,
+      sqrt_three_pow_five, sqrt_three_pow_six, sqrt_three_pow_eight,
+      sqrt_two_pow_four]
+
+def psiAccelerationAmplitude [Fintype Edge]
+    (chi0 B : ℝ) (psiAmplitude chiAmplitude : Cell8)
+    (bond : Edge → Bond CubeCorner) : Cell8 :=
+  fun corner => c3Inner (tetraCorner corner)
+    ((accelerationVelocity chi0 B
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond).psiDot corner)
+
+def chiAccelerationAmplitude [Fintype Edge]
+    (chi0 B : ℝ) (psiAmplitude chiAmplitude : Cell8)
+    (bond : Edge → Bond CubeCorner) : Cell8 :=
+  fun corner => c3Inner (companion corner)
+    ((accelerationVelocity chi0 B
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond).chiDot corner)
+
+theorem aligned_psi_acceleration [Fintype Edge]
+    (chi0 B : ℝ) (psiAmplitude chiAmplitude : Cell8)
+    (bond : Edge → Bond CubeCorner) (corner : CubeCorner) :
+    (accelerationVelocity chi0 B
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond).psiDot corner =
+      c3ScaleComplex
+        (psiAccelerationAmplitude chi0 B psiAmplitude chiAmplitude bond corner)
+        (tetraCorner corner) := by
+  let acceleration := accelerationVelocity chi0 B
+    (alignedEightSiteState psiAmplitude chiAmplitude) bond
+  let residual := rayResidual (tetraCorner corner)
+    (acceleration.psiDot corner)
+  have hnormal : ComplexNormalTo (tetraCorner corner) residual := by
+    exact ray_residual_normal _ _ (tetra_corner_density_one corner)
+  have hall := psi_acceleration_all_directions chi0 B
+    (alignedEightSiteState psiAmplitude chiAmplitude) bond
+    (singleSiteField corner residual)
+  rw [aligned_psi_cross_block_zero chi0 psiAmplitude chiAmplitude bond
+      (singleSiteField corner residual)
+      (single_site_psi_normal corner residual hnormal)] at hall
+  rw [psi_momentum_single_site] at hall
+  have hpair : c3RealPair (acceleration.psiDot corner) residual = 0 := by
+    exact hall
+  rw [show residual = rayResidual (tetraCorner corner)
+      (acceleration.psiDot corner) by rfl,
+    c3_real_pair_with_residual _ _ (tetra_corner_density_one corner)] at hpair
+  have hresidual := density_zero_implies_c3_zero residual hpair
+  funext component
+  have hc := congrFun hresidual component
+  simp [residual, rayResidual, c3Sub, c3Zero, c3ScaleComplex,
+    psiAccelerationAmplitude, acceleration] at hc ⊢
+  exact sub_eq_zero.mp hc
+
+theorem aligned_chi_acceleration [Fintype Edge]
+    (chi0 B : ℝ) (hB : B ≠ 0)
+    (psiAmplitude chiAmplitude : Cell8)
+    (bond : Edge → Bond CubeCorner) (corner : CubeCorner) :
+    (accelerationVelocity chi0 B
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond).chiDot corner =
+      c3ScaleComplex
+        (chiAccelerationAmplitude chi0 B psiAmplitude chiAmplitude bond corner)
+        (companion corner) := by
+  let acceleration := accelerationVelocity chi0 B
+    (alignedEightSiteState psiAmplitude chiAmplitude) bond
+  let residual := rayResidual (companion corner)
+    (acceleration.chiDot corner)
+  have hnormal : ComplexNormalTo (companion corner) residual := by
+    exact ray_residual_normal _ _ (companion_density_one corner)
+  have hall := chi_acceleration_all_directions chi0 B
+    (alignedEightSiteState psiAmplitude chiAmplitude) bond hB
+    (singleSiteField corner residual)
+  rw [aligned_chi_cross_block_zero chi0 psiAmplitude chiAmplitude bond
+      (singleSiteField corner residual)
+      (single_site_chi_normal corner residual hnormal)] at hall
+  rw [chi_momentum_single_site] at hall
+  have hpair : c3RealPair (acceleration.chiDot corner) residual = 0 := by
+    exact (mul_eq_zero.mp hall).resolve_left hB
+  rw [show residual = rayResidual (companion corner)
+      (acceleration.chiDot corner) by rfl,
+    c3_real_pair_with_residual _ _ (companion_density_one corner)] at hpair
+  have hresidual := density_zero_implies_c3_zero residual hpair
+  funext component
+  have hc := congrFun hresidual component
+  simp [residual, rayResidual, c3Sub, c3Zero, c3ScaleComplex,
+    chiAccelerationAmplitude, acceleration] at hc ⊢
+  exact sub_eq_zero.mp hc
+
+theorem native_next_preserves_eight_site_sector [Fintype Edge]
+    (chi0 B dt : ℝ) (hB : B ≠ 0) (bond : Edge → Bond CubeCorner)
+    (previous current : State CubeCorner)
+    (hprevious : InEightSiteSector previous)
+    (hcurrent : InEightSiteSector current) :
+    InEightSiteSector
+      (nativeNextState chi0 B dt bond previous current) := by
+  rcases hprevious with ⟨previousPsi, previousChi, rfl⟩
+  rcases hcurrent with ⟨currentPsi, currentChi, rfl⟩
+  let accelerationPsi :=
+    psiAccelerationAmplitude chi0 B currentPsi currentChi bond
+  let accelerationChi :=
+    chiAccelerationAmplitude chi0 B currentPsi currentChi bond
+  refine ⟨fun corner =>
+      2 * currentPsi corner - previousPsi corner +
+        (dt^2 : ℂ) * accelerationPsi corner,
+    fun corner =>
+      2 * currentChi corner - previousChi corner +
+        (dt^2 : ℂ) * accelerationChi corner, ?_⟩
+  apply congrArg₂ State.mk <;> funext corner component
+  · rw [show
+      (accelerationVelocity chi0 B
+        (alignedEightSiteState currentPsi currentChi) bond).psiDot corner =
+        c3ScaleComplex (accelerationPsi corner) (tetraCorner corner) by
+          exact aligned_psi_acceleration chi0 B currentPsi currentChi bond corner]
+    simp [alignedEightSiteState, c3ScaleComplex,
+      accelerationPsi]
+    ring
+  · rw [show
+      (accelerationVelocity chi0 B
+        (alignedEightSiteState currentPsi currentChi) bond).chiDot corner =
+        c3ScaleComplex (accelerationChi corner) (companion corner) by
+          exact aligned_chi_acceleration chi0 B hB currentPsi currentChi bond corner]
+    simp [alignedEightSiteState, c3ScaleComplex,
+      accelerationChi]
+    ring
+
+/-! Both four-component copies of the eight-amplitude cell are retained. -/
+
+def cellFlip0 : Fin 8 → Fin 8
+  | 0 => 4 | 1 => 5 | 2 => 6 | 3 => 7
+  | 4 => 0 | 5 => 1 | 6 => 2 | _ => 3
+
+def cellFlip1 : Fin 8 → Fin 8
+  | 0 => 2 | 1 => 3 | 2 => 0 | 3 => 1
+  | 4 => 6 | 5 => 7 | 6 => 4 | _ => 5
+
+def cellFlip2 : Fin 8 → Fin 8
+  | 0 => 1 | 1 => 0 | 2 => 3 | 3 => 2
+  | 4 => 5 | 5 => 4 | 6 => 7 | _ => 6
+
+def cellBit2 : Fin 8 → Nat
+  | 0 | 2 | 4 | 6 => 0
+  | _ => 1
+
+def cubeC19Neighbor (corner : CubeCorner)
+    (direction : C19Neighbor) : CubeCorner :=
+  match direction.val with
+  | 0 | 1 => cellFlip0 corner
+  | 2 | 3 => cellFlip1 corner
+  | 4 | 5 => cellFlip2 corner
+  | 6 | 7 | 8 | 9 => cellFlip0 (cellFlip1 corner)
+  | 10 | 11 | 12 | 13 => cellFlip0 (cellFlip2 corner)
+  | _ => cellFlip1 (cellFlip2 corner)
+
+theorem cube_c19_neighbor_reverse (corner : CubeCorner)
+    (direction : C19Neighbor) :
+    cubeC19Neighbor (cubeC19Neighbor corner direction)
+      (c19Reverse direction) = corner := by
+  fin_cases corner <;> fin_cases direction <;>
+    rfl
+
+def cubeC19Geometry : C19Lattice CubeCorner where
+  neighbor := cubeC19Neighbor
+  neighbor_reverse := cube_c19_neighbor_reverse
+
+def cellFlavorSign (corner : Fin 8) : ℝ :=
+  if cellBit2 corner % 2 = 0 then 1 else -1
+
+def cellFlavor (a : Cell8) : Cell8 := fun corner =>
+  I * (cellFlavorSign corner : ℂ) * a (cellFlip1 (cellFlip2 corner))
+
+def cellAdd (a b : Cell8) : Cell8 := fun corner => a corner + b corner
+def cellSub (a b : Cell8) : Cell8 := fun corner => a corner - b corner
+def cellScale (z : ℂ) (a : Cell8) : Cell8 := fun corner => z * a corner
+
+theorem cell_flavor_involution (a : Cell8) :
+    cellFlavor (cellFlavor a) = a := by
+  funext corner
+  fin_cases corner <;>
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] <;>
+    ring_nf <;> rw [Complex.I_sq] <;> ring
+
+def cellMinus (a : Cell8) : Cell8 :=
+  cellScale (1/2 : ℂ) (cellSub a (cellFlavor a))
+
+def cellPlus (a : Cell8) : Cell8 :=
+  cellScale (1/2 : ℂ) (cellAdd a (cellFlavor a))
+
+theorem cell_copies_sum (a : Cell8) :
+    cellAdd (cellMinus a) (cellPlus a) = a := by
+  funext corner
+  simp [cellMinus, cellPlus, cellAdd, cellSub, cellScale]
+  ring
+
+theorem cell_minus_has_negative_flavor (a : Cell8) :
+    cellFlavor (cellMinus a) = cellScale (-1) (cellMinus a) := by
+  funext corner
+  fin_cases corner <;>
+    simp [cellMinus, cellSub, cellScale, cellFlavor, cellFlavorSign,
+      cellFlip1, cellFlip2, cellBit2] <;>
+    ring_nf <;> rw [Complex.I_sq] <;> ring
+
+theorem cell_plus_has_positive_flavor (a : Cell8) :
+    cellFlavor (cellPlus a) = cellPlus a := by
+  funext corner
+  fin_cases corner <;>
+    simp [cellPlus, cellAdd, cellScale, cellFlavor, cellFlavorSign,
+      cellFlip1, cellFlip2, cellBit2] <;>
+    ring_nf <;> rw [Complex.I_sq] <;> ring
+
+def cellEmbedMinus (z : Cell4) : Cell8
+  | 0 => z 0 | 1 => z 1 | 2 => -I * z 1 | 3 => I * z 0
+  | 4 => z 2 | 5 => z 3 | 6 => -I * z 3 | _ => I * z 2
+
+def cellEmbedPlus (z : Cell4) : Cell8
+  | 0 => z 0 | 1 => z 1 | 2 => I * z 1 | 3 => -I * z 0
+  | 4 => z 2 | 5 => z 3 | 6 => I * z 3 | _ => -I * z 2
+
+def cellCoordinates (a : Cell8) : Cell4
+  | 0 => a 0 | 1 => a 1 | 2 => a 4 | _ => a 5
+
+theorem cell_embed_minus_injective : Function.Injective cellEmbedMinus := by
+  intro a b h
+  funext component
+  fin_cases component
+  · exact congrFun h 0
+  · exact congrFun h 1
+  · exact congrFun h 4
+  · exact congrFun h 5
+
+theorem cell_embed_plus_injective : Function.Injective cellEmbedPlus := by
+  intro a b h
+  funext component
+  fin_cases component
+  · exact congrFun h 0
+  · exact congrFun h 1
+  · exact congrFun h 4
+  · exact congrFun h 5
+
+theorem cell_minus_reconstructs_from_four (a : Cell8)
+    (h : cellFlavor a = cellScale (-1) a) :
+    cellEmbedMinus (cellCoordinates a) = a := by
+  funext corner
+  fin_cases corner
+  · rfl
+  · rfl
+  · have hc := congrFun h 2
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
+      cellScale] at hc
+    have hn := congrArg (fun z : ℂ => -z) hc
+    simpa [cellEmbedMinus, cellCoordinates] using hn
+  · have hc := congrFun h 3
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
+      cellScale] at hc
+    simpa [cellEmbedMinus, cellCoordinates] using hc
+  · rfl
+  · rfl
+  · have hc := congrFun h 6
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
+      cellScale] at hc
+    have hn := congrArg (fun z : ℂ => -z) hc
+    simpa [cellEmbedMinus, cellCoordinates] using hn
+  · have hc := congrFun h 7
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2,
+      cellScale] at hc
+    simpa [cellEmbedMinus, cellCoordinates] using hc
+
+theorem cell_plus_reconstructs_from_four (a : Cell8)
+    (h : cellFlavor a = a) :
+    cellEmbedPlus (cellCoordinates a) = a := by
+  funext corner
+  fin_cases corner
+  · rfl
+  · rfl
+  · have hc := congrFun h 2
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
+    simpa [cellEmbedPlus, cellCoordinates] using hc
+  · have hc := congrFun h 3
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
+    simpa [cellEmbedPlus, cellCoordinates] using hc
+  · rfl
+  · rfl
+  · have hc := congrFun h 6
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
+    simpa [cellEmbedPlus, cellCoordinates] using hc
+  · have hc := congrFun h 7
+    simp [cellFlavor, cellFlavorSign, cellFlip1, cellFlip2, cellBit2] at hc
+    simpa [cellEmbedPlus, cellCoordinates] using hc
+
+def RetainsTwoFourComponentCopies (a : Cell8) : Prop :=
+    cellAdd (cellMinus a) (cellPlus a) = a ∧
+    cellFlavor (cellMinus a) = cellScale (-1) (cellMinus a) ∧
+    cellFlavor (cellPlus a) = cellPlus a ∧
+    cellEmbedMinus (cellCoordinates (cellMinus a)) = cellMinus a ∧
+    cellEmbedPlus (cellCoordinates (cellPlus a)) = cellPlus a
+
+theorem every_cell_retains_two_four_component_copies (a : Cell8) :
+    RetainsTwoFourComponentCopies a := by
+  unfold RetainsTwoFourComponentCopies
+  exact ⟨cell_copies_sum a,
+    cell_minus_has_negative_flavor a,
+    cell_plus_has_positive_flavor a,
+    cell_minus_reconstructs_from_four _ (cell_minus_has_negative_flavor a),
+    cell_plus_reconstructs_from_four _ (cell_plus_has_positive_flavor a)⟩
+
+structure Dirac005Certificate [Fintype Edge]
+    (chi0 B dt : ℝ) (bond : Edge → Bond CubeCorner)
+    (previous current : State CubeCorner) : Prop where
+  psiCrossBlockZero : ∀ psiAmplitude chiAmplitude eta,
+    PsiNormalDirection eta →
+    psiEulerLagrangeForce chi0
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond eta = 0
+  chiCrossBlockZero : ∀ psiAmplitude chiAmplitude eta,
+    ChiNormalDirection eta →
+    chiEulerLagrangeForce chi0
+      (alignedEightSiteState psiAmplitude chiAmplitude) bond eta = 0
+  updateClosure : InEightSiteSector previous → InEightSiteSector current →
+    InEightSiteSector (nativeNextState chi0 B dt bond previous current)
+  bothCopies : ∀ a : Cell8, RetainsTwoFourComponentCopies a
+
+theorem dirac005_native_sector [Fintype Edge]
+    (chi0 B dt : ℝ) (hB : B ≠ 0) (bond : Edge → Bond CubeCorner)
+    (previous current : State CubeCorner) :
+    Dirac005Certificate chi0 B dt bond previous current where
+  psiCrossBlockZero := fun psiAmplitude chiAmplitude eta hnormal =>
+    aligned_psi_cross_block_zero chi0 psiAmplitude chiAmplitude bond eta hnormal
+  chiCrossBlockZero := fun psiAmplitude chiAmplitude eta hnormal =>
+    aligned_chi_cross_block_zero chi0 psiAmplitude chiAmplitude bond eta hnormal
+  updateClosure := fun hprevious hcurrent =>
+    native_next_preserves_eight_site_sector chi0 B dt hB bond
+      previous current hprevious hcurrent
+  bothCopies := every_cell_retains_two_four_component_copies
+
+theorem dirac005_c19_native_sector
+    (dt : ℝ) (previous current : State CubeCorner) :
+    Dirac005Certificate chi0 chiKineticNormalization dt
+      (c19Bond cubeC19Geometry) previous current :=
+  dirac005_native_sector chi0 chiKineticNormalization dt
+    (by rw [chi_kinetic_normalization_eq_1197]; norm_num)
+    (c19Bond cubeC19Geometry) previous current
+
+end
+end LeanDirac
