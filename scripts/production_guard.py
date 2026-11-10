@@ -1,4 +1,4 @@
-"""Fail closed if the admitted DIRAC-001 through DIRAC-007 boundary drifts."""
+"""Fail closed if the admitted DIRAC-001 through DIRAC-008 boundary drifts."""
 
 from __future__ import annotations
 
@@ -23,12 +23,13 @@ EXPECTED_GATE_MODULES = {
     "DIRAC-005": "LeanDirac/Dirac005.lean",
     "DIRAC-006": "LeanDirac/Dirac006.lean",
     "DIRAC-007": "LeanDirac/Dirac007.lean",
+    "DIRAC-008": "LeanDirac/Dirac008.lean",
 }
 
 EXPECTED_GATES = {
-    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 8)},
-    "DIRAC-008": "NEXT",
-    **{f"DIRAC-{index:03d}": "OPEN" for index in range(9, 16)},
+    **{f"DIRAC-{index:03d}": "PASS" for index in range(1, 9)},
+    "DIRAC-009": "NEXT",
+    **{f"DIRAC-{index:03d}": "OPEN" for index in range(10, 16)},
 }
 
 EXPECTED_LOCKED_FILES = {
@@ -47,6 +48,7 @@ EXPECTED_LOCKED_FILES = {
     "LeanDirac/Dirac005.lean",
     "LeanDirac/Dirac006.lean",
     "LeanDirac/Dirac007.lean",
+    "LeanDirac/Dirac008.lean",
     "LeanDirac/Publication.lean",
     "LeanDirac.lean",
     "LeanDiracAudit.lean",
@@ -125,6 +127,26 @@ AUDITED_THEOREMS = {
     "LeanDirac.native_unit_cell_running_coordinate_count",
     "LeanDirac.dirac007_lossless_native_paired_readout",
     "LeanDirac.current_highest_gate_is_dirac007",
+    "LeanDirac.native_layer_backward_after_forward",
+    "LeanDirac.native_layer_forward_after_backward",
+    "LeanDirac.native_running_backward_after_forward",
+    "LeanDirac.native_running_forward_after_backward",
+    "LeanDirac.native_running_step_is_action_layer_step",
+    "LeanDirac.native_running_step_current",
+    "LeanDirac.native_running_step_interval_velocity",
+    "LeanDirac.native_running_step_current_psi",
+    "LeanDirac.native_running_step_current_chi",
+    "LeanDirac.native_running_step_velocity_psi",
+    "LeanDirac.native_running_step_velocity_chi",
+    "LeanDirac.native_running_step_is_action_stationary",
+    "LeanDirac.native_running_step_is_unique_action_stationary",
+    "LeanDirac.native_running_step_preserves_eight_site_sector",
+    "LeanDirac.native_running_step_backward_preserves_eight_site_sector",
+    "LeanDirac.native_coordinate_evolution_is_sector_step",
+    "LeanDirac.native_coordinate_backward_after_forward",
+    "LeanDirac.native_coordinate_forward_after_backward",
+    "LeanDirac.dirac008_complete_native_first_order_map",
+    "LeanDirac.current_highest_gate_is_dirac008",
 }
 
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
@@ -307,11 +329,11 @@ def validate() -> list[str]:
         errors.append("action lock must be immutable and noncanonical")
     if lock.get("field_families") != 2:
         errors.append("action does not declare exactly two field families")
-    if status.get("highest_passed_gate") != "DIRAC-007":
-        errors.append("status does not stop at DIRAC-007")
-    if status.get("next_gate") != "DIRAC-008":
-        errors.append("DIRAC-008 is not the next gate")
-    if status.get("completed") != 7 or status.get("total") != 15:
+    if status.get("highest_passed_gate") != "DIRAC-008":
+        errors.append("status does not stop at DIRAC-008")
+    if status.get("next_gate") != "DIRAC-009":
+        errors.append("DIRAC-009 is not the next gate")
+    if status.get("completed") != 8 or status.get("total") != 15:
         errors.append("gate completion counts are incorrect")
     if status.get("gates") != EXPECTED_GATES:
         errors.append("complete fifteen-gate status map is incorrect")
@@ -325,8 +347,8 @@ def validate() -> list[str]:
     locked_files = lock.get("files", {})
     if set(locked_files) != EXPECTED_LOCKED_FILES:
         errors.append("action lock does not contain exactly the approved proof files")
-    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac007":
-        errors.append("action lock does not name the DIRAC-007 publication theorem")
+    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac008":
+        errors.append("action lock does not name the DIRAC-008 publication theorem")
 
     for relative, expected in locked_files.items():
         path = ROOT / relative
@@ -393,8 +415,12 @@ def validate() -> list[str]:
         ["LeanDirac.Dirac006"], errors, "DIRAC-007"
     )
     require_imports(
+        ROOT / "LeanDirac" / "Dirac008.lean",
+        ["LeanDirac.Dirac007"], errors, "DIRAC-008"
+    )
+    require_imports(
         ROOT / "LeanDirac" / "Publication.lean",
-        ["LeanDirac.Dirac007"], errors, "publication root"
+        ["LeanDirac.Dirac008"], errors, "publication root"
     )
 
     errors.extend(validate_axioms())
@@ -410,8 +436,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_GUARD_PASS")
-    print("highest_passed_gate=DIRAC-007")
-    print("next_gate=DIRAC-008")
+    print("highest_passed_gate=DIRAC-008")
+    print("next_gate=DIRAC-009")
     return 0
 
 

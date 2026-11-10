@@ -72,4 +72,24 @@ import LeanDirac.Publication
 #print axioms LeanDirac.native_unit_cell_running_coordinate_count
 #print axioms LeanDirac.dirac007_lossless_native_paired_readout
 #print axioms LeanDirac.current_highest_gate_is_dirac007
+#print axioms LeanDirac.native_layer_backward_after_forward
+#print axioms LeanDirac.native_layer_forward_after_backward
+#print axioms LeanDirac.native_running_backward_after_forward
+#print axioms LeanDirac.native_running_forward_after_backward
+#print axioms LeanDirac.native_running_step_is_action_layer_step
+#print axioms LeanDirac.native_running_step_current
+#print axioms LeanDirac.native_running_step_interval_velocity
+#print axioms LeanDirac.native_running_step_current_psi
+#print axioms LeanDirac.native_running_step_current_chi
+#print axioms LeanDirac.native_running_step_velocity_psi
+#print axioms LeanDirac.native_running_step_velocity_chi
+#print axioms LeanDirac.native_running_step_is_action_stationary
+#print axioms LeanDirac.native_running_step_is_unique_action_stationary
+#print axioms LeanDirac.native_running_step_preserves_eight_site_sector
+#print axioms LeanDirac.native_running_step_backward_preserves_eight_site_sector
+#print axioms LeanDirac.native_coordinate_evolution_is_sector_step
+#print axioms LeanDirac.native_coordinate_backward_after_forward
+#print axioms LeanDirac.native_coordinate_forward_after_backward
+#print axioms LeanDirac.dirac008_complete_native_first_order_map
+#print axioms LeanDirac.current_highest_gate_is_dirac008
 
