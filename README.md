@@ -19,7 +19,8 @@ remain outside this repository.
 | `DIRAC-005` | **PASS** | For the period-two C19 unit cell, the unrestricted action-derived update preserves the tetrahedral Ψ/χ ray sector. Its exact normal cross block is zero. Lean reconstructs every sector state from one unique set of sixteen complex amplitudes; the two committed layers therefore have thirty-two. No four-component split is supplied or assumed. |
 | `DIRAC-006` | **PASS** | The admitted sector's exact native bond energy reduces to the Ψ-χ product amplitude. An explicitly constructed Bloch-modulated native Ψ/χ state over a period-two ray background then produces the nonnegative local infinite-lattice C19 character symbol, with zero first moment and isotropic second moment 12 in the declared relative-weight normalization. No four-component split is supplied. |
 | `DIRAC-007` | **PASS** | At every nonzero timestep, the complete pair of committed native Ψ/χ layers is exactly equivalent to the current native state plus the backward interval velocity already used by the action. Lean proves both full-state round trips and an explicit equivalence between the thirty-two sector amplitudes and the running-sector state without selecting four components. |
-| `DIRAC-008` | **NEXT** | Construct the native first-order evolution operator on the complete lossless readout without inserting a Dirac matrix or spinor selector. |
+| `DIRAC-008` | **PASS** | Conjugating the unique action-stationary native update through the DIRAC-007 readout gives an exact reversible first-order evolution map on the complete running Ψ/χ state and all thirty-two sector coordinates. Its four explicit displacement/velocity formulas are proved from the same acceleration. It is nonlinear and supplies no Dirac matrix or four-component selector. |
+| `DIRAC-009` | **NEXT** | Linearize the complete native map at the declared running background and derive any invariant four-component sector, mass grading and three transport generators without inserting them. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -64,8 +65,8 @@ Recovering its exact higher-zoom scalar response remains open.
 | 5 | `DIRAC-005` | Native unit-cell sector | **PASS** | Prove the action-derived update closes on the period-two, eight-site Ψ/χ ray sector; calculate the normal cross block and prove that amplitude extraction and reconstruction are exact inverses, yielding sixteen complex amplitudes per state slice and thirty-two across the two committed layers. The four-component selection problem remains downstream. |
 | 6 | `DIRAC-006` | Native local transport symbol | **PASS** | Construct the repeated Bloch-modulated native Ψ/χ state over the period-two ray background, reduce its actual bond action and derive its exact local infinite-lattice C19 character coefficient, zero first moment and isotropic second moment. |
 | 7 | `DIRAC-007` | Paired readout | **PASS** | Prove an exact two-way equivalence between the two committed native layers and current displacement plus backward interval velocity; construct the explicit sector-to-coordinate equivalence and preserve all thirty-two complex unit-cell coordinates in both directions. |
-| 8 | `DIRAC-008` | Native first-order operator | **NEXT** | Construct the first-order operator from action and cube data only. |
-| 9 | `DIRAC-009` | Native Clifford algebra | OPEN | Derive mass grading, three transports, their square and anticommutators. |
+| 8 | `DIRAC-008` | Native first-order evolution map | **PASS** | Conjugate the unique action-stationary two-layer update through the lossless running-state readout; prove the explicit Ψ/χ displacement and interval-velocity formulas, reversibility, sector closure and exact evolution on all thirty-two coordinates. |
+| 9 | `DIRAC-009` | Native Clifford algebra | **NEXT** | Linearize the complete map, derive rather than choose any invariant four-component sector, then derive mass grading, three transports, their squares and anticommutators. |
 | 10 | `DIRAC-010` | Dirac identification | OPEN | Identify the derived native algebra with standard Dirac notation downstream. |
 | 11 | `DIRAC-011` | Readout rebuild | OPEN | Rebuild both frequency readouts and the public theorem from the repaired chain. |
 | 12 | `DIRAC-012` | Continuum limit | OPEN | Prove the uniform-chi free-Dirac limit with vanishing space/time remainders. |
@@ -85,6 +86,7 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
+LeanDirac/Dirac008.lean                complete reversible native first-order map
 LeanDirac/Dirac007.lean                lossless state-plus-velocity readout
 LeanDirac/Dirac006.lean                native product-channel C19 transport symbol
 LeanDirac/Dirac005.lean                invariant period-two unit-cell sector
@@ -154,5 +156,11 @@ velocity belongs to the interval from the previous layer to the current layer;
 it is not asserted to be a same-time continuum derivative. Lean constructs an
 explicit equivalence between the running sector and its thirty-two complex
 coordinate functions. It does not select four components or define their
-evolution. Native four-component selection, the first-order operator,
-long-time stability, an electron and physical spin remain downstream work.
+evolution. `DIRAC-008` now conjugates the unique action-stationary two-layer
+update through that lossless readout. Lean proves the complete nonlinear
+first-order map, its exact inverse, the explicit Ψ/χ displacement and
+interval-velocity formulas, preservation of the admitted sector, and the
+equivalent reversible map on all thirty-two complex coordinates. No matrix,
+projector or four-component split is supplied. Native four-component
+selection and linearization, Clifford algebra, long-time stability, an
+electron and physical spin remain downstream work.

@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-007",
-  "next_gate": "DIRAC-008",
-  "completed": 7,
+  "highest_passed_gate": "DIRAC-008",
+  "next_gate": "DIRAC-009",
+  "completed": 8,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
@@ -13,7 +13,8 @@
     "DIRAC-004": "LeanDirac/Dirac004DiscreteAction.lean",
     "DIRAC-005": "LeanDirac/Dirac005.lean",
     "DIRAC-006": "LeanDirac/Dirac006.lean",
-    "DIRAC-007": "LeanDirac/Dirac007.lean"
+    "DIRAC-007": "LeanDirac/Dirac007.lean",
+    "DIRAC-008": "LeanDirac/Dirac008.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -23,8 +24,8 @@
     "DIRAC-005": "PASS",
     "DIRAC-006": "PASS",
     "DIRAC-007": "PASS",
-    "DIRAC-008": "NEXT",
-    "DIRAC-009": "OPEN",
+    "DIRAC-008": "PASS",
+    "DIRAC-009": "NEXT",
     "DIRAC-010": "OPEN",
     "DIRAC-011": "OPEN",
     "DIRAC-012": "OPEN",
@@ -32,5 +33,5 @@
     "DIRAC-014": "OPEN",
     "DIRAC-015": "OPEN"
   },
-  "claim_boundary": "DIRAC-007 cumulatively proves the declared positive candidate action and complete prepared cube geometry, its local variations, the nonzero-timestep action update, an invariant sector with exact amplitude extraction and reconstruction, the exact local C19 character symbol of an explicitly constructed Bloch-modulated native Psi/chi state over a period-two ray background, and an exact lossless equivalence between the two committed layers and current state plus backward interval velocity. The admitted two-layer and running sectors are explicitly equivalent to thirty-two complex coordinate functions. The interval velocity is not claimed to be a same-time continuum derivative. The candidate action and prepared background are starting hypotheses, not derived origin claims. The chain does not yet prove a native four-component selection, complete first-order operator, free Dirac equation, electron, physical spin, formation or canonical framework."
+  "claim_boundary": "DIRAC-008 cumulatively proves the declared positive candidate action and complete prepared cube geometry, its local variations, the nonzero-timestep action update, an invariant sector with exact amplitude extraction and reconstruction, the exact local C19 character symbol of an explicitly constructed Bloch-modulated native Psi/chi state over a period-two ray background, an exact lossless equivalence between the two committed layers and current state plus backward interval velocity, and the complete reversible nonlinear first-order evolution map obtained by conjugating the unique action-stationary native update through that readout. The map acts on all thirty-two complex sector coordinates and its explicit Psi/chi displacement and velocity formulas are proved. The interval velocity is not claimed to be a same-time continuum derivative. The candidate action and prepared background are starting hypotheses, not derived origin claims. The chain does not yet prove a native invariant four-component selection, linearized Clifford algebra, free Dirac equation, electron, physical spin, formation or canonical framework."
 }

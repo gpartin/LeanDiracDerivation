@@ -1,14 +1,15 @@
-import LeanDirac.Dirac007
+import LeanDirac.Dirac008
 
 namespace LeanDirac
 
 /-!
-Sole public proof root through DIRAC-007.  The public certificate is explicitly
+Sole public proof root through DIRAC-008.  The public certificate is explicitly
 cumulative: it retains the native framework, positive candidate action and
 prepared geometry, arbitrary local action variations, nonzero-step discrete
 action update, invariant unit-cell sector and native repeated-state transport
 symbol, then proves an exact lossless change from the two committed layers to
-the current state and its native discrete velocity.
+the current state and its native discrete velocity, then conjugates the unique
+action-stationary update into a complete reversible first-order evolution map.
 -/
 
 structure CumulativeDirac005Certificate
@@ -82,6 +83,20 @@ theorem current_highest_gate_is_dirac007
   throughDirac006 := current_highest_gate_is_dirac006
     dt previous current hdt
   losslessNativeReadout := dirac007_lossless_native_paired_readout dt hdt
+
+structure CumulativeDirac008Certificate
+    (dt : ℝ) (hdt : dt ≠ 0)
+    (previous current : State CubeCorner) : Prop where
+  throughDirac007 : CumulativeDirac007Certificate dt hdt previous current
+  completeNativeFirstOrderMap : Dirac008Certificate dt hdt
+
+theorem current_highest_gate_is_dirac008
+    (dt : ℝ) (previous current : State CubeCorner) (hdt : dt ≠ 0) :
+    CumulativeDirac008Certificate dt hdt previous current where
+  throughDirac007 := current_highest_gate_is_dirac007
+    dt previous current hdt
+  completeNativeFirstOrderMap :=
+    dirac008_complete_native_first_order_map dt hdt
 
 end LeanDirac
 
