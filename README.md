@@ -17,7 +17,7 @@ remain outside this repository.
 | `DIRAC-003` | **PASS** | Independent arbitrary variations of the actual local action produce the native Ψ and χ force and momentum families. No all-time trajectory, decay assumption or continuum equation is used at this lattice-first gate. |
 | `DIRAC-004` | **PASS** | A two-step discrete action is built from the frozen kinetic energy and potential. Lean proves its stationary point is uniquely the explicit centered C19 update, proves exact reversibility, and proves both reciprocal equations for every complex-C3 field variation. |
 | `DIRAC-005` | **PASS** | For the period-two C19 unit cell, the unrestricted action-derived update preserves the tetrahedral Ψ/χ ray sector. Its exact normal cross block is zero. Each state slice has sixteen complex amplitudes; the two committed layers of the centered update have thirty-two. No four-component split is supplied or assumed. |
-| `DIRAC-006` | **PASS** | The admitted sector's exact native bond energy reduces to the Ψ-χ product amplitude. An explicitly constructed period-two native Ψ/χ state then produces the nonnegative local infinite-lattice C19 character symbol, with zero first moment and isotropic second moment 12 in the declared relative-weight normalization. No four-component split is supplied. |
+| `DIRAC-006` | **PASS** | The admitted sector's exact native bond energy reduces to the Ψ-χ product amplitude. An explicitly constructed Bloch-modulated native Ψ/χ state over a period-two ray background then produces the nonnegative local infinite-lattice C19 character symbol, with zero first moment and isotropic second moment 12 in the declared relative-weight normalization. No four-component split is supplied. |
 | `DIRAC-007` | **NEXT** | Build a lossless first-order readout from native displacement and velocity without selecting a spinor by hand. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
@@ -61,7 +61,7 @@ Recovering its exact higher-zoom scalar response remains open.
 | 3 | `DIRAC-003` | Native equations | **PASS** | Derive the Ψ and χ force and conjugate-momentum families by independent arbitrary variations of the same local action. |
 | 4 | `DIRAC-004` | Native time | **PASS** | Derive the centered update as the unique stationary point of the discrete two-step action; prove reversibility and both equations for arbitrary field variations. |
 | 5 | `DIRAC-005` | Native unit-cell sector | **PASS** | Prove the action-derived update closes on the period-two, eight-site Ψ/χ ray sector; calculate the normal cross block and retain sixteen complex amplitudes per state slice, thirty-two across the two committed layers. The four-component selection problem remains downstream. |
-| 6 | `DIRAC-006` | Native local transport symbol | **PASS** | Construct the repeated period-two native Ψ/χ state, reduce its actual bond action and derive its exact local infinite-lattice C19 character coefficient, zero first moment and isotropic second moment. |
+| 6 | `DIRAC-006` | Native local transport symbol | **PASS** | Construct the repeated Bloch-modulated native Ψ/χ state over the period-two ray background, reduce its actual bond action and derive its exact local infinite-lattice C19 character coefficient, zero first moment and isotropic second moment. |
 | 7 | `DIRAC-007` | Paired readout | **NEXT** | Build a lossless first-order readout from native displacement and velocity without inserting a four-component selector. |
 | 8 | `DIRAC-008` | Native first-order operator | OPEN | Construct the first-order operator from action and cube data only. |
 | 9 | `DIRAC-009` | Native Clifford algebra | OPEN | Derive mass grading, three transports, their square and anticommutators. |
@@ -140,7 +140,7 @@ eight χ amplitudes. The two-layer centered state has thirty-two.
 No four-component split is supplied by DIRAC-005. At the close of that gate,
 the repeated-lattice transport symbol and native four-component selection were
 both still open. `DIRAC-006` now closes the first item: it constructs an actual
-period-two native Ψ/χ state on the repeated lattice and proves its exact
+Bloch-modulated native Ψ/χ state over a period-two ray background and proves its exact
 local neighbor-transport symbol on lattice characters. It does not
 claim that the product channel is a four-component spinor or that it closes
 under the complete local time evolution. Native four-component selection,
