@@ -1,4 +1,4 @@
-import LeanDirac.Dirac005
+import LeanDirac.Dirac006
 
 namespace LeanDirac
 
@@ -40,6 +40,18 @@ theorem current_highest_gate_is_dirac005
   cornerCoordinates := cube_corner_coordinate_injective
   c19UnitCellModel := cube_c19_neighbor_is_periodic_c19
   c19DirectionClasses := c19_direction_has_declared_class
+
+structure CumulativeDirac006Certificate
+    (dt : ℝ) (previous current : State CubeCorner) : Prop where
+  throughDirac005 : CumulativeDirac005Certificate dt previous current
+  nativeTransportSymbol : Dirac006Certificate
+
+theorem current_highest_gate_is_dirac006
+    (dt : ℝ) (previous current : State CubeCorner) (hdt : dt ≠ 0) :
+    CumulativeDirac006Certificate dt previous current where
+  throughDirac005 := current_highest_gate_is_dirac005
+    dt previous current hdt
+  nativeTransportSymbol := dirac006_native_transport_symbol
 
 end LeanDirac
 

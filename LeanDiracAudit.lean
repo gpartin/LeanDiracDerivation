@@ -36,4 +36,19 @@ import LeanDirac.Publication
 #print axioms LeanDirac.cube_c19_neighbor_reverse
 #print axioms LeanDirac.dirac005_c19_native_sector
 #print axioms LeanDirac.current_highest_gate_is_dirac005
+#print axioms LeanDirac.aligned_area_is_product_amplitude
+#print axioms LeanDirac.aligned_exterior_area_is_restricted_bond
+#print axioms LeanDirac.cubic_character_neighbor
+#print axioms LeanDirac.cubic_character_normSq_one
+#print axioms LeanDirac.c19_weight_is_integer_weight
+#print axioms LeanDirac.c19_first_moment_zero
+#print axioms LeanDirac.c19_second_moment_isotropic
+#print axioms LeanDirac.c19_transport_symbol_nonnegative
+#print axioms LeanDirac.c19_transport_symbol_zero
+#print axioms LeanDirac.restricted_character_energy_has_c19_symbol
+#print axioms LeanDirac.repeated_character_bond_factorization
+#print axioms LeanDirac.repeated_character_energy_has_c19_symbol
+#print axioms LeanDirac.product_amplitude_first_order_expansion
+#print axioms LeanDirac.dirac006_native_transport_symbol
+#print axioms LeanDirac.current_highest_gate_is_dirac006
 

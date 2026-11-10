@@ -17,7 +17,8 @@ remain outside this repository.
 | `DIRAC-003` | **PASS** | Independent arbitrary variations of the actual local action produce the native Ψ and χ force and momentum families. No all-time trajectory, decay assumption or continuum equation is used at this lattice-first gate. |
 | `DIRAC-004` | **PASS** | A two-step discrete action is built from the frozen kinetic energy and potential. Lean proves its stationary point is uniquely the explicit centered C19 update, proves exact reversibility, and proves both reciprocal equations for every complex-C3 field variation. |
 | `DIRAC-005` | **PASS** | For the period-two C19 unit cell, the unrestricted action-derived update preserves the tetrahedral Ψ/χ ray sector. Its exact normal cross block is zero and all sixteen complex coordinates—eight Ψ amplitudes plus eight χ amplitudes—remain native. No four-component split is supplied or assumed. |
-| `DIRAC-006` | **NEXT** | Derive the finite-lattice transport symbol inside the admitted sector. |
+| `DIRAC-006` | **PASS** | The admitted sector's exact bond energy reduces to the native Ψ-χ product amplitude. Genuine cubic-lattice characters produce its nonnegative C19 transport symbol, with zero first moment and isotropic second moment 12 in the declared relative-weight normalization. No four-component split is supplied. |
+| `DIRAC-007` | **NEXT** | Build a lossless first-order readout from native displacement and velocity without selecting a spinor by hand. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -58,8 +59,8 @@ Recovering its exact higher-zoom scalar response remains open.
 | 3 | `DIRAC-003` | Native equations | **PASS** | Derive the Ψ and χ force and conjugate-momentum families by independent arbitrary variations of the same local action. |
 | 4 | `DIRAC-004` | Native time | **PASS** | Derive the centered update as the unique stationary point of the discrete two-step action; prove reversibility and both equations for arbitrary field variations. |
 | 5 | `DIRAC-005` | Native unit-cell sector | **PASS** | Prove the action-derived update closes on the period-two, eight-site Ψ/χ ray sector; calculate the normal cross block and retain all sixteen complex field amplitudes. The four-component selection problem remains downstream. |
-| 6 | `DIRAC-006` | Native symbol | **NEXT** | Derive finite-lattice transport coefficients from lattice characters. |
-| 7 | `DIRAC-007` | Paired readout | OPEN | Build a lossless first-order readout from native displacement and velocity. |
+| 6 | `DIRAC-006` | Native transport symbol | **PASS** | Reduce the native bond action inside the admitted sector and derive its exact C19 lattice-character coefficient, including the zero first moment and isotropic second moment. |
+| 7 | `DIRAC-007` | Paired readout | **NEXT** | Build a lossless first-order readout from native displacement and velocity without inserting a four-component selector. |
 | 8 | `DIRAC-008` | Native first-order operator | OPEN | Construct the first-order operator from action and cube data only. |
 | 9 | `DIRAC-009` | Native Clifford algebra | OPEN | Derive mass grading, three transports, their square and anticommutators. |
 | 10 | `DIRAC-010` | Dirac identification | OPEN | Identify the derived native algebra with standard Dirac notation downstream. |
@@ -81,6 +82,7 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
+LeanDirac/Dirac006.lean                native product-channel C19 transport symbol
 LeanDirac/Dirac005.lean                invariant period-two unit-cell sector
 LeanDirac/Dirac004DiscreteAction.lean  discrete action/update equivalence
 LeanDirac/Dirac004.lean                force-coordinate/update algebra
@@ -129,7 +131,11 @@ and both equation families for every field direction. `DIRAC-005` proves that
 the period-two eight-site tetrahedral ray bundle is invariant under that
 unrestricted update and that its exact normal force block vanishes. The bundle
 has sixteen complex coordinates: eight Ψ amplitudes and eight χ amplitudes.
-No four-component split is supplied by this gate. Lifting the unit-cell result
-to the repeated lattice, deriving the transport symbol, selecting a native
-four-component sector, long-time stability, a
-Dirac operator, an electron and physical spin remain downstream work.
+No four-component split is supplied by DIRAC-005. At the close of that gate,
+the repeated-lattice transport symbol and native four-component selection were
+both still open. `DIRAC-006` now closes the first item: it proves the exact
+neighbor-transport symbol of the sector on lattice characters. It does not
+claim that the product channel is a four-component spinor or that it closes
+under the complete local time evolution. Native four-component selection,
+long-time stability, a Dirac operator, an electron and physical spin remain
+downstream work.

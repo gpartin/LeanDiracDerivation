@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "gate": "DIRAC-005",
+  "gate": "DIRAC-006",
   "status": "PASS_ZERO_CRITICAL_HIGH",
   "critical_findings": [],
   "high_findings": [],
@@ -21,13 +21,14 @@
     "native_equations": "independent arbitrary Psi and chi state/velocity derivatives of the same local action, with no trajectory-decay or continuum assumption",
     "native_time": "the unique stationary point of the two-step discrete action; arbitrary-direction force representation, exact centered recurrence and reversibility are proved",
     "native_sector": "on the period-two C19 unit cell, the prepared tetrahedral Psi rays and native companion chi rays define an exact sixteen-complex-coordinate sector (eight Psi amplitudes plus eight chi amplitudes); the complete local and bond action variation has zero normal block and the unrestricted update preserves it",
-    "c19_unit_cell": "the explicit cube neighbor table is proved equal, under the corner-coordinate map, to the declared period-two periodic C19 neighbor operation; its six face directions and twelve edge directions have the declared weights"
+    "c19_unit_cell": "the explicit cube neighbor table is proved equal, under the corner-coordinate map, to the declared period-two periodic C19 neighbor operation; its six face directions and twelve edge directions have the declared weights",
+    "native_transport_symbol": "the exact restricted bond action depends on the native product chiAmplitude*psiAmplitude; standard cubic-lattice characters derive the nonnegative C19 symbol, zero first moment and isotropic second moment 12 in the action's declared relative-weight normalization"
   },
   "readout_only_structures": {},
-  "open_but_nonblocking_for_dirac_005": [
+  "open_but_nonblocking_for_dirac_006": [
     "derive any four-component selection and independent closure from the finite-lattice operator",
-    "lift the period-two unit-cell sector to the repeated lattice/Bloch problem",
-    "finite-lattice symbol and transport coefficients (DIRAC-006)",
+    "derive a lossless native first-order readout from displacement and velocity (DIRAC-007)",
+    "derive the complete local-plus-transport first-order operator",
     "higher-zoom scalar flat-octic recovery",
     "free-Dirac limit",
     "physical electron and spin validation"
