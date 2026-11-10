@@ -1,4 +1,4 @@
-import LeanDirac.Dirac004
+import LeanDirac.Dirac004DiscreteAction
 
 namespace LeanDirac
 
@@ -11,9 +11,10 @@ theorem current_highest_gate_is_dirac004
     [Fintype Site] [DecidableEq Site]
     (dt : ℝ) (geometry : C19Lattice Site)
     (previous current : State Site) (hdt : dt ≠ 0) :
-    NativeUpdateCertificate chi0 chiKineticNormalization dt
+    DiscreteActionUpdateCertificate chi0 chiKineticNormalization dt
       (c19Bond geometry) previous current :=
-  dirac004_c19_reversible_action_update dt geometry previous current hdt
+  dirac004_c19_update_iff_discrete_action_stationary
+    dt geometry previous current hdt
 
 end LeanDirac
 

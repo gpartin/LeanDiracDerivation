@@ -15,7 +15,7 @@ remain outside this repository.
 | `DIRAC-001` | **PASS** | One public proof root and a closed, auditable dependency chain. |
 | `DIRAC-002` | **PASS** | A nonnegative two-field complex-C3 action with geometry-derived exterior-area transport and a concrete prepared eight-corner background. |
 | `DIRAC-003` | **PASS** | For compatible regular trajectories, genuine stationarity of the time-integrated action implies both reciprocal Euler–Lagrange equation families. The proof differentiates the actual action increment, integrates by parts and applies the fundamental lemma. |
-| `DIRAC-004` | **PASS** | The two action-derived accelerations generate an explicit centered second-order C19 update. Lean proves exact time reversibility and both reciprocal equations in every real and imaginary field coordinate. |
+| `DIRAC-004` | **PASS** | A two-step discrete action is built from the frozen kinetic energy and potential. Lean proves its stationary point is uniquely the explicit centered C19 update, proves exact reversibility, and proves both reciprocal equations for every complex-C3 field variation. |
 | `DIRAC-005` | **NEXT** | Derive the invariant eight-site sector and retain every native copy. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
@@ -55,7 +55,7 @@ Recovering its exact higher-zoom scalar response remains open.
 | 1 | `DIRAC-001` | Authority boundary | **PASS** | One public root; no experimental or superseded dependency enters the production graph. |
 | 2 | `DIRAC-002` | Native action | **PASS** | A positive two-field action, derived geometric transport, coefficient provenance and a cleared no-bolt-on review. |
 | 3 | `DIRAC-003` | Native equations | **PASS** | Derive both reciprocal Euler–Lagrange equation families from actual stationary action, independent variations, integration by parts and the fundamental lemma. |
-| 4 | `DIRAC-004` | Native time | **PASS** | Reconstruct both native accelerations from the action variation and prove that their centered C19 update is exactly reversible and satisfies both field equations coordinate by coordinate. |
+| 4 | `DIRAC-004` | Native time | **PASS** | Derive the centered update as the unique stationary point of the discrete two-step action; prove reversibility and both equations for arbitrary field variations. |
 | 5 | `DIRAC-005` | Native sector | **NEXT** | Derive the invariant eight-site sector and retain every native copy. |
 | 6 | `DIRAC-006` | Native symbol | OPEN | Derive finite-lattice transport coefficients from lattice characters. |
 | 7 | `DIRAC-007` | Paired readout | OPEN | Build a lossless first-order readout from native displacement and velocity. |
@@ -80,7 +80,8 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
-LeanDirac/Dirac004.lean                reversible native action update
+LeanDirac/Dirac004DiscreteAction.lean  discrete action/update equivalence
+LeanDirac/Dirac004.lean                force-coordinate/update algebra
 LeanDirac/Dirac003Contract.lean         exact non-circular stationarity contract
 LeanDirac/Dirac003.lean                stationary-action Euler--Lagrange proof
 LeanDirac/Dirac002.lean                DIRAC-002 contracts
@@ -118,8 +119,9 @@ the audit and fails on any other dependency, or on `sorry`, `admit` or a custom
 This repository records a noncanonical mathematical research candidate.
 `DIRAC-003` remains a conditional variational theorem for regular, compatible
 trajectories: it does not assert that an arbitrary trajectory is stationary.
-`DIRAC-004` reconstructs the two complex-C3 accelerations from that action
-variation and proves the explicit centered update is exactly reversible and
-satisfies both equation families in every coordinate. It does not yet prove
+`DIRAC-004` constructs the actual two-step discrete action, differentiates it
+under arbitrary combined field variations, and proves that stationarity is
+equivalent to the explicit centered update. It also proves exact reversibility
+and both equation families for every field direction. It does not yet prove
 long-time numerical stability, an invariant spinor sector, a Dirac operator,
 an electron, or physical spin; those remain downstream work.

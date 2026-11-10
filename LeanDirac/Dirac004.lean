@@ -3,8 +3,10 @@ import LeanDirac.Dirac003Contract
 namespace LeanDirac
 
 /-!
-DIRAC-004 derives the native centered second-order update from the two
-Euler--Lagrange equation families admitted at DIRAC-003.
+This supporting module constructs the force-coordinate and centered-update
+algebra used by the final DIRAC-004 discrete-action proof.  By itself it does
+not claim that the update follows from stationarity; that non-circular
+derivation is proved in `Dirac004DiscreteAction`.
 
 The real and imaginary coordinate directions below are only a basis used to
 reconstruct the two complex-C3 accelerations from their action variations.

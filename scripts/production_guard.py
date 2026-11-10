@@ -19,7 +19,7 @@ EXPECTED_GATE_MODULES = {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
     "DIRAC-003": "LeanDirac/Dirac003.lean",
-    "DIRAC-004": "LeanDirac/Dirac004.lean",
+    "DIRAC-004": "LeanDirac/Dirac004DiscreteAction.lean",
 }
 
 EXPECTED_GATES = {
@@ -40,6 +40,7 @@ EXPECTED_LOCKED_FILES = {
     "LeanDirac/Dirac003.lean",
     "LeanDirac/Dirac003Contract.lean",
     "LeanDirac/Dirac004.lean",
+    "LeanDirac/Dirac004DiscreteAction.lean",
     "LeanDirac/Publication.lean",
     "LeanDirac.lean",
     "LeanDiracAudit.lean",
@@ -64,6 +65,12 @@ AUDITED_THEOREMS = {
     "LeanDirac.native_next_is_reversible",
     "LeanDirac.centered_difference_native_next",
     "LeanDirac.dirac004_c19_reversible_action_update",
+    "LeanDirac.discrete_action_hasDerivAt",
+    "LeanDirac.psi_acceleration_all_directions",
+    "LeanDirac.chi_acceleration_all_directions",
+    "LeanDirac.native_next_is_discrete_action_stationary",
+    "LeanDirac.discrete_stationarity_determines_native_next",
+    "LeanDirac.dirac004_c19_update_iff_discrete_action_stationary",
     "LeanDirac.current_highest_gate_is_dirac004",
 }
 
@@ -317,8 +324,12 @@ def validate() -> list[str]:
         ["LeanDirac.Dirac003Contract"], errors, "DIRAC-004"
     )
     require_imports(
+        ROOT / "LeanDirac" / "Dirac004DiscreteAction.lean",
+        ["LeanDirac.Dirac004"], errors, "DIRAC-004 discrete-action closure"
+    )
+    require_imports(
         ROOT / "LeanDirac" / "Publication.lean",
-        ["LeanDirac.Dirac004"], errors, "publication root"
+        ["LeanDirac.Dirac004DiscreteAction"], errors, "publication root"
     )
 
     errors.extend(validate_axioms())

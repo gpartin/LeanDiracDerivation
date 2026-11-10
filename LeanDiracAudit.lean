@@ -18,5 +18,11 @@ import LeanDirac.Publication
 #print axioms LeanDirac.native_next_is_reversible
 #print axioms LeanDirac.centered_difference_native_next
 #print axioms LeanDirac.dirac004_c19_reversible_action_update
+#print axioms LeanDirac.discrete_action_hasDerivAt
+#print axioms LeanDirac.psi_acceleration_all_directions
+#print axioms LeanDirac.chi_acceleration_all_directions
+#print axioms LeanDirac.native_next_is_discrete_action_stationary
+#print axioms LeanDirac.discrete_stationarity_determines_native_next
+#print axioms LeanDirac.dirac004_c19_update_iff_discrete_action_stationary
 #print axioms LeanDirac.current_highest_gate_is_dirac004
 
