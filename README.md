@@ -16,9 +16,10 @@ remain outside this repository.
 | `DIRAC-002` | **PASS** | A declared noncanonical two-field complex-C3 candidate action is nonnegative, and all six face products of its concrete prepared eight-corner background are proved. The action is a starting hypothesis, not a claimed unique consequence of a deeper law. |
 | `DIRAC-003` | **PASS** | Independent arbitrary variations of the actual local action produce the native Ψ and χ force and momentum families. No all-time trajectory, decay assumption or continuum equation is used at this lattice-first gate. |
 | `DIRAC-004` | **PASS** | A two-step discrete action is built from the frozen kinetic energy and potential. Lean proves its stationary point is uniquely the explicit centered C19 update, proves exact reversibility, and proves both reciprocal equations for every complex-C3 field variation. |
-| `DIRAC-005` | **PASS** | For the period-two C19 unit cell, the unrestricted action-derived update preserves the tetrahedral Ψ/χ ray sector. Its exact normal cross block is zero. Each state slice has sixteen complex amplitudes; the two committed layers of the centered update have thirty-two. No four-component split is supplied or assumed. |
+| `DIRAC-005` | **PASS** | For the period-two C19 unit cell, the unrestricted action-derived update preserves the tetrahedral Ψ/χ ray sector. Its exact normal cross block is zero. Lean reconstructs every sector state from one unique set of sixteen complex amplitudes; the two committed layers therefore have thirty-two. No four-component split is supplied or assumed. |
 | `DIRAC-006` | **PASS** | The admitted sector's exact native bond energy reduces to the Ψ-χ product amplitude. An explicitly constructed Bloch-modulated native Ψ/χ state over a period-two ray background then produces the nonnegative local infinite-lattice C19 character symbol, with zero first moment and isotropic second moment 12 in the declared relative-weight normalization. No four-component split is supplied. |
-| `DIRAC-007` | **NEXT** | Build a lossless first-order readout from native displacement and velocity without selecting a spinor by hand. |
+| `DIRAC-007` | **PASS** | At every nonzero timestep, the complete pair of committed native Ψ/χ layers is exactly equivalent to the current native state plus the backward interval velocity already used by the action. Lean proves both full-state round trips and an explicit equivalence between the thirty-two sector amplitudes and the running-sector state without selecting four components. |
+| `DIRAC-008` | **NEXT** | Construct the native first-order evolution operator on the complete lossless readout without inserting a Dirac matrix or spinor selector. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -60,10 +61,10 @@ Recovering its exact higher-zoom scalar response remains open.
 | 2 | `DIRAC-002` | Native action | **PASS** | Declare the noncanonical two-field candidate action, prove positivity and all six prepared face products, and state explicitly that deeper uniqueness is not claimed. |
 | 3 | `DIRAC-003` | Native equations | **PASS** | Derive the Ψ and χ force and conjugate-momentum families by independent arbitrary variations of the same local action. |
 | 4 | `DIRAC-004` | Native time | **PASS** | Derive the centered update as the unique stationary point of the discrete two-step action; prove reversibility and both equations for arbitrary field variations. |
-| 5 | `DIRAC-005` | Native unit-cell sector | **PASS** | Prove the action-derived update closes on the period-two, eight-site Ψ/χ ray sector; calculate the normal cross block and retain sixteen complex amplitudes per state slice, thirty-two across the two committed layers. The four-component selection problem remains downstream. |
+| 5 | `DIRAC-005` | Native unit-cell sector | **PASS** | Prove the action-derived update closes on the period-two, eight-site Ψ/χ ray sector; calculate the normal cross block and prove that amplitude extraction and reconstruction are exact inverses, yielding sixteen complex amplitudes per state slice and thirty-two across the two committed layers. The four-component selection problem remains downstream. |
 | 6 | `DIRAC-006` | Native local transport symbol | **PASS** | Construct the repeated Bloch-modulated native Ψ/χ state over the period-two ray background, reduce its actual bond action and derive its exact local infinite-lattice C19 character coefficient, zero first moment and isotropic second moment. |
-| 7 | `DIRAC-007` | Paired readout | **NEXT** | Build a lossless first-order readout from native displacement and velocity without inserting a four-component selector. |
-| 8 | `DIRAC-008` | Native first-order operator | OPEN | Construct the first-order operator from action and cube data only. |
+| 7 | `DIRAC-007` | Paired readout | **PASS** | Prove an exact two-way equivalence between the two committed native layers and current displacement plus backward interval velocity; construct the explicit sector-to-coordinate equivalence and preserve all thirty-two complex unit-cell coordinates in both directions. |
+| 8 | `DIRAC-008` | Native first-order operator | **NEXT** | Construct the first-order operator from action and cube data only. |
 | 9 | `DIRAC-009` | Native Clifford algebra | OPEN | Derive mass grading, three transports, their square and anticommutators. |
 | 10 | `DIRAC-010` | Dirac identification | OPEN | Identify the derived native algebra with standard Dirac notation downstream. |
 | 11 | `DIRAC-011` | Readout rebuild | OPEN | Rebuild both frequency readouts and the public theorem from the repaired chain. |
@@ -84,6 +85,7 @@ Recovering its exact higher-zoom scalar response remains open.
 ```text
 LeanDirac.lean                         sole public facade
 LeanDirac/Publication.lean             highest admitted public theorem
+LeanDirac/Dirac007.lean                lossless state-plus-velocity readout
 LeanDirac/Dirac006.lean                native product-channel C19 transport symbol
 LeanDirac/Dirac005.lean                invariant period-two unit-cell sector
 LeanDirac/Dirac004DiscreteAction.lean  discrete action/update equivalence
@@ -134,15 +136,23 @@ under arbitrary combined field variations, and proves that stationarity is
 equivalent to the explicit centered update. It also proves exact reversibility
 and both equation families for every field direction. `DIRAC-005` proves that
 the period-two eight-site tetrahedral ray bundle is invariant under that
-unrestricted update and that its exact normal force block vanishes. The bundle
-has sixteen complex coordinates on each state slice: eight Ψ amplitudes and
-eight χ amplitudes. The two-layer centered state has thirty-two.
+unrestricted update and that its exact normal force block vanishes. Lean also
+proves that amplitude extraction and state reconstruction are exact inverses,
+so the bundle has sixteen unique complex coordinates on each state slice:
+eight Ψ amplitudes and eight χ amplitudes. The two-layer centered state has
+thirty-two.
 No four-component split is supplied by DIRAC-005. At the close of that gate,
 the repeated-lattice transport symbol and native four-component selection were
 both still open. `DIRAC-006` now closes the first item: it constructs an actual
 Bloch-modulated native Ψ/χ state over a period-two ray background and proves its exact
 local neighbor-transport symbol on lattice characters. It does not
 claim that the product channel is a four-component spinor or that it closes
-under the complete local time evolution. Native four-component selection,
-long-time stability, a Dirac operator, an electron and physical spin remain
-downstream work.
+under the complete local time evolution. `DIRAC-007` now proves that the two
+committed native layers can be replaced exactly by the current state and the
+backward interval velocity, and rebuilt with no information loss. This
+velocity belongs to the interval from the previous layer to the current layer;
+it is not asserted to be a same-time continuum derivative. Lean constructs an
+explicit equivalence between the running sector and its thirty-two complex
+coordinate functions. It does not select four components or define their
+evolution. Native four-component selection, the first-order operator,
+long-time stability, an electron and physical spin remain downstream work.
