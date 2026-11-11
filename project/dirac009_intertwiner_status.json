@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.1.0",
+  "gate": "DIRAC-009",
+  "status": "PASS",
+  "proved_in_lean": [
+    "The complete positive incidence action and its reciprocal Psi/chi variations are derived from one action.",
+    "The surrounding-cell Bloch coefficient of the native incidence residual reduces exactly to signed cubical incidence after the proved prepared gauge change.",
+    "The three action-derived incidence generators square to identity and mutually anticommute.",
+    "The native flavor involution commutes with the generators and retains two injective rank-four copies.",
+    "The nondegenerate action-derived transport is carried through the centered reversible update and lossless first-order readout.",
+    "The cumulative DIRAC-001 through DIRAC-009 theorem uses only standard Lean foundations."
+  ],
+  "not_yet_proved": [
+    "Identification of cube parity with the physical Dirac mass grading.",
+    "Selection or physical interpretation of either retained rank-four copy.",
+    "The common mass, transport, density and current continuum theorem.",
+    "A localized physical electron and operational spin-half validation."
+  ],
+  "numerical_follow_up": {
+    "lattice": "4x4x4 periodic C19",
+    "stability_cycles": 100,
+    "updates_per_cycle": [64, 128, 256],
+    "initial_incidence_energy": 0.06318658632827713,
+    "initial_incidence_residual_norm": 0.3554900457910943,
+    "maximum_pattern_defect": 0.0012404508433524412,
+    "maximum_energy_drift": 2.496539457496312e-7,
+    "verdict": "PASS",
+    "interpretation": "The incidence term is active on a nondegenerate repeated lattice, and the full declared action preserves the prepared background for 100 cycles under timestep refinement."
+  },
+  "claim_boundary": "DIRAC-009 passes its native Clifford-algebra gate for the declared noncanonical two-field action and prepared running background. It does not prove the standard Dirac equation, physical mass, a continuum particle, spin half, an electron or canonical promotion.",
+  "lean_modules": [
+    "LeanDirac/Dirac009ActionBridge.lean",
+    "LeanDirac/Dirac009Closed.lean"
+  ]
+}
