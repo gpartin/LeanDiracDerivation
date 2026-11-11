@@ -266,24 +266,29 @@ def run(updates_per_cycle: int) -> dict[str, object]:
     initial_incidence = float(initial_terms["incidence"].detach())
     initial_residual = float(initial_terms["incidence_residual_norm"].detach())
     maxima = diagnostics(q.numpy(), psi_ref, chi_ref)
+    maximum_relative_energy_deviation = 0.0
     accel = acceleration(q, inverse_mass)
-    for step in range(1, CYCLES * updates_per_cycle + 1):
+    for _step in range(1, CYCLES * updates_per_cycle + 1):
         velocity_half = velocity + 0.5 * dt * accel
         q = q + dt * velocity_half
         next_accel = acceleration(q, inverse_mass)
         velocity = velocity_half + 0.5 * dt * next_accel
         accel = next_accel
-        if step % updates_per_cycle == 0:
-            row = diagnostics(q.numpy(), psi_ref, chi_ref)
-            maxima = {key: max(maxima[key], row[key]) for key in maxima}
-    drift = abs(energy() - initial_energy) / max(1.0, abs(initial_energy))
+        row = diagnostics(q.numpy(), psi_ref, chi_ref)
+        maxima = {key: max(maxima[key], row[key]) for key in maxima}
+        relative_energy_deviation = (
+            abs(energy() - initial_energy) / max(1.0, abs(initial_energy))
+        )
+        maximum_relative_energy_deviation = max(
+            maximum_relative_energy_deviation, relative_energy_deviation
+        )
     passed = bool(
         initial_incidence > 1.0e-14
         and initial_residual > 1.0e-10
         and maxima["psi_pattern_defect"] < 0.01
         and maxima["chi_pattern_defect"] < 0.01
         and maxima["track_pattern_defect"] < 0.01
-        and drift < 1.0e-4
+        and maximum_relative_energy_deviation < 1.0e-4
     )
     return {
         "updates_per_cycle": updates_per_cycle,
@@ -291,7 +296,7 @@ def run(updates_per_cycle: int) -> dict[str, object]:
         "initial_incidence_energy": initial_incidence,
         "initial_incidence_residual_norm": initial_residual,
         "maximums": maxima,
-        "relative_energy_drift": drift,
+        "maximum_relative_energy_deviation": maximum_relative_energy_deviation,
         "passes": passed,
     }
 

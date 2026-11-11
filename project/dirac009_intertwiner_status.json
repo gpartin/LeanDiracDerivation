@@ -4,7 +4,7 @@
   "status": "PASS",
   "proved_in_lean": [
     "The complete positive incidence action and its reciprocal Psi/chi variations are derived from one action.",
-    "The surrounding-cell Bloch coefficient of the native incidence residual reduces exactly to signed cubical incidence after the proved prepared gauge change.",
+    "The actual repeated infinite-lattice Psi/chi state reduces the zeroth component of the native incidence residual exactly to the surrounding-cell Bloch symbol and then to signed cubical incidence after the proved prepared gauge change.",
     "The three action-derived incidence generators square to identity and mutually anticommute.",
     "The native flavor involution commutes with the generators and retains two injective rank-four copies.",
     "The nondegenerate action-derived transport is carried through the centered reversible update and lossless first-order readout.",
@@ -22,8 +22,9 @@
     "updates_per_cycle": [64, 128, 256],
     "initial_incidence_energy": 0.06318658632827713,
     "initial_incidence_residual_norm": 0.3554900457910943,
-    "maximum_pattern_defect": 0.0012404508433524412,
-    "maximum_energy_drift": 2.496539457496312e-7,
+    "maximum_pattern_defect": 0.0012463295246963628,
+    "maximum_relative_energy_deviation": 2.9536482654056628e-6,
+    "sampling": "pattern defects and energy evaluated after every update",
     "verdict": "PASS",
     "interpretation": "The incidence term is active on a nondegenerate repeated lattice, and the full declared action preserves the prepared background for 100 cycles under timestep refinement."
   },

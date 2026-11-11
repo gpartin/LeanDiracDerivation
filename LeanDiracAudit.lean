@@ -13,6 +13,7 @@ import LeanDirac.Publication
 #print axioms LeanDirac.dirac005_incidence_prepared_sector
 #print axioms LeanDirac.dirac006_incidence_native_transport
 #print axioms LeanDirac.prepared_action_bloch_bridge
+#print axioms LeanDirac.prepared_action_bloch_residual_is_native_residual
 #print axioms LeanDirac.dirac006_complete_action_transport
 #print axioms LeanDirac.dirac007_incidence_lossless_paired_readout
 #print axioms LeanDirac.incidence_running_backward_after_forward
