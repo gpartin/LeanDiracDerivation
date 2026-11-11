@@ -1,20 +1,21 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-008",
-  "next_gate": "DIRAC-009",
-  "completed": 8,
+  "highest_passed_gate": "DIRAC-009",
+  "next_gate": "DIRAC-010",
+  "completed": 9,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
-    "DIRAC-003": "LeanDirac/Dirac003.lean",
-    "DIRAC-004": "LeanDirac/Dirac004DiscreteAction.lean",
-    "DIRAC-005": "LeanDirac/Dirac005.lean",
-    "DIRAC-006": "LeanDirac/Dirac006.lean",
-    "DIRAC-007": "LeanDirac/Dirac007.lean",
-    "DIRAC-008": "LeanDirac/Dirac008.lean"
+    "DIRAC-003": "LeanDirac/ChiIncidenceVariation.lean",
+    "DIRAC-004": "LeanDirac/Dirac004Incidence.lean",
+    "DIRAC-005": "LeanDirac/Dirac005Incidence.lean",
+    "DIRAC-006": "LeanDirac/Dirac006ActionTransport.lean",
+    "DIRAC-007": "LeanDirac/Dirac007Incidence.lean",
+    "DIRAC-008": "LeanDirac/Dirac008Incidence.lean",
+    "DIRAC-009": "LeanDirac/Dirac009Closed.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -25,7 +26,7 @@
     "DIRAC-006": "PASS",
     "DIRAC-007": "PASS",
     "DIRAC-008": "PASS",
-    "DIRAC-009": "NEXT",
+    "DIRAC-009": "PASS",
     "DIRAC-010": "OPEN",
     "DIRAC-011": "OPEN",
     "DIRAC-012": "OPEN",
@@ -33,5 +34,5 @@
     "DIRAC-014": "OPEN",
     "DIRAC-015": "OPEN"
   },
-  "claim_boundary": "DIRAC-008 cumulatively proves the declared positive candidate action and complete prepared cube geometry, its local variations, the nonzero-timestep action update, an invariant sector with exact amplitude extraction and reconstruction, the exact local C19 character symbol of an explicitly constructed Bloch-modulated native Psi/chi state over a period-two ray background, an exact lossless equivalence between the two committed layers and current state plus backward interval velocity, and the complete reversible nonlinear first-order evolution map obtained by conjugating the unique action-stationary native update through that readout. The map acts on all thirty-two complex sector coordinates and its explicit Psi/chi displacement and velocity formulas are proved. The interval velocity is not claimed to be a same-time continuum derivative. The candidate action and prepared background are starting hypotheses, not derived origin claims. The chain does not yet prove a native invariant four-component selection, linearized Clifford algebra, free Dirac equation, electron, physical spin, formation or canonical framework."
+  "claim_boundary": "DIRAC-009 is the highest passed research gate. Lean proves the complete positive two-field action and reciprocal variations, its centered reversible update and lossless first-order readout, and an exact nondegenerate surrounding-cell Bloch reduction of the native incidence residual to three equal-square mutually anticommuting cubical directions. Both native rank-four flavor copies are retained. The period-two cancellation is explicitly excluded as transport evidence. A 4x4x4 C19 full-action ensemble with active incidence energy passes 100 cycles at 64, 128 and 256 updates per cycle. Cube parity remains a geometric grading only; physical mass, the standard Dirac identification, the continuum theorem, current, spin and an electron remain open."
 }

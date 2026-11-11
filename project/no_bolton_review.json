@@ -1,44 +1,34 @@
 {
-  "schema_version": "1.0.0",
-  "gate": "DIRAC-008",
+  "schema_version": "1.1.0",
+  "gate": "DIRAC-009",
   "status": "PASS_ZERO_CRITICAL_HIGH",
   "critical_findings": [],
   "high_findings": [],
+  "resolved_findings": [
+    "The old certificate juxtaposed the action and a supplied cube operator. The exact Bloch bridge now derives the cube incidence from the native action residual.",
+    "The old eight-site stability test made the incidence term identically zero. It is replaced by a 4x4x4 C19 test with nonzero incidence residual and energy.",
+    "DIRAC-006 now carries the nondegenerate action-derived transport rather than only the older stabilized transport.",
+    "The old algebra-only certificate is explicitly downgraded to a scaffold and is not the publication theorem.",
+    "The DIRAC-004 claim is narrowed to the centered action-derivative update actually proved for the incidence action.",
+    "Parity is not identified with physical mass at DIRAC-009."
+  ],
   "declared_starting_hypotheses": [
-    "the noncanonical positive two-field action, including its exterior-area normalization",
-    "the already-running eight-corner Psi/chi ray preparation"
+    "the noncanonical positive two-field action",
+    "the already-running prepared eight-corner complex-Psi/complex-chi background"
   ],
   "absent_structures": [
     "independent spinor register",
-    "Dirac matrices supplied upstream",
+    "supplied gamma or Dirac matrices in the admitted action bridge",
     "projector register",
     "independent link field",
     "held track",
-    "Kato kinetic rule",
-    "frame target",
     "runtime projection"
   ],
-  "derived_structures": {
-    "exterior_area": "the wedge is the unit-normalized map within the declared diagonal alternating family; the exterior-area action itself is an explicit candidate starting hypothesis, not a claimed unique consequence of a deeper law",
-    "local_coefficients": "the declared total-capacity quartic expands exactly and is positive; deeper uniqueness of the complete action normalization is not claimed",
-    "prepared_track": "all six face products and the constant wedge of each tetrahedral corner with its native companion are proved; formation or dynamic selection is not claimed",
-    "native_equations": "independent arbitrary Psi and chi state/velocity derivatives of the same local action, with no trajectory-decay or continuum assumption",
-    "native_time": "the unique stationary point of the two-step discrete action; arbitrary-direction force representation, exact centered recurrence and reversibility are proved",
-    "native_sector": "on the period-two C19 unit cell, the prepared tetrahedral Psi rays and native companion chi rays define a sector with exact amplitude extraction and reconstruction; injectivity proves one unique set of sixteen complex coordinates per state slice, and the two-layer centered phase space has thirty-two; the complete local and bond action variation has zero normal block and the unrestricted update preserves it",
-    "c19_unit_cell": "the explicit cube neighbor table is proved equal, under the corner-coordinate map, to the declared period-two periodic C19 neighbor operation; its six face directions and twelve edge directions have the declared weights",
-    "native_transport_symbol": "an explicit Bloch-modulated native Psi/chi state over a period-two ray background is constructed; its actual exterior-area bonds reduce to the product chiAmplitude*psiAmplitude and yield the nonnegative local infinite-lattice C19 character symbol, zero first moment and isotropic second moment 12 in the action's declared relative-weight normalization",
-    "native_paired_readout": "for every nonzero timestep, the two complete committed Psi/chi layers and the complete current-state-plus-backward-interval-velocity description are exact inverses; the two-layer sector, running sector and thirty-two complex coordinate functions are connected by explicit equivalences in both directions",
-    "native_first_order_map": "the unique action-stationary two-layer update is conjugated through the lossless readout; the resulting complete nonlinear first-order map and inverse act on both native fields and all thirty-two sector coordinates, with explicit displacement and interval-velocity formulas and no supplied matrix or four-component selector"
-  },
-  "readout_only_structures": {
-    "native_running_state": "a lossless coordinate change of the two native committed layers using the previous-to-current interval velocity, not a new field, spinor, equation, same-time derivative claim or selector"
-  },
-  "open_but_nonblocking_for_dirac_008": [
-    "linearize the complete nonlinear map at the declared running background",
-    "derive any invariant four-component selection and independent closure from that native linearization",
-    "higher-zoom scalar flat-octic recovery",
-    "free-Dirac limit",
-    "physical electron and spin validation"
+  "remaining_open_claims": [
+    "physical mass grading",
+    "standard Dirac identification",
+    "continuum limit",
+    "density and current",
+    "physical spin and electron"
   ]
 }
-

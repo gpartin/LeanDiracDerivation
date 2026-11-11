@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.1.0",
+  "action_id": "DIRAC002_COMPLEX_CHI_COVARIANCE_PLUS_INCIDENCE_V2",
+  "action_definition": {
+    "base": "combined-density local potential plus exterior-area C19 bond energy",
+    "stability_delta": "one-half the sum over sites of the squared norm of chi_i wedge (C_i chi_i)",
+    "incidence_delta": "one-half the sum over sites of the squared norm of the centered chi-overlap face incidence acting on chi wedge Psi",
+    "coefficient_provenance": "1/8 is the prepared cubic covariance normalization; 3 is the reciprocal prepared overlap magnitude; 1/2 is centered incidence",
+    "forbidden_replacements": [
+      "supplied gamma or Dirac matrices",
+      "independent spinor register",
+      "held track",
+      "runtime projection",
+      "parity mass inserted at DIRAC-009"
+    ]
+  },
+  "dirac009_mandatory_gates": {
+    "formal": [
+      "complete reciprocal action variation",
+      "exact action-residual to cubical-incidence Bloch bridge",
+      "nonzero surrounding-cell incidence transport",
+      "equal squares and pairwise anticommutation",
+      "two retained rank-four flavor copies",
+      "standard-foundation-only axiom audit"
+    ],
+    "numerical": {
+      "lattice": "4x4x4 periodic C19",
+      "cycles": 100,
+      "updates_per_cycle": [64, 128, 256],
+      "maximum_pattern_defect": 0.01,
+      "maximum_energy_drift": 0.0001,
+      "incidence_must_be_active": true
+    }
+  },
+  "formal_propagation": {
+    "DIRAC-002": "INTEGRATED_COMPLETE_INCIDENCE_ACTION",
+    "DIRAC-003": "INTEGRATED_RECIPROCAL_VARIATION",
+    "DIRAC-004": "INTEGRATED_CENTERED_REVERSIBLE_UPDATE",
+    "DIRAC-005": "INTEGRATED_PREPARED_UNIT_CELL_WITH_PERIOD_TWO_SCOPE",
+    "DIRAC-006": "INTEGRATED_NONDEGENERATE_ACTION_BLOCH_TRANSPORT",
+    "DIRAC-007": "INTEGRATED_LOSSLESS_READOUT",
+    "DIRAC-008": "INTEGRATED_COMPLETE_FIRST_ORDER_MAP",
+    "DIRAC-009": "PASS_NATIVE_CLIFFORD_WITH_ACTION_BRIDGE"
+  },
+  "deferred_to_dirac010": [
+    "physical mass/beta identification",
+    "standard Dirac notation",
+    "selection or interpretation of either rank-four copy"
+  ]
+}
