@@ -12,6 +12,7 @@ import json
 import math
 import re
 import subprocess
+import tempfile
 from pathlib import Path
 
 
@@ -41,6 +42,44 @@ def production_sources() -> list[Path]:
         ROOT / "LeanDirac.lean",
         ROOT / "LeanDiracAudit.lean",
     ]
+
+
+def lean_module_name(path: Path) -> str:
+    relative = path.relative_to(ROOT).with_suffix("")
+    return ".".join(relative.parts)
+
+
+def production_modules() -> list[str]:
+    return sorted({lean_module_name(path) for path in production_sources()})
+
+
+def compiled_audit_source() -> str:
+    imports = "\n".join(f"import {module}" for module in production_modules())
+    reports = "\n".join(
+        line.strip()
+        for line in (ROOT / "LeanDiracAudit.lean").read_text(
+            encoding="utf-8"
+        ).splitlines()
+        if line.strip().startswith("#print axioms ")
+    )
+    return f"{imports}\n\n#audit_lean_dirac_environment\n\n{reports}\n"
+
+
+def run_compiled_audit() -> subprocess.CompletedProcess[str]:
+    with tempfile.NamedTemporaryFile(
+        mode="w",
+        encoding="utf-8",
+        suffix=".lean",
+        prefix="LeanDiracProductionAudit_",
+        dir=ROOT,
+        delete=False,
+    ) as driver:
+        driver.write(compiled_audit_source())
+        driver_path = Path(driver.name)
+    try:
+        return run(["lake", "env", "lean", driver_path.name])
+    finally:
+        driver_path.unlink(missing_ok=True)
 
 
 def parse_axiom_reports(output: str) -> dict[str, set[str]]:
@@ -162,16 +201,30 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(validate_stability(load(STABILITY)))
 
     if run_builds:
-        build = run(["lake", "build"])
+        build = run(["lake", "build", *production_modules()])
         if build.returncode:
-            errors.append("lake build failed\n" + build.stdout + build.stderr)
-        audit = run(["lake", "env", "lean", "LeanDiracAudit.lean"])
+            errors.append(
+                "complete production-module build failed\n"
+                + build.stdout + build.stderr
+            )
+        audit = run_compiled_audit()
         if audit.returncode:
             errors.append("Lean axiom audit build failed\n" + audit.stdout + audit.stderr)
         else:
             audit_output = audit.stdout + audit.stderr
             if "LEAN_DIRAC_ENVIRONMENT_AUDIT_PASS" not in audit_output:
                 errors.append("compiled-environment axiom audit marker is missing")
+            audited_modules = set(re.findall(
+                r"LEAN_DIRAC_AUDITED_MODULE\s+([A-Za-z_][A-Za-z0-9_.]*)",
+                audit_output,
+            ))
+            expected_modules = set(production_modules())
+            if audited_modules != expected_modules:
+                errors.append(
+                    "compiled-environment module coverage differs: "
+                    f"extra={sorted(audited_modules - expected_modules)}, "
+                    f"missing={sorted(expected_modules - audited_modules)}"
+                )
             reports = parse_axiom_reports(audit_output)
             expected = expected_axiom_reports()
             missing = expected - set(reports)

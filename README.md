@@ -172,11 +172,16 @@ python -m pip install -r requirements.txt
 python experiments/dirac009_native_coupling/candidate_007_l4_nondegenerate_stability.py
 ```
 
-The axiom report may contain Lean's standard foundations
-`propext`, `Classical.choice` and `Quot.sound`. The manual production audit asks
-Lean itself to inspect every compiled declaration owned by a production module;
-it fails on any other dependency, `sorry`, `admit` or custom `axiom`. This avoids
-treating a partial Python tokenizer as a Lean proof-security boundary.
+The generated production audit imports every locked Lean module and verifies
+the resulting module coverage, including `LeanDiracAudit` itself. Lean inspects
+every compiled production declaration, including declarations unused by the
+publication theorem. Every dependency returned by `collectAxioms` must be one
+of Lean's standard foundations: `propext`, `Classical.choice` or `Quot.sound`.
+The audit fails on every other dependency, on `sorry`, or on a custom `axiom`.
+Compiler-based adversarial fixtures cover interpolated terms, escaped
+identifiers, raw strings, imported nonstandard axioms, duplicate reports,
+incomplete metrics and non-finite timestep data. This avoids treating a partial
+Python tokenizer as a Lean proof-security boundary.
 
 ## Claim boundary
 

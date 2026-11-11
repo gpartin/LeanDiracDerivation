@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import math
+import re
 import shutil
 import tempfile
 from pathlib import Path
@@ -55,11 +56,16 @@ def main() -> int:
     nested = fixture_root / "Injected.lean"
     audit = guard.ROOT / f"{fixture_root.name}_Audit.lean"
     module = f"LeanDirac.{fixture_root.name}.Injected"
+    external = guard.ROOT / f"{fixture_root.name}_External.lean"
+    external_olean = (
+        guard.ROOT / ".lake" / "build" / "lib" / "lean"
+        / f"{external.stem}.olean"
+    )
     try:
-        audit_build = guard.run(["lake", "build", "LeanDirac.EnvironmentAudit"])
+        audit_build = guard.run(["lake", "build", *guard.production_modules()])
         if audit_build.returncode:
             raise AssertionError(
-                "failed to build compiled-environment audit module:\n"
+                "failed to build every production module before auditing:\n"
                 f"{audit_build.stdout}{audit_build.stderr}"
             )
         nested.write_text("private axiom injected : False\n", encoding="utf-8")
@@ -101,8 +107,86 @@ def main() -> int:
             hidden_sorry.stdout + hidden_sorry.stderr
         ):
             raise AssertionError("compiled-environment audit accepted an interpolated sorry")
+
+        escaped_identifier_fixtures = (
+            'def «"» : Nat := 0\nprivate axiom injected : False\n',
+            'def «/-» : Nat := 0\nprivate axiom injected : False\n',
+            'def rawText : String := r#"""#\nprivate axiom injected : False\n',
+        )
+        for source in escaped_identifier_fixtures:
+            nested.write_text(source, encoding="utf-8")
+            fixture_build = guard.run(["lake", "build", module])
+            if fixture_build.returncode:
+                raise AssertionError(
+                    "failed to compile delimiter fixture:\n"
+                    f"{fixture_build.stdout}{fixture_build.stderr}"
+                )
+            hidden_axiom = guard.run(["lake", "env", "lean", audit.name])
+            if hidden_axiom.returncode == 0 or "custom axiom declaration" not in (
+                hidden_axiom.stdout + hidden_axiom.stderr
+            ):
+                raise AssertionError(
+                    "compiled-environment audit accepted an axiom after a delimiter fixture"
+                )
+
+        external_module = external.stem
+        external.write_text("axiom importedAxiom : False\n", encoding="utf-8")
+        external_build = guard.run([
+            "lake", "env", "lean", external.name,
+            "-o", str(external_olean),
+        ])
+        if external_build.returncode:
+            raise AssertionError(
+                "failed to compile external axiom fixture:\n"
+                f"{external_build.stdout}{external_build.stderr}"
+            )
+        nested.write_text(
+            f"import {external_module}\n"
+            "theorem imported_dependency : False := by exact importedAxiom\n",
+            encoding="utf-8",
+        )
+        fixture_build = guard.run(["lake", "build", module])
+        if fixture_build.returncode:
+            raise AssertionError(
+                "failed to compile imported-axiom fixture:\n"
+                f"{fixture_build.stdout}{fixture_build.stderr}"
+            )
+        imported_axiom = guard.run(["lake", "env", "lean", audit.name])
+        if imported_axiom.returncode == 0 or "depends on nonstandard axiom" not in (
+            imported_axiom.stdout + imported_axiom.stderr
+        ):
+            raise AssertionError(
+                "compiled-environment audit accepted an imported nonstandard axiom"
+            )
+
+        nested.write_text("def coverageSentinel : Nat := 1\n", encoding="utf-8")
+        fixture_build = guard.run(["lake", "build", module])
+        if fixture_build.returncode:
+            raise AssertionError(
+                "failed to rebuild clean coverage fixture:\n"
+                f"{fixture_build.stdout}{fixture_build.stderr}"
+            )
+        coverage = guard.run_compiled_audit()
+        if coverage.returncode:
+            raise AssertionError(
+                "generated all-module audit failed:\n"
+                f"{coverage.stdout}{coverage.stderr}"
+            )
+        audited_modules = set(re.findall(
+            r"LEAN_DIRAC_AUDITED_MODULE\s+([A-Za-z_][A-Za-z0-9_.]*)",
+            coverage.stdout + coverage.stderr,
+        ))
+        expected_modules = set(guard.production_modules())
+        if audited_modules != expected_modules:
+            raise AssertionError(
+                "generated audit did not cover every production module: "
+                f"missing={sorted(expected_modules - audited_modules)}, "
+                f"extra={sorted(audited_modules - expected_modules)}"
+            )
     finally:
         audit.unlink(missing_ok=True)
+        external.unlink(missing_ok=True)
+        external_olean.unlink(missing_ok=True)
         shutil.rmtree(fixture_root)
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
