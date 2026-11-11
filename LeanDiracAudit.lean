@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-010. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-011. -/
 
 #audit_lean_dirac_environment
 
@@ -19,4 +19,8 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.c19_spatial_remainder_bound
 #print axioms LeanDirac.dirac009_closed_native_clifford
 #print axioms LeanDirac.dirac010_native_operator_equals_standard_dirac
-#print axioms LeanDirac.current_highest_gate_is_dirac010
+#print axioms LeanDirac.c19_negative_embedding_velocity_residual_is_spatial_remainder
+#print axioms LeanDirac.matching_nonnegative_rest_mass_is_chi0
+#print axioms LeanDirac.standard_c19_rest_square_matches_native_frequency
+#print axioms LeanDirac.dirac011_common_frequency_and_mass
+#print axioms LeanDirac.current_highest_gate_is_dirac011

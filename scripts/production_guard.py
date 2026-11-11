@@ -1,4 +1,4 @@
-"""One-command release audit for the admitted DIRAC-001--010 chain.
+"""One-command release audit for the admitted DIRAC-001--011 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -20,7 +20,8 @@ EVIDENCE_MANIFEST = ROOT / "project" / "evidence_manifest.json"
 RELEASE_MANIFEST = ROOT / "project" / "release_manifest.json"
 STATUS = ROOT / "project" / "status.json"
 REVIEW = ROOT / "project" / "no_bolton_review.json"
-EVIDENCE = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
+EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
+EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -130,6 +131,34 @@ def validate_dirac010_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac011_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-011 independent verdict is not PASS")
+    value = payload.get("max_error")
+    tolerance = payload.get("tolerance")
+    if not isinstance(value, (int, float)) or not math.isfinite(value):
+        errors.append("DIRAC-011 maximum error is missing or non-finite")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance):
+        errors.append("DIRAC-011 tolerance is missing or non-finite")
+    elif tolerance > 1.0e-11 or tolerance <= 0:
+        errors.append("DIRAC-011 tolerance is outside the admitted range")
+    if isinstance(value, (int, float)) and math.isfinite(value) and \
+            isinstance(tolerance, (int, float)) and math.isfinite(tolerance) and \
+            value > tolerance:
+        errors.append("DIRAC-011 maximum error exceeds its tolerance")
+    errors_map = payload.get("errors")
+    if not isinstance(errors_map, dict) or not errors_map:
+        errors.append("DIRAC-011 component error table is missing")
+    elif any(not isinstance(v, (int, float)) or not math.isfinite(v)
+             for v in errors_map.values()):
+        errors.append("DIRAC-011 component errors are incomplete or non-finite")
+    cases = payload.get("cases")
+    if not isinstance(cases, int) or cases < 1:
+        errors.append("DIRAC-011 case count is missing")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -139,17 +168,17 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(e1 + e2 + e3 + e4)
     status = load(STATUS)
     review = load(REVIEW)
-    if status.get("highest_passed_gate") != "DIRAC-010":
-        errors.append("status does not stop at DIRAC-010")
-    if status.get("next_gate") != "DIRAC-011":
-        errors.append("DIRAC-011 is not the next gate")
-    if status.get("completed") != 10 or status.get("total") != 15:
+    if status.get("highest_passed_gate") != "DIRAC-011":
+        errors.append("status does not stop at DIRAC-011")
+    if status.get("next_gate") != "DIRAC-012":
+        errors.append("DIRAC-012 is not the next gate")
+    if status.get("completed") != 11 or status.get("total") != 15:
         errors.append("gate counts are incorrect")
     if review.get("status") != "PASS_ZERO_CRITICAL_HIGH":
         errors.append("critical/high red-team findings remain")
     if review.get("critical_findings") or review.get("high_findings"):
         errors.append("red-team finding lists are not empty")
-    publication = "LeanDirac.current_highest_gate_is_dirac010"
+    publication = "LeanDirac.current_highest_gate_is_dirac011"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -165,9 +194,17 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_011.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
-    errors.extend(validate_dirac010_evidence(load(EVIDENCE)))
+    cumulative = set(evidence.get("cumulative_numerical_evidence", []))
+    expected_evidence = {
+        EVIDENCE_010.relative_to(ROOT).as_posix(),
+        EVIDENCE_011.relative_to(ROOT).as_posix(),
+    }
+    if cumulative != expected_evidence:
+        errors.append("evidence manifest does not retain both admitted reconstructions")
+    errors.extend(validate_dirac010_evidence(load(EVIDENCE_010)))
+    errors.extend(validate_dirac011_evidence(load(EVIDENCE_011)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:
@@ -209,8 +246,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-010")
-    print("next_gate=DIRAC-011 status=OPEN")
+    print("highest_passed_gate=DIRAC-011")
+    print("next_gate=DIRAC-012 status=OPEN")
     return 0
 
 

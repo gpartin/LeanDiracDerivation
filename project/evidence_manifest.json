@@ -2,7 +2,11 @@
   "schema_version": "2.1.0",
   "role": "independent-evidence",
   "action_id": "DIRAC002_COMPLEX_CHI_BASE_C19_V3",
-  "numerical_evidence": "experiments/dirac010_standard_map/result.json",
+  "numerical_evidence": "experiments/dirac011_frequency_mass/result.json",
+  "cumulative_numerical_evidence": [
+    "experiments/dirac010_standard_map/result.json",
+    "experiments/dirac011_frequency_mass/result.json"
+  ],
   "environment": {
     "python": "3.14.0",
     "numpy": "2.3.5",
@@ -10,6 +14,8 @@
   },
   "files": {
     "experiments/dirac010_standard_map/result.json": "1aa63b1e1a0b513038fb3631ba110dcb3040f438d5b44ff2b3629295c6079cb6",
-    "experiments/dirac010_standard_map/validate_dirac010.py": "a5e47b4f9014c17f4cbd65681ec095862cdd1cceda206c1efb312cf41cc42b69"
+    "experiments/dirac010_standard_map/validate_dirac010.py": "a5e47b4f9014c17f4cbd65681ec095862cdd1cceda206c1efb312cf41cc42b69",
+    "experiments/dirac011_frequency_mass/result.json": "3def4fd9310b713eabadf483f310c003472bdbcf89cea7d28cdd7e932fc07c09",
+    "experiments/dirac011_frequency_mass/validate_dirac011.py": "97a04aabae1f8699785e6b6242e37e68113eded2e537d620a6d019e86020bfcf"
   }
 }

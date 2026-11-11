@@ -27,6 +27,18 @@ flavor grading, and both rank-four embeddings. It checks the squares,
 anticommutators, copy ranks, and flavor eigenvalues at tolerance `1e-12`.
 It does not test physical mass, electron stability, or spin.
 
+## Independent DIRAC-011 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac011_frequency_mass/validate_dirac011.py
+```
+
+The program composes the DIRAC-010 copy embeddings with their standard-basis
+maps, reconstructs both frequency signs, checks that the exact scalar evolution
+differs from the continuum graph only by the explicit C19 remainder, and checks
+the nonnegative rest-mass selection at tolerance `1e-11`. It does not prove the
+full continuum equation, current, physical spin, or an electron.
+
 ## Trust boundary
 
 The Lean theorem is the formal evidence. The Python result is an independent
