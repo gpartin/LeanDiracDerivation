@@ -14,6 +14,9 @@ structure CumulativeDirac009Certificate : Prop where
   nativeConstants : chi0 = 19 ∧ kappa = 1 / 63 ∧
     chiKineticNormalization = 1197
   nativeC19Weights : ∀ neighbor : C19Neighbor, 0 < c19Weight neighbor
+  preparedSector : IncidencePreparedSectorCertificate
+  firstOrderMap : ∀ (dt : ℝ) (hdt : dt ≠ 0),
+    IncidenceFirstOrderMapCertificate dt hdt
   incidenceDerivation : Dirac009ClosedCertificate
 
 theorem current_highest_gate_is_dirac009 :
@@ -22,6 +25,8 @@ theorem current_highest_gate_is_dirac009 :
   nativeC19Weights := by
     intro neighbor
     fin_cases neighbor <;> norm_num [c19Weight]
+  preparedSector := dirac005_incidence_prepared_sector
+  firstOrderMap := dirac008_incidence_complete_first_order_map
   incidenceDerivation := dirac009_closed_native_clifford
 
 end LeanDirac

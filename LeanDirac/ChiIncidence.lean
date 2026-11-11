@@ -26,7 +26,7 @@ theorem c19_face_incidence_reverse (neighbor : C19Neighbor) :
       -c19FaceIncidenceSign neighbor := by
   fin_cases neighbor <;> norm_num [c19FaceIncidenceSign, c19Reverse]
 
-def chiIncidenceResidual [Fintype Site]
+def chiIncidenceResidual
     (chi0 : ℝ) (state : State Site) (geometry : C19Lattice Site)
     (site : Site) : C3 :=
   fun component =>
@@ -45,7 +45,7 @@ of one component of `chiIncidenceResidual`; setting every phase to one and
 using the corresponding component of `chi wedge Psi` recovers the native
 residual definition below.
 -/
-def chiIncidenceComponentSymbol [Fintype Site]
+def chiIncidenceComponentSymbol
     (chi0 : ℝ) (state : State Site) (geometry : C19Lattice Site)
     (phase : Site → C19Neighbor → ℂ) (amplitude : Site → ℂ)
     (site : Site) : ℂ :=
@@ -56,7 +56,6 @@ def chiIncidenceComponentSymbol [Fintype Site]
       phase site neighbor * amplitude (geometry.neighbor site neighbor)
 
 theorem chi_incidence_component_symbol_is_native_residual
-    [Fintype Site]
     (chi0 : ℝ) (state : State Site) (geometry : C19Lattice Site)
     (component : Fin 3) (site : Site) :
     chiIncidenceComponentSymbol chi0 state geometry

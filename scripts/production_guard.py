@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import re
 import subprocess
 from pathlib import Path
@@ -36,26 +37,31 @@ def sha256(path: Path) -> str:
 
 
 def production_sources() -> list[Path]:
-    return sorted((ROOT / "LeanDirac").glob("*.lean")) + [
+    return sorted((ROOT / "LeanDirac").rglob("*.lean")) + [
         ROOT / "LeanDirac.lean",
         ROOT / "LeanDiracAudit.lean",
     ]
 
 
-def forbidden_tokens(source: str) -> list[str]:
-    patterns = {
-        "sorry": r"\bsorry\b",
-        "admit": r"\badmit\b",
-        "axiom declaration": r"(?m)^\s*axiom\b",
-    }
-    return [name for name, pattern in patterns.items() if re.search(pattern, source)]
+def parse_axiom_reports(output: str) -> dict[str, set[str]]:
+    reports: dict[str, set[str]] = {}
+    pattern = re.compile(
+        r"'([A-Za-z_][A-Za-z0-9_.]*)' depends on axioms:\s*\[([^\]]*)\]",
+        re.S,
+    )
+    for name, block in pattern.findall(output):
+        dependencies = set(re.findall(r"[A-Za-z_][A-Za-z0-9_.]*", block))
+        reports.setdefault(name, set()).update(dependencies)
+    for name in re.findall(
+        r"'([A-Za-z_][A-Za-z0-9_.]*)' does not depend on any axioms", output
+    ):
+        reports.setdefault(name, set())
+    return reports
 
 
-def parse_axioms(output: str) -> set[str]:
-    found: set[str] = set()
-    for block in re.findall(r"depends on axioms:\s*\[([^\]]*)\]", output, re.S):
-        found.update(re.findall(r"[A-Za-z_][A-Za-z0-9_.]*", block))
-    return found
+def expected_axiom_reports() -> set[str]:
+    source = (ROOT / "LeanDiracAudit.lean").read_text(encoding="utf-8")
+    return set(re.findall(r"#print\s+axioms\s+([A-Za-z_][A-Za-z0-9_.]*)", source))
 
 
 def validate_stability(payload: dict) -> list[str]:
@@ -70,15 +76,40 @@ def validate_stability(payload: dict) -> list[str]:
     if [row.get("updates_per_cycle") for row in runs] != [64, 128, 256]:
         errors.append("DIRAC-009 timestep ensemble is incomplete")
     for row in runs:
+        required_maxima = {
+            "psi_pattern_defect",
+            "chi_pattern_defect",
+            "track_pattern_defect",
+        }
+        maxima = row.get("maximums")
         if not row.get("passes"):
             errors.append(f"stability row failed: {row.get('updates_per_cycle')}")
-        if row.get("initial_incidence_energy", 0.0) <= 1.0e-14:
+        finite_scalars = {
+            "dt": row.get("dt"),
+            "initial_incidence_energy": row.get("initial_incidence_energy"),
+            "initial_incidence_residual_norm": row.get(
+                "initial_incidence_residual_norm"),
+            "maximum_relative_energy_deviation": row.get(
+                "maximum_relative_energy_deviation"),
+        }
+        if any(not isinstance(value, (int, float)) or not math.isfinite(value)
+               for value in finite_scalars.values()):
+            errors.append("stability row contains a missing or non-finite scalar")
+            continue
+        if not isinstance(maxima, dict) or set(maxima) != required_maxima:
+            errors.append("stability row has incomplete defect metrics")
+            continue
+        if any(not isinstance(value, (int, float)) or not math.isfinite(value)
+               for value in maxima.values()):
+            errors.append("stability row contains a non-finite defect metric")
+            continue
+        if finite_scalars["initial_incidence_energy"] <= 1.0e-14:
             errors.append("incidence energy was inactive in a stability row")
-        if row.get("initial_incidence_residual_norm", 0.0) <= 1.0e-10:
+        if finite_scalars["initial_incidence_residual_norm"] <= 1.0e-10:
             errors.append("incidence residual was inactive in a stability row")
-        if row.get("relative_energy_drift", 1.0) >= 1.0e-4:
-            errors.append("energy drift exceeded 1e-4")
-        if max(row.get("maximums", {"missing": 1.0}).values()) >= 0.01:
+        if finite_scalars["maximum_relative_energy_deviation"] >= 1.0e-4:
+            errors.append("maximum energy deviation exceeded 1e-4")
+        if max(maxima.values()) >= 0.01:
             errors.append("pattern defect exceeded 1%")
     return errors
 
@@ -128,20 +159,29 @@ def validate(run_builds: bool = True) -> list[str]:
         elif sha256(path) != expected:
             errors.append(f"locked source changed: {relative}")
 
-    combined = "\n".join(path.read_text(encoding="utf-8") for path in production_sources())
-    errors.extend(f"forbidden proof token present: {item}" for item in forbidden_tokens(combined))
     errors.extend(validate_stability(load(STABILITY)))
 
     if run_builds:
         build = run(["lake", "build"])
         if build.returncode:
             errors.append("lake build failed\n" + build.stdout + build.stderr)
-        audit = run(["lake", "build", "LeanDiracAudit"])
+        audit = run(["lake", "env", "lean", "LeanDiracAudit.lean"])
         if audit.returncode:
             errors.append("Lean axiom audit build failed\n" + audit.stdout + audit.stderr)
         else:
-            axioms = parse_axioms(audit.stdout + audit.stderr)
-            unexpected = axioms - ALLOWED_AXIOMS
+            audit_output = audit.stdout + audit.stderr
+            if "LEAN_DIRAC_ENVIRONMENT_AUDIT_PASS" not in audit_output:
+                errors.append("compiled-environment axiom audit marker is missing")
+            reports = parse_axiom_reports(audit_output)
+            expected = expected_axiom_reports()
+            missing = expected - set(reports)
+            if missing:
+                errors.append(f"missing axiom reports: {sorted(missing)}")
+            publication = "LeanDirac.current_highest_gate_is_dirac009"
+            if publication not in reports:
+                errors.append("publication-theorem axiom report is missing")
+            unexpected = set().union(*reports.values()) - ALLOWED_AXIOMS \
+                if reports else set()
             if unexpected:
                 errors.append(f"unexpected axioms: {sorted(unexpected)}")
     return errors

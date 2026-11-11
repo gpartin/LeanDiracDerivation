@@ -20,7 +20,7 @@ remain outside this repository.
 | `DIRAC-006` | **PASS** | Lean proves that the nondegenerate surrounding-cell Bloch reduction of the same action produces a nonzero signed cubical-incidence transport from the oriented face subset of C19. |
 | `DIRAC-007` | **PASS** | At every nonzero timestep, the complete pair of committed native Ψ/χ layers is exactly equivalent to the current native state plus the backward interval velocity already used by the action. Lean proves both full-state round trips and an explicit equivalence between the thirty-two sector amplitudes and the running-sector state without selecting four components. |
 | `DIRAC-008` | **PASS** | The incidence-action update and lossless two-layer readout give an exact reversible first-order map on the complete running Ψ/χ state. No spinor or sector projection is inserted. |
-| `DIRAC-009` | **PASS** | Lean connects the declared positive action to signed cube incidence before proving three equal-square, mutually anticommuting directions and two retained rank-four copies. Parity is retained only as a geometric grading; its identification with physical mass is deferred to DIRAC-010. A nondegenerate 4x4x4 stability ensemble is required by this gate. |
+| `DIRAC-009` | **PASS** | Lean evaluates the native incidence residual on an actual repeated infinite-lattice Ψ/χ state, reduces it to signed cube incidence, and then proves three equal-square, mutually anticommuting directions and two retained rank-four copies. Parity is retained only as a geometric grading; its identification with physical mass is deferred to DIRAC-010. A nondegenerate 4x4x4 stability ensemble is required by this gate. |
 
 These passes do **not** yet establish the Dirac equation, an electron,
 physical spin one-half, particle formation, or a canonical LFM framework.
@@ -40,9 +40,10 @@ Lean proves that the complete action is positive and differentiates it for
 independent Ψ, χ and velocity variations. The resulting reciprocal equations
 generate the reversible update used through DIRAC-008. The period-two unit
 cell makes opposite neighbors coincide and therefore cannot test the new odd
-transport. DIRAC-009 now keeps the surrounding-cell Bloch phases distinct and
-proves that the exact action residual is gauge-equivalent to oriented cubical
-incidence.
+transport. DIRAC-009 now constructs the repeated native lattice fields, keeps
+the surrounding-cell Bloch phases distinct, and proves that the zeroth
+component of their exact action residual is gauge-equivalent to oriented
+cubical incidence.
 
 That native incidence supplies three directions with the required square and
 anticommutation relations. A native flavor involution leaves two rank-four
@@ -54,7 +55,8 @@ Fresh numerical checks reproduce the algebra to machine precision. The
 nondegenerate stability test repeats the background on a 4x4x4 periodic C19
 lattice, where positive and negative face neighbors are distinct, and applies
 full-field perturbations so the incidence energy and force are nonzero. Its
-recorded 100-cycle timestep ensemble is part of the gate evidence. Standard
+recorded 100-cycle timestep ensemble measures all pattern defects and relative
+energy deviation after every update and is part of the gate evidence. Standard
 Dirac identification and the final continuum, density/current and
 physical-electron claims remain downstream.
 
@@ -171,9 +173,10 @@ python experiments/dirac009_native_coupling/candidate_007_l4_nondegenerate_stabi
 ```
 
 The axiom report may contain Lean's standard foundations
-`propext`, `Classical.choice` and `Quot.sound`. The manual production audit executes
-the audit and fails on any other dependency, or on `sorry`, `admit` or a custom
-`axiom` in any production Lean module.
+`propext`, `Classical.choice` and `Quot.sound`. The manual production audit asks
+Lean itself to inspect every compiled declaration owned by a production module;
+it fails on any other dependency, `sorry`, `admit` or custom `axiom`. This avoids
+treating a partial Python tokenizer as a Lean proof-security boundary.
 
 ## Claim boundary
 

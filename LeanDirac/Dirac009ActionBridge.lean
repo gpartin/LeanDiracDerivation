@@ -61,6 +61,138 @@ def preparedComplexChiBackground : State CubeCorner where
   chi := fun corner component =>
     (chi0 : ℂ) * companion corner component
 
+theorem infinite_c19_neighbor_reverse
+    (site : InfiniteCubicSite) (direction : C19Neighbor) :
+    infiniteC19Neighbor (infiniteC19Neighbor site direction)
+        (c19Reverse direction) = site := by
+  funext axis
+  simp [infiniteC19Neighbor, c19_reverse_coord]
+
+def infiniteC19Geometry : C19Lattice InfiniteCubicSite where
+  neighbor := infiniteC19Neighbor
+  neighbor_reverse := infinite_c19_neighbor_reverse
+
+def periodTwoCellCoordinate
+    (site : InfiniteCubicSite) (axis : Fin 3) : ℤ :=
+  site axis / 2
+
+def periodTwoCellPhase
+    (momentum : Fin 3 → ℝ) (site : InfiniteCubicSite) : ℝ :=
+  momentum 0 * (periodTwoCellCoordinate site 0 : ℝ) +
+    momentum 1 * (periodTwoCellCoordinate site 1 : ℝ) +
+    momentum 2 * (periodTwoCellCoordinate site 2 : ℝ)
+
+def affineCellBlochPhase
+    (eps : ℝ) (momentum : Fin 3 → ℝ)
+    (site : InfiniteCubicSite) : ℂ :=
+  1 + (eps * periodTwoCellPhase momentum site : ℝ) * I
+
+def canonicalCornerSite (corner : CubeCorner) : InfiniteCubicSite
+  | 0 => (cellBit0 corner : ℤ)
+  | 1 => (cellBit1 corner : ℤ)
+  | _ => (cellBit2 corner : ℤ)
+
+@[simp] theorem canonical_corner_site_axis0 (corner : CubeCorner) :
+    canonicalCornerSite corner 0 = (cellBit0 corner : ℤ) := rfl
+
+@[simp] theorem canonical_corner_site_axis1 (corner : CubeCorner) :
+    canonicalCornerSite corner 1 = (cellBit1 corner : ℤ) := rfl
+
+@[simp] theorem canonical_corner_site_axis2 (corner : CubeCorner) :
+    canonicalCornerSite corner 2 = (cellBit2 corner : ℤ) := rfl
+
+@[simp] theorem c19_coord_face0 (axis : Fin 3) :
+    c19Coord axis 0 = if axis = 0 then 1 else 0 := by
+  fin_cases axis <;> rfl
+
+@[simp] theorem c19_coord_face1 (axis : Fin 3) :
+    c19Coord axis 1 = if axis = 0 then -1 else 0 := by
+  fin_cases axis <;> rfl
+
+@[simp] theorem c19_coord_face2 (axis : Fin 3) :
+    c19Coord axis 2 = if axis = 1 then 1 else 0 := by
+  fin_cases axis <;> rfl
+
+@[simp] theorem c19_coord_face3 (axis : Fin 3) :
+    c19Coord axis 3 = if axis = 1 then -1 else 0 := by
+  fin_cases axis <;> rfl
+
+@[simp] theorem c19_coord_face4 (axis : Fin 3) :
+    c19Coord axis 4 = if axis = 2 then 1 else 0 := by
+  fin_cases axis <;> rfl
+
+@[simp] theorem c19_coord_face5 (axis : Fin 3) :
+    c19Coord axis 5 = if axis = 2 then -1 else 0 := by
+  fin_cases axis <;> rfl
+
+theorem canonical_corner_has_declared_parity (corner : CubeCorner) :
+    periodTwoCornerAt (canonicalCornerSite corner) = corner := by
+  fin_cases corner <;>
+    simp [periodTwoCornerAt, canonicalCornerSite, integerParityBit,
+      cornerFromParity, cellBit0, cellBit1, cellBit2]
+
+def preparedNativeBlochState
+    (eps : ℝ) (momentum : Fin 3 → ℝ) (amplitude : Cell8) :
+    State InfiniteCubicSite where
+  psi := fun site =>
+    c3ScaleComplex
+      (-(affineCellBlochPhase eps momentum site *
+          amplitude (periodTwoCornerAt site)) / (chi0 : ℂ))
+      (tetraCorner (periodTwoCornerAt site))
+  chi := fun site =>
+    c3ScaleComplex (chi0 : ℂ) (companion (periodTwoCornerAt site))
+
+theorem prepared_native_bloch_area
+    (eps : ℝ) (momentum : Fin 3 → ℝ) (amplitude : Cell8)
+    (site : InfiniteCubicSite) :
+    wedge
+        ((preparedNativeBlochState eps momentum amplitude).chi site)
+        ((preparedNativeBlochState eps momentum amplitude).psi site) =
+      c3ScaleComplex
+        (affineCellBlochPhase eps momentum site *
+          amplitude (periodTwoCornerAt site)) unitArea := by
+  rw [show
+      (preparedNativeBlochState eps momentum amplitude).chi site =
+        c3ScaleComplex (chi0 : ℂ)
+          (companion (periodTwoCornerAt site)) by rfl,
+    show
+      (preparedNativeBlochState eps momentum amplitude).psi site =
+        c3ScaleComplex
+          (-(affineCellBlochPhase eps momentum site *
+              amplitude (periodTwoCornerAt site)) / (chi0 : ℂ))
+          (tetraCorner (periodTwoCornerAt site)) by rfl,
+    wedge_scale_left, wedge_scale_right, wedge_companion_tetra]
+  funext component
+  fin_cases component <;>
+    simp [c3ScaleComplex, c3Neg, unitArea, chi0] <;> ring
+
+theorem period_two_corner_of_canonical_neighbor
+    (corner : CubeCorner) (neighbor : C19Neighbor) :
+    periodTwoCornerAt
+        (infiniteC19Neighbor (canonicalCornerSite corner) neighbor) =
+      cubeC19Neighbor corner neighbor := by
+  fin_cases corner <;> fin_cases neighbor <;>
+    simp [periodTwoCornerAt, infiniteC19Neighbor, canonicalCornerSite,
+      integerParityBit, cornerFromParity, cubeC19Neighbor,
+      c19Coord, cellFlip0, cellFlip1, cellFlip2,
+      cellBit0, cellBit1, cellBit2]
+
+theorem affine_phase_of_canonical_face_neighbor
+    (eps : ℝ) (momentum : Fin 3 → ℝ)
+    (corner : CubeCorner) (neighbor : C19Neighbor)
+    (hface : c19FaceIncidenceSign neighbor ≠ 0) :
+    affineCellBlochPhase eps momentum
+        (infiniteC19Neighbor (canonicalCornerSite corner) neighbor) =
+      preparedBlochFacePhase corner neighbor eps momentum := by
+  fin_cases corner <;> fin_cases neighbor <;>
+    simp_all +decide [c19FaceIncidenceSign,
+      affineCellBlochPhase, periodTwoCellPhase,
+      periodTwoCellCoordinate, infiniteC19Neighbor,
+      preparedBlochFacePhase, cellForwardBlochPhase,
+      cellBackwardBlochPhase,
+      cellBit0, cellBit1, cellBit2] <;>
+    ring
+
 /-!
 This is the exact six-face factor in the positive square, restricted to the
 prepared complex-chi background and to one scalar component of
@@ -76,6 +208,52 @@ def preparedActionBlochResidual
       (fun source neighbor =>
         preparedBlochFacePhase source neighbor eps momentum)
       amplitude corner
+
+/-!
+The symbol above is not merely a phase-decorated copy of the answer.  It is
+the zeroth component of `chiIncidenceResidual` evaluated on an actual pair of
+native complex C3 fields repeated over the infinite cubic lattice.  The Bloch
+phase lives on the period-two cells, so positive and negative face neighbours
+remain distinct even when their within-cell corners agree.
+-/
+theorem prepared_action_bloch_residual_is_native_residual
+    (eps : ℝ) (momentum : Fin 3 → ℝ) (amplitude : Cell8)
+    (corner : CubeCorner) :
+    chiIncidenceResidual chi0
+        (preparedNativeBlochState eps momentum amplitude)
+        infiniteC19Geometry (canonicalCornerSite corner) 0 =
+      preparedActionBlochResidual eps momentum amplitude corner := by
+  rw [show
+      chiIncidenceResidual chi0
+          (preparedNativeBlochState eps momentum amplitude)
+          infiniteC19Geometry (canonicalCornerSite corner) 0 =
+        chiIncidenceComponentSymbol chi0
+          (preparedNativeBlochState eps momentum amplitude)
+          infiniteC19Geometry (fun _ _ => 1)
+          (fun target =>
+            wedge
+              ((preparedNativeBlochState eps momentum amplitude).chi target)
+              ((preparedNativeBlochState eps momentum amplitude).psi target) 0)
+          (canonicalCornerSite corner) by
+      symm
+      exact chi_incidence_component_symbol_is_native_residual
+        chi0 (preparedNativeBlochState eps momentum amplitude)
+        infiniteC19Geometry 0 (canonicalCornerSite corner)]
+  unfold chiIncidenceComponentSymbol preparedActionBlochResidual
+  apply Finset.sum_congr rfl
+  intro neighbor _
+  by_cases hface : c19FaceIncidenceSign neighbor = 0
+  · simp [hface]
+  · simp only [infiniteC19Geometry]
+    rw [prepared_native_bloch_area,
+      period_two_corner_of_canonical_neighbor,
+      affine_phase_of_canonical_face_neighbor eps momentum corner neighbor hface]
+    have hcorner := canonical_corner_has_declared_parity corner
+    simp [preparedNativeBlochState, preparedComplexChiBackground,
+      cubeC19Geometry, hcorner, c3ScaleComplex, inner, chi0]
+    rw [period_two_corner_of_canonical_neighbor]
+    simp [unitArea]
+    ring
 
 theorem prepared_action_bloch_residual_expanded
     (eps : ℝ) (momentum : Fin 3 → ℝ) (amplitude : Cell8) :
@@ -263,6 +441,12 @@ theorem prepared_action_bloch_bridge_squares_to_scalar
     (momentum 0) (momentum 1) (momentum 2) amplitude
 
 structure Dirac009ActionBridgeCertificate : Prop where
+  repeatedNativeResidual : ∀ (eps : ℝ) (momentum : Fin 3 → ℝ)
+      (amplitude : Cell8) (corner : CubeCorner),
+    chiIncidenceResidual chi0
+        (preparedNativeBlochState eps momentum amplitude)
+        infiniteC19Geometry (canonicalCornerSite corner) 0 =
+      preparedActionBlochResidual eps momentum amplitude corner
   exactNativeBlochBridge : ∀ (eps : ℝ) (momentum : Fin 3 → ℝ)
       (amplitude : Cell8),
     gaugeCell8
@@ -286,6 +470,7 @@ structure Dirac009ActionBridgeCertificate : Prop where
 
 theorem dirac009_action_bridge_certificate :
     Dirac009ActionBridgeCertificate where
+  repeatedNativeResidual := prepared_action_bloch_residual_is_native_residual
   exactNativeBlochBridge := prepared_action_bloch_bridge
   zeroBackgroundResidual := prepared_action_bloch_bridge_zero
   nativeSquare := prepared_action_bloch_bridge_squares_to_scalar
@@ -294,4 +479,5 @@ end
 end LeanDirac
 
 #print axioms LeanDirac.prepared_action_bloch_bridge
+#print axioms LeanDirac.prepared_action_bloch_residual_is_native_residual
 #print axioms LeanDirac.dirac009_action_bridge_certificate
