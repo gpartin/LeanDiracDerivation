@@ -1,4 +1,4 @@
-"""Manual clean-rebuild audit for the admitted DIRAC-001--009 chain.
+"""One-command release audit for the admitted DIRAC-001--009 chain.
 
 This script is deliberately not a Git hook and never changes the index.  It
 checks the repository tree that the caller invokes, runs Lean, audits axioms,
@@ -17,14 +17,17 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LOCK = ROOT / "project" / "action_lock.json"
+FRAMEWORK_LOCK = ROOT / "project" / "framework_lock.json"
+PROOF_MANIFEST = ROOT / "project" / "proof_manifest.json"
+EVIDENCE_MANIFEST = ROOT / "project" / "evidence_manifest.json"
+RELEASE_MANIFEST = ROOT / "project" / "release_manifest.json"
 STATUS = ROOT / "project" / "status.json"
 REVIEW = ROOT / "project" / "no_bolton_review.json"
 STABILITY = (
     ROOT
     / "experiments"
     / "dirac009_native_coupling"
-    / "candidate_007_l4_nondegenerate_stability.json"
+    / "dirac009_nondegenerate_stability.json"
 )
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
@@ -35,6 +38,19 @@ def load(path: Path) -> dict:
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+
+
+def validate_manifest(path: Path) -> tuple[dict, list[str]]:
+    """Validate one role-specific manifest without conflating its authority."""
+    payload = load(path)
+    errors: list[str] = []
+    for relative, expected in payload.get("files", {}).items():
+        source = ROOT / relative
+        if not source.is_file():
+            errors.append(f"{path.name}: missing file: {relative}")
+        elif sha256(source) != expected:
+            errors.append(f"{path.name}: changed file: {relative}")
+    return payload, errors
 
 
 def production_sources() -> list[Path]:
@@ -167,7 +183,11 @@ def run(command: list[str]) -> subprocess.CompletedProcess[str]:
 
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
-    lock = load(LOCK)
+    framework, framework_errors = validate_manifest(FRAMEWORK_LOCK)
+    proof, proof_errors = validate_manifest(PROOF_MANIFEST)
+    evidence, evidence_errors = validate_manifest(EVIDENCE_MANIFEST)
+    release, release_errors = validate_manifest(RELEASE_MANIFEST)
+    errors.extend(framework_errors + proof_errors + evidence_errors + release_errors)
     status = load(STATUS)
     review = load(REVIEW)
 
@@ -181,22 +201,29 @@ def validate(run_builds: bool = True) -> list[str]:
         errors.append("critical/high red-team findings remain")
     if review.get("critical_findings") or review.get("high_findings"):
         errors.append("red-team finding lists are not empty")
-    if lock.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac009":
-        errors.append("action lock names the wrong publication theorem")
+    if proof.get("publication_theorem") != "LeanDirac.current_highest_gate_is_dirac009":
+        errors.append("proof manifest names the wrong publication theorem")
+
+    action_ids = {
+        manifest.get("action_id")
+        for manifest in (framework, proof, evidence, release)
+    }
+    if len(action_ids) != 1 or None in action_ids:
+        errors.append(f"role manifests disagree on action id: {sorted(map(str, action_ids))}")
 
     actual = {path.relative_to(ROOT).as_posix() for path in production_sources()}
-    locked = set(lock.get("files", {}))
+    locked = set(proof.get("files", {}))
     if actual != locked:
         errors.append(
-            f"locked source set differs: extra={sorted(actual - locked)}, "
+            f"proof source set differs: extra={sorted(actual - locked)}, "
             f"missing={sorted(locked - actual)}"
         )
-    for relative, expected in lock.get("files", {}).items():
-        path = ROOT / relative
-        if not path.exists():
-            errors.append(f"locked source missing: {relative}")
-        elif sha256(path) != expected:
-            errors.append(f"locked source changed: {relative}")
+
+    framework_files = set(framework.get("files", {}))
+    if not framework_files or not framework_files < locked:
+        errors.append("framework lock is not a nonempty strict subset of the proof manifest")
+    if evidence.get("numerical_evidence") != STABILITY.relative_to(ROOT).as_posix():
+        errors.append("evidence manifest names the wrong numerical result")
 
     errors.extend(validate_stability(load(STABILITY)))
 
