@@ -4,6 +4,9 @@ from __future__ import annotations
 
 import copy
 import math
+import shutil
+import tempfile
+from pathlib import Path
 
 import production_guard as guard
 
@@ -20,6 +23,14 @@ def main() -> int:
             raise AssertionError(f"forbidden token escaped detection: {token}")
     if guard.forbidden_tokens("theorem clean : True := by trivial"):
         raise AssertionError("clean Lean source was rejected")
+    adjacent_comment = "private/- gap -/axiom injected : False"
+    if not guard.forbidden_tokens(adjacent_comment):
+        raise AssertionError("block comment joined and hid an axiom declaration")
+    char_then_axiom = "def quote : Char := '\"'\nprivate axiom injected : False"
+    if not guard.forbidden_tokens(char_then_axiom):
+        raise AssertionError("character literal hid a later axiom declaration")
+    if guard.forbidden_tokens("def next' : Nat := 1"):
+        raise AssertionError("identifier apostrophe was mistaken for a character literal")
     reports = guard.parse_axiom_reports(
         "'x' depends on axioms: [propext, Classical.choice, Quot.sound]"
     )
@@ -43,8 +54,11 @@ def main() -> int:
     nonfinite["runs"][0]["maximum_relative_energy_deviation"] = math.nan
     if not guard.validate_stability(nonfinite):
         raise AssertionError("NaN energy evidence was accepted")
-    nested = guard.ROOT / "LeanDirac" / "Nested" / "Injected.lean"
-    nested.parent.mkdir(parents=True, exist_ok=True)
+    fixture_root = Path(tempfile.mkdtemp(
+        prefix="AuditFixture_", dir=guard.ROOT / "LeanDirac"
+    ))
+    nested = fixture_root / "Nested" / "Injected.lean"
+    nested.parent.mkdir(parents=True)
     try:
         nested.write_text("private axiom injected : False\n", encoding="utf-8")
         if nested not in guard.production_sources():
@@ -52,8 +66,7 @@ def main() -> int:
         if not guard.forbidden_tokens(nested.read_text(encoding="utf-8")):
             raise AssertionError("nested custom axiom escaped forbidden-token scan")
     finally:
-        nested.unlink(missing_ok=True)
-        nested.parent.rmdir()
+        shutil.rmtree(fixture_root)
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

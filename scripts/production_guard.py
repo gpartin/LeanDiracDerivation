@@ -44,7 +44,7 @@ def production_sources() -> list[Path]:
 
 
 def lean_code_without_comments_or_strings(source: str) -> str:
-    """Remove nested Lean comments, line comments and string contents."""
+    """Remove Lean comments and literals without joining adjacent tokens."""
     output: list[str] = []
     index = 0
     block_depth = 0
@@ -59,6 +59,8 @@ def lean_code_without_comments_or_strings(source: str) -> str:
             elif pair == "-/":
                 block_depth -= 1
                 index += 2
+                if block_depth == 0:
+                    output.append(" ")
             else:
                 index += 1
             continue
@@ -72,6 +74,7 @@ def lean_code_without_comments_or_strings(source: str) -> str:
                 index += 1
             continue
         if pair == "/-":
+            output.append(" ")
             block_depth = 1
             index += 2
         elif pair == "--":
@@ -79,8 +82,28 @@ def lean_code_without_comments_or_strings(source: str) -> str:
             index = len(source) if newline < 0 else newline + 1
             output.append("\n")
         elif char == '"':
+            output.append(" ")
             in_string = True
             index += 1
+        elif char == "'" and (index == 0 or not (
+            source[index - 1].isalnum() or source[index - 1] in "_'"
+        )):
+            # Lean character literals use single quotes, while apostrophes are
+            # also legal inside identifiers.  Only consume a quote-delimited
+            # literal when a closing quote occurs before a line break.
+            cursor = index + 1
+            if cursor < len(source) and source[cursor] == "\\":
+                cursor += 2
+                while cursor < len(source) and source[cursor] not in "'\r\n":
+                    cursor += 1
+            else:
+                cursor += 1
+            if cursor < len(source) and source[cursor] == "'":
+                output.append(" ")
+                index = cursor + 1
+            else:
+                output.append(char)
+                index += 1
         else:
             output.append(char)
             index += 1
@@ -211,8 +234,10 @@ def validate(run_builds: bool = True) -> list[str]:
         elif sha256(path) != expected:
             errors.append(f"locked source changed: {relative}")
 
-    combined = "\n".join(path.read_text(encoding="utf-8") for path in production_sources())
-    errors.extend(f"forbidden proof token present: {item}" for item in forbidden_tokens(combined))
+    for path in production_sources():
+        for item in forbidden_tokens(path.read_text(encoding="utf-8")):
+            relative = path.relative_to(ROOT).as_posix()
+            errors.append(f"forbidden proof token present in {relative}: {item}")
     errors.extend(validate_stability(load(STABILITY)))
 
     if run_builds:

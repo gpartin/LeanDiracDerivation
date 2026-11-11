@@ -261,11 +261,18 @@ def run(updates_per_cycle: int) -> dict[str, object]:
     def energy() -> float:
         return float((0.5 * torch.sum(mass * velocity**2) + potential(q)).detach())
 
+    def require_finite(label: str, values: dict[str, float]) -> None:
+        invalid = {key: value for key, value in values.items() if not np.isfinite(value)}
+        if invalid:
+            raise FloatingPointError(f"non-finite {label} before accumulation: {invalid}")
+
     initial_energy = energy()
     initial_terms = action_terms(q)
     initial_incidence = float(initial_terms["incidence"].detach())
     initial_residual = float(initial_terms["incidence_residual_norm"].detach())
     maxima = diagnostics(q.numpy(), psi_ref, chi_ref)
+    require_finite("initial diagnostics", maxima)
+    require_finite("initial energy", {"energy": initial_energy})
     maximum_relative_energy_deviation = 0.0
     accel = acceleration(q, inverse_mass)
     for _step in range(1, CYCLES * updates_per_cycle + 1):
@@ -275,9 +282,16 @@ def run(updates_per_cycle: int) -> dict[str, object]:
         velocity = velocity_half + 0.5 * dt * next_accel
         accel = next_accel
         row = diagnostics(q.numpy(), psi_ref, chi_ref)
+        require_finite("per-update diagnostics", row)
         maxima = {key: max(maxima[key], row[key]) for key in maxima}
+        current_energy = energy()
+        require_finite("per-update energy", {"energy": current_energy})
         relative_energy_deviation = (
-            abs(energy() - initial_energy) / max(1.0, abs(initial_energy))
+            abs(current_energy - initial_energy) / max(1.0, abs(initial_energy))
+        )
+        require_finite(
+            "per-update relative energy deviation",
+            {"relative_energy_deviation": relative_energy_deviation},
         )
         maximum_relative_energy_deviation = max(
             maximum_relative_energy_deviation, relative_energy_deviation
