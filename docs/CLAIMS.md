@@ -1,30 +1,31 @@
 # Claims and non-claims
 
-## Established through DIRAC-009
+## Established through DIRAC-010
 
 - One explicit positive action contains exactly two native complex C3 field
-  families on declared C19 geometry.
+  families on C19 geometry.
 - Lean derives reciprocal Psi and chi variations from that action.
-- Lean derives a reversible centered native update and a lossless first-order
-  state readout.
-- On the conditional prepared background, the nondegenerate surrounding-cell
-  response of the action reduces to three signed cube-incidence directions.
-- Those directions have equal squares and mutually anticommute.
-- A native flavor involution retains two rank-four copies; neither is deleted
-  or declared to be the physical electron.
-- A separate 4x4x4 numerical ensemble records finite, convergent 100-cycle
-  background stability evidence with active incidence energy.
+- Lean derives the centered native update and a lossless first-order state
+  readout.
+- The ordinary C19 transport symbol has an isotropic quadratic continuum term.
+- A cubical three-direction operator squares exactly to that quadratic term;
+  the exact finite-lattice mismatch is explicit and bounded at fourth order.
+- The cubical directions square equally and mutually anticommute.
+- A native flavor involution retains two rank-four copies.
+- Lean proves exact invertible basis maps from both copies to the conventional
+  four-component Dirac alpha/beta representation.
+- An independent matrix program reproduces the cubical algebra and both
+  rank-four copies with zero numerical discrepancy.
 
 ## Not established
 
-- The free Dirac equation or its continuum limit.
-- A physical mass/beta identification.
-- Selection or physical interpretation of one or both rank-four copies.
-- Dirac density and current.
+- Selection of a physical mass coefficient by the native action.
+- The complete free Dirac time-evolution theorem or its controlled continuum
+  limit.
+- Dirac density, current, and continuity.
+- Unique selection or physical interpretation of either rank-four copy.
 - Physical spin one-half, an electron, charge, localization, or formation.
-- Canonical LFM status or uniqueness of this action.
-- Equivalence between the Lean action and the Python implementation beyond the
-  documented formula correspondence and audited evidence hashes.
+- Canonical LFM status or uniqueness of the action or square-root orientation.
 
-The repository is a noncanonical formal research artifact. A passed gate is
-not permission to claim a downstream physical result.
+The prepared running background is a declared conditional state, not an
+origin story. A passed gate is not permission to claim a downstream result.

@@ -1,50 +1,44 @@
 {
-  "schema_version": "1.1.0",
-  "gate": "DIRAC-009",
+  "schema_version": "1.2.0",
+  "gate": "DIRAC-010",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac009 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac010 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
-    "formal theorem dependency chain",
-    "nondegenerate numerical evidence validation"
+    "formal import and theorem dependency chain",
+    "independent matrix reconstruction"
   ],
   "critical_findings": [],
   "high_findings": [],
   "resolved_findings": [
-    "The old certificate juxtaposed the action and a supplied cube operator. The exact Bloch bridge now derives the cube incidence from the native action residual.",
-    "The old eight-site stability test made the incidence term identically zero. It is replaced by a 4x4x4 C19 test with nonzero incidence residual and energy.",
-    "DIRAC-006 now carries the nondegenerate action-derived transport rather than only the older stabilized transport.",
-    "The obsolete algebra-only scaffold certificate is removed from the current production tree; its useful prepared-link lemmas remain separately named and action-connected downstream.",
-    "The DIRAC-004 claim is narrowed to the centered action-derivative update actually proved for the incidence action.",
-    "Parity is not identified with physical mass at DIRAC-009.",
-    "The stability ensemble now records pattern defects and energy deviation after every update, not only at cycle boundaries or the final update.",
-    "Production Lean sources are enumerated recursively and the proof manifest covers that complete source set independently of the native framework lock.",
-    "A compiler-environment audit replaces source token scanning, so interpolation, escaped identifiers, raw strings and declaration modifiers cannot hide a custom axiom or sorry dependency.",
-    "Every axiom dependency of every compiled production declaration must belong to the standard Lean foundation allowlist, including dependencies imported from outside the LeanDirac namespace.",
-    "A generated audit driver imports and confirms coverage of every locked production module, including otherwise unused modules and LeanDiracAudit itself.",
-    "Metric evidence must contain the complete schema and every scalar must be finite.",
-    "The audit requires a complete axiom report for every declared publication theorem, including the cumulative theorem.",
-    "The action bridge now proves the residual reduction on an actual repeated native lattice state rather than accepting an affine phase formula as the endpoint.",
-    "The cumulative publication certificate again retains the prepared-sector and complete first-order-map certificates."
+    "Removed the covariance-shape and signed-incidence energies from the admitted DIRAC-002 action.",
+    "Restored DIRAC-003 through DIRAC-008 to the base positive C19 action chain.",
+    "Moved the cubical Clifford operator downstream: it is now a continuum square-root readout, not an action term.",
+    "Kept the exact finite-lattice spatial remainder and proved its fourth-order bound.",
+    "Mapped both native rank-four copies to the standard Dirac representation; neither copy is deleted.",
+    "Kept the mass coefficient unresolved rather than fitting or identifying it by declaration.",
+    "Removed obsolete incidence-action modules from the production source tree."
   ],
   "declared_starting_hypotheses": [
-    "the noncanonical positive two-field action",
-    "the already-running prepared eight-corner complex-Psi/complex-chi background"
+    "the noncanonical positive two-field local-plus-exterior-area C19 action",
+    "the already-running prepared eight-corner complex-Psi/complex-chi state"
   ],
   "absent_structures": [
     "independent spinor register",
-    "supplied gamma or Dirac matrices in the admitted action bridge",
+    "native gamma/beta/Dirac matrices",
+    "signed-incidence action energy",
+    "shape-holding action energy",
     "projector register",
     "independent link field",
     "held track",
     "runtime projection"
   ],
   "remaining_open_claims": [
-    "physical mass grading",
-    "standard Dirac identification",
-    "continuum limit",
+    "native mass selection",
+    "complete continuum Dirac evolution",
     "density and current",
     "physical spin and electron"
-  ]
+  ],
+  "caveat": "The cubical square-root orientation is an explicit geometric factorization of the derived quadratic symbol; DIRAC-010 proves representation equivalence, not uniqueness or dynamic selection of that factorization."
 }

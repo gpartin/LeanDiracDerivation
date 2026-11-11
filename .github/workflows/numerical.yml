@@ -1,23 +1,24 @@
-name: Numerical reproduction
+name: Independent evidence
 
 on:
-  workflow_dispatch:
+  push:
+  pull_request:
 
 jobs:
-  reproduce-dirac009:
+  reproduce-dirac010:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.14"
-          cache: pip
-      - run: python -m pip install -r requirements.txt
-      - name: Reproduce DIRAC-009 evidence
-        run: python experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.py
-      - name: Validate regenerated metrics
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Reproduce DIRAC-010 matrix map
+        run: python experiments/dirac010_standard_map/validate_dirac010.py
+      - name: Validate evidence schema
         run: >-
-          python -c "import json; from pathlib import Path;
-          from scripts.production_guard import validate_stability;
-          p=json.loads(Path('experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.json').read_text());
-          e=validate_stability(p); assert not e, e"
+          python -c "import json;
+          from pathlib import Path;
+          from scripts.production_guard import validate_dirac010_evidence;
+          p=json.loads(Path('experiments/dirac010_standard_map/result.json').read_text());
+          e=validate_dirac010_evidence(p); assert not e, e"

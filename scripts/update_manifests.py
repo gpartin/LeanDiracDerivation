@@ -1,8 +1,4 @@
-"""Regenerate the four role-specific release manifests.
-
-Run this only after an intentional reviewed change.  The production guard is
-read-only and never rewrites these trust roots.
-"""
+"""Regenerate the role-specific release manifests after reviewed changes."""
 
 from __future__ import annotations
 
@@ -10,28 +6,24 @@ import hashlib
 import json
 import platform
 import subprocess
-import sys
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT / "project"
-ACTION_ID = "DIRAC002_COMPLEX_CHI_COVARIANCE_PLUS_INCIDENCE_V2"
+ACTION_ID = "DIRAC002_COMPLEX_CHI_BASE_C19_V3"
 
 FRAMEWORK_FILES = [
     "LeanDirac/Foundation.lean",
     "LeanDirac/C19Geometry.lean",
-    "LeanDirac/NativeAction.lean",
+    "LeanDirac/CubeGeometry.lean",
     "LeanDirac/ExteriorArea.lean",
-    "LeanDirac/ShapeStability.lean",
-    "LeanDirac/ShapeStabilityVariation.lean",
-    "LeanDirac/ChiIncidence.lean",
-    "LeanDirac/ChiIncidenceVariation.lean",
+    "LeanDirac/NativeAction.lean",
+    "LeanDirac/PreparedBackground.lean",
 ]
 
 EVIDENCE_FILES = [
-    "experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.py",
-    "experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.json",
+    "experiments/dirac010_standard_map/validate_dirac010.py",
+    "experiments/dirac010_standard_map/result.json",
 ]
 
 RELEASE_FILES = [
@@ -51,6 +43,7 @@ RELEASE_FILES = [
     "lakefile.lean",
     "lean-toolchain",
     "project/derivation_contract.json",
+    "project/dirac010_standard_map_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -68,25 +61,22 @@ def sha256(relative: str) -> str:
 
 
 def hashes(files: list[str]) -> dict[str, str]:
-    missing = [relative for relative in files if not (ROOT / relative).is_file()]
+    missing = [name for name in files if not (ROOT / name).is_file()]
     if missing:
         raise FileNotFoundError(f"manifest inputs are missing: {missing}")
-    return {relative: sha256(relative) for relative in sorted(files)}
+    return {name: sha256(name) for name in sorted(files)}
 
 
 def write(name: str, payload: dict) -> None:
     (PROJECT / name).write_text(
-        json.dumps(payload, indent=2, sort_keys=False) + "\n",
-        encoding="utf-8",
-        newline="\n",
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
 
 
-def command_output(command: list[str]) -> str:
-    result = subprocess.run(
+def output(command: list[str]) -> str:
+    return subprocess.run(
         command, cwd=ROOT, text=True, capture_output=True, check=True
-    )
-    return result.stdout.strip()
+    ).stdout.strip()
 
 
 def main() -> int:
@@ -94,9 +84,8 @@ def main() -> int:
         path.relative_to(ROOT).as_posix()
         for path in (ROOT / "LeanDirac").rglob("*.lean")
     ) + ["LeanDirac.lean", "LeanDiracAudit.lean"]
-
     write("framework_lock.json", {
-        "schema_version": "2.0.0",
+        "schema_version": "2.1.0",
         "role": "native-framework",
         "action_id": ACTION_ID,
         "canonical": False,
@@ -105,40 +94,32 @@ def main() -> int:
         "files": hashes(FRAMEWORK_FILES),
     })
     write("proof_manifest.json", {
-        "schema_version": "2.0.0",
+        "schema_version": "2.1.0",
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac009",
-        "highest_gate": "DIRAC-009",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac010",
+        "highest_gate": "DIRAC-010",
         "files": hashes(proof_files),
     })
-
     import numpy
-    import torch
-
     write("evidence_manifest.json", {
-        "schema_version": "2.0.0",
-        "role": "numerical-evidence",
+        "schema_version": "2.1.0",
+        "role": "independent-evidence",
         "action_id": ACTION_ID,
         "numerical_evidence": EVIDENCE_FILES[1],
-        "result_origin_commit": "3284aec7db85fd0f5125d0443798373ef318339b",
-        "script_origin_commit": "597d4211f2d3822b18dc7a1eead483382c4ab68b",
-        "seed": 120009,
         "environment": {
             "python": platform.python_version(),
             "numpy": numpy.__version__,
-            "torch": torch.__version__,
             "platform": platform.platform(),
-            "device": "cuda" if torch.cuda.is_available() else "cpu",
         },
         "files": hashes(EVIDENCE_FILES),
     })
     write("release_manifest.json", {
-        "schema_version": "2.0.0",
+        "schema_version": "2.1.0",
         "role": "publication-release",
         "action_id": ACTION_ID,
-        "lean": command_output(["lean", "--version"]),
+        "lean": output(["lean", "--version"]),
         "files": hashes(RELEASE_FILES),
     })
     print("UPDATED_ROLE_MANIFESTS")

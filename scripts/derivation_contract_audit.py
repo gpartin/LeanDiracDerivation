@@ -1,15 +1,10 @@
-"""Report the current DIRAC-001--009 derivation contract.
-
-This is a read-only status audit, not a commit hook.  The stronger clean
-rebuild, hash, axiom and numerical checks live in ``production_guard.py``.
-"""
+"""Read-only audit of the DIRAC-001--010 derivation contract."""
 
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT / "project"
@@ -27,50 +22,45 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--strict", action="store_true")
     args = parser.parse_args()
-
     status = load("status.json")
     contract = load("derivation_contract.json")
     review = load("no_bolton_review.json")
-    stability = json.loads((
-        ROOT / "experiments" / "dirac009_native_coupling" /
-        "dirac009_nondegenerate_stability.json"
+    evidence = json.loads((
+        ROOT / "experiments" / "dirac010_standard_map" / "result.json"
     ).read_text(encoding="utf-8"))
-
     checks = {
-        "highest_gate_is_009": status.get("highest_passed_gate") == "DIRAC-009",
-        "next_gate_is_010": status.get("next_gate") == "DIRAC-010",
-        "action_bridge_present": contains(
-            "LeanDirac/Dirac009ActionBridge.lean",
-            "theorem prepared_action_bloch_bridge"),
-        "completed_transport_present": contains(
-            "LeanDirac/Dirac006ActionTransport.lean",
-            "theorem dirac006_complete_action_transport"),
-        "closed_certificate_present": contains(
-            "LeanDirac/Dirac009Closed.lean",
-            "theorem dirac009_closed_native_clifford"),
-        "publication_stops_at_009": contains(
+        "highest_gate_is_010": status.get("highest_passed_gate") == "DIRAC-010",
+        "next_gate_is_011": status.get("next_gate") == "DIRAC-011",
+        "base_action_has_no_incidence_import": not contains(
+            "LeanDirac/Dirac002.lean", "ChiIncidence"),
+        "continuum_square_root_present": contains(
+            "LeanDirac/Dirac009Geometry.lean",
+            "theorem c19_continuum_dirac_square_is_native_quadratic_symbol"),
+        "finite_lattice_remainder_present": contains(
+            "LeanDirac/Dirac009Geometry.lean",
+            "theorem c19_spatial_remainder_bound"),
+        "standard_map_present": contains(
+            "LeanDirac/Dirac010.lean",
+            "theorem dirac010_native_operator_equals_standard_dirac"),
+        "publication_stops_at_010": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac009"),
-        "period_two_not_used_as_transport": (
-            contract["dirac009_mandatory_gates"]["numerical"]
-            ["incidence_must_be_active"] is True),
-        "nondegenerate_numerics_pass": stability.get("verdict") == "PASS",
+            "theorem current_highest_gate_is_dirac010"),
+        "independent_matrix_check_passes": (
+            evidence.get("status") == "PASS"
+            and evidence.get("max_error", 1.0) <= 1.0e-12),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
             and not review.get("high_findings")),
     }
     passed = all(checks.values())
-    report = {
+    print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC009_READY" if passed else "DIRAC009_OPEN",
+        "verdict": "DIRAC010_READY" if passed else "DIRAC010_OPEN",
         "claim_boundary": status["claim_boundary"],
-    }
-    print(json.dumps(report, indent=2))
-    if args.strict and not passed:
-        return 1
-    return 0
+    }, indent=2))
+    return 1 if args.strict and not passed else 0
 
 
 if __name__ == "__main__":
