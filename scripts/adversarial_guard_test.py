@@ -53,6 +53,23 @@ def main() -> int:
     nonfinite_011["errors"][next(iter(nonfinite_011["errors"]))] = math.inf
     if not guard.validate_dirac011_evidence(nonfinite_011):
         raise AssertionError("non-finite DIRAC-011 component was accepted")
+    payload_012 = guard.load(guard.EVIDENCE_012)
+    if guard.validate_dirac012_evidence(payload_012):
+        raise AssertionError("passing DIRAC-012 evidence was rejected")
+    broken_012 = copy.deepcopy(payload_012)
+    broken_012["checks"]["every_proved_bound_holds"] = False
+    if not guard.validate_dirac012_evidence(broken_012):
+        raise AssertionError("violated DIRAC-012 bound was accepted")
+    nonfinite_012 = copy.deepcopy(payload_012)
+    nonfinite_012["minimum_normalized_bound_margin"] = math.nan
+    if not guard.validate_dirac012_evidence(nonfinite_012):
+        raise AssertionError("non-finite DIRAC-012 metric was accepted")
+    incomplete_012 = copy.deepcopy(payload_012)
+    incomplete_012["checks"].pop(
+        "normalized_equation_error_decreases_under_joint_refinement"
+    )
+    if not guard.validate_dirac012_evidence(incomplete_012):
+        raise AssertionError("incomplete DIRAC-012 checks were accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

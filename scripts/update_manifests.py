@@ -26,6 +26,8 @@ EVIDENCE_FILES = [
     "experiments/dirac010_standard_map/result.json",
     "experiments/dirac011_frequency_mass/validate_dirac011.py",
     "experiments/dirac011_frequency_mass/result.json",
+    "experiments/dirac012_continuum_evolution/validate_dirac012.py",
+    "experiments/dirac012_continuum_evolution/result.json",
 ]
 
 RELEASE_FILES = [
@@ -47,6 +49,7 @@ RELEASE_FILES = [
     "project/derivation_contract.json",
     "project/dirac010_standard_map_status.json",
     "project/dirac011_frequency_mass_status.json",
+    "project/dirac012_continuum_evolution_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -101,8 +104,8 @@ def main() -> int:
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac011",
-        "highest_gate": "DIRAC-011",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac012",
+        "highest_gate": "DIRAC-012",
         "files": hashes(proof_files),
     })
     import numpy
@@ -110,10 +113,11 @@ def main() -> int:
         "schema_version": "2.1.0",
         "role": "independent-evidence",
         "action_id": ACTION_ID,
-        "numerical_evidence": "experiments/dirac011_frequency_mass/result.json",
+        "numerical_evidence": "experiments/dirac012_continuum_evolution/result.json",
         "cumulative_numerical_evidence": [
             "experiments/dirac010_standard_map/result.json",
             "experiments/dirac011_frequency_mass/result.json",
+            "experiments/dirac012_continuum_evolution/result.json",
         ],
         "environment": {
             "python": platform.python_version(),

@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-011. It is a declared starting model, not a claim that the
+chain through DIRAC-012. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -87,3 +87,9 @@ symbol has been derived. They are a low-momentum square-root readout of its
 isotropic quadratic term, not native action terms. Lean retains the exact
 finite-lattice remainder and proves the standard four-component change of
 basis for both native copies.
+
+DIRAC-012 linearizes this same action on the prepared complex-chi vacuum. The
+local potential supplies the rest coefficient and the exterior-area bonds
+supply the exact C19 transport coefficient. No Dirac operator is added to the
+action. The downstream cubical square root is compared with the actual
+centered recurrence, with both finite-spacing and finite-timestep errors kept.

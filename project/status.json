@@ -2,9 +2,9 @@
   "schema_version": "1.2.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-011",
-  "next_gate": "DIRAC-012",
-  "completed": 11,
+  "highest_passed_gate": "DIRAC-012",
+  "next_gate": "DIRAC-013",
+  "completed": 12,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
@@ -17,7 +17,8 @@
     "DIRAC-008": "LeanDirac/Dirac008.lean",
     "DIRAC-009": "LeanDirac/Dirac009Closed.lean",
     "DIRAC-010": "LeanDirac/Dirac010.lean",
-    "DIRAC-011": "LeanDirac/Dirac011.lean"
+    "DIRAC-011": "LeanDirac/Dirac011.lean",
+    "DIRAC-012": "LeanDirac/Dirac012.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -31,10 +32,10 @@
     "DIRAC-009": "PASS",
     "DIRAC-010": "PASS",
     "DIRAC-011": "PASS",
-    "DIRAC-012": "OPEN",
+    "DIRAC-012": "PASS",
     "DIRAC-013": "OPEN",
     "DIRAC-014": "OPEN",
     "DIRAC-015": "OPEN"
   },
-  "claim_boundary": "DIRAC-011 is the highest passed research gate. From the same two-field action and retained embeddings, Lean constructs both positive- and negative-frequency continuum graphs for both rank-four copies, keeps the exact finite-lattice remainder explicit, proves that the prepared native running rest frequency is chi0=19, and proves this is the unique nonnegative standard mass coefficient with the same squared rest spectrum. The full controlled continuum time-evolution theorem, density/current, physical spin and electron remain open."
+  "claim_boundary": "DIRAC-012 is the highest passed research gate. From the same two-field action, Lean derives the prepared-vacuum quadratic mass-plus-C19 channel, inserts the continuum four-component Hamiltonian into the actual centered recurrence, and bounds the normalized equation residual by explicit finite-timestep and fourth-order spatial terms. This is a controlled linearized low-momentum continuum theorem, not exact finite-lattice evolution. Density/current, nonlinear live-chi evolution, physical spin, and electron identity remain open."
 }
