@@ -1,4 +1,4 @@
-"""One-command release audit for the admitted DIRAC-001--011 chain.
+"""One-command release audit for the admitted DIRAC-001--012 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -22,6 +22,7 @@ STATUS = ROOT / "project" / "status.json"
 REVIEW = ROOT / "project" / "no_bolton_review.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
+EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -159,6 +160,58 @@ def validate_dirac011_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac012_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-012 independent verdict is not PASS")
+    value = payload.get("max_error")
+    tolerance = payload.get("tolerance")
+    if not isinstance(value, (int, float)) or not math.isfinite(value):
+        errors.append("DIRAC-012 maximum error is missing or non-finite")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance):
+        errors.append("DIRAC-012 tolerance is missing or non-finite")
+    elif tolerance > 1.0e-11 or tolerance <= 0:
+        errors.append("DIRAC-012 tolerance is outside the admitted range")
+    if isinstance(value, (int, float)) and math.isfinite(value) and \
+            isinstance(tolerance, (int, float)) and math.isfinite(tolerance) and \
+            value > tolerance:
+        errors.append("DIRAC-012 maximum error exceeds its tolerance")
+    checks = payload.get("checks")
+    required_checks = {
+        "identity_error_within_tolerance",
+        "every_proved_bound_holds",
+        "residual_decreases_under_joint_refinement",
+        "normalized_equation_error_decreases_under_joint_refinement",
+        "c19_direction_count_is_18",
+        "c19_weight_sum_is_24",
+    }
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-012 required checks are incomplete or false")
+    errors_map = payload.get("errors")
+    if not isinstance(errors_map, dict) or not errors_map:
+        errors.append("DIRAC-012 component error table is missing")
+    elif any(not isinstance(v, (int, float)) or not math.isfinite(v)
+             for v in errors_map.values()):
+        errors.append("DIRAC-012 component errors are incomplete or non-finite")
+    for field in (
+        "minimum_bound_margin",
+        "minimum_normalized_bound_margin",
+        "minimum_refinement_ratio",
+        "minimum_normalized_refinement_ratio",
+    ):
+        metric = payload.get(field)
+        if not isinstance(metric, (int, float)) or not math.isfinite(metric):
+            errors.append(f"DIRAC-012 {field} is missing or non-finite")
+    if isinstance(payload.get("minimum_normalized_bound_margin"), (int, float)) and \
+            payload["minimum_normalized_bound_margin"] < -1.0e-12:
+        errors.append("DIRAC-012 normalized bound is violated")
+    cases = payload.get("cases")
+    if not isinstance(cases, int) or cases < 32:
+        errors.append("DIRAC-012 case count is incomplete")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -168,17 +221,17 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(e1 + e2 + e3 + e4)
     status = load(STATUS)
     review = load(REVIEW)
-    if status.get("highest_passed_gate") != "DIRAC-011":
-        errors.append("status does not stop at DIRAC-011")
-    if status.get("next_gate") != "DIRAC-012":
-        errors.append("DIRAC-012 is not the next gate")
-    if status.get("completed") != 11 or status.get("total") != 15:
+    if status.get("highest_passed_gate") != "DIRAC-012":
+        errors.append("status does not stop at DIRAC-012")
+    if status.get("next_gate") != "DIRAC-013":
+        errors.append("DIRAC-013 is not the next gate")
+    if status.get("completed") != 12 or status.get("total") != 15:
         errors.append("gate counts are incorrect")
     if review.get("status") != "PASS_ZERO_CRITICAL_HIGH":
         errors.append("critical/high red-team findings remain")
     if review.get("critical_findings") or review.get("high_findings"):
         errors.append("red-team finding lists are not empty")
-    publication = "LeanDirac.current_highest_gate_is_dirac011"
+    publication = "LeanDirac.current_highest_gate_is_dirac012"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -194,17 +247,19 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE_011.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_012.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
     cumulative = set(evidence.get("cumulative_numerical_evidence", []))
     expected_evidence = {
         EVIDENCE_010.relative_to(ROOT).as_posix(),
         EVIDENCE_011.relative_to(ROOT).as_posix(),
+        EVIDENCE_012.relative_to(ROOT).as_posix(),
     }
     if cumulative != expected_evidence:
         errors.append("evidence manifest does not retain both admitted reconstructions")
     errors.extend(validate_dirac010_evidence(load(EVIDENCE_010)))
     errors.extend(validate_dirac011_evidence(load(EVIDENCE_011)))
+    errors.extend(validate_dirac012_evidence(load(EVIDENCE_012)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:
@@ -246,8 +301,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-011")
-    print("next_gate=DIRAC-012 status=OPEN")
+    print("highest_passed_gate=DIRAC-012")
+    print("next_gate=DIRAC-013 status=OPEN")
     return 0
 
 

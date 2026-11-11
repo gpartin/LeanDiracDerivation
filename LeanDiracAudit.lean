@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-011. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-012. -/
 
 #audit_lean_dirac_environment
 
@@ -23,4 +23,9 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.matching_nonnegative_rest_mass_is_chi0
 #print axioms LeanDirac.standard_c19_rest_square_matches_native_frequency
 #print axioms LeanDirac.dirac011_common_frequency_and_mass
-#print axioms LeanDirac.current_highest_gate_is_dirac011
+#print axioms LeanDirac.native_prepared_modal_potential_expansion
+#print axioms LeanDirac.native_centered_mode_defect_is_residual
+#print axioms LeanDirac.normalized_native_dirac_mode_residual_bound
+#print axioms LeanDirac.standard_c19_hamiltonian_square_is_continuum_dispersion
+#print axioms LeanDirac.dirac012_controlled_continuum_evolution
+#print axioms LeanDirac.current_highest_gate_is_dirac012

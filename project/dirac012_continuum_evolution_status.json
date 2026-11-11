@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-012",
+  "status": "PASS",
+  "formal_theorem": "LeanDirac.dirac012_controlled_continuum_evolution",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac012",
+  "established": [
+    "prepared-vacuum quadratic mass coefficient from the native local action",
+    "exact C19 tangent transport coefficient from the native bond action",
+    "continuum four-component Hamiltonian square for both retained copies",
+    "actual centered-recurrence mode defect equals the declared residual",
+    "normalized equation residual bounded by explicit temporal and spatial terms"
+  ],
+  "independent_evidence": "experiments/dirac012_continuum_evolution/result.json",
+  "not_established": [
+    "exact finite-lattice Dirac evolution",
+    "arbitrary nonlinear live-chi Dirac evolution",
+    "Dirac density or current",
+    "physical spin half",
+    "electron identity"
+  ]
+}

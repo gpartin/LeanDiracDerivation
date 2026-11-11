@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-011
+## Established through DIRAC-012
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -22,11 +22,19 @@
   squared rest spectrum.
 - Independent programs reproduce the cubical algebra, both rank-four copies,
   both frequency graphs, the remainder identity, and the mass selection.
+- On the prepared complex-chi vacuum, the exact native potential has the
+  claimed mass-plus-C19 quadratic coefficient; the nonlinear fourth-order
+  remainder remains explicit.
+- A continuum Dirac frequency inserted into the native centered recurrence has
+  a normalized equation residual bounded by a finite-timestep term plus the
+  previously proved fourth-order C19 spatial term.
+- Independent numerical reconstruction confirms the action expansion,
+  centered recurrence identity, bounds, and refinement behavior.
 
 ## Not established
 
-- The complete free Dirac time-evolution theorem or its controlled continuum
-  limit.
+- Exact Dirac evolution at finite lattice spacing or finite timestep.
+- Arbitrary nonlinear live-chi Dirac evolution away from the prepared vacuum.
 - Dirac density, current, and continuity.
 - Unique selection or physical interpretation of either rank-four copy.
 - Physical spin one-half, an electron, charge, localization, or formation.

@@ -1,5 +1,16 @@
 # Changelog
 
+## DIRAC-012
+
+- Derived the prepared-vacuum quadratic mass and C19 transport coefficient
+  directly from the admitted local-plus-bond action.
+- Connected the continuum Dirac frequency to the actual centered recurrence.
+- Proved separate spatial and temporal errors and a normalized equation-error
+  bound; no exact finite-lattice Dirac claim is made.
+- Added an independent 32-case reconstruction and joint refinement check.
+- Density/current, nonlinear live-chi evolution, physical spin, and an
+  electron remain open.
+
 ## DIRAC-011
 
 - Added positive- and negative-frequency graphs on the same native canonical

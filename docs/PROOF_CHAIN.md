@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac011`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac012`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -17,17 +17,19 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-009 | PASS | Derives cubical Clifford geometry as a square root of the C19 quadratic continuum symbol, retains both rank-four copies, and bounds the exact lattice remainder. | Identify the standard representation. |
 | DIRAC-010 | PASS | Proves exact invertible maps from both native copies to standard Dirac alpha/beta operators. | Derive the native frequency and mass map. |
 | DIRAC-011 | PASS | Builds both frequency graphs from the same phase space and embeddings, retains the exact C19 remainder, and uniquely selects the nonnegative rest coefficient from the native running frequency. | Take controlled limits. |
-| DIRAC-012 | OPEN | Prove the uniform-chi low-momentum continuum Dirac equation with explicit errors. | Derive observables. |
+| DIRAC-012 | PASS | Derives the prepared-vacuum quadratic scalar channel from the same action, inserts a continuum Dirac mode into the actual centered recurrence, and bounds the normalized equation error by explicit timestep and C19 lattice terms. | Derive observables. |
 | DIRAC-013 | OPEN | Derive density, current, and continuity from the same action and embedding. | Final audit. |
 | DIRAC-014 | OPEN | Eliminate every critical/high circularity, placeholder, and axiom finding. | Clean reproduction. |
 | DIRAC-015 | OPEN | Reproduce and package the complete derivation from a clean checkout. | Publication decision. |
 
 ## Current theorem boundary
 
-DIRAC-011 proves a common frequency/rest-mass map, not the full free Dirac
-equation. The exact finite-lattice remainder remains present, and DIRAC-012
-must control it in the continuum evolution theorem. Both rank-four copies are
-retained. No physical spin or electron claim is made.
+DIRAC-012 proves the linearized free-Dirac continuum equation on the declared
+prepared complex-chi vacuum in the low-momentum, small-timestep regime. It
+does not erase the finite-spacing or finite-timestep effects: both appear in
+an explicit normalized residual bound. Both rank-four copies are retained.
+The nonlinear live-chi equation, current, physical spin, and electron remain
+outside this gate.
 
 ## Axiom policy
 

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.2.0",
-  "gate": "DIRAC-011",
+  "gate": "DIRAC-012",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac011 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac012 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -19,6 +19,10 @@
     "Mapped both native rank-four copies to the standard Dirac representation; neither copy is deleted.",
     "Constructed both frequency signs as phase-space graphs of the same continuum square root; no new native state was added.",
     "Selected mass by a uniqueness theorem from the native prepared rest frequency and nonnegative rest-spectrum matching, without fitting a target mass.",
+    "Derived the quadratic mass and C19 transport coefficient from the existing action before defining the continuum residual.",
+    "Connected the continuum mode to the actual centered recurrence rather than an abstract continuous-time oscillator.",
+    "Added a normalized equation residual so timestep shrinkage cannot create a trivial pass.",
+    "Kept finite-spacing and finite-timestep errors explicit and independently reproduced their bounds and refinement.",
     "Removed obsolete incidence-action modules from the production source tree."
   ],
   "declared_starting_hypotheses": [
@@ -36,9 +40,9 @@
     "runtime projection"
   ],
   "remaining_open_claims": [
-    "complete continuum Dirac evolution",
+    "exact finite-lattice or nonlinear live-chi Dirac evolution",
     "density and current",
     "physical spin and electron"
   ],
-  "caveat": "The cubical square-root orientation remains an explicit geometric factorization of the derived quadratic symbol. DIRAC-011 selects the nonnegative rest coefficient within that factorization; it does not prove the full controlled continuum evolution equation or a physical electron."
+  "caveat": "The cubical square-root orientation remains an explicit geometric factorization of the action-derived quadratic symbol. DIRAC-012 proves a controlled linearized continuum equation on the declared prepared complex-chi vacuum; it does not prove exact finite-lattice dynamics, arbitrary nonlinear live-chi Dirac evolution, density/current, or a physical electron."
 }

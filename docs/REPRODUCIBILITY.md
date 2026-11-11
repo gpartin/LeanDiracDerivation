@@ -39,6 +39,18 @@ differs from the continuum graph only by the explicit C19 remainder, and checks
 the nonnegative rest-mass selection at tolerance `1e-11`. It does not prove the
 full continuum equation, current, physical spin, or an electron.
 
+## Independent DIRAC-012 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac012_continuum_evolution/validate_dirac012.py
+```
+
+The program independently reconstructs the C19 symbol from all 18 weighted
+directions, the native action's quadratic modal expansion, the centered-time
+mode defect, the combined spatial/time bound, and the normalized equation
+error under refinement. It does not test density/current, nonlinear live-chi
+evolution, physical spin, or an electron.
+
 ## Trust boundary
 
 The Lean theorem is the formal evidence. The Python result is an independent
