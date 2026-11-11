@@ -1,50 +1,46 @@
 {
-  "schema_version": "1.1.0",
-  "action_id": "DIRAC002_COMPLEX_CHI_COVARIANCE_PLUS_INCIDENCE_V2",
+  "schema_version": "1.2.0",
+  "action_id": "DIRAC002_COMPLEX_CHI_BASE_C19_V3",
   "action_definition": {
-    "base": "combined-density local potential plus exterior-area C19 bond energy",
-    "stability_delta": "one-half the sum over sites of the squared norm of chi_i wedge (C_i chi_i)",
-    "incidence_delta": "one-half the sum over sites of the squared norm of the centered chi-overlap face incidence acting on chi wedge Psi",
-    "coefficient_provenance": "1/8 is the prepared cubic covariance normalization; 3 is the reciprocal prepared overlap magnitude; 1/2 is centered incidence",
-    "forbidden_replacements": [
-      "supplied gamma or Dirac matrices",
-      "independent spinor register",
-      "held track",
-      "runtime projection",
-      "parity mass inserted at DIRAC-009"
+    "local": "combined-density capacity potential",
+    "bond": "positive exterior-area difference over C19 bonds",
+    "kinetic": "unit Psi kinetic energy plus B=1197 chi kinetic normalization",
+    "excluded_terms": [
+      "shape-holding energy",
+      "signed-incidence energy",
+      "gamma/beta/Dirac action term",
+      "independent spinor or link register"
     ]
   },
-  "dirac009_mandatory_gates": {
+  "declared_preparation": "already-running eight-corner complex-Psi/complex-chi state; formation is outside the theorem",
+  "formal_propagation": {
+    "DIRAC-002": "PASS_POSITIVE_BASE_ACTION",
+    "DIRAC-003": "PASS_RECIPROCAL_VARIATION",
+    "DIRAC-004": "PASS_DISCRETE_ACTION_UPDATE",
+    "DIRAC-005": "PASS_PREPARED_SECTOR_CLOSURE",
+    "DIRAC-006": "PASS_NATIVE_C19_SYMBOL",
+    "DIRAC-007": "PASS_LOSSLESS_READOUT",
+    "DIRAC-008": "PASS_COMPLETE_FIRST_ORDER_MAP",
+    "DIRAC-009": "PASS_CONTINUUM_CUBICAL_SQUARE_ROOT_WITH_REMAINDER",
+    "DIRAC-010": "PASS_STANDARD_REPRESENTATION_BOTH_COPIES"
+  },
+  "dirac010_mandatory_gates": {
     "formal": [
-      "complete reciprocal action variation",
-      "exact action-residual to cubical-incidence Bloch bridge",
-      "nonzero surrounding-cell incidence transport",
-      "equal squares and pairwise anticommutation",
-      "two retained rank-four flavor copies",
+      "base action remains transitive root",
+      "three cubical directions square equally and mutually anticommute",
+      "beta anticommutes with all three directions",
+      "both rank-four flavor copies retained",
+      "exact invertible change of basis to standard alpha/beta operators",
       "standard-foundation-only axiom audit"
     ],
-    "numerical": {
-      "lattice": "4x4x4 periodic C19",
-      "cycles": 100,
-      "updates_per_cycle": [64, 128, 256],
-      "maximum_pattern_defect": 0.01,
-      "maximum_relative_energy_deviation": 0.0001,
-      "incidence_must_be_active": true
-    }
+    "independent": [
+      "matrix reconstruction error <= 1e-12",
+      "no physical mass, spin or electron claim"
+    ]
   },
-  "formal_propagation": {
-    "DIRAC-002": "INTEGRATED_COMPLETE_INCIDENCE_ACTION",
-    "DIRAC-003": "INTEGRATED_RECIPROCAL_VARIATION",
-    "DIRAC-004": "INTEGRATED_CENTERED_REVERSIBLE_UPDATE",
-    "DIRAC-005": "INTEGRATED_PREPARED_UNIT_CELL_WITH_PERIOD_TWO_SCOPE",
-    "DIRAC-006": "INTEGRATED_NONDEGENERATE_ACTION_BLOCH_TRANSPORT",
-    "DIRAC-007": "INTEGRATED_LOSSLESS_READOUT",
-    "DIRAC-008": "INTEGRATED_COMPLETE_FIRST_ORDER_MAP",
-    "DIRAC-009": "PASS_NATIVE_CLIFFORD_WITH_ACTION_BRIDGE"
-  },
-  "deferred_to_dirac010": [
-    "physical mass/beta identification",
-    "standard Dirac notation",
-    "selection or interpretation of either rank-four copy"
+  "deferred_to_dirac011": [
+    "native frequency readout",
+    "native selection of mass coefficient",
+    "positive/negative-frequency organization"
   ]
 }

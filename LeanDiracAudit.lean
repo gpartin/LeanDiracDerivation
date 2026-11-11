@@ -1,29 +1,22 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative native-incidence chain through DIRAC-009. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-010. -/
 
 #audit_lean_dirac_environment
 
 #print axioms LeanDirac.dirac001_native_framework
-#print axioms LeanDirac.dirac002_positive_incidence_periodic_c19_two_field_action
+#print axioms LeanDirac.dirac002_positive_periodic_c19_two_field_action
 #print axioms LeanDirac.dirac002_candidate_action_and_geometry
-#print axioms LeanDirac.chi_covariance_shape_hasDerivAt
-#print axioms LeanDirac.incidence_c19_variations_from_actual_action
-#print axioms LeanDirac.dirac004_incidence_c19_reversible_action_update
-#print axioms LeanDirac.cube_chi_incidence_residual_zero
-#print axioms LeanDirac.cube_chi_incidence_first_variation_zero
-#print axioms LeanDirac.dirac005_incidence_prepared_sector
-#print axioms LeanDirac.dirac006_incidence_native_transport
-#print axioms LeanDirac.prepared_action_bloch_bridge
-#print axioms LeanDirac.prepared_action_bloch_residual_is_native_residual
-#print axioms LeanDirac.dirac006_complete_action_transport
-#print axioms LeanDirac.dirac007_incidence_lossless_paired_readout
-#print axioms LeanDirac.incidence_running_backward_after_forward
-#print axioms LeanDirac.incidence_running_forward_after_backward
-#print axioms LeanDirac.dirac008_incidence_complete_first_order_map
-#print axioms LeanDirac.prepared_chi_link_gauge_is_cube_incidence
-#print axioms LeanDirac.prepared_chi_links_square
-#print axioms LeanDirac.prepared_chi_links_anticommute
+#print axioms LeanDirac.dirac003_c19_local_variations_from_actual_action
+#print axioms LeanDirac.dirac004_c19_reversible_action_update
+#print axioms LeanDirac.dirac004_c19_update_iff_discrete_action_stationary
+#print axioms LeanDirac.dirac005_c19_native_sector
+#print axioms LeanDirac.dirac006_native_transport_symbol
+#print axioms LeanDirac.dirac007_lossless_native_paired_readout
+#print axioms LeanDirac.dirac008_complete_native_first_order_map
+#print axioms LeanDirac.c19_continuum_dirac_square_is_native_quadratic_symbol
+#print axioms LeanDirac.c19_spatial_remainder_bound
 #print axioms LeanDirac.dirac009_closed_native_clifford
-#print axioms LeanDirac.current_highest_gate_is_dirac009
+#print axioms LeanDirac.dirac010_native_operator_equals_standard_dirac
+#print axioms LeanDirac.current_highest_gate_is_dirac010

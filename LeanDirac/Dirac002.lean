@@ -1,6 +1,5 @@
 import LeanDirac.Dirac001
 import LeanDirac.PreparedBackground
-import LeanDirac.ChiIncidence
 
 namespace LeanDirac
 
@@ -41,18 +40,6 @@ theorem dirac002_positive_periodic_c19_two_field_action
   dirac002_positive_c19_two_field_action
     chi0 B state velocity (periodicC19Geometry L) hchi hB
 
-theorem dirac002_positive_incidence_periodic_c19_two_field_action
-    (L : ℕ) [NeZero L]
-    (chi0 B : ℝ) (state : State (PeriodicCubicSite L))
-    (velocity : Velocity (PeriodicCubicSite L))
-    (hchi : 0 < chi0) (hB : 0 ≤ B) :
-    0 ≤ incidenceC19Hamiltonian chi0 B state velocity
-        (periodicC19Geometry L) ∧
-      state = ⟨state.psi, state.chi⟩ := by
-  exact ⟨incidence_c19_hamiltonian_nonnegative
-      chi0 B state velocity (periodicC19Geometry L) hchi hB,
-    state_has_exactly_two_field_families state⟩
-
 def PreparedCubeGeometry : Prop :=
     (∀ corner : CubeCorner,
       wedge (tetraCorner corner) (companion corner) = unitArea) ∧
@@ -80,7 +67,7 @@ structure Dirac002Certificate : Prop where
   positivePeriodicAction : ∀
       (state : State (PeriodicCubicSite 2))
       (velocity : Velocity (PeriodicCubicSite 2)),
-    0 ≤ incidenceC19Hamiltonian chi0 chiKineticNormalization state velocity
+    0 ≤ c19Hamiltonian chi0 chiKineticNormalization state velocity
       (periodicC19Geometry 2) ∧
     state = ⟨state.psi, state.chi⟩
   preparedGeometry : PreparedCubeGeometry
@@ -88,7 +75,7 @@ structure Dirac002Certificate : Prop where
 theorem dirac002_candidate_action_and_geometry : Dirac002Certificate where
   positivePeriodicAction := by
     intro state velocity
-    exact dirac002_positive_incidence_periodic_c19_two_field_action 2
+    exact dirac002_positive_periodic_c19_two_field_action 2
       chi0 chiKineticNormalization state velocity
       (by norm_num [chi0])
       (by rw [chi_kinetic_normalization_eq_1197]; norm_num)
