@@ -27,7 +27,7 @@ def main() -> int:
     )
     if "sorryAx" not in duplicate.get("x", set()):
         raise AssertionError("duplicate report erased an axiom dependency")
-    payload = guard.load(guard.EVIDENCE)
+    payload = guard.load(guard.EVIDENCE_010)
     if guard.validate_dirac010_evidence(payload):
         raise AssertionError("passing DIRAC-010 evidence was rejected")
     broken = copy.deepcopy(payload)
@@ -42,6 +42,17 @@ def main() -> int:
     missing["errors"] = {}
     if not guard.validate_dirac010_evidence(missing):
         raise AssertionError("incomplete component evidence was accepted")
+    payload_011 = guard.load(guard.EVIDENCE_011)
+    if guard.validate_dirac011_evidence(payload_011):
+        raise AssertionError("passing DIRAC-011 evidence was rejected")
+    broken_011 = copy.deepcopy(payload_011)
+    broken_011["max_error"] = broken_011["tolerance"] * 2
+    if not guard.validate_dirac011_evidence(broken_011):
+        raise AssertionError("out-of-tolerance DIRAC-011 evidence was accepted")
+    nonfinite_011 = copy.deepcopy(payload_011)
+    nonfinite_011["errors"][next(iter(nonfinite_011["errors"]))] = math.inf
+    if not guard.validate_dirac011_evidence(nonfinite_011):
+        raise AssertionError("non-finite DIRAC-011 component was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

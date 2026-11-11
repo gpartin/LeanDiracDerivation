@@ -2,9 +2,9 @@
   "schema_version": "1.2.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-010",
-  "next_gate": "DIRAC-011",
-  "completed": 10,
+  "highest_passed_gate": "DIRAC-011",
+  "next_gate": "DIRAC-012",
+  "completed": 11,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
@@ -16,7 +16,8 @@
     "DIRAC-007": "LeanDirac/Dirac007.lean",
     "DIRAC-008": "LeanDirac/Dirac008.lean",
     "DIRAC-009": "LeanDirac/Dirac009Closed.lean",
-    "DIRAC-010": "LeanDirac/Dirac010.lean"
+    "DIRAC-010": "LeanDirac/Dirac010.lean",
+    "DIRAC-011": "LeanDirac/Dirac011.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -29,11 +30,11 @@
     "DIRAC-008": "PASS",
     "DIRAC-009": "PASS",
     "DIRAC-010": "PASS",
-    "DIRAC-011": "OPEN",
+    "DIRAC-011": "PASS",
     "DIRAC-012": "OPEN",
     "DIRAC-013": "OPEN",
     "DIRAC-014": "OPEN",
     "DIRAC-015": "OPEN"
   },
-  "claim_boundary": "DIRAC-010 is the highest passed research gate. The native action contains only the positive local and exterior-area C19 energies for two complex C3 fields. Lean derives the native update and first-order state map, factors the isotropic quadratic C19 continuum symbol through cubical Clifford geometry with an explicit fourth-order lattice remainder, retains both rank-four copies, and proves exact invertible maps to the conventional Dirac alpha/beta representation. The physical mass coefficient, full continuum time-evolution theorem, current, spin and electron remain open."
+  "claim_boundary": "DIRAC-011 is the highest passed research gate. From the same two-field action and retained embeddings, Lean constructs both positive- and negative-frequency continuum graphs for both rank-four copies, keeps the exact finite-lattice remainder explicit, proves that the prepared native running rest frequency is chi0=19, and proves this is the unique nonnegative standard mass coefficient with the same squared rest spectrum. The full controlled continuum time-evolution theorem, density/current, physical spin and electron remain open."
 }

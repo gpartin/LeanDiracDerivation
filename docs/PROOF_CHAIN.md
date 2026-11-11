@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac010`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac011`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -16,7 +16,7 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-008 | PASS | Produces an exact reversible first-order map on the complete native state. | Factor the continuum spatial symbol. |
 | DIRAC-009 | PASS | Derives cubical Clifford geometry as a square root of the C19 quadratic continuum symbol, retains both rank-four copies, and bounds the exact lattice remainder. | Identify the standard representation. |
 | DIRAC-010 | PASS | Proves exact invertible maps from both native copies to standard Dirac alpha/beta operators. | Derive the native frequency and mass map. |
-| DIRAC-011 | OPEN | Build common positive/negative-frequency readouts and select the mass coefficient from the same embedding. | Take controlled limits. |
+| DIRAC-011 | PASS | Builds both frequency graphs from the same phase space and embeddings, retains the exact C19 remainder, and uniquely selects the nonnegative rest coefficient from the native running frequency. | Take controlled limits. |
 | DIRAC-012 | OPEN | Prove the uniform-chi low-momentum continuum Dirac equation with explicit errors. | Derive observables. |
 | DIRAC-013 | OPEN | Derive density, current, and continuity from the same action and embedding. | Final audit. |
 | DIRAC-014 | OPEN | Eliminate every critical/high circularity, placeholder, and axiom finding. | Clean reproduction. |
@@ -24,9 +24,10 @@ dependency of that root, not a status label standing in for proof.
 
 ## Current theorem boundary
 
-DIRAC-010 proves representation equivalence, not the full free Dirac equation.
-The mass coefficient remains a parameter in this gate. The two rank-four
-copies are both retained. No physical spin or electron claim is made.
+DIRAC-011 proves a common frequency/rest-mass map, not the full free Dirac
+equation. The exact finite-lattice remainder remains present, and DIRAC-012
+must control it in the continuum evolution theorem. Both rank-four copies are
+retained. No physical spin or electron claim is made.
 
 ## Axiom policy
 

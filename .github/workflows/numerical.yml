@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  reproduce-dirac010:
+  reproduce-admitted-evidence:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,10 +15,13 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Reproduce DIRAC-010 matrix map
         run: python experiments/dirac010_standard_map/validate_dirac010.py
+      - name: Reproduce DIRAC-011 frequency and mass map
+        run: python experiments/dirac011_frequency_mass/validate_dirac011.py
       - name: Validate evidence schema
         run: >-
           python -c "import json;
           from pathlib import Path;
-          from scripts.production_guard import validate_dirac010_evidence;
-          p=json.loads(Path('experiments/dirac010_standard_map/result.json').read_text());
-          e=validate_dirac010_evidence(p); assert not e, e"
+          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence;
+          p10=json.loads(Path('experiments/dirac010_standard_map/result.json').read_text());
+          p11=json.loads(Path('experiments/dirac011_frequency_mass/result.json').read_text());
+          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11); assert not e, e"

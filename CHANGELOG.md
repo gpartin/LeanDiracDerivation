@@ -1,5 +1,18 @@
 # Changelog
 
+## DIRAC-011
+
+- Added positive- and negative-frequency graphs on the same native canonical
+  phase space and for both retained rank-four copies.
+- Kept the exact finite-lattice velocity defect equal to the bounded C19
+  spatial remainder rather than claiming exact finite-lattice Dirac evolution.
+- Proved the prepared native running rest frequency is `chi0=19` and that it is
+  the unique nonnegative standard mass coefficient with the same rest spectrum.
+- Added an independent reconstruction of both frequency graphs, both copies,
+  the remainder identity, and the mass selection.
+- The complete controlled continuum evolution theorem, current, spin, and an
+  electron remain open.
+
 ## DIRAC-010
 
 - Removed covariance-shape and signed-incidence energies from the admitted

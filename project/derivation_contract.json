@@ -22,7 +22,8 @@
     "DIRAC-007": "PASS_LOSSLESS_READOUT",
     "DIRAC-008": "PASS_COMPLETE_FIRST_ORDER_MAP",
     "DIRAC-009": "PASS_CONTINUUM_CUBICAL_SQUARE_ROOT_WITH_REMAINDER",
-    "DIRAC-010": "PASS_STANDARD_REPRESENTATION_BOTH_COPIES"
+    "DIRAC-010": "PASS_STANDARD_REPRESENTATION_BOTH_COPIES",
+    "DIRAC-011": "PASS_COMMON_FREQUENCY_AND_NATIVE_REST_MASS"
   },
   "dirac010_mandatory_gates": {
     "formal": [
@@ -38,9 +39,23 @@
       "no physical mass, spin or electron claim"
     ]
   },
-  "deferred_to_dirac011": [
-    "native frequency readout",
-    "native selection of mass coefficient",
-    "positive/negative-frequency organization"
+  "dirac011_mandatory_gates": {
+    "formal": [
+      "same two-field action and same DIRAC-010 embeddings",
+      "both frequency signs retained",
+      "both rank-four copies retained",
+      "exact lattice remainder remains explicit",
+      "native prepared rest frequency derived from the action equations",
+      "nonnegative mass coefficient uniquely selected by rest-spectrum matching",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "both frequency graphs and both copies reproduce within 1e-11",
+      "no continuum evolution, current, spin or electron claim"
+    ]
+  },
+  "deferred_to_dirac012": [
+    "controlled low-momentum continuum evolution theorem",
+    "explicit assembly of spatial and temporal error bounds"
   ]
 }

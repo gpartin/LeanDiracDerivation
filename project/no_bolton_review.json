@@ -1,8 +1,8 @@
 {
   "schema_version": "1.2.0",
-  "gate": "DIRAC-010",
+  "gate": "DIRAC-011",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac010 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac011 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -17,7 +17,8 @@
     "Moved the cubical Clifford operator downstream: it is now a continuum square-root readout, not an action term.",
     "Kept the exact finite-lattice spatial remainder and proved its fourth-order bound.",
     "Mapped both native rank-four copies to the standard Dirac representation; neither copy is deleted.",
-    "Kept the mass coefficient unresolved rather than fitting or identifying it by declaration.",
+    "Constructed both frequency signs as phase-space graphs of the same continuum square root; no new native state was added.",
+    "Selected mass by a uniqueness theorem from the native prepared rest frequency and nonnegative rest-spectrum matching, without fitting a target mass.",
     "Removed obsolete incidence-action modules from the production source tree."
   ],
   "declared_starting_hypotheses": [
@@ -35,10 +36,9 @@
     "runtime projection"
   ],
   "remaining_open_claims": [
-    "native mass selection",
     "complete continuum Dirac evolution",
     "density and current",
     "physical spin and electron"
   ],
-  "caveat": "The cubical square-root orientation is an explicit geometric factorization of the derived quadratic symbol; DIRAC-010 proves representation equivalence, not uniqueness or dynamic selection of that factorization."
+  "caveat": "The cubical square-root orientation remains an explicit geometric factorization of the derived quadratic symbol. DIRAC-011 selects the nonnegative rest coefficient within that factorization; it does not prove the full controlled continuum evolution equation or a physical electron."
 }
