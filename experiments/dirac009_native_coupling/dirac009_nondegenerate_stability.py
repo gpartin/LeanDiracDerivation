@@ -17,7 +17,8 @@ import numpy as np
 import torch
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "candidate_007_l4_nondegenerate_stability.json"
+OUT = HERE / "dirac009_nondegenerate_stability.json"
+SEED = 120009
 L = 4
 N = L**3
 PERTURBATION = 1.0e-4
@@ -240,7 +241,7 @@ def run(updates_per_cycle: int) -> dict[str, object]:
     mass_np = np.ones_like(q0)
     for site in range(N):
         mass_np[12 * site + 6:12 * (site + 1)] = B
-    rng = np.random.default_rng(120009)
+    rng = np.random.default_rng(SEED)
     perturb = rng.normal(size=q0.size)
     perturb /= np.linalg.norm(perturb)
     q = torch.tensor(
@@ -330,6 +331,7 @@ def main() -> int:
         "lattice": "4x4x4 periodic C19",
         "cycles": CYCLES,
         "relative_perturbation": PERTURBATION,
+        "seed": SEED,
         "background_incidence_residual_norm": float(
             background_terms["incidence_residual_norm"].detach()
         ),

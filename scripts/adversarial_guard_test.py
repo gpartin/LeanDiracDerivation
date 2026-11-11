@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import copy
 import math
 import re
@@ -13,6 +14,13 @@ import production_guard as guard
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--skip-production-build",
+        action="store_true",
+        help="reuse the complete production build performed by production_guard.py",
+    )
+    args = parser.parse_args()
     reports = guard.parse_axiom_reports(
         "'x' depends on axioms: [propext, Classical.choice, Quot.sound]"
     )
@@ -62,12 +70,13 @@ def main() -> int:
         / f"{external.stem}.olean"
     )
     try:
-        audit_build = guard.run(["lake", "build", *guard.production_modules()])
-        if audit_build.returncode:
-            raise AssertionError(
-                "failed to build every production module before auditing:\n"
-                f"{audit_build.stdout}{audit_build.stderr}"
-            )
+        if not args.skip_production_build:
+            audit_build = guard.run(["lake", "build", *guard.production_modules()])
+            if audit_build.returncode:
+                raise AssertionError(
+                    "failed to build every production module before auditing:\n"
+                    f"{audit_build.stdout}{audit_build.stderr}"
+                )
         nested.write_text("private axiom injected : False\n", encoding="utf-8")
         if nested not in guard.production_sources():
             raise AssertionError("nested Lean source escaped recursive enumeration")

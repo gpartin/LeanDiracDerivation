@@ -5,11 +5,10 @@ namespace LeanDirac
 /-!
 # DIRAC-009 closed native Clifford gate
 
-This certificate differs from the superseded algebraic scaffold in one
-essential way: the native Clifford operator is connected to the declared
-positive action by the exact nondegenerate Bloch bridge.  The certificate
-does not identify cube parity with physical mass.  That identification and
-the full Dirac symbol belong to DIRAC-010.
+The native Clifford operator is connected to the declared positive action by
+the exact nondegenerate Bloch bridge. The certificate does not identify cube
+parity with physical mass. That identification and the full Dirac symbol
+belong to DIRAC-010.
 -/
 
 structure Dirac009ClosedCertificate : Prop where

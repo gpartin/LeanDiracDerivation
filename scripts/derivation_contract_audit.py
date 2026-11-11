@@ -33,7 +33,7 @@ def main() -> int:
     review = load("no_bolton_review.json")
     stability = json.loads((
         ROOT / "experiments" / "dirac009_native_coupling" /
-        "candidate_007_l4_nondegenerate_stability.json"
+        "dirac009_nondegenerate_stability.json"
     ).read_text(encoding="utf-8"))
 
     checks = {

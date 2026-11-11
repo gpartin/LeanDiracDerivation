@@ -1,4 +1,4 @@
-import LeanDirac.Dirac009
+import LeanDirac.PreparedLinkAlgebra
 
 namespace LeanDirac
 

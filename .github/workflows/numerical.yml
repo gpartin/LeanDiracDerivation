@@ -1,0 +1,23 @@
+name: Numerical reproduction
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reproduce-dirac009:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Reproduce DIRAC-009 evidence
+        run: python experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.py
+      - name: Validate regenerated metrics
+        run: >-
+          python -c "import json; from pathlib import Path;
+          from scripts.production_guard import validate_stability;
+          p=json.loads(Path('experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.json').read_text());
+          e=validate_stability(p); assert not e, e"

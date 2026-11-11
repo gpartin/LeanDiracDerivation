@@ -1,5 +1,5 @@
 import LeanDirac.ChiIncidenceVariation
-import LeanDirac.Dirac009Geometry
+import LeanDirac.CubeIncidenceAlgebra
 
 namespace LeanDirac
 
@@ -7,13 +7,12 @@ set_option maxHeartbeats 4000000
 set_option maxRecDepth 4000
 
 /-!
-# DIRAC-009 prepared-link algebraic scaffold
+# Prepared-link algebra
 
-This module records the prepared complex-chi link algebra on the declared
-eight-corner background.  It is deliberately not the action-to-incidence
-proof.  That proof is isolated in `Dirac009ActionBridge`, which derives this
-link as the surrounding-cell response of the positive action.  The gauge
-below is not guessed: it is the explicit lift of
+This module records only the prepared complex-chi link algebra on the
+declared eight-corner background.  The action-to-incidence proof is isolated
+in `Dirac009ActionBridge`, which derives this link as the surrounding-cell
+response of the positive action.  The gauge below is the explicit lift of
 `preparedCubeGauge4`, whose relation to the measured prepared overlaps was
 proved in `prepared_cube_connection_gauge_eq_incidence`.
 -/
@@ -178,61 +177,8 @@ theorem prepared_links_commute_flavor
     prepared_chi_link_gauge_is_cube_incidence]
   exact cube_flavor_commutes_gamma axis amplitude
 
-/-!
-This is deliberately an algebraic scaffold.  It records the prepared-link
-algebra but does not claim that the link is the linearization of the action.
-That missing implication is proved separately in `Dirac009ActionBridge`.
--/
-structure Dirac009AlgebraicScaffold : Prop where
-  candidateAction : Dirac002Certificate
-  throughFirstOrderMap : ∀ (dt : ℝ) (hdt : dt ≠ 0),
-    IncidenceFirstOrderMapCertificate dt hdt
-  positiveNativeAction : ∀
-      (state : State (PeriodicCubicSite 2))
-      (velocity : Velocity (PeriodicCubicSite 2)),
-    0 ≤ incidenceC19Hamiltonian chi0 chiKineticNormalization state velocity
-      (periodicC19Geometry 2)
-  reciprocalTwoFieldVariation : ∀
-      (state : State (PeriodicCubicSite 2))
-      (velocity : Velocity (PeriodicCubicSite 2)),
-    IncidenceLocalTwoFieldVariationCertificate chi0 chiKineticNormalization
-      state velocity (periodicC19Geometry 2)
-  nativeSquare : ∀ axis amplitude,
-    cubeIncidenceGamma axis (cubeIncidenceGamma axis amplitude) = amplitude
-  nativeAnticommutator : ∀ axis other, axis ≠ other → ∀ amplitude,
-    cubeIncidenceGamma axis (cubeIncidenceGamma other amplitude) =
-      fun corner =>
-        -cubeIncidenceGamma other
-          (cubeIncidenceGamma axis amplitude) corner
-  betaAnticommutator : ∀ axis amplitude,
-    cubeParityBeta (cubeIncidenceGamma axis amplitude) =
-      fun corner =>
-        -cubeIncidenceGamma axis (cubeParityBeta amplitude) corner
-  twoRankFourCopies :
-    Function.Injective cubeEmbedMinus ∧ Function.Injective cubeEmbedPlus
-
-theorem dirac009_algebraic_scaffold :
-    Dirac009AlgebraicScaffold where
-  candidateAction := dirac002_candidate_action_and_geometry
-  throughFirstOrderMap := dirac008_incidence_complete_first_order_map
-  positiveNativeAction := by
-    intro state velocity
-    exact incidence_c19_hamiltonian_nonnegative
-      chi0 chiKineticNormalization state velocity (periodicC19Geometry 2)
-      (by norm_num [chi0])
-      (by rw [chi_kinetic_normalization_eq_1197]; norm_num)
-  reciprocalTwoFieldVariation := by
-    intro state velocity
-    exact incidence_c19_variations_from_actual_action
-      chi0 chiKineticNormalization state velocity (periodicC19Geometry 2)
-  nativeSquare := cube_incidence_gamma_square
-  nativeAnticommutator := cube_incidence_gamma_anticommute
-  betaAnticommutator := cube_parity_beta_anticommutes
-  twoRankFourCopies := ⟨cube_embed_minus_injective, cube_embed_plus_injective⟩
-
 end
 end LeanDirac
 
 #print axioms LeanDirac.prepared_chi_link_gauge_is_cube_incidence
 #print axioms LeanDirac.prepared_chi_links_anticommute
-#print axioms LeanDirac.dirac009_algebraic_scaffold

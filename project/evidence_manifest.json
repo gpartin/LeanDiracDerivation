@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "role": "numerical-evidence",
+  "action_id": "DIRAC002_COMPLEX_CHI_COVARIANCE_PLUS_INCIDENCE_V2",
+  "numerical_evidence": "experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.json",
+  "result_origin_commit": "3284aec7db85fd0f5125d0443798373ef318339b",
+  "script_origin_commit": "597d4211f2d3822b18dc7a1eead483382c4ab68b",
+  "seed": 120009,
+  "environment": {
+    "python": "3.14.0",
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cu126",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda"
+  },
+  "files": {
+    "experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.json": "8e014856c6c64414ba604144427bea569ee45ee17da480b052474445e2b0138b",
+    "experiments/dirac009_native_coupling/dirac009_nondegenerate_stability.py": "b3646afc730029aac467599b8f8a66d7b41c797dd00d1395cb049fcbcbe4f730"
+  }
+}
