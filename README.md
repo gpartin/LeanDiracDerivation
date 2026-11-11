@@ -173,9 +173,10 @@ python experiments/dirac009_native_coupling/candidate_007_l4_nondegenerate_stabi
 ```
 
 The axiom report may contain Lean's standard foundations
-`propext`, `Classical.choice` and `Quot.sound`. The manual production audit executes
-the audit and fails on any other dependency, or on `sorry`, `admit` or a custom
-`axiom` in any production Lean module.
+`propext`, `Classical.choice` and `Quot.sound`. The manual production audit asks
+Lean itself to inspect every compiled declaration owned by a production module;
+it fails on any other dependency, `sorry`, `admit` or custom `axiom`. This avoids
+treating a partial Python tokenizer as a Lean proof-security boundary.
 
 ## Claim boundary
 

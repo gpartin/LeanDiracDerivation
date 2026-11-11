@@ -43,83 +43,6 @@ def production_sources() -> list[Path]:
     ]
 
 
-def lean_code_without_comments_or_strings(source: str) -> str:
-    """Remove Lean comments and literals without joining adjacent tokens."""
-    output: list[str] = []
-    index = 0
-    block_depth = 0
-    in_string = False
-    while index < len(source):
-        pair = source[index:index + 2]
-        char = source[index]
-        if block_depth:
-            if pair == "/-":
-                block_depth += 1
-                index += 2
-            elif pair == "-/":
-                block_depth -= 1
-                index += 2
-                if block_depth == 0:
-                    output.append(" ")
-            else:
-                index += 1
-            continue
-        if in_string:
-            if char == "\\":
-                index += 2
-            elif char == '"':
-                in_string = False
-                index += 1
-            else:
-                index += 1
-            continue
-        if pair == "/-":
-            output.append(" ")
-            block_depth = 1
-            index += 2
-        elif pair == "--":
-            newline = source.find("\n", index + 2)
-            index = len(source) if newline < 0 else newline + 1
-            output.append("\n")
-        elif char == '"':
-            output.append(" ")
-            in_string = True
-            index += 1
-        elif char == "'" and (index == 0 or not (
-            source[index - 1].isalnum() or source[index - 1] in "_'"
-        )):
-            # Lean character literals use single quotes, while apostrophes are
-            # also legal inside identifiers.  Only consume a quote-delimited
-            # literal when a closing quote occurs before a line break.
-            cursor = index + 1
-            if cursor < len(source) and source[cursor] == "\\":
-                cursor += 2
-                while cursor < len(source) and source[cursor] not in "'\r\n":
-                    cursor += 1
-            else:
-                cursor += 1
-            if cursor < len(source) and source[cursor] == "'":
-                output.append(" ")
-                index = cursor + 1
-            else:
-                output.append(char)
-                index += 1
-        else:
-            output.append(char)
-            index += 1
-    return "".join(output)
-
-
-def forbidden_tokens(source: str) -> list[str]:
-    code = lean_code_without_comments_or_strings(source)
-    patterns = {
-        "sorry": r"\bsorry\b",
-        "admit": r"\badmit\b",
-        "axiom declaration": r"\baxiom\b",
-    }
-    return [name for name, pattern in patterns.items() if re.search(pattern, code)]
-
-
 def parse_axiom_reports(output: str) -> dict[str, set[str]]:
     reports: dict[str, set[str]] = {}
     pattern = re.compile(
@@ -127,11 +50,12 @@ def parse_axiom_reports(output: str) -> dict[str, set[str]]:
         re.S,
     )
     for name, block in pattern.findall(output):
-        reports[name] = set(re.findall(r"[A-Za-z_][A-Za-z0-9_.]*", block))
+        dependencies = set(re.findall(r"[A-Za-z_][A-Za-z0-9_.]*", block))
+        reports.setdefault(name, set()).update(dependencies)
     for name in re.findall(
         r"'([A-Za-z_][A-Za-z0-9_.]*)' does not depend on any axioms", output
     ):
-        reports[name] = set()
+        reports.setdefault(name, set())
     return reports
 
 
@@ -161,6 +85,7 @@ def validate_stability(payload: dict) -> list[str]:
         if not row.get("passes"):
             errors.append(f"stability row failed: {row.get('updates_per_cycle')}")
         finite_scalars = {
+            "dt": row.get("dt"),
             "initial_incidence_energy": row.get("initial_incidence_energy"),
             "initial_incidence_residual_norm": row.get(
                 "initial_incidence_residual_norm"),
@@ -234,10 +159,6 @@ def validate(run_builds: bool = True) -> list[str]:
         elif sha256(path) != expected:
             errors.append(f"locked source changed: {relative}")
 
-    for path in production_sources():
-        for item in forbidden_tokens(path.read_text(encoding="utf-8")):
-            relative = path.relative_to(ROOT).as_posix()
-            errors.append(f"forbidden proof token present in {relative}: {item}")
     errors.extend(validate_stability(load(STABILITY)))
 
     if run_builds:
@@ -248,7 +169,10 @@ def validate(run_builds: bool = True) -> list[str]:
         if audit.returncode:
             errors.append("Lean axiom audit build failed\n" + audit.stdout + audit.stderr)
         else:
-            reports = parse_axiom_reports(audit.stdout + audit.stderr)
+            audit_output = audit.stdout + audit.stderr
+            if "LEAN_DIRAC_ENVIRONMENT_AUDIT_PASS" not in audit_output:
+                errors.append("compiled-environment axiom audit marker is missing")
+            reports = parse_axiom_reports(audit_output)
             expected = expected_axiom_reports()
             missing = expected - set(reports)
             if missing:

@@ -1,6 +1,9 @@
 import LeanDirac.Publication
+import LeanDirac.EnvironmentAudit
 
 /-! Axiom audit for the cumulative native-incidence chain through DIRAC-009. -/
+
+#audit_lean_dirac_environment
 
 #print axioms LeanDirac.dirac001_native_framework
 #print axioms LeanDirac.dirac002_positive_incidence_periodic_c19_two_field_action
