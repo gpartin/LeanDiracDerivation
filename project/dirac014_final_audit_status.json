@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-014",
+  "status": "PASS",
+  "scope": "every production dependency from DIRAC-001 through DIRAC-013 and the final DIRAC-015 theorem statement",
+  "checks": {
+    "compiled_environment_enumerates_every_production_module": true,
+    "publication_dependencies_use_only_standard_lean_foundations": true,
+    "no_sorry_admit_or_custom_axiom_reaches_publication": true,
+    "native_action_contains_no_dirac_matrix_spinor_or_projector": true,
+    "prepared_background_is_declared_not_claimed_as_formed": true,
+    "finite_lattice_and_timestep_remainders_remain_explicit": true,
+    "both_rank_four_copies_are_retained": true,
+    "current_is_derived_from_action_and_hamiltonian_response": true,
+    "independent_evidence_is_complete_finite_and_reproduced": true,
+    "claim_boundary_excludes_physical_electron_and_uniqueness": true
+  },
+  "critical_findings": [],
+  "high_findings": [],
+  "verdict": "PASS_ZERO_CRITICAL_HIGH"
+}

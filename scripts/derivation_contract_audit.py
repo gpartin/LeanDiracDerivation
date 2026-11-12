@@ -1,4 +1,4 @@
-"""Read-only audit of the DIRAC-001--013 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--015 derivation contract."""
 
 from __future__ import annotations
 
@@ -38,8 +38,8 @@ def main() -> int:
         ROOT / "experiments" / "dirac013_density_current" / "result.json"
     ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_013": status.get("highest_passed_gate") == "DIRAC-013",
-        "next_gate_is_014": status.get("next_gate") == "DIRAC-014",
+        "highest_gate_is_015": status.get("highest_passed_gate") == "DIRAC-015",
+        "all_fifteen_gates_complete": status.get("completed") == 15,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "continuum_square_root_present": contains(
@@ -75,9 +75,15 @@ def main() -> int:
         "velocity_is_hamiltonian_response": contains(
             "LeanDirac/Dirac013.lean",
             "theorem standard_c19_velocity_is_hamiltonian_momentum_response"),
-        "publication_stops_at_013": contains(
+        "final_kg_dirac_square_present": contains(
+            "LeanDirac/Dirac015.lean",
+            "diracSquareIsContinuumKleinGordon"),
+        "final_action_root_present": contains(
+            "LeanDirac/Dirac015.lean",
+            "kleinGordonTangentFromAction"),
+        "publication_stops_at_015": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac013"),
+            "theorem current_highest_gate_is_dirac015"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -102,7 +108,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC013_READY" if passed else "DIRAC013_OPEN",
+        "verdict": "DIRAC015_READY" if passed else "DIRAC015_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

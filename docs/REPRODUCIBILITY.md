@@ -65,6 +65,19 @@ at quadratic order. It does not claim positive density for mixed frequencies,
 exact finite-lattice current equality, nonlinear live-chi current closure,
 physical spin, or an electron.
 
+## Final audit and deterministic package
+
+```bash
+python scripts/final_chain_audit.py
+python scripts/build_publication_package.py --output-dir dist
+```
+
+The first command verifies the complete 15-gate dependency and claim boundary.
+The second packages exactly the Git-tracked tree with fixed timestamps, writes
+an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
+produces `dist/LeanDiracDerivation-DIRAC-015.zip` and its checksum. These steps
+test reproducibility; they do not add a mathematical or physical premise.
+
 ## Trust boundary
 
 The Lean theorem is the formal evidence. The Python result is an independent
