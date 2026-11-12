@@ -51,6 +51,20 @@ mode defect, the combined spatial/time bound, and the normalized equation
 error under refinement. It does not test density/current, nonlinear live-chi
 evolution, physical spin, or an electron.
 
+## Independent DIRAC-013 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac013_density_current/validate_dirac013.py
+```
+
+The program independently differentiates the native bond energy, checks the
+reverse-bond law and exact local continuity on periodic C19 fields, reconstructs
+the positive-frequency density normalization and both cube-copy density scales,
+and checks that the exact finite C19 flow approaches the standard Dirac current
+at quadratic order. It does not claim positive density for mixed frequencies,
+exact finite-lattice current equality, nonlinear live-chi current closure,
+physical spin, or an electron.
+
 ## Trust boundary
 
 The Lean theorem is the formal evidence. The Python result is an independent

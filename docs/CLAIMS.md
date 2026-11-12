@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-012
+## Established through DIRAC-013
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -30,12 +30,25 @@
   previously proved fourth-order C19 spatial term.
 - Independent numerical reconstruction confirms the action expansion,
   centered recurrence identity, bounds, and refinement behavior.
+- A local phase variation of the same native C19 bond action yields an oriented
+  bond flow with the required reverse-bond sign.
+- That native phase density and bond flow satisfy an exact local continuity
+  identity for the tangent lattice equation.
+- On the positive-frequency graph, an explicit normalization converts the
+  native phase density into the standard four-component density.
+- The exact finite C19 group flow has the standard Dirac current as its
+  low-momentum derivative for the same four-component embedding.
+- Both retained cubical copies have the same explicit density scale, and an
+  independent 32-case reconstruction reproduces every DIRAC-013 identity and
+  the quadratic convergence of the current limit.
 
 ## Not established
 
 - Exact Dirac evolution at finite lattice spacing or finite timestep.
 - Arbitrary nonlinear live-chi Dirac evolution away from the prepared vacuum.
-- Dirac density, current, and continuity.
+- Positive Dirac density for arbitrary mixed-frequency native data.
+- Exact finite-lattice equality to the continuum Dirac current.
+- Arbitrary nonlinear live-chi density/current closure.
 - Unique selection or physical interpretation of either rank-four copy.
 - Physical spin one-half, an electron, charge, localization, or formation.
 - Canonical LFM status or uniqueness of the action or square-root orientation.

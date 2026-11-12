@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-012. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-013. -/
 
 #audit_lean_dirac_environment
 
@@ -28,4 +28,14 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.normalized_native_dirac_mode_residual_bound
 #print axioms LeanDirac.standard_c19_hamiltonian_square_is_continuum_dispersion
 #print axioms LeanDirac.dirac012_controlled_continuum_evolution
-#print axioms LeanDirac.current_highest_gate_is_dirac012
+#print axioms LeanDirac.prepared_tangent_bond_symmetric
+#print axioms LeanDirac.prepared_bond_local_phase_expansion
+#print axioms LeanDirac.scalar_tangent_local_phase_variation_from_action
+#print axioms LeanDirac.native_tangent_local_continuity
+#print axioms LeanDirac.native_cell4_positive_density_is_dirac_density
+#print axioms LeanDirac.standard_c19_velocity_is_hamiltonian_momentum_response
+#print axioms LeanDirac.native_cell4_flux_continuum_limit_is_dirac_current
+#print axioms LeanDirac.cube_dirac_embed_minus_density
+#print axioms LeanDirac.cube_dirac_embed_plus_density
+#print axioms LeanDirac.dirac013_native_density_current_continuity
+#print axioms LeanDirac.current_highest_gate_is_dirac013

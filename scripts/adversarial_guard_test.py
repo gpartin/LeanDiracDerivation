@@ -70,6 +70,21 @@ def main() -> int:
     )
     if not guard.validate_dirac012_evidence(incomplete_012):
         raise AssertionError("incomplete DIRAC-012 checks were accepted")
+    payload_013 = guard.load(guard.EVIDENCE_013)
+    if guard.validate_dirac013_evidence(payload_013):
+        raise AssertionError("passing DIRAC-013 evidence was rejected")
+    broken_013 = copy.deepcopy(payload_013)
+    broken_013["checks"]["exact_local_continuity_reconstructed"] = False
+    if not guard.validate_dirac013_evidence(broken_013):
+        raise AssertionError("failed DIRAC-013 continuity was accepted")
+    nonfinite_013 = copy.deepcopy(payload_013)
+    nonfinite_013["minimum_flux_refinement_ratio"] = math.nan
+    if not guard.validate_dirac013_evidence(nonfinite_013):
+        raise AssertionError("non-finite DIRAC-013 refinement was accepted")
+    incomplete_013 = copy.deepcopy(payload_013)
+    incomplete_013["checks"].pop("dirac_current_identity_reconstructed")
+    if not guard.validate_dirac013_evidence(incomplete_013):
+        raise AssertionError("incomplete DIRAC-013 checks were accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

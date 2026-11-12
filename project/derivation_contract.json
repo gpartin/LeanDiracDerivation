@@ -24,7 +24,8 @@
     "DIRAC-009": "PASS_CONTINUUM_CUBICAL_SQUARE_ROOT_WITH_REMAINDER",
     "DIRAC-010": "PASS_STANDARD_REPRESENTATION_BOTH_COPIES",
     "DIRAC-011": "PASS_COMMON_FREQUENCY_AND_NATIVE_REST_MASS",
-    "DIRAC-012": "PASS_CONTROLLED_CONTINUUM_EVOLUTION"
+    "DIRAC-012": "PASS_CONTROLLED_CONTINUUM_EVOLUTION",
+    "DIRAC-013": "PASS_NATIVE_DENSITY_CURRENT_CONTINUITY"
   },
   "dirac010_mandatory_gates": {
     "formal": [
@@ -73,8 +74,25 @@
       "no density/current, nonlinear live-chi, spin or electron claim"
     ]
   },
-  "deferred_to_dirac013": [
-    "native Noether density and bond current",
-    "continuum Dirac density/current and continuity equation"
+  "dirac013_mandatory_gates": {
+    "formal": [
+      "same two-field action and transitive DIRAC-012 chain",
+      "oriented C19 bond flow derived by phase variation of the native bond action",
+      "reverse-bond antisymmetry and exact local native continuity",
+      "positive-frequency restriction and normalization stated explicitly",
+      "same four-component embedding used for density and current",
+      "velocity/current operator derived as the Hamiltonian momentum response",
+      "exact finite C19 group flow retained before its continuum derivative",
+      "both cubical copy density normalizations proved",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "action variation, local continuity, density and current identities reproduce in 32 frozen cases",
+      "finite C19 flux approaches its continuum slope at quadratic rate",
+      "no mixed-frequency positivity, exact finite-lattice current, nonlinear live-chi, spin or electron claim"
+    ]
+  },
+  "deferred_to_dirac014": [
+    "complete adversarial final audit of the cumulative chain"
   ]
 }

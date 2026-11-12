@@ -1,8 +1,8 @@
 {
   "schema_version": "1.2.0",
-  "gate": "DIRAC-012",
+  "gate": "DIRAC-013",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac012 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac013 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -23,6 +23,11 @@
     "Connected the continuum mode to the actual centered recurrence rather than an abstract continuous-time oscillator.",
     "Added a normalized equation residual so timestep shrinkage cannot create a trivial pass.",
     "Kept finite-spacing and finite-timestep errors explicit and independently reproduced their bounds and refinement.",
+    "Derived oriented bond flow by varying the already-admitted native C19 action rather than defining a desired current in the action.",
+    "Proved exact local phase continuity before introducing the four-component density/current readout.",
+    "Restricted positive density to the derived positive-frequency graph and exposed its normalization instead of claiming positivity for arbitrary second-order data.",
+    "Derived the standard current as the low-momentum slope of the exact native C19 group flow using the same embedding and retained both cubical copies.",
+    "Proved the velocity operator is the exact momentum response of the already-derived Hamiltonian rather than an independently supplied current matrix.",
     "Removed obsolete incidence-action modules from the production source tree."
   ],
   "declared_starting_hypotheses": [
@@ -41,8 +46,9 @@
   ],
   "remaining_open_claims": [
     "exact finite-lattice or nonlinear live-chi Dirac evolution",
-    "density and current",
+    "positive density for arbitrary mixed-frequency native data",
+    "exact finite-lattice or nonlinear live-chi Dirac current",
     "physical spin and electron"
   ],
-  "caveat": "The cubical square-root orientation remains an explicit geometric factorization of the action-derived quadratic symbol. DIRAC-012 proves a controlled linearized continuum equation on the declared prepared complex-chi vacuum; it does not prove exact finite-lattice dynamics, arbitrary nonlinear live-chi Dirac evolution, density/current, or a physical electron."
+  "caveat": "The cubical square-root orientation remains an explicit geometric factorization of the action-derived quadratic symbol. DIRAC-013 derives exact native phase continuity and a positive-frequency continuum density/current limit. It does not prove exact finite-lattice Dirac current equality, arbitrary nonlinear live-chi current closure, physical spin, or an electron."
 }
