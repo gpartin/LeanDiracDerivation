@@ -1,5 +1,9 @@
-import LeanDirac.Dirac001
-import LeanDirac.PreparedBackground
+module
+
+public import LeanDirac.Dirac001
+public import LeanDirac.PreparedBackground
+
+@[expose] public section
 
 namespace LeanDirac
 

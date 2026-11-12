@@ -1,5 +1,9 @@
-import LeanDirac.Publication
-import LeanDirac.EnvironmentAudit
+module
+
+public import LeanDirac.Publication
+public import LeanDirac.EnvironmentAudit
+
+@[expose] public section
 
 /-! Axiom audit for the cumulative base-action chain through DIRAC-015. -/
 

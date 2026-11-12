@@ -1,10 +1,14 @@
-import Mathlib.Util.AssertNoSorry
+module
+
+public import Mathlib.Util.AssertNoSorry
+
+@[expose] public section
 
 /-! Compiler-environment audit used by the publication boundary. -/
 
 open Lean Meta Elab Command
 
-private def allowedFoundationAxiom (name : Name) : Bool :=
+private meta def allowedFoundationAxiom (name : Name) : Bool :=
   name == ``propext || name == ``Classical.choice || name == ``Quot.sound
 
 /--

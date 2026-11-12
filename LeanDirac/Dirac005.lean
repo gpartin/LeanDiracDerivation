@@ -1,4 +1,8 @@
-import LeanDirac.Dirac004DiscreteAction
+module
+
+public import LeanDirac.Dirac004DiscreteAction
+
+@[expose] public section
 
 namespace LeanDirac
 

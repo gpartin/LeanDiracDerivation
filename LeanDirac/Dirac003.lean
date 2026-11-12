@@ -1,4 +1,8 @@
-import LeanDirac.Dirac002
+module
+
+public import LeanDirac.Dirac002
+
+@[expose] public section
 
 namespace LeanDirac
 

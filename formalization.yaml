@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Cubical C19 first-order factorization"
+  description: >-
+    A Lean proof that three signed incidence operations derived from the
+    oriented corners of a cube, together with its parity grading, define a
+    first-order complex symbol whose square is exactly the isotropic quadratic
+    low-momentum symbol of the C19 cubic stencil.
+  authors:
+    - "G. D. Partin"
+  license: "CC0-1.0"
+  responsible_maintainers:
+    - "G. D. Partin"
+
+classification:
+  arxiv: ["math-ph", "cs.LO"]
+  msc2020: ["03B35", "81Q05"]
+
+sources:
+  - title: "Cubical C19 first-order factorization"
+    type: original-proof
+    relationship: other
+    id: "https://doi.org/10.5281/zenodo.24150001"
+    location: "https://github.com/gpartin/LeanDiracDerivation"
+    license: "CC0-1.0"
+    author_endorsement: "participated"
+  - title: "Differential Forms in Lattice Field Theories: An Overview"
+    authors:
+      - "F. L. Teixeira"
+    type: paper
+    relationship: background
+    id: "https://doi.org/10.1155/2013/487270"
+    location: "https://onlinelibrary.wiley.com/doi/10.1155/2013/487270"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    The registered theorem is the exact algebraic factorization of the C19
+    low-momentum quadratic symbol by a cube-incidence first-order symbol. The
+    larger repository proves supporting lattice and action results with a
+    controlled continuum statement. This entry does not prove a localized
+    electron, operational spin one-half, an exact finite-spacing Dirac
+    equation, or the Standard Model.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+  main_results:
+    - "LFMDiracChallenge.main_result"
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["OpenAI Codex"]
+      framework: "Codex desktop"
+      tool_setup: "Human-directed AI-assisted Lean development, compilation, adversarial audits, and independent Python checks"
+      cost:
+        wall_time: "multi-session research program"
+        spend_usd: "subscription-based; not tracked"
+        hardware: "local Windows workstation"
+      prompting_notes: "The human supplied the physical hypotheses, acceptance boundaries, and repeated red-team requirements; the agent implemented, tested, and documented the Lean formalization."
+  spend_usd: "subscription-based; not tracked"
+  notes: "Every production theorem was compiled from a clean tree; the Palomar wrapper advertises only the exact cubical factorization theorem."
+
+fidelity:
+  divergences: >-
+    This is an original discrete cubical factorization result. The cited
+    spinor-geometry article is background rather than a theorem copied into
+    Lean. Physical interpretation is deliberately narrower than the broader
+    research hypothesis.
+
+review:
+  status: "self-assessed with automated adversarial review"
+  reviewers:
+    - "G. D. Partin"
+  notes: >-
+    The proof was repeatedly audited for circular definitions, injected Dirac
+    matrices, hidden axioms, stale dependencies, and mismatch between the
+    advertised statement and the production theorem. No independent expert
+    peer review has yet been completed.
+
+alignment:
+  namespace: "LFMDiracChallenge"
+  statements:
+    - source: "Cubical C19 first-order factorization"
+      lean: "LFMDiracChallenge.main_result"
+      module: "Solution"
+      status: "proved"
+      note: "The Palomar solution aliases the production cubical definitions and proves the exact square identity using the production theorem."
+
+acknowledgements: "Lean, Mathlib, Palomar Registry, OpenAI Codex, and reviewers of the public repository."
