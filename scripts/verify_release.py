@@ -19,6 +19,7 @@ def main() -> int:
     run(sys.executable, "scripts/production_guard.py")
     run(sys.executable, "scripts/adversarial_guard_test.py", "--skip-production-build")
     run(sys.executable, "scripts/derivation_contract_audit.py", "--strict")
+    run(sys.executable, "scripts/final_chain_audit.py")
     print("RELEASE_VERIFICATION_PASS")
     return 0
 

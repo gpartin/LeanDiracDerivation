@@ -1,8 +1,8 @@
 {
   "schema_version": "1.2.0",
-  "gate": "DIRAC-013",
+  "gate": "DIRAC-015",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac013 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac015 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -28,6 +28,8 @@
     "Restricted positive density to the derived positive-frequency graph and exposed its normalization instead of claiming positivity for arbitrary second-order data.",
     "Derived the standard current as the low-momentum slope of the exact native C19 group flow using the same embedding and retained both cubical copies.",
     "Proved the velocity operator is the exact momentum response of the already-derived Hamiltonian rather than an independently supplied current matrix.",
+    "Made the action-to-Klein-Gordon-to-Dirac square relationship explicit in the final theorem without changing the native action.",
+    "Separated the final adversarial and clean-reproduction gates from the mathematical theorem so status metadata cannot close a physical proof obligation.",
     "Removed obsolete incidence-action modules from the production source tree."
   ],
   "declared_starting_hypotheses": [
@@ -50,5 +52,5 @@
     "exact finite-lattice or nonlinear live-chi Dirac current",
     "physical spin and electron"
   ],
-  "caveat": "The cubical square-root orientation remains an explicit geometric factorization of the action-derived quadratic symbol. DIRAC-013 derives exact native phase continuity and a positive-frequency continuum density/current limit. It does not prove exact finite-lattice Dirac current equality, arbitrary nonlinear live-chi current closure, physical spin, or an electron."
+  "caveat": "The cubical square-root orientation remains an explicit, not uniquely forced, geometric factorization of the action-derived quadratic symbol. DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. It does not prove exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
 }

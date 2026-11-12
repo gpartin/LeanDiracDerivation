@@ -1,4 +1,4 @@
-"""One-command release audit for the admitted DIRAC-001--013 chain.
+"""One-command release audit for the completed DIRAC-001--015 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -20,6 +20,8 @@ EVIDENCE_MANIFEST = ROOT / "project" / "evidence_manifest.json"
 RELEASE_MANIFEST = ROOT / "project" / "release_manifest.json"
 STATUS = ROOT / "project" / "status.json"
 REVIEW = ROOT / "project" / "no_bolton_review.json"
+AUDIT_014 = ROOT / "project" / "dirac014_final_audit_status.json"
+REPRODUCTION_015 = ROOT / "project" / "dirac015_clean_reproduction_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
@@ -278,17 +280,29 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(e1 + e2 + e3 + e4)
     status = load(STATUS)
     review = load(REVIEW)
-    if status.get("highest_passed_gate") != "DIRAC-013":
-        errors.append("status does not stop at DIRAC-013")
-    if status.get("next_gate") != "DIRAC-014":
-        errors.append("DIRAC-014 is not the next gate")
-    if status.get("completed") != 13 or status.get("total") != 15:
+    audit_014 = load(AUDIT_014)
+    reproduction_015 = load(REPRODUCTION_015)
+    if status.get("highest_passed_gate") != "DIRAC-015":
+        errors.append("status does not stop at DIRAC-015")
+    if status.get("next_gate") != "PUBLICATION_DECISION":
+        errors.append("publication decision is not the next boundary")
+    if status.get("completed") != 15 or status.get("total") != 15:
         errors.append("gate counts are incorrect")
     if review.get("status") != "PASS_ZERO_CRITICAL_HIGH":
         errors.append("critical/high red-team findings remain")
     if review.get("critical_findings") or review.get("high_findings"):
         errors.append("red-team finding lists are not empty")
-    publication = "LeanDirac.current_highest_gate_is_dirac013"
+    if audit_014.get("status") != "PASS" or \
+            audit_014.get("verdict") != "PASS_ZERO_CRITICAL_HIGH":
+        errors.append("DIRAC-014 final adversarial audit is not PASS")
+    if audit_014.get("critical_findings") or audit_014.get("high_findings"):
+        errors.append("DIRAC-014 retains critical/high findings")
+    if reproduction_015.get("status") != "PASS":
+        errors.append("DIRAC-015 clean reproduction is not PASS")
+    if reproduction_015.get("formal_theorem") != \
+            "LeanDirac.lfm_free_dirac_continuum_limit":
+        errors.append("DIRAC-015 names the wrong final theorem")
+    publication = "LeanDirac.current_highest_gate_is_dirac015"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -360,8 +374,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-013")
-    print("next_gate=DIRAC-014 status=OPEN")
+    print("highest_passed_gate=DIRAC-015")
+    print("next_gate=PUBLICATION_DECISION")
     return 0
 
 

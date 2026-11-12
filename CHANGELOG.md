@@ -1,5 +1,17 @@
 # Changelog
 
+## DIRAC-014--015
+
+- Completed a top-down adversarial audit with zero critical/high findings.
+- Added one cumulative Lean theorem connecting the action-derived massive C19
+  Klein--Gordon tangent to its cubical four-component Dirac square root.
+- Retained explicit finite-spacing and centered-time remainders and the
+  action-derived density/current limit.
+- Added deterministic clean-checkout packaging with an internal file manifest
+  and external archive checksum.
+- No new field, action term, Dirac matrix, spinor rule, or physical-electron
+  claim was added.
+
 ## DIRAC-013
 
 - Derived the oriented C19 bond flow by varying the same native bond action.

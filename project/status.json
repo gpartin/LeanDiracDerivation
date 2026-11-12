@@ -2,9 +2,9 @@
   "schema_version": "1.2.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-013",
-  "next_gate": "DIRAC-014",
-  "completed": 13,
+  "highest_passed_gate": "DIRAC-015",
+  "next_gate": "PUBLICATION_DECISION",
+  "completed": 15,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
@@ -19,7 +19,9 @@
     "DIRAC-010": "LeanDirac/Dirac010.lean",
     "DIRAC-011": "LeanDirac/Dirac011.lean",
     "DIRAC-012": "LeanDirac/Dirac012.lean",
-    "DIRAC-013": "LeanDirac/Dirac013.lean"
+    "DIRAC-013": "LeanDirac/Dirac013.lean",
+    "DIRAC-014": "project/dirac014_final_audit_status.json",
+    "DIRAC-015": "LeanDirac/Dirac015.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -35,8 +37,8 @@
     "DIRAC-011": "PASS",
     "DIRAC-012": "PASS",
     "DIRAC-013": "PASS",
-    "DIRAC-014": "OPEN",
-    "DIRAC-015": "OPEN"
+    "DIRAC-014": "PASS",
+    "DIRAC-015": "PASS"
   },
-  "claim_boundary": "DIRAC-013 is the highest passed research gate. From the same two-field action, Lean derives the native oriented C19 bond flow and its exact local phase-continuity law. On the already-derived positive-frequency graph, an explicit normalization gives the four-component density, and the low-momentum derivative of the exact C19 flow gives the standard Dirac current for the same embedding. This does not claim positive density for arbitrary mixed-frequency data, exact finite-lattice equality to the continuum current, nonlinear live-chi current closure, physical spin, or an electron."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. The declared two-field action supplies the massive C19 Klein-Gordon tangent symbol; the cubical four-component Hamiltonian squares to its continuum part; the actual centered recurrence approaches the first-order Dirac branch with explicit spatial and temporal corrections; and the same action supplies the admitted density/current limit. This does not claim uniqueness, exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
 }

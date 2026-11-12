@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-013
+## Established through DIRAC-015
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -41,6 +41,12 @@
 - Both retained cubical copies have the same explicit density scale, and an
   independent 32-case reconstruction reproduces every DIRAC-013 identity and
   the quadratic convergence of the current limit.
+- One cumulative Lean theorem explicitly connects the action-derived massive
+  C19 Klein--Gordon tangent, the cubical Dirac square root, the controlled
+  centered-time continuum limit, and the admitted density/current map.
+- The complete production dependency graph has passed an adversarial audit
+  with zero critical/high findings and is reproducible as a deterministic
+  clean-checkout package.
 
 ## Not established
 
@@ -53,5 +59,7 @@
 - Physical spin one-half, an electron, charge, localization, or formation.
 - Canonical LFM status or uniqueness of the action or square-root orientation.
 
-The prepared running background is a declared conditional state, not an
-origin story. A passed gate is not permission to claim a downstream result.
+The theorem uses a conditional prepared background; it does not provide an
+origin story. The chosen action and cubical square root are not uniquely
+forced by this theorem. In particular, this is not yet a localized physical
+electron. A passed gate is not permission to claim a downstream result.

@@ -19,3 +19,11 @@ jobs:
           build: false
       - name: Verify release
         run: python scripts/verify_release.py
+      - name: Build deterministic DIRAC-015 publication package
+        run: python scripts/build_publication_package.py --output-dir dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LeanDiracDerivation-DIRAC-015
+          path: |
+            dist/LeanDiracDerivation-DIRAC-015.zip
+            dist/LeanDiracDerivation-DIRAC-015.zip.sha256

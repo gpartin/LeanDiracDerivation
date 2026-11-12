@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-015",
+  "status": "PASS",
+  "formal_theorem": "LeanDirac.lfm_free_dirac_continuum_limit",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac015",
+  "reproduction_command": "python scripts/verify_release.py",
+  "clean_workflow": ".github/workflows/lean.yml",
+  "package_command": "python scripts/build_publication_package.py --output-dir dist",
+  "package_artifacts": [
+    "LeanDiracDerivation-DIRAC-015.zip",
+    "LeanDiracDerivation-DIRAC-015.zip.sha256"
+  ],
+  "acceptance": [
+    "clean checkout builds every production Lean module",
+    "compiled environment audit reports only standard Lean foundations",
+    "all independent numerical reconstructions reproduce",
+    "all four role manifests match their exact files",
+    "final adversarial audit reports zero critical or high findings",
+    "deterministic archive includes every committed publication file and verifies byte-for-byte across checkout line-ending policies"
+  ],
+  "claim_boundary": "The final theorem proves a conditional free-Dirac continuum sector of the declared noncanonical two-field action. It does not prove uniqueness, arbitrary nonlinear live-chi Dirac closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
+}

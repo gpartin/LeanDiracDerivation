@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac013`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac015`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -19,19 +19,20 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-011 | PASS | Builds both frequency graphs from the same phase space and embeddings, retains the exact C19 remainder, and uniquely selects the nonnegative rest coefficient from the native running frequency. | Take controlled limits. |
 | DIRAC-012 | PASS | Derives the prepared-vacuum quadratic scalar channel from the same action, inserts a continuum Dirac mode into the actual centered recurrence, and bounds the normalized equation error by explicit timestep and C19 lattice terms. | Derive observables. |
 | DIRAC-013 | PASS | Derives oriented C19 bond flow from the same action, proves exact local phase continuity, and obtains the four-component density/current on the positive-frequency graph in the low-momentum continuum limit using the same embeddings. | Final audit. |
-| DIRAC-014 | OPEN | Eliminate every critical/high circularity, placeholder, and axiom finding. | Clean reproduction. |
-| DIRAC-015 | OPEN | Reproduce and package the complete derivation from a clean checkout. | Publication decision. |
+| DIRAC-014 | PASS | Audits the complete dependency graph, proof foundations, numerical evidence, manifests, and claim boundary with zero critical/high findings. | Clean reproduction. |
+| DIRAC-015 | PASS | States one cumulative action-to-Klein--Gordon-to-Dirac continuum theorem and deterministically reproduces/packages the complete chain from a clean checkout. | Publication decision. |
 
 ## Current theorem boundary
 
-DIRAC-013 extends the DIRAC-012 linearized free-Dirac continuum equation on the declared
-prepared complex-chi vacuum in the low-momentum, small-timestep regime. It
-does not erase the finite-spacing or finite-timestep effects: both appear in
-an explicit normalized residual bound. Both rank-four copies are retained.
-The native continuity identity is exact, while positive density and the
-standard current are proved on the positive-frequency, low-momentum branch.
-Exact finite-lattice equality to the continuum current, nonlinear live-chi
-current closure, physical spin, and an electron remain outside this gate.
+DIRAC-015 proves a conditional free-Dirac continuum sector of the declared
+two-field action. The action-derived tangent has the massive C19
+Klein--Gordon symbol. The derived four-component Hamiltonian squares to its
+continuum part, and the actual centered recurrence approaches its first-order
+Dirac branch with explicit finite-spacing and finite-timestep bounds. The
+same action supplies the admitted density/current limit. Both rank-four copies
+are retained. This does not prove uniqueness, exact finite-lattice Dirac
+dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling,
+operational spin of a localized carrier, or a physical electron.
 
 ## Axiom policy
 

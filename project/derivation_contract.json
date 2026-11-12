@@ -92,7 +92,21 @@
       "no mixed-frequency positivity, exact finite-lattice current, nonlinear live-chi, spin or electron claim"
     ]
   },
-  "deferred_to_dirac014": [
-    "complete adversarial final audit of the cumulative chain"
-  ]
+  "dirac014_mandatory_gates": {
+    "status": "PASS",
+    "requirements": [
+      "compiled audit covers every production module",
+      "publication chain has no nonstandard axioms or placeholders",
+      "zero critical or high circularity, hardcoding or claim-inflation findings"
+    ]
+  },
+  "dirac015_mandatory_gates": {
+    "status": "PASS",
+    "requirements": [
+      "one explicit theorem states the action-to-Klein-Gordon-to-Dirac relationship",
+      "clean checkout rebuilds the full proof and independent evidence",
+      "deterministic publication archive is generated and verified",
+      "claim boundaries remain explicit"
+    ]
+  }
 }

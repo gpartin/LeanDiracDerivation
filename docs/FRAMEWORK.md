@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-013. It is a declared starting model, not a claim that the
+chain through DIRAC-015. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -99,3 +99,11 @@ derive the oriented C19 flow and its exact local continuity identity. The
 positive-frequency graph already derived in DIRAC-011 then fixes the explicit
 normalization to four-component density. The standard Dirac current is the
 low-momentum derivative of the exact C19 group flow, not an added action term.
+
+DIRAC-015 packages these results in one theorem. In the declared prepared
+sector, the action-derived massive C19 tangent is the discrete
+Klein--Gordon-type second-order system. The derived cubical four-component
+Hamiltonian is its continuum square root: squaring it recovers the continuum
+mass-plus-momentum symbol. The finite C19 spacing and centered-time update are
+not hidden; their remainders remain explicit. DIRAC-014 and DIRAC-015 add no
+new action terms or governing fields.
