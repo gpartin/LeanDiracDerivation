@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-012. It is a declared starting model, not a claim that the
+chain through DIRAC-013. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -93,3 +93,9 @@ local potential supplies the rest coefficient and the exterior-area bonds
 supply the exact C19 transport coefficient. No Dirac operator is added to the
 action. The downstream cubical square root is compared with the actual
 centered recurrence, with both finite-spacing and finite-timestep errors kept.
+
+DIRAC-013 varies the same restricted bond action under local phase changes to
+derive the oriented C19 flow and its exact local continuity identity. The
+positive-frequency graph already derived in DIRAC-011 then fixes the explicit
+normalization to four-component density. The standard Dirac current is the
+low-momentum derivative of the exact C19 group flow, not an added action term.

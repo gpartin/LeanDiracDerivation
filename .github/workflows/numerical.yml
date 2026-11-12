@@ -19,12 +19,15 @@ jobs:
         run: python experiments/dirac011_frequency_mass/validate_dirac011.py
       - name: Reproduce DIRAC-012 continuum evolution
         run: python experiments/dirac012_continuum_evolution/validate_dirac012.py
+      - name: Reproduce DIRAC-013 density and current
+        run: python experiments/dirac013_density_current/validate_dirac013.py
       - name: Validate evidence schema
         run: >-
           python -c "import json;
           from pathlib import Path;
-          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence;
+          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence, validate_dirac013_evidence;
           p10=json.loads(Path('experiments/dirac010_standard_map/result.json').read_text());
           p11=json.loads(Path('experiments/dirac011_frequency_mass/result.json').read_text());
           p12=json.loads(Path('experiments/dirac012_continuum_evolution/result.json').read_text());
-          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12); assert not e, e"
+          p13=json.loads(Path('experiments/dirac013_density_current/result.json').read_text());
+          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12)+validate_dirac013_evidence(p13); assert not e, e"

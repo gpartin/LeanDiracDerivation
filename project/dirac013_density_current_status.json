@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-013",
+  "status": "PASS",
+  "formal_theorem": "LeanDirac.dirac013_native_density_current_continuity",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac013",
+  "established": [
+    "native oriented bond flow derived from the restricted C19 action",
+    "exact local phase-density continuity for the native tangent equation",
+    "positive-frequency normalization to the four-component density",
+    "exact finite C19 group-flow formula",
+    "velocity operator as the exact momentum response of the same four-component Hamiltonian",
+    "low-momentum current limit for the same four-component embedding",
+    "explicit density normalization for both retained cubical copies"
+  ],
+  "independent_evidence": "experiments/dirac013_density_current/result.json",
+  "not_established": [
+    "positive density for arbitrary mixed-frequency native data",
+    "exact finite-lattice equality to the continuum Dirac current",
+    "arbitrary nonlinear live-chi density/current closure",
+    "physical spin half",
+    "electron identity"
+  ]
+}

@@ -2,9 +2,9 @@
   "schema_version": "1.2.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-012",
-  "next_gate": "DIRAC-013",
-  "completed": 12,
+  "highest_passed_gate": "DIRAC-013",
+  "next_gate": "DIRAC-014",
+  "completed": 13,
   "total": 15,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
@@ -18,7 +18,8 @@
     "DIRAC-009": "LeanDirac/Dirac009Closed.lean",
     "DIRAC-010": "LeanDirac/Dirac010.lean",
     "DIRAC-011": "LeanDirac/Dirac011.lean",
-    "DIRAC-012": "LeanDirac/Dirac012.lean"
+    "DIRAC-012": "LeanDirac/Dirac012.lean",
+    "DIRAC-013": "LeanDirac/Dirac013.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -33,9 +34,9 @@
     "DIRAC-010": "PASS",
     "DIRAC-011": "PASS",
     "DIRAC-012": "PASS",
-    "DIRAC-013": "OPEN",
+    "DIRAC-013": "PASS",
     "DIRAC-014": "OPEN",
     "DIRAC-015": "OPEN"
   },
-  "claim_boundary": "DIRAC-012 is the highest passed research gate. From the same two-field action, Lean derives the prepared-vacuum quadratic mass-plus-C19 channel, inserts the continuum four-component Hamiltonian into the actual centered recurrence, and bounds the normalized equation residual by explicit finite-timestep and fourth-order spatial terms. This is a controlled linearized low-momentum continuum theorem, not exact finite-lattice evolution. Density/current, nonlinear live-chi evolution, physical spin, and electron identity remain open."
+  "claim_boundary": "DIRAC-013 is the highest passed research gate. From the same two-field action, Lean derives the native oriented C19 bond flow and its exact local phase-continuity law. On the already-derived positive-frequency graph, an explicit normalization gives the four-component density, and the low-momentum derivative of the exact C19 flow gives the standard Dirac current for the same embedding. This does not claim positive density for arbitrary mixed-frequency data, exact finite-lattice equality to the continuum current, nonlinear live-chi current closure, physical spin, or an electron."
 }

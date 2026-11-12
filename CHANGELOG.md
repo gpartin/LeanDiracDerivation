@@ -1,5 +1,18 @@
 # Changelog
 
+## DIRAC-013
+
+- Derived the oriented C19 bond flow by varying the same native bond action.
+- Proved the exact local phase-density continuity identity before introducing
+  any four-component observable.
+- Used the derived positive-frequency graph and explicit normalization to
+  recover the standard four-component density.
+- Proved that the exact finite C19 group flow approaches the standard Dirac
+  current in the low-momentum limit for the same embedding.
+- Retained both cubical copies and added an independent 32-case reconstruction.
+- Mixed-frequency positivity, exact finite-lattice current equality, nonlinear
+  live-chi current closure, physical spin, and an electron remain open.
+
 ## DIRAC-012
 
 - Derived the prepared-vacuum quadratic mass and C19 transport coefficient
