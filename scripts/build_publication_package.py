@@ -15,12 +15,20 @@ ARCHIVE_NAME = "LeanDiracDerivation-DIRAC-015.zip"
 FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 
 
-def tracked_files() -> list[str]:
+def committed_files() -> list[str]:
     result = subprocess.run(
-        ["git", "ls-files"], cwd=ROOT, text=True,
+        ["git", "ls-tree", "-r", "--name-only", "HEAD"], cwd=ROOT,
+        text=True,
         capture_output=True, check=True,
     )
     return sorted(line for line in result.stdout.splitlines() if line)
+
+
+def committed_payload(name: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"HEAD:{name}"], cwd=ROOT,
+        capture_output=True, check=True,
+    ).stdout
 
 
 def digest(data: bytes) -> str:
@@ -35,12 +43,12 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
     archive = output_dir / ARCHIVE_NAME
 
-    files = tracked_files()
-    missing = [name for name in files if not (ROOT / name).is_file()]
-    if missing:
-        raise FileNotFoundError(f"tracked package inputs are missing: {missing}")
-
-    payloads = {name: (ROOT / name).read_bytes() for name in files}
+    commit = subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True,
+        capture_output=True, check=True,
+    ).stdout.strip()
+    files = committed_files()
+    payloads = {name: committed_payload(name) for name in files}
     manifest = "".join(
         f"{digest(payloads[name])}  {name}\n" for name in files
     ).encode("utf-8")
@@ -78,7 +86,8 @@ def main() -> int:
         "status": "PUBLICATION_PACKAGE_PASS",
         "archive": str(archive),
         "sha256": archive_hash,
-        "tracked_files": len(files),
+        "commit": commit,
+        "committed_files": len(files),
     }, indent=2))
     return 0
 
