@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--015 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--016 derivation contract."""
 
 from __future__ import annotations
 
@@ -38,8 +38,8 @@ def main() -> int:
         ROOT / "experiments" / "dirac013_density_current" / "result.json"
     ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_015": status.get("highest_passed_gate") == "DIRAC-015",
-        "all_fifteen_gates_complete": status.get("completed") == 15,
+        "highest_gate_is_016": status.get("highest_passed_gate") == "DIRAC-016",
+        "all_sixteen_gates_complete": status.get("completed") == 16,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "continuum_square_root_present": contains(
@@ -81,9 +81,21 @@ def main() -> int:
         "final_action_root_present": contains(
             "LeanDirac/Dirac015.lean",
             "kleinGordonTangentFromAction"),
-        "publication_stops_at_015": contains(
+        "publication_stops_at_016": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac015"),
+            "theorem current_highest_gate_is_dirac016"),
+        "copy_translation_exchange_present": contains(
+            "LeanDirac/Dirac016.lean",
+            "theorem raw_axis2_maps_minus_to_plus"),
+        "copy_translation_uniqueness_present": contains(
+            "LeanDirac/Dirac016.lean",
+            "theorem raw_axis2_minus_coordinate_map_unique"),
+        "c19_copy_classification_present": contains(
+            "LeanDirac/Dirac016.lean",
+            "theorem raw_c19_translation_copy_relation"),
+        "signed_incidence_distinction_present": contains(
+            "LeanDirac/Dirac016.lean",
+            "theorem prepared_incidence_axis2_preserves_minus"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -108,7 +120,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC015_READY" if passed else "DIRAC015_OPEN",
+        "verdict": "DIRAC016_READY" if passed else "DIRAC016_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

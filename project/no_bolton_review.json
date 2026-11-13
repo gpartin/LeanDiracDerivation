@@ -1,8 +1,8 @@
 {
   "schema_version": "1.2.0",
-  "gate": "DIRAC-015",
+  "gate": "DIRAC-016",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac015 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac016 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -30,7 +30,10 @@
     "Proved the velocity operator is the exact momentum response of the already-derived Hamiltonian rather than an independently supplied current matrix.",
     "Made the action-to-Klein-Gordon-to-Dirac square relationship explicit in the final theorem without changing the native action.",
     "Separated the final adversarial and clean-reproduction gates from the mathematical theorem so status metadata cannot close a physical proof obligation.",
-    "Removed obsolete incidence-action modules from the production source tree."
+    "Removed obsolete incidence-action modules from the production source tree.",
+    "Derived copy exchange from the existing unsigned cube permutation, proved its induced coordinate map is unique, and kept the action unchanged.",
+    "Proved separately that the signed incidence readout preserves each copy, preventing unsigned geometric translation from being mislabeled as native dynamical transport.",
+    "Restricted DIRAC-016 to the exact A-B-A translation algebra; localized motion, one-exchange-per-update and physical-purpose claims remain open."
   ],
   "declared_starting_hypotheses": [
     "the noncanonical positive two-field local-plus-exterior-area C19 action",
@@ -50,7 +53,9 @@
     "exact finite-lattice or nonlinear live-chi Dirac evolution",
     "positive density for arbitrary mixed-frequency native data",
     "exact finite-lattice or nonlinear live-chi Dirac current",
+    "native time evolution implementing one copy exchange per translation step",
+    "localized carrier motion through copy alternation",
     "physical spin and electron"
   ],
-  "caveat": "The cubical square-root orientation remains an explicit, not uniquely forced, geometric factorization of the action-derived quadratic symbol. DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. It does not prove exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
+  "caveat": "The cubical square-root orientation remains an explicit, not uniquely forced, geometric factorization of the action-derived quadratic symbol. DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. DIRAC-016 proves an exact copy exchange under unsigned microscopic cube translation, but the signed incidence transport used in the current Dirac readout preserves both copies separately. Therefore DIRAC-016 is structural support for, not proof of, the hypothesis that a localized fermion moves by alternating copies. The chain does not prove exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
 }

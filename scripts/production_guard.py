@@ -1,4 +1,4 @@
-"""One-command release audit for the completed DIRAC-001--015 chain.
+"""One-command release audit for the completed DIRAC-001--016 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -22,6 +22,7 @@ STATUS = ROOT / "project" / "status.json"
 REVIEW = ROOT / "project" / "no_bolton_review.json"
 AUDIT_014 = ROOT / "project" / "dirac014_final_audit_status.json"
 REPRODUCTION_015 = ROOT / "project" / "dirac015_clean_reproduction_status.json"
+STATUS_016 = ROOT / "project" / "dirac016_copy_translation_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
@@ -282,11 +283,12 @@ def validate(run_builds: bool = True) -> list[str]:
     review = load(REVIEW)
     audit_014 = load(AUDIT_014)
     reproduction_015 = load(REPRODUCTION_015)
-    if status.get("highest_passed_gate") != "DIRAC-015":
-        errors.append("status does not stop at DIRAC-015")
-    if status.get("next_gate") != "PUBLICATION_DECISION":
-        errors.append("publication decision is not the next boundary")
-    if status.get("completed") != 15 or status.get("total") != 15:
+    status_016 = load(STATUS_016)
+    if status.get("highest_passed_gate") != "DIRAC-016":
+        errors.append("status does not stop at DIRAC-016")
+    if status.get("next_gate") != "LOCALIZED_COPY_ALTERNATION":
+        errors.append("localized copy alternation is not the next boundary")
+    if status.get("completed") != 16 or status.get("total") != 16:
         errors.append("gate counts are incorrect")
     if review.get("status") != "PASS_ZERO_CRITICAL_HIGH":
         errors.append("critical/high red-team findings remain")
@@ -302,7 +304,16 @@ def validate(run_builds: bool = True) -> list[str]:
     if reproduction_015.get("formal_theorem") != \
             "LeanDirac.lfm_free_dirac_continuum_limit":
         errors.append("DIRAC-015 names the wrong final theorem")
-    publication = "LeanDirac.current_highest_gate_is_dirac015"
+    if status_016.get("status") != "PASS" or \
+            status_016.get("formal_theorem") != \
+            "LeanDirac.dirac016_exact_copy_translation_structure":
+        errors.append("DIRAC-016 copy-translation status is not a formal PASS")
+    red_team_016 = status_016.get("red_team", {})
+    if red_team_016.get("critical_findings") or red_team_016.get("high_findings"):
+        errors.append("DIRAC-016 retains critical/high red-team findings")
+    if red_team_016.get("claim_boundary_explicit") is not True:
+        errors.append("DIRAC-016 claim boundary is not explicit")
+    publication = "LeanDirac.current_highest_gate_is_dirac016"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -374,8 +385,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-015")
-    print("next_gate=PUBLICATION_DECISION")
+    print("highest_passed_gate=DIRAC-016")
+    print("next_gate=LOCALIZED_COPY_ALTERNATION")
     return 0
 
 

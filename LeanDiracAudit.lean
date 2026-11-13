@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-015. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-016. -/
 
 #audit_lean_dirac_environment
 
@@ -39,4 +39,13 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.cube_dirac_embed_plus_density
 #print axioms LeanDirac.dirac013_native_density_current_continuity
 #print axioms LeanDirac.lfm_free_dirac_continuum_limit
+#print axioms LeanDirac.raw_axis2_maps_minus_to_plus
+#print axioms LeanDirac.raw_axis2_maps_plus_to_minus
+#print axioms LeanDirac.raw_axis2_minus_coordinate_map_unique
+#print axioms LeanDirac.raw_axis2_plus_coordinate_map_unique
+#print axioms LeanDirac.raw_c19_translation_copy_relation
+#print axioms LeanDirac.c19_copy_exchange_weight_eq_twelve
+#print axioms LeanDirac.c19_copy_preserving_weight_eq_twelve
+#print axioms LeanDirac.dirac016_exact_copy_translation_structure
 #print axioms LeanDirac.current_highest_gate_is_dirac015
+#print axioms LeanDirac.current_highest_gate_is_dirac016

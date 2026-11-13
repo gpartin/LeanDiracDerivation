@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-015
+## Established through DIRAC-016
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -47,6 +47,15 @@
 - The complete production dependency graph has passed an adversarial audit
   with zero critical/high findings and is reproducible as a deterministic
   clean-checkout package.
+- Unsigned translation of the existing eight-corner data in one cube
+  direction maps the negative-flavor rank-four embedding exactly to the
+  positive-flavor embedding, and maps the positive embedding back.
+- The induced four-coordinate half-shift is unique, preserves the native
+  eight-corner density, and returns after a second translation.
+- The existing C19 stencil has equal total relative weight in the
+  copy-exchanging and copy-preserving translation classes.
+- The signed incidence operator used by the current cubical Dirac readout
+  preserves each copy instead of exchanging them.
 
 ## Not established
 
@@ -56,6 +65,10 @@
 - Exact finite-lattice equality to the continuum Dirac current.
 - Arbitrary nonlinear live-chi density/current closure.
 - Unique selection or physical interpretation of either rank-four copy.
+- Identification of one native time update with one copy exchange.
+- Motion of a localized carrier by alternating the two copies.
+- A physical purpose for doubling or evidence that the two copies are two
+  distinct particles.
 - Physical spin one-half, an electron, charge, localization, or formation.
 - Canonical LFM status or uniqueness of the action or square-root orientation.
 
