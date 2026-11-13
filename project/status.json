@@ -2,10 +2,10 @@
   "schema_version": "1.2.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-015",
-  "next_gate": "PUBLICATION_DECISION",
-  "completed": 15,
-  "total": 15,
+  "highest_passed_gate": "DIRAC-016",
+  "next_gate": "LOCALIZED_COPY_ALTERNATION",
+  "completed": 16,
+  "total": 16,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
@@ -21,7 +21,8 @@
     "DIRAC-012": "LeanDirac/Dirac012.lean",
     "DIRAC-013": "LeanDirac/Dirac013.lean",
     "DIRAC-014": "project/dirac014_final_audit_status.json",
-    "DIRAC-015": "LeanDirac/Dirac015.lean"
+    "DIRAC-015": "LeanDirac/Dirac015.lean",
+    "DIRAC-016": "LeanDirac/Dirac016.lean"
   },
   "gates": {
     "DIRAC-001": "PASS",
@@ -38,7 +39,8 @@
     "DIRAC-012": "PASS",
     "DIRAC-013": "PASS",
     "DIRAC-014": "PASS",
-    "DIRAC-015": "PASS"
+    "DIRAC-015": "PASS",
+    "DIRAC-016": "PASS"
   },
-  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. The declared two-field action supplies the massive C19 Klein-Gordon tangent symbol; the cubical four-component Hamiltonian squares to its continuum part; the actual centered recurrence approaches the first-order Dirac branch with explicit spatial and temporal corrections; and the same action supplies the admitted density/current limit. This does not claim uniqueness, exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves that the existing unsigned period-two cube translation exchanges the two retained rank-four copies in one coordinate direction, uniquely induces the stated four-coordinate half-shift, preserves density, and returns after two translations; it also proves that the signed incidence readout preserves each copy. DIRAC-016 does not prove that one native time update is one copy exchange, that a localized carrier moves by alternating copies, that either copy is a second physical particle, or that nature has a purpose for the doubling. The chain still does not claim uniqueness, exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
 }

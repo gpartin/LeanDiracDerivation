@@ -1,5 +1,18 @@
 # Changelog
 
+## DIRAC-016
+
+- Proved that the existing unsigned period-two cube translation exchanges
+  the two retained rank-four copies in one coordinate direction.
+- Proved the induced four-coordinate map is unique, preserves native corner
+  density, and returns to the original embedded state after two translations.
+- Calculated an exact 12-to-12 balance between copy-exchanging and
+  copy-preserving C19 path weights.
+- Proved separately that the signed incidence operator used by the cubical
+  Dirac readout preserves each copy.
+- Added no field, action term, runtime projection, transport law, or physical
+  electron claim. Localized copy-alternating motion remains an open test.
+
 ## DIRAC-014--015
 
 - Completed a top-down adversarial audit with zero critical/high findings.

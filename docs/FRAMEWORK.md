@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-015. It is a declared starting model, not a claim that the
+chain through DIRAC-016. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -107,3 +107,10 @@ Hamiltonian is its continuum square root: squaring it recovers the continuum
 mass-plus-momentum symbol. The finite C19 spacing and centered-time update are
 not hidden; their remainders remain explicit. DIRAC-014 and DIRAC-015 add no
 new action terms or governing fields.
+
+DIRAC-016 leaves that framework unchanged and studies the two retained
+rank-four copies under the already-defined period-two corner translations.
+Unsigned translation in one cube direction exchanges the copies and returns
+after a second translation. The signed incidence readout preserves them
+separately. This is an exact geometric statement, not a new transport law or
+a proof of a localized moving electron.

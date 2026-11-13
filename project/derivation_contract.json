@@ -25,7 +25,8 @@
     "DIRAC-010": "PASS_STANDARD_REPRESENTATION_BOTH_COPIES",
     "DIRAC-011": "PASS_COMMON_FREQUENCY_AND_NATIVE_REST_MASS",
     "DIRAC-012": "PASS_CONTROLLED_CONTINUUM_EVOLUTION",
-    "DIRAC-013": "PASS_NATIVE_DENSITY_CURRENT_CONTINUITY"
+    "DIRAC-013": "PASS_NATIVE_DENSITY_CURRENT_CONTINUITY",
+    "DIRAC-016": "PASS_EXACT_COPY_TRANSLATION_STRUCTURE"
   },
   "dirac010_mandatory_gates": {
     "formal": [
@@ -107,6 +108,26 @@
       "clean checkout rebuilds the full proof and independent evidence",
       "deterministic publication archive is generated and verified",
       "claim boundaries remain explicit"
+    ]
+  },
+  "dirac016_mandatory_gates": {
+    "status": "PASS",
+    "formal": [
+      "same action and transitive DIRAC-015 derivation",
+      "unsigned translation defined only from the existing cube corner flip",
+      "exact minus-to-plus and plus-to-minus maps",
+      "induced four-coordinate map is unique by embedding injectivity",
+      "two translations return to the original embedded state",
+      "native eight-corner density is preserved",
+      "copy-exchanging and copy-preserving C19 path weights are calculated from the existing stencil",
+      "signed incidence transport is proved separately to preserve each copy",
+      "standard-foundation-only axiom audit"
+    ],
+    "excluded_claims": [
+      "native time evolution performs one copy exchange per update",
+      "localized fermion motion is implemented by copy alternation",
+      "either copy is a distinct physical particle",
+      "physical electron or canonical LFM status"
     ]
   }
 }

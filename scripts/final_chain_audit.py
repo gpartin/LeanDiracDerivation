@@ -1,4 +1,4 @@
-"""Final read-only adversarial audit for DIRAC-001 through DIRAC-015."""
+"""Final read-only adversarial audit for DIRAC-001 through DIRAC-016."""
 
 from __future__ import annotations
 
@@ -22,12 +22,13 @@ def main() -> int:
     audit = load("project/dirac014_final_audit_status.json")
     reproduction = load("project/dirac015_clean_reproduction_status.json")
     proof = load("project/proof_manifest.json")
+    copy_status = load("project/dirac016_copy_translation_status.json")
     boundary = status.get("claim_boundary", "").lower()
 
     checks = {
-        "all_fifteen_gates_pass": (
-            status.get("completed") == 15
-            and status.get("highest_passed_gate") == "DIRAC-015"
+        "all_sixteen_gates_pass": (
+            status.get("completed") == 16
+            and status.get("highest_passed_gate") == "DIRAC-016"
             and all(value == "PASS" for value in status.get("gates", {}).values())
         ),
         "zero_critical_high": (
@@ -38,8 +39,9 @@ def main() -> int:
         "audit_gate_passes": audit.get("status") == "PASS",
         "clean_reproduction_gate_passes": reproduction.get("status") == "PASS",
         "final_theorem_is_action_rooted": (
-            proof.get("highest_gate") == "DIRAC-015"
+            proof.get("highest_gate") == "DIRAC-016"
             and "LeanDirac/Dirac015.lean" in proof.get("files", {})
+            and "LeanDirac/Dirac016.lean" in proof.get("files", {})
             and "LeanDirac/Publication.lean" in proof.get("files", {})
             and all(audit.get("checks", {}).get(name) is True for name in (
                 "native_action_contains_no_dirac_matrix_spinor_or_projector",
@@ -49,11 +51,21 @@ def main() -> int:
         ),
         "publication_names_final_theorem": (
             proof.get("publication_theorem") ==
-                "LeanDirac.current_highest_gate_is_dirac015"
+                "LeanDirac.current_highest_gate_is_dirac016"
             and reproduction.get("formal_theorem") ==
                 "LeanDirac.lfm_free_dirac_continuum_limit"
             and reproduction.get("publication_theorem") ==
+                "LeanDirac.current_highest_gate_is_dirac015"
+            and copy_status.get("publication_theorem") ==
                 proof.get("publication_theorem")
+        ),
+        "copy_translation_extension_is_scoped": (
+            copy_status.get("status") == "PASS"
+            and copy_status.get("action_changed") is False
+            and copy_status.get("red_team", {}).get(
+                "signed_incidence_distinguished_from_unsigned_translation") is True
+            and not copy_status.get("red_team", {}).get("critical_findings")
+            and not copy_status.get("red_team", {}).get("high_findings")
         ),
         "claim_boundary_is_retained": all(
             phrase in boundary for phrase in (
@@ -71,8 +83,8 @@ def main() -> int:
 
     print(json.dumps({
         "checks": checks,
-        "verdict": "DIRAC_001_015_FINAL_AUDIT_PASS" if not errors
-            else "DIRAC_001_015_FINAL_AUDIT_FAIL",
+        "verdict": "DIRAC_001_016_FINAL_AUDIT_PASS" if not errors
+            else "DIRAC_001_016_FINAL_AUDIT_FAIL",
         "errors": errors,
     }, indent=2))
     return 1 if errors else 0

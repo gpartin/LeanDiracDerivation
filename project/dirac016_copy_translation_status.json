@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-016",
+  "status": "PASS",
+  "formal_theorem": "LeanDirac.dirac016_exact_copy_translation_structure",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac016",
+  "action_changed": false,
+  "proved": [
+    "every unsigned single-axis cube translation is an involution",
+    "unsigned translations in cube axes 0 and 1 preserve the retained copy grading",
+    "unsigned translation in cube axis 2 reverses the copy grading",
+    "axis-2 translation maps the minus embedding exactly and uniquely to the plus embedding",
+    "axis-2 translation maps the plus embedding exactly and uniquely to the minus embedding",
+    "two axis-2 translations return to the original embedded state",
+    "unsigned cube translation preserves native eight-corner density",
+    "every C19 direction is proved copy-preserving or copy-exchanging from its existing cube displacement",
+    "the declared C19 path weights split equally between copy-exchanging and copy-preserving classes",
+    "the signed incidence readout remains within each copy"
+  ],
+  "not_proved": [
+    "one native time update equals one copy exchange",
+    "a localized carrier moves by alternating the two copies",
+    "a stable moving electron exists",
+    "the copies are two physical particles",
+    "nature uses doubling for a particular purpose"
+  ],
+  "red_team": {
+    "new_action_term": false,
+    "new_native_field": false,
+    "runtime_projection": false,
+    "assumed_copy_exchange": false,
+    "coordinate_map_uniqueness_proved": true,
+    "signed_incidence_distinguished_from_unsigned_translation": true,
+    "claim_boundary_explicit": true,
+    "critical_findings": [],
+    "high_findings": []
+  }
+}

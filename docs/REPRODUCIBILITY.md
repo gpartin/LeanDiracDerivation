@@ -72,11 +72,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 15-gate dependency and claim boundary.
+The first command verifies the complete 16-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-015.zip` and its checksum. These steps
+produces `dist/LeanDiracDerivation-DIRAC-016.zip` and its checksum. These steps
 test reproducibility; they do not add a mathematical or physical premise.
 Reading the committed Git objects, rather than checkout-dependent working-tree
 line endings, makes the archive identical across platforms.

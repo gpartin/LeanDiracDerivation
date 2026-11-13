@@ -55,6 +55,7 @@ RELEASE_FILES = [
     "project/dirac013_density_current_status.json",
     "project/dirac014_final_audit_status.json",
     "project/dirac015_clean_reproduction_status.json",
+    "project/dirac016_copy_translation_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -111,8 +112,8 @@ def main() -> int:
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac015",
-        "highest_gate": "DIRAC-015",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac016",
+        "highest_gate": "DIRAC-016",
         "files": hashes(proof_files),
     })
     import numpy
