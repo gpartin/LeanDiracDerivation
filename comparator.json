@@ -1,8 +1,24 @@
 {
   "challenge_module": "Challenge",
   "solution_module": "Solution",
-  "theorem_names": ["LFMDiracChallenge.main_result"],
+  "theorem_names": [
+    "LFMDiracChallenge.action_to_tangent_symbol",
+    "LFMDiracChallenge.exact_c19_symbol_split",
+    "LFMDiracChallenge.c19_spatial_remainder_control",
+    "LFMDiracChallenge.cubical_dirac_square",
+    "LFMDiracChallenge.controlled_centered_dirac_residual",
+    "LFMDiracChallenge.native_tangent_local_continuity"
+  ],
   "definition_names": [
+    "LFMDiracChallenge.chi0",
+    "LFMDiracChallenge.c19TransportSymbol",
+    "LFMDiracChallenge.c19QuadraticSymbol",
+    "LFMDiracChallenge.c19SpatialRemainder",
+    "LFMDiracChallenge.nativeSitePotential",
+    "LFMDiracChallenge.preparedLocalPotential",
+    "LFMDiracChallenge.preparedBondPotential",
+    "LFMDiracChallenge.nativePreparedModalPotential",
+    "LFMDiracChallenge.nativePsiTangentSymbol",
     "LFMDiracChallenge.cellFlip0",
     "LFMDiracChallenge.cellFlip1",
     "LFMDiracChallenge.cellFlip2",
@@ -17,7 +33,16 @@
     "LFMDiracChallenge.cubeDiracSymbol",
     "LFMDiracChallenge.c19ContinuumSpeed",
     "LFMDiracChallenge.c19ContinuumDiracSymbol",
-    "LFMDiracChallenge.c19ContinuumScalarSymbol"
+    "LFMDiracChallenge.c19ContinuumScalarSymbol",
+    "LFMDiracChallenge.centeredTimeNumerator",
+    "LFMDiracChallenge.centeredTimeRemainder",
+    "LFMDiracChallenge.nativeDiracModeResidual",
+    "LFMDiracChallenge.c19Weight",
+    "LFMDiracChallenge.scalarPhasePair",
+    "LFMDiracChallenge.nativeOutwardBondCurrent",
+    "LFMDiracChallenge.nativePhaseDensityDerivative",
+    "LFMDiracChallenge.scalarTangentAcceleration",
+    "LFMDiracChallenge.nativeOutwardCurrentDivergence"
   ],
   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
   "enable_nanoda": true

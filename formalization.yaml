@@ -2,12 +2,18 @@
 version: "v0.4"
 
 project:
-  name: "Cubical C19 first-order factorization"
+  name: "Action-derived C19 tangent and controlled cubical Dirac limit"
   description: >-
-    A Lean proof that three signed incidence operations derived from the
-    oriented corners of a cube, together with its parity grading, define a
-    first-order complex symbol whose square is exactly the isotropic quadratic
-    low-momentum symbol of the C19 cubic stencil.
+    A Lean formalization for the prepared uniform-chi tangent sector of a
+    positive two-field cubic-lattice action. It derives the massive C19
+    Klein--Gordon tangent, splits the exact lattice symbol into its isotropic
+    quadratic part and a bounded fourth-order spatial remainder, proves that a
+    signed cube-incidence first-order operator squares to that quadratic
+    symbol, bounds the combined centered-time and finite-spacing residual, and
+    derives an exact local phase-continuity identity from the same tangent bond
+    action. The result is conditional and does not claim a localized electron,
+    physical spin, nonlinear live-chi closure, or an exact finite-spacing
+    Dirac equation.
   authors:
     - "G. D. Partin"
   license: "CC0-1.0"
@@ -15,11 +21,11 @@ project:
     - "G. D. Partin"
 
 classification:
-  arxiv: ["math-ph", "cs.LO"]
-  msc2020: ["03B35", "81Q05"]
+  arxiv: ["math-ph", "cs.LO", "hep-lat"]
+  msc2020: ["03B35", "81Q05", "81T25"]
 
 sources:
-  - title: "Cubical C19 first-order factorization"
+  - title: "Lean LFM-to-Dirac Derivation"
     type: original-proof
     relationship: other
     id: "https://doi.org/10.5281/zenodo.24150001"
@@ -33,6 +39,46 @@ sources:
     relationship: background
     id: "https://doi.org/10.1155/2013/487270"
     location: "https://onlinelibrary.wiley.com/doi/10.1155/2013/487270"
+    license: "CC-BY-3.0"
+    author_endorsement: "not-contacted"
+  - title: "A No-Go Theorem for Regularizing Chiral Fermions"
+    authors:
+      - "H. B. Nielsen"
+      - "M. Ninomiya"
+    type: paper
+    relationship: background
+    id: "https://doi.org/10.1016/0370-2693(81)91026-1"
+    location: "https://www.sciencedirect.com/science/article/pii/0370269381910261"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Homology Theory of Lattice Fermion Doubling"
+    authors:
+      - "Jeffrey M. Rabin"
+    type: paper
+    relationship: background
+    id: "https://doi.org/10.1016/0550-3213(82)90434-5"
+    location: "https://www.sciencedirect.com/science/article/pii/0550321382904345"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "The Dirac Equation as a Quantum Walk: Higher Dimensions, Observational Convergence"
+    authors:
+      - "Pablo Arrighi"
+      - "Marcelo Forets"
+      - "Vincent Nesme"
+    type: paper
+    relationship: background
+    id: "https://arxiv.org/abs/1307.3524"
+    location: "https://arxiv.org/abs/1307.3524"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Discrete Spacetime, Quantum Walks and Relativistic Wave Equations"
+    authors:
+      - "Leonard Mlodinow"
+      - "Todd A. Brun"
+    type: paper
+    relationship: background
+    id: "https://arxiv.org/abs/1802.03910"
+    location: "https://arxiv.org/abs/1802.03910"
     license: "unknown"
     author_endorsement: "not-contacted"
 
@@ -40,56 +86,94 @@ related_formalizations: []
 
 status:
   scope: >-
-    The registered theorem is the exact algebraic factorization of the C19
-    low-momentum quadratic symbol by a cube-incidence first-order symbol. The
-    larger repository proves supporting lattice and action results with a
-    controlled continuum statement. This entry does not prove a localized
-    electron, operational spin one-half, an exact finite-spacing Dirac
-    equation, or the Standard Model.
+    The selected declarations expose the prepared-mode restriction of the
+    action, the exact C19 symbol and its bounded low-momentum remainder, the
+    cubical first-order square identity, the actual centered-recurrence
+    residual bound, and the tangent local continuity law. The preparation is
+    assumed rather than dynamically selected. No theorem establishes a
+    localized electron, physical spin one-half, nonlinear live-chi closure,
+    electromagnetic coupling, uniqueness, or canonical LFM physics.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Quot.sound", "Classical.choice"]
   main_results:
-    - "LFMDiracChallenge.main_result"
+    - "LFMDiracChallenge.action_to_tangent_symbol"
+    - "LFMDiracChallenge.exact_c19_symbol_split"
+    - "LFMDiracChallenge.c19_spatial_remainder_control"
+    - "LFMDiracChallenge.cubical_dirac_square"
+    - "LFMDiracChallenge.controlled_centered_dirac_residual"
+    - "LFMDiracChallenge.native_tangent_local_continuity"
 
 automation:
   methods:
     - method: "agent"
       models: ["OpenAI Codex"]
       framework: "Codex desktop"
-      tool_setup: "Human-directed AI-assisted Lean development, compilation, adversarial audits, and independent Python checks"
+      tool_setup: "Human-directed AI-assisted Lean development, compilation, adversarial audits, independent numerical checks, and submission preparation"
       cost:
         wall_time: "multi-session research program"
         spend_usd: "subscription-based; not tracked"
-        hardware: "local Windows workstation"
-      prompting_notes: "The human supplied the physical hypotheses, acceptance boundaries, and repeated red-team requirements; the agent implemented, tested, and documented the Lean formalization."
+        hardware: "local Windows workstation and GitHub Actions"
+      prompting_notes: >-
+        The human supplied the physical hypotheses, scope boundaries, and
+        repeated red-team requirements. The agent implemented and checked the
+        Lean development and prepared this disclosure.
   spend_usd: "subscription-based; not tracked"
-  notes: "Every production theorem was compiled from a clean tree; the Palomar wrapper advertises only the exact cubical factorization theorem."
+  notes: >-
+    Challenge.lean contains only the auditable statement surface; Solution.lean
+    connects it to the production proof chain. The full Palomar preflight must
+    pass on the submitted commit.
 
 fidelity:
   divergences: >-
-    This is an original discrete cubical factorization result. The cited
-    spinor-geometry article is background rather than a theorem copied into
-    Lean. Physical interpretation is deliberately narrower than the broader
-    research hypothesis.
+    Historical priority and originality are unestablished and are not claimed.
+    The repository's broader physical interpretation has been narrowed here to
+    the conditional prepared-tangent theorem that Lean actually checks. The
+    literature search and its limitations are recorded in
+    docs/PALOMAR_LITERATURE_REVIEW.md.
 
 review:
-  status: "self-assessed with automated adversarial review"
+  status: "self-assessed and agent-reviewed"
   reviewers:
     - "G. D. Partin"
+    - "OpenAI Codex"
   notes: >-
-    The proof was repeatedly audited for circular definitions, injected Dirac
-    matrices, hidden axioms, stale dependencies, and mismatch between the
-    advertised statement and the production theorem. No independent expert
-    peer review has yet been completed.
+    The selected declarations were checked against the production theorem
+    chain, permitted-axiom list, clean build, Comparator, and Palomar full
+    preflight. No independent expert peer review has been completed.
 
 alignment:
   namespace: "LFMDiracChallenge"
   statements:
-    - source: "Cubical C19 first-order factorization"
-      lean: "LFMDiracChallenge.main_result"
+    - source: "Prepared uniform-chi restriction of the native local-plus-C19-bond action"
+      lean: "LFMDiracChallenge.action_to_tangent_symbol"
       module: "Solution"
       status: "proved"
-      note: "The Palomar solution aliases the production cubical definitions and proves the exact square identity using the production theorem."
+      note: "Expands the restricted action and exposes both the tangent coefficient and quartic remainder."
+    - source: "Exact C19 Fourier symbol"
+      lean: "LFMDiracChallenge.exact_c19_symbol_split"
+      module: "Solution"
+      status: "proved"
+      note: "Separates the exact lattice symbol into its quadratic part and explicit remainder."
+    - source: "Low-momentum C19 remainder estimate"
+      lean: "LFMDiracChallenge.c19_spatial_remainder_control"
+      module: "Solution"
+      status: "proved"
+      note: "Bounds the retained finite-spacing correction under explicit momentum hypotheses."
+    - source: "Signed cubical incidence factorization"
+      lean: "LFMDiracChallenge.cubical_dirac_square"
+      module: "Solution"
+      status: "proved"
+      note: "Proves that the concrete eight-corner first-order operator squares to the isotropic quadratic symbol."
+    - source: "Centered native recurrence"
+      lean: "LFMDiracChallenge.controlled_centered_dirac_residual"
+      module: "Solution"
+      status: "proved"
+      note: "Combines the explicit temporal and spatial corrections without claiming finite-spacing equality."
+    - source: "Phase variation of the tangent C19 bond action"
+      lean: "LFMDiracChallenge.native_tangent_local_continuity"
+      module: "Solution"
+      status: "proved"
+      note: "Derives the exact sitewise phase-density/current continuity identity."
 
-acknowledgements: "Lean, Mathlib, Palomar Registry, OpenAI Codex, and reviewers of the public repository."
+acknowledgements: "Lean, Mathlib, Palomar Registry, OpenAI Codex, and public reviewers of the repository."

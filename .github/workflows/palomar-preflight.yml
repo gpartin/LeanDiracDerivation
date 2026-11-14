@@ -3,16 +3,16 @@ name: Palomar full preflight
 on:
   push:
     branches:
-      - submission/palomar
+      - submission/palomar-strong
   workflow_dispatch:
 
 jobs:
   palomar-preflight:
-    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@c02bbeaed888df45c4e28c4e99dba540ad21552a
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@14aa8d6b3c2f14a8540605e37144560b9a00e7e7
     with:
       repository: ${{ github.repository }}
       commit: ${{ github.sha }}
-      pipeline_commit: c02bbeaed888df45c4e28c4e99dba540ad21552a
+      pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
       request_id: lfmc19verify
       mode: full
       execution_profile: palomar-standard-v1

@@ -5,76 +5,154 @@ public import Mathlib
 public section
 
 /-!
-# Cubical C19 first-order factorization
+# Action-derived C19 tangent and controlled cubical Dirac limit
 
-This file is the small statement surface submitted to Palomar.  The eight
-complex amplitudes live on the corners of a cube.  The three signed corner
-flips are fixed entirely by cubical incidence and orientation.  The advertised
-theorem states that the resulting first-order cubical symbol, applied twice,
-is exactly the isotropic quadratic C19 continuum symbol.
+This is the small mathematical statement surface submitted to Palomar.  It
+states five linked results for the prepared, uniform-chi tangent sector of a
+specified positive two-field cubic-lattice action:
 
-The statement is algebraic.  It does not claim a localized electron, physical
-spin, or an exact finite-spacing Dirac equation.
+1. the restricted native action has a massive C19 Klein--Gordon tangent;
+2. the exact C19 symbol is its isotropic quadratic part plus an explicit
+   finite-spacing remainder;
+3. signed cube-incidence operations give a first-order operator whose square
+   is that quadratic continuum symbol;
+4. the actual centered native recurrence differs from the continuum branch by
+   a controlled fourth-order spatial and temporal residual; and
+5. the same tangent bond action supplies an exact local phase-continuity law.
+
+The prepared background and low-momentum/small-timestep hypotheses are
+visible in the statements.  These results do not assert a localized electron,
+physical spin, nonlinear live-chi closure, uniqueness of the square root, or
+an exact finite-spacing Dirac equation.
 -/
 
 namespace LFMDiracChallenge
 
 noncomputable section
 
+open BigOperators Complex
+
+/-! ## Restricted native action and the exact C19 symbol -/
+
+def chi0 : ℝ := 19
+
+abbrev LatticeMomentum := Fin 3 → ℝ
+
+/-- Exact C19 Fourier symbol: six face neighbors have relative weight two
+and twelve edge neighbors have relative weight one. -/
+def c19TransportSymbol (momentum : LatticeMomentum) : ℝ :=
+  8 * ((1 - Real.cos (momentum 0)) +
+    (1 - Real.cos (momentum 1)) +
+    (1 - Real.cos (momentum 2)) +
+    (1 - Real.cos (momentum 0) * Real.cos (momentum 1)) +
+    (1 - Real.cos (momentum 0) * Real.cos (momentum 2)) +
+    (1 - Real.cos (momentum 1) * Real.cos (momentum 2)))
+
+/-- Isotropic quadratic part of the C19 symbol. -/
+def c19QuadraticSymbol (momentum : LatticeMomentum) : ℝ :=
+  12 * (momentum 0 ^ 2 + momentum 1 ^ 2 + momentum 2 ^ 2)
+
+/-- Exact finite-spacing spatial remainder. -/
+def c19SpatialRemainder (momentum : LatticeMomentum) : ℝ :=
+  c19TransportSymbol momentum - c19QuadraticSymbol momentum
+
+/-- Local density part of the native positive potential. -/
+def nativeSitePotential (rhoPsi rhoChi : ℝ) : ℝ :=
+  (rhoChi - chi0^2)^2 / 4 + rhoChi * rhoPsi / 2 + rhoPsi^2 / 4
+
+/-- Local action restricted to a uniform-chi Fourier perturbation. -/
+def preparedLocalPotential (eps : ℝ) (amplitude : ℂ) : ℝ :=
+  nativeSitePotential
+    (Complex.normSq ((eps : ℂ) * amplitude)) (chi0^2)
+
+/-- C19 bond action restricted to the same Fourier perturbation. -/
+def preparedBondPotential
+    (eps : ℝ) (amplitude : ℂ) (momentum : LatticeMomentum) : ℝ :=
+  Complex.normSq ((eps : ℂ) * amplitude) / 2 *
+    c19TransportSymbol momentum
+
+/-- Complete prepared-mode restriction of the local-plus-bond potential. -/
+def nativePreparedModalPotential
+    (eps : ℝ) (amplitude : ℂ) (momentum : LatticeMomentum) : ℝ :=
+  preparedLocalPotential eps amplitude +
+    preparedBondPotential eps amplitude momentum
+
+/-- Exact quadratic tangent coefficient supplied by the restricted action. -/
+def nativePsiTangentSymbol (momentum : LatticeMomentum) : ℝ :=
+  chi0^2 + c19TransportSymbol momentum
+
+/-- The specified positive action supplies the massive C19 tangent, while its
+quartic self-interaction remains explicit. -/
+theorem action_to_tangent_symbol
+    (eps : ℝ) (amplitude : ℂ) (momentum : LatticeMomentum) :
+    nativePreparedModalPotential eps amplitude momentum =
+      eps^2 * Complex.normSq amplitude / 2 *
+          nativePsiTangentSymbol momentum +
+        eps^4 * Complex.normSq amplitude ^ 2 / 4 := by
+  sorry
+
+/-- Exact decomposition, not an asymptotic replacement. -/
+theorem exact_c19_symbol_split (momentum : LatticeMomentum) :
+    nativePsiTangentSymbol momentum =
+      chi0^2 + c19QuadraticSymbol momentum +
+        c19SpatialRemainder momentum := by
+  sorry
+
+/-- The explicit spatial correction is fourth order at low momentum. -/
+theorem c19_spatial_remainder_control
+    (momentum : LatticeMomentum) (radius : ℝ)
+    (hradius : 0 ≤ radius)
+    (hmomentum : ∀ axis, |momentum axis| ≤ radius)
+    (hsmall : 2 * radius ≤ 1) :
+    |c19SpatialRemainder momentum| ≤ 40 * radius^4 := by
+  sorry
+
+/-! ## Cubical first-order factor -/
+
 abbrev CubeCorner := Fin 8
 abbrev Cell8 := CubeCorner → ℂ
 
-/-- Flip the first parity bit of an eight-corner cube. -/
 def cellFlip0 : CubeCorner → CubeCorner
   | 0 => 4 | 1 => 5 | 2 => 6 | 3 => 7
   | 4 => 0 | 5 => 1 | 6 => 2 | _ => 3
 
-/-- Flip the second parity bit of an eight-corner cube. -/
 def cellFlip1 : CubeCorner → CubeCorner
   | 0 => 2 | 1 => 3 | 2 => 0 | 3 => 1
   | 4 => 6 | 5 => 7 | 6 => 4 | _ => 5
 
-/-- Flip the third parity bit of an eight-corner cube. -/
 def cellFlip2 : CubeCorner → CubeCorner
   | 0 => 1 | 1 => 0 | 2 => 3 | 3 => 2
   | 4 => 5 | 5 => 4 | 6 => 7 | _ => 6
 
-/-- Read the third parity bit of a cube corner. -/
-def cellBit2 : CubeCorner → Nat
-  | 0 | 2 | 4 | 6 => 0
-  | _ => 1
-
-/-- Read the first parity bit of a cube corner. -/
 def cellBit0 : CubeCorner → Nat
   | 0 | 1 | 2 | 3 => 0
   | _ => 1
 
-/-- Read the second parity bit of a cube corner. -/
 def cellBit1 : CubeCorner → Nat
   | 0 | 1 | 4 | 5 => 0
   | _ => 1
 
-/-- Select the corner flip associated with one of the three cube axes. -/
+def cellBit2 : CubeCorner → Nat
+  | 0 | 2 | 4 | 6 => 0
+  | _ => 1
+
 def cubeIncidenceFlip (axis : Fin 3) : CubeCorner → CubeCorner :=
   match axis with
   | 0 => cellFlip0
   | 1 => cellFlip1
   | _ => cellFlip2
 
-/-- The orientation sign for an axis crossing at a cube corner. -/
 def cubeIncidenceSign (axis : Fin 3) (corner : CubeCorner) : ℂ :=
   match axis with
   | 0 => 1
   | 1 => if cellBit0 corner = 0 then 1 else -1
   | _ => if (cellBit0 corner + cellBit1 corner) % 2 = 0 then 1 else -1
 
-/-- The signed incidence operation along one cube axis. -/
 def cubeIncidenceGamma (axis : Fin 3) (amplitude : Cell8) : Cell8 :=
   fun corner =>
     cubeIncidenceSign axis corner *
       amplitude (cubeIncidenceFlip axis corner)
 
-/-- Grade a corner amplitude by even or odd cube parity. -/
 def cubeParityBeta (amplitude : Cell8) : Cell8 :=
   fun corner =>
     if (cellBit0 corner + cellBit1 corner + cellBit2 corner) % 2 = 0 then
@@ -82,7 +160,6 @@ def cubeParityBeta (amplitude : Cell8) : Cell8 :=
     else
       -amplitude corner
 
-/-- The linear combination of the three signed cube-incidence operations. -/
 def cubeIncidenceLinear
     (k0 k1 k2 : ℂ) (amplitude : Cell8) : Cell8 :=
   fun corner =>
@@ -90,41 +167,105 @@ def cubeIncidenceLinear
     k1 * cubeIncidenceGamma 1 amplitude corner +
     k2 * cubeIncidenceGamma 2 amplitude corner
 
-/-- Add a parity-graded rest coefficient to the cubical incidence symbol. -/
 def cubeDiracSymbol
     (mass k0 k1 k2 : ℂ) (amplitude : Cell8) : Cell8 :=
   fun corner =>
     mass * cubeParityBeta amplitude corner +
       cubeIncidenceLinear k0 k1 k2 amplitude corner
 
-/-- The isotropic long-wavelength speed fixed by the C19 stencil moments. -/
 def c19ContinuumSpeed : ℝ := Real.sqrt 12
 
-/-- The cube-incidence first-order symbol at C19 continuum normalization. -/
 def c19ContinuumDiracSymbol
-    (mass : ℂ) (momentum : Fin 3 → ℝ) (amplitude : Cell8) : Cell8 :=
+    (mass : ℂ) (momentum : LatticeMomentum) (amplitude : Cell8) : Cell8 :=
   cubeDiracSymbol mass
     (c19ContinuumSpeed * momentum 0)
     (c19ContinuumSpeed * momentum 1)
     (c19ContinuumSpeed * momentum 2) amplitude
 
-/-- The isotropic quadratic low-momentum symbol of the C19 stencil. -/
 def c19ContinuumScalarSymbol
-    (mass : ℂ) (momentum : Fin 3 → ℝ) (amplitude : Cell8) : Cell8 :=
+    (mass : ℂ) (momentum : LatticeMomentum) (amplitude : Cell8) : Cell8 :=
   fun corner =>
     (mass ^ 2 + (12 : ℂ) *
       ((momentum 0 : ℂ) ^ 2 + (momentum 1 : ℂ) ^ 2 +
         (momentum 2 : ℂ) ^ 2)) * amplitude corner
 
-/--
-The cubical signed-incidence first-order symbol squares exactly to the
-isotropic quadratic symbol obtained from the low-momentum C19 stencil.
--/
-theorem main_result
-    (mass : ℂ) (momentum : Fin 3 → ℝ) (amplitude : Cell8) :
+/-- The signed cube-incidence operator squares to the same isotropic
+quadratic symbol that occurs in the native tangent. -/
+theorem cubical_dirac_square
+    (mass : ℂ) (momentum : LatticeMomentum) (amplitude : Cell8) :
     c19ContinuumDiracSymbol mass momentum
         (c19ContinuumDiracSymbol mass momentum amplitude) =
       c19ContinuumScalarSymbol mass momentum amplitude := by
+  sorry
+
+/-! ## Actual centered recurrence and its controlled continuum residual -/
+
+def centeredTimeNumerator (dt frequency : ℝ) : ℝ :=
+  2 * (1 - Real.cos (dt * frequency))
+
+def centeredTimeRemainder (dt frequency : ℝ) : ℝ :=
+  centeredTimeNumerator dt frequency - (dt * frequency)^2
+
+def nativeDiracModeResidual
+    (dt frequency : ℝ) (momentum : LatticeMomentum) : ℝ :=
+  centeredTimeNumerator dt frequency -
+    dt^2 * nativePsiTangentSymbol momentum
+
+/-- Under the continuum dispersion relation, the centered native update has
+the displayed temporal-plus-spatial error and no hidden exactness claim. -/
+theorem controlled_centered_dirac_residual
+    (dt frequency radius : ℝ) (momentum : LatticeMomentum)
+    (hradius : 0 ≤ radius)
+    (hmomentum : ∀ axis, |momentum axis| ≤ radius)
+    (hspace : 2 * radius ≤ 1)
+    (htime : |dt * frequency| ≤ 1)
+    (hdispersion : frequency^2 =
+      chi0^2 + c19QuadraticSymbol momentum) :
+    |nativeDiracModeResidual dt frequency momentum| ≤
+      (5/48 : ℝ) * |dt * frequency|^4 +
+        dt^2 * (40 * radius^4) := by
+  sorry
+
+/-! ## Action-derived local continuity -/
+
+abbrev C19Neighbor := Fin 18
+
+def c19Weight (neighbor : C19Neighbor) : ℝ :=
+  if neighbor.val < 6 then 2 else 1
+
+def scalarPhasePair (source target : ℂ) : ℝ :=
+  (star source * target).im
+
+def nativeOutwardBondCurrent (weight : ℝ) (source target : ℂ) : ℝ :=
+  -2 * weight * scalarPhasePair source target
+
+def nativePhaseDensityDerivative
+    (position velocity acceleration : ℂ) : ℝ :=
+  scalarPhasePair velocity velocity + scalarPhasePair position acceleration
+
+def scalarTangentAcceleration [Fintype Site]
+    (massSq : ℝ) (neighbor : Site → C19Neighbor → Site)
+    (position : Site → ℂ) (site : Site) : ℂ :=
+  -(massSq : ℂ) * position site -
+    2 * ∑ direction : C19Neighbor,
+      (c19Weight direction : ℂ) *
+        (position site - position (neighbor site direction))
+
+def nativeOutwardCurrentDivergence [Fintype Site]
+    (neighbor : Site → C19Neighbor → Site)
+    (position : Site → ℂ) (site : Site) : ℝ :=
+  ∑ direction : C19Neighbor,
+    nativeOutwardBondCurrent (c19Weight direction)
+      (position site) (position (neighbor site direction))
+
+/-- Exact local continuity for the tangent equation generated by the same
+quadratic C19 bond action. -/
+theorem native_tangent_local_continuity [Fintype Site]
+    (massSq : ℝ) (neighbor : Site → C19Neighbor → Site)
+    (position velocity : Site → ℂ) (site : Site) :
+    nativePhaseDensityDerivative (position site) (velocity site)
+        (scalarTangentAcceleration massSq neighbor position site) +
+      nativeOutwardCurrentDivergence neighbor position site = 0 := by
   sorry
 
 end

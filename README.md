@@ -61,6 +61,8 @@ does not install Git hooks or alter the index.
 - [Formal proof chain](docs/PROOF_CHAIN.md): all 15 gates and theorem boundary.
 - [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 establishes.
 - [Reproducibility](docs/REPRODUCIBILITY.md): rebuild instructions.
+- [Palomar literature review](docs/PALOMAR_LITERATURE_REVIEW.md): prior-work
+  search, closest established lines, and explicit priority limitations.
 - [Changelog](CHANGELOG.md): current cleanup and historical milestones.
 - `LeanDirac/Publication.lean`: sole cumulative publication theorem.
 - `LeanDiracAudit.lean`: explicit theorem axiom reports.
