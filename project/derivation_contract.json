@@ -18,15 +18,24 @@
     "DIRAC-003": "PASS_RECIPROCAL_VARIATION",
     "DIRAC-004": "PASS_DISCRETE_ACTION_UPDATE",
     "DIRAC-005": "PASS_PREPARED_SECTOR_CLOSURE",
-    "DIRAC-006": "PASS_NATIVE_C19_SYMBOL",
+    "DIRAC-006": "PASS_NATIVE_ACTION_RESTRICTION_VARIATION_AND_C19_SYMBOL",
     "DIRAC-007": "PASS_LOSSLESS_READOUT",
     "DIRAC-008": "PASS_COMPLETE_FIRST_ORDER_MAP",
     "DIRAC-009": "PASS_CONTINUUM_CUBICAL_SQUARE_ROOT_WITH_REMAINDER",
     "DIRAC-010": "PASS_STANDARD_REPRESENTATION_BOTH_COPIES",
     "DIRAC-011": "PASS_COMMON_FREQUENCY_AND_NATIVE_REST_MASS",
-    "DIRAC-012": "PASS_CONTROLLED_CONTINUUM_EVOLUTION",
+    "DIRAC-012": "PASS_RECURRENCE_DERIVED_FIRST_ORDER_CONTINUUM_EVOLUTION",
     "DIRAC-013": "PASS_NATIVE_DENSITY_CURRENT_CONTINUITY",
     "DIRAC-016": "PASS_EXACT_COPY_TRANSLATION_STRUCTURE"
+  },
+  "dirac006_bridge_mandatory_gates": {
+    "formal": [
+      "the full native two-field Lagrangian equals the explicit restricted Lagrangian on the aligned eight-site embedding",
+      "arbitrary retained state and velocity first variations commute with restriction",
+      "Psi and chi complementary force and momentum blocks vanish on the retained sector",
+      "no runtime projection, new field or action correction is introduced",
+      "standard-foundation-only axiom audit"
+    ]
   },
   "dirac010_mandatory_gates": {
     "formal": [
@@ -64,12 +73,16 @@
       "C19 transport coefficient derived from the native bond action",
       "actual centered recurrence retained",
       "continuum Hamiltonian square uses the same mass and momentum map",
+      "first-order branch coefficients derived from the centered recurrence characteristic roots",
+      "derived branch solves the continuum centered recurrence exactly",
+      "complete exact-C19 branch defect equals the spatial remainder",
+      "one-step branch generator converges to the same Dirac Hamiltonian",
       "spatial and temporal errors remain explicit",
       "normalized equation residual has a vanishing low-momentum/small-timestep bound",
       "standard-foundation-only axiom audit"
     ],
     "independent": [
-      "action expansion and recurrence identities reproduce within 1e-11",
+      "action expansion, recurrence-derived branch and native branch-defect identities reproduce within 1e-11",
       "all formal bounds hold in 32 frozen cases",
       "normalized equation error decreases under joint refinement",
       "no density/current, nonlinear live-chi, spin or electron claim"

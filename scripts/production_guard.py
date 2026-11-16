@@ -186,6 +186,7 @@ def validate_dirac012_evidence(payload: dict) -> list[str]:
         "every_proved_bound_holds",
         "residual_decreases_under_joint_refinement",
         "normalized_equation_error_decreases_under_joint_refinement",
+        "recurrence_derived_first_order_branch_reproduces",
         "c19_direction_count_is_18",
         "c19_weight_sum_is_24",
     }

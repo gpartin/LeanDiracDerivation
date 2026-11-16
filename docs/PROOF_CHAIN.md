@@ -11,13 +11,13 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-003 | PASS | Derives reciprocal Psi and chi force/momentum families from arbitrary variations. | Build the native time map. |
 | DIRAC-004 | PASS | Derives the centered update from the discrete action and proves reversibility. | Show prepared-sector compatibility. |
 | DIRAC-005 | PASS | Proves the conditional prepared eight-site sector is closed by the native update. | Derive its lattice transport. |
-| DIRAC-006 | PASS | Derives the exact scalar C19 transport symbol from the native bond action. | Preserve all state information. |
+| DIRAC-006 | PASS | Derives the exact scalar C19 transport symbol from the native bond action, proves that the full two-field Lagrangian restricts exactly to the aligned eight-site coordinates, proves that restriction commutes with arbitrary retained first variations, and proves the complementary force and momentum blocks vanish. | Preserve all state information. |
 | DIRAC-007 | PASS | Proves an exact equivalence between two committed layers and state plus interval velocity. | Conjugate the update. |
 | DIRAC-008 | PASS | Produces an exact reversible first-order map on the complete native state. | Factor the continuum spatial symbol. |
 | DIRAC-009 | PASS | Derives cubical Clifford geometry as a square root of the C19 quadratic continuum symbol, retains both rank-four copies, and bounds the exact lattice remainder. | Identify the standard representation. |
 | DIRAC-010 | PASS | Proves exact invertible maps from both native copies to standard Dirac alpha/beta operators. | Derive the native frequency and mass map. |
 | DIRAC-011 | PASS | Builds both frequency graphs from the same phase space and embeddings, retains the exact C19 remainder, and uniquely selects the nonnegative rest coefficient from the native running frequency. | Take controlled limits. |
-| DIRAC-012 | PASS | Derives the prepared-vacuum quadratic scalar channel from the same action, inserts a continuum Dirac mode into the actual centered recurrence, and bounds the normalized equation error by explicit timestep and C19 lattice terms. | Derive observables. |
+| DIRAC-012 | PASS | Derives the prepared-vacuum quadratic scalar channel from the same action. It constructs the first-order branch from the centered recurrence itself, proves that branch solves the continuum recurrence exactly, identifies its complete native defect with the C19 spatial remainder, and proves that its generator tends to the derived Dirac Hamiltonian. The earlier exponential-mode bound is retained only as a supporting scalar check. | Derive observables. |
 | DIRAC-013 | PASS | Derives oriented C19 bond flow from the same action, proves exact local phase continuity, and obtains the four-component density/current on the positive-frequency graph in the low-momentum continuum limit using the same embeddings. | Final audit. |
 | DIRAC-014 | PASS | Audits the complete dependency graph, proof foundations, numerical evidence, manifests, and claim boundary with zero critical/high findings. | Clean reproduction. |
 | DIRAC-015 | PASS | States one cumulative action-to-Klein--Gordon-to-Dirac continuum theorem and deterministically reproduces/packages the complete chain from a clean checkout. | Publication decision. |
@@ -26,10 +26,12 @@ dependency of that root, not a status label standing in for proof.
 ## Current theorem boundary
 
 DIRAC-015 proves a conditional free-Dirac continuum sector of the declared
-two-field action. The action-derived tangent has the massive C19
-Klein--Gordon symbol. The derived four-component Hamiltonian squares to its
-continuum part, and the actual centered recurrence approaches its first-order
-Dirac branch with explicit finite-spacing and finite-timestep bounds. The
+two-field action. Restricting and varying that action is proved to commute for
+the retained eight-site embedding. The action-derived tangent has the massive
+C19 Klein--Gordon symbol. The derived four-component Hamiltonian squares to its
+continuum part. The centered recurrence itself supplies a first-order branch
+under the stated stability bound; its exact native defect is the finite-spacing C19 remainder,
+and its generator coefficients converge to those of the same Dirac Hamiltonian. The
 same action supplies the admitted density/current limit. Both rank-four copies
 are retained. DIRAC-016 proves that the existing unsigned period-two cube
 translation exchanges those copies in one coordinate direction and returns

@@ -5,6 +5,10 @@
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
 - Lean derives reciprocal Psi and chi variations from that action.
+- The full native Lagrangian restricted to the aligned eight-site coordinates
+  equals the explicit restricted Lagrangian; arbitrary retained first
+  variations commute with that restriction, and complementary force and
+  momentum blocks vanish on the retained sector.
 - Lean derives the centered native update and a lossless first-order state
   readout.
 - The ordinary C19 transport symbol has an isotropic quadratic continuum term.
@@ -25,9 +29,13 @@
 - On the prepared complex-chi vacuum, the exact native potential has the
   claimed mass-plus-C19 quadratic coefficient; the nonlinear fourth-order
   remainder remains explicit.
-- A continuum Dirac frequency inserted into the native centered recurrence has
-  a normalized equation residual bounded by a finite-timestep term plus the
-  previously proved fourth-order C19 spatial term.
+- The centered recurrence's characteristic roots and the already-derived
+  Hamiltonian square define a first-order four-component branch without an
+  inserted exponential trial mode. That branch solves the continuum centered
+  recurrence exactly, has a complete native defect equal to the C19 spatial
+  remainder, and its one-step generator tends to the same Dirac Hamiltonian.
+- The earlier exponential-mode calculation remains a supporting scalar
+  residual bound; it is no longer used as the recurrence-to-first-order bridge.
 - Independent numerical reconstruction confirms the action expansion,
   centered recurrence identity, bounds, and refinement behavior.
 - A local phase variation of the same native C19 bond action yields an oriented

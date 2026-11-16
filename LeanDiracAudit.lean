@@ -13,6 +13,11 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.dirac004_c19_update_iff_discrete_action_stationary
 #print axioms LeanDirac.dirac005_c19_native_sector
 #print axioms LeanDirac.dirac006_native_transport_symbol
+#print axioms LeanDirac.aligned_lagrangian_is_restricted
+#print axioms LeanDirac.restricted_action_variation_is_native_variation
+#print axioms LeanDirac.aligned_psi_normal_momentum_zero
+#print axioms LeanDirac.aligned_chi_normal_momentum_zero
+#print axioms LeanDirac.dirac006_action_restriction_bridge
 #print axioms LeanDirac.dirac007_lossless_native_paired_readout
 #print axioms LeanDirac.dirac008_complete_native_first_order_map
 #print axioms LeanDirac.c19_continuum_dirac_square_is_native_quadratic_symbol
@@ -28,6 +33,11 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.normalized_native_dirac_mode_residual_bound
 #print axioms LeanDirac.standard_c19_hamiltonian_square_is_continuum_dispersion
 #print axioms LeanDirac.dirac012_controlled_continuum_evolution
+#print axioms LeanDirac.recurrence_dirac_branch_solves_continuum_centered_recurrence
+#print axioms LeanDirac.native_branch_defect_is_spatial_remainder
+#print axioms LeanDirac.recurrence_branch_generator_defect_exact
+#print axioms LeanDirac.recurrence_branch_generator_defect_tends_to_zero
+#print axioms LeanDirac.dirac012_complete_centered_recurrence_evolution
 #print axioms LeanDirac.prepared_tangent_bond_symmetric
 #print axioms LeanDirac.prepared_bond_local_phase_expansion
 #print axioms LeanDirac.scalar_tangent_local_phase_variation_from_action
