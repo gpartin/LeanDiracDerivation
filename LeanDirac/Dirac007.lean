@@ -1,4 +1,8 @@
-import LeanDirac.Dirac006Restriction
+module
+
+public import LeanDirac.Dirac006Restriction
+
+@[expose] public section
 
 namespace LeanDirac
 

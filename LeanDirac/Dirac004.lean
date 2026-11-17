@@ -1,4 +1,8 @@
-import LeanDirac.Dirac003Contract
+module
+
+public import LeanDirac.Dirac003Contract
+
+@[expose] public section
 
 namespace LeanDirac
 

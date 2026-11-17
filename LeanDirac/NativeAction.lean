@@ -1,5 +1,9 @@
-import LeanDirac.ExteriorArea
-import LeanDirac.C19Geometry
+module
+
+public import LeanDirac.ExteriorArea
+public import LeanDirac.C19Geometry
+
+@[expose] public section
 
 namespace LeanDirac
 

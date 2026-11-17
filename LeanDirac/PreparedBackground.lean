@@ -1,5 +1,9 @@
-import LeanDirac.CubeGeometry
-import LeanDirac.NativeAction
+module
+
+public import LeanDirac.CubeGeometry
+public import LeanDirac.NativeAction
+
+@[expose] public section
 
 namespace LeanDirac
 

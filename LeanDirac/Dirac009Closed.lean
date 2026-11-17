@@ -1,4 +1,8 @@
-import LeanDirac.Dirac009Geometry
+module
+
+public import LeanDirac.Dirac009Geometry
+
+@[expose] public section
 
 namespace LeanDirac
 

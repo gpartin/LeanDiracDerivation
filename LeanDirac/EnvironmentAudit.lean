@@ -1,10 +1,14 @@
-import Mathlib.Util.AssertNoSorry
+module
+
+public import Mathlib.Util.AssertNoSorry
+
+@[expose] public section
 
 /-! Compiler-environment audit used by the publication boundary. -/
 
 open Lean Meta Elab Command
 
-private def allowedFoundationAxiom (name : Name) : Bool :=
+private meta def allowedFoundationAxiom (name : Name) : Bool :=
   name == ``propext || name == ``Classical.choice || name == ``Quot.sound
 
 /--
@@ -23,16 +27,22 @@ elab "#audit_lean_dirac_environment" : command => do
       let moduleData := env.header.moduleData[moduleIdx]!
       for h : declarationIdx in *...moduleData.constNames.size do
         let name := moduleData.constNames[declarationIdx]
-        let info := moduleData.constants[declarationIdx]!
-        match info with
-        | .axiomInfo _ =>
-            throwError "custom axiom declaration in production module: {name}"
-        | _ =>
+        -- Module interfaces may erase an opaque theorem proof and serialize
+        -- the imported declaration as an axiom-shaped entry.  Query the
+        -- reconstructed environment and distinguish an erased theorem from a
+        -- genuine user axiom by whether the declaration depends on itself.
+        match env.find? name with
+        | some info =>
             let axioms ← Lean.collectAxioms name
+            if info matches .axiomInfo _ then
+              if axioms.contains name then
+                throwError "custom axiom declaration in production module: {name}"
             if axioms.contains ``sorryAx then
               throwError "production declaration contains sorry: {name}"
             for axiomName in axioms do
               unless allowedFoundationAxiom axiomName do
                 throwError
                   "production declaration {name} depends on nonstandard axiom: {axiomName}"
+        | none =>
+            throwError "compiled production declaration missing from environment: {name}"
   logInfo "LEAN_DIRAC_ENVIRONMENT_AUDIT_PASS"

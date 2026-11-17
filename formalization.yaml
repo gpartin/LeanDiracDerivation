@@ -1,0 +1,205 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Native-action restriction and recurrence-derived C19 Dirac limit"
+  description: >-
+    A Lean formalization for a prepared uniform-chi sector of a positive
+    two-field C19 cubic-lattice action. It proves that the full action and its
+    first variation restrict exactly to the aligned eight-site coordinates,
+    derives the massive C19 Klein--Gordon tangent and its controlled spatial
+    remainder, proves a cubical first-order square root, and constructs the
+    first-order branch from the centered recurrence's characteristic roots.
+    The exact native branch defect is the C19 spatial remainder and the branch
+    generator converges to the derived Dirac Hamiltonian. The same action also
+    supplies a local continuity identity. The result is conditional and does
+    not claim a localized electron, physical spin, nonlinear live-chi closure,
+    or an exact finite-spacing Dirac equation.
+  authors:
+    - "G. D. Partin"
+  license: "CC0-1.0"
+  responsible_maintainers:
+    - "G. D. Partin"
+
+classification:
+  arxiv: ["math-ph", "cs.LO", "hep-lat"]
+  msc2020: ["03B35", "81Q05", "81T25"]
+
+sources:
+  - title: "Lean LFM-to-Dirac Derivation"
+    type: original-proof
+    relationship: other
+    id: "https://doi.org/10.5281/zenodo.24150001"
+    location: "https://github.com/gpartin/LeanDiracDerivation"
+    license: "CC0-1.0"
+    author_endorsement: "participated"
+  - title: "Differential Forms in Lattice Field Theories: An Overview"
+    authors:
+      - "F. L. Teixeira"
+    type: paper
+    relationship: background
+    id: "https://doi.org/10.1155/2013/487270"
+    location: "https://onlinelibrary.wiley.com/doi/10.1155/2013/487270"
+    license: "CC-BY-3.0"
+    author_endorsement: "not-contacted"
+  - title: "A No-Go Theorem for Regularizing Chiral Fermions"
+    authors:
+      - "H. B. Nielsen"
+      - "M. Ninomiya"
+    type: paper
+    relationship: background
+    id: "https://doi.org/10.1016/0370-2693(81)91026-1"
+    location: "https://www.sciencedirect.com/science/article/pii/0370269381910261"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Homology Theory of Lattice Fermion Doubling"
+    authors:
+      - "Jeffrey M. Rabin"
+    type: paper
+    relationship: background
+    id: "https://doi.org/10.1016/0550-3213(82)90434-5"
+    location: "https://www.sciencedirect.com/science/article/pii/0550321382904345"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "The Dirac Equation as a Quantum Walk: Higher Dimensions, Observational Convergence"
+    authors:
+      - "Pablo Arrighi"
+      - "Marcelo Forets"
+      - "Vincent Nesme"
+    type: paper
+    relationship: background
+    id: "https://arxiv.org/abs/1307.3524"
+    location: "https://arxiv.org/abs/1307.3524"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Discrete Spacetime, Quantum Walks and Relativistic Wave Equations"
+    authors:
+      - "Leonard Mlodinow"
+      - "Todd A. Brun"
+    type: paper
+    relationship: background
+    id: "https://arxiv.org/abs/1802.03910"
+    location: "https://arxiv.org/abs/1802.03910"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    The selected declarations expose the exact restriction and first-variation
+    bridge from the full action, the C19 tangent and bounded low-momentum
+    remainder, the cubical square identity, the recurrence-derived first-order
+    branch with its exact native defect and generator limit, and the tangent
+    local continuity law. The preparation is assumed rather than dynamically
+    selected. No theorem establishes a localized electron, physical spin
+    one-half, nonlinear live-chi closure, electromagnetic coupling,
+    uniqueness, or canonical LFM physics.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+  main_results:
+    - "LFMDiracChallenge.full_native_action_restricts_exactly"
+    - "LFMDiracChallenge.native_first_variation_commutes_with_restriction"
+    - "LFMDiracChallenge.action_to_tangent_symbol"
+    - "LFMDiracChallenge.exact_c19_symbol_split"
+    - "LFMDiracChallenge.c19_spatial_remainder_control"
+    - "LFMDiracChallenge.cubical_dirac_square"
+    - "LFMDiracChallenge.recurrence_branch_solves_centered_update"
+    - "LFMDiracChallenge.native_branch_defect_is_c19_remainder"
+    - "LFMDiracChallenge.recurrence_branch_generator_tends_to_dirac"
+    - "LFMDiracChallenge.native_tangent_local_continuity"
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["OpenAI Codex"]
+      framework: "Codex desktop"
+      tool_setup: "Human-directed AI-assisted Lean development, compilation, adversarial audits, independent numerical checks, and submission preparation"
+      cost:
+        wall_time: "multi-session research program"
+        spend_usd: "subscription-based; not tracked"
+        hardware: "local Windows workstation and GitHub Actions"
+      prompting_notes: >-
+        The human supplied the physical hypotheses, scope boundaries, and
+        repeated red-team requirements. The agent implemented and checked the
+        Lean development and prepared this disclosure.
+  spend_usd: "subscription-based; not tracked"
+  notes: >-
+    Challenge.lean contains only the auditable statement surface; Solution.lean
+    connects it to the production proof chain. The full Palomar preflight must
+    pass on the submitted commit.
+
+fidelity:
+  divergences: >-
+    Historical priority and originality are unestablished and are not claimed.
+    The repository's broader physical interpretation has been narrowed here to
+    the conditional prepared-tangent theorem that Lean actually checks. The
+    literature search and its limitations are recorded in
+    docs/PALOMAR_LITERATURE_REVIEW.md.
+
+review:
+  status: "self-assessed and agent-reviewed"
+  reviewers:
+    - "G. D. Partin"
+    - "OpenAI Codex"
+  notes: >-
+    The selected declarations were checked against the production theorem
+    chain, permitted-axiom list, clean build, Comparator, and Palomar full
+    preflight. No independent expert peer review has been completed.
+
+alignment:
+  namespace: "LFMDiracChallenge"
+  statements:
+    - source: "Full positive two-field action restricted to the aligned eight-site fields"
+      lean: "LFMDiracChallenge.full_native_action_restricts_exactly"
+      module: "Solution"
+      status: "proved"
+      note: "Expands the full kinetic, local, and bond action and proves exact equality with the retained amplitude action."
+    - source: "First variation of the full action along every retained real field line"
+      lean: "LFMDiracChallenge.native_first_variation_commutes_with_restriction"
+      module: "Solution"
+      status: "proved"
+      note: "Uses the pointwise action restriction to prove equality of the corresponding directional derivatives."
+    - source: "Prepared uniform-chi restriction of the native local-plus-C19-bond action"
+      lean: "LFMDiracChallenge.action_to_tangent_symbol"
+      module: "Solution"
+      status: "proved"
+      note: "Expands the restricted action and exposes both the tangent coefficient and quartic remainder."
+    - source: "Exact C19 Fourier symbol"
+      lean: "LFMDiracChallenge.exact_c19_symbol_split"
+      module: "Solution"
+      status: "proved"
+      note: "Separates the exact lattice symbol into its quadratic part and explicit remainder."
+    - source: "Low-momentum C19 remainder estimate"
+      lean: "LFMDiracChallenge.c19_spatial_remainder_control"
+      module: "Solution"
+      status: "proved"
+      note: "Bounds the retained finite-spacing correction under explicit momentum hypotheses."
+    - source: "Signed cubical incidence factorization"
+      lean: "LFMDiracChallenge.cubical_dirac_square"
+      module: "Solution"
+      status: "proved"
+      note: "Proves that the concrete eight-corner first-order operator squares to the isotropic quadratic symbol."
+    - source: "Characteristic branch of the centered native recurrence"
+      lean: "LFMDiracChallenge.recurrence_branch_solves_centered_update"
+      module: "Solution"
+      status: "proved"
+      note: "Derives a first-order branch from the recurrence coefficients and proves its exact continuum recurrence identity."
+    - source: "Exact native C19 branch defect"
+      lean: "LFMDiracChallenge.native_branch_defect_is_c19_remainder"
+      module: "Solution"
+      status: "proved"
+      note: "Identifies the complete finite-spacing defect with the already explicit C19 spatial remainder."
+    - source: "Small-timestep generator of the recurrence-derived branch"
+      lean: "LFMDiracChallenge.recurrence_branch_generator_tends_to_dirac"
+      module: "Solution"
+      status: "proved"
+      note: "Proves that the recurrence-derived one-step generator converges to the derived four-component Dirac Hamiltonian."
+    - source: "Phase variation of the tangent C19 bond action"
+      lean: "LFMDiracChallenge.native_tangent_local_continuity"
+      module: "Solution"
+      status: "proved"
+      note: "Derives the exact sitewise phase-density/current continuity identity."
+
+acknowledgements: "Lean, Mathlib, Palomar Registry, OpenAI Codex, and public reviewers of the repository."

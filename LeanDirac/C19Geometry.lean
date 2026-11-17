@@ -1,4 +1,8 @@
-import LeanDirac.Foundation
+module
+
+public import LeanDirac.Foundation
+
+@[expose] public section
 
 namespace LeanDirac
 
