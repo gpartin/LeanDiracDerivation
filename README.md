@@ -95,5 +95,6 @@ The cubical alpha/beta operators are not terms in the action.
 ## Citation and license
 
 Citation metadata is provided in [CITATION.cff](CITATION.cff) and
-[.zenodo.json](.zenodo.json). This repository is released under
-[CC0-1.0](LICENSE).
+[.zenodo.json](.zenodo.json). Project-authored content is available under
+[MIT](LICENSE) or [CC0-1.0](LICENSE-CC0), at the recipient's option. See
+[LICENSING.md](LICENSING.md) for scope and third-party terms.

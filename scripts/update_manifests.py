@@ -40,6 +40,8 @@ RELEASE_FILES = [
     "CHANGELOG.md",
     "CITATION.cff",
     "LICENSE",
+    "LICENSE-CC0",
+    "LICENSING.md",
     "README.md",
     "docs/CLAIMS.md",
     "docs/FRAMEWORK.md",
