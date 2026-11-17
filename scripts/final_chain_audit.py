@@ -45,7 +45,9 @@ def main() -> int:
             and "LeanDirac/Publication.lean" in proof.get("files", {})
             and all(audit.get("checks", {}).get(name) is True for name in (
                 "native_action_contains_no_dirac_matrix_spinor_or_projector",
+                "native_action_restriction_and_variation_bridge_is_explicit",
                 "finite_lattice_and_timestep_remainders_remain_explicit",
+                "first_order_branch_is_derived_from_the_centered_recurrence",
                 "current_is_derived_from_action_and_hamiltonian_response",
             ))
         ),

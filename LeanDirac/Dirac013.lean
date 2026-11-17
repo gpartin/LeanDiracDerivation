@@ -1,4 +1,4 @@
-import LeanDirac.Dirac012
+import LeanDirac.Dirac012Branch
 
 namespace LeanDirac
 
@@ -655,7 +655,7 @@ theorem cube_dirac_embed_plus_density (z : Cell4) :
   rw [cube_embed_plus_density, plus_cube_basis_preserves_density]
 
 structure Dirac013Certificate : Prop where
-  previousGate : Dirac012Certificate
+  previousGate : Dirac012CompleteCertificate
   restrictedBondFromAction : ∀ weight source target,
     restrictedBondEnergy chi0 weight
         ((chi0 : ℂ) * source) ((chi0 : ℂ) * target) =
@@ -715,7 +715,7 @@ structure Dirac013Certificate : Prop where
 
 theorem dirac013_native_density_current_continuity :
     Dirac013Certificate where
-  previousGate := dirac012_controlled_continuum_evolution
+  previousGate := dirac012_complete_centered_recurrence_evolution
   restrictedBondFromAction := prepared_tangent_bond_is_native_restricted_bond
   directedBondSymmetry := prepared_tangent_bond_symmetric
   bondPhaseVariation := prepared_bond_local_phase_expansion

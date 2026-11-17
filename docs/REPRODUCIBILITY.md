@@ -47,9 +47,11 @@ full continuum equation, current, physical spin, or an electron.
 
 The program independently reconstructs the C19 symbol from all 18 weighted
 directions, the native action's quadratic modal expansion, the centered-time
-mode defect, the combined spatial/time bound, and the normalized equation
-error under refinement. It does not test density/current, nonlinear live-chi
-evolution, physical spin, or an electron.
+mode defect, and the combined spatial/time bound. It also reconstructs the
+first-order branch from the centered recurrence, verifies its exact recurrence,
+unitarity in the stable band, exact native C19 defect, and generator defect.
+It does not test density/current, nonlinear live-chi evolution, physical spin,
+or an electron.
 
 ## Independent DIRAC-013 reconstruction
 

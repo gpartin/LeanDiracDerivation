@@ -60,6 +60,12 @@ def main() -> int:
     broken_012["checks"]["every_proved_bound_holds"] = False
     if not guard.validate_dirac012_evidence(broken_012):
         raise AssertionError("violated DIRAC-012 bound was accepted")
+    broken_branch_012 = copy.deepcopy(payload_012)
+    broken_branch_012["checks"][
+        "recurrence_derived_first_order_branch_reproduces"
+    ] = False
+    if not guard.validate_dirac012_evidence(broken_branch_012):
+        raise AssertionError("failed recurrence-derived branch was accepted")
     nonfinite_012 = copy.deepcopy(payload_012)
     nonfinite_012["minimum_normalized_bound_margin"] = math.nan
     if not guard.validate_dirac012_evidence(nonfinite_012):

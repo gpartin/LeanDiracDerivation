@@ -1,5 +1,22 @@
 # Changelog
 
+## Palomar bridge repair (unreleased)
+
+- Proved that the advertised native two-field Lagrangian restricts exactly to
+  the retained eight-site coordinates and that arbitrary retained first
+  variations commute with that restriction.
+- Proved the complementary force and momentum blocks vanish, so the bridge
+  does not impose a runtime projector or alter the action.
+- Replaced the inserted exponential mode as the claimed time-evolution bridge
+  with a first-order branch derived from the centered recurrence's
+  characteristic roots and the already-derived Hamiltonian square.
+- Proved that the new branch solves the continuum centered recurrence exactly,
+  has native defect exactly equal to the C19 spatial remainder, and converges
+  at the generator level to the same Dirac Hamiltonian.
+- Added independent 32-case reconstruction of the repaired branch identities.
+- No field, action term, stencil weight, fitted coefficient, or physical
+  electron claim was added.
+
 ## DIRAC-016
 
 - Proved that the existing unsigned period-two cube translation exchanges

@@ -47,6 +47,41 @@ def local_site_potential(rho_psi: float) -> float:
     )
 
 
+def standard_dirac_matrices() -> tuple[np.ndarray, list[np.ndarray]]:
+    """Return beta and the three explicit four-component alpha matrices."""
+    beta = np.diag([1.0, 1.0, -1.0, -1.0]).astype(complex)
+    alpha_x = np.array([
+        [0, 0, 0, 1],
+        [0, 0, 1, 0],
+        [0, 1, 0, 0],
+        [1, 0, 0, 0],
+    ], dtype=complex)
+    alpha_y = np.array([
+        [0, 0, 0, -1j],
+        [0, 0, 1j, 0],
+        [0, -1j, 0, 0],
+        [1j, 0, 0, 0],
+    ], dtype=complex)
+    alpha_z = np.array([
+        [0, 0, 1, 0],
+        [0, 0, 0, -1],
+        [1, 0, 0, 0],
+        [0, -1, 0, 0],
+    ], dtype=complex)
+    return beta, [alpha_x, alpha_y, alpha_z]
+
+
+def standard_c19_hamiltonian(momentum: np.ndarray) -> np.ndarray:
+    beta, alpha = standard_dirac_matrices()
+    speed = np.sqrt(12.0)
+    return (
+        CHI0 * beta
+        - speed * momentum[2] * alpha[0]
+        - speed * momentum[1] * alpha[1]
+        + speed * momentum[0] * alpha[2]
+    )
+
+
 def main() -> None:
     rng = np.random.default_rng(12015)
     errors: dict[str, float] = {}
@@ -106,6 +141,49 @@ def main() -> None:
         errors[f"case_{case}_action_expansion"] = abs(
             actual_modal_potential - derived_modal_potential
         )
+
+        # Reconstruct the repaired recurrence-derived first-order branch.
+        # These checks do not insert exp(-i dt H): U is built from the two
+        # roots of the centered recurrence and the already-derived H^2=M I.
+        hamiltonian = standard_c19_hamiltonian(momentum)
+        identity = np.eye(4, dtype=complex)
+        mode_square = CHI0**2 + quadratic_transport(momentum)
+        branch_cos = 1.0 - dt**2 * mode_square / 2.0
+        branch_radical = np.sqrt(1.0 - dt**2 * mode_square / 4.0)
+        branch_sin = dt * frequency * branch_radical
+        branch = (
+            branch_cos * identity
+            - 1j * (branch_sin / frequency) * hamiltonian
+        )
+        continuum_recurrence_defect = (
+            branch @ branch - 2.0 * branch + identity
+            + dt**2 * mode_square * branch
+        )
+        native_recurrence_defect = (
+            branch @ branch - 2.0 * branch + identity
+            + dt**2 * (CHI0**2 + exact_transport) * branch
+        )
+        expected_native_defect = dt**2 * spatial_remainder * branch
+        generator_defect = (branch - identity) / dt + 1j * hamiltonian
+        expected_generator_defect = (
+            -dt * mode_square / 2.0 * identity
+            + 1j * (1.0 - branch_radical) * hamiltonian
+        )
+        errors[f"case_{case}_hamiltonian_square"] = float(np.linalg.norm(
+            hamiltonian @ hamiltonian - mode_square * identity
+        ))
+        errors[f"case_{case}_recurrence_derived_branch"] = float(
+            np.linalg.norm(continuum_recurrence_defect)
+        )
+        errors[f"case_{case}_native_branch_defect"] = float(np.linalg.norm(
+            native_recurrence_defect - expected_native_defect
+        ))
+        errors[f"case_{case}_branch_generator_defect"] = float(np.linalg.norm(
+            generator_defect - expected_generator_defect
+        ))
+        errors[f"case_{case}_branch_unitarity"] = float(np.linalg.norm(
+            branch.conj().T @ branch - identity
+        ))
         bound_margins.append(bound - abs(residual))
         normalized_bound = (
             (5.0 / 48.0) * abs(dt * frequency) ** 4 / dt**2
@@ -148,6 +226,12 @@ def main() -> None:
         "normalized_equation_error_decreases_under_joint_refinement": bool(
             minimum_normalized_refinement_ratio > 3.0
         ),
+        "recurrence_derived_first_order_branch_reproduces": bool(
+            max(
+                value for name, value in errors.items()
+                if "branch" in name or "hamiltonian_square" in name
+            ) <= 1.0e-11
+        ),
         "c19_direction_count_is_18": len(c19_directions()) == 18,
         "c19_weight_sum_is_24":
             abs(sum(weight for _, weight in c19_directions()) - 24.0) <= 1.0e-15,
@@ -167,8 +251,9 @@ def main() -> None:
         "errors": errors,
         "claim": (
             "independent reconstruction of the action-derived tangent "
-            "coefficient, centered native recurrence, and combined explicit "
-            "C19 spatial plus finite-timestep continuum bound"
+            "coefficient, the first-order branch derived from the centered "
+            "recurrence, its exact native C19 defect, and the combined "
+            "explicit spatial plus finite-timestep continuum bound"
         ),
         "excluded_claims": [
             "exact finite-lattice Dirac evolution",

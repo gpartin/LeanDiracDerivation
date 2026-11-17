@@ -1,4 +1,4 @@
-import LeanDirac.Dirac006
+import LeanDirac.Dirac006Restriction
 
 namespace LeanDirac
 

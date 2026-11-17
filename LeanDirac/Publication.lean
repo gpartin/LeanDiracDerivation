@@ -11,9 +11,11 @@ continuum square root with its finite-lattice remainder, and identifies both
 rank-four cubical copies with the conventional Dirac representation, constructs
 both frequency graphs, selects the unique nonnegative rest-mass coefficient
 from the native running frequency, and proves the prepared-vacuum,
-low-momentum continuum evolution with explicit spatial and centered-time
-errors, and derives the positive-frequency density/current limit from the same
-action and embeddings.  The final certificate states explicitly that the
+low-momentum continuum evolution by deriving a first-order branch from the
+centered recurrence, with its exact native C19 defect and generator limit, and
+derives the positive-frequency density/current limit from the same action and
+embeddings. The restriction and first variation of the full action are proved
+to commute with the retained eight-site embedding. The final certificate states explicitly that the
 action-derived Klein--Gordon tangent symbol is the square of the derived
 continuum Dirac Hamiltonian.  Nonlinear live-chi closure and a localized
 physical electron remain downstream claims.

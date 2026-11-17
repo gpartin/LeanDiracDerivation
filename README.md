@@ -7,13 +7,14 @@ attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
 All **16 of 16** derivation gates pass. The chain begins with
-one positive complex-Psi/complex-chi C19 action, derives a cubical
+one positive complex-Psi/complex-chi C19 action, proves that its restriction
+and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
 proves that both native rank-four copies are equivalent to the conventional
 Dirac alpha/beta representation, organizes both frequency signs, and uniquely
 selects the nonnegative rest coefficient from the native running frequency,
-and proves the prepared-vacuum low-momentum continuum equation with explicit
-C19 spatial and centered-time errors. It then derives the native bond flow,
+and derives a first-order branch from the centered recurrence, with its exact
+C19 spatial defect and vanishing generator error. It then derives the native bond flow,
 exact local phase continuity, and the positive-frequency continuum Dirac
 density/current limit from the same action and embedding. The final theorem
 makes the Klein--Gordon/Dirac relationship explicit: the action-derived
@@ -33,11 +34,11 @@ that native time evolution or a localized electron uses it.
 |---|---|---|
 | DIRAC-001--003 | PASS | Native framework, one positive action, and reciprocal action variations. |
 | DIRAC-004--005 | PASS | Reversible centered evolution and the conditional prepared background. |
-| DIRAC-006--008 | PASS | Native C19 transport, lossless readout, and exact first-order map. |
+| DIRAC-006--008 | PASS | Exact native-action restriction/variation bridge, native C19 transport, lossless readout, and exact first-order map. |
 | DIRAC-009 | PASS | Cubical Clifford square root of the C19 continuum symbol, with an explicit lattice remainder and both rank-four copies retained. |
 | DIRAC-010 | PASS | Exact change of basis from both native copies to the standard Dirac alpha/beta representation. |
 | DIRAC-011 | PASS | Common positive/negative-frequency graphs and native nonnegative rest-mass selection. |
-| DIRAC-012 | PASS | Action-derived linearized scalar channel and controlled low-momentum/finite-timestep Dirac evolution. |
+| DIRAC-012 | PASS | Action-derived linearized scalar channel and a first-order Dirac branch derived from the centered recurrence, with exact native spatial defect and controlled continuum limit. |
 | DIRAC-013 | PASS | Action-derived native bond flow, exact local continuity, and positive-frequency continuum density/current. |
 | DIRAC-014 | PASS | Final adversarial audit reports zero critical/high findings. |
 | DIRAC-015 | PASS | One cumulative action-to-Dirac theorem and deterministic clean-checkout package. |

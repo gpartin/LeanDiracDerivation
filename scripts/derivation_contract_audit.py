@@ -42,6 +42,28 @@ def main() -> int:
         "all_sixteen_gates_complete": status.get("completed") == 16,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
+        "native_action_restriction_present": contains(
+            "LeanDirac/Dirac006Restriction.lean",
+            "theorem aligned_lagrangian_is_restricted"),
+        "restriction_variation_bridge_present": contains(
+            "LeanDirac/Dirac006Restriction.lean",
+            "theorem restricted_action_variation_is_native_variation"),
+        "complementary_force_blocks_present": (
+            contains(
+                "LeanDirac/Dirac006Restriction.lean",
+                "psiNormalVariationVanishes")
+            and contains(
+                "LeanDirac/Dirac006Restriction.lean",
+                "chiNormalVariationVanishes")
+        ),
+        "complementary_momentum_blocks_present": (
+            contains(
+                "LeanDirac/Dirac006Restriction.lean",
+                "psiNormalMomentumVanishes")
+            and contains(
+                "LeanDirac/Dirac006Restriction.lean",
+                "chiNormalMomentumVanishes")
+        ),
         "continuum_square_root_present": contains(
             "LeanDirac/Dirac009Geometry.lean",
             "theorem c19_continuum_dirac_square_is_native_quadratic_symbol"),
@@ -60,6 +82,15 @@ def main() -> int:
         "normalized_residual_present": contains(
             "LeanDirac/Dirac012.lean",
             "theorem normalized_native_dirac_mode_residual_bound"),
+        "recurrence_derived_branch_present": contains(
+            "LeanDirac/Dirac012Branch.lean",
+            "theorem recurrence_dirac_branch_solves_continuum_centered_recurrence"),
+        "native_branch_defect_is_spatial_remainder": contains(
+            "LeanDirac/Dirac012Branch.lean",
+            "theorem native_branch_defect_is_spatial_remainder"),
+        "branch_generator_limit_present": contains(
+            "LeanDirac/Dirac012Branch.lean",
+            "theorem recurrence_branch_generator_defect_tends_to_zero"),
         "native_continuity_present": contains(
             "LeanDirac/Dirac013.lean",
             "theorem native_tangent_local_continuity"),
@@ -81,6 +112,15 @@ def main() -> int:
         "final_action_root_present": contains(
             "LeanDirac/Dirac015.lean",
             "kleinGordonTangentFromAction"),
+        "final_action_restriction_bridge_present": contains(
+            "LeanDirac/Dirac015.lean",
+            "actionRestrictionAndVariation"),
+        "final_recurrence_branch_bridge_present": contains(
+            "LeanDirac/Dirac015.lean",
+            "recurrenceDerivedFirstOrderBranch"),
+        "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
+            "LeanDirac/Dirac015.lean",
+            "controlledCenteredEquationLimit"),
         "publication_stops_at_016": contains(
             "LeanDirac/Publication.lean",
             "theorem current_highest_gate_is_dirac016"),

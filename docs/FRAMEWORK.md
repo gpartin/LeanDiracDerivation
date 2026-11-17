@@ -91,8 +91,12 @@ basis for both native copies.
 DIRAC-012 linearizes this same action on the prepared complex-chi vacuum. The
 local potential supplies the rest coefficient and the exterior-area bonds
 supply the exact C19 transport coefficient. No Dirac operator is added to the
-action. The downstream cubical square root is compared with the actual
-centered recurrence, with both finite-spacing and finite-timestep errors kept.
+action. The downstream cubical square root and the centered recurrence's own
+characteristic roots construct a first-order branch. Lean proves that branch
+solves the continuum centered recurrence exactly, that its complete native
+defect is the retained C19 spatial remainder, and that its one-step generator
+converges to the same Dirac Hamiltonian. The older exponential-mode residual
+is retained only as a supporting scalar bound.
 
 DIRAC-013 varies the same restricted bond action under local phase changes to
 derive the oriented C19 flow and its exact local continuity identity. The

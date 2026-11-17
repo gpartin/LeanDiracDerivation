@@ -14,8 +14,9 @@ central statement is the action-to-Klein--Gordon-to-Dirac relationship:
    retained finite-lattice remainder;
 3. the cubical four-component Hamiltonian squares to that same continuum
    Klein--Gordon symbol;
-4. the actual centered native recurrence approaches the first-order Dirac
-   branch with the previously proved spatial and temporal error bound; and
+4. the centered recurrence itself supplies a first-order branch whose exact
+   native defect is the retained spatial remainder and whose generator tends
+   to the same Dirac Hamiltonian; and
 5. the same action and embedding supply the admitted density/current limit.
 
 This theorem is conditional on the declared prepared background and the
@@ -28,6 +29,7 @@ noncomputable section
 
 structure LFMFreeDiracContinuumCertificate : Prop where
   completePriorChain : Dirac013Certificate
+  actionRestrictionAndVariation : Dirac006ActionRestrictionCertificate
   kleinGordonTangentFromAction : ∀ eps amplitude momentum site,
     nativePreparedModalPotential eps amplitude momentum site =
       eps^2 * Complex.normSq amplitude / 2 *
@@ -42,26 +44,18 @@ structure LFMFreeDiracContinuumCertificate : Prop where
         (standardC19Hamiltonian (chi0 : ℂ) momentum z) =
       fun component =>
         ((chi0^2 + c19QuadraticSymbol momentum : ℝ) : ℂ) * z component
-  controlledCenteredEquationLimit : ∀ dt frequency radius momentum,
-    dt ≠ 0 →
-    0 ≤ radius →
-    (∀ axis, |momentum axis| ≤ radius) →
-    2 * radius ≤ 1 →
-    |dt * frequency| ≤ 1 →
-    frequency^2 = chi0^2 + c19QuadraticSymbol momentum →
-    |normalizedNativeDiracModeResidual dt frequency momentum| ≤
-      (5/48 : ℝ) * |dt * frequency|^4 / dt^2 + 40 * radius^4
+  recurrenceDerivedFirstOrderBranch : Dirac012RecurrenceBranchCertificate
   nativeContinuityAndDiracCurrent : Dirac013Certificate
 
 theorem lfm_free_dirac_continuum_limit :
     LFMFreeDiracContinuumCertificate where
   completePriorChain := dirac013_native_density_current_continuity
+  actionRestrictionAndVariation := dirac006_action_restriction_bridge
   kleinGordonTangentFromAction := native_prepared_modal_potential_expansion
   exactNativeSymbolSplits := native_psi_tangent_symbol_is_exact_scalar_coefficient
   diracSquareIsContinuumKleinGordon :=
     standard_c19_hamiltonian_square_is_continuum_dispersion
-  controlledCenteredEquationLimit :=
-    normalized_native_dirac_mode_residual_bound
+  recurrenceDerivedFirstOrderBranch := dirac012_native_recurrence_branch
   nativeContinuityAndDiracCurrent :=
     dirac013_native_density_current_continuity
 
