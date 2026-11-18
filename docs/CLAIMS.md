@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-020
+## Established through DIRAC-021
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -137,6 +137,21 @@
   integrated current, the finite-update bound and convergent movement of a
   narrow coherent packet, including normalization, zero-current and unstable-
   timestep controls.
+- At zero momentum, the action-selected nonnegative rest coefficient from
+  DIRAC-011 is the exact frequency of the derived four-component continuum
+  Hamiltonian: `chi0=19` in native units.
+- Explicit positive- and negative-energy rest states have energies `+chi0`
+  and `-chi0`, and their exact phase evolutions satisfy the corresponding
+  componentwise first-order Dirac time equations.
+- The relative phase of a coherent pair of opposite-energy rest branches is
+  derived as their quotient and evolves at angular frequency `2 chi0=38`;
+  it is not inserted as a clock rule.
+- Lean proves the exact native periods `2π/19` for each rest branch and `π/19`
+  for branch coherence, together with the inverse-mass scale `1/19` and the
+  native-coordinate reduced Compton length `sqrt(12)/19`.
+- Independent reconstruction confirms the rest energies, time equations,
+  periods, and doubled relative phase, while wrong-mass and same-sign controls
+  are rejected.
 
 ## Not established
 
@@ -165,6 +180,10 @@
 - A uniform fixed-physical-time convergence theorem that carries both the
   timestep mismatch and exact native C19 spatial remainder.
 - Nonlinear localized-electron transport under unrestricted live-chi dynamics.
+- An SI electron mass or SI Compton wavelength.
+- A directly observable clock signal in a pure energy eigenstate; its global
+  phase leaves the pure-state density unchanged.
+- Zitterbewegung, its velocity observable, amplitude, or position law.
 
 The theorem uses a conditional prepared background; it does not provide an
 origin story. The chosen action is not uniquely forced. The cubical square

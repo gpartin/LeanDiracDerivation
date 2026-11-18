@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-020. It is a declared starting model, not a claim that the
+chain through DIRAC-021. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -166,3 +166,16 @@ This is a spatial readout of the already-derived linear branch, not a native
 action term or translation rule. Exact finite-spacing evolution, a uniform
 fixed-physical-time estimate carrying the C19 remainder, and nonlinear
 live-chi localized-electron transport remain open.
+
+DIRAC-021 again leaves the framework unchanged. It carries the nonnegative
+rest coefficient selected in DIRAC-011 into the zero-momentum four-component
+Hamiltonian, proves explicit positive- and negative-energy rest states and
+their first-order time equations, and derives the relative branch phase from
+the quotient of their opposite exact phases. In native units the resulting
+rest angular frequency is `19` and the coherent opposite-branch relative
+frequency is `38`. The inverse-mass scale is `1/19`; because this derivation's
+continuum limiting speed is `sqrt(12)`, the native-coordinate reduced Compton
+length is `sqrt(12)/19`. No clock register, action term, field, or fitted mass
+is introduced. A pure branch's global phase is not asserted to be observable,
+and SI calibration, zitterbewegung, electromagnetic response, and a localized
+physical electron remain open.

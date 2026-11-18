@@ -1,8 +1,8 @@
 {
   "schema_version": "1.4.0",
-  "gate": "DIRAC-020",
+  "gate": "DIRAC-021",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac020 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac021 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -56,7 +56,10 @@
     "Closed a frame/momentum-label gap by deriving momentum from each character's three axis-step phases, proving the periodic cubic basis has those exact translation phases, and restricting the transport certificate to compatible packets.",
     "Lifted the existing positive-frequency recurrence into one coherent four-component spatial field and proved exact Parseval density and integrated-current identities without adding a translation rule, field, action term, projector or coefficient.",
     "Proved nonzero spatial transport only when the already-derived density-weighted velocity moment is nonzero; a symmetric zero-current control prevents motion from being inferred from the packet label.",
-    "Kept the exact native C19 spatial remainder, uniform fixed-physical-time convergence, and nonlinear live-chi localized-electron motion explicitly open."
+    "Kept the exact native C19 spatial remainder, uniform fixed-physical-time convergence, and nonlinear live-chi localized-electron motion explicitly open.",
+    "Derived the DIRAC-021 rest frequency from the action-selected DIRAC-011 coefficient and explicit zero-momentum Hamiltonian eigenstates rather than inserting a clock frequency.",
+    "Derived the doubled opposite-branch phase from the quotient of two independently proved rest phases and retained wrong-mass and same-sign controls.",
+    "Kept a pure global phase non-observable and distinguished the inverse-mass scale from the native-coordinate Compton length and any SI calibration."
   ],
   "declared_starting_hypotheses": [
     "the noncanonical positive two-field local-plus-exterior-area C19 action",
@@ -84,8 +87,11 @@
     "exact finite-spacing first-order factorization of the complete C19 symbol",
     "a universal Nielsen-Ninomiya or fermion-doubling theorem",
     "dynamical selection of the positive orientation or either rank-four copy",
+    "an observable clock signal in a pure energy eigenstate",
+    "zitterbewegung velocity, amplitude or position law",
+    "an SI electron mass or SI Compton wavelength",
     "electromagnetic coupling and magnetic g-factor",
     "physical electron identity"
   ],
-  "caveat": "DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. DIRAC-016 proves an exact copy exchange under unsigned microscopic cube translation, but not dynamical copy-alternating motion. DIRAC-017 proves a conditional cubical spin-one-half representation. DIRAC-018 closes the orientation/classification hole only inside its stated coefficient class. DIRAC-019 proves sustained stable positive-frequency spectral evolution. DIRAC-020 proves coherent finite spatial Fourier transport and a finite-update pointwise phase-error bound, but not uniform fixed-physical-time native-C19 convergence, nonlinear live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
+  "caveat": "DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. DIRAC-016 proves an exact copy exchange under unsigned microscopic cube translation, but not dynamical copy-alternating motion. DIRAC-017 proves a conditional cubical spin-one-half representation. DIRAC-018 closes the orientation/classification hole only inside its stated coefficient class. DIRAC-019 proves sustained stable positive-frequency spectral evolution. DIRAC-020 proves coherent finite spatial Fourier transport and a finite-update pointwise phase-error bound. DIRAC-021 derives the native rest and opposite-branch coherence phases, but not an observable pure-state clock, zitterbewegung, an SI electron mass, uniform fixed-physical-time native-C19 convergence, nonlinear live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
 }

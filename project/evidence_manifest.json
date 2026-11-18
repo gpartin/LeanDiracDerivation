@@ -2,7 +2,7 @@
   "schema_version": "2.1.0",
   "role": "independent-evidence",
   "action_id": "DIRAC002_COMPLEX_CHI_BASE_C19_V3",
-  "numerical_evidence": "experiments/dirac020_coherent_spatial_transport/result.json",
+  "numerical_evidence": "experiments/dirac021_rest_clock/result.json",
   "cumulative_numerical_evidence": [
     "experiments/dirac010_standard_map/result.json",
     "experiments/dirac011_frequency_mass/result.json",
@@ -12,7 +12,8 @@
     "experiments/dirac017_spin_half/result.json",
     "experiments/dirac018_factorization_classification/result.json",
     "experiments/dirac019_wavepacket_transport/result.json",
-    "experiments/dirac020_coherent_spatial_transport/result.json"
+    "experiments/dirac020_coherent_spatial_transport/result.json",
+    "experiments/dirac021_rest_clock/result.json"
   ],
   "environment": {
     "python": "3.14.0",
@@ -37,6 +38,8 @@
     "experiments/dirac019_wavepacket_transport/result.json": "7c62620662d53bc8280e8f6a3ca9eeabd172116c3f15581b03a3a8220c6aa44e",
     "experiments/dirac019_wavepacket_transport/validate_dirac019.py": "0e2834f543a514a6a1512a49aae755ebc570d20520c2346f34e00e2be66879be",
     "experiments/dirac020_coherent_spatial_transport/result.json": "74378a5d3ec3de35774f6c11f33aa96780a7a2a1c8070e73cc20f9c834ddea6c",
-    "experiments/dirac020_coherent_spatial_transport/validate_dirac020.py": "415d7ea75b1b211b6e1bc9f6011d38715ada157d6f932f208ab30b3c0996d99e"
+    "experiments/dirac020_coherent_spatial_transport/validate_dirac020.py": "415d7ea75b1b211b6e1bc9f6011d38715ada157d6f932f208ab30b3c0996d99e",
+    "experiments/dirac021_rest_clock/result.json": "42bd6b424ac43d6b838e7be4c9f5010594274b27dfe12ae346e592ad48df39b8",
+    "experiments/dirac021_rest_clock/validate_dirac021.py": "e2a917397b270f830dc0286a1c2e1a32b042218bfe2b5205b1c5f61147c3116e"
   }
 }

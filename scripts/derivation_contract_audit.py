@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--020 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--021 derivation contract."""
 
 from __future__ import annotations
 
@@ -55,9 +55,12 @@ def main() -> int:
         ROOT / "experiments" / "dirac020_coherent_spatial_transport" /
         "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_021 = json.loads((
+        ROOT / "experiments" / "dirac021_rest_clock" / "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_020": status.get("highest_passed_gate") == "DIRAC-020",
-        "all_twenty_gates_complete": status.get("completed") == 20,
+        "highest_gate_is_021": status.get("highest_passed_gate") == "DIRAC-021",
+        "all_twenty_one_gates_complete": status.get("completed") == 21,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -139,9 +142,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_020": contains(
+        "publication_stops_at_021": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac020"),
+            "theorem current_highest_gate_is_dirac021"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -287,6 +290,27 @@ def main() -> int:
         "coherent_finite_step_error_present": contains(
             "LeanDirac/Dirac020.lean",
             "theorem coherent_spatial_packet_finite_step_error"),
+        "action_derived_rest_frequency_present": contains(
+            "LeanDirac/Dirac021.lean",
+            "theorem continuum_rest_frequency_is_chi0"),
+        "opposite_rest_energy_states_present": (
+            contains("LeanDirac/Dirac021.lean",
+                     "theorem positive_rest_state_has_native_energy")
+            and contains("LeanDirac/Dirac021.lean",
+                         "theorem negative_rest_state_has_native_energy")
+        ),
+        "rest_time_equations_present": (
+            contains("LeanDirac/Dirac021.lean",
+                     "theorem positive_rest_evolution_satisfies_dirac")
+            and contains("LeanDirac/Dirac021.lean",
+                         "theorem negative_rest_evolution_satisfies_dirac")
+        ),
+        "relative_phase_is_derived_from_quotient": (
+            contains("LeanDirac/Dirac021.lean",
+                     "def restBranchRelativePhase")
+            and contains("LeanDirac/Dirac021.lean",
+                         "theorem rest_branch_relative_phase_is_doubled")
+        ),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -328,6 +352,10 @@ def main() -> int:
             and evidence_020.get("tolerance", 1.0) <= 3.0e-11
             and len(evidence_020.get("coherent_packet_controls", [])) == 3
             and all(evidence_020.get("checks", {}).values())),
+        "independent_rest_clock_check_passes": (
+            evidence_021.get("status") == "PASS"
+            and evidence_021.get("max_error", 1.0) <= 2.0e-12
+            and all(evidence_021.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -337,7 +365,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC020_READY" if passed else "DIRAC020_OPEN",
+        "verdict": "DIRAC021_READY" if passed else "DIRAC021_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

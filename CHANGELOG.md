@@ -1,5 +1,24 @@
 # Changelog
 
+## DIRAC-021 (unreleased)
+
+- Proved that the zero-momentum frequency of the previously derived
+  four-component continuum Hamiltonian equals the action-selected native rest
+  coefficient `chi0=19`.
+- Constructed explicit positive- and negative-energy rest states and proved
+  their exact phase evolutions satisfy the corresponding first-order Dirac
+  time equations.
+- Derived the opposite-branch relative phase as a quotient and proved its
+  angular frequency is `2 chi0=38`, with exact native periods `2π/19` and
+  `π/19`.
+- Distinguished the inverse-mass scale `1/19` from the native-coordinate
+  reduced Compton length `sqrt(12)/19`.
+- Added an independent reconstruction with wrong-mass and same-sign controls,
+  while explicitly excluding an observable pure-state clock, SI calibration,
+  zitterbewegung, electromagnetic response, and a physical-electron claim.
+- Added no native field, action term, force, projector, clock register, fitted
+  coefficient, stencil change, or governing-equation change.
+
 ## DIRAC-020 (unreleased)
 
 - Constructed an explicit normalized finite Fourier frame for every finite

@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-020
+# Publication-quality audit through DIRAC-021
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac020`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac021`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -48,6 +48,10 @@ The native action and governing equations are unchanged by this repair.
 | High | Spectral conservation alone does not prove one coherent spatial field carries the current. | DIRAC-019 could still be only bookkeeping over unrelated modes. | Proved four-component Fourier synthesis, exact Parseval density and integrated spatial current equal to the existing density-weighted velocity moment at every stable update. |
 | High | A packet could be declared moving even when opposite momenta cancel. | “Movement” would be label-driven rather than measured. | Made nonzero velocity moment a necessary hypothesis for nonzero spatial current and retained an equal-and-opposite zero-current control. |
 | High | Recurrence evolution could be silently identified with ideal continuum phase evolution. | Finite-update errors would be hidden. | Proved an explicit pointwise bound using the accumulated one-step phase mismatch and left uniform fixed-physical-time native-C19 convergence open. |
+| Critical | A rest clock could be manufactured by writing `exp(±i 19 t)` into the statement. | The desired frequency would be assumed rather than derived. | First proved explicit `+chi0` and `-chi0` zero-momentum energy eigenstates from the existing Hamiltonian, then proved both phase derivatives and componentwise first-order time equations. The coefficient `chi0=19` is inherited transitively from the action-derived DIRAC-011 mass theorem. |
+| High | The doubled frequency could be a renamed definition. | DIRAC-021 would merely announce `2m`. | Defined the relative phase as the quotient of the two independently proved opposite phases and proved that quotient equals the `2 chi0` exponential. Wrong-mass and same-sign controls fail independently. |
+| High | “Compton clock” could overclaim an observable in a pure rest state. | A global phase has no pure-state density signal. | Kept the formal result as a phase/coherence theorem, independently verified constant density for each pure branch, and deferred the explicit cross-branch velocity observable to DIRAC-022. |
+| High | The inverse-mass scale could be conflated with a coordinate length or SI Compton wavelength. | The current continuum speed is `sqrt(12)`, and no SI bridge is proved. | Proved and documented `1/19` as inverse mass and `sqrt(12)/19` as the native-coordinate reduced Compton length; no SI mass or length is claimed. |
 
 ## Formal claim after repair
 
@@ -82,6 +86,13 @@ pointwise phase-error bound. It does not yet prove a uniform fixed-physical-
 time estimate carrying the exact C19 spatial remainder, or nonlinear live-chi
 electron motion.
 
+DIRAC-021 derives the zero-momentum rest-phase consequences of the same
+action-selected mass. It proves opposite rest energies and time equations,
+the native frequency `19`, and the coherent opposite-branch relative
+frequency `38`. This is not yet zitterbewegung: no velocity or position
+observable has been proved to oscillate, and a pure branch's global phase is
+not treated as measurable.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -92,7 +103,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, and 020 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, and 021 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;
