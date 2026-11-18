@@ -30,6 +30,12 @@ EVIDENCE_FILES = [
     "experiments/dirac012_continuum_evolution/result.json",
     "experiments/dirac013_density_current/validate_dirac013.py",
     "experiments/dirac013_density_current/result.json",
+    "experiments/dirac016_copy_translation/validate_dirac016.py",
+    "experiments/dirac016_copy_translation/result.json",
+    "experiments/dirac017_spin_half/validate_dirac017.py",
+    "experiments/dirac017_spin_half/result.json",
+    "experiments/dirac018_factorization_classification/validate_dirac018.py",
+    "experiments/dirac018_factorization_classification/result.json",
 ]
 
 RELEASE_FILES = [
@@ -44,10 +50,14 @@ RELEASE_FILES = [
     "LICENSING.md",
     "README.md",
     "docs/CLAIMS.md",
+    "docs/DIRAC018_RED_TEAM.md",
+    "docs/FORUM_POST_DIRAC018.md",
     "docs/FRAMEWORK.md",
     "docs/PROOF_CHAIN.md",
     "docs/RELATED_WORK.md",
     "docs/REPRODUCIBILITY.md",
+    "docs/SUBMISSION_TRACKER.md",
+    "docs/WORLD_CLASS_AUDIT.md",
     "lake-manifest.json",
     "lakefile.lean",
     "lean-toolchain",
@@ -60,6 +70,9 @@ RELEASE_FILES = [
     "project/dirac015_clean_reproduction_status.json",
     "project/dirac016_copy_translation_status.json",
     "project/dirac017_spin_half_representation_status.json",
+    "project/dirac017_release_readiness_status.json",
+    "project/dirac018_factorization_classification_status.json",
+    "project/dirac018_release_readiness_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -68,6 +81,7 @@ RELEASE_FILES = [
     "scripts/final_chain_audit.py",
     "scripts/build_publication_package.py",
     "scripts/production_guard.py",
+    "scripts/publication_quality_audit.py",
     "scripts/update_manifests.py",
     "scripts/verify_release.py",
 ]
@@ -116,8 +130,8 @@ def main() -> int:
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac017",
-        "highest_gate": "DIRAC-017",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac018",
+        "highest_gate": "DIRAC-018",
         "files": hashes(proof_files),
     })
     import numpy
@@ -125,12 +139,15 @@ def main() -> int:
         "schema_version": "2.1.0",
         "role": "independent-evidence",
         "action_id": ACTION_ID,
-        "numerical_evidence": "experiments/dirac013_density_current/result.json",
+        "numerical_evidence": "experiments/dirac018_factorization_classification/result.json",
         "cumulative_numerical_evidence": [
             "experiments/dirac010_standard_map/result.json",
             "experiments/dirac011_frequency_mass/result.json",
             "experiments/dirac012_continuum_evolution/result.json",
             "experiments/dirac013_density_current/result.json",
+            "experiments/dirac016_copy_translation/result.json",
+            "experiments/dirac017_spin_half/result.json",
+            "experiments/dirac018_factorization_classification/result.json",
         ],
         "environment": {
             "python": platform.python_version(),

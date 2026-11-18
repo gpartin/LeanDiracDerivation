@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--017 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--018 derivation contract."""
 
 from __future__ import annotations
 
@@ -37,9 +37,19 @@ def main() -> int:
     evidence_013 = json.loads((
         ROOT / "experiments" / "dirac013_density_current" / "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_016 = json.loads((
+        ROOT / "experiments" / "dirac016_copy_translation" / "result.json"
+    ).read_text(encoding="utf-8"))
+    evidence_017 = json.loads((
+        ROOT / "experiments" / "dirac017_spin_half" / "result.json"
+    ).read_text(encoding="utf-8"))
+    evidence_018 = json.loads((
+        ROOT / "experiments" / "dirac018_factorization_classification" /
+        "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_017": status.get("highest_passed_gate") == "DIRAC-017",
-        "all_seventeen_gates_complete": status.get("completed") == 17,
+        "highest_gate_is_018": status.get("highest_passed_gate") == "DIRAC-018",
+        "all_eighteen_gates_complete": status.get("completed") == 18,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -121,9 +131,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_017": contains(
+        "publication_stops_at_018": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac017"),
+            "theorem current_highest_gate_is_dirac018"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -194,6 +204,32 @@ def main() -> int:
         "spin_hamiltonian_covariance_present": contains(
             "LeanDirac/Dirac017Closed.lean",
             "theorem cube_quarter_turn_hamiltonian_covariance"),
+        "continuous_spin_hamiltonian_covariance_present": contains(
+            "LeanDirac/Dirac017Closed.lean",
+            "theorem cube_continuous_turn_hamiltonian_covariance"),
+        "cubic_commutant_classification_present": contains(
+            "LeanDirac/Dirac018.lean",
+            "theorem cubic_covariant_coefficients_are_scalar"),
+        "sector_local_two_copy_classification_present": contains(
+            "LeanDirac/Dirac018.lean",
+            "theorem admissible_two_copy_native_root_is_canonical"),
+        "flavor_sector_exhaustion_present": (
+            contains(
+                "LeanDirac/Dirac018.lean",
+                "theorem positive_flavor_is_exactly_plus_embedding")
+            and contains(
+                "LeanDirac/Dirac018.lean",
+                "theorem negative_flavor_is_exactly_minus_embedding")
+        ),
+        "c19_zero_census_present": contains(
+            "LeanDirac/Dirac018.lean",
+            "theorem c19_first_brillouin_zone_zero_unique"),
+        "orientation_necessity_control_present": contains(
+            "LeanDirac/Dirac018.lean",
+            "theorem overall_negative_root_is_rejected"),
+        "cubic_covariance_necessity_control_present": contains(
+            "LeanDirac/Dirac018.lean",
+            "theorem reflected_axis_root_is_rejected"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -209,6 +245,21 @@ def main() -> int:
             and evidence_013.get("max_error", 1.0) <= 2.0e-9
             and evidence_013.get("minimum_flux_refinement_ratio", 0.0) > 3.9
             and all(evidence_013.get("checks", {}).values())),
+        "independent_copy_translation_check_passes": (
+            evidence_016.get("status") == "PASS"
+            and evidence_016.get("max_error", 1.0) <= 1.0e-12
+            and all(evidence_016.get("checks", {}).values())),
+        "independent_spin_representation_check_passes": (
+            evidence_017.get("status") == "PASS"
+            and evidence_017.get("max_error", 1.0) <= 2.0e-12
+            and all(evidence_017.get("checks", {}).values())),
+        "independent_factorization_classification_check_passes": (
+            evidence_018.get("status") == "PASS"
+            and evidence_018.get("max_error", 1.0) <= 3.0e-12
+            and evidence_018.get("commutant_nullity") == 1
+            and evidence_018.get("plus_sector_rank") == 4
+            and evidence_018.get("minus_sector_rank") == 4
+            and all(evidence_018.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -218,7 +269,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC017_READY" if passed else "DIRAC017_OPEN",
+        "verdict": "DIRAC018_READY" if passed else "DIRAC018_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

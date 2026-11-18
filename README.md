@@ -6,7 +6,7 @@ This repository is the production Lean 4 environment for a noncanonical
 attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
-All **17 of 17** derivation gates pass. The chain begins with
+All **18 of 18** derivation gates pass. The chain begins with
 one positive complex-Psi/complex-chi C19 action, proves that its restriction
 and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
@@ -32,11 +32,23 @@ cube-incidence algebra. The actual rotation commutator uniquely selects the
 nonzero scale `1/2`, the Casimir is `3/4`, and both retained rank-four copies
 intertwine exactly with the conventional four-component spin generators. The
 component spectrum, positive-definite native inner product, continuous unitary
-rotation group, `2π` sign/`4π` return, mass-grading compatibility, and full
-interpreted Hamiltonian covariance are proved. Covariance and unitarity also
+rotation group, `2π` sign/`4π` return, mass-grading compatibility, and both
+quarter-turn and all-angle interpreted-Hamiltonian covariance are proved.
+Covariance and unitarity also
 uniquely characterize the positive quarter-turn inside the native plane-rotor
 family. This proves a conditional spin-one-half representation of the derived
-continuum sector, not spin of a localized physical electron.
+continuum sector. It does not prove that the native dynamics uniquely selects
+this square-root orientation or realizes it as a localized physical electron.
+DIRAC-018 closes that orientation question inside a precise native candidate
+class. For real, local, first-order, flavor-preserving combinations of the
+existing cubical incidence operators, cubic covariance forces equal transport
+coefficients, scalar squaring fixes their magnitude, and the independently
+derived positive mass/current orientation fixes their sign. The proof applies
+independently to both exact rank-four copies, proves those copies exhaust the
+eight-corner space, and proves that the exact C19 scalar symbol has no extra
+zero in the first Brillouin zone. This is a scoped classification, not a claim
+about arbitrary nonlocal or flavor-mixing roots, an exact finite-spacing
+Dirac factorization, all forms of fermion doubling, or a physical electron.
 
 ## Current status
 
@@ -53,7 +65,8 @@ continuum sector, not spin of a localized physical electron.
 | DIRAC-014 | PASS | Final adversarial audit reports zero critical/high findings. |
 | DIRAC-015 | PASS | One cumulative action-to-Dirac theorem and deterministic clean-checkout package. |
 | DIRAC-016 | PASS | Exact A-B-A copy exchange under unsigned cube translation, with density preservation, unique coordinate map, and a strict motion-claim boundary. |
-| DIRAC-017 | PASS (conditional representation) | Cubical spin-one-half representation: exact standard-spin intertwiner on both copies, explicit spectrum, uniquely characterized unitary rotations, `2π` sign/`4π` return, and mass-plus-transport covariance. Localized dynamical spin remains downstream. |
+| DIRAC-017 | PASS (conditional representation) | Cubical spin-one-half representation: exact standard-spin intertwiner on both copies, explicit spectrum, uniquely characterized quarter-turn, continuous unitary rotations, `2π` sign/`4π` return, and quarter-turn plus all-angle mass-and-transport covariance. Localized dynamical spin remains downstream. |
+| DIRAC-018 | PASS (scoped classification) | Within the real local flavor-preserving cubical-incidence class, cubic covariance, exact continuum squaring and the upstream positive orientation uniquely select the same canonical root on each exact rank-four copy. Includes formal wrong-sign and broken-symmetry controls plus the C19 scalar-symbol zero census. |
 
 See [the complete proof chain](docs/PROOF_CHAIN.md) for every gate and its
 claim boundary.
@@ -63,23 +76,25 @@ claim boundary.
 Install Lean with `elan`, then run:
 
 ```bash
-lake update
 python scripts/verify_release.py
 ```
 
 The verifier builds every production module, audits the compiled Lean
 environment, checks role-specific manifests, runs adversarial audit controls,
-and independently reconstructs the DIRAC-010--013 identities, audits the final
-theorem, and verifies deterministic packaging. It is read-only: it
+and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--018
+evidence, audits the final theorem and publication metadata, and verifies the
+release contract. It is read-only: it
 does not install Git hooks or alter the index.
 
 ## Repository guide
 
 - [Native framework](docs/FRAMEWORK.md): fields, constants, geometry, action,
   equations, and update.
-- [Formal proof chain](docs/PROOF_CHAIN.md): all 17 gates and theorem boundary.
-- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-017 establish.
+- [Formal proof chain](docs/PROOF_CHAIN.md): all 18 gates and theorem boundary.
+- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-018 establish.
 - [Reproducibility](docs/REPRODUCIBILITY.md): rebuild instructions.
+- [Publication-quality audit](docs/WORLD_CLASS_AUDIT.md): findings, repairs,
+  residual scientific boundaries, and acceptance tests.
 - [Related work and attribution](docs/RELATED_WORK.md): the geometric
   lattice-fermion lineage and the repository's narrower formal contribution.
 - [Changelog](CHANGELOG.md): current cleanup and historical milestones.
@@ -93,6 +108,12 @@ does not install Git hooks or alter the index.
   centered-recurrence, and continuum-error reconstruction.
 - `experiments/dirac013_density_current/`: independent native flow,
   continuity, positive-frequency density, and continuum-current reconstruction.
+- `experiments/dirac016_copy_translation/`: independent copy-translation,
+  C19-weight, and signed-incidence reconstruction.
+- `experiments/dirac017_spin_half/`: independent spin algebra, spectrum,
+  rotation-group, and continuous Hamiltonian-covariance reconstruction.
+- `experiments/dirac018_factorization_classification/`: independent cubic
+  commutant, square-root, two-copy, and scalar-symbol-zero reconstruction.
 
 ## Proof-security boundary
 

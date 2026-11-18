@@ -1,9 +1,8 @@
 import LeanDirac.Dirac017
 
-namespace LeanDirac
+set_option maxHeartbeats 800000
 
-set_option maxHeartbeats 4000000
-set_option maxRecDepth 4000
+namespace LeanDirac
 
 noncomputable section
 open Complex
@@ -137,6 +136,34 @@ theorem cube_quarter_turn_hamiltonian_covariance
       cellFlip0, cellFlip1, cellFlip2, cellBit0, cellBit1, cellBit2] <;>
     ring
 
+/-!
+The quarter-turn theorem above is the discrete cubical case.  The same
+incidence rotor also covaries the complete interpreted Hamiltonian for every
+real angle; the physical momentum rotates through the full angle while the
+spinor rotor uses the derived half-angle.
+-/
+
+def cubeContinuousRotatedPx
+    (angle : ℝ) (axis : Fin 3) (px py pz : ℂ) : ℂ :=
+  match axis with
+  | 0 => Real.cos angle * px + Real.sin angle * py
+  | 1 => Real.cos angle * px + Real.sin angle * pz
+  | _ => px
+
+def cubeContinuousRotatedPy
+    (angle : ℝ) (axis : Fin 3) (px py pz : ℂ) : ℂ :=
+  match axis with
+  | 0 => -Real.sin angle * px + Real.cos angle * py
+  | 1 => py
+  | _ => Real.cos angle * py - Real.sin angle * pz
+
+def cubeContinuousRotatedPz
+    (angle : ℝ) (axis : Fin 3) (px py pz : ℂ) : ℂ :=
+  match axis with
+  | 0 => pz
+  | 1 => -Real.sin angle * px + Real.cos angle * pz
+  | _ => Real.sin angle * py + Real.cos angle * pz
+
 def standardCubeQuarterTurn (axis : Fin 3) (z : Cell4) : Cell4 :=
   fun component => (((1 / Real.sqrt 2 : ℝ) : ℂ) *
     (z component - 2 * I * standardCubeSpin axis z component))
@@ -268,6 +295,79 @@ def cubeContinuousTurn
     ((Real.cos (nativeSpinScale * angle) : ℝ) : ℂ) * amplitude corner -
       ((Real.sin (nativeSpinScale * angle) : ℝ) : ℂ) *
         cubePlaneBivector axis amplitude corner
+
+theorem cube_continuous_turn_hamiltonian_covariance
+    (angle : ℝ) (axis : Fin 3) (mass px py pz : ℂ)
+    (amplitude : Cell8) :
+    cubeContinuousTurn angle axis
+        (interpretedCubeDiracHamiltonian mass px py pz amplitude) =
+      interpretedCubeDiracHamiltonian mass
+        (cubeContinuousRotatedPx angle axis px py pz)
+        (cubeContinuousRotatedPy angle axis px py pz)
+        (cubeContinuousRotatedPz angle axis px py pz)
+        (cubeContinuousTurn angle axis amplitude) := by
+  have hcos : Real.cos angle =
+      Real.cos (angle / 2) ^ 2 - Real.sin (angle / 2) ^ 2 := by
+    calc
+      Real.cos angle = Real.cos (2 * (angle / 2)) := by
+        congr 1
+        ring
+      _ = 2 * Real.cos (angle / 2) ^ 2 - 1 := by
+        rw [Real.cos_two_mul]
+      _ = Real.cos (angle / 2) ^ 2 - Real.sin (angle / 2) ^ 2 := by
+        nlinarith [Real.sin_sq_add_cos_sq (angle / 2)]
+  have hsin : Real.sin angle =
+      2 * Real.sin (angle / 2) * Real.cos (angle / 2) := by
+    calc
+      Real.sin angle = Real.sin (2 * (angle / 2)) := by
+        congr 1
+        ring
+      _ = 2 * Real.sin (angle / 2) * Real.cos (angle / 2) := by
+        rw [Real.sin_two_mul]
+  have htrig :
+      Complex.cos ((angle : ℂ) * (1 / 2)) ^ 2 +
+        Complex.sin ((angle : ℂ) * (1 / 2)) ^ 2 = 1 := by
+    exact Complex.cos_sq_add_sin_sq ((angle : ℂ) * (1 / 2))
+  have hsinSq :
+      Complex.sin ((angle : ℂ) * (1 / 2)) ^ 2 =
+        1 - Complex.cos ((angle : ℂ) * (1 / 2)) ^ 2 := by
+    linear_combination htrig
+  have hsinCube :
+      Complex.sin ((angle : ℂ) * (1 / 2)) ^ 3 =
+        (1 - Complex.cos ((angle : ℂ) * (1 / 2)) ^ 2) *
+          Complex.sin ((angle : ℂ) * (1 / 2)) := by
+    calc
+      Complex.sin ((angle : ℂ) * (1 / 2)) ^ 3 =
+          Complex.sin ((angle : ℂ) * (1 / 2)) ^ 2 *
+            Complex.sin ((angle : ℂ) * (1 / 2)) := by ring
+      _ = (1 - Complex.cos ((angle : ℂ) * (1 / 2)) ^ 2) *
+            Complex.sin ((angle : ℂ) * (1 / 2)) := by rw [hsinSq]
+  have hcosSq :
+      Complex.cos ((angle : ℂ) * (1 / 2)) ^ 2 =
+        1 - Complex.sin ((angle : ℂ) * (1 / 2)) ^ 2 := by
+    linear_combination htrig
+  have hcosCube :
+      Complex.cos ((angle : ℂ) * (1 / 2)) ^ 3 =
+        (1 - Complex.sin ((angle : ℂ) * (1 / 2)) ^ 2) *
+          Complex.cos ((angle : ℂ) * (1 / 2)) := by
+    calc
+      Complex.cos ((angle : ℂ) * (1 / 2)) ^ 3 =
+          Complex.cos ((angle : ℂ) * (1 / 2)) ^ 2 *
+            Complex.cos ((angle : ℂ) * (1 / 2)) := by ring
+      _ = (1 - Complex.sin ((angle : ℂ) * (1 / 2)) ^ 2) *
+            Complex.cos ((angle : ℂ) * (1 / 2)) := by rw [hcosSq]
+  funext corner
+  fin_cases axis <;> fin_cases corner <;>
+    simp [cubeContinuousTurn, interpretedCubeDiracHamiltonian,
+      nativeCubeDiracSpatial, cubeIncidenceLinear, cubePlaneBivector,
+      cubeParityBeta, cubeIncidenceGamma, cubeIncidenceSign,
+      cubeIncidenceFlip, cubeContinuousRotatedPx,
+      cubeContinuousRotatedPy, cubeContinuousRotatedPz,
+      native_spin_scale_eq_half, hcos, hsin,
+      cellFlip0, cellFlip1, cellFlip2, cellBit0, cellBit1, cellBit2] <;>
+    ring_nf <;>
+    simp only [hsinCube, hcosCube] <;>
+    ring
 
 theorem cube_continuous_turn_add
     (firstAngle secondAngle : ℝ) (axis : Fin 3) (amplitude : Cell8) :
@@ -608,7 +708,7 @@ structure Dirac017ClosedSpinHalfRepresentationCertificate : Prop where
   massGradingCommutesWithSpin : ∀ axis amplitude,
     cubeParityBeta (cubeSpin axis amplitude) =
       cubeSpin axis (cubeParityBeta amplitude)
-  fullHamiltonianCovariance : ∀ axis mass px py pz amplitude,
+  quarterTurnHamiltonianCovariance : ∀ axis mass px py pz amplitude,
     cubeQuarterTurn axis
         (interpretedCubeDiracHamiltonian mass px py pz amplitude) =
       interpretedCubeDiracHamiltonian mass
@@ -616,6 +716,14 @@ structure Dirac017ClosedSpinHalfRepresentationCertificate : Prop where
         (cubeRotatedPy axis px py pz)
         (cubeRotatedPz axis px py pz)
         (cubeQuarterTurn axis amplitude)
+  continuousHamiltonianCovariance : ∀ angle axis mass px py pz amplitude,
+    cubeContinuousTurn angle axis
+        (interpretedCubeDiracHamiltonian mass px py pz amplitude) =
+      interpretedCubeDiracHamiltonian mass
+        (cubeContinuousRotatedPx angle axis px py pz)
+        (cubeContinuousRotatedPy angle axis px py pz)
+        (cubeContinuousRotatedPz angle axis px py pz)
+        (cubeContinuousTurn angle axis amplitude)
   nativeInnerSelfIsDensity : ∀ amplitude,
     cell8Inner amplitude amplitude = (cell8Density amplitude : ℂ)
   nativeDensityIsNonnegative : ∀ amplitude,
@@ -656,7 +764,9 @@ theorem dirac017_closed_spin_half_representation :
     ⟨cube_spin_intertwines_minus, cube_spin_intertwines_plus⟩
   explicitTwoPlusTwoMinusSpectrum := standard_cube_spin0_basis_spectrum
   massGradingCommutesWithSpin := cube_beta_commutes_spin
-  fullHamiltonianCovariance := cube_quarter_turn_hamiltonian_covariance
+  quarterTurnHamiltonianCovariance := cube_quarter_turn_hamiltonian_covariance
+  continuousHamiltonianCovariance :=
+    cube_continuous_turn_hamiltonian_covariance
   nativeInnerSelfIsDensity := cell8_inner_self_eq_density
   nativeDensityIsNonnegative := cell8_density_nonnegative
   positiveDefiniteNativeInnerProduct := cell8_inner_positive_definite

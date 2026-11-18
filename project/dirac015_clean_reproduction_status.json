@@ -1,12 +1,13 @@
 {
   "schema_version": "1.0.0",
   "gate": "DIRAC-015",
+  "historical": true,
   "status": "PASS",
   "formal_theorem": "LeanDirac.lfm_free_dirac_continuum_limit",
   "publication_theorem": "LeanDirac.current_highest_gate_is_dirac015",
   "reproduction_command": "python scripts/verify_release.py",
   "clean_workflow": ".github/workflows/lean.yml",
-  "package_command": "python scripts/build_publication_package.py --output-dir dist",
+  "package_command_at_gate": "python scripts/build_publication_package.py --output-dir dist",
   "package_artifacts": [
     "LeanDiracDerivation-DIRAC-015.zip",
     "LeanDiracDerivation-DIRAC-015.zip.sha256"

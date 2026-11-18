@@ -5,7 +5,6 @@
 From a clean checkout:
 
 ```bash
-lake update
 lake build
 python scripts/verify_release.py
 ```
@@ -67,6 +66,41 @@ at quadratic order. It does not claim positive density for mixed frequencies,
 exact finite-lattice current equality, nonlinear live-chi current closure,
 physical spin, or an electron.
 
+## Independent DIRAC-016 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac016_copy_translation/validate_dirac016.py
+```
+
+The program reconstructs all three unsigned cube translations, both rank-four
+embeddings, their coordinate half-shift, the signed-incidence contrast, and the
+C19 copy-class weight split. It does not claim that one native timestep
+performs a copy exchange or that a localized carrier moves this way.
+
+## Independent DIRAC-017 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac017_spin_half/validate_dirac017.py
+```
+
+The program reconstructs the native spin algebra, both-copy spectrum,
+quarter-turn and continuous rotation identities, and all-angle interpreted
+Hamiltonian covariance. It checks the conditional representation; it is not
+evidence for localized dynamical spin or a physical electron.
+
+## Independent DIRAC-018 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac018_factorization_classification/validate_dirac018.py
+```
+
+The program independently reconstructs the cubic commutant, the canonical
+square identity, the two exact rank-four flavor projectors, the wrong-sign and
+reflected-axis controls, and the scalar C19 zero census on every periodic grid
+from size 2 through 32. It tests the stated local flavor-preserving coefficient
+class; it is not evidence for arbitrary-root uniqueness, an exact finite-
+spacing Dirac factorization, a universal doubling theorem, or an electron.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -74,11 +108,13 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 16-gate dependency and claim boundary.
+The first command verifies the complete 18-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-017.zip` and its checksum. These steps
+produces `dist/LeanDiracDerivation-DIRAC-018.zip` and its checksum. The archive
+also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
+identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.
 Reading the committed Git objects, rather than checkout-dependent working-tree
 line endings, makes the archive identical across platforms.
@@ -88,3 +124,7 @@ line endings, makes the archive identical across platforms.
 The Lean theorem is the formal evidence. The Python result is an independent
 matrix reconstruction and cannot substitute for Lean. Hash manifests separate
 the native framework, formal proof, evidence, and publication files.
+
+The dependency graph is locked by `lake-manifest.json`; reproduction therefore
+does not run `lake update`. Updating dependencies is a separate reviewed
+maintenance operation, not part of reproducing a published result.

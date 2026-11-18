@@ -5,12 +5,11 @@ type: software
 authors:
   - family-names: "Partin"
     given-names: "G. D."
-version: "0.15.0-research"
-date-released: "2026-11-11"
+version: "0.18.0-research-dev"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 abstract: >-
-  A noncanonical Lean 4 research derivation through DIRAC-017. It connects a
+  A noncanonical Lean 4 research derivation through DIRAC-018. It connects a
   positive two-field C19 action to a massive C19 Klein-Gordon tangent and
   proves that a cubical four-component Dirac Hamiltonian squares to its
   continuum symbol. It controls lattice/time corrections and derives the
@@ -18,9 +17,14 @@ abstract: >-
   formalizes copy exchange under cube translation and a conditional cubical
   spin-one-half representation with exact conventional-spin intertwiners,
   explicit spectrum, continuous unitarity, 2pi sign reversal, 4pi return,
-  and interpreted-Hamiltonian covariance. Dynamical realization on a
-  localized carrier, a physical electron, electromagnetic coupling, and
-  uniqueness remain open.
+  and quarter-turn plus all-angle interpreted-Hamiltonian covariance. Within
+  a stated real local flavor-preserving cubical-incidence class it also
+  classifies the continuum square root independently on both rank-four
+  copies and proves the C19 scalar-symbol zero census. Arbitrary nonlocal or
+  flavor-mixing roots, exact finite-spacing factorization, dynamical
+  realization on a localized carrier, a physical electron, and electromagnetic
+  coupling remain open. This
+  development version is newer than the archived v0.15.0 release.
 references:
   - type: article
     authors:

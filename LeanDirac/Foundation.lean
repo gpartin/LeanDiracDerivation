@@ -1,4 +1,9 @@
-import Mathlib
+import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
+import Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.Analysis.Complex.Exponential
+import Mathlib.Analysis.Complex.Trigonometric
+import Mathlib.Tactic
 
 namespace LeanDirac
 

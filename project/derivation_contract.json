@@ -27,7 +27,8 @@
     "DIRAC-012": "PASS_RECURRENCE_DERIVED_FIRST_ORDER_CONTINUUM_EVOLUTION",
     "DIRAC-013": "PASS_NATIVE_DENSITY_CURRENT_CONTINUITY",
     "DIRAC-016": "PASS_EXACT_COPY_TRANSLATION_STRUCTURE",
-    "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
+    "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION",
+    "DIRAC-018": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION"
   },
   "dirac006_bridge_mandatory_gates": {
     "formal": [
@@ -157,7 +158,7 @@
       "all three generators are self-adjoint and the quarter-turn is unitary for that inner product",
       "covariance, unitarity and positive orientation uniquely characterize the quarter-turn coefficients in the native plane-rotor family",
       "continuous rotations compose, are unitary, give minus identity at two pi and identity at four pi",
-      "mass grading commutes with spin and the complete mass-plus-transport Hamiltonian rotates covariantly",
+      "mass grading commutes with spin and the complete mass-plus-transport Hamiltonian is covariant under the proved quarter-turn and all-angle rotations",
       "both retained rank-four copies preserved",
       "standard-foundation-only axiom audit"
     ],
@@ -167,6 +168,37 @@
       "electromagnetic coupling or magnetic g-factor",
       "electron identity or formation",
       "canonical LFM status"
+    ]
+  },
+  "dirac018_mandatory_gates": {
+    "status": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION",
+    "formal": [
+      "same action and transitive DIRAC-017 derivation",
+      "candidate roots restricted explicitly to real local first-order flavor-preserving cubical-incidence coefficients with separated mass grading",
+      "commuting with two generating cube quarter-turns forces the three transport coefficients to be one scalar coefficient",
+      "exact continuum scalar squaring fixes the coefficient magnitudes",
+      "the positive mass-frequency and current orientation already selected upstream fixes the common sign",
+      "each rank-four copy is classified independently on its own embedding without assuming a relation between copy coefficients",
+      "both flavor embeddings are injective, exhaust their eigenspaces, intersect only at zero and decompose every eight-corner amplitude",
+      "the exact C19 scalar transport symbol has only the origin as a zero in the first Brillouin zone",
+      "an overall negative-root control preserves the square and covariance but fails positive orientation",
+      "a reflected-axis control preserves the square but fails cubic covariance",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "the cubic commutant has nullity one and identity basis within numerical tolerance",
+      "both exact flavor projectors have rank four",
+      "canonical, negative-orientation and reflected-axis square identities reproduce within tolerance",
+      "periodic Brillouin grids of sizes 2 through 32 have exactly one scalar-symbol zero",
+      "all excluded claims remain explicit"
+    ],
+    "excluded_claims": [
+      "classification of arbitrary nonlocal or flavor-mixing square roots",
+      "exact finite-spacing first-order factorization of the complete C19 symbol",
+      "a universal Nielsen-Ninomiya or fermion-doubling theorem",
+      "dynamical selection of an orientation or flavor copy",
+      "localized stable physical electron",
+      "electromagnetic coupling or magnetic g-factor"
     ]
   }
 }

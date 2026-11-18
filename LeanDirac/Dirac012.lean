@@ -2,9 +2,6 @@ import LeanDirac.Dirac011
 
 namespace LeanDirac
 
-set_option maxHeartbeats 4000000
-set_option maxRecDepth 4000
-
 /-!
 # DIRAC-012: controlled continuum Dirac evolution
 

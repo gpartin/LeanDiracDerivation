@@ -2,9 +2,6 @@ import LeanDirac.Dirac010
 
 namespace LeanDirac
 
-set_option maxHeartbeats 4000000
-set_option maxRecDepth 4000
-
 /-!
 # DIRAC-011: common frequency branches and native rest-mass selection
 

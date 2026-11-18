@@ -1,4 +1,4 @@
-"""Final read-only adversarial audit for DIRAC-001 through DIRAC-017."""
+"""Final read-only adversarial audit for DIRAC-001 through DIRAC-018."""
 
 from __future__ import annotations
 
@@ -24,13 +24,24 @@ def main() -> int:
     proof = load("project/proof_manifest.json")
     copy_status = load("project/dirac016_copy_translation_status.json")
     spin_status = load("project/dirac017_spin_half_representation_status.json")
+    classification_status = load(
+        "project/dirac018_factorization_classification_status.json"
+    )
+    readiness = load("project/dirac018_release_readiness_status.json")
     boundary = status.get("claim_boundary", "").lower()
 
     checks = {
-        "all_seventeen_gates_pass": (
-            status.get("completed") == 17
-            and status.get("highest_passed_gate") == "DIRAC-017"
-            and all(value == "PASS" for value in status.get("gates", {}).values())
+        "all_eighteen_gates_have_honest_passing_status": (
+            status.get("completed") == 18
+            and status.get("highest_passed_gate") == "DIRAC-018"
+            and all(
+                value == "PASS" for gate, value in status.get("gates", {}).items()
+                if gate not in ("DIRAC-017", "DIRAC-018")
+            )
+            and status.get("gates", {}).get("DIRAC-017") ==
+                "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
+            and status.get("gates", {}).get("DIRAC-018") ==
+                "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION"
         ),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
@@ -39,12 +50,14 @@ def main() -> int:
         ),
         "audit_gate_passes": audit.get("status") == "PASS",
         "clean_reproduction_gate_passes": reproduction.get("status") == "PASS",
+        "current_release_readiness_passes": readiness.get("status") == "PASS",
         "final_theorem_is_action_rooted": (
-            proof.get("highest_gate") == "DIRAC-017"
+            proof.get("highest_gate") == "DIRAC-018"
             and "LeanDirac/Dirac015.lean" in proof.get("files", {})
             and "LeanDirac/Dirac016.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017Closed.lean" in proof.get("files", {})
+            and "LeanDirac/Dirac018.lean" in proof.get("files", {})
             and "LeanDirac/Publication.lean" in proof.get("files", {})
             and all(audit.get("checks", {}).get(name) is True for name in (
                 "native_action_contains_no_dirac_matrix_spinor_or_projector",
@@ -56,7 +69,7 @@ def main() -> int:
         ),
         "publication_names_final_theorem": (
             proof.get("publication_theorem") ==
-                "LeanDirac.current_highest_gate_is_dirac017"
+                "LeanDirac.current_highest_gate_is_dirac018"
             and reproduction.get("formal_theorem") ==
                 "LeanDirac.lfm_free_dirac_continuum_limit"
             and reproduction.get("publication_theorem") ==
@@ -64,6 +77,8 @@ def main() -> int:
             and copy_status.get("publication_theorem") ==
                 "LeanDirac.current_highest_gate_is_dirac016"
             and spin_status.get("publication_theorem") ==
+                "LeanDirac.current_highest_gate_is_dirac017"
+            and classification_status.get("publication_theorem") ==
                 proof.get("publication_theorem")
         ),
         "copy_translation_extension_is_scoped": (
@@ -85,7 +100,9 @@ def main() -> int:
             and spin_status.get("red_team", {}).get(
                 "assumed_half_angle") is False
             and spin_status.get("red_team", {}).get(
-                "full_hamiltonian_covariance_proved") is True
+                "continuous_hamiltonian_covariance_proved") is True
+            and spin_status.get("red_team", {}).get(
+                "quarter_turn_hamiltonian_covariance_proved") is True
             and spin_status.get("red_team", {}).get(
                 "quarter_turn_uniquely_characterized") is True
             and spin_status.get("red_team", {}).get(
@@ -93,12 +110,33 @@ def main() -> int:
             and not spin_status.get("red_team", {}).get("critical_findings")
             and not spin_status.get("red_team", {}).get("high_findings")
         ),
+        "native_factorization_classification_is_scoped": (
+            classification_status.get("status") ==
+                "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION"
+            and classification_status.get("action_changed") is False
+            and classification_status.get("red_team", {}).get(
+                "global_copy_symmetry_assumed") is False
+            and classification_status.get("red_team", {}).get(
+                "sector_local_square_conditions") is True
+            and classification_status.get("red_team", {}).get(
+                "hypothesis_necessity_controls_proved") is True
+            and classification_status.get("red_team", {}).get(
+                "two_copy_exhaustion_proved") is True
+            and classification_status.get("red_team", {}).get(
+                "finite_lattice_overclaim_excluded") is True
+            and classification_status.get("red_team", {}).get(
+                "nielsen_ninomiya_overclaim_excluded") is True
+            and not classification_status.get("red_team", {}).get(
+                "critical_findings")
+            and not classification_status.get("red_team", {}).get(
+                "high_findings")
+        ),
         "claim_boundary_is_retained": all(
             phrase in boundary for phrase in (
                 "conditional free-dirac continuum derivation",
-                "does not claim uniqueness",
+                "does not classify arbitrary nonlocal or flavor-mixing roots",
                 "electromagnetic coupling",
-                "localized physical electron",
+                "localized stable carrier",
             )
         ),
         "clean_package_builder_present": (
@@ -109,8 +147,8 @@ def main() -> int:
 
     print(json.dumps({
         "checks": checks,
-        "verdict": "DIRAC_001_017_FINAL_AUDIT_PASS" if not errors
-            else "DIRAC_001_017_FINAL_AUDIT_FAIL",
+        "verdict": "DIRAC_001_018_FINAL_AUDIT_PASS" if not errors
+            else "DIRAC_001_018_FINAL_AUDIT_FAIL",
         "errors": errors,
     }, indent=2))
     return 1 if errors else 0

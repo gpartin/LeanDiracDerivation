@@ -2,9 +2,6 @@ import LeanDirac.Dirac009Closed
 
 namespace LeanDirac
 
-set_option maxHeartbeats 4000000
-set_option maxRecDepth 4000
-
 /-!
 # DIRAC-010: downstream standard-Dirac identification
 
