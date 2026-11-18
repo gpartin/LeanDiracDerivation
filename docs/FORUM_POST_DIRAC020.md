@@ -1,0 +1,7 @@
+DIRAC-020 now passes in our Lean LFM-to-Dirac chain.
+
+DIRAC-019 proved that the derived modes carry density and current through time. DIRAC-020 proves that those modes can be combined into one coherent field spread across a periodic spatial lattice. Lean constructs the normalized Fourier frame explicitly and proves that each spatial Fourier phase matches the momentum carried by the corresponding mode; they cannot be paired arbitrarily. It then proves that no density is gained or lost when moving between the mode and spatial descriptions, and that the spatial field's total current is exactly the density-weighted movement velocity derived earlier. If that velocity is nonzero, the field has nonzero directed current at every stable update.
+
+Nothing was moved by hand: no translation rule, new field, action term, fitted coefficient or projector was added. Lean also keeps the recurrence phase distinct from ideal continuum evolution and proves a finite-update pointwise error bound. An independent reconstruction follows a narrow packet in space; its measured speed converges to the current prediction while density remains constant.
+
+The remaining boundary is important. This is coherent linear movement on the derived continuum branch, not yet exact native finite-spacing propagation or a nonlinear localized electron moving through unrestricted live chi. The best DIRAC-021 target is to carry the exact C19 spatial remainder and timestep error together into a uniform fixed-physical-time packet bound.

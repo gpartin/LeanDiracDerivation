@@ -1,4 +1,4 @@
-"""Final read-only adversarial audit for DIRAC-001 through DIRAC-019."""
+"""Final read-only adversarial audit for DIRAC-001 through DIRAC-020."""
 
 from __future__ import annotations
 
@@ -28,16 +28,21 @@ def main() -> int:
         "project/dirac018_factorization_classification_status.json"
     )
     transport_status = load("project/dirac019_wavepacket_transport_status.json")
-    readiness = load("project/dirac019_release_readiness_status.json")
+    spatial_status = load(
+        "project/dirac020_coherent_spatial_transport_status.json"
+    )
+    readiness = load("project/dirac020_release_readiness_status.json")
     boundary = status.get("claim_boundary", "").lower()
 
     checks = {
-        "all_nineteen_gates_have_honest_passing_status": (
-            status.get("completed") == 19
-            and status.get("highest_passed_gate") == "DIRAC-019"
+        "all_twenty_gates_have_honest_passing_status": (
+            status.get("completed") == 20
+            and status.get("highest_passed_gate") == "DIRAC-020"
             and all(
                 value == "PASS" for gate, value in status.get("gates", {}).items()
-                if gate not in ("DIRAC-017", "DIRAC-018", "DIRAC-019")
+                if gate not in (
+                    "DIRAC-017", "DIRAC-018", "DIRAC-019", "DIRAC-020"
+                )
             )
             and status.get("gates", {}).get("DIRAC-017") ==
                 "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
@@ -45,6 +50,8 @@ def main() -> int:
                 "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION"
             and status.get("gates", {}).get("DIRAC-019") ==
                 "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT"
+            and status.get("gates", {}).get("DIRAC-020") ==
+                "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT"
         ),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
@@ -55,13 +62,14 @@ def main() -> int:
         "clean_reproduction_gate_passes": reproduction.get("status") == "PASS",
         "current_release_readiness_passes": readiness.get("status") == "PASS",
         "final_theorem_is_action_rooted": (
-            proof.get("highest_gate") == "DIRAC-019"
+            proof.get("highest_gate") == "DIRAC-020"
             and "LeanDirac/Dirac015.lean" in proof.get("files", {})
             and "LeanDirac/Dirac016.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017Closed.lean" in proof.get("files", {})
             and "LeanDirac/Dirac018.lean" in proof.get("files", {})
             and "LeanDirac/Dirac019.lean" in proof.get("files", {})
+            and "LeanDirac/Dirac020.lean" in proof.get("files", {})
             and "LeanDirac/Publication.lean" in proof.get("files", {})
             and all(audit.get("checks", {}).get(name) is True for name in (
                 "native_action_contains_no_dirac_matrix_spinor_or_projector",
@@ -73,7 +81,7 @@ def main() -> int:
         ),
         "publication_names_final_theorem": (
             proof.get("publication_theorem") ==
-                "LeanDirac.current_highest_gate_is_dirac019"
+                "LeanDirac.current_highest_gate_is_dirac020"
             and reproduction.get("formal_theorem") ==
                 "LeanDirac.lfm_free_dirac_continuum_limit"
             and reproduction.get("publication_theorem") ==
@@ -85,6 +93,8 @@ def main() -> int:
             and classification_status.get("publication_theorem") ==
                 "LeanDirac.current_highest_gate_is_dirac018"
             and transport_status.get("publication_theorem") ==
+                "LeanDirac.current_highest_gate_is_dirac019"
+            and spatial_status.get("publication_theorem") ==
                 proof.get("publication_theorem")
         ),
         "copy_translation_extension_is_scoped": (
@@ -162,6 +172,35 @@ def main() -> int:
             and not transport_status.get("red_team", {}).get(
                 "high_findings")
         ),
+        "coherent_spatial_transport_is_scoped": (
+            spatial_status.get("status") ==
+                "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT"
+            and spatial_status.get("action_changed") is False
+            and spatial_status.get("red_team", {}).get(
+                "runtime_translation_rule") is False
+            and spatial_status.get("red_team", {}).get(
+                "fitted_coefficient") is False
+            and spatial_status.get("red_team", {}).get(
+                "spatial_frame_is_explicit_and_orthonormality_is_proved") is True
+            and spatial_status.get("red_team", {}).get(
+                "spatial_character_and_mode_momentum_are_proved_compatible") is True
+            and spatial_status.get("red_team", {}).get(
+                "stable_timestep_is_an_explicit_hypothesis") is True
+            and spatial_status.get("red_team", {}).get(
+                "nonzero_motion_requires_nonzero_derived_current") is True
+            and spatial_status.get("red_team", {}).get(
+                "zero_current_control_rejected") is True
+            and spatial_status.get("red_team", {}).get(
+                "unnormalized_fourier_control_rejected") is True
+            and spatial_status.get("red_team", {}).get(
+                "exact_native_finite_spacing_motion_is_not_claimed") is True
+            and spatial_status.get("red_team", {}).get(
+                "nonlinear_electron_motion_is_not_claimed") is True
+            and not spatial_status.get("red_team", {}).get(
+                "critical_findings")
+            and not spatial_status.get("red_team", {}).get(
+                "high_findings")
+        ),
         "claim_boundary_is_retained": all(
             phrase in boundary for phrase in (
                 "conditional free-dirac continuum derivation",
@@ -178,8 +217,8 @@ def main() -> int:
 
     print(json.dumps({
         "checks": checks,
-        "verdict": "DIRAC_001_019_FINAL_AUDIT_PASS" if not errors
-            else "DIRAC_001_019_FINAL_AUDIT_FAIL",
+        "verdict": "DIRAC_001_020_FINAL_AUDIT_PASS" if not errors
+            else "DIRAC_001_020_FINAL_AUDIT_FAIL",
         "errors": errors,
     }, indent=2))
     return 1 if errors else 0

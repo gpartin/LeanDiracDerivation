@@ -113,6 +113,19 @@ and generator refinement. It also Fourier-synthesizes a narrow linear packet
 as a diagnostic and checks its velocity convergence without inserting a
 translation rule. This is not a nonlinear localized-electron simulation.
 
+## Independent DIRAC-020 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac020_coherent_spatial_transport/validate_dirac020.py
+```
+
+The program reconstructs the normalized finite Fourier frame, coherent
+momentum-character correspondence, Parseval density, integrated spatial
+current, density-weighted velocity and
+finite-update pointwise error bound. It also tracks a narrow packet under
+timestep refinement and rejects unnormalized, zero-current and unstable-step
+controls. It is not a nonlinear live-chi electron simulation.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -120,11 +133,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 19-gate dependency and claim boundary.
+The first command verifies the complete 20-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-019.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-020.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

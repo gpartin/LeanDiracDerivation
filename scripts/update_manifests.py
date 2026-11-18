@@ -38,6 +38,8 @@ EVIDENCE_FILES = [
     "experiments/dirac018_factorization_classification/result.json",
     "experiments/dirac019_wavepacket_transport/validate_dirac019.py",
     "experiments/dirac019_wavepacket_transport/result.json",
+    "experiments/dirac020_coherent_spatial_transport/validate_dirac020.py",
+    "experiments/dirac020_coherent_spatial_transport/result.json",
 ]
 
 RELEASE_FILES = [
@@ -56,6 +58,8 @@ RELEASE_FILES = [
     "docs/FORUM_POST_DIRAC018.md",
     "docs/DIRAC019_RED_TEAM.md",
     "docs/FORUM_POST_DIRAC019.md",
+    "docs/DIRAC020_RED_TEAM.md",
+    "docs/FORUM_POST_DIRAC020.md",
     "docs/FRAMEWORK.md",
     "docs/PROOF_CHAIN.md",
     "docs/RELATED_WORK.md",
@@ -79,6 +83,8 @@ RELEASE_FILES = [
     "project/dirac018_release_readiness_status.json",
     "project/dirac019_wavepacket_transport_status.json",
     "project/dirac019_release_readiness_status.json",
+    "project/dirac020_coherent_spatial_transport_status.json",
+    "project/dirac020_release_readiness_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -136,8 +142,8 @@ def main() -> int:
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac019",
-        "highest_gate": "DIRAC-019",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac020",
+        "highest_gate": "DIRAC-020",
         "files": hashes(proof_files),
     })
     import numpy
@@ -145,7 +151,7 @@ def main() -> int:
         "schema_version": "2.1.0",
         "role": "independent-evidence",
         "action_id": ACTION_ID,
-        "numerical_evidence": "experiments/dirac019_wavepacket_transport/result.json",
+        "numerical_evidence": "experiments/dirac020_coherent_spatial_transport/result.json",
         "cumulative_numerical_evidence": [
             "experiments/dirac010_standard_map/result.json",
             "experiments/dirac011_frequency_mass/result.json",
@@ -155,6 +161,7 @@ def main() -> int:
             "experiments/dirac017_spin_half/result.json",
             "experiments/dirac018_factorization_classification/result.json",
             "experiments/dirac019_wavepacket_transport/result.json",
+            "experiments/dirac020_coherent_spatial_transport/result.json",
         ],
         "environment": {
             "python": platform.python_version(),

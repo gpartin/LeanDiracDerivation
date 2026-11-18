@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-019
+## Established through DIRAC-020
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -117,6 +117,26 @@
 - Independent reconstruction confirms those identities and synthesizes a
   narrow linear Fourier packet whose measured velocity converges to the
   current prediction while integrated density remains constant.
+- An explicit normalized Fourier frame is constructed for every finite
+  abelian periodic lattice; its orthonormality follows from finite-character
+  orthogonality rather than a supplied motion or Dirac rule.
+- On a periodic cubic lattice, the Fourier character's phase under every
+  one-site axis step is exactly the phase of the momentum stored in the
+  associated positive-frequency mode. The transport certificate therefore
+  excludes arbitrary frame/momentum pairings.
+- The positive-frequency modes synthesize into one coherent four-component
+  spatial field whose integrated density equals spectral density exactly by
+  Parseval and remains constant for every stable update count.
+- The coherent field's integrated current equals the already-derived
+  density-weighted velocity moment at every stable update. A nonzero moment
+  therefore produces nonzero spatial current; zero-current packets are not
+  mislabeled as moving.
+- The pointwise recurrence-versus-continuum field error after any finite
+  number of updates is bounded by the accumulated one-step phase mismatch.
+- Independent reconstruction confirms Fourier normalization, Parseval,
+  integrated current, the finite-update bound and convergent movement of a
+  narrow coherent packet, including normalization, zero-current and unstable-
+  timestep controls.
 
 ## Not established
 
@@ -142,8 +162,8 @@
 - A universal Nielsen--Ninomiya or fermion-doubling theorem.
 - A dynamical theorem selecting the cubical square-root orientation outside
   the admitted coefficient class.
-- A coherent real-space Fourier/Parseval packet theorem in Lean or a uniform
-  finite-time continuum error bound.
+- A uniform fixed-physical-time convergence theorem that carries both the
+  timestep mismatch and exact native C19 spatial remainder.
 - Nonlinear localized-electron transport under unrestricted live-chi dynamics.
 
 The theorem uses a conditional prepared background; it does not provide an

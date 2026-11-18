@@ -163,6 +163,39 @@ def main() -> int:
     )
     if not guard.validate_dirac019_evidence(inflated_claim_019):
         raise AssertionError("inflated DIRAC-019 claim boundary was accepted")
+    payload_020 = guard.load(guard.EVIDENCE_020)
+    if guard.validate_dirac020_evidence(payload_020):
+        raise AssertionError("passing DIRAC-020 evidence was rejected")
+    broken_frame_020 = copy.deepcopy(payload_020)
+    broken_frame_020["checks"]["explicit_fourier_frame_is_orthonormal"] = False
+    if not guard.validate_dirac020_evidence(broken_frame_020):
+        raise AssertionError("failed DIRAC-020 Fourier frame was accepted")
+    broken_momentum_020 = copy.deepcopy(payload_020)
+    broken_momentum_020["checks"][
+        "fourier_character_matches_mode_momentum"
+    ] = False
+    if not guard.validate_dirac020_evidence(broken_momentum_020):
+        raise AssertionError("failed DIRAC-020 momentum bridge was accepted")
+    broken_current_020 = copy.deepcopy(payload_020)
+    broken_current_020["checks"][
+        "integrated_spatial_current_equals_spectral_current"
+    ] = False
+    if not guard.validate_dirac020_evidence(broken_current_020):
+        raise AssertionError("failed DIRAC-020 spatial current was accepted")
+    broken_bound_020 = copy.deepcopy(payload_020)
+    broken_bound_020["checks"]["finite_step_pointwise_error_bound_holds"] = False
+    if not guard.validate_dirac020_evidence(broken_bound_020):
+        raise AssertionError("failed DIRAC-020 finite-step bound was accepted")
+    nonfinite_020 = copy.deepcopy(payload_020)
+    nonfinite_020["coherent_packet_controls"][0]["density_drift"] = math.nan
+    if not guard.validate_dirac020_evidence(nonfinite_020):
+        raise AssertionError("non-finite DIRAC-020 evidence was accepted")
+    inflated_claim_020 = copy.deepcopy(payload_020)
+    inflated_claim_020["excluded_claims"].remove(
+        "nonlinear localized electron transport"
+    )
+    if not guard.validate_dirac020_evidence(inflated_claim_020):
+        raise AssertionError("inflated DIRAC-020 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

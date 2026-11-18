@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-019
+# Publication-quality audit through DIRAC-020
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac019`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac020`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -43,6 +43,11 @@ The native action and governing equations are unchanged by this repair.
 | High | Movement might have been implemented by a manual shift. | That would be a runtime bolt-on unrelated to the native equations. | The proof uses only the existing recurrence phase, Hamiltonian momentum response and derived current. No coordinate translation, action term, force, track or projector was added. |
 | Medium | Stability and frequency-branch assumptions could be decorative. | Conservation fails outside the stable recurrence interval, and the negative branch is not the stated sector. | Made both assumptions explicit in Lean and added independent unstable-timestep and negative-frequency rejection controls. |
 | High | Quantification over positive modes could pass vacuously if none were constructed. | A formally empty sector would say nothing about movement. | Constructed an explicit nonzero positive-frequency eigenmode at every continuum momentum from the previously proved Hamiltonian-square identity. |
+| Critical | A generic “spatial basis” could assume the Parseval result needed by DIRAC-020. | The real-space bridge would be a renamed premise rather than a derivation. | Constructed the normalized finite Fourier frame for every finite abelian periodic lattice and proved its orthonormality from independent finite-character orthogonality. |
+| High | A Fourier basis label could be paired with an unrelated momentum label. | The synthesized field would conserve norms but would not be certified as a spatial solution of the claimed momentum modes. | Defined momentum from each character's three axis-step phases, proved the normalized basis has exactly those translation phases on a periodic cubic lattice, and restricted the transport certificate to momentum-compatible packets. |
+| High | Spectral conservation alone does not prove one coherent spatial field carries the current. | DIRAC-019 could still be only bookkeeping over unrelated modes. | Proved four-component Fourier synthesis, exact Parseval density and integrated spatial current equal to the existing density-weighted velocity moment at every stable update. |
+| High | A packet could be declared moving even when opposite momenta cancel. | “Movement” would be label-driven rather than measured. | Made nonzero velocity moment a necessary hypothesis for nonzero spatial current and retained an equal-and-opposite zero-current control. |
+| High | Recurrence evolution could be silently identified with ideal continuum phase evolution. | Finite-update errors would be hidden. | Proved an explicit pointwise bound using the accumulated one-step phase mismatch and left uniform fixed-physical-time native-C19 convergence open. |
 
 ## Formal claim after repair
 
@@ -70,8 +75,12 @@ finite-spacing square root, or settle general lattice-fermion doubling.
 DIRAC-019 adds sustained positive-frequency spectral transport. It proves
 all-update density conservation, the finite-family current/group-velocity
 identity, strict massive subluminality and recurrence-generator convergence.
-It does not yet prove a coherent localized real-space packet in Lean, a
-uniform finite-time continuum estimate, or nonlinear live-chi electron motion.
+DIRAC-020 constructs the coherent finite spatial Fourier field in Lean,
+proves its cubic character-to-momentum compatibility, exact Parseval density,
+integrated current transport and a finite-update
+pointwise phase-error bound. It does not yet prove a uniform fixed-physical-
+time estimate carrying the exact C19 spatial remainder, or nonlinear live-chi
+electron motion.
 
 ## Acceptance tests
 
@@ -83,7 +92,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, 018, and 019 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, and 020 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-020",
+  "highest_gate": "DIRAC-020",
+  "status": "PASS",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac020",
+  "package_command": "python scripts/build_publication_package.py --output-dir dist",
+  "package_artifacts": [
+    "LeanDiracDerivation-DIRAC-020.zip",
+    "LeanDiracDerivation-DIRAC-020.zip.sha256"
+  ],
+  "acceptance": [
+    "the full Lean dependency chain builds",
+    "compiled axiom reports use only the declared standard Lean foundations",
+    "independent DIRAC-010 through DIRAC-013 and DIRAC-016 through DIRAC-020 reconstructions pass finite schema checks",
+    "normalization, character-momentum, zero-current and unstable-timestep controls enforce the DIRAC-020 hypotheses",
+    "release and claim metadata preserve the coherent-linear-transport boundary",
+    "the archive is built from a clean committed tree and embeds exact Git provenance",
+    "all publication artifacts are present and fail closed when missing"
+  ],
+  "claim_boundary": "Release readiness certifies reproducibility of the scoped coherent finite spatial Fourier-transport theorem. It does not establish exact native finite-spacing evolution, a nonlinear live-chi localized electron, or a physical electron."
+}

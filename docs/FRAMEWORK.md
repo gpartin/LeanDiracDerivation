@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-019. It is a declared starting model, not a claim that the
+chain through DIRAC-020. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -155,3 +155,14 @@ transport from the already-established current/group-velocity relation. It
 adds no translation command or movement force. Its formal scope remains a
 finite spectral family; coherent spatial localization and nonlinear live-chi
 electron motion remain open.
+
+DIRAC-020 also leaves the framework unchanged. It explicitly constructs the
+normalized finite Fourier frame on a finite periodic lattice, synthesizes the
+DIRAC-019 modes into one coherent spatial field, and proves that each periodic
+cubic character's axis-step phase matches the momentum stored in its native
+positive-frequency mode. It then proves Parseval density,
+integrated-current transport, and a finite-update pointwise phase-error bound.
+This is a spatial readout of the already-derived linear branch, not a native
+action term or translation rule. Exact finite-spacing evolution, a uniform
+fixed-physical-time estimate carrying the C19 remainder, and nonlinear
+live-chi localized-electron transport remain open.
