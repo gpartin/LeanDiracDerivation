@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-016
+## Established through DIRAC-017
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -64,6 +64,24 @@
   copy-exchanging and copy-preserving translation classes.
 - The signed incidence operator used by the current cubical Dirac readout
   preserves each copy instead of exchanging them.
+- Three oriented plane operators constructed only from the signed cube
+  incidence algebra obey the three-axis rotation algebra.
+- Matching that actual commutator has one nonzero real normalization, `1/2`;
+  each component squares to `1/4` and the Casimir is `3/4`.
+- All three generators are self-adjoint for the native eight-corner inner
+  product.
+- The native inner product is positive definite, and both retained rank-four
+  copies intertwine exactly with the conventional four-component Dirac spin
+  generators.
+- One component has an explicit two-plus/two-minus one-half spectrum.
+- The corresponding cubical quarter-turn preserves the full inner product and
+  both copies. Within the scalar-plus-native-plane rotor family, covariance,
+  unitarity and positive orientation uniquely fix its coefficients.
+- Continuous rotations compose and are unitary, change sign at `2π`, and
+  return at `4π`; they intertwine with the conventional representation on
+  both copies.
+- The mass grading commutes with these rotations, and the complete interpreted
+  mass-plus-three-direction transport Hamiltonian rotates covariantly.
 
 ## Not established
 
@@ -77,7 +95,11 @@
 - Motion of a localized carrier by alternating the two copies.
 - A physical purpose for doubling or evidence that the two copies are two
   distinct particles.
-- Physical spin one-half, an electron, charge, localization, or formation.
+- A proof that unrestricted native time evolution dynamically applies the
+  derived rotations to a localized carrier.
+- Spin one-half of a localized dynamically stable carrier.
+- Electromagnetic minimal coupling, magnetic moment, or a derived `g` factor.
+- A physical electron, charge, localization, or formation.
 - Canonical LFM status or uniqueness of the action or square-root orientation.
 
 The theorem uses a conditional prepared background; it does not provide an

@@ -6,7 +6,7 @@ This repository is the production Lean 4 environment for a noncanonical
 attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
-All **16 of 16** derivation gates pass. The chain begins with
+All **17 of 17** derivation gates pass. The chain begins with
 one positive complex-Psi/complex-chi C19 action, proves that its restriction
 and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
@@ -27,6 +27,16 @@ rank-four copies in one cube direction and a second translation returns to
 the original copy. The signed incidence readout, by contrast, preserves each
 copy. This supports a copy-alternation motion hypothesis but does not prove
 that native time evolution or a localized electron uses it.
+DIRAC-017 then derives the rotation generators directly from the same signed
+cube-incidence algebra. The actual rotation commutator uniquely selects the
+nonzero scale `1/2`, the Casimir is `3/4`, and both retained rank-four copies
+intertwine exactly with the conventional four-component spin generators. The
+component spectrum, positive-definite native inner product, continuous unitary
+rotation group, `2π` sign/`4π` return, mass-grading compatibility, and full
+interpreted Hamiltonian covariance are proved. Covariance and unitarity also
+uniquely characterize the positive quarter-turn inside the native plane-rotor
+family. This proves a conditional spin-one-half representation of the derived
+continuum sector, not spin of a localized physical electron.
 
 ## Current status
 
@@ -43,6 +53,7 @@ that native time evolution or a localized electron uses it.
 | DIRAC-014 | PASS | Final adversarial audit reports zero critical/high findings. |
 | DIRAC-015 | PASS | One cumulative action-to-Dirac theorem and deterministic clean-checkout package. |
 | DIRAC-016 | PASS | Exact A-B-A copy exchange under unsigned cube translation, with density preservation, unique coordinate map, and a strict motion-claim boundary. |
+| DIRAC-017 | PASS (conditional representation) | Cubical spin-one-half representation: exact standard-spin intertwiner on both copies, explicit spectrum, uniquely characterized unitary rotations, `2π` sign/`4π` return, and mass-plus-transport covariance. Localized dynamical spin remains downstream. |
 
 See [the complete proof chain](docs/PROOF_CHAIN.md) for every gate and its
 claim boundary.
@@ -66,9 +77,11 @@ does not install Git hooks or alter the index.
 
 - [Native framework](docs/FRAMEWORK.md): fields, constants, geometry, action,
   equations, and update.
-- [Formal proof chain](docs/PROOF_CHAIN.md): all 16 gates and theorem boundary.
-- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 and DIRAC-016 establish.
+- [Formal proof chain](docs/PROOF_CHAIN.md): all 17 gates and theorem boundary.
+- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-017 establish.
 - [Reproducibility](docs/REPRODUCIBILITY.md): rebuild instructions.
+- [Related work and attribution](docs/RELATED_WORK.md): the geometric
+  lattice-fermion lineage and the repository's narrower formal contribution.
 - [Changelog](CHANGELOG.md): current cleanup and historical milestones.
 - `LeanDirac/Publication.lean`: sole cumulative publication theorem.
 - `LeanDiracAudit.lean`: explicit theorem axiom reports.
@@ -95,6 +108,8 @@ The cubical alpha/beta operators are not terms in the action.
 ## Citation and license
 
 Citation metadata is provided in [CITATION.cff](CITATION.cff) and
-[.zenodo.json](.zenodo.json). Project-authored content is available under
+[.zenodo.json](.zenodo.json). The directly relevant prior lattice-fermion
+sources are credited in [Related work and attribution](docs/RELATED_WORK.md).
+Project-authored content is available under
 [MIT](LICENSE) or [CC0-1.0](LICENSE-CC0), at the recipient's option. See
 [LICENSING.md](LICENSING.md) for scope and third-party terms.
