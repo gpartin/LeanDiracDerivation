@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-016. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-017. -/
 
 #audit_lean_dirac_environment
 
@@ -57,5 +57,14 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.c19_copy_exchange_weight_eq_twelve
 #print axioms LeanDirac.c19_copy_preserving_weight_eq_twelve
 #print axioms LeanDirac.dirac016_exact_copy_translation_structure
+#print axioms LeanDirac.cube_spin_closure_iff_scale_equation
+#print axioms LeanDirac.exists_unique_admissible_spin_scale
+#print axioms LeanDirac.cube_spin_casimir
+#print axioms LeanDirac.cube_spin_self_adjoint
+#print axioms LeanDirac.cube_quarter_turn_preserves_density
+#print axioms LeanDirac.cube_quarter_turn_four
+#print axioms LeanDirac.cube_quarter_turn_eight
+#print axioms LeanDirac.dirac017_closed_spin_half_representation
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
+#print axioms LeanDirac.current_highest_gate_is_dirac017

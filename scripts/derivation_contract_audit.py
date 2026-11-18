@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--016 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--017 derivation contract."""
 
 from __future__ import annotations
 
@@ -38,8 +38,8 @@ def main() -> int:
         ROOT / "experiments" / "dirac013_density_current" / "result.json"
     ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_016": status.get("highest_passed_gate") == "DIRAC-016",
-        "all_sixteen_gates_complete": status.get("completed") == 16,
+        "highest_gate_is_017": status.get("highest_passed_gate") == "DIRAC-017",
+        "all_seventeen_gates_complete": status.get("completed") == 17,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -121,9 +121,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_016": contains(
+        "publication_stops_at_017": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac016"),
+            "theorem current_highest_gate_is_dirac017"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -136,6 +136,64 @@ def main() -> int:
         "signed_incidence_distinction_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem prepared_incidence_axis2_preserves_minus"),
+        "native_spin_scale_is_commutator_derived": (
+            contains(
+                "LeanDirac/Dirac017.lean",
+                "theorem cube_spin_closure_iff_scale_equation")
+            and contains(
+                "LeanDirac/Dirac017.lean",
+                "theorem exists_unique_admissible_spin_scale")
+        ),
+        "native_spin_casimir_present": contains(
+            "LeanDirac/Dirac017.lean",
+            "theorem cube_spin_casimir"),
+        "native_spin_self_adjoint_present": contains(
+            "LeanDirac/Dirac017.lean",
+            "theorem cube_spin_self_adjoint"),
+        "native_double_rotation_present": (
+            contains(
+                "LeanDirac/Dirac017.lean",
+                "theorem cube_quarter_turn_four")
+            and contains(
+                "LeanDirac/Dirac017.lean",
+                "theorem cube_quarter_turn_eight")
+        ),
+        "quarter_turn_density_present": contains(
+            "LeanDirac/Dirac017.lean",
+            "theorem cube_quarter_turn_preserves_density"),
+        "standard_spin_intertwiner_present": (
+            contains(
+                "LeanDirac/Dirac017Closed.lean",
+                "theorem cube_spin_intertwines_minus")
+            and contains(
+                "LeanDirac/Dirac017Closed.lean",
+                "theorem cube_spin_intertwines_plus")
+        ),
+        "explicit_spin_spectrum_present": contains(
+            "LeanDirac/Dirac017Closed.lean",
+            "theorem standard_cube_spin0_basis_spectrum"),
+        "positive_inner_product_and_unitarity_present": (
+            contains(
+                "LeanDirac/Dirac017Closed.lean",
+                "theorem cell8_inner_positive_definite")
+            and contains(
+                "LeanDirac/Dirac017Closed.lean",
+                "theorem cube_quarter_turn_preserves_inner")
+        ),
+        "continuous_rotation_group_present": (
+            contains(
+                "LeanDirac/Dirac017Closed.lean",
+                "theorem cube_continuous_turn_add")
+            and contains(
+                "LeanDirac/Dirac017Closed.lean",
+                "theorem cube_continuous_turn_preserves_inner")
+        ),
+        "quarter_turn_characterization_present": contains(
+            "LeanDirac/Dirac017Closed.lean",
+            "theorem exists_unique_admissible_cube_quarter_turn_coefficients"),
+        "spin_hamiltonian_covariance_present": contains(
+            "LeanDirac/Dirac017Closed.lean",
+            "theorem cube_quarter_turn_hamiltonian_covariance"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -160,7 +218,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC016_READY" if passed else "DIRAC016_OPEN",
+        "verdict": "DIRAC017_READY" if passed else "DIRAC017_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

@@ -10,9 +10,48 @@ date-released: "2026-11-11"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 abstract: >-
-  A noncanonical Lean 4 research derivation through DIRAC-015. It connects a
+  A noncanonical Lean 4 research derivation through DIRAC-017. It connects a
   positive two-field C19 action to a massive C19 Klein-Gordon tangent and
   proves that a cubical four-component Dirac Hamiltonian squares to its
   continuum symbol. It controls lattice/time corrections and derives the
-  positive-frequency density/current limit from the same action. A localized
-  physical electron, electromagnetic coupling, and uniqueness remain open.
+  positive-frequency density/current limit from the same action. It also
+  formalizes copy exchange under cube translation and a conditional cubical
+  spin-one-half representation with exact conventional-spin intertwiners,
+  explicit spectrum, continuous unitarity, 2pi sign reversal, 4pi return,
+  and interpreted-Hamiltonian covariance. Dynamical realization on a
+  localized carrier, a physical electron, electromagnetic coupling, and
+  uniqueness remain open.
+references:
+  - type: article
+    authors:
+      - family-names: "Teixeira"
+        given-names: "F. L."
+    title: "Differential Forms in Lattice Field Theories: An Overview"
+    journal: "International Scholarly Research Notices"
+    year: 2013
+    doi: "10.1155/2013/487270"
+  - type: article
+    authors:
+      - family-names: "Becher"
+        given-names: "P."
+      - family-names: "Joos"
+        given-names: "H."
+    title: "The Dirac-Kähler equation and fermions on the lattice"
+    journal: "Zeitschrift für Physik C"
+    volume: 15
+    start: 343
+    end: 365
+    year: 1982
+    doi: "10.1007/BF01614426"
+  - type: article
+    authors:
+      - family-names: "Rabin"
+        given-names: "J. M."
+    title: "Homology theory of lattice fermion doubling"
+    journal: "Nuclear Physics B"
+    volume: 201
+    issue: 2
+    start: 315
+    end: 332
+    year: 1982
+    doi: "10.1016/0550-3213(82)90434-5"

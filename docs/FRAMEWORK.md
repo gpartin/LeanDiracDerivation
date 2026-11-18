@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-016. It is a declared starting model, not a claim that the
+chain through DIRAC-017. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -118,3 +118,18 @@ Unsigned translation in one cube direction exchanges the copies and returns
 after a second translation. The signed incidence readout preserves them
 separately. This is an exact geometric statement, not a new transport law or
 a proof of a localized moving electron.
+
+DIRAC-017 also leaves the framework unchanged. It forms oriented plane
+bivectors from the already-derived signed cube-incidence operators. Matching
+their actual three-axis rotation commutator selects the unique nonzero real
+generator scale `1/2`; the corresponding Casimir is `3/4`. The normalized
+geometric quarter-turn preserves the full positive-definite native inner
+product and both copies. Covariance and unitarity uniquely characterize its
+positive coefficients within the native scalar-plus-plane rotor family.
+Continuous rotations compose, give a sign change at `2π`, return at `4π`,
+intertwine with conventional four-component spin on both copies, commute with
+the mass grading, and rotate the complete interpreted Hamiltonian covariantly.
+No spin matrix, half-angle rule, action term, or runtime projection is added.
+The result is a conditional spin-one-half representation theorem for the
+derived continuum sector, not a claim that native dynamics rotates a
+localized electron or an electromagnetic theorem.

@@ -26,7 +26,8 @@
     "DIRAC-011": "PASS_COMMON_FREQUENCY_AND_NATIVE_REST_MASS",
     "DIRAC-012": "PASS_RECURRENCE_DERIVED_FIRST_ORDER_CONTINUUM_EVOLUTION",
     "DIRAC-013": "PASS_NATIVE_DENSITY_CURRENT_CONTINUITY",
-    "DIRAC-016": "PASS_EXACT_COPY_TRANSLATION_STRUCTURE"
+    "DIRAC-016": "PASS_EXACT_COPY_TRANSLATION_STRUCTURE",
+    "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
   },
   "dirac006_bridge_mandatory_gates": {
     "formal": [
@@ -141,6 +142,31 @@
       "localized fermion motion is implemented by copy alternation",
       "either copy is a distinct physical particle",
       "physical electron or canonical LFM status"
+    ]
+  },
+  "dirac017_mandatory_gates": {
+    "status": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION",
+    "formal": [
+      "same action and transitive DIRAC-016 derivation",
+      "rotation generators constructed only from native signed cube-incidence operators",
+      "nonzero generator scale uniquely derived from the actual rotation commutator",
+      "all three cyclic commutators and Casimir three-quarters proved",
+      "both retained rank-four copies intertwine with the conventional four-component Dirac spin generators",
+      "the explicit component spectrum has two plus-one-half and two minus-one-half states",
+      "the native eight-corner inner product is positive definite",
+      "all three generators are self-adjoint and the quarter-turn is unitary for that inner product",
+      "covariance, unitarity and positive orientation uniquely characterize the quarter-turn coefficients in the native plane-rotor family",
+      "continuous rotations compose, are unitary, give minus identity at two pi and identity at four pi",
+      "mass grading commutes with spin and the complete mass-plus-transport Hamiltonian rotates covariantly",
+      "both retained rank-four copies preserved",
+      "standard-foundation-only axiom audit"
+    ],
+    "excluded_claims": [
+      "native time evolution dynamically applies the rotation to a localized carrier",
+      "localized dynamically stable physical spin",
+      "electromagnetic coupling or magnetic g-factor",
+      "electron identity or formation",
+      "canonical LFM status"
     ]
   }
 }

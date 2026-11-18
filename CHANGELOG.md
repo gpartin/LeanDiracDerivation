@@ -1,5 +1,29 @@
 # Changelog
 
+## DIRAC-017 (unreleased)
+
+- Constructed all three rotation generators only from the existing signed
+  cube-incidence operators.
+- Proved that the actual nontrivial rotation commutator uniquely fixes their
+  normalization to `1/2`; no spin matrix or half-angle rule is assumed.
+- Proved all three cyclic commutators, self-adjointness for the native inner
+  product, component square `1/4`, and Casimir `3/4`.
+- Proved the native inner product is positive definite and that both retained
+  rank-four copies intertwine exactly with conventional four-component spin.
+- Exposed the two-plus/two-minus one-half component spectrum.
+- Proved continuous unitary rotation composition, `2π` sign reversal, `4π`
+  return, and exact standard-basis intertwiners on both copies.
+- Proved covariance and unitarity uniquely characterize the positive native
+  quarter-turn coefficients inside the scalar-plus-plane rotor family.
+- Proved mass-grading compatibility and covariance of the complete interpreted
+  mass-plus-three-direction transport Hamiltonian.
+- Added explicit attribution to Teixeira's 2013 review and the foundational
+  hypercubic lattice-fermion work of Becher--Joos and Rabin; no priority is
+  claimed for the cell-based Clifford construction.
+- Added no field, action term, stencil change, runtime projection,
+  electromagnetic coupling, or localized-electron claim. Native realization
+  of the representation on a freely evolving localized carrier remains open.
+
 ## Palomar bridge repair (unreleased)
 
 - Proved that the advertised native two-field Lagrangian restricts exactly to

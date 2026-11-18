@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-016",
-  "next_gate": "LOCALIZED_COPY_ALTERNATION",
-  "completed": 16,
-  "total": 16,
+  "highest_passed_gate": "DIRAC-017",
+  "next_gate": "LOCALIZED_PHYSICAL_SPIN_VALIDATION",
+  "completed": 17,
+  "total": 17,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
@@ -22,7 +22,8 @@
     "DIRAC-013": "LeanDirac/Dirac013.lean",
     "DIRAC-014": "project/dirac014_final_audit_status.json",
     "DIRAC-015": "LeanDirac/Dirac015.lean",
-    "DIRAC-016": "LeanDirac/Dirac016.lean"
+    "DIRAC-016": "LeanDirac/Dirac016.lean",
+    "DIRAC-017": "LeanDirac/Dirac017Closed.lean"
   },
   "gate_support_modules": {
     "DIRAC-006": "LeanDirac/Dirac006Restriction.lean",
@@ -44,7 +45,8 @@
     "DIRAC-013": "PASS",
     "DIRAC-014": "PASS",
     "DIRAC-015": "PASS",
-    "DIRAC-016": "PASS"
+    "DIRAC-016": "PASS",
+    "DIRAC-017": "PASS"
   },
-  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves that the existing unsigned period-two cube translation exchanges the two retained rank-four copies in one coordinate direction, uniquely induces the stated four-coordinate half-shift, preserves density, and returns after two translations; it also proves that the signed incidence readout preserves each copy. DIRAC-016 does not prove that one native time update is one copy exchange, that a localized carrier moves by alternating copies, that either copy is a second physical particle, or that nature has a purpose for the doubling. The chain still does not claim uniqueness, exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling, a localized physical electron, or canonical LFM status."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves the scoped unsigned cube-translation copy exchange. DIRAC-017 proves a conditional cubical spin-one-half representation: the native commutator uniquely fixes the nonzero scale to one half; both copies intertwine with the standard four-component spin generators; the spectrum, positive inner product, continuous unitary rotations, mass-grading compatibility and full interpreted Hamiltonian covariance are explicit. DIRAC-017 does not prove that unrestricted native time evolution applies this rotation to a localized dynamically stable carrier, electromagnetic coupling or g-factor, one-copy-exchange-per-update motion, electron identity, or formation. The chain still does not claim uniqueness of the underlying physical model, exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, a localized physical electron, or canonical LFM status."
 }
