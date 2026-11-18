@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-021
+## Established through DIRAC-022
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -152,8 +152,23 @@
 - Independent reconstruction confirms the rest energies, time equations,
   periods, and doubled relative phase, while wrong-mass and same-sign controls
   are rejected.
+- The DIRAC-013 velocity operator is proved to be the momentum response of the
+  same derived Hamiltonian and, at rest, swaps one proved positive-energy basis
+  state with one proved negative-energy basis state.
+- A normalized coherent superposition of those branches has velocity
+  expectation `c_eff cos(2 chi0 t)`; pure branches, a same-sign superposition,
+  and an incoherent mixture have zero velocity expectation.
+- The integrated position expectation differentiates exactly to that velocity,
+  has amplitude `sqrt(12)/38`, and has a peak-to-peak excursion equal to the
+  native reduced Compton length `sqrt(12)/19`.
+- Independent matrix reconstruction confirms the Hamiltonian response,
+  anticommutation, frequency, position law and controls.
 
 ## Not established
+
+- Zitterbewegung of a localized nonlinear native lattice electron, rather than
+  the proved free-continuum expectation value.
+- An SI frequency or SI position amplitude.
 
 - Exact Dirac evolution at finite lattice spacing or finite timestep.
 - Arbitrary nonlinear live-chi Dirac evolution away from the prepared vacuum.

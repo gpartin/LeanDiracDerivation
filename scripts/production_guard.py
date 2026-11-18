@@ -1,4 +1,4 @@
-"""One-command release audit for the completed DIRAC-001--021 chain.
+"""One-command release audit for the completed DIRAC-001--022 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -32,6 +32,8 @@ STATUS_020 = ROOT / "project" / "dirac020_coherent_spatial_transport_status.json
 READINESS_020 = ROOT / "project" / "dirac020_release_readiness_status.json"
 STATUS_021 = ROOT / "project" / "dirac021_rest_clock_status.json"
 READINESS_021 = ROOT / "project" / "dirac021_release_readiness_status.json"
+STATUS_022 = ROOT / "project" / "dirac022_zitterbewegung_status.json"
+READINESS_022 = ROOT / "project" / "dirac022_release_readiness_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
@@ -42,6 +44,7 @@ EVIDENCE_018 = ROOT / "experiments" / "dirac018_factorization_classification" / 
 EVIDENCE_019 = ROOT / "experiments" / "dirac019_wavepacket_transport" / "result.json"
 EVIDENCE_020 = ROOT / "experiments" / "dirac020_coherent_spatial_transport" / "result.json"
 EVIDENCE_021 = ROOT / "experiments" / "dirac021_rest_clock" / "result.json"
+EVIDENCE_022 = ROOT / "experiments" / "dirac022_zitterbewegung" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -637,6 +640,91 @@ def validate_dirac021_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac022_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    tolerance = payload.get("tolerance")
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-022 independent verdict is not PASS")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance) or \
+            tolerance <= 0 or tolerance > 2.0e-11:
+        errors.append("DIRAC-022 tolerance is missing or outside the admitted range")
+    admitted = tolerance if isinstance(tolerance, (int, float)) and \
+        math.isfinite(tolerance) and tolerance > 0 else 0.0
+    max_error = payload.get("max_error")
+    if not isinstance(max_error, (int, float)) or not math.isfinite(max_error) or \
+            max_error > admitted:
+        errors.append("DIRAC-022 maximum error is non-finite or exceeds tolerance")
+    required_values = {
+        "action_selected_mass": 19.0,
+        "zitter_angular_frequency": 38.0,
+        "c19_continuum_speed": math.sqrt(12.0),
+        "zitter_position_amplitude": math.sqrt(12.0) / 38.0,
+        "zitter_peak_to_peak_excursion": math.sqrt(12.0) / 19.0,
+        "native_reduced_compton_length": math.sqrt(12.0) / 19.0,
+    }
+    values = payload.get("native_values")
+    if not isinstance(values, dict) or set(values) != set(required_values) or any(
+            not isinstance(values.get(key), (int, float)) or
+            not math.isfinite(values[key]) or
+            abs(values[key] - expected) > admitted
+            for key, expected in required_values.items()):
+        errors.append("DIRAC-022 native values are incomplete or incorrect")
+    required_errors = {
+        "state_normalization",
+        "velocity_from_hamiltonian_momentum_derivative",
+        "rest_hamiltonian_velocity_anticommutator",
+        "positive_branch_current", "negative_branch_current",
+        "coherent_velocity_law", "position_derivative_law",
+        "amplitude_identity", "peak_to_peak_identity", "position_bound",
+        "same_sign_current", "incoherent_mixture_current",
+    }
+    component_errors = payload.get("errors")
+    if not isinstance(component_errors, dict) or \
+            set(component_errors) != required_errors or any(
+                not isinstance(value, (int, float)) or not math.isfinite(value) or
+                abs(value) > admitted for value in component_errors.values()):
+        errors.append("DIRAC-022 component errors are incomplete or exceed tolerance")
+    required_checks = {
+        "all_evidence_is_finite", "normalized_cross_branch_state",
+        "velocity_is_hamiltonian_momentum_response",
+        "rest_velocity_anticommutes_with_rest_hamiltonian",
+        "pure_rest_branches_have_zero_velocity",
+        "coherent_velocity_frequency_is_two_chi0",
+        "position_derivative_equals_velocity",
+        "position_amplitude_is_half_reduced_compton_length",
+        "same_sign_control_has_no_signal", "incoherent_mixture_has_no_signal",
+        "wrong_mass_control_is_rejected",
+    }
+    checks = payload.get("checks")
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-022 required checks are incomplete or false")
+    negative = payload.get("negative_controls")
+    required_negative = {
+        "wrong_mass", "wrong_mass_max_signal_mismatch",
+        "same_sign_max_current", "incoherent_mixture_current",
+    }
+    if not isinstance(negative, dict) or set(negative) != required_negative or \
+            any(not isinstance(negative.get(key), (int, float)) or
+                not math.isfinite(negative[key]) for key in required_negative):
+        errors.append("DIRAC-022 negative controls are malformed")
+    elif abs(negative["wrong_mass"] - 18.0) > admitted or \
+            negative["wrong_mass_max_signal_mismatch"] <= 0.1 or \
+            abs(negative["same_sign_max_current"]) > admitted or \
+            abs(negative["incoherent_mixture_current"]) > admitted:
+        errors.append("DIRAC-022 negative controls are ineffective")
+    required_exclusions = {
+        "a localized nonlinear native lattice electron",
+        "measured trembling of a physical electron",
+        "an SI frequency or SI length",
+        "electromagnetic response or magnetic g-factor",
+        "zitterbewegung in a pure branch or incoherent mixture",
+    }
+    if not required_exclusions <= set(payload.get("excluded_claims", [])):
+        errors.append("DIRAC-022 excluded-claim boundary is incomplete")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -654,14 +742,17 @@ def validate(run_builds: bool = True) -> list[str]:
     status_019 = load(STATUS_019)
     status_020 = load(STATUS_020)
     status_021 = load(STATUS_021)
+    status_022 = load(STATUS_022)
     readiness_019 = load(READINESS_019)
     readiness_020 = load(READINESS_020)
     readiness_021 = load(READINESS_021)
-    if status.get("highest_passed_gate") != "DIRAC-021":
-        errors.append("status does not stop at DIRAC-021")
-    if status.get("next_gate") != "DIRAC_ZITTERBEWEGUNG_VELOCITY_OBSERVABLE":
-        errors.append("zitterbewegung velocity observable is not the next boundary")
-    if status.get("completed") != 21 or status.get("total") != 21:
+    readiness_022 = load(READINESS_022)
+    if status.get("highest_passed_gate") != "DIRAC-022":
+        errors.append("status does not stop at DIRAC-022")
+    if status.get("next_gate") != \
+            "DIRAC_FINITE_MOMENTUM_ZITTERBEWEGUNG_AND_LOCALIZED_NATIVE_BRIDGE":
+        errors.append("finite-momentum/localized bridge is not the next boundary")
+    if status.get("completed") != 22 or status.get("total") != 22:
         errors.append("gate counts are incorrect")
     expected_gate_017 = "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
     if status.get("gates", {}).get("DIRAC-017") != expected_gate_017:
@@ -829,7 +920,36 @@ def validate(run_builds: bool = True) -> list[str]:
             "LeanDiracDerivation-DIRAC-021.zip",
             "LeanDiracDerivation-DIRAC-021.zip.sha256"]:
         errors.append("DIRAC-021 release artifact names are stale")
-    publication = "LeanDirac.current_highest_gate_is_dirac021"
+    if status_022.get("status") != \
+            "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG" or \
+            status_022.get("formal_theorem") != \
+            "LeanDirac.dirac022_action_derived_zitterbewegung":
+        errors.append("DIRAC-022 scoped observable is not a formal PASS")
+    red_team_022 = status_022.get("red_team", {})
+    for key, expected in (
+            ("new_action_term", False), ("new_native_field", False),
+            ("fitted_mass_or_frequency", False),
+            ("velocity_is_inherited_from_hamiltonian_response", True),
+            ("coherence_and_normalization_are_explicit", True),
+            ("factor_two_is_derived_from_opposite_rest_phases", True),
+            ("position_is_integral_of_proved_velocity", True),
+            ("pure_branch_control_passes", True),
+            ("same_sign_control_passes", True),
+            ("incoherent_mixture_control_passes", True),
+            ("wrong_mass_control_passes", True),
+            ("localized_native_electron_is_not_claimed", True),
+            ("si_prediction_is_not_claimed", True)):
+        if red_team_022.get(key) is not expected:
+            errors.append(f"DIRAC-022 red-team contract differs: {key}")
+    if red_team_022.get("critical_findings") or red_team_022.get("high_findings"):
+        errors.append("DIRAC-022 retains critical/high red-team findings")
+    if readiness_022.get("status") != "PASS" or \
+            readiness_022.get("highest_gate") != "DIRAC-022" or \
+            readiness_022.get("package_artifacts") != [
+                "LeanDiracDerivation-DIRAC-022.zip",
+                "LeanDiracDerivation-DIRAC-022.zip.sha256"]:
+        errors.append("DIRAC-022 release readiness is invalid")
+    publication = "LeanDirac.current_highest_gate_is_dirac022"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -845,7 +965,7 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE_021.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_022.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
     cumulative = set(evidence.get("cumulative_numerical_evidence", []))
     expected_evidence = {
@@ -859,6 +979,7 @@ def validate(run_builds: bool = True) -> list[str]:
         EVIDENCE_019.relative_to(ROOT).as_posix(),
         EVIDENCE_020.relative_to(ROOT).as_posix(),
         EVIDENCE_021.relative_to(ROOT).as_posix(),
+        EVIDENCE_022.relative_to(ROOT).as_posix(),
     }
     if cumulative != expected_evidence:
         errors.append("evidence manifest does not retain every admitted reconstruction")
@@ -872,6 +993,7 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(validate_dirac019_evidence(load(EVIDENCE_019)))
     errors.extend(validate_dirac020_evidence(load(EVIDENCE_020)))
     errors.extend(validate_dirac021_evidence(load(EVIDENCE_021)))
+    errors.extend(validate_dirac022_evidence(load(EVIDENCE_022)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:
@@ -913,8 +1035,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-021")
-    print("next_gate=DIRAC_ZITTERBEWEGUNG_VELOCITY_OBSERVABLE")
+    print("highest_passed_gate=DIRAC-022")
+    print("next_gate=DIRAC_FINITE_MOMENTUM_ZITTERBEWEGUNG_AND_LOCALIZED_NATIVE_BRIDGE")
     return 0
 
 

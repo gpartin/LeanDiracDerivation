@@ -179,3 +179,11 @@ length is `sqrt(12)/19`. No clock register, action term, field, or fitted mass
 is introduced. A pure branch's global phase is not asserted to be observable,
 and SI calibration, zitterbewegung, electromagnetic response, and a localized
 physical electron remain open.
+
+DIRAC-022 leaves the framework unchanged.  It specializes the velocity already
+proved to be the Hamiltonian momentum response, constructs a normalized
+coherent positive/negative rest-branch state from DIRAC-021, and derives the
+free-continuum velocity and position expectations.  No native clock, position
+field, oscillation force, action term, fitted coefficient, or electromagnetic
+coupling is introduced.  The result does not assert that a localized native
+electron trembles.

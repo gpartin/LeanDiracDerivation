@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-021
+# Publication-quality audit through DIRAC-022
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac021`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac022`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -93,6 +93,14 @@ frequency `38`. This is not yet zitterbewegung: no velocity or position
 observable has been proved to oscillate, and a pure branch's global phase is
 not treated as measurable.
 
+DIRAC-022 closes that specific observable gap.  It reuses the Hamiltonian
+momentum-response velocity, proves the coherent branch state is normalized,
+derives the doubled-frequency velocity cross term, and proves the integrated
+position law and amplitude.  No substrate term or desired oscillation is
+inserted.  The remaining boundary is physical: the theorem concerns the
+free-continuum four-component readout, not a localized nonlinear native
+electron.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -103,7 +111,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, and 021 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, and 022 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;

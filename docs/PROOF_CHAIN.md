@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac021`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac022`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -27,6 +27,7 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-019 | PASS (scoped spectral transport) | Constructs a nonzero positive-frequency eigenmode at every momentum, then proves that every admitted stable mode advances by the recurrence-derived unit phase and preserves density for every integer update count. For any finite spectral family, total spectral density is conserved and total current remains the density-weighted group-velocity moment at every update; massive speed is strictly subluminal, and the summed generator converges to the same Dirac generator. | Formalize a coherent finite real-space Fourier packet, Parseval density, centroid/current motion and a finite-time continuum error bound. |
 | DIRAC-020 | PASS (scoped coherent spatial transport) | Constructs a normalized finite Fourier frame on every finite abelian periodic lattice and proves its orthonormality from character orthogonality. On a periodic cubic lattice it proves the character axis-step phase matches the momentum stored in each positive-frequency mode, then synthesizes those compatible modes into one coherent four-component spatial field, proves exact Parseval density preservation and integrated-current transport for every stable update, and bounds the finite-update pointwise recurrence-versus-continuum phase error. | Propagate the exact native C19 spatial remainder together with the timestep error to obtain a uniform fixed-physical-time packet bound before testing nonlinear live-chi localized motion. |
 | DIRAC-021 | PASS (scoped action-derived rest clock) | Follows the rest coefficient already selected from the native action into the zero-momentum four-component Hamiltonian. It proves explicit `+chi0` and `-chi0` rest energies, proves both exact phase evolutions satisfy their first-order Dirac time equations, and derives the doubled relative phase from their quotient. It also proves the native periods, inverse-mass scale, and native-coordinate reduced Compton length. | Derive an actual cross-branch velocity observable and prove the free-Dirac zitterbewegung frequency and amplitude without treating a pure global phase as observable. |
+| DIRAC-022 | PASS (scoped action-derived free zitterbewegung) | Reuses the Hamiltonian momentum-response velocity and the proved opposite rest branches. A normalized coherent state yields `c_eff cos(2 chi0 t)`, an integrated position law, amplitude `sqrt(12)/38`, and peak-to-peak reduced Compton length. Pure, same-sign, incoherent, and wrong-mass controls enforce the hypotheses. | Generalize to finite momentum and then test whether a localized native live-chi carrier realizes the same observable. |
 
 ## Current theorem boundary
 
@@ -70,7 +71,9 @@ It proves both rest-energy signs and their exact time equations, derives the
 relative phase from the quotient of those branches, and fixes the native rest
 and branch-coherence frequencies and periods. It does not claim that a pure
 global phase is observable; an explicit cross-branch velocity observable and
-zitterbewegung remain DIRAC-022 work.
+DIRAC-022 derives the missing free-continuum cross-branch observable from the
+same Hamiltonian, velocity and phases. It does not identify that expectation
+value with motion of a localized nonlinear native lattice carrier.
 
 ## Axiom policy
 

@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--021 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--022 derivation contract."""
 
 from __future__ import annotations
 
@@ -58,9 +58,12 @@ def main() -> int:
     evidence_021 = json.loads((
         ROOT / "experiments" / "dirac021_rest_clock" / "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_022 = json.loads((
+        ROOT / "experiments" / "dirac022_zitterbewegung" / "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_021": status.get("highest_passed_gate") == "DIRAC-021",
-        "all_twenty_one_gates_complete": status.get("completed") == 21,
+        "highest_gate_is_022": status.get("highest_passed_gate") == "DIRAC-022",
+        "all_twenty_two_gates_complete": status.get("completed") == 22,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -142,9 +145,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_021": contains(
+        "publication_stops_at_022": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac021"),
+            "theorem current_highest_gate_is_dirac022"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -311,6 +314,30 @@ def main() -> int:
             and contains("LeanDirac/Dirac021.lean",
                          "theorem rest_branch_relative_phase_is_doubled")
         ),
+        "zitter_velocity_is_existing_hamiltonian_response": (
+            contains("LeanDirac/Dirac022.lean",
+                     "theorem rest_velocity_is_existing_hamiltonian_momentum_response")
+            and contains("LeanDirac/Dirac022.lean",
+                         "theorem coherent_rest_velocity_cross_term")
+        ),
+        "zitter_position_and_amplitude_are_derived": (
+            contains("LeanDirac/Dirac022.lean",
+                     "theorem native_zitter_position_has_velocity_derivative")
+            and contains("LeanDirac/Dirac022.lean",
+                         "theorem native_zitter_position_bound")
+            and contains("LeanDirac/Dirac022.lean",
+                         "theorem native_zitter_peak_to_peak_is_reduced_compton_length")
+        ),
+        "zitter_controls_are_formal": (
+            contains("LeanDirac/Dirac022.lean",
+                     "theorem positive_rest_branch_current_zero")
+            and contains("LeanDirac/Dirac022.lean",
+                         "theorem same_sign_rest_control_has_zero_current")
+            and contains("LeanDirac/Dirac022.lean",
+                         "theorem incoherent_rest_mixture_has_zero_current")
+            and contains("LeanDirac/Dirac022.lean",
+                         "theorem parametric_rest_velocity_tracks_supplied_mass")
+        ),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -356,6 +383,10 @@ def main() -> int:
             evidence_021.get("status") == "PASS"
             and evidence_021.get("max_error", 1.0) <= 2.0e-12
             and all(evidence_021.get("checks", {}).values())),
+        "independent_zitterbewegung_check_passes": (
+            evidence_022.get("status") == "PASS"
+            and evidence_022.get("max_error", 1.0) <= 2.0e-11
+            and all(evidence_022.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -365,7 +396,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC021_READY" if passed else "DIRAC021_OPEN",
+        "verdict": "DIRAC022_READY" if passed else "DIRAC022_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

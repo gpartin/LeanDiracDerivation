@@ -1,9 +1,9 @@
-import LeanDirac.Dirac021
+import LeanDirac.Dirac022
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-021.
+Sole cumulative publication root through DIRAC-022.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -88,6 +88,17 @@ native-coordinate reduced Compton length is `sqrt 12 / 19`.  A pure branch's
 global phase is not asserted to be an observable clock; SI mass conversion,
 an explicit zitterbewegung observable, electromagnetic coupling, and a
 localized nonlinear electron remain downstream.
+
+DIRAC-022 derives the free-continuum zitterbewegung observable without adding
+native dynamics.  The velocity is the DIRAC-013 Hamiltonian momentum response,
+the mass and rest phases are inherited from DIRAC-011/021, and the normalized
+coherent positive/negative rest superposition is proved to have velocity
+`c_eff * cos (2 * chi0 * t)`.  Its integrated position amplitude is
+`sqrt 12 / 38`, exactly half the native reduced Compton length, while the
+peak-to-peak excursion equals that length.  Pure branches, same-energy-sign
+superpositions, incoherent mixtures, and a wrong-mass reconstruction are
+retained as controls.  This is not a localized native electron trajectory,
+an SI prediction, or an electromagnetic result.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -165,6 +176,15 @@ theorem current_highest_gate_is_dirac021 :
   completedChainThroughCoherentTransport := current_highest_gate_is_dirac020
   actionDerivedRestClock := dirac021_action_derived_rest_clock
 
+structure CumulativeDirac022Certificate : Prop where
+  completedChainThroughRestClock : CumulativeDirac021Certificate
+  actionDerivedZitterbewegung : Dirac022ZitterbewegungCertificate
+
+theorem current_highest_gate_is_dirac022 :
+    CumulativeDirac022Certificate where
+  completedChainThroughRestClock := current_highest_gate_is_dirac021
+  actionDerivedZitterbewegung := dirac022_action_derived_zitterbewegung
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
@@ -174,3 +194,4 @@ end LeanDirac
 #print axioms LeanDirac.current_highest_gate_is_dirac019
 #print axioms LeanDirac.current_highest_gate_is_dirac020
 #print axioms LeanDirac.current_highest_gate_is_dirac021
+#print axioms LeanDirac.current_highest_gate_is_dirac022
