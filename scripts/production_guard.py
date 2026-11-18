@@ -1,4 +1,4 @@
-"""One-command release audit for the completed DIRAC-001--020 chain.
+"""One-command release audit for the completed DIRAC-001--021 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -30,6 +30,8 @@ STATUS_019 = ROOT / "project" / "dirac019_wavepacket_transport_status.json"
 READINESS_019 = ROOT / "project" / "dirac019_release_readiness_status.json"
 STATUS_020 = ROOT / "project" / "dirac020_coherent_spatial_transport_status.json"
 READINESS_020 = ROOT / "project" / "dirac020_release_readiness_status.json"
+STATUS_021 = ROOT / "project" / "dirac021_rest_clock_status.json"
+READINESS_021 = ROOT / "project" / "dirac021_release_readiness_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
@@ -39,6 +41,7 @@ EVIDENCE_017 = ROOT / "experiments" / "dirac017_spin_half" / "result.json"
 EVIDENCE_018 = ROOT / "experiments" / "dirac018_factorization_classification" / "result.json"
 EVIDENCE_019 = ROOT / "experiments" / "dirac019_wavepacket_transport" / "result.json"
 EVIDENCE_020 = ROOT / "experiments" / "dirac020_coherent_spatial_transport" / "result.json"
+EVIDENCE_021 = ROOT / "experiments" / "dirac021_rest_clock" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -553,6 +556,87 @@ def validate_dirac020_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac021_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    tolerance = payload.get("tolerance")
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-021 independent verdict is not PASS")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance) or \
+            tolerance <= 0 or tolerance > 2.0e-12:
+        errors.append("DIRAC-021 tolerance is missing or outside the admitted range")
+    admitted = tolerance if isinstance(tolerance, (int, float)) and \
+        math.isfinite(tolerance) and tolerance > 0 else 0.0
+    max_error = payload.get("max_error")
+    if not isinstance(max_error, (int, float)) or not math.isfinite(max_error) or \
+            max_error > admitted:
+        errors.append("DIRAC-021 maximum error is non-finite or exceeds tolerance")
+    required_values = {
+        "rest_angular_frequency": 19.0,
+        "branch_beat_angular_frequency": 38.0,
+        "rest_clock_period": 2.0 * math.pi / 19.0,
+        "branch_beat_period": math.pi / 19.0,
+        "inverse_mass_scale": 1.0 / 19.0,
+        "reduced_compton_length": math.sqrt(12.0) / 19.0,
+        "c19_continuum_speed": math.sqrt(12.0),
+    }
+    values = payload.get("native_values")
+    if not isinstance(values, dict) or set(values) != set(required_values) or any(
+            not isinstance(values.get(key), (int, float)) or
+            not math.isfinite(values[key]) or
+            abs(values[key] - expected) > admitted
+            for key, expected in required_values.items()):
+        errors.append("DIRAC-021 native values are incomplete or incorrect")
+    required_errors = {
+        "positive_rest_energy", "negative_rest_energy",
+        "positive_dirac_time_equation", "negative_dirac_time_equation",
+        "relative_phase_doubles", "positive_clock_return",
+        "negative_clock_return", "branch_beat_return", "rest_frequency",
+        "branch_beat_frequency", "inverse_mass_scale",
+        "native_reduced_compton_length",
+    }
+    component_errors = payload.get("errors")
+    if not isinstance(component_errors, dict) or \
+            set(component_errors) != required_errors or any(
+                not isinstance(value, (int, float)) or not math.isfinite(value) or
+                abs(value) > admitted for value in component_errors.values()):
+        errors.append("DIRAC-021 component errors are incomplete or exceed tolerance")
+    required_checks = {
+        "zero_momentum_rest_frequency_is_chi0",
+        "positive_and_negative_rest_energies_are_opposite",
+        "both_rest_states_satisfy_the_dirac_time_equation",
+        "opposite_branch_relative_phase_has_frequency_two_chi0",
+        "single_branch_period_is_two_pi_over_chi0",
+        "branch_coherence_period_is_pi_over_chi0",
+        "pure_branch_density_has_no_clock_signal",
+        "wrong_mass_control_is_rejected",
+        "same_sign_control_has_no_doubled_phase",
+    }
+    checks = payload.get("checks")
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-021 required checks are incomplete or false")
+    negative = payload.get("negative_controls")
+    required_negative = {
+        "wrong_mass_max_phase_error", "same_sign_max_phase_error"
+    }
+    if not isinstance(negative, dict) or set(negative) != required_negative or any(
+            not isinstance(negative.get(key), (int, float)) or
+            not math.isfinite(negative[key]) or negative[key] <= 0.1
+            for key in required_negative):
+        errors.append("DIRAC-021 negative controls are malformed or ineffective")
+    excluded = set(payload.get("excluded_claims", []))
+    required_exclusions = {
+        "an SI electron mass or SI Compton wavelength",
+        "a directly observable clock in a pure energy eigenstate",
+        "zitterbewegung without a specified cross-branch observable",
+        "electromagnetic coupling or magnetic g-factor",
+        "nonlinear localized-electron dynamics",
+    }
+    if not required_exclusions <= excluded:
+        errors.append("DIRAC-021 excluded-claim boundary is incomplete")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -569,13 +653,15 @@ def validate(run_builds: bool = True) -> list[str]:
     status_018 = load(STATUS_018)
     status_019 = load(STATUS_019)
     status_020 = load(STATUS_020)
+    status_021 = load(STATUS_021)
     readiness_019 = load(READINESS_019)
     readiness_020 = load(READINESS_020)
-    if status.get("highest_passed_gate") != "DIRAC-020":
-        errors.append("status does not stop at DIRAC-020")
-    if status.get("next_gate") != "NATIVE_C19_FIXED_TIME_WAVEPACKET_CONVERGENCE":
-        errors.append("native C19 fixed-time packet convergence is not the next boundary")
-    if status.get("completed") != 20 or status.get("total") != 20:
+    readiness_021 = load(READINESS_021)
+    if status.get("highest_passed_gate") != "DIRAC-021":
+        errors.append("status does not stop at DIRAC-021")
+    if status.get("next_gate") != "DIRAC_ZITTERBEWEGUNG_VELOCITY_OBSERVABLE":
+        errors.append("zitterbewegung velocity observable is not the next boundary")
+    if status.get("completed") != 21 or status.get("total") != 21:
         errors.append("gate counts are incorrect")
     expected_gate_017 = "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
     if status.get("gates", {}).get("DIRAC-017") != expected_gate_017:
@@ -715,7 +801,35 @@ def validate(run_builds: bool = True) -> list[str]:
     if readiness_020.get("status") != "PASS" or \
             readiness_020.get("highest_gate") != "DIRAC-020":
         errors.append("DIRAC-020 release readiness is not PASS")
-    publication = "LeanDirac.current_highest_gate_is_dirac020"
+    if status_021.get("status") != "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK" or \
+            status_021.get("formal_theorem") != \
+            "LeanDirac.dirac021_action_derived_rest_clock":
+        errors.append("DIRAC-021 scoped rest-clock result is not a formal PASS")
+    red_team_021 = status_021.get("red_team", {})
+    for key, expected in (
+            ("new_action_term", False),
+            ("new_native_field", False),
+            ("fitted_mass", False),
+            ("rest_mass_is_inherited_from_action_derived_dirac011", True),
+            ("opposite_rest_energies_are_proved", True),
+            ("phase_derivatives_are_proved", True),
+            ("relative_frequency_is_derived_from_branch_quotient", True),
+            ("pure_global_phase_is_not_claimed_observable", True),
+            ("inverse_mass_and_native_coordinate_length_are_distinguished", True),
+            ("si_mass_is_not_claimed", True),
+            ("zitterbewegung_is_not_claimed", True)):
+        if red_team_021.get(key) is not expected:
+            errors.append(f"DIRAC-021 red-team contract differs: {key}")
+    if red_team_021.get("critical_findings") or red_team_021.get("high_findings"):
+        errors.append("DIRAC-021 retains critical/high red-team findings")
+    if readiness_021.get("status") != "PASS" or \
+            readiness_021.get("highest_gate") != "DIRAC-021":
+        errors.append("DIRAC-021 release readiness is not PASS")
+    if readiness_021.get("package_artifacts") != [
+            "LeanDiracDerivation-DIRAC-021.zip",
+            "LeanDiracDerivation-DIRAC-021.zip.sha256"]:
+        errors.append("DIRAC-021 release artifact names are stale")
+    publication = "LeanDirac.current_highest_gate_is_dirac021"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -731,7 +845,7 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE_020.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_021.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
     cumulative = set(evidence.get("cumulative_numerical_evidence", []))
     expected_evidence = {
@@ -744,6 +858,7 @@ def validate(run_builds: bool = True) -> list[str]:
         EVIDENCE_018.relative_to(ROOT).as_posix(),
         EVIDENCE_019.relative_to(ROOT).as_posix(),
         EVIDENCE_020.relative_to(ROOT).as_posix(),
+        EVIDENCE_021.relative_to(ROOT).as_posix(),
     }
     if cumulative != expected_evidence:
         errors.append("evidence manifest does not retain every admitted reconstruction")
@@ -756,6 +871,7 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(validate_dirac018_evidence(load(EVIDENCE_018)))
     errors.extend(validate_dirac019_evidence(load(EVIDENCE_019)))
     errors.extend(validate_dirac020_evidence(load(EVIDENCE_020)))
+    errors.extend(validate_dirac021_evidence(load(EVIDENCE_021)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:
@@ -797,8 +913,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-020")
-    print("next_gate=NATIVE_C19_FIXED_TIME_WAVEPACKET_CONVERGENCE")
+    print("highest_passed_gate=DIRAC-021")
+    print("next_gate=DIRAC_ZITTERBEWEGUNG_VELOCITY_OBSERVABLE")
     return 0
 
 

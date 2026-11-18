@@ -196,6 +196,35 @@ def main() -> int:
     )
     if not guard.validate_dirac020_evidence(inflated_claim_020):
         raise AssertionError("inflated DIRAC-020 claim boundary was accepted")
+    payload_021 = guard.load(guard.EVIDENCE_021)
+    if guard.validate_dirac021_evidence(payload_021):
+        raise AssertionError("passing DIRAC-021 evidence was rejected")
+    broken_frequency_021 = copy.deepcopy(payload_021)
+    broken_frequency_021["native_values"]["branch_beat_angular_frequency"] = 19.0
+    if not guard.validate_dirac021_evidence(broken_frequency_021):
+        raise AssertionError("failed DIRAC-021 branch doubling was accepted")
+    broken_equation_021 = copy.deepcopy(payload_021)
+    broken_equation_021["checks"][
+        "both_rest_states_satisfy_the_dirac_time_equation"
+    ] = False
+    if not guard.validate_dirac021_evidence(broken_equation_021):
+        raise AssertionError("failed DIRAC-021 time equation was accepted")
+    nonfinite_021 = copy.deepcopy(payload_021)
+    nonfinite_021["errors"]["relative_phase_doubles"] = math.nan
+    if not guard.validate_dirac021_evidence(nonfinite_021):
+        raise AssertionError("non-finite DIRAC-021 evidence was accepted")
+    pure_density_overclaim_021 = copy.deepcopy(payload_021)
+    pure_density_overclaim_021["checks"][
+        "pure_branch_density_has_no_clock_signal"
+    ] = False
+    if not guard.validate_dirac021_evidence(pure_density_overclaim_021):
+        raise AssertionError("observable pure-state clock claim was accepted")
+    inflated_claim_021 = copy.deepcopy(payload_021)
+    inflated_claim_021["excluded_claims"].remove(
+        "zitterbewegung without a specified cross-branch observable"
+    )
+    if not guard.validate_dirac021_evidence(inflated_claim_021):
+        raise AssertionError("inflated DIRAC-021 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

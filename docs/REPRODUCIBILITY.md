@@ -126,6 +126,19 @@ finite-update pointwise error bound. It also tracks a narrow packet under
 timestep refinement and rejects unnormalized, zero-current and unstable-step
 controls. It is not a nonlinear live-chi electron simulation.
 
+## Independent DIRAC-021 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac021_rest_clock/validate_dirac021.py
+```
+
+The program reconstructs the zero-momentum `+chi0` and `-chi0` rest energies,
+their first-order time equations, exact periods, and the doubled relative
+phase of a coherent opposite-branch pair. It rejects a wrong-mass control and
+a same-sign control and confirms that either pure branch has constant density.
+It does not turn global phase into an observable, calibrate an SI mass, or
+establish zitterbewegung.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -133,11 +146,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 20-gate dependency and claim boundary.
+The first command verifies the complete 21-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-020.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-021.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

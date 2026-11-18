@@ -2,10 +2,10 @@
   "schema_version": "1.4.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-020",
-  "next_gate": "NATIVE_C19_FIXED_TIME_WAVEPACKET_CONVERGENCE",
-  "completed": 20,
-  "total": 20,
+  "highest_passed_gate": "DIRAC-021",
+  "next_gate": "DIRAC_ZITTERBEWEGUNG_VELOCITY_OBSERVABLE",
+  "completed": 21,
+  "total": 21,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
@@ -26,7 +26,8 @@
     "DIRAC-017": "LeanDirac/Dirac017Closed.lean",
     "DIRAC-018": "LeanDirac/Dirac018.lean",
     "DIRAC-019": "LeanDirac/Dirac019.lean",
-    "DIRAC-020": "LeanDirac/Dirac020.lean"
+    "DIRAC-020": "LeanDirac/Dirac020.lean",
+    "DIRAC-021": "LeanDirac/Dirac021.lean"
   },
   "gate_support_modules": {
     "DIRAC-006": "LeanDirac/Dirac006Restriction.lean",
@@ -52,7 +53,8 @@
     "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION",
     "DIRAC-018": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION",
     "DIRAC-019": "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT",
-    "DIRAC-020": "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT"
+    "DIRAC-020": "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT",
+    "DIRAC-021": "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK"
   },
-  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves the scoped unsigned cube-translation copy exchange. DIRAC-017 conditionally proves that the same cubical incidence representation carries spin-one-half algebra, including continuous-angle Hamiltonian covariance. DIRAC-018 classifies the square root only within the real, local, flavor-preserving cubical-incidence coefficient class. DIRAC-019 proves sustained norm-preserving evolution and density-weighted current/group-velocity transport for arbitrary finite positive-frequency spectral families on the stable recurrence-derived continuum branch. DIRAC-020 constructs an explicit normalized finite Fourier frame, proves that periodic cubic character phases match the momenta stored in the corresponding positive-frequency modes, synthesizes those compatible modes into one coherent spatial field, proves exact Parseval density preservation and integrated-current transport for every stable update, and proves an explicit finite-update pointwise recurrence-versus-continuum error bound. It does not classify arbitrary nonlocal or flavor-mixing roots, provide a uniform fixed-physical-time convergence rate, construct an exact finite-spacing Dirac operator or exact native finite-spacing packet evolution, prove unrestricted live-chi localized electron transport, establish electromagnetic coupling or g-factor, establish electron identity or formation, or promote canonical LFM status."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves the scoped unsigned cube-translation copy exchange. DIRAC-017 conditionally proves that the same cubical incidence representation carries spin-one-half algebra, including continuous-angle Hamiltonian covariance. DIRAC-018 classifies the square root only within the real, local, flavor-preserving cubical-incidence coefficient class and does not classify arbitrary nonlocal or flavor-mixing roots. DIRAC-019 proves sustained norm-preserving evolution and density-weighted current/group-velocity transport for arbitrary finite positive-frequency spectral families on the stable recurrence-derived continuum branch. DIRAC-020 constructs an explicit normalized finite Fourier frame, proves character-to-momentum compatibility, coherent Parseval density and integrated-current transport, and a finite-update pointwise phase-error bound; a uniform fixed-physical-time convergence rate remains open. DIRAC-021 follows the action-selected rest coefficient through the zero-momentum Dirac Hamiltonian, proves opposite-energy rest phases and their first-order equations, and derives rest frequency 19 and relative branch frequency 38 in native units. A pure branch's global phase is not claimed to be an observable clock. The chain does not establish an SI electron mass, zitterbewegung, electromagnetic coupling or g-factor, unrestricted live-chi localized electron transport, electron identity or formation, or canonical LFM status."
 }

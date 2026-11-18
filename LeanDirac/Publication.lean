@@ -1,9 +1,9 @@
-import LeanDirac.Dirac020
+import LeanDirac.Dirac021
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-020.
+Sole cumulative publication root through DIRAC-021.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -77,6 +77,17 @@ at every stable update.  The recurrence-versus-continuum field error has an
 explicit finite-update pointwise bound.  This is not an exact native
 finite-spacing factorization, a uniform fixed-time convergence rate, or a
 nonlinear localized-electron transport theorem.
+
+DIRAC-021 follows the rest coefficient already selected from the native action
+through the zero-momentum four-component Hamiltonian.  It proves explicit
+positive- and negative-energy rest states, their componentwise first-order
+time equations, opposite exact phases, and the doubled relative phase of a
+coherent branch pair.  In native units the rest angular frequency is `19`, the
+relative branch frequency is `38`, the inverse-mass scale is `1/19`, and the
+native-coordinate reduced Compton length is `sqrt 12 / 19`.  A pure branch's
+global phase is not asserted to be an observable clock; SI mass conversion,
+an explicit zitterbewegung observable, electromagnetic coupling, and a
+localized nonlinear electron remain downstream.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -145,6 +156,15 @@ theorem current_highest_gate_is_dirac020 :
   completedChainThroughSpectralTransport := current_highest_gate_is_dirac019
   coherentSpatialTransport := dirac020_coherent_spatial_transport
 
+structure CumulativeDirac021Certificate : Prop where
+  completedChainThroughCoherentTransport : CumulativeDirac020Certificate
+  actionDerivedRestClock : Dirac021RestClockCertificate
+
+theorem current_highest_gate_is_dirac021 :
+    CumulativeDirac021Certificate where
+  completedChainThroughCoherentTransport := current_highest_gate_is_dirac020
+  actionDerivedRestClock := dirac021_action_derived_rest_clock
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
@@ -153,3 +173,4 @@ end LeanDirac
 #print axioms LeanDirac.current_highest_gate_is_dirac018
 #print axioms LeanDirac.current_highest_gate_is_dirac019
 #print axioms LeanDirac.current_highest_gate_is_dirac020
+#print axioms LeanDirac.current_highest_gate_is_dirac021

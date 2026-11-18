@@ -26,7 +26,7 @@ def main() -> int:
     lean_workflow = text(".github/workflows/lean.yml")
     numerical_workflow = text(".github/workflows/numerical.yml")
     status = payload("project/status.json")
-    readiness = payload("project/dirac020_release_readiness_status.json")
+    readiness = payload("project/dirac021_release_readiness_status.json")
 
     if re.search(r"(?m)^\s*lake update\s*$", readme) or \
             re.search(r"(?m)^\s*lake update\s*$", reproducibility):
@@ -61,9 +61,12 @@ def main() -> int:
     if status.get("gates", {}).get("DIRAC-020") != \
             "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT":
         errors.append("machine-readable DIRAC-020 status erases transport scope")
+    if status.get("gates", {}).get("DIRAC-021") != \
+            "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK":
+        errors.append("machine-readable DIRAC-021 status erases rest-clock scope")
     if readiness.get("package_artifacts") != [
-            "LeanDiracDerivation-DIRAC-020.zip",
-            "LeanDiracDerivation-DIRAC-020.zip.sha256"]:
+            "LeanDiracDerivation-DIRAC-021.zip",
+            "LeanDiracDerivation-DIRAC-021.zip.sha256"]:
         errors.append("current release-readiness artifact names are stale")
     for workflow_name, workflow in (
             ("lean", lean_workflow), ("numerical", numerical_workflow)):
@@ -76,7 +79,8 @@ def main() -> int:
             "dirac017_spin_half",
             "dirac018_factorization_classification",
             "dirac019_wavepacket_transport",
-            "dirac020_coherent_spatial_transport"):
+            "dirac020_coherent_spatial_transport",
+            "dirac021_rest_clock"):
         if not (ROOT / "experiments" / gate / "result.json").is_file():
             errors.append(f"missing independent evidence for {gate}")
     if "continuous-angle Hamiltonian covariance" not in \
@@ -88,6 +92,11 @@ def main() -> int:
     if "uniform fixed-physical-time convergence rate" not in \
             text("project/status.json"):
         errors.append("status omits DIRAC-020's finite-update boundary")
+    if "pure branch's global phase is not claimed to be an observable clock" not in \
+            text("project/status.json"):
+        errors.append("status omits DIRAC-021's observability boundary")
+    if "zitterbewegung" not in text("project/status.json"):
+        errors.append("status omits the open zitterbewegung boundary")
     claims = text("docs/CLAIMS.md")
     if "localized dynamically stable carrier" not in claims or \
             "A physical electron" not in claims:

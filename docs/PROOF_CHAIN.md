@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac020`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac021`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -26,6 +26,7 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-018 | PASS (scoped classification) | Classifies every real, local, first-order, flavor-preserving cubical-incidence root with separated mass grading: cubic covariance reduces its transport coefficients to one scalar, exact continuum squaring fixes magnitudes, and the upstream positive mass/current orientation fixes the sign. It proves this independently on both exact rank-four copies, proves the copies exhaust the eight-corner space, and proves the exact C19 scalar symbol has only the origin zero in the first Brillouin zone. | Either derive an exact finite-spacing first-order factorization of the full C19 symbol or prove a sharply scoped obstruction; keep nonlocal and flavor-mixing alternatives explicit. |
 | DIRAC-019 | PASS (scoped spectral transport) | Constructs a nonzero positive-frequency eigenmode at every momentum, then proves that every admitted stable mode advances by the recurrence-derived unit phase and preserves density for every integer update count. For any finite spectral family, total spectral density is conserved and total current remains the density-weighted group-velocity moment at every update; massive speed is strictly subluminal, and the summed generator converges to the same Dirac generator. | Formalize a coherent finite real-space Fourier packet, Parseval density, centroid/current motion and a finite-time continuum error bound. |
 | DIRAC-020 | PASS (scoped coherent spatial transport) | Constructs a normalized finite Fourier frame on every finite abelian periodic lattice and proves its orthonormality from character orthogonality. On a periodic cubic lattice it proves the character axis-step phase matches the momentum stored in each positive-frequency mode, then synthesizes those compatible modes into one coherent four-component spatial field, proves exact Parseval density preservation and integrated-current transport for every stable update, and bounds the finite-update pointwise recurrence-versus-continuum phase error. | Propagate the exact native C19 spatial remainder together with the timestep error to obtain a uniform fixed-physical-time packet bound before testing nonlinear live-chi localized motion. |
+| DIRAC-021 | PASS (scoped action-derived rest clock) | Follows the rest coefficient already selected from the native action into the zero-momentum four-component Hamiltonian. It proves explicit `+chi0` and `-chi0` rest energies, proves both exact phase evolutions satisfy their first-order Dirac time equations, and derives the doubled relative phase from their quotient. It also proves the native periods, inverse-mass scale, and native-coordinate reduced Compton length. | Derive an actual cross-branch velocity observable and prove the free-Dirac zitterbewegung frequency and amplitude without treating a pure global phase as observable. |
 
 ## Current theorem boundary
 
@@ -64,6 +65,12 @@ identities, and retains a finite-update pointwise error bound. It does not yet
 provide a uniform fixed-physical-time estimate carrying the exact native C19
 spatial remainder, or prove nonlinear electron motion in unrestricted live
 chi.
+DIRAC-021 then specializes the already-derived Hamiltonian to zero momentum.
+It proves both rest-energy signs and their exact time equations, derives the
+relative phase from the quotient of those branches, and fixes the native rest
+and branch-coherence frequencies and periods. It does not claim that a pure
+global phase is observable; an explicit cross-branch velocity observable and
+zitterbewegung remain DIRAC-022 work.
 
 ## Axiom policy
 
