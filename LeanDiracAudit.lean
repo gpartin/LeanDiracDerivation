@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-019. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-020. -/
 
 #audit_lean_dirac_environment
 
@@ -84,8 +84,17 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.finite_packet_evolved_current_is_density_weighted_velocity
 #print axioms LeanDirac.finite_packet_generator_defect_tends_to_zero
 #print axioms LeanDirac.dirac019_finite_packet_transport
+#print axioms LeanDirac.normalized_finite_fourier_basis_orthonormal
+#print axioms LeanDirac.periodic_cubic_character_packet_is_momentum_compatible
+#print axioms LeanDirac.cell4_spatial_synthesis_parseval
+#print axioms LeanDirac.coherent_spatial_packet_density_is_preserved
+#print axioms LeanDirac.coherent_spatial_packet_current_is_velocity_moment
+#print axioms LeanDirac.coherent_spatial_packet_has_nonzero_transport
+#print axioms LeanDirac.coherent_spatial_packet_finite_step_error
+#print axioms LeanDirac.dirac020_coherent_spatial_transport
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
 #print axioms LeanDirac.current_highest_gate_is_dirac018
 #print axioms LeanDirac.current_highest_gate_is_dirac019
+#print axioms LeanDirac.current_highest_gate_is_dirac020

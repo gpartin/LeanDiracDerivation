@@ -228,5 +228,37 @@
       "native positive-frequency preparation or selection",
       "electromagnetic response or physical electron identity"
     ]
+  },
+  "dirac020_mandatory_gates": {
+    "status": "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT",
+    "formal": [
+      "same action and transitive DIRAC-019 derivation",
+      "explicit normalized Fourier frame for every finite abelian periodic lattice",
+      "frame orthonormality derived from finite-character orthogonality",
+      "periodic cubic character translation phases equal the stored mode-momentum phases",
+      "coherent transport restricted to momentum-compatible spatial packets",
+      "coherent four-component spatial synthesis from the existing positive-frequency modes",
+      "exact Parseval equality between integrated spatial density and spectral density",
+      "density remains preserved for every stable integer update count",
+      "integrated spatial current equals the existing density-weighted velocity moment",
+      "a nonzero velocity moment yields nonzero spatial current at every stable update",
+      "finite-update pointwise recurrence error bounded by accumulated one-step phase mismatch",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "explicit normalized DFT orthonormality and Parseval identities reproduce numerically",
+      "the DFT character phase reproduces the momentum phase used by each mode",
+      "integrated spatial current equals both spectral current and the density-weighted velocity moment",
+      "the formal finite-update pointwise bound is satisfied",
+      "a narrow coherent packet preserves density and its measured velocity converges under timestep refinement",
+      "unnormalized-frame, zero-current and unstable-timestep controls are rejected"
+    ],
+    "excluded_claims": [
+      "uniform fixed-physical-time convergence including native C19 spatial error",
+      "exact native finite-spacing Dirac evolution",
+      "nonlinear localized-electron transport under unrestricted live chi",
+      "native positive-frequency packet preparation or selection",
+      "electromagnetic response or physical electron identity"
+    ]
   }
 }

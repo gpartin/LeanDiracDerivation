@@ -1,5 +1,25 @@
 # Changelog
 
+## DIRAC-020 (unreleased)
+
+- Constructed an explicit normalized finite Fourier frame for every finite
+  abelian periodic lattice and proved orthonormality from character
+  orthogonality.
+- Proved on a periodic cubic lattice that each Fourier character's axis-step
+  phase is exactly the phase of the momentum stored in its corresponding
+  positive-frequency mode; arbitrary basis/momentum pairings are excluded
+  from the transport certificate.
+- Synthesized the DIRAC-019 positive-frequency modes into one coherent
+  four-component spatial field with exact Parseval density preservation.
+- Proved its integrated spatial current equals the existing density-weighted
+  transport velocity at every stable update and that nonzero derived current
+  gives nonzero spatial transport.
+- Proved an explicit pointwise finite-update recurrence-versus-continuum phase
+  error bound and independently reconstructed the field movement under
+  timestep refinement.
+- Added no native field, action term, translation rule, projector, fitted
+  coefficient, stencil change, or nonlinear electron claim.
+
 ## DIRAC-019 (unreleased)
 
 - Proved exact recurrence-phase evolution and density preservation for every

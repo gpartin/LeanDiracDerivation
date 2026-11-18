@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--019 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--020 derivation contract."""
 
 from __future__ import annotations
 
@@ -51,9 +51,13 @@ def main() -> int:
         ROOT / "experiments" / "dirac019_wavepacket_transport" /
         "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_020 = json.loads((
+        ROOT / "experiments" / "dirac020_coherent_spatial_transport" /
+        "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_019": status.get("highest_passed_gate") == "DIRAC-019",
-        "all_nineteen_gates_complete": status.get("completed") == 19,
+        "highest_gate_is_020": status.get("highest_passed_gate") == "DIRAC-020",
+        "all_twenty_gates_complete": status.get("completed") == 20,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -135,9 +139,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_019": contains(
+        "publication_stops_at_020": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac019"),
+            "theorem current_highest_gate_is_dirac020"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -255,6 +259,34 @@ def main() -> int:
         "finite_packet_generator_limit_present": contains(
             "LeanDirac/Dirac019.lean",
             "theorem finite_packet_generator_defect_tends_to_zero"),
+        "explicit_finite_fourier_frame_present": contains(
+            "LeanDirac/Dirac020.lean",
+            "theorem normalized_finite_fourier_basis_orthonormal"),
+        "periodic_cubic_character_momentum_bridge_present": contains(
+            "LeanDirac/Dirac020.lean",
+            "theorem periodic_cubic_character_packet_is_momentum_compatible"),
+        "coherent_spatial_parseval_present": contains(
+            "LeanDirac/Dirac020.lean",
+            "theorem cell4_spatial_synthesis_parseval"),
+        "coherent_spatial_density_transport_present": (
+            contains(
+                "LeanDirac/Dirac020.lean",
+                "theorem coherent_spatial_packet_density_is_spectral_density")
+            and contains(
+                "LeanDirac/Dirac020.lean",
+                "theorem coherent_spatial_packet_density_is_preserved")
+        ),
+        "coherent_spatial_current_transport_present": (
+            contains(
+                "LeanDirac/Dirac020.lean",
+                "theorem coherent_spatial_packet_current_is_velocity_moment")
+            and contains(
+                "LeanDirac/Dirac020.lean",
+                "theorem coherent_spatial_packet_has_nonzero_transport")
+        ),
+        "coherent_finite_step_error_present": contains(
+            "LeanDirac/Dirac020.lean",
+            "theorem coherent_spatial_packet_finite_step_error"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -291,6 +323,11 @@ def main() -> int:
             and evidence_019.get("minimum_speed_margin", 0.0) > 0.0
             and evidence_019.get("minimum_generator_refinement_ratio", 0.0) > 1.95
             and all(evidence_019.get("checks", {}).values())),
+        "independent_coherent_spatial_transport_check_passes": (
+            evidence_020.get("status") == "PASS"
+            and evidence_020.get("tolerance", 1.0) <= 3.0e-11
+            and len(evidence_020.get("coherent_packet_controls", [])) == 3
+            and all(evidence_020.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -300,7 +337,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC019_READY" if passed else "DIRAC019_OPEN",
+        "verdict": "DIRAC020_READY" if passed else "DIRAC020_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

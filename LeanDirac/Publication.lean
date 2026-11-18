@@ -1,9 +1,9 @@
-import LeanDirac.Dirac019
+import LeanDirac.Dirac020
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-019.
+Sole cumulative publication root through DIRAC-020.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -63,6 +63,20 @@ subluminal, and the finite-family recurrence generator converges to the same
 Dirac generator. This is a finite spectral transport theorem, not yet a
 real-space localization theorem, finite-time uniform error estimate, or
 nonlinear physical-electron transport claim.
+
+DIRAC-020 constructs the missing coherent real-space bridge.  An explicit
+normalized Fourier frame is built for every finite abelian periodic lattice,
+with orthonormality proved from character orthogonality.  On a periodic cubic
+lattice, each character's one-site phase is proved equal to the phase of the
+momentum stored in its positive-frequency mode; the spatial and dynamical
+mode labels therefore cannot be paired arbitrarily.  The synthesized
+four-component field obeys exact Parseval density conservation and its
+integrated current is the same density-weighted transport velocity proved in
+DIRAC-019.  A nonzero velocity moment therefore gives nonzero spatial current
+at every stable update.  The recurrence-versus-continuum field error has an
+explicit finite-update pointwise bound.  This is not an exact native
+finite-spacing factorization, a uniform fixed-time convergence rate, or a
+nonlinear localized-electron transport theorem.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -122,6 +136,15 @@ theorem current_highest_gate_is_dirac019 :
   finitePositiveFrequencyPacketTransport :=
     dirac019_finite_packet_transport
 
+structure CumulativeDirac020Certificate : Prop where
+  completedChainThroughSpectralTransport : CumulativeDirac019Certificate
+  coherentSpatialTransport : Dirac020CoherentSpatialTransportCertificate
+
+theorem current_highest_gate_is_dirac020 :
+    CumulativeDirac020Certificate where
+  completedChainThroughSpectralTransport := current_highest_gate_is_dirac019
+  coherentSpatialTransport := dirac020_coherent_spatial_transport
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
@@ -129,3 +152,4 @@ end LeanDirac
 #print axioms LeanDirac.current_highest_gate_is_dirac017
 #print axioms LeanDirac.current_highest_gate_is_dirac018
 #print axioms LeanDirac.current_highest_gate_is_dirac019
+#print axioms LeanDirac.current_highest_gate_is_dirac020

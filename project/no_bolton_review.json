@@ -1,8 +1,8 @@
 {
   "schema_version": "1.4.0",
-  "gate": "DIRAC-019",
+  "gate": "DIRAC-020",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac019 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac020 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -51,7 +51,12 @@
     "Derived all-update positive-frequency phase evolution and finite-family spectral-density conservation from the existing centered recurrence rather than inserting a translation law.",
     "Constructed an explicit nonzero positive-frequency eigenmode at every momentum so the transport theorem cannot pass vacuously.",
     "Derived finite-family movement from the already-proved Hamiltonian current/group-velocity identity, proved strict massive subluminality, and independently reproduced a refining Fourier-packet diagnostic.",
-    "Kept coherent real-space Lean formalization, finite-time uniform error, native sector selection and nonlinear localized-electron motion explicitly open."
+    "At DIRAC-019, kept coherent real-space Lean formalization, finite-time uniform error, native sector selection and nonlinear localized-electron motion explicitly open.",
+    "Constructed the DIRAC-020 spatial field with an explicit normalized finite Fourier frame whose orthonormality is proved from finite-character orthogonality rather than assumed or fitted.",
+    "Closed a frame/momentum-label gap by deriving momentum from each character's three axis-step phases, proving the periodic cubic basis has those exact translation phases, and restricting the transport certificate to compatible packets.",
+    "Lifted the existing positive-frequency recurrence into one coherent four-component spatial field and proved exact Parseval density and integrated-current identities without adding a translation rule, field, action term, projector or coefficient.",
+    "Proved nonzero spatial transport only when the already-derived density-weighted velocity moment is nonzero; a symmetric zero-current control prevents motion from being inferred from the packet label.",
+    "Kept the exact native C19 spatial remainder, uniform fixed-physical-time convergence, and nonlinear live-chi localized-electron motion explicitly open."
   ],
   "declared_starting_hypotheses": [
     "the noncanonical positive two-field local-plus-exterior-area C19 action",
@@ -69,7 +74,7 @@
   ],
   "remaining_open_claims": [
     "exact finite-lattice or nonlinear live-chi Dirac evolution",
-    "coherent real-space Fourier/Parseval packet formalization and a uniform finite-time error bound",
+    "uniform fixed-physical-time convergence including the native C19 spatial remainder",
     "positive density for arbitrary mixed-frequency native data",
     "exact finite-lattice or nonlinear live-chi Dirac current",
     "native time evolution implementing one copy exchange per translation step",
@@ -82,5 +87,5 @@
     "electromagnetic coupling and magnetic g-factor",
     "physical electron identity"
   ],
-  "caveat": "DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. DIRAC-016 proves an exact copy exchange under unsigned microscopic cube translation, but not dynamical copy-alternating motion. DIRAC-017 proves a conditional cubical spin-one-half representation. DIRAC-018 closes the orientation/classification hole only inside its stated coefficient class. DIRAC-019 proves sustained stable positive-frequency spectral evolution and current/group-velocity transport for finite mode families, but not a coherent spatial theorem in Lean, nonlinear live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
+  "caveat": "DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. DIRAC-016 proves an exact copy exchange under unsigned microscopic cube translation, but not dynamical copy-alternating motion. DIRAC-017 proves a conditional cubical spin-one-half representation. DIRAC-018 closes the orientation/classification hole only inside its stated coefficient class. DIRAC-019 proves sustained stable positive-frequency spectral evolution. DIRAC-020 proves coherent finite spatial Fourier transport and a finite-update pointwise phase-error bound, but not uniform fixed-physical-time native-C19 convergence, nonlinear live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
 }
