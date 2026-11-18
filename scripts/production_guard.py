@@ -24,10 +24,13 @@ AUDIT_014 = ROOT / "project" / "dirac014_final_audit_status.json"
 REPRODUCTION_015 = ROOT / "project" / "dirac015_clean_reproduction_status.json"
 STATUS_016 = ROOT / "project" / "dirac016_copy_translation_status.json"
 STATUS_017 = ROOT / "project" / "dirac017_spin_half_representation_status.json"
+READINESS_017 = ROOT / "project" / "dirac017_release_readiness_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
 EVIDENCE_013 = ROOT / "experiments" / "dirac013_density_current" / "result.json"
+EVIDENCE_016 = ROOT / "experiments" / "dirac016_copy_translation" / "result.json"
+EVIDENCE_017 = ROOT / "experiments" / "dirac017_spin_half" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -274,6 +277,73 @@ def validate_dirac013_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac016_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    tolerance = payload.get("tolerance")
+    maximum = payload.get("max_error")
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-016 independent verdict is not PASS")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance) or \
+            tolerance <= 0 or tolerance > 1.0e-12:
+        errors.append("DIRAC-016 tolerance is missing or outside the admitted range")
+    if not isinstance(maximum, (int, float)) or not math.isfinite(maximum):
+        errors.append("DIRAC-016 maximum error is missing or non-finite")
+    elif isinstance(tolerance, (int, float)) and maximum > tolerance:
+        errors.append("DIRAC-016 maximum error exceeds its tolerance")
+    required_checks = {
+        "all_translations_are_unitary_involutions",
+        "axis_2_exchanges_both_rank_four_copies",
+        "c19_copy_class_weights_are_balanced",
+        "coordinate_half_shift_is_involutive",
+        "signed_incidence_preserves_copy",
+    }
+    checks = payload.get("checks")
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-016 required checks are incomplete or false")
+    errors_map = payload.get("errors")
+    if not isinstance(errors_map, dict) or not errors_map or any(
+            not isinstance(value, (int, float)) or not math.isfinite(value)
+            for value in errors_map.values()):
+        errors.append("DIRAC-016 component errors are incomplete or non-finite")
+    if payload.get("c19_exchange_weight") != 12 or \
+            payload.get("c19_preserving_weight") != 12:
+        errors.append("DIRAC-016 C19 copy-class weights are incorrect")
+    return errors
+
+
+def validate_dirac017_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    tolerance = payload.get("tolerance")
+    maximum = payload.get("max_error")
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-017 independent verdict is not PASS")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance) or \
+            tolerance <= 0 or tolerance > 2.0e-12:
+        errors.append("DIRAC-017 tolerance is missing or outside the admitted range")
+    if not isinstance(maximum, (int, float)) or not math.isfinite(maximum):
+        errors.append("DIRAC-017 maximum error is missing or non-finite")
+    elif isinstance(tolerance, (int, float)) and maximum > tolerance:
+        errors.append("DIRAC-017 maximum error exceeds its tolerance")
+    required_checks = {
+        "continuous_hamiltonian_covariance_reconstructed",
+        "continuous_rotations_are_unitary_with_two_pi_sign_and_four_pi_return",
+        "native_spin_algebra_reconstructed",
+        "quarter_turn_is_unitary_and_double_valued",
+        "spin_half_spectrum_on_both_copies",
+    }
+    checks = payload.get("checks")
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-017 required checks are incomplete or false")
+    errors_map = payload.get("errors")
+    if not isinstance(errors_map, dict) or not errors_map or any(
+            not isinstance(value, (int, float)) or not math.isfinite(value)
+            for value in errors_map.values()):
+        errors.append("DIRAC-017 component errors are incomplete or non-finite")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -287,12 +357,16 @@ def validate(run_builds: bool = True) -> list[str]:
     reproduction_015 = load(REPRODUCTION_015)
     status_016 = load(STATUS_016)
     status_017 = load(STATUS_017)
+    readiness_017 = load(READINESS_017)
     if status.get("highest_passed_gate") != "DIRAC-017":
         errors.append("status does not stop at DIRAC-017")
     if status.get("next_gate") != "LOCALIZED_PHYSICAL_SPIN_VALIDATION":
         errors.append("localized physical-spin validation is not the next boundary")
     if status.get("completed") != 17 or status.get("total") != 17:
         errors.append("gate counts are incorrect")
+    expected_gate_017 = "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
+    if status.get("gates", {}).get("DIRAC-017") != expected_gate_017:
+        errors.append("DIRAC-017 machine status does not preserve conditionality")
     if review.get("status") != "PASS_ZERO_CRITICAL_HIGH":
         errors.append("critical/high red-team findings remain")
     if review.get("critical_findings") or review.get("high_findings"):
@@ -307,6 +381,15 @@ def validate(run_builds: bool = True) -> list[str]:
     if reproduction_015.get("formal_theorem") != \
             "LeanDirac.lfm_free_dirac_continuum_limit":
         errors.append("DIRAC-015 names the wrong final theorem")
+    if reproduction_015.get("historical") is not True:
+        errors.append("DIRAC-015 package record is not marked historical")
+    if readiness_017.get("status") != "PASS" or \
+            readiness_017.get("highest_gate") != "DIRAC-017":
+        errors.append("DIRAC-017 release readiness is not current")
+    if readiness_017.get("package_artifacts") != [
+            "LeanDiracDerivation-DIRAC-017.zip",
+            "LeanDiracDerivation-DIRAC-017.zip.sha256"]:
+        errors.append("DIRAC-017 release artifact names are stale")
     if status_016.get("status") != "PASS" or \
             status_016.get("formal_theorem") != \
             "LeanDirac.dirac016_exact_copy_translation_structure":
@@ -336,7 +419,8 @@ def validate(run_builds: bool = True) -> list[str]:
             "continuous_angle_uses_derived_spin_scale",
             "quarter_turn_uniquely_characterized",
             "mass_grading_compatibility_proved",
-            "full_hamiltonian_covariance_proved",
+            "quarter_turn_hamiltonian_covariance_proved",
+            "continuous_hamiltonian_covariance_proved",
             "both_copies_retained",
             "localized_dynamics_claim_excluded"):
         if red_team_017.get(key) is not True:
@@ -359,7 +443,7 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE_013.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_017.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
     cumulative = set(evidence.get("cumulative_numerical_evidence", []))
     expected_evidence = {
@@ -367,6 +451,8 @@ def validate(run_builds: bool = True) -> list[str]:
         EVIDENCE_011.relative_to(ROOT).as_posix(),
         EVIDENCE_012.relative_to(ROOT).as_posix(),
         EVIDENCE_013.relative_to(ROOT).as_posix(),
+        EVIDENCE_016.relative_to(ROOT).as_posix(),
+        EVIDENCE_017.relative_to(ROOT).as_posix(),
     }
     if cumulative != expected_evidence:
         errors.append("evidence manifest does not retain every admitted reconstruction")
@@ -374,6 +460,8 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(validate_dirac011_evidence(load(EVIDENCE_011)))
     errors.extend(validate_dirac012_evidence(load(EVIDENCE_012)))
     errors.extend(validate_dirac013_evidence(load(EVIDENCE_013)))
+    errors.extend(validate_dirac016_evidence(load(EVIDENCE_016)))
+    errors.extend(validate_dirac017_evidence(load(EVIDENCE_017)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:

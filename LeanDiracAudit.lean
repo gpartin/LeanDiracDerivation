@@ -64,6 +64,8 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.cube_quarter_turn_preserves_density
 #print axioms LeanDirac.cube_quarter_turn_four
 #print axioms LeanDirac.cube_quarter_turn_eight
+#print axioms LeanDirac.cube_quarter_turn_hamiltonian_covariance
+#print axioms LeanDirac.cube_continuous_turn_hamiltonian_covariance
 #print axioms LeanDirac.dirac017_closed_spin_half_representation
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016

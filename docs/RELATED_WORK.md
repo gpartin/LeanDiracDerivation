@@ -52,7 +52,8 @@ operators already derived earlier in that chain. Lean then verifies that:
 - a `2π` rotation gives a sign reversal and a `4π` rotation returns the
   state; and
 - the same rotations commute with the mass grading and act covariantly on the
-  full interpreted mass-plus-transport Hamiltonian.
+  interpreted mass-plus-transport Hamiltonian under the proved quarter-turn
+  and all-angle rotations.
 
 Those exact definitions, proofs, and their integration into the transitive
 LFM action-to-Dirac certificate are the project-specific formal contribution.

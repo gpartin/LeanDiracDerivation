@@ -91,6 +91,28 @@ def main() -> int:
     incomplete_013["checks"].pop("dirac_current_identity_reconstructed")
     if not guard.validate_dirac013_evidence(incomplete_013):
         raise AssertionError("incomplete DIRAC-013 checks were accepted")
+    payload_016 = guard.load(guard.EVIDENCE_016)
+    if guard.validate_dirac016_evidence(payload_016):
+        raise AssertionError("passing DIRAC-016 evidence was rejected")
+    broken_016 = copy.deepcopy(payload_016)
+    broken_016["checks"]["signed_incidence_preserves_copy"] = False
+    if not guard.validate_dirac016_evidence(broken_016):
+        raise AssertionError("failed DIRAC-016 copy check was accepted")
+    nonfinite_016 = copy.deepcopy(payload_016)
+    nonfinite_016["errors"]["minus_to_plus"] = math.nan
+    if not guard.validate_dirac016_evidence(nonfinite_016):
+        raise AssertionError("non-finite DIRAC-016 evidence was accepted")
+    payload_017 = guard.load(guard.EVIDENCE_017)
+    if guard.validate_dirac017_evidence(payload_017):
+        raise AssertionError("passing DIRAC-017 evidence was rejected")
+    broken_017 = copy.deepcopy(payload_017)
+    broken_017["checks"]["continuous_hamiltonian_covariance_reconstructed"] = False
+    if not guard.validate_dirac017_evidence(broken_017):
+        raise AssertionError("failed DIRAC-017 covariance was accepted")
+    nonfinite_017 = copy.deepcopy(payload_017)
+    nonfinite_017["max_error"] = math.inf
+    if not guard.validate_dirac017_evidence(nonfinite_017):
+        raise AssertionError("non-finite DIRAC-017 evidence was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

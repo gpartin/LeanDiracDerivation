@@ -2,9 +2,6 @@ import LeanDirac.C19Geometry
 
 namespace LeanDirac
 
-set_option maxHeartbeats 4000000
-set_option maxRecDepth 4000
-
 /-! Explicit eight-corner tetrahedral geometry used by the prepared state. -/
 
 noncomputable section
@@ -82,6 +79,7 @@ theorem tetra_corner_density_one (corner : CubeCorner) :
       sqrt_three_pow_five, sqrt_three_pow_six, sqrt_three_pow_eight,
       sqrt_two_pow_four]
 
+set_option maxHeartbeats 800000 in
 theorem all_face_products_negative :
     faceProduct 0 2 3 1 = (-1/9 : ℂ) ∧
     faceProduct 4 6 7 5 = (-1/9 : ℂ) ∧

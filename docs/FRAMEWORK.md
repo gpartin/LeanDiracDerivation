@@ -8,16 +8,16 @@ model is canonical LFM or uniquely selected by deeper physics.
 
 At every cubic-lattice site i there are exactly two native field families:
 
-[
+\[
 \Psi_i\in\mathbb C^3,\qquad \chi_i\in\mathbb C^3.
-]
+\]
 
 The fixed constants are
 
-[
+\[
 \chi_0=19,\qquad \kappa=\frac1{63},\qquad
 B=\frac{\chi_0}{\kappa}=1197.
-]
+\]
 
 C19 contains six face neighbors of weight 2 and twelve edge neighbors of
 weight 1. There is no independent link, spinor, projector, matrix, track, or
@@ -25,33 +25,33 @@ gauge register.
 
 Define
 
-[
+\[
 \rho_{\Psi,i}=\Psi_i^\dagger\Psi_i,\qquad
 \rho_{\chi,i}=\chi_i^\dagger\chi_i,\qquad
 W_i=\chi_i\wedge\Psi_i.
-]
+\]
 
 ## Action
 
 The Lagrangian is L=T-U, with
 
-[
+\[
 T=\frac12\sum_i\lVert\dot\Psi_i\rVert^2+
 \frac B2\sum_i\lVert\dot\chi_i\rVert^2,
-]
+\]
 
-[
+\[
 U_{\rm local}=\sum_i\left[
 \frac14(\rho_{\chi,i}-\chi_0^2)^2+
 \frac12\rho_{\chi,i}\rho_{\Psi,i}+
 \frac14\rho_{\Psi,i}^2\right],
-]
+\]
 
-[
+\[
 U_{\rm area}=\sum_{i,n\in C19}
 \frac{w_n}{2\chi_0^2}\lVert W_{i+n}-W_i\rVert^2,
 \qquad U=U_{\rm local}+U_{\rm area}.
-]
+\]
 
 No shape-holding, signed-incidence, gamma, beta, or Dirac term appears in the
 native action.
@@ -60,16 +60,16 @@ native action.
 
 Both equations are variations of the single action:
 
-[
+\[
 \ddot\Psi_i=-\frac{\delta U}{\delta\Psi_i^\dagger},\qquad
 B\ddot\chi_i=-\frac{\delta U}{\delta\chi_i^\dagger}.
-]
+\]
 
 The formal native time map is the synchronous centered recurrence
 
-[
+\[
 q_i^{n+1}=2q_i^n-q_i^{n-1}+\Delta t^2 a_i(q^n).
-]
+\]
 
 Lean proves the reciprocal variations and the discrete-action update.
 
@@ -128,7 +128,9 @@ product and both copies. Covariance and unitarity uniquely characterize its
 positive coefficients within the native scalar-plus-plane rotor family.
 Continuous rotations compose, give a sign change at `2π`, return at `4π`,
 intertwine with conventional four-component spin on both copies, commute with
-the mass grading, and rotate the complete interpreted Hamiltonian covariantly.
+the mass grading, and rotate the complete interpreted Hamiltonian covariantly
+for every real angle. The corresponding quarter-turn identity is also proved
+directly.
 No spin matrix, half-angle rule, action term, or runtime projection is added.
 The result is a conditional spin-one-half representation theorem for the
 derived continuum sector, not a claim that native dynamics rotates a

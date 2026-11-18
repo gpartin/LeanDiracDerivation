@@ -22,7 +22,7 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-014 | PASS | Audits the complete dependency graph, proof foundations, numerical evidence, manifests, and claim boundary with zero critical/high findings. | Clean reproduction. |
 | DIRAC-015 | PASS | States one cumulative action-to-Klein--Gordon-to-Dirac continuum theorem and deterministically reproduces/packages the complete chain from a clean checkout. | Publication decision. |
 | DIRAC-016 | PASS | Derives the exact transformation of both retained rank-four copies under the existing unsigned cube translations: one direction exchanges them, the induced coordinate map is unique, density is preserved, and two translations return. It separately proves that the signed incidence readout preserves each copy. | Test whether a localized native moving state dynamically alternates copies. |
-| DIRAC-017 | PASS (conditional representation) | Derives the nontrivial spin normalization from the native cube commutator; intertwines both copies with conventional four-component spin; proves the explicit spectrum, positive inner product, continuous unitary rotations, uniquely characterized quarter-turn, mass-grading compatibility, and full interpreted-Hamiltonian covariance. | Test whether unrestricted native dynamics realizes this representation on a localized stable carrier; derive electromagnetic coupling separately. |
+| DIRAC-017 | PASS (conditional representation) | Derives the nontrivial spin normalization from the native cube commutator; intertwines both copies with conventional four-component spin; proves the explicit spectrum, positive inner product, continuous unitary rotations, uniquely characterized quarter-turn, mass-grading compatibility, and both quarter-turn and all-angle interpreted-Hamiltonian covariance. | Test whether unrestricted native dynamics selects and realizes this representation on a localized stable carrier; derive electromagnetic coupling separately. |
 
 ## Current theorem boundary
 
@@ -41,8 +41,9 @@ native timestep or with the motion of a localized carrier. DIRAC-017 proves
 that the same signed cube-incidence algebra carries a spin-one-half rotation
 representation without inserting a spin matrix or half-angle rule. The exact
 standard-spin intertwiner, component spectrum, continuous unitary rotations,
-mass grading and interpreted Hamiltonian covariance are all part of the
-certificate. It does not prove that unrestricted native time evolution makes
+mass grading, and quarter-turn plus all-angle interpreted-Hamiltonian
+covariance are all part of the certificate. It does not prove that
+unrestricted native time evolution selects this square-root orientation or makes
 a localized stable carrier realize that representation, nor
 does it derive electromagnetic coupling or a magnetic `g` factor. This does not
 prove uniqueness, exact finite-lattice Dirac

@@ -80,8 +80,9 @@
 - Continuous rotations compose and are unitary, change sign at `2π`, and
   return at `4π`; they intertwine with the conventional representation on
   both copies.
-- The mass grading commutes with these rotations, and the complete interpreted
-  mass-plus-three-direction transport Hamiltonian rotates covariantly.
+- The mass grading commutes with these rotations. Lean proves the interpreted
+  mass-plus-three-direction transport Hamiltonian covariance both for the
+  native quarter-turn and for every real rotation angle.
 
 ## Not established
 
@@ -101,6 +102,8 @@
 - Electromagnetic minimal coupling, magnetic moment, or a derived `g` factor.
 - A physical electron, charge, localization, or formation.
 - Canonical LFM status or uniqueness of the action or square-root orientation.
+- A dynamical theorem selecting the cubical square-root orientation from all
+  admissible factorizations.
 
 The theorem uses a conditional prepared background; it does not provide an
 origin story. The chosen action and cubical square root are not uniquely

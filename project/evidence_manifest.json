@@ -2,12 +2,14 @@
   "schema_version": "2.1.0",
   "role": "independent-evidence",
   "action_id": "DIRAC002_COMPLEX_CHI_BASE_C19_V3",
-  "numerical_evidence": "experiments/dirac013_density_current/result.json",
+  "numerical_evidence": "experiments/dirac017_spin_half/result.json",
   "cumulative_numerical_evidence": [
     "experiments/dirac010_standard_map/result.json",
     "experiments/dirac011_frequency_mass/result.json",
     "experiments/dirac012_continuum_evolution/result.json",
-    "experiments/dirac013_density_current/result.json"
+    "experiments/dirac013_density_current/result.json",
+    "experiments/dirac016_copy_translation/result.json",
+    "experiments/dirac017_spin_half/result.json"
   ],
   "environment": {
     "python": "3.14.0",
@@ -22,6 +24,10 @@
     "experiments/dirac012_continuum_evolution/result.json": "0d594f160483f373d8a1efc9f717b22fcc86f581e86952bfe2ef28f8dbaaec1f",
     "experiments/dirac012_continuum_evolution/validate_dirac012.py": "67822f03f8ec15d3e5c6491237c0e0a23b1d4d03dd48546791d8416ca9f5db13",
     "experiments/dirac013_density_current/result.json": "73fb1f5f6332d7f1f6ef896bebc374facfe1fa9979f800f4ae3ca89ca3f59108",
-    "experiments/dirac013_density_current/validate_dirac013.py": "ff743ad34a205e8cb42433d61864f03e18fc42af6975f698f92fcad94ea432af"
+    "experiments/dirac013_density_current/validate_dirac013.py": "ff743ad34a205e8cb42433d61864f03e18fc42af6975f698f92fcad94ea432af",
+    "experiments/dirac016_copy_translation/result.json": "082c08b0c61a2df9e0ef2bd355798fc5efe94838c177ca3af54ae594180a6c28",
+    "experiments/dirac016_copy_translation/validate_dirac016.py": "1693c70bd20a910a837f31c45b0aaa75135f1b9172cfdf19174ff4260e48e7c2",
+    "experiments/dirac017_spin_half/result.json": "eb05d2d004f005338e8f308183782f44f23935ed25c1fb2e3b5068120cf9d894",
+    "experiments/dirac017_spin_half/validate_dirac017.py": "8cf68dde68f86836e437934c23abc647630e484da6d9fe890f2205c88de4b144"
   }
 }

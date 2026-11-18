@@ -30,6 +30,10 @@ EVIDENCE_FILES = [
     "experiments/dirac012_continuum_evolution/result.json",
     "experiments/dirac013_density_current/validate_dirac013.py",
     "experiments/dirac013_density_current/result.json",
+    "experiments/dirac016_copy_translation/validate_dirac016.py",
+    "experiments/dirac016_copy_translation/result.json",
+    "experiments/dirac017_spin_half/validate_dirac017.py",
+    "experiments/dirac017_spin_half/result.json",
 ]
 
 RELEASE_FILES = [
@@ -48,6 +52,8 @@ RELEASE_FILES = [
     "docs/PROOF_CHAIN.md",
     "docs/RELATED_WORK.md",
     "docs/REPRODUCIBILITY.md",
+    "docs/SUBMISSION_TRACKER.md",
+    "docs/WORLD_CLASS_AUDIT.md",
     "lake-manifest.json",
     "lakefile.lean",
     "lean-toolchain",
@@ -60,6 +66,7 @@ RELEASE_FILES = [
     "project/dirac015_clean_reproduction_status.json",
     "project/dirac016_copy_translation_status.json",
     "project/dirac017_spin_half_representation_status.json",
+    "project/dirac017_release_readiness_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -68,6 +75,7 @@ RELEASE_FILES = [
     "scripts/final_chain_audit.py",
     "scripts/build_publication_package.py",
     "scripts/production_guard.py",
+    "scripts/publication_quality_audit.py",
     "scripts/update_manifests.py",
     "scripts/verify_release.py",
 ]
@@ -125,12 +133,14 @@ def main() -> int:
         "schema_version": "2.1.0",
         "role": "independent-evidence",
         "action_id": ACTION_ID,
-        "numerical_evidence": "experiments/dirac013_density_current/result.json",
+        "numerical_evidence": "experiments/dirac017_spin_half/result.json",
         "cumulative_numerical_evidence": [
             "experiments/dirac010_standard_map/result.json",
             "experiments/dirac011_frequency_mass/result.json",
             "experiments/dirac012_continuum_evolution/result.json",
             "experiments/dirac013_density_current/result.json",
+            "experiments/dirac016_copy_translation/result.json",
+            "experiments/dirac017_spin_half/result.json",
         ],
         "environment": {
             "python": platform.python_version(),

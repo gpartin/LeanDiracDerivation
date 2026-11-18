@@ -37,6 +37,12 @@ def main() -> int:
     evidence_013 = json.loads((
         ROOT / "experiments" / "dirac013_density_current" / "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_016 = json.loads((
+        ROOT / "experiments" / "dirac016_copy_translation" / "result.json"
+    ).read_text(encoding="utf-8"))
+    evidence_017 = json.loads((
+        ROOT / "experiments" / "dirac017_spin_half" / "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
         "highest_gate_is_017": status.get("highest_passed_gate") == "DIRAC-017",
         "all_seventeen_gates_complete": status.get("completed") == 17,
@@ -194,6 +200,9 @@ def main() -> int:
         "spin_hamiltonian_covariance_present": contains(
             "LeanDirac/Dirac017Closed.lean",
             "theorem cube_quarter_turn_hamiltonian_covariance"),
+        "continuous_spin_hamiltonian_covariance_present": contains(
+            "LeanDirac/Dirac017Closed.lean",
+            "theorem cube_continuous_turn_hamiltonian_covariance"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -209,6 +218,14 @@ def main() -> int:
             and evidence_013.get("max_error", 1.0) <= 2.0e-9
             and evidence_013.get("minimum_flux_refinement_ratio", 0.0) > 3.9
             and all(evidence_013.get("checks", {}).values())),
+        "independent_copy_translation_check_passes": (
+            evidence_016.get("status") == "PASS"
+            and evidence_016.get("max_error", 1.0) <= 1.0e-12
+            and all(evidence_016.get("checks", {}).values())),
+        "independent_spin_representation_check_passes": (
+            evidence_017.get("status") == "PASS"
+            and evidence_017.get("max_error", 1.0) <= 2.0e-12
+            and all(evidence_017.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")

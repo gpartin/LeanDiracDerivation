@@ -1,17 +1,26 @@
 name: Independent evidence
 
+permissions:
+  contents: read
+
 on:
   push:
   pull_request:
 
+concurrency:
+  group: evidence-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   reproduce-admitted-evidence:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
+          cache: pip
       - run: pip install -r requirements.txt
       - name: Reproduce DIRAC-010 matrix map
         run: python experiments/dirac010_standard_map/validate_dirac010.py
@@ -21,13 +30,19 @@ jobs:
         run: python experiments/dirac012_continuum_evolution/validate_dirac012.py
       - name: Reproduce DIRAC-013 density and current
         run: python experiments/dirac013_density_current/validate_dirac013.py
+      - name: Reproduce DIRAC-016 copy translation
+        run: python experiments/dirac016_copy_translation/validate_dirac016.py
+      - name: Reproduce DIRAC-017 cubical spin representation
+        run: python experiments/dirac017_spin_half/validate_dirac017.py
       - name: Validate evidence schema
         run: >-
           python -c "import json;
           from pathlib import Path;
-          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence, validate_dirac013_evidence;
+          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence, validate_dirac013_evidence, validate_dirac016_evidence, validate_dirac017_evidence;
           p10=json.loads(Path('experiments/dirac010_standard_map/result.json').read_text());
           p11=json.loads(Path('experiments/dirac011_frequency_mass/result.json').read_text());
           p12=json.loads(Path('experiments/dirac012_continuum_evolution/result.json').read_text());
           p13=json.loads(Path('experiments/dirac013_density_current/result.json').read_text());
-          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12)+validate_dirac013_evidence(p13); assert not e, e"
+          p16=json.loads(Path('experiments/dirac016_copy_translation/result.json').read_text());
+          p17=json.loads(Path('experiments/dirac017_spin_half/result.json').read_text());
+          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12)+validate_dirac013_evidence(p13)+validate_dirac016_evidence(p16)+validate_dirac017_evidence(p17); assert not e, e"

@@ -1,9 +1,8 @@
 import LeanDirac.Dirac012Branch
 
-namespace LeanDirac
+set_option maxHeartbeats 800000
 
-set_option maxHeartbeats 4000000
-set_option maxRecDepth 4000
+namespace LeanDirac
 
 /-!
 # DIRAC-013: action-derived density, bond flow, and current limit

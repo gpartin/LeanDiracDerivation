@@ -24,13 +24,19 @@ def main() -> int:
     proof = load("project/proof_manifest.json")
     copy_status = load("project/dirac016_copy_translation_status.json")
     spin_status = load("project/dirac017_spin_half_representation_status.json")
+    readiness = load("project/dirac017_release_readiness_status.json")
     boundary = status.get("claim_boundary", "").lower()
 
     checks = {
-        "all_seventeen_gates_pass": (
+        "all_seventeen_gates_have_honest_passing_status": (
             status.get("completed") == 17
             and status.get("highest_passed_gate") == "DIRAC-017"
-            and all(value == "PASS" for value in status.get("gates", {}).values())
+            and all(
+                value == "PASS" for gate, value in status.get("gates", {}).items()
+                if gate != "DIRAC-017"
+            )
+            and status.get("gates", {}).get("DIRAC-017") ==
+                "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
         ),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
@@ -39,6 +45,7 @@ def main() -> int:
         ),
         "audit_gate_passes": audit.get("status") == "PASS",
         "clean_reproduction_gate_passes": reproduction.get("status") == "PASS",
+        "current_release_readiness_passes": readiness.get("status") == "PASS",
         "final_theorem_is_action_rooted": (
             proof.get("highest_gate") == "DIRAC-017"
             and "LeanDirac/Dirac015.lean" in proof.get("files", {})
@@ -85,7 +92,9 @@ def main() -> int:
             and spin_status.get("red_team", {}).get(
                 "assumed_half_angle") is False
             and spin_status.get("red_team", {}).get(
-                "full_hamiltonian_covariance_proved") is True
+                "continuous_hamiltonian_covariance_proved") is True
+            and spin_status.get("red_team", {}).get(
+                "quarter_turn_hamiltonian_covariance_proved") is True
             and spin_status.get("red_team", {}).get(
                 "quarter_turn_uniquely_characterized") is True
             and spin_status.get("red_team", {}).get(

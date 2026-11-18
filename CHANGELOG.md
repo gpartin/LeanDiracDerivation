@@ -1,5 +1,26 @@
 # Changelog
 
+## Publication-quality repair (unreleased)
+
+- Added a formal all-angle interpreted-Hamiltonian covariance theorem to close
+  the gap between the documented continuous rotation claim and the prior
+  quarter-turn-only covariance proof.
+- Added independent DIRAC-016 and DIRAC-017 matrix reconstructions and
+  fail-closed schema validation for both evidence bundles.
+- Corrected machine status so DIRAC-017 remains explicitly conditional rather
+  than being flattened to a generic `PASS`.
+- Corrected the release workflow to package the DIRAC-017 archive, fail when
+  artifacts are absent, pin actions by immutable commit, and embed exact Git
+  provenance inside the archive.
+- Replaced the Mathlib umbrella import with targeted imports, removed every
+  recursion-depth override, and reduced heartbeat overrides from nine global
+  four-million budgets to the smaller budgets actually required by the
+  expensive proofs.
+- Separated the historical DIRAC-015 package record from current DIRAC-017
+  release readiness and synchronized citation, archive, tracker, claims, and
+  reproducibility metadata.
+- Removed the unused PyTorch dependency and added a publication-quality audit.
+
 ## DIRAC-017 (unreleased)
 
 - Constructed all three rotation generators only from the existing signed
@@ -15,8 +36,9 @@
   return, and exact standard-basis intertwiners on both copies.
 - Proved covariance and unitarity uniquely characterize the positive native
   quarter-turn coefficients inside the scalar-plus-plane rotor family.
-- Proved mass-grading compatibility and covariance of the complete interpreted
-  mass-plus-three-direction transport Hamiltonian.
+- Proved mass-grading compatibility and both quarter-turn and all-angle
+  covariance of the complete interpreted mass-plus-three-direction transport
+  Hamiltonian.
 - Added explicit attribution to Teixeira's 2013 review and the foundational
   hypercubic lattice-fermion work of Becher--Joos and Rabin; no priority is
   claimed for the cell-based Clifford construction.
