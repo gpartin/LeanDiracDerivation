@@ -1,8 +1,8 @@
 {
   "schema_version": "1.4.0",
-  "gate": "DIRAC-018",
+  "gate": "DIRAC-019",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac018 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac019 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -47,7 +47,11 @@
     "Added formal negative-orientation and reflected-axis controls showing that orientation and cubic covariance are necessary hypotheses, not decorative assumptions.",
     "Proved the two rank-four flavor sectors exhaust the eight-corner space and intersect only at zero.",
     "Proved the exact C19 scalar symbol has only the origin zero inside the first Brillouin zone, while explicitly excluding an exact finite-spacing first-order factorization and a universal doubling theorem.",
-    "Independently reconstructed the commutant, square identities, two-copy census and periodic-zone zero counts without adding any native field or action term."
+    "Independently reconstructed the commutant, square identities, two-copy census and periodic-zone zero counts without adding any native field or action term.",
+    "Derived all-update positive-frequency phase evolution and finite-family spectral-density conservation from the existing centered recurrence rather than inserting a translation law.",
+    "Constructed an explicit nonzero positive-frequency eigenmode at every momentum so the transport theorem cannot pass vacuously.",
+    "Derived finite-family movement from the already-proved Hamiltonian current/group-velocity identity, proved strict massive subluminality, and independently reproduced a refining Fourier-packet diagnostic.",
+    "Kept coherent real-space Lean formalization, finite-time uniform error, native sector selection and nonlinear localized-electron motion explicitly open."
   ],
   "declared_starting_hypotheses": [
     "the noncanonical positive two-field local-plus-exterior-area C19 action",
@@ -65,6 +69,7 @@
   ],
   "remaining_open_claims": [
     "exact finite-lattice or nonlinear live-chi Dirac evolution",
+    "coherent real-space Fourier/Parseval packet formalization and a uniform finite-time error bound",
     "positive density for arbitrary mixed-frequency native data",
     "exact finite-lattice or nonlinear live-chi Dirac current",
     "native time evolution implementing one copy exchange per translation step",
@@ -77,5 +82,5 @@
     "electromagnetic coupling and magnetic g-factor",
     "physical electron identity"
   ],
-  "caveat": "DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. DIRAC-016 proves an exact copy exchange under unsigned microscopic cube translation, but not dynamical copy-alternating motion. DIRAC-017 proves that the same native cube-incidence algebra carries a conditional spin-one-half representation. DIRAC-018 closes the prior orientation/uniqueness hole only within the explicitly stated real, local, first-order, flavor-preserving cubical-incidence coefficient class: cubic covariance, exact continuum scalar squaring and the upstream positive mass/current orientation force the canonical root independently on each rank-four copy. It does not classify arbitrary nonlocal or flavor-mixing roots, supply an exact finite-spacing factorization of the full C19 symbol, settle every doubling theorem, prove localized-carrier dynamics, establish electromagnetic coupling or g-factor, establish a physical electron, or promote canonical LFM status."
+  "caveat": "DIRAC-015 proves a conditional free-Dirac continuum sector and its admitted density/current limit. DIRAC-016 proves an exact copy exchange under unsigned microscopic cube translation, but not dynamical copy-alternating motion. DIRAC-017 proves a conditional cubical spin-one-half representation. DIRAC-018 closes the orientation/classification hole only inside its stated coefficient class. DIRAC-019 proves sustained stable positive-frequency spectral evolution and current/group-velocity transport for finite mode families, but not a coherent spatial theorem in Lean, nonlinear live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
 }

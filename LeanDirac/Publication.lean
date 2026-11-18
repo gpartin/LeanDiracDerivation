@@ -1,9 +1,9 @@
-import LeanDirac.Dirac018
+import LeanDirac.Dirac019
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-018.
+Sole cumulative publication root through DIRAC-019.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -53,6 +53,16 @@ and reflected-axis controls show that the selection and symmetry hypotheses
 are necessary. This is not a classification of arbitrary nonlocal or
 flavor-mixing roots, nor a theorem about an exact finite-spacing Dirac
 operator or a localized electron.
+
+DIRAC-019 constructs a nonzero positive-frequency mode at every momentum and
+lifts that branch to arbitrary finite spectral families. Stable evolution on
+the recurrence-derived continuum branch preserves every mode's
+density for every update count, and the summed four-component current remains
+exactly the density-weighted group-velocity moment at every update. Every massive mode is strictly
+subluminal, and the finite-family recurrence generator converges to the same
+Dirac generator. This is a finite spectral transport theorem, not yet a
+real-space localization theorem, finite-time uniform error estimate, or
+nonlinear physical-electron transport claim.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -101,9 +111,21 @@ theorem current_highest_gate_is_dirac018 :
   nativeCubicalFactorizationClassification :=
     dirac018_native_factorization_classification
 
+structure CumulativeDirac019Certificate : Prop where
+  completedChainThroughFactorization : CumulativeDirac018Certificate
+  finitePositiveFrequencyPacketTransport :
+    Dirac019FinitePacketTransportCertificate
+
+theorem current_highest_gate_is_dirac019 :
+    CumulativeDirac019Certificate where
+  completedChainThroughFactorization := current_highest_gate_is_dirac018
+  finitePositiveFrequencyPacketTransport :=
+    dirac019_finite_packet_transport
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
 #print axioms LeanDirac.current_highest_gate_is_dirac018
+#print axioms LeanDirac.current_highest_gate_is_dirac019

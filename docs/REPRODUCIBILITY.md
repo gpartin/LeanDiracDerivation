@@ -101,6 +101,18 @@ from size 2 through 32. It tests the stated local flavor-preserving coefficient
 class; it is not evidence for arbitrary-root uniqueness, an exact finite-
 spacing Dirac factorization, a universal doubling theorem, or an electron.
 
+## Independent DIRAC-019 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac019_wavepacket_transport/validate_dirac019.py
+```
+
+The program reconstructs stable all-step modal density conservation, the
+density-weighted current/group-velocity identity, strict massive speed bound,
+and generator refinement. It also Fourier-synthesizes a narrow linear packet
+as a diagnostic and checks its velocity convergence without inserting a
+translation rule. This is not a nonlinear localized-electron simulation.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -108,11 +120,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 18-gate dependency and claim boundary.
+The first command verifies the complete 19-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-018.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-019.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

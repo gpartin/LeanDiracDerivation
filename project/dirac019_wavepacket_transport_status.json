@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-019",
+  "status": "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT",
+  "formal_theorem": "LeanDirac.dirac019_finite_packet_transport",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac019",
+  "action_changed": false,
+  "proved": [
+    "an explicit nonzero positive-frequency mode exists at every continuum momentum, so the transport sector is not vacuous",
+    "the recurrence-derived continuum branch advances every admitted positive-frequency mode by its unit phase",
+    "every stable positive-frequency mode preserves four-component density for every integer update count",
+    "every finite family of such modes preserves total spectral density for every integer update count",
+    "the summed Dirac current of the finite mode family equals its density-weighted group-velocity moment",
+    "the same density-weighted current persists exactly for every stable integer update count",
+    "every massive continuum mode has speed strictly below the C19 limiting speed",
+    "the complete finite-mode recurrence generator converges componentwise to the previously derived Dirac generator as the timestep tends to zero"
+  ],
+  "independent_evidence": "experiments/dirac019_wavepacket_transport/result.json",
+  "not_proved": [
+    "a coherent real-space Fourier/Parseval packet theorem in Lean",
+    "a uniform finite-time continuum error bound",
+    "exact native finite-spacing packet evolution",
+    "a localized nonlinear electron or unrestricted live-chi transport",
+    "native preparation or selection of the positive-frequency sector",
+    "electromagnetic force response or electron identity"
+  ],
+  "red_team": {
+    "new_action_term": false,
+    "new_native_field": false,
+    "runtime_translation_rule": false,
+    "positive_frequency_is_an_explicit_hypothesis": true,
+    "stable_timestep_is_an_explicit_hypothesis": true,
+    "mode_family_is_not_mislabeled_as_a_localized_electron": true,
+    "exact_native_finite_spacing_motion_is_not_claimed": true,
+    "positive_frequency_sector_is_formally_nonvacuous": true,
+    "all_update_counts_proved": true,
+    "all_update_current_persistence_proved": true,
+    "negative_frequency_control_rejected": true,
+    "unstable_timestep_control_rejected": true,
+    "critical_findings": [],
+    "high_findings": []
+  }
+}
