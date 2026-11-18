@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-021. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-022. -/
 
 #audit_lean_dirac_environment
 
@@ -104,6 +104,17 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.negative_rest_phase_returns_after_native_clock
 #print axioms LeanDirac.rest_branch_coherence_returns_after_native_beat_period
 #print axioms LeanDirac.dirac021_action_derived_rest_clock
+#print axioms LeanDirac.coherent_rest_state_is_proved_phase_superposition
+#print axioms LeanDirac.coherent_rest_state_density_one
+#print axioms LeanDirac.rest_velocity_is_existing_hamiltonian_momentum_response
+#print axioms LeanDirac.rest_hamiltonian_velocity_anticommute
+#print axioms LeanDirac.coherent_rest_velocity_cross_term
+#print axioms LeanDirac.native_zitter_position_has_velocity_derivative
+#print axioms LeanDirac.native_zitter_position_bound
+#print axioms LeanDirac.same_sign_rest_control_has_zero_current
+#print axioms LeanDirac.incoherent_rest_mixture_has_zero_current
+#print axioms LeanDirac.parametric_rest_velocity_tracks_supplied_mass
+#print axioms LeanDirac.dirac022_action_derived_zitterbewegung
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
@@ -111,3 +122,4 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.current_highest_gate_is_dirac019
 #print axioms LeanDirac.current_highest_gate_is_dirac020
 #print axioms LeanDirac.current_highest_gate_is_dirac021
+#print axioms LeanDirac.current_highest_gate_is_dirac022

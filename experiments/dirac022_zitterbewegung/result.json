@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "tolerance": 2e-11,
+  "max_error": 1.7763568394002505e-15,
+  "native_values": {
+    "action_selected_mass": 19.0,
+    "zitter_angular_frequency": 38.0,
+    "c19_continuum_speed": 3.4641016151377544,
+    "zitter_position_amplitude": 0.09116056881941459,
+    "zitter_peak_to_peak_excursion": 0.18232113763882918,
+    "native_reduced_compton_length": 0.18232113763882918
+  },
+  "errors": {
+    "state_normalization": 7.771561172376096e-16,
+    "velocity_from_hamiltonian_momentum_derivative": 0.0,
+    "rest_hamiltonian_velocity_anticommutator": 0.0,
+    "positive_branch_current": 0.0,
+    "negative_branch_current": 0.0,
+    "coherent_velocity_law": 1.7763568394002505e-15,
+    "position_derivative_law": 0.0,
+    "amplitude_identity": 0.0,
+    "peak_to_peak_identity": 0.0,
+    "position_bound": 0.0,
+    "same_sign_current": 0.0,
+    "incoherent_mixture_current": 0.0
+  },
+  "checks": {
+    "all_evidence_is_finite": true,
+    "normalized_cross_branch_state": true,
+    "velocity_is_hamiltonian_momentum_response": true,
+    "rest_velocity_anticommutes_with_rest_hamiltonian": true,
+    "pure_rest_branches_have_zero_velocity": true,
+    "coherent_velocity_frequency_is_two_chi0": true,
+    "position_derivative_equals_velocity": true,
+    "position_amplitude_is_half_reduced_compton_length": true,
+    "same_sign_control_has_no_signal": true,
+    "incoherent_mixture_has_no_signal": true,
+    "wrong_mass_control_is_rejected": true
+  },
+  "negative_controls": {
+    "wrong_mass": 18.0,
+    "wrong_mass_max_signal_mismatch": 5.553453516856244,
+    "same_sign_max_current": 0.0,
+    "incoherent_mixture_current": 0.0
+  },
+  "claim": "independent reconstruction of the free-continuum zitterbewegung velocity and position expectation for a coherent superposition of the action-derived positive and negative rest branches",
+  "excluded_claims": [
+    "a localized nonlinear native lattice electron",
+    "measured trembling of a physical electron",
+    "an SI frequency or SI length",
+    "electromagnetic response or magnetic g-factor",
+    "zitterbewegung in a pure branch or incoherent mixture"
+  ]
+}

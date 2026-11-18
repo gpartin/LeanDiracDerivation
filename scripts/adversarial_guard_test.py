@@ -225,6 +225,35 @@ def main() -> int:
     )
     if not guard.validate_dirac021_evidence(inflated_claim_021):
         raise AssertionError("inflated DIRAC-021 claim boundary was accepted")
+    payload_022 = guard.load(guard.EVIDENCE_022)
+    if guard.validate_dirac022_evidence(payload_022):
+        raise AssertionError("passing DIRAC-022 evidence was rejected")
+    inserted_frequency_022 = copy.deepcopy(payload_022)
+    inserted_frequency_022["native_values"]["zitter_angular_frequency"] = 19.0
+    if not guard.validate_dirac022_evidence(inserted_frequency_022):
+        raise AssertionError("failed DIRAC-022 doubled frequency was accepted")
+    broken_velocity_origin_022 = copy.deepcopy(payload_022)
+    broken_velocity_origin_022["checks"][
+        "velocity_is_hamiltonian_momentum_response"
+    ] = False
+    if not guard.validate_dirac022_evidence(broken_velocity_origin_022):
+        raise AssertionError("inserted DIRAC-022 velocity was accepted")
+    nonfinite_022 = copy.deepcopy(payload_022)
+    nonfinite_022["errors"]["coherent_velocity_law"] = math.nan
+    if not guard.validate_dirac022_evidence(nonfinite_022):
+        raise AssertionError("non-finite DIRAC-022 evidence was accepted")
+    broken_incoherent_control_022 = copy.deepcopy(payload_022)
+    broken_incoherent_control_022["negative_controls"][
+        "incoherent_mixture_current"
+    ] = 1.0
+    if not guard.validate_dirac022_evidence(broken_incoherent_control_022):
+        raise AssertionError("failed DIRAC-022 incoherent control was accepted")
+    inflated_claim_022 = copy.deepcopy(payload_022)
+    inflated_claim_022["excluded_claims"].remove(
+        "a localized nonlinear native lattice electron"
+    )
+    if not guard.validate_dirac022_evidence(inflated_claim_022):
+        raise AssertionError("inflated DIRAC-022 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

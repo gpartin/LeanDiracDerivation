@@ -285,5 +285,30 @@
       "electromagnetic coupling or magnetic g-factor",
       "nonlinear localized-electron dynamics"
     ]
+  },
+  "dirac022_mandatory_gates": {
+    "status": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG",
+    "formal": [
+      "same action and transitive DIRAC-021 derivation",
+      "velocity observable is the DIRAC-013 Hamiltonian momentum derivative",
+      "normalized coherent positive and negative rest-branch state",
+      "pure rest branches have zero velocity expectation",
+      "coherent velocity expectation has frequency two chi0",
+      "position law differentiates to the proved velocity expectation",
+      "position amplitude is half the native reduced Compton length",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "matrix Hamiltonian, velocity, coherent current and position reconstruct within tolerance",
+      "pure-branch, same-sign and incoherent-mixture controls have zero signal",
+      "wrong-mass control does not reproduce the action-selected signal"
+    ],
+    "excluded_claims": [
+      "a localized nonlinear native lattice electron",
+      "measured trembling of a physical electron",
+      "an SI frequency or SI length",
+      "electromagnetic response or magnetic g-factor",
+      "zitterbewegung in a pure branch or incoherent mixture"
+    ]
   }
 }

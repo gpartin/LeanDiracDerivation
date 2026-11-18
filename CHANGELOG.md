@@ -1,6 +1,19 @@
 # Changelog
 
-## DIRAC-021 (unreleased)
+## DIRAC-022 (unreleased)
+
+- Derived the free-continuum zitterbewegung velocity expectation from the
+  existing Hamiltonian momentum-response operator and the DIRAC-021 rest
+  branches, with no native action or equation change.
+- Proved the normalized coherent state, exact native frequency `38`, position
+  amplitude `sqrt(12)/38`, and peak-to-peak reduced Compton length
+  `sqrt(12)/19`.
+- Added pure-branch, same-sign, incoherent-mixture and wrong-mass controls,
+  independent reconstruction, full-chain audits and deterministic packaging.
+- Kept localized native-electron trembling, SI calibration and electromagnetic
+  response explicitly outside the claim.
+
+## DIRAC-021
 
 - Proved that the zero-momentum frequency of the previously derived
   four-component continuum Hamiltonian equals the action-selected native rest

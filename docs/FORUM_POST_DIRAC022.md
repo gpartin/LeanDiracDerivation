@@ -1,0 +1,5 @@
+DIRAC-022 now passes in our public Lean LFM-to-Dirac chain.
+
+This gate proves the free Dirac “trembling-motion” observable without adding a new rule. The velocity was already derived from how the Hamiltonian changes with momentum, and DIRAC-021 already supplied the opposite positive/negative rest phases. When those two branches are combined coherently and normalized, Lean proves that the velocity oscillates at twice the action-derived rest frequency: `2×19=38` in native units. Integrating that velocity gives position amplitude `√12/38`; the full peak-to-peak excursion is `√12/19`, exactly the native reduced Compton length.
+
+The controls matter: either pure branch, a same-energy-sign superposition, or an incoherent mixture has zero signal, while a wrong mass gives the wrong frequency. The action, fields, C19 geometry, update and mass were not changed. This is a free-continuum expectation-value theorem—not yet a claim that a localized nonlinear lattice electron physically trembles. Next we should generalize the identity to finite momentum and then test the same observable on a localized native live-chi carrier.

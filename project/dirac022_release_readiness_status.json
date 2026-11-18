@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-022",
+  "highest_gate": "DIRAC-022",
+  "status": "PASS",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac022",
+  "package_artifacts": [
+    "LeanDiracDerivation-DIRAC-022.zip",
+    "LeanDiracDerivation-DIRAC-022.zip.sha256"
+  ],
+  "checks": [
+    "Lean module and cumulative publication theorem compile",
+    "axiom reports contain only propext, Classical.choice and Quot.sound",
+    "independent matrix reconstruction passes finite schema checks",
+    "pure-branch, same-sign, incoherent-mixture and wrong-mass controls pass",
+    "action, native fields, C19 geometry, recurrence and action-derived mass remain unchanged",
+    "claim boundary excludes localized native electron, SI and electromagnetic claims"
+  ],
+  "claim_boundary": "Release readiness certifies only the scoped free-continuum zitterbewegung expectation-value theorem."
+}

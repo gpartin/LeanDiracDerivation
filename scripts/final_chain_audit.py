@@ -1,4 +1,4 @@
-"""Final read-only adversarial audit for DIRAC-001 through DIRAC-021."""
+"""Final read-only adversarial audit for DIRAC-001 through DIRAC-022."""
 
 from __future__ import annotations
 
@@ -32,18 +32,19 @@ def main() -> int:
         "project/dirac020_coherent_spatial_transport_status.json"
     )
     clock_status = load("project/dirac021_rest_clock_status.json")
-    readiness = load("project/dirac021_release_readiness_status.json")
+    zitter_status = load("project/dirac022_zitterbewegung_status.json")
+    readiness = load("project/dirac022_release_readiness_status.json")
     boundary = status.get("claim_boundary", "").lower()
 
     checks = {
-        "all_twenty_one_gates_have_honest_passing_status": (
-            status.get("completed") == 21
-            and status.get("highest_passed_gate") == "DIRAC-021"
+        "all_twenty_two_gates_have_honest_passing_status": (
+            status.get("completed") == 22
+            and status.get("highest_passed_gate") == "DIRAC-022"
             and all(
                 value == "PASS" for gate, value in status.get("gates", {}).items()
                 if gate not in (
                     "DIRAC-017", "DIRAC-018", "DIRAC-019", "DIRAC-020",
-                    "DIRAC-021"
+                    "DIRAC-021", "DIRAC-022"
                 )
             )
             and status.get("gates", {}).get("DIRAC-017") ==
@@ -56,6 +57,8 @@ def main() -> int:
                 "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT"
             and status.get("gates", {}).get("DIRAC-021") ==
                 "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK"
+            and status.get("gates", {}).get("DIRAC-022") ==
+                "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG"
         ),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
@@ -66,7 +69,7 @@ def main() -> int:
         "clean_reproduction_gate_passes": reproduction.get("status") == "PASS",
         "current_release_readiness_passes": readiness.get("status") == "PASS",
         "final_theorem_is_action_rooted": (
-            proof.get("highest_gate") == "DIRAC-021"
+            proof.get("highest_gate") == "DIRAC-022"
             and "LeanDirac/Dirac015.lean" in proof.get("files", {})
             and "LeanDirac/Dirac016.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017.lean" in proof.get("files", {})
@@ -75,6 +78,7 @@ def main() -> int:
             and "LeanDirac/Dirac019.lean" in proof.get("files", {})
             and "LeanDirac/Dirac020.lean" in proof.get("files", {})
             and "LeanDirac/Dirac021.lean" in proof.get("files", {})
+            and "LeanDirac/Dirac022.lean" in proof.get("files", {})
             and "LeanDirac/Publication.lean" in proof.get("files", {})
             and all(audit.get("checks", {}).get(name) is True for name in (
                 "native_action_contains_no_dirac_matrix_spinor_or_projector",
@@ -86,7 +90,7 @@ def main() -> int:
         ),
         "publication_names_final_theorem": (
             proof.get("publication_theorem") ==
-                "LeanDirac.current_highest_gate_is_dirac021"
+                "LeanDirac.current_highest_gate_is_dirac022"
             and reproduction.get("formal_theorem") ==
                 "LeanDirac.lfm_free_dirac_continuum_limit"
             and reproduction.get("publication_theorem") ==
@@ -102,6 +106,8 @@ def main() -> int:
             and spatial_status.get("publication_theorem") ==
                 "LeanDirac.current_highest_gate_is_dirac020"
             and clock_status.get("publication_theorem") ==
+                "LeanDirac.current_highest_gate_is_dirac021"
+            and zitter_status.get("publication_theorem") ==
                 proof.get("publication_theorem")
         ),
         "copy_translation_extension_is_scoped": (
@@ -226,6 +232,22 @@ def main() -> int:
             and not clock_status.get("red_team", {}).get("critical_findings")
             and not clock_status.get("red_team", {}).get("high_findings")
         ),
+        "action_derived_zitterbewegung_is_scoped": (
+            zitter_status.get("status") ==
+                "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG"
+            and zitter_status.get("action_changed") is False
+            and zitter_status.get("native_field_changed") is False
+            and zitter_status.get("red_team", {}).get(
+                "velocity_is_inherited_from_hamiltonian_response") is True
+            and zitter_status.get("red_team", {}).get(
+                "factor_two_is_derived_from_opposite_rest_phases") is True
+            and zitter_status.get("red_team", {}).get(
+                "position_is_integral_of_proved_velocity") is True
+            and zitter_status.get("red_team", {}).get(
+                "localized_native_electron_is_not_claimed") is True
+            and not zitter_status.get("red_team", {}).get("critical_findings")
+            and not zitter_status.get("red_team", {}).get("high_findings")
+        ),
         "claim_boundary_is_retained": all(
             phrase in boundary for phrase in (
                 "conditional free-dirac continuum derivation",
@@ -242,8 +264,8 @@ def main() -> int:
 
     print(json.dumps({
         "checks": checks,
-        "verdict": "DIRAC_001_021_FINAL_AUDIT_PASS" if not errors
-            else "DIRAC_001_021_FINAL_AUDIT_FAIL",
+        "verdict": "DIRAC_001_022_FINAL_AUDIT_PASS" if not errors
+            else "DIRAC_001_022_FINAL_AUDIT_FAIL",
         "errors": errors,
     }, indent=2))
     return 1 if errors else 0

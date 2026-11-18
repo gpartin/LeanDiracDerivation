@@ -139,6 +139,18 @@ a same-sign control and confirms that either pure branch has constant density.
 It does not turn global phase into an observable, calibrate an SI mass, or
 establish zitterbewegung.
 
+## Independent DIRAC-022 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac022_zitterbewegung/validate_dirac022.py
+```
+
+The program reconstructs the rest Hamiltonian and its momentum-response
+velocity, the normalized coherent opposite-branch state, its `2 chi0`
+velocity expectation, the integrated position law and native amplitude.  It
+also runs pure-branch, same-sign, incoherent-mixture and wrong-mass controls.
+It does not simulate a localized nonlinear native electron.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -146,11 +158,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 21-gate dependency and claim boundary.
+The first command verifies the complete 22-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-021.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-022.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

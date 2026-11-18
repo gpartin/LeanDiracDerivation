@@ -2,10 +2,10 @@
   "schema_version": "1.4.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-021",
-  "next_gate": "DIRAC_ZITTERBEWEGUNG_VELOCITY_OBSERVABLE",
-  "completed": 21,
-  "total": 21,
+  "highest_passed_gate": "DIRAC-022",
+  "next_gate": "DIRAC_FINITE_MOMENTUM_ZITTERBEWEGUNG_AND_LOCALIZED_NATIVE_BRIDGE",
+  "completed": 22,
+  "total": 22,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
@@ -27,7 +27,8 @@
     "DIRAC-018": "LeanDirac/Dirac018.lean",
     "DIRAC-019": "LeanDirac/Dirac019.lean",
     "DIRAC-020": "LeanDirac/Dirac020.lean",
-    "DIRAC-021": "LeanDirac/Dirac021.lean"
+    "DIRAC-021": "LeanDirac/Dirac021.lean",
+    "DIRAC-022": "LeanDirac/Dirac022.lean"
   },
   "gate_support_modules": {
     "DIRAC-006": "LeanDirac/Dirac006Restriction.lean",
@@ -54,7 +55,8 @@
     "DIRAC-018": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION",
     "DIRAC-019": "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT",
     "DIRAC-020": "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT",
-    "DIRAC-021": "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK"
+    "DIRAC-021": "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK",
+    "DIRAC-022": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG"
   },
-  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves the scoped unsigned cube-translation copy exchange. DIRAC-017 conditionally proves that the same cubical incidence representation carries spin-one-half algebra, including continuous-angle Hamiltonian covariance. DIRAC-018 classifies the square root only within the real, local, flavor-preserving cubical-incidence coefficient class and does not classify arbitrary nonlocal or flavor-mixing roots. DIRAC-019 proves sustained norm-preserving evolution and density-weighted current/group-velocity transport for arbitrary finite positive-frequency spectral families on the stable recurrence-derived continuum branch. DIRAC-020 constructs an explicit normalized finite Fourier frame, proves character-to-momentum compatibility, coherent Parseval density and integrated-current transport, and a finite-update pointwise phase-error bound; a uniform fixed-physical-time convergence rate remains open. DIRAC-021 follows the action-selected rest coefficient through the zero-momentum Dirac Hamiltonian, proves opposite-energy rest phases and their first-order equations, and derives rest frequency 19 and relative branch frequency 38 in native units. A pure branch's global phase is not claimed to be an observable clock. The chain does not establish an SI electron mass, zitterbewegung, electromagnetic coupling or g-factor, unrestricted live-chi localized electron transport, electron identity or formation, or canonical LFM status."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves scoped cube-copy exchange. DIRAC-017 proves the conditional cubical spin-one-half representation and continuous-angle Hamiltonian covariance only in the stated derived sector. DIRAC-018 gives a scoped local factorization classification and does not classify arbitrary nonlocal or flavor-mixing roots. DIRAC-019/020 prove finite spectral and coherent spatial transport, but not a uniform fixed-physical-time convergence rate. DIRAC-021 derives the action-selected rest phases and native frequency 19; a pure branch's global phase is not claimed to be an observable clock. DIRAC-022 uses the already-derived Hamiltonian momentum-response velocity and a normalized coherent positive/negative rest-branch superposition to prove the free-continuum velocity expectation c_eff cos(2 chi0 t), angular frequency 38, position amplitude sqrt(12)/38, and peak-to-peak excursion sqrt(12)/19. Pure branches, same-sign branches and incoherent mixtures have zero signal. The chain does not establish a localized nonlinear native electron trajectory, an SI frequency or length, electromagnetic coupling or g-factor, unrestricted live-chi localized electron transport, electron identity or formation, or canonical LFM status."
 }
