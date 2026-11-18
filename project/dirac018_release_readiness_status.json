@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-018",
+  "highest_gate": "DIRAC-018",
+  "status": "PASS",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac018",
+  "package_command": "python scripts/build_publication_package.py --output-dir dist",
+  "package_artifacts": [
+    "LeanDiracDerivation-DIRAC-018.zip",
+    "LeanDiracDerivation-DIRAC-018.zip.sha256"
+  ],
+  "acceptance": [
+    "the full Lean dependency chain builds",
+    "compiled axiom reports use only the declared standard Lean foundations",
+    "independent DIRAC-010 through DIRAC-013 and DIRAC-016 through DIRAC-018 reconstructions pass finite schema checks",
+    "formal wrong-orientation and broken-cubic-symmetry controls establish hypothesis necessity",
+    "release and claim metadata preserve the scoped DIRAC-018 boundary",
+    "the archive is built from a clean committed tree and embeds exact Git provenance",
+    "all publication artifacts are present and fail closed when missing"
+  ],
+  "claim_boundary": "Release readiness certifies reproducibility and internally consistent scoped factorization metadata. It does not turn the continuum cubical classification into an exact finite-lattice Dirac operator, a universal uniqueness or doubling theorem, or a localized physical electron."
+}

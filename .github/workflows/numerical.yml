@@ -34,15 +34,18 @@ jobs:
         run: python experiments/dirac016_copy_translation/validate_dirac016.py
       - name: Reproduce DIRAC-017 cubical spin representation
         run: python experiments/dirac017_spin_half/validate_dirac017.py
+      - name: Reproduce DIRAC-018 cubical factorization classification
+        run: python experiments/dirac018_factorization_classification/validate_dirac018.py
       - name: Validate evidence schema
         run: >-
           python -c "import json;
           from pathlib import Path;
-          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence, validate_dirac013_evidence, validate_dirac016_evidence, validate_dirac017_evidence;
+          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence, validate_dirac013_evidence, validate_dirac016_evidence, validate_dirac017_evidence, validate_dirac018_evidence;
           p10=json.loads(Path('experiments/dirac010_standard_map/result.json').read_text());
           p11=json.loads(Path('experiments/dirac011_frequency_mass/result.json').read_text());
           p12=json.loads(Path('experiments/dirac012_continuum_evolution/result.json').read_text());
           p13=json.loads(Path('experiments/dirac013_density_current/result.json').read_text());
           p16=json.loads(Path('experiments/dirac016_copy_translation/result.json').read_text());
           p17=json.loads(Path('experiments/dirac017_spin_half/result.json').read_text());
-          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12)+validate_dirac013_evidence(p13)+validate_dirac016_evidence(p16)+validate_dirac017_evidence(p17); assert not e, e"
+          p18=json.loads(Path('experiments/dirac018_factorization_classification/result.json').read_text());
+          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12)+validate_dirac013_evidence(p13)+validate_dirac016_evidence(p16)+validate_dirac017_evidence(p17)+validate_dirac018_evidence(p18); assert not e, e"

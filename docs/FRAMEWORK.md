@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-017. It is a declared starting model, not a claim that the
+chain through DIRAC-018. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -135,3 +135,15 @@ No spin matrix, half-angle rule, action term, or runtime projection is added.
 The result is a conditional spin-one-half representation theorem for the
 derived continuum sector, not a claim that native dynamics rotates a
 localized electron or an electromagnetic theorem.
+
+DIRAC-018 again leaves the action and update unchanged. It asks whether the
+cubical square root was merely chosen or is forced by the already-proved
+geometry. Within the declared real, local, first-order, flavor-preserving
+cubical-incidence class, two generating cube rotations force one common
+transport coefficient; exact continuum squaring fixes its magnitude and the
+upstream positive mass/current orientation fixes its sign. The argument is
+proved independently on both rank-four copies, with no assumed equality of
+their coefficients. The theorem also closes the exact flavor-sector census
+and the first-Brillouin-zone zero census of the scalar C19 symbol. Its scope
+does not include nonlocal or flavor-mixing roots, an exact finite-spacing
+factorization, a universal doubling theorem, or localized-electron dynamics.

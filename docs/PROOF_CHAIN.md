@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac017`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac018`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -23,6 +23,7 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-015 | PASS | States one cumulative action-to-Klein--Gordon-to-Dirac continuum theorem and deterministically reproduces/packages the complete chain from a clean checkout. | Publication decision. |
 | DIRAC-016 | PASS | Derives the exact transformation of both retained rank-four copies under the existing unsigned cube translations: one direction exchanges them, the induced coordinate map is unique, density is preserved, and two translations return. It separately proves that the signed incidence readout preserves each copy. | Test whether a localized native moving state dynamically alternates copies. |
 | DIRAC-017 | PASS (conditional representation) | Derives the nontrivial spin normalization from the native cube commutator; intertwines both copies with conventional four-component spin; proves the explicit spectrum, positive inner product, continuous unitary rotations, uniquely characterized quarter-turn, mass-grading compatibility, and both quarter-turn and all-angle interpreted-Hamiltonian covariance. | Test whether unrestricted native dynamics selects and realizes this representation on a localized stable carrier; derive electromagnetic coupling separately. |
+| DIRAC-018 | PASS (scoped classification) | Classifies every real, local, first-order, flavor-preserving cubical-incidence root with separated mass grading: cubic covariance reduces its transport coefficients to one scalar, exact continuum squaring fixes magnitudes, and the upstream positive mass/current orientation fixes the sign. It proves this independently on both exact rank-four copies, proves the copies exhaust the eight-corner space, and proves the exact C19 scalar symbol has only the origin zero in the first Brillouin zone. | Either derive an exact finite-spacing first-order factorization of the full C19 symbol or prove a sharply scoped obstruction; keep nonlocal and flavor-mixing alternatives explicit. |
 
 ## Current theorem boundary
 
@@ -43,10 +44,13 @@ representation without inserting a spin matrix or half-angle rule. The exact
 standard-spin intertwiner, component spectrum, continuous unitary rotations,
 mass grading, and quarter-turn plus all-angle interpreted-Hamiltonian
 covariance are all part of the certificate. It does not prove that
-unrestricted native time evolution selects this square-root orientation or makes
-a localized stable carrier realize that representation, nor
-does it derive electromagnetic coupling or a magnetic `g` factor. This does not
-prove uniqueness, exact finite-lattice Dirac
+unrestricted native time evolution makes a localized stable carrier realize
+that representation. DIRAC-018 proves that the orientation is forced inside
+the stated real local flavor-preserving cubical-incidence class, using the
+mass/current sign already derived upstream. It does not extend that
+classification to arbitrary nonlocal or flavor-mixing roots, nor derive
+electromagnetic coupling or a magnetic `g` factor. This does not prove
+unrestricted uniqueness, exact finite-lattice Dirac
 dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling,
 operational spin of a localized carrier, or a physical electron.
 

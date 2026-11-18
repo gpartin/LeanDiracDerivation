@@ -88,6 +88,19 @@ quarter-turn and continuous rotation identities, and all-angle interpreted
 Hamiltonian covariance. It checks the conditional representation; it is not
 evidence for localized dynamical spin or a physical electron.
 
+## Independent DIRAC-018 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac018_factorization_classification/validate_dirac018.py
+```
+
+The program independently reconstructs the cubic commutant, the canonical
+square identity, the two exact rank-four flavor projectors, the wrong-sign and
+reflected-axis controls, and the scalar C19 zero census on every periodic grid
+from size 2 through 32. It tests the stated local flavor-preserving coefficient
+class; it is not evidence for arbitrary-root uniqueness, an exact finite-
+spacing Dirac factorization, a universal doubling theorem, or an electron.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -95,11 +108,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 17-gate dependency and claim boundary.
+The first command verifies the complete 18-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-017.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-018.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

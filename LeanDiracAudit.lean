@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-017. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-018. -/
 
 #audit_lean_dirac_environment
 
@@ -67,6 +67,16 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.cube_quarter_turn_hamiltonian_covariance
 #print axioms LeanDirac.cube_continuous_turn_hamiltonian_covariance
 #print axioms LeanDirac.dirac017_closed_spin_half_representation
+#print axioms LeanDirac.cubic_covariant_coefficients_are_scalar
+#print axioms LeanDirac.admissible_native_cubical_root_is_canonical
+#print axioms LeanDirac.admissible_two_copy_native_root_is_canonical
+#print axioms LeanDirac.positive_flavor_is_exactly_plus_embedding
+#print axioms LeanDirac.negative_flavor_is_exactly_minus_embedding
+#print axioms LeanDirac.c19_first_brillouin_zone_zero_unique
+#print axioms LeanDirac.overall_negative_root_is_rejected
+#print axioms LeanDirac.reflected_axis_root_is_rejected
+#print axioms LeanDirac.dirac018_native_factorization_classification
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
+#print axioms LeanDirac.current_highest_gate_is_dirac018

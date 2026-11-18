@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-017
+## Established through DIRAC-018
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -83,6 +83,25 @@
 - The mass grading commutes with these rotations. Lean proves the interpreted
   mass-plus-three-direction transport Hamiltonian covariance both for the
   native quarter-turn and for every real rotation angle.
+- Inside the explicitly stated class of real, local, first-order,
+  flavor-preserving cubical-incidence roots with separated mass grading,
+  commuting with the generating cube rotations forces the transport
+  coefficient matrix to be scalar.
+- Exact continuum scalar squaring fixes the coefficient magnitudes; the
+  positive mass-frequency and current orientation already derived upstream
+  fixes the common sign. The resulting root equals the existing cubical
+  Dirac symbol.
+- The classification is sector-local: each rank-four copy may begin with
+  independent coefficients and is independently forced to the same result.
+- The two flavor embeddings are injective, exhaust their respective
+  eigenspaces, intersect only at zero, and decompose every eight-corner
+  amplitude.
+- Formal controls prove why the hypotheses matter: the overall negative root
+  keeps the square and covariance but fails orientation; a one-axis reflection
+  keeps the square but fails cubic covariance.
+- The exact C19 scalar transport symbol has only the origin as a zero in the
+  first Brillouin zone. Independent reconstruction confirms the commutant,
+  square identities, flavor ranks, controls, and periodic zero census.
 
 ## Not established
 
@@ -91,7 +110,7 @@
 - Positive Dirac density for arbitrary mixed-frequency native data.
 - Exact finite-lattice equality to the continuum Dirac current.
 - Arbitrary nonlinear live-chi density/current closure.
-- Unique selection or physical interpretation of either rank-four copy.
+- Dynamical selection or physical interpretation of either rank-four copy.
 - Identification of one native time update with one copy exchange.
 - Motion of a localized carrier by alternating the two copies.
 - A physical purpose for doubling or evidence that the two copies are two
@@ -101,11 +120,16 @@
 - Spin one-half of a localized dynamically stable carrier.
 - Electromagnetic minimal coupling, magnetic moment, or a derived `g` factor.
 - A physical electron, charge, localization, or formation.
-- Canonical LFM status or uniqueness of the action or square-root orientation.
-- A dynamical theorem selecting the cubical square-root orientation from all
-  admissible factorizations.
+- Canonical LFM status or uniqueness of the action.
+- Classification of arbitrary nonlocal or flavor-mixing square roots.
+- An exact finite-spacing first-order Dirac operator whose square is the full
+  C19 symbol.
+- A universal Nielsen--Ninomiya or fermion-doubling theorem.
+- A dynamical theorem selecting the cubical square-root orientation outside
+  the admitted coefficient class.
 
 The theorem uses a conditional prepared background; it does not provide an
-origin story. The chosen action and cubical square root are not uniquely
-forced by this theorem. In particular, this is not yet a localized physical
+origin story. The chosen action is not uniquely forced. The cubical square
+root is uniquely forced only inside DIRAC-018's explicitly declared
+coefficient class. In particular, this is not yet a localized physical
 electron. A passed gate is not permission to claim a downstream result.

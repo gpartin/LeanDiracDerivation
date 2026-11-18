@@ -1,9 +1,9 @@
-import LeanDirac.Dirac017Closed
+import LeanDirac.Dirac018
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-017.
+Sole cumulative publication root through DIRAC-018.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -40,6 +40,19 @@ quarter-turn is uniquely characterized inside the scalar-plus-plane rotor
 family by covariance and unitarity.  This is a conditional continuum-sector
 spin representation theorem, not a localized-electron or electromagnetic
 claim.
+
+DIRAC-018 classifies the continuum square root inside the real, local,
+flavor-preserving cubical-incidence coefficient class. Cubic covariance makes
+the three transport coefficients a common scalar; exact scalar squaring and
+the already selected positive mass/current orientation then force the
+canonical coefficients. The proof is sector-local on the two independently
+admissible rank-four flavor copies, proves that those copies exhaust the
+eight-corner space, and proves that the exact C19 scalar transport symbol has
+no additional zero in the first Brillouin zone. Formal negative-orientation
+and reflected-axis controls show that the selection and symmetry hypotheses
+are necessary. This is not a classification of arbitrary nonlocal or
+flavor-mixing roots, nor a theorem about an exact finite-spacing Dirac
+operator or a localized electron.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -77,8 +90,20 @@ theorem current_highest_gate_is_dirac017 :
   conditionalCubicalSpinHalfRepresentation :=
     dirac017_closed_spin_half_representation
 
+structure CumulativeDirac018Certificate : Prop where
+  completedDiracDerivationCopyAndSpin : CumulativeDirac017Certificate
+  nativeCubicalFactorizationClassification :
+    Dirac018NativeFactorizationClassificationCertificate
+
+theorem current_highest_gate_is_dirac018 :
+    CumulativeDirac018Certificate where
+  completedDiracDerivationCopyAndSpin := current_highest_gate_is_dirac017
+  nativeCubicalFactorizationClassification :=
+    dirac018_native_factorization_classification
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
+#print axioms LeanDirac.current_highest_gate_is_dirac018

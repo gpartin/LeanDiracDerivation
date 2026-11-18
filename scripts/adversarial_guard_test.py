@@ -113,6 +113,31 @@ def main() -> int:
     nonfinite_017["max_error"] = math.inf
     if not guard.validate_dirac017_evidence(nonfinite_017):
         raise AssertionError("non-finite DIRAC-017 evidence was accepted")
+    payload_018 = guard.load(guard.EVIDENCE_018)
+    if guard.validate_dirac018_evidence(payload_018):
+        raise AssertionError("passing DIRAC-018 evidence was rejected")
+    broken_018 = copy.deepcopy(payload_018)
+    broken_018["checks"]["cubic_commutant_has_dimension_one"] = False
+    if not guard.validate_dirac018_evidence(broken_018):
+        raise AssertionError("failed DIRAC-018 commutant check was accepted")
+    nonfinite_018 = copy.deepcopy(payload_018)
+    nonfinite_018["max_error"] = math.nan
+    if not guard.validate_dirac018_evidence(nonfinite_018):
+        raise AssertionError("non-finite DIRAC-018 evidence was accepted")
+    wrong_rank_018 = copy.deepcopy(payload_018)
+    wrong_rank_018["plus_sector_rank"] = 3
+    if not guard.validate_dirac018_evidence(wrong_rank_018):
+        raise AssertionError("incorrect DIRAC-018 flavor rank was accepted")
+    incomplete_zeros_018 = copy.deepcopy(payload_018)
+    incomplete_zeros_018["periodic_zone_zero_counts"].pop("32")
+    if not guard.validate_dirac018_evidence(incomplete_zeros_018):
+        raise AssertionError("incomplete DIRAC-018 zero census was accepted")
+    inflated_claim_018 = copy.deepcopy(payload_018)
+    inflated_claim_018["excluded_claims"].remove(
+        "classification of arbitrary nonlocal square roots"
+    )
+    if not guard.validate_dirac018_evidence(inflated_claim_018):
+        raise AssertionError("inflated DIRAC-018 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

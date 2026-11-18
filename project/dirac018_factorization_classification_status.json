@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-018",
+  "status": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION",
+  "formal_theorem": "LeanDirac.dirac018_native_factorization_classification",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac018",
+  "action_changed": false,
+  "candidate_class": "real, local, first-order, flavor-preserving cubical-incidence coefficients with separated mass grading",
+  "proved": [
+    "commuting with two generating cube quarter-turns forces the real three-direction coefficient matrix to be a scalar multiple of the identity",
+    "exact squaring to the continuum scalar symbol fixes the magnitudes of the mass and transport coefficients",
+    "the previously derived positive mass-frequency and current orientation selects the positive coefficient branch",
+    "the resulting admissible operator is exactly the existing cubical Dirac symbol",
+    "the two flavor copies may begin with independent coefficient candidates and sector-local square conditions, yet each is independently forced to the same canonical operator",
+    "the positive and negative flavor embeddings are injective, exhaust their eigenspaces, intersect only at zero and decompose every eight-corner amplitude",
+    "the exact C19 scalar transport symbol has only the origin as a zero in the first Brillouin zone",
+    "an overall negative root retains the scalar square and cubic covariance but is rejected by the explicit orientation condition",
+    "a one-axis reflected root retains the scalar square but is rejected because it breaks cubic covariance"
+  ],
+  "not_proved": [
+    "classification of arbitrary nonlocal roots",
+    "classification of flavor-mixing roots outside the stated native coefficient class",
+    "an exact finite-spacing first-order Dirac operator whose square equals the complete C19 symbol",
+    "a universal Nielsen-Ninomiya or fermion-doubling theorem",
+    "dynamical selection of the positive orientation or either flavor copy",
+    "a localized stable physical electron",
+    "electromagnetic coupling or magnetic g-factor"
+  ],
+  "red_team": {
+    "new_action_term": false,
+    "new_native_field": false,
+    "assumed_dirac_matrices": false,
+    "global_copy_symmetry_assumed": false,
+    "sector_local_square_conditions": true,
+    "orientation_hypothesis_explicit": true,
+    "cubic_covariance_hypothesis_explicit": true,
+    "hypothesis_necessity_controls_proved": true,
+    "two_copy_exhaustion_proved": true,
+    "finite_lattice_overclaim_excluded": true,
+    "nielsen_ninomiya_overclaim_excluded": true,
+    "claim_boundary_explicit": true,
+    "critical_findings": [],
+    "high_findings": []
+  }
+}

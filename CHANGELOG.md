@@ -1,5 +1,24 @@
 # Changelog
 
+## DIRAC-018 (unreleased)
+
+- Classified the continuum square root inside the explicit real, local,
+  first-order, flavor-preserving cubical-incidence coefficient class.
+- Proved cubic covariance reduces the three transport coefficients to one,
+  exact scalar squaring fixes its magnitude, and the upstream positive
+  mass/current orientation fixes the sign.
+- Proved the result independently on both exact rank-four copies without
+  assuming equal copy coefficients; proved the embeddings exhaust their
+  flavor eigenspaces and intersect only at zero.
+- Proved the exact C19 scalar transport symbol has only the origin zero in the
+  first Brillouin zone.
+- Added formal wrong-orientation and broken-cubic-symmetry controls, independent
+  reconstruction, adversarial evidence mutations, and explicit nonclaims for
+  nonlocal/flavor-mixing roots, exact finite-spacing factorization, universal
+  doubling, and a localized electron.
+- Added no native field, action term, stencil change, runtime projection, or
+  physical-electron assumption.
+
 ## Publication-quality repair (unreleased)
 
 - Added a formal all-angle interpreted-Hamiltonian covariance theorem to close

@@ -61,3 +61,19 @@ They do not establish priority for Clifford spinors, Dirac--Kähler fermions,
 staggered fermions, fermion doubling, or spinorial double-valued rotations.
 They also do not prove that unrestricted native time evolution dynamically
 applies this representation to a localized stable LFM electron.
+
+DIRAC-018 adds a narrower classification result inside the repository's own
+operator class. It proves that real, local, first-order, flavor-preserving
+linear combinations of the native cubical incidence operators are fixed by
+cubic covariance, exact continuum scalar squaring, and the upstream positive
+mass/current orientation. The proof is sector-local on both rank-four copies,
+and formal counterexamples show that dropping orientation or cubic covariance
+restores alternative roots. It also proves a zero census for the *scalar* C19
+transport symbol in the first Brillouin zone.
+
+This must not be read as a general uniqueness theorem for lattice Dirac
+operators or as a resolution of the Nielsen--Ninomiya/doubling problem. The
+classification excludes nonlocal and flavor-mixing roots, and it does not
+construct an exact finite-spacing first-order operator whose square is the
+complete C19 symbol. Rabin's work above is therefore relevant context, not a
+theorem superseded by this project.

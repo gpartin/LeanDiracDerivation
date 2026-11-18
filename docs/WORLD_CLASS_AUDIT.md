@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-017
+# Publication-quality audit through DIRAC-018
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac017`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac018`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -33,6 +33,11 @@ The native action and governing equations are unchanged by this repair.
 | Medium | The publication dependencies included unused PyTorch. | Installation was much larger and exposed irrelevant supply-chain surface. | Removed PyTorch; the independent suite uses pinned NumPy only. |
 | Low | `docs/FRAMEWORK.md` used literal bracket lines rather than Markdown math delimiters. | Core equations rendered poorly on common hosts. | Converted every display to `\[` and `\]`. |
 | Low | Submission tracking described the GitHub tree as a 15-gate release even though `main` had advanced. | Readers could confuse current source with the immutable archive. | Separated the current 17-gate development chain from the immutable 15-gate Zenodo release. External-review statuses were otherwise preserved verbatim. |
+| High | The first DIRAC-018 draft required each copy candidate to square correctly on the full eight-corner space. | That overconstrained the problem and silently imposed a relationship between the two copies instead of proving it. | Replaced the global condition with independent sector-local conditions on the exact plus/minus embeddings. A generic probe theorem fixes each copy's coefficients separately; no copy symmetry is assumed. |
+| High | A uniqueness headline could be misread as classifying every possible lattice square root. | Nonlocal or flavor-mixing roots and exact finite-spacing factorizations were outside the proof. | Named the admitted class in the theorem, status, README, claims, related-work discussion, and release guards. Added explicit exclusions for arbitrary roots, exact finite-spacing Dirac, universal doubling, and electron claims. |
+| High | Cubic covariance and positive orientation could have functioned as untested answer-selecting assumptions. | The theorem would show sufficiency without demonstrating why the hypotheses eliminate actual alternatives. | Added two formal controls: an overall negative root still squares and is covariant but fails orientation; a one-axis-reflected root still squares but fails cubic covariance. Independent reconstruction repeats both controls. |
+| Medium | The existing two-copy declaration did not by itself prove that the two embeddings exhaust the native eight-corner space. | A hidden third sector could invalidate the copy census. | Proved both embedding ranges equal the corresponding flavor eigenspaces, their intersection is zero, and their projectors decompose every amplitude. Independent matrices confirm rank four plus rank four. |
+| Medium | The continuum classification did not say whether the exact scalar C19 symbol had extra Brillouin-zone zeros. | Readers could conflate continuum root classification with the exact lattice zero structure. | Proved analytically that the exact scalar C19 transport symbol has only the origin zero in the first Brillouin zone; periodic grids 2 through 32 independently reproduce one zero. The documentation explicitly does not convert this into an exact first-order factorization or universal no-doubling claim. |
 
 ## Formal claim after repair
 
@@ -51,6 +56,12 @@ electromagnetic coupling and a magnetic `g` factor. Those are scientific
 research gates, not release-engineering defects, and this audit does not hide
 them behind a generic pass label.
 
+DIRAC-018 now proves that the cubical root is forced inside the explicitly
+declared real, local, first-order, flavor-preserving incidence-coefficient
+class. This closes the earlier orientation gap only at that scope. It does not
+classify arbitrary nonlocal or flavor-mixing operators, derive an exact
+finite-spacing square root, or settle general lattice-fermion doubling.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -61,7 +72,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, and 017 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, and 018 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;

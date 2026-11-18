@@ -2,10 +2,10 @@
   "schema_version": "1.3.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-017",
-  "next_gate": "LOCALIZED_PHYSICAL_SPIN_VALIDATION",
-  "completed": 17,
-  "total": 17,
+  "highest_passed_gate": "DIRAC-018",
+  "next_gate": "EXACT_FINITE_LATTICE_FACTORIZATION_OR_SCOPED_OBSTRUCTION",
+  "completed": 18,
+  "total": 18,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
@@ -23,7 +23,8 @@
     "DIRAC-014": "project/dirac014_final_audit_status.json",
     "DIRAC-015": "LeanDirac/Dirac015.lean",
     "DIRAC-016": "LeanDirac/Dirac016.lean",
-    "DIRAC-017": "LeanDirac/Dirac017Closed.lean"
+    "DIRAC-017": "LeanDirac/Dirac017Closed.lean",
+    "DIRAC-018": "LeanDirac/Dirac018.lean"
   },
   "gate_support_modules": {
     "DIRAC-006": "LeanDirac/Dirac006Restriction.lean",
@@ -46,7 +47,8 @@
     "DIRAC-014": "PASS",
     "DIRAC-015": "PASS",
     "DIRAC-016": "PASS",
-    "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
+    "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION",
+    "DIRAC-018": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION"
   },
-  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves the scoped unsigned cube-translation copy exchange. DIRAC-017 conditionally proves that the same cubical incidence representation carries spin-one-half algebra: the native commutator uniquely fixes the nonzero scale to one half; both copies intertwine with the standard four-component spin generators; the spectrum, positive inner product, continuous unitary rotations, mass-grading compatibility, discrete quarter-turn Hamiltonian covariance, and continuous-angle Hamiltonian covariance are explicit. DIRAC-017 does not prove that unrestricted native time evolution selects or applies this square-root orientation to a localized dynamically stable carrier, electromagnetic coupling or g-factor, one-copy-exchange-per-update motion, electron identity, or formation. The chain does not claim uniqueness of the underlying physical model, exact finite-lattice Dirac dynamics, arbitrary nonlinear live-chi closure, a localized physical electron, or canonical LFM status."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves the scoped unsigned cube-translation copy exchange. DIRAC-017 conditionally proves that the same cubical incidence representation carries spin-one-half algebra, including continuous-angle Hamiltonian covariance. DIRAC-018 classifies the square root only within the real, local, flavor-preserving cubical-incidence coefficient class: cubic covariance, exact continuum scalar squaring and the previously selected positive mass/current orientation force the canonical coefficients independently on both exact rank-four copies. It also proves that the exact C19 scalar transport symbol has no additional zero in the first Brillouin zone. It does not classify arbitrary nonlocal or flavor-mixing roots, prove an exact finite-spacing Dirac operator, settle every form of fermion doubling, prove that unrestricted native evolution selects a localized stable carrier, establish electromagnetic coupling or g-factor, establish electron identity or formation, or promote canonical LFM status."
 }

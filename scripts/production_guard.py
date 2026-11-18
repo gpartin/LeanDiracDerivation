@@ -1,4 +1,4 @@
-"""One-command release audit for the completed DIRAC-001--017 chain.
+"""One-command release audit for the completed DIRAC-001--018 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -24,13 +24,15 @@ AUDIT_014 = ROOT / "project" / "dirac014_final_audit_status.json"
 REPRODUCTION_015 = ROOT / "project" / "dirac015_clean_reproduction_status.json"
 STATUS_016 = ROOT / "project" / "dirac016_copy_translation_status.json"
 STATUS_017 = ROOT / "project" / "dirac017_spin_half_representation_status.json"
-READINESS_017 = ROOT / "project" / "dirac017_release_readiness_status.json"
+STATUS_018 = ROOT / "project" / "dirac018_factorization_classification_status.json"
+READINESS_018 = ROOT / "project" / "dirac018_release_readiness_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
 EVIDENCE_013 = ROOT / "experiments" / "dirac013_density_current" / "result.json"
 EVIDENCE_016 = ROOT / "experiments" / "dirac016_copy_translation" / "result.json"
 EVIDENCE_017 = ROOT / "experiments" / "dirac017_spin_half" / "result.json"
+EVIDENCE_018 = ROOT / "experiments" / "dirac018_factorization_classification" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -344,6 +346,58 @@ def validate_dirac017_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac018_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    tolerance = payload.get("tolerance")
+    maximum = payload.get("max_error")
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-018 independent verdict is not PASS")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance) or \
+            tolerance <= 0 or tolerance > 3.0e-12:
+        errors.append("DIRAC-018 tolerance is missing or outside the admitted range")
+    if not isinstance(maximum, (int, float)) or not math.isfinite(maximum):
+        errors.append("DIRAC-018 maximum error is missing or non-finite")
+    elif isinstance(tolerance, (int, float)) and maximum > tolerance:
+        errors.append("DIRAC-018 maximum error exceeds its tolerance")
+    required_checks = {
+        "canonical_root_squares_to_scalar",
+        "cubic_commutant_basis_is_identity",
+        "cubic_commutant_has_dimension_one",
+        "flavor_has_exactly_two_rank_four_sectors",
+        "negative_orientation_control_squares_but_is_rejected",
+        "noncovariant_reflection_squares_but_is_rejected",
+        "tested_periodic_brillouin_zones_have_only_origin_zero",
+    }
+    checks = payload.get("checks")
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-018 required checks are incomplete or false")
+    errors_map = payload.get("errors")
+    if not isinstance(errors_map, dict) or not errors_map or any(
+            not isinstance(value, (int, float)) or not math.isfinite(value)
+            for value in errors_map.values()):
+        errors.append("DIRAC-018 component errors are incomplete or non-finite")
+    if payload.get("commutant_rank") != 8 or payload.get("commutant_nullity") != 1:
+        errors.append("DIRAC-018 cubic commutant census is incorrect")
+    if payload.get("plus_sector_rank") != 4 or payload.get("minus_sector_rank") != 4:
+        errors.append("DIRAC-018 flavor-sector ranks are incorrect")
+    zero_counts = payload.get("periodic_zone_zero_counts")
+    expected_sizes = {str(size) for size in range(2, 33)}
+    if not isinstance(zero_counts, dict) or set(zero_counts) != expected_sizes or \
+            any(value != 1 for value in zero_counts.values()):
+        errors.append("DIRAC-018 periodic-zone zero census is incomplete or incorrect")
+    excluded = set(payload.get("excluded_claims", []))
+    required_exclusions = {
+        "classification of arbitrary nonlocal square roots",
+        "classification of flavor-mixing roots outside the native flavor-preserving class",
+        "localized nonlinear electron selection or stability",
+        "electromagnetic coupling",
+    }
+    if not required_exclusions <= excluded:
+        errors.append("DIRAC-018 excluded-claim boundary is incomplete")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -357,12 +411,13 @@ def validate(run_builds: bool = True) -> list[str]:
     reproduction_015 = load(REPRODUCTION_015)
     status_016 = load(STATUS_016)
     status_017 = load(STATUS_017)
-    readiness_017 = load(READINESS_017)
-    if status.get("highest_passed_gate") != "DIRAC-017":
-        errors.append("status does not stop at DIRAC-017")
-    if status.get("next_gate") != "LOCALIZED_PHYSICAL_SPIN_VALIDATION":
-        errors.append("localized physical-spin validation is not the next boundary")
-    if status.get("completed") != 17 or status.get("total") != 17:
+    status_018 = load(STATUS_018)
+    readiness_018 = load(READINESS_018)
+    if status.get("highest_passed_gate") != "DIRAC-018":
+        errors.append("status does not stop at DIRAC-018")
+    if status.get("next_gate") != "EXACT_FINITE_LATTICE_FACTORIZATION_OR_SCOPED_OBSTRUCTION":
+        errors.append("exact finite-lattice factorization is not the next boundary")
+    if status.get("completed") != 18 or status.get("total") != 18:
         errors.append("gate counts are incorrect")
     expected_gate_017 = "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
     if status.get("gates", {}).get("DIRAC-017") != expected_gate_017:
@@ -383,13 +438,13 @@ def validate(run_builds: bool = True) -> list[str]:
         errors.append("DIRAC-015 names the wrong final theorem")
     if reproduction_015.get("historical") is not True:
         errors.append("DIRAC-015 package record is not marked historical")
-    if readiness_017.get("status") != "PASS" or \
-            readiness_017.get("highest_gate") != "DIRAC-017":
-        errors.append("DIRAC-017 release readiness is not current")
-    if readiness_017.get("package_artifacts") != [
-            "LeanDiracDerivation-DIRAC-017.zip",
-            "LeanDiracDerivation-DIRAC-017.zip.sha256"]:
-        errors.append("DIRAC-017 release artifact names are stale")
+    if readiness_018.get("status") != "PASS" or \
+            readiness_018.get("highest_gate") != "DIRAC-018":
+        errors.append("DIRAC-018 release readiness is not current")
+    if readiness_018.get("package_artifacts") != [
+            "LeanDiracDerivation-DIRAC-018.zip",
+            "LeanDiracDerivation-DIRAC-018.zip.sha256"]:
+        errors.append("DIRAC-018 release artifact names are stale")
     if status_016.get("status") != "PASS" or \
             status_016.get("formal_theorem") != \
             "LeanDirac.dirac016_exact_copy_translation_structure":
@@ -427,7 +482,30 @@ def validate(run_builds: bool = True) -> list[str]:
             errors.append(f"DIRAC-017 closure check is absent: {key}")
     if red_team_017.get("claim_boundary_explicit") is not True:
         errors.append("DIRAC-017 claim boundary is not explicit")
-    publication = "LeanDirac.current_highest_gate_is_dirac017"
+    if status_018.get("status") != \
+            "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION" or \
+            status_018.get("formal_theorem") != \
+            "LeanDirac.dirac018_native_factorization_classification":
+        errors.append("DIRAC-018 scoped factorization classification is not a formal PASS")
+    red_team_018 = status_018.get("red_team", {})
+    for key, expected in (
+            ("new_action_term", False),
+            ("new_native_field", False),
+            ("assumed_dirac_matrices", False),
+            ("global_copy_symmetry_assumed", False),
+            ("sector_local_square_conditions", True),
+            ("orientation_hypothesis_explicit", True),
+            ("cubic_covariance_hypothesis_explicit", True),
+            ("hypothesis_necessity_controls_proved", True),
+            ("two_copy_exhaustion_proved", True),
+            ("finite_lattice_overclaim_excluded", True),
+            ("nielsen_ninomiya_overclaim_excluded", True),
+            ("claim_boundary_explicit", True)):
+        if red_team_018.get(key) is not expected:
+            errors.append(f"DIRAC-018 red-team contract differs: {key}")
+    if red_team_018.get("critical_findings") or red_team_018.get("high_findings"):
+        errors.append("DIRAC-018 retains critical/high red-team findings")
+    publication = "LeanDirac.current_highest_gate_is_dirac018"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -443,7 +521,7 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE_017.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_018.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
     cumulative = set(evidence.get("cumulative_numerical_evidence", []))
     expected_evidence = {
@@ -453,6 +531,7 @@ def validate(run_builds: bool = True) -> list[str]:
         EVIDENCE_013.relative_to(ROOT).as_posix(),
         EVIDENCE_016.relative_to(ROOT).as_posix(),
         EVIDENCE_017.relative_to(ROOT).as_posix(),
+        EVIDENCE_018.relative_to(ROOT).as_posix(),
     }
     if cumulative != expected_evidence:
         errors.append("evidence manifest does not retain every admitted reconstruction")
@@ -462,6 +541,7 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(validate_dirac013_evidence(load(EVIDENCE_013)))
     errors.extend(validate_dirac016_evidence(load(EVIDENCE_016)))
     errors.extend(validate_dirac017_evidence(load(EVIDENCE_017)))
+    errors.extend(validate_dirac018_evidence(load(EVIDENCE_018)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:
@@ -503,8 +583,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-017")
-    print("next_gate=LOCALIZED_PHYSICAL_SPIN_VALIDATION")
+    print("highest_passed_gate=DIRAC-018")
+    print("next_gate=EXACT_FINITE_LATTICE_FACTORIZATION_OR_SCOPED_OBSTRUCTION")
     return 0
 
 

@@ -26,7 +26,7 @@ def main() -> int:
     lean_workflow = text(".github/workflows/lean.yml")
     numerical_workflow = text(".github/workflows/numerical.yml")
     status = payload("project/status.json")
-    readiness = payload("project/dirac017_release_readiness_status.json")
+    readiness = payload("project/dirac018_release_readiness_status.json")
 
     if re.search(r"(?m)^\s*lake update\s*$", readme) or \
             re.search(r"(?m)^\s*lake update\s*$", reproducibility):
@@ -52,9 +52,12 @@ def main() -> int:
     if status.get("gates", {}).get("DIRAC-017") != \
             "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION":
         errors.append("machine-readable DIRAC-017 status erases conditionality")
+    if status.get("gates", {}).get("DIRAC-018") != \
+            "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION":
+        errors.append("machine-readable DIRAC-018 status erases classification scope")
     if readiness.get("package_artifacts") != [
-            "LeanDiracDerivation-DIRAC-017.zip",
-            "LeanDiracDerivation-DIRAC-017.zip.sha256"]:
+            "LeanDiracDerivation-DIRAC-018.zip",
+            "LeanDiracDerivation-DIRAC-018.zip.sha256"]:
         errors.append("current release-readiness artifact names are stale")
     for workflow_name, workflow in (
             ("lean", lean_workflow), ("numerical", numerical_workflow)):
@@ -62,12 +65,18 @@ def main() -> int:
             errors.append(f"{workflow_name} workflow uses a mutable action tag")
     if "if-no-files-found: error" not in lean_workflow:
         errors.append("publication artifact upload does not fail closed")
-    for gate in ("dirac016_copy_translation", "dirac017_spin_half"):
+    for gate in (
+            "dirac016_copy_translation",
+            "dirac017_spin_half",
+            "dirac018_factorization_classification"):
         if not (ROOT / "experiments" / gate / "result.json").is_file():
             errors.append(f"missing independent evidence for {gate}")
     if "continuous-angle Hamiltonian covariance" not in \
             text("project/status.json"):
         errors.append("status omits the exact all-angle covariance scope")
+    if "arbitrary nonlocal or flavor-mixing roots" not in \
+            text("project/status.json"):
+        errors.append("status omits DIRAC-018's restricted uniqueness scope")
     claims = text("docs/CLAIMS.md")
     if "localized dynamically stable carrier" not in claims or \
             "A physical electron" not in claims:
