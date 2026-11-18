@@ -1,5 +1,19 @@
 # Changelog
 
+## DIRAC-019 (unreleased)
+
+- Proved exact recurrence-phase evolution and density preservation for every
+  integer update count on each stable positive-frequency mode.
+- Lifted the result to arbitrary finite spectral families and proved that
+  total current is their density-weighted group-velocity moment.
+- Proved strict subluminality for massive modes and convergence of the summed
+  recurrence generator to the previously derived Dirac generator.
+- Added an independent Fourier-packet movement diagnostic plus unstable-step
+  and wrong-frequency controls, without adding a translation rule, field,
+  action term, stencil change, projection or fitted coefficient.
+- Kept coherent real-space Lean formalization, finite-time uniform error, and
+  nonlinear localized-electron motion explicitly open for DIRAC-020.
+
 ## DIRAC-018 (unreleased)
 
 - Classified the continuum square root inside the explicit real, local,

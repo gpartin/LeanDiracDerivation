@@ -2,7 +2,7 @@
   "schema_version": "2.1.0",
   "role": "independent-evidence",
   "action_id": "DIRAC002_COMPLEX_CHI_BASE_C19_V3",
-  "numerical_evidence": "experiments/dirac018_factorization_classification/result.json",
+  "numerical_evidence": "experiments/dirac019_wavepacket_transport/result.json",
   "cumulative_numerical_evidence": [
     "experiments/dirac010_standard_map/result.json",
     "experiments/dirac011_frequency_mass/result.json",
@@ -10,7 +10,8 @@
     "experiments/dirac013_density_current/result.json",
     "experiments/dirac016_copy_translation/result.json",
     "experiments/dirac017_spin_half/result.json",
-    "experiments/dirac018_factorization_classification/result.json"
+    "experiments/dirac018_factorization_classification/result.json",
+    "experiments/dirac019_wavepacket_transport/result.json"
   ],
   "environment": {
     "python": "3.14.0",
@@ -31,6 +32,8 @@
     "experiments/dirac017_spin_half/result.json": "eb05d2d004f005338e8f308183782f44f23935ed25c1fb2e3b5068120cf9d894",
     "experiments/dirac017_spin_half/validate_dirac017.py": "8cf68dde68f86836e437934c23abc647630e484da6d9fe890f2205c88de4b144",
     "experiments/dirac018_factorization_classification/result.json": "76f8496d0f0481ccb17fbcb55686bf2e7e8db24dd3a4fe003fa422580f74f271",
-    "experiments/dirac018_factorization_classification/validate_dirac018.py": "8073af548591492f6227724091fda6157292fb4b5594231accbb6c3afdb12a6c"
+    "experiments/dirac018_factorization_classification/validate_dirac018.py": "8073af548591492f6227724091fda6157292fb4b5594231accbb6c3afdb12a6c",
+    "experiments/dirac019_wavepacket_transport/result.json": "7c62620662d53bc8280e8f6a3ca9eeabd172116c3f15581b03a3a8220c6aa44e",
+    "experiments/dirac019_wavepacket_transport/validate_dirac019.py": "0e2834f543a514a6a1512a49aae755ebc570d20520c2346f34e00e2be66879be"
   }
 }

@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-018
+# Publication-quality audit through DIRAC-019
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac018`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac019`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -38,6 +38,11 @@ The native action and governing equations are unchanged by this repair.
 | High | Cubic covariance and positive orientation could have functioned as untested answer-selecting assumptions. | The theorem would show sufficiency without demonstrating why the hypotheses eliminate actual alternatives. | Added two formal controls: an overall negative root still squares and is covariant but fails orientation; a one-axis-reflected root still squares but fails cubic covariance. Independent reconstruction repeats both controls. |
 | Medium | The existing two-copy declaration did not by itself prove that the two embeddings exhaust the native eight-corner space. | A hidden third sector could invalidate the copy census. | Proved both embedding ranges equal the corresponding flavor eigenspaces, their intersection is zero, and their projectors decompose every amplitude. Independent matrices confirm rank four plus rank four. |
 | Medium | The continuum classification did not say whether the exact scalar C19 symbol had extra Brillouin-zone zeros. | Readers could conflate continuum root classification with the exact lattice zero structure. | Proved analytically that the exact scalar C19 transport symbol has only the origin zero in the first Brillouin zone; periodic grids 2 through 32 independently reproduce one zero. The documentation explicitly does not convert this into an exact first-order factorization or universal no-doubling claim. |
+| High | The initial movement extension conserved one update only. | A one-step identity could not support sustained propagation. | Proved the recurrence-derived phase advances every positive-frequency eigenmode and preserves both density and density-weighted current for every integer update count; lifted this to arbitrary finite spectral families. |
+| High | A finite list of modes could be mislabeled as a localized electron. | The proof does not yet include a spatial Fourier basis, Parseval theorem, centroid, nonlinear live chi or localization. | Renamed and scoped the claim as finite spectral transport. Added a separately labeled Fourier diagnostic and left the coherent real-space Lean theorem and nonlinear electron movement open. |
+| High | Movement might have been implemented by a manual shift. | That would be a runtime bolt-on unrelated to the native equations. | The proof uses only the existing recurrence phase, Hamiltonian momentum response and derived current. No coordinate translation, action term, force, track or projector was added. |
+| Medium | Stability and frequency-branch assumptions could be decorative. | Conservation fails outside the stable recurrence interval, and the negative branch is not the stated sector. | Made both assumptions explicit in Lean and added independent unstable-timestep and negative-frequency rejection controls. |
+| High | Quantification over positive modes could pass vacuously if none were constructed. | A formally empty sector would say nothing about movement. | Constructed an explicit nonzero positive-frequency eigenmode at every continuum momentum from the previously proved Hamiltonian-square identity. |
 
 ## Formal claim after repair
 
@@ -62,6 +67,12 @@ class. This closes the earlier orientation gap only at that scope. It does not
 classify arbitrary nonlocal or flavor-mixing operators, derive an exact
 finite-spacing square root, or settle general lattice-fermion doubling.
 
+DIRAC-019 adds sustained positive-frequency spectral transport. It proves
+all-update density conservation, the finite-family current/group-velocity
+identity, strict massive subluminality and recurrence-generator convergence.
+It does not yet prove a coherent localized real-space packet in Lean, a
+uniform finite-time continuum estimate, or nonlinear live-chi electron motion.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -72,7 +83,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, and 018 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, 018, and 019 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;

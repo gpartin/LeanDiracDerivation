@@ -26,7 +26,7 @@ def main() -> int:
     lean_workflow = text(".github/workflows/lean.yml")
     numerical_workflow = text(".github/workflows/numerical.yml")
     status = payload("project/status.json")
-    readiness = payload("project/dirac018_release_readiness_status.json")
+    readiness = payload("project/dirac019_release_readiness_status.json")
 
     if re.search(r"(?m)^\s*lake update\s*$", readme) or \
             re.search(r"(?m)^\s*lake update\s*$", reproducibility):
@@ -55,9 +55,12 @@ def main() -> int:
     if status.get("gates", {}).get("DIRAC-018") != \
             "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION":
         errors.append("machine-readable DIRAC-018 status erases classification scope")
+    if status.get("gates", {}).get("DIRAC-019") != \
+            "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT":
+        errors.append("machine-readable DIRAC-019 status erases transport scope")
     if readiness.get("package_artifacts") != [
-            "LeanDiracDerivation-DIRAC-018.zip",
-            "LeanDiracDerivation-DIRAC-018.zip.sha256"]:
+            "LeanDiracDerivation-DIRAC-019.zip",
+            "LeanDiracDerivation-DIRAC-019.zip.sha256"]:
         errors.append("current release-readiness artifact names are stale")
     for workflow_name, workflow in (
             ("lean", lean_workflow), ("numerical", numerical_workflow)):
@@ -68,7 +71,8 @@ def main() -> int:
     for gate in (
             "dirac016_copy_translation",
             "dirac017_spin_half",
-            "dirac018_factorization_classification"):
+            "dirac018_factorization_classification",
+            "dirac019_wavepacket_transport"):
         if not (ROOT / "experiments" / gate / "result.json").is_file():
             errors.append(f"missing independent evidence for {gate}")
     if "continuous-angle Hamiltonian covariance" not in \
@@ -77,6 +81,9 @@ def main() -> int:
     if "arbitrary nonlocal or flavor-mixing roots" not in \
             text("project/status.json"):
         errors.append("status omits DIRAC-018's restricted uniqueness scope")
+    if "coherent real-space packet theorem in Lean" not in \
+            text("project/status.json"):
+        errors.append("status omits DIRAC-019's spectral-only boundary")
     claims = text("docs/CLAIMS.md")
     if "localized dynamically stable carrier" not in claims or \
             "A physical electron" not in claims:

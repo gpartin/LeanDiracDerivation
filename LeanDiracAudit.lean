@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-018. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-019. -/
 
 #audit_lean_dirac_environment
 
@@ -76,7 +76,16 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.overall_negative_root_is_rejected
 #print axioms LeanDirac.reflected_axis_root_is_rejected
 #print axioms LeanDirac.dirac018_native_factorization_classification
+#print axioms LeanDirac.continuum_transport_speed_strictly_subluminal
+#print axioms LeanDirac.canonical_positive_frequency_mode_nonzero
+#print axioms LeanDirac.recurrence_step_advances_positive_mode_evolution
+#print axioms LeanDirac.finite_packet_evolution_preserves_density
+#print axioms LeanDirac.finite_packet_current_is_density_weighted_velocity
+#print axioms LeanDirac.finite_packet_evolved_current_is_density_weighted_velocity
+#print axioms LeanDirac.finite_packet_generator_defect_tends_to_zero
+#print axioms LeanDirac.dirac019_finite_packet_transport
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
 #print axioms LeanDirac.current_highest_gate_is_dirac018
+#print axioms LeanDirac.current_highest_gate_is_dirac019

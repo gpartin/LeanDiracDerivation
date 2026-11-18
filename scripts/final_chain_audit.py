@@ -1,4 +1,4 @@
-"""Final read-only adversarial audit for DIRAC-001 through DIRAC-018."""
+"""Final read-only adversarial audit for DIRAC-001 through DIRAC-019."""
 
 from __future__ import annotations
 
@@ -27,21 +27,24 @@ def main() -> int:
     classification_status = load(
         "project/dirac018_factorization_classification_status.json"
     )
-    readiness = load("project/dirac018_release_readiness_status.json")
+    transport_status = load("project/dirac019_wavepacket_transport_status.json")
+    readiness = load("project/dirac019_release_readiness_status.json")
     boundary = status.get("claim_boundary", "").lower()
 
     checks = {
-        "all_eighteen_gates_have_honest_passing_status": (
-            status.get("completed") == 18
-            and status.get("highest_passed_gate") == "DIRAC-018"
+        "all_nineteen_gates_have_honest_passing_status": (
+            status.get("completed") == 19
+            and status.get("highest_passed_gate") == "DIRAC-019"
             and all(
                 value == "PASS" for gate, value in status.get("gates", {}).items()
-                if gate not in ("DIRAC-017", "DIRAC-018")
+                if gate not in ("DIRAC-017", "DIRAC-018", "DIRAC-019")
             )
             and status.get("gates", {}).get("DIRAC-017") ==
                 "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
             and status.get("gates", {}).get("DIRAC-018") ==
                 "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION"
+            and status.get("gates", {}).get("DIRAC-019") ==
+                "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT"
         ),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
@@ -52,12 +55,13 @@ def main() -> int:
         "clean_reproduction_gate_passes": reproduction.get("status") == "PASS",
         "current_release_readiness_passes": readiness.get("status") == "PASS",
         "final_theorem_is_action_rooted": (
-            proof.get("highest_gate") == "DIRAC-018"
+            proof.get("highest_gate") == "DIRAC-019"
             and "LeanDirac/Dirac015.lean" in proof.get("files", {})
             and "LeanDirac/Dirac016.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017Closed.lean" in proof.get("files", {})
             and "LeanDirac/Dirac018.lean" in proof.get("files", {})
+            and "LeanDirac/Dirac019.lean" in proof.get("files", {})
             and "LeanDirac/Publication.lean" in proof.get("files", {})
             and all(audit.get("checks", {}).get(name) is True for name in (
                 "native_action_contains_no_dirac_matrix_spinor_or_projector",
@@ -69,7 +73,7 @@ def main() -> int:
         ),
         "publication_names_final_theorem": (
             proof.get("publication_theorem") ==
-                "LeanDirac.current_highest_gate_is_dirac018"
+                "LeanDirac.current_highest_gate_is_dirac019"
             and reproduction.get("formal_theorem") ==
                 "LeanDirac.lfm_free_dirac_continuum_limit"
             and reproduction.get("publication_theorem") ==
@@ -79,6 +83,8 @@ def main() -> int:
             and spin_status.get("publication_theorem") ==
                 "LeanDirac.current_highest_gate_is_dirac017"
             and classification_status.get("publication_theorem") ==
+                "LeanDirac.current_highest_gate_is_dirac018"
+            and transport_status.get("publication_theorem") ==
                 proof.get("publication_theorem")
         ),
         "copy_translation_extension_is_scoped": (
@@ -131,12 +137,37 @@ def main() -> int:
             and not classification_status.get("red_team", {}).get(
                 "high_findings")
         ),
+        "finite_positive_frequency_transport_is_scoped": (
+            transport_status.get("status") ==
+                "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT"
+            and transport_status.get("action_changed") is False
+            and transport_status.get("red_team", {}).get(
+                "runtime_translation_rule") is False
+            and transport_status.get("red_team", {}).get(
+                "positive_frequency_is_an_explicit_hypothesis") is True
+            and transport_status.get("red_team", {}).get(
+                "stable_timestep_is_an_explicit_hypothesis") is True
+            and transport_status.get("red_team", {}).get(
+                "all_update_counts_proved") is True
+            and transport_status.get("red_team", {}).get(
+                "all_update_current_persistence_proved") is True
+            and transport_status.get("red_team", {}).get(
+                "positive_frequency_sector_is_formally_nonvacuous") is True
+            and transport_status.get("red_team", {}).get(
+                "exact_native_finite_spacing_motion_is_not_claimed") is True
+            and transport_status.get("red_team", {}).get(
+                "mode_family_is_not_mislabeled_as_a_localized_electron") is True
+            and not transport_status.get("red_team", {}).get(
+                "critical_findings")
+            and not transport_status.get("red_team", {}).get(
+                "high_findings")
+        ),
         "claim_boundary_is_retained": all(
             phrase in boundary for phrase in (
                 "conditional free-dirac continuum derivation",
                 "does not classify arbitrary nonlocal or flavor-mixing roots",
                 "electromagnetic coupling",
-                "localized stable carrier",
+                "localized electron transport",
             )
         ),
         "clean_package_builder_present": (
@@ -147,8 +178,8 @@ def main() -> int:
 
     print(json.dumps({
         "checks": checks,
-        "verdict": "DIRAC_001_018_FINAL_AUDIT_PASS" if not errors
-            else "DIRAC_001_018_FINAL_AUDIT_FAIL",
+        "verdict": "DIRAC_001_019_FINAL_AUDIT_PASS" if not errors
+            else "DIRAC_001_019_FINAL_AUDIT_FAIL",
         "errors": errors,
     }, indent=2))
     return 1 if errors else 0

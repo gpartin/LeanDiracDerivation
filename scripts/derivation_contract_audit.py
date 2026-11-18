@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--018 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--019 derivation contract."""
 
 from __future__ import annotations
 
@@ -47,9 +47,13 @@ def main() -> int:
         ROOT / "experiments" / "dirac018_factorization_classification" /
         "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_019 = json.loads((
+        ROOT / "experiments" / "dirac019_wavepacket_transport" /
+        "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_018": status.get("highest_passed_gate") == "DIRAC-018",
-        "all_eighteen_gates_complete": status.get("completed") == 18,
+        "highest_gate_is_019": status.get("highest_passed_gate") == "DIRAC-019",
+        "all_nineteen_gates_complete": status.get("completed") == 19,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -131,9 +135,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_018": contains(
+        "publication_stops_at_019": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac018"),
+            "theorem current_highest_gate_is_dirac019"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -230,6 +234,27 @@ def main() -> int:
         "cubic_covariance_necessity_control_present": contains(
             "LeanDirac/Dirac018.lean",
             "theorem reflected_axis_root_is_rejected"),
+        "all_step_positive_mode_evolution_present": contains(
+            "LeanDirac/Dirac019.lean",
+            "theorem recurrence_step_advances_positive_mode_evolution"),
+        "nonzero_positive_mode_exists_at_every_momentum": contains(
+            "LeanDirac/Dirac019.lean",
+            "theorem canonical_positive_frequency_mode_nonzero"),
+        "all_step_packet_density_present": contains(
+            "LeanDirac/Dirac019.lean",
+            "theorem finite_packet_evolution_preserves_density"),
+        "packet_current_velocity_present": contains(
+            "LeanDirac/Dirac019.lean",
+            "theorem finite_packet_current_is_density_weighted_velocity"),
+        "all_step_packet_current_present": contains(
+            "LeanDirac/Dirac019.lean",
+            "theorem finite_packet_evolved_current_is_density_weighted_velocity"),
+        "massive_subluminal_bound_present": contains(
+            "LeanDirac/Dirac019.lean",
+            "theorem continuum_transport_speed_strictly_subluminal"),
+        "finite_packet_generator_limit_present": contains(
+            "LeanDirac/Dirac019.lean",
+            "theorem finite_packet_generator_defect_tends_to_zero"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -260,6 +285,12 @@ def main() -> int:
             and evidence_018.get("plus_sector_rank") == 4
             and evidence_018.get("minus_sector_rank") == 4
             and all(evidence_018.get("checks", {}).values())),
+        "independent_spectral_transport_check_passes": (
+            evidence_019.get("status") == "PASS"
+            and evidence_019.get("max_identity_error", 1.0) <= 2.0e-11
+            and evidence_019.get("minimum_speed_margin", 0.0) > 0.0
+            and evidence_019.get("minimum_generator_refinement_ratio", 0.0) > 1.95
+            and all(evidence_019.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -269,7 +300,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC018_READY" if passed else "DIRAC018_OPEN",
+        "verdict": "DIRAC019_READY" if passed else "DIRAC019_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

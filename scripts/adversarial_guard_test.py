@@ -138,6 +138,31 @@ def main() -> int:
     )
     if not guard.validate_dirac018_evidence(inflated_claim_018):
         raise AssertionError("inflated DIRAC-018 claim boundary was accepted")
+    payload_019 = guard.load(guard.EVIDENCE_019)
+    if guard.validate_dirac019_evidence(payload_019):
+        raise AssertionError("passing DIRAC-019 evidence was rejected")
+    broken_019 = copy.deepcopy(payload_019)
+    broken_019["checks"]["fourier_packet_velocity_converges_to_current_prediction"] = False
+    if not guard.validate_dirac019_evidence(broken_019):
+        raise AssertionError("failed DIRAC-019 movement check was accepted")
+    broken_current_019 = copy.deepcopy(payload_019)
+    broken_current_019["checks"]["all_step_current_is_preserved"] = False
+    if not guard.validate_dirac019_evidence(broken_current_019):
+        raise AssertionError("failed DIRAC-019 sustained current was accepted")
+    unstable_019 = copy.deepcopy(payload_019)
+    unstable_019["checks"]["unstable_timestep_is_rejected"] = False
+    if not guard.validate_dirac019_evidence(unstable_019):
+        raise AssertionError("unstable DIRAC-019 timestep was accepted")
+    nonfinite_019 = copy.deepcopy(payload_019)
+    nonfinite_019["real_space_packet_controls"][0]["velocity_error"] = math.nan
+    if not guard.validate_dirac019_evidence(nonfinite_019):
+        raise AssertionError("non-finite DIRAC-019 movement evidence was accepted")
+    inflated_claim_019 = copy.deepcopy(payload_019)
+    inflated_claim_019["excluded_claims"].remove(
+        "nonlinear localized electron transport"
+    )
+    if not guard.validate_dirac019_evidence(inflated_claim_019):
+        raise AssertionError("inflated DIRAC-019 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

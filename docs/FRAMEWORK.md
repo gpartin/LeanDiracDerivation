@@ -1,7 +1,7 @@
 # Native framework
 
 This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-018. It is a declared starting model, not a claim that the
+chain through DIRAC-019. It is a declared starting model, not a claim that the
 model is canonical LFM or uniquely selected by deeper physics.
 
 ## Fields and constants
@@ -147,3 +147,11 @@ their coefficients. The theorem also closes the exact flavor-sector census
 and the first-Brillouin-zone zero census of the scalar C19 symbol. Its scope
 does not include nonlocal or flavor-mixing roots, an exact finite-spacing
 factorization, a universal doubling theorem, or localized-electron dynamics.
+
+DIRAC-019 leaves the framework unchanged. It iterates the stable
+positive-frequency branch already derived from the centered recurrence,
+proves density conservation for every update count, and derives finite-family
+transport from the already-established current/group-velocity relation. It
+adds no translation command or movement force. Its formal scope remains a
+finite spectral family; coherent spatial localization and nonlinear live-chi
+electron motion remain open.

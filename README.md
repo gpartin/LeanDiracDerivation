@@ -6,7 +6,7 @@ This repository is the production Lean 4 environment for a noncanonical
 attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
-All **18 of 18** derivation gates pass. The chain begins with
+All **19 of 19** derivation gates pass. The chain begins with
 one positive complex-Psi/complex-chi C19 action, proves that its restriction
 and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
@@ -49,6 +49,13 @@ eight-corner space, and proves that the exact C19 scalar symbol has no extra
 zero in the first Brillouin zone. This is a scoped classification, not a claim
 about arbitrary nonlocal or flavor-mixing roots, an exact finite-spacing
 Dirac factorization, all forms of fermion doubling, or a physical electron.
+DIRAC-019 then proves sustained linear transport for arbitrary finite
+positive-frequency spectral families. The stable recurrence-derived continuum
+branch advances every mode with unit norm for every integer update count, the summed
+current remains equal to the density-weighted group-velocity moment at every update, massive modes are
+strictly subluminal, and the finite-family generator converges to the same
+Dirac generator. This is not yet a coherent real-space theorem in Lean or a
+nonlinear localized-electron transport result.
 
 ## Current status
 
@@ -67,6 +74,7 @@ Dirac factorization, all forms of fermion doubling, or a physical electron.
 | DIRAC-016 | PASS | Exact A-B-A copy exchange under unsigned cube translation, with density preservation, unique coordinate map, and a strict motion-claim boundary. |
 | DIRAC-017 | PASS (conditional representation) | Cubical spin-one-half representation: exact standard-spin intertwiner on both copies, explicit spectrum, uniquely characterized quarter-turn, continuous unitary rotations, `2π` sign/`4π` return, and quarter-turn plus all-angle mass-and-transport covariance. Localized dynamical spin remains downstream. |
 | DIRAC-018 | PASS (scoped classification) | Within the real local flavor-preserving cubical-incidence class, cubic covariance, exact continuum squaring and the upstream positive orientation uniquely select the same canonical root on each exact rank-four copy. Includes formal wrong-sign and broken-symmetry controls plus the C19 scalar-symbol zero census. |
+| DIRAC-019 | PASS (scoped spectral transport) | Every stable positive-frequency mode follows the recurrence-derived phase with conserved density for all update counts; arbitrary finite spectral families carry the density-weighted group-velocity current, remain subluminal when massive, and converge to the derived Dirac generator. |
 
 See [the complete proof chain](docs/PROOF_CHAIN.md) for every gate and its
 claim boundary.
@@ -81,7 +89,7 @@ python scripts/verify_release.py
 
 The verifier builds every production module, audits the compiled Lean
 environment, checks role-specific manifests, runs adversarial audit controls,
-and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--018
+and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--019
 evidence, audits the final theorem and publication metadata, and verifies the
 release contract. It is read-only: it
 does not install Git hooks or alter the index.
@@ -90,8 +98,8 @@ does not install Git hooks or alter the index.
 
 - [Native framework](docs/FRAMEWORK.md): fields, constants, geometry, action,
   equations, and update.
-- [Formal proof chain](docs/PROOF_CHAIN.md): all 18 gates and theorem boundary.
-- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-018 establish.
+- [Formal proof chain](docs/PROOF_CHAIN.md): all 19 gates and theorem boundary.
+- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-019 establish.
 - [Reproducibility](docs/REPRODUCIBILITY.md): rebuild instructions.
 - [Publication-quality audit](docs/WORLD_CLASS_AUDIT.md): findings, repairs,
   residual scientific boundaries, and acceptance tests.
@@ -114,6 +122,8 @@ does not install Git hooks or alter the index.
   rotation-group, and continuous Hamiltonian-covariance reconstruction.
 - `experiments/dirac018_factorization_classification/`: independent cubic
   commutant, square-root, two-copy, and scalar-symbol-zero reconstruction.
+- `experiments/dirac019_wavepacket_transport/`: independent all-step modal
+  conservation, current/velocity, timestep, and Fourier-packet reconstruction.
 
 ## Proof-security boundary
 

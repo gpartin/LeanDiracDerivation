@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac018`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac019`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -24,6 +24,7 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-016 | PASS | Derives the exact transformation of both retained rank-four copies under the existing unsigned cube translations: one direction exchanges them, the induced coordinate map is unique, density is preserved, and two translations return. It separately proves that the signed incidence readout preserves each copy. | Test whether a localized native moving state dynamically alternates copies. |
 | DIRAC-017 | PASS (conditional representation) | Derives the nontrivial spin normalization from the native cube commutator; intertwines both copies with conventional four-component spin; proves the explicit spectrum, positive inner product, continuous unitary rotations, uniquely characterized quarter-turn, mass-grading compatibility, and both quarter-turn and all-angle interpreted-Hamiltonian covariance. | Test whether unrestricted native dynamics selects and realizes this representation on a localized stable carrier; derive electromagnetic coupling separately. |
 | DIRAC-018 | PASS (scoped classification) | Classifies every real, local, first-order, flavor-preserving cubical-incidence root with separated mass grading: cubic covariance reduces its transport coefficients to one scalar, exact continuum squaring fixes magnitudes, and the upstream positive mass/current orientation fixes the sign. It proves this independently on both exact rank-four copies, proves the copies exhaust the eight-corner space, and proves the exact C19 scalar symbol has only the origin zero in the first Brillouin zone. | Either derive an exact finite-spacing first-order factorization of the full C19 symbol or prove a sharply scoped obstruction; keep nonlocal and flavor-mixing alternatives explicit. |
+| DIRAC-019 | PASS (scoped spectral transport) | Constructs a nonzero positive-frequency eigenmode at every momentum, then proves that every admitted stable mode advances by the recurrence-derived unit phase and preserves density for every integer update count. For any finite spectral family, total spectral density is conserved and total current remains the density-weighted group-velocity moment at every update; massive speed is strictly subluminal, and the summed generator converges to the same Dirac generator. | Formalize a coherent finite real-space Fourier packet, Parseval density, centroid/current motion and a finite-time continuum error bound. |
 
 ## Current theorem boundary
 
@@ -53,6 +54,11 @@ electromagnetic coupling or a magnetic `g` factor. This does not prove
 unrestricted uniqueness, exact finite-lattice Dirac
 dynamics, arbitrary nonlinear live-chi closure, electromagnetic coupling,
 operational spin of a localized carrier, or a physical electron.
+DIRAC-019 adds sustained transport on the positive-frequency spectral branch,
+using the same recurrence, Hamiltonian, density and current. It does not yet
+identify its finite mode sum with a coherent localized field in Lean, provide
+a uniform finite-time continuum error bound, or prove nonlinear electron
+motion in unrestricted live chi.
 
 ## Axiom policy
 

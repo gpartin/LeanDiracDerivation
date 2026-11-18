@@ -28,7 +28,8 @@
     "DIRAC-013": "PASS_NATIVE_DENSITY_CURRENT_CONTINUITY",
     "DIRAC-016": "PASS_EXACT_COPY_TRANSLATION_STRUCTURE",
     "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION",
-    "DIRAC-018": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION"
+    "DIRAC-018": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION",
+    "DIRAC-019": "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT"
   },
   "dirac006_bridge_mandatory_gates": {
     "formal": [
@@ -199,6 +200,33 @@
       "dynamical selection of an orientation or flavor copy",
       "localized stable physical electron",
       "electromagnetic coupling or magnetic g-factor"
+    ]
+  },
+  "dirac019_mandatory_gates": {
+    "status": "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT",
+    "formal": [
+      "same action and transitive DIRAC-018 derivation",
+      "positive-frequency eigenrelation and centered-recurrence stability bound remain explicit",
+      "an explicit nonzero positive-frequency eigenmode exists at every continuum momentum",
+      "recurrence-derived unit phase advances every mode for every integer update count",
+      "mode and finite-family spectral density are preserved for every update count",
+      "finite-family current equals the density-weighted group-velocity moment",
+      "the density-weighted current persists for every stable integer update count",
+      "massive mode speed is strictly below the C19 limiting speed",
+      "finite-family recurrence generator converges to the same Dirac generator",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "explicit matrix identities reproduce within 2e-11",
+      "unstable timestep and negative-frequency controls are rejected",
+      "a narrow Fourier diagnostic preserves density and converges to the current-predicted velocity under timestep refinement"
+    ],
+    "excluded_claims": [
+      "coherent real-space Fourier/Parseval packet theorem in Lean",
+      "uniform finite-time continuum error bound",
+      "nonlinear localized-electron transport under unrestricted live chi",
+      "native positive-frequency preparation or selection",
+      "electromagnetic response or physical electron identity"
     ]
   }
 }

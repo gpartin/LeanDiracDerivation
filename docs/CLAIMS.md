@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-018
+## Established through DIRAC-019
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -102,6 +102,21 @@
 - The exact C19 scalar transport symbol has only the origin as a zero in the
   first Brillouin zone. Independent reconstruction confirms the commutant,
   square identities, flavor ranks, controls, and periodic zero census.
+- Every admitted positive-frequency mode of the stable centered recurrence
+  advances by its recurrence-derived unit phase and preserves four-component
+  density for every integer update count.
+- An explicit nonzero positive-frequency eigenmode is constructed at every
+  continuum momentum, so this sector is not merely a vacuous conditional type.
+- Arbitrary finite families of those modes conserve summed spectral density;
+  their summed current is exactly the density-weighted group-velocity moment.
+- That same finite-family current identity persists for every stable integer
+  update count, not only at the initial state.
+- Every such massive continuum mode is strictly slower than the C19 limiting
+  speed, and the complete finite-family recurrence generator converges
+  componentwise to the same Dirac generator as the timestep tends to zero.
+- Independent reconstruction confirms those identities and synthesizes a
+  narrow linear Fourier packet whose measured velocity converges to the
+  current prediction while integrated density remains constant.
 
 ## Not established
 
@@ -127,6 +142,9 @@
 - A universal Nielsen--Ninomiya or fermion-doubling theorem.
 - A dynamical theorem selecting the cubical square-root orientation outside
   the admitted coefficient class.
+- A coherent real-space Fourier/Parseval packet theorem in Lean or a uniform
+  finite-time continuum error bound.
+- Nonlinear localized-electron transport under unrestricted live-chi dynamics.
 
 The theorem uses a conditional prepared background; it does not provide an
 origin story. The chosen action is not uniquely forced. The cubical square
