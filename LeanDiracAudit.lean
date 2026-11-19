@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-024. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-025. -/
 
 #audit_lean_dirac_environment
 
@@ -132,6 +132,14 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.rest_generator_distinguishes_zitter_branches
 #print axioms LeanDirac.spatial_spin0_acts_equally_on_zitter_branches
 #print axioms LeanDirac.dirac024_projective_zitter_spin_cycle
+#print axioms LeanDirac.longitudinal_current_is_operator_expectation
+#print axioms LeanDirac.longitudinal_velocity_operator_square
+#print axioms LeanDirac.longitudinal_velocity_mean_on_positive_frequency_mode
+#print axioms LeanDirac.longitudinal_velocity_variance_is_clock_square
+#print axioms LeanDirac.normalized_longitudinal_velocity_rms_is_clock_ratio
+#print axioms LeanDirac.velocity_clock_pythagorean_identity
+#print axioms LeanDirac.three_four_five_clock_control
+#print axioms LeanDirac.dirac025_velocity_variance_clock_identity
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
@@ -142,3 +150,4 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.current_highest_gate_is_dirac022
 #print axioms LeanDirac.current_highest_gate_is_dirac023
 #print axioms LeanDirac.current_highest_gate_is_dirac024
+#print axioms LeanDirac.current_highest_gate_is_dirac025

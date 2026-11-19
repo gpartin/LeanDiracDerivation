@@ -1,4 +1,4 @@
-"""One-command release audit for the completed DIRAC-001--024 chain.
+"""One-command release audit for the completed DIRAC-001--025 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -38,6 +38,8 @@ STATUS_023 = ROOT / "project" / "dirac023_phase_harmony_status.json"
 READINESS_023 = ROOT / "project" / "dirac023_release_readiness_status.json"
 STATUS_024 = ROOT / "project" / "dirac024_projective_zitter_spin_status.json"
 READINESS_024 = ROOT / "project" / "dirac024_release_readiness_status.json"
+STATUS_025 = ROOT / "project" / "dirac025_velocity_clock_status.json"
+READINESS_025 = ROOT / "project" / "dirac025_release_readiness_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
@@ -51,6 +53,7 @@ EVIDENCE_021 = ROOT / "experiments" / "dirac021_rest_clock" / "result.json"
 EVIDENCE_022 = ROOT / "experiments" / "dirac022_zitterbewegung" / "result.json"
 EVIDENCE_023 = ROOT / "experiments" / "dirac023_phase_harmony" / "result.json"
 EVIDENCE_024 = ROOT / "experiments" / "dirac024_projective_zitter_spin" / "result.json"
+EVIDENCE_025 = ROOT / "experiments" / "dirac025_velocity_clock" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -913,6 +916,113 @@ def validate_dirac024_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac025_evidence(payload: dict) -> list[str]:
+    errors: list[str] = []
+    tolerance = payload.get("tolerance")
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-025 independent verdict is not PASS")
+    if not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance) or \
+            tolerance <= 0 or tolerance > 5.0e-11:
+        errors.append("DIRAC-025 tolerance is missing or outside the admitted range")
+    admitted = tolerance if isinstance(tolerance, (int, float)) and \
+        math.isfinite(tolerance) and tolerance > 0 else 0.0
+    max_error = payload.get("max_error")
+    if not isinstance(max_error, (int, float)) or not math.isfinite(max_error) or \
+            max_error > admitted:
+        errors.append("DIRAC-025 maximum error is non-finite or exceeds tolerance")
+    if payload.get("sample_count") != 5 or payload.get("spin_state_count") != 10:
+        errors.append("DIRAC-025 momentum/spin census is incomplete")
+    required_values = {
+        "c19_continuum_speed": math.sqrt(12.0),
+        "c19_continuum_speed_squared": 12.0,
+        "rest_angular_frequency": 19.0,
+    }
+    values = payload.get("native_values")
+    if not isinstance(values, dict) or set(values) != set(required_values) or any(
+            not isinstance(values.get(key), (int, float)) or
+            not math.isfinite(values[key]) or
+            abs(values[key] - expected) > admitted
+            for key, expected in required_values.items()):
+        errors.append("DIRAC-025 native values are incomplete or incorrect")
+    component_errors = payload.get("errors")
+    required_errors = {
+        f"sample_{sample}_{name}"
+        for sample in range(5)
+        for name in (
+            "operator_square", "positive_energy_spectrum",
+            "spin_0_mean", "spin_0_second_moment", "spin_0_variance",
+            "spin_0_rms_clock", "spin_0_pythagorean", "spin_0_speed",
+            "spin_1_mean", "spin_1_second_moment", "spin_1_variance",
+            "spin_1_rms_clock", "spin_1_pythagorean", "spin_1_speed",
+        )
+    } | {
+        "checkpoint_three_four_five", "checkpoint_four_three_five",
+        "checkpoint_sqrt_three_half",
+    }
+    if not isinstance(component_errors, dict) or \
+            set(component_errors) != required_errors or any(
+                not isinstance(value, (int, float)) or not math.isfinite(value) or
+                abs(value) > admitted for value in component_errors.values()):
+        errors.append("DIRAC-025 component errors are incomplete or exceed tolerance")
+    required_checks = {
+        "arbitrary_three_direction_momenta_pass",
+        "both_positive_energy_spin_states_pass",
+        "known_relativistic_ratios_pass",
+        "transverse_substitution_is_rejected",
+        "unnormalized_direction_is_rejected",
+        "wrong_rest_mass_is_rejected",
+    }
+    checks = payload.get("checks")
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-025 required checks are incomplete or false")
+    checkpoints = payload.get("known_checkpoints")
+    expected_checkpoints = {
+        "three_four_five": (3.0 / 5.0, 4.0 / 5.0),
+        "four_three_five": (4.0 / 5.0, 3.0 / 5.0),
+        "sqrt_three_half": (math.sqrt(3.0) / 2.0, 1.0 / 2.0),
+    }
+    if not isinstance(checkpoints, dict) or set(checkpoints) != set(expected_checkpoints):
+        errors.append("DIRAC-025 known-ratio controls are incomplete")
+    else:
+        for key, (speed, clock) in expected_checkpoints.items():
+            row = checkpoints.get(key)
+            if not isinstance(row, dict) or set(row) != {
+                    "speed_fraction", "expected_clock_ratio",
+                    "observed_clock_ratio", "error"} or any(
+                        not isinstance(value, (int, float)) or not math.isfinite(value)
+                        for value in row.values()) or \
+                    abs(row["speed_fraction"] - speed) > admitted or \
+                    abs(row["expected_clock_ratio"] - clock) > admitted or \
+                    abs(row["observed_clock_ratio"] - clock) > admitted or \
+                    row["error"] > admitted:
+                errors.append(f"DIRAC-025 known-ratio control is invalid: {key}")
+    negative = payload.get("negative_controls")
+    required_negative = {
+        "unnormalized_direction_operator_square_defect",
+        "transverse_direction_longitudinal_relation_defect",
+        "wrong_rest_mass_clock_defect",
+    }
+    if not isinstance(negative, dict) or set(negative) != required_negative or any(
+            not isinstance(negative.get(key), (int, float)) or
+            not math.isfinite(negative[key]) for key in required_negative):
+        errors.append("DIRAC-025 negative controls are malformed")
+    elif negative["unnormalized_direction_operator_square_defect"] <= 1.0 or \
+            negative["transverse_direction_longitudinal_relation_defect"] <= 0.1 or \
+            negative["wrong_rest_mass_clock_defect"] <= 1.0e-3:
+        errors.append("DIRAC-025 negative controls are ineffective")
+    required_exclusions = {
+        "a classical hidden path moving at c_eff",
+        "an exact finite-spacing native velocity identity",
+        "a localized nonlinear electron",
+        "an SI calibration",
+        "electromagnetic coupling or a magnetic g-factor",
+    }
+    if not required_exclusions <= set(payload.get("excluded_claims", [])):
+        errors.append("DIRAC-025 excluded-claim boundary is incomplete")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -933,18 +1043,20 @@ def validate(run_builds: bool = True) -> list[str]:
     status_022 = load(STATUS_022)
     status_023 = load(STATUS_023)
     status_024 = load(STATUS_024)
+    status_025 = load(STATUS_025)
     readiness_019 = load(READINESS_019)
     readiness_020 = load(READINESS_020)
     readiness_021 = load(READINESS_021)
     readiness_022 = load(READINESS_022)
     readiness_023 = load(READINESS_023)
     readiness_024 = load(READINESS_024)
-    if status.get("highest_passed_gate") != "DIRAC-024":
-        errors.append("status does not stop at DIRAC-024")
+    readiness_025 = load(READINESS_025)
+    if status.get("highest_passed_gate") != "DIRAC-025":
+        errors.append("status does not stop at DIRAC-025")
     if status.get("next_gate") != \
-            "DIRAC_VELOCITY_VARIANCE_CLOCK_IDENTITY":
-        errors.append("velocity-variance/clock identity is not the next boundary")
-    if status.get("completed") != 24 or status.get("total") != 24:
+            "DIRAC_MAGNETIC_PROBE_AND_G_FACTOR":
+        errors.append("magnetic probe is not the next boundary")
+    if status.get("completed") != 25 or status.get("total") != 25:
         errors.append("gate counts are incorrect")
     expected_gate_017 = "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
     if status.get("gates", {}).get("DIRAC-017") != expected_gate_017:
@@ -1197,7 +1309,38 @@ def validate(run_builds: bool = True) -> list[str]:
                 "LeanDiracDerivation-DIRAC-024.zip",
                 "LeanDiracDerivation-DIRAC-024.zip.sha256"]:
         errors.append("DIRAC-024 release readiness is invalid")
-    publication = "LeanDirac.current_highest_gate_is_dirac024"
+    if status_025.get("status") != \
+            "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY" or \
+            status_025.get("formal_theorem") != \
+            "LeanDirac.dirac025_velocity_variance_clock_identity":
+        errors.append("DIRAC-025 scoped velocity-clock result is not a formal PASS")
+    red_team_025 = status_025.get("red_team", {})
+    for key, expected in (
+            ("new_action_term", False), ("new_native_field", False),
+            ("fitted_coefficient", False), ("velocity_operator_inserted", False),
+            ("variance_answer_inserted", False),
+            ("same_state_and_inner_product_used", True),
+            ("arbitrary_nonzero_three_direction_momentum_proved", True),
+            ("operator_square_proved", True),
+            ("current_expectation_bridge_proved", True),
+            ("first_and_second_moments_proved", True),
+            ("clock_identity_proved", True),
+            ("known_relativistic_ratio_controls_pass", True),
+            ("negative_controls_rejected", True),
+            ("classical_hidden_path_claim_excluded", True),
+            ("exact_finite_spacing_claim_excluded", True),
+            ("localized_electron_claim_excluded", True)):
+        if red_team_025.get(key) is not expected:
+            errors.append(f"DIRAC-025 red-team contract differs: {key}")
+    if red_team_025.get("critical_findings") or red_team_025.get("high_findings"):
+        errors.append("DIRAC-025 retains critical/high red-team findings")
+    if readiness_025.get("status") != "PASS" or \
+            readiness_025.get("highest_gate") != "DIRAC-025" or \
+            readiness_025.get("package_artifacts") != [
+                "LeanDiracDerivation-DIRAC-025.zip",
+                "LeanDiracDerivation-DIRAC-025.zip.sha256"]:
+        errors.append("DIRAC-025 release readiness is invalid")
+    publication = "LeanDirac.current_highest_gate_is_dirac025"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -1213,7 +1356,7 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE_024.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_025.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
     cumulative = set(evidence.get("cumulative_numerical_evidence", []))
     expected_evidence = {
@@ -1230,6 +1373,7 @@ def validate(run_builds: bool = True) -> list[str]:
         EVIDENCE_022.relative_to(ROOT).as_posix(),
         EVIDENCE_023.relative_to(ROOT).as_posix(),
         EVIDENCE_024.relative_to(ROOT).as_posix(),
+        EVIDENCE_025.relative_to(ROOT).as_posix(),
     }
     if cumulative != expected_evidence:
         errors.append("evidence manifest does not retain every admitted reconstruction")
@@ -1246,6 +1390,7 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(validate_dirac022_evidence(load(EVIDENCE_022)))
     errors.extend(validate_dirac023_evidence(load(EVIDENCE_023)))
     errors.extend(validate_dirac024_evidence(load(EVIDENCE_024)))
+    errors.extend(validate_dirac025_evidence(load(EVIDENCE_025)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:
@@ -1287,8 +1432,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-024")
-    print("next_gate=DIRAC_VELOCITY_VARIANCE_CLOCK_IDENTITY")
+    print("highest_passed_gate=DIRAC-025")
+    print("next_gate=DIRAC_MAGNETIC_PROBE_AND_G_FACTOR")
     return 0
 
 

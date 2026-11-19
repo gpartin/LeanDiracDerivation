@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac024`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac025`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -29,7 +29,8 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-021 | PASS (scoped action-derived rest clock) | Follows the rest coefficient already selected from the native action into the zero-momentum four-component Hamiltonian. It proves explicit `+chi0` and `-chi0` rest energies, proves both exact phase evolutions satisfy their first-order Dirac time equations, and derives the doubled relative phase from their quotient. It also proves the native periods, inverse-mass scale, and native-coordinate reduced Compton length. | Derive an actual cross-branch velocity observable and prove the free-Dirac zitterbewegung frequency and amplitude without treating a pure global phase as observable. |
 | DIRAC-022 | PASS (scoped action-derived free zitterbewegung) | Reuses the Hamiltonian momentum-response velocity and the proved opposite rest branches. A normalized coherent state yields `c_eff cos(2 chi0 t)`, an integrated position law, amplitude `sqrt(12)/38`, and peak-to-peak reduced Compton length. Pure, same-sign, incoherent, and wrong-mass controls enforce the hypotheses. | Generalize to finite momentum and then test whether a localized native live-chi carrier realizes the same observable. |
 | DIRAC-023 | PASS (scoped continuum phase harmony and time dilation) | Evaluates the inherited plane-wave phase on the packet trajectory selected by the already-derived current velocity. The phase rate is `chi0^2/E`; its rest-clock ratio is exactly `sqrt(1-|v|^2/c_eff^2)`, the energy ratio is reciprocal, and every nonzero directional component satisfies `v_group*v_phase=c_eff^2`. It also carries DIRAC-022's exact `zitter amplitude * zitter frequency = c_eff` identity into the cumulative certificate. | Test the exact projective relation between one zitter period and the existing `2π` spinor sign change, without claiming causal identity. |
-| DIRAC-024 | PASS (scoped projective zitter/spin cycle) | Proves one action-derived zitter period negates the coherent state while returning density, velocity and position, and two periods return the state. On both native copies these endpoints equal the independently derived cubical `2π` sign and `4π` return. The rest Hamiltonian and spatial spin generators remain explicitly distinct. | Test whether the velocity operator's light-speed spectrum and subluminal positive-frequency mean produce an rms fluctuation exactly equal to the DIRAC-023 clock factor. |
+| DIRAC-024 | PASS (scoped projective zitter/spin cycle) | Proves one action-derived zitter period negates the coherent state while returning density, velocity and position, and two periods return the state. On both native copies these endpoints equal the independently derived cubical `2π` sign and `4π` return. The rest Hamiltonian and spatial spin generators remain explicitly distinct. | Construct the longitudinal velocity operator from the inherited momentum responses and compare its same-state variance with the independently derived moving clock. |
+| DIRAC-025 | PASS (scoped velocity-variance/clock identity) | Proves the Hamiltonian-derived longitudinal velocity operator squares to `c_eff^2`; its mean is the current velocity and its same-state normalized rms fluctuation equals the DIRAC-023 moving/rest clock ratio for every nonzero 3D positive-frequency mode. | Determine whether a uniquely derived reciprocal phase probe yields the standard magnetic response without inserting a Pauli term or coefficient. |
 
 ## Current theorem boundary
 
@@ -84,6 +85,11 @@ DIRAC-024 then proves the projective endpoint bridge between the independently
 derived zitter beat and cubical spinor rotation. It does not identify their
 generators, claim that zitterbewegung causes spin, or establish a localized
 nonlinear carrier.
+DIRAC-025 then derives a longitudinal velocity variance from the existing
+Hamiltonian response and proves its normalized rms equals the independently
+derived moving clock factor. It does not reinterpret the operator spectrum as
+a classical trajectory or extend the result beyond the controlled continuum
+sector.
 
 ## Axiom policy
 

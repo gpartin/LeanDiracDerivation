@@ -5,11 +5,11 @@ type: software
 authors:
   - family-names: "Partin"
     given-names: "G. D."
-version: "0.24.0-research-dev"
+version: "0.25.0-research-dev"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 abstract: >-
-  A noncanonical Lean 4 research derivation through DIRAC-024. It connects a
+  A noncanonical Lean 4 research derivation through DIRAC-025. It connects a
   positive two-field C19 action to a massive C19 Klein-Gordon tangent and
   proves that a cubical four-component Dirac Hamiltonian squares to its
   continuum symbol. It controls lattice/time corrections and derives the
@@ -40,6 +40,11 @@ abstract: >-
   equal the separately derived cubical 2pi and 4pi spinor actions on both
   retained copies, while the temporal and spatial generators are proved
   distinct.
+  It further derives the longitudinal velocity operator from the existing
+  Hamiltonian momentum response and proves that its normalized rms fluctuation
+  in every nonzero positive-frequency mode equals the independently derived
+  moving/rest phase-clock ratio, with an exact velocity-clock Pythagorean
+  identity.
   Arbitrary nonlocal
   or flavor-mixing roots, exact native finite-spacing packet evolution,
   uniform fixed-physical-time convergence, nonlinear realization on a

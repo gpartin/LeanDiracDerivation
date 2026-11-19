@@ -178,6 +178,18 @@ that the temporal and spatial generators remain distinct. It does not equate
 time evolution with spatial rotation or simulate a localized nonlinear
 electron.
 
+## Independent DIRAC-025 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac025_velocity_clock/validate_dirac025.py
+```
+
+The program reconstructs the four-component Hamiltonian and velocity
+matrices, checks five oblique momenta and both positive-energy spin states,
+reproduces the exact `3/5 -> 4/5`, `4/5 -> 3/5`, and
+`sqrt(3)/2 -> 1/2` ratios, and rejects unnormalized-direction,
+transverse-direction and wrong-mass inputs.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -185,11 +197,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 24-gate dependency and claim boundary.
+The first command verifies the complete 25-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-024.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-025.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

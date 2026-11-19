@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-024
+## Established through DIRAC-025
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -191,6 +191,17 @@
   the matching projective endpoints therefore do not identify the generators.
 - Independent reconstruction confirms all three axes, both copies and five
   times, and rejects half-period and wrong-period controls.
+- For every nonzero three-dimensional momentum, the unit-momentum combination
+  of the three Hamiltonian-derived velocity operators squares to `c_eff^2`.
+- Its mean in any nonzero positive-frequency eigenstate is the existing
+  longitudinal current velocity, while its second moment is `c_eff^2` in the
+  same state and inner product.
+- The resulting normalized rms velocity fluctuation equals the independently
+  derived moving/rest phase-clock ratio exactly and obeys
+  `(v/c_eff)^2 + (Delta v/c_eff)^2 = 1`.
+- Independent reconstruction confirms both positive-energy spin states at
+  five oblique momenta, the `3/5 -> 4/5`, `4/5 -> 3/5`, and
+  `sqrt(3)/2 -> 1/2` controls, and rejects three wrong substitutions.
 
 ## Not established
 
@@ -232,6 +243,8 @@
 - A theorem that zitterbewegung physically causes spin one-half.
 - A theorem that temporal evolution is identical to spatial rotation.
 - A localized nonlinear realization of the projective zitter/spin cycle.
+- A classical hidden path inferred from the velocity-operator spectrum.
+- An exact finite-spacing or nonlinear live-chi velocity-clock identity.
 
 The theorem uses a conditional prepared background; it does not provide an
 origin story. The chosen action is not uniquely forced. The cubical square

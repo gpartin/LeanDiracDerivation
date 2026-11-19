@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-024
+# Publication-quality audit through DIRAC-025
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac024`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac025`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -125,6 +125,13 @@ rotations on both retained copies. This is not an identification of the
 temporal and spatial generators and does not prove that zitterbewegung causes
 spin or that a localized nonlinear native electron executes either cycle.
 
+DIRAC-025 closes the velocity-variance/clock link without defining either
+side from the other. The operator comes from the inherited Hamiltonian
+momentum response, the mean from the inherited current, and the clock from
+the independently derived phase accumulation. The same-state second moment
+then fixes the variance. The theorem explicitly excludes a classical hidden
+light-speed trajectory and exact native finite-spacing dynamics.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -135,7 +142,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, 022, 023, and 024 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, 022, 023, 024, and 025 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;

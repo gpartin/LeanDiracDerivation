@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.5.0",
-  "gate": "DIRAC-024",
+  "schema_version": "1.6.0",
+  "gate": "DIRAC-025",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac024 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac025 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -69,7 +69,8 @@
     "Derived the packet-center phase rate, energy/clock reciprocity and relativistic speed factor from the existing dispersion, transport velocity and rest clock.",
     "Surfaced the existing zitter amplitude-frequency scale lock without modifying the action, mass, speed or observable.",
     "Derived the zitter period from the already-proved opposite-energy beat and proved one-cycle state antiperiodicity, two-cycle return, and one-cycle observable periodicity without inserting a phase reset or rotation rule.",
-    "Bridged the one-cycle/two-cycle temporal endpoints to the independently derived 2pi/4pi cubical spinor endpoints on both retained copies while proving the temporal and spatial generators remain distinct."
+    "Bridged the one-cycle/two-cycle temporal endpoints to the independently derived 2pi/4pi cubical spinor endpoints on both retained copies while proving the temporal and spatial generators remain distinct.",
+    "Constructed the longitudinal velocity operator only from the existing Hamiltonian momentum responses, proved its square and same-state moments, and derived the exact equality between its normalized rms fluctuation and the independently derived moving clock ratio without adding a velocity, clock or hidden-path rule."
   ],
   "declared_starting_hypotheses": [
     "the noncanonical positive two-field local-plus-exterior-area C19 action",
@@ -104,8 +105,10 @@
     "localized nonlinear realization of the projective zitter/spin-cycle correspondence",
     "a causal identification of zitterbewegung with spin",
     "an SI-calibrated moving electron clock",
+    "a classical hidden light-speed path inferred from the velocity operator",
+    "an exact native finite-spacing or nonlinear live-chi velocity-clock identity",
     "electromagnetic coupling and magnetic g-factor",
     "physical electron identity"
   ],
-  "caveat": "DIRAC-024 proves that one derived zitter observable cycle returns density, velocity and position while negating the coherent state, and that the same projective endpoint action is produced by the independently derived cubical 2pi spinor rotation on both copies; two cycles and 4pi return the state. It keeps temporal and spatial generators distinct and does not prove causal spin origin, exact finite-spacing dynamics, a localized nonlinear native electron, unrestricted live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
+  "caveat": "DIRAC-025 derives the longitudinal velocity operator from the existing Hamiltonian momentum response and proves that its normalized rms fluctuation in the same positive-frequency state equals the independently derived moving/rest phase-clock ratio. It does not infer a classical hidden trajectory, exact finite-spacing dynamics, a localized nonlinear native electron, unrestricted live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
 }

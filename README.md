@@ -6,7 +6,7 @@ This repository is the production Lean 4 environment for a noncanonical
 attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
-All **24 of 24** derivation gates pass. The chain begins with
+All **25 of 25** derivation gates pass. The chain begins with
 one positive complex-Psi/complex-chi C19 action, proves that its restriction
 and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
@@ -100,6 +100,13 @@ independently negates both native copies at `2π` and returns them at `4π`.
 Lean proves these endpoint actions agree on both copies while retaining the
 distinct temporal and spatial generators. No rotation-frequency rule, phase
 reset, action term, field or coefficient is added.
+DIRAC-025 then constructs the longitudinal velocity operator from the three
+existing Hamiltonian momentum responses. For every nonzero momentum it
+squares to `c_eff^2`; in the same positive-frequency state its normalized rms
+fluctuation is exactly the DIRAC-023 moving/rest phase-clock ratio. Thus
+`(v/c_eff)^2 + (Delta v/c_eff)^2 = 1`, including the exact `3/5,4/5,5/5`
+control. No velocity rule, clock rule, action term, field or coefficient is
+added, and no classical hidden light-speed path is claimed.
 
 ## Current status
 
@@ -124,6 +131,7 @@ reset, action term, field or coefficient is added.
 | DIRAC-022 | PASS (scoped action-derived free zitterbewegung) | The DIRAC-013 velocity and DIRAC-021 rest phases give an exact coherent cross-branch velocity oscillation at `2 chi0=38`; its integrated amplitude is `sqrt(12)/38` and peak-to-peak excursion is `sqrt(12)/19`. Pure, same-sign and incoherent controls have zero signal. Localized native-electron motion remains outside this gate. |
 | DIRAC-023 | PASS (scoped continuum phase harmony and time dilation) | Following the inherited plane-wave phase along the current-derived packet trajectory gives phase rate `chi0^2/E`; its rest-clock ratio is exactly the relativistic speed factor, the energy ratio is reciprocal, and directional group and phase velocities multiply to `c_eff^2`. The inherited zitter amplitude-frequency product is exactly `c_eff`. |
 | DIRAC-024 | PASS (scoped projective zitter/spin cycle) | One action-derived zitter period returns density, velocity and position while negating the coherent state; two periods return it. Those endpoint actions equal the independently derived cubical `2π` sign and `4π` return on both native copies, while the temporal and spatial generators remain distinct. |
+| DIRAC-025 | PASS (scoped velocity-variance/clock identity) | The Hamiltonian-derived longitudinal velocity operator squares to `c_eff^2`; its same-state mean and second moment give an rms fluctuation exactly equal to the moving/rest phase-clock ratio for every nonzero 3D positive-frequency mode. |
 
 See [the complete proof chain](docs/PROOF_CHAIN.md) for every gate and its
 claim boundary.
@@ -138,7 +146,7 @@ python scripts/verify_release.py
 
 The verifier builds every production module, audits the compiled Lean
 environment, checks role-specific manifests, runs adversarial audit controls,
-and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--024
+and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--025
 evidence, audits the final theorem and publication metadata, and verifies the
 release contract. It is read-only: it
 does not install Git hooks or alter the index.
@@ -147,8 +155,8 @@ does not install Git hooks or alter the index.
 
 - [Native framework](docs/FRAMEWORK.md): fields, constants, geometry, action,
   equations, and update.
-- [Formal proof chain](docs/PROOF_CHAIN.md): all 24 gates and theorem boundary.
-- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-024 establish.
+- [Formal proof chain](docs/PROOF_CHAIN.md): all 25 gates and theorem boundary.
+- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-025 establish.
 - [Reproducibility](docs/REPRODUCIBILITY.md): rebuild instructions.
 - [Publication-quality audit](docs/WORLD_CLASS_AUDIT.md): findings, repairs,
   residual scientific boundaries, and acceptance tests.
@@ -158,8 +166,10 @@ does not install Git hooks or alter the index.
   anti-circularity checks, controls, scope, and release findings.
 - [DIRAC-024 red team](docs/DIRAC024_RED_TEAM.md): projective-cycle bridge,
   generator-separation checks, controls, scope, and release findings.
-- [DIRAC-025 research target](docs/DIRAC025_RESEARCH_TARGET.md): the candidate
-  velocity-fluctuation/relativistic-clock identity found in the full chain.
+- [DIRAC-025 red team](docs/DIRAC025_RED_TEAM.md): velocity-variance/clock
+  identity, anti-circularity checks, controls, scope, and release findings.
+- [DIRAC-026 research target](docs/DIRAC026_RESEARCH_TARGET.md): a guarded
+  attempt to derive magnetic response without inserting a Pauli term.
 - [Related work and attribution](docs/RELATED_WORK.md): the geometric
   lattice-fermion lineage and the repository's narrower formal contribution.
 - [Changelog](CHANGELOG.md): current cleanup and historical milestones.
@@ -192,6 +202,8 @@ does not install Git hooks or alter the index.
   packet-center clock, speed-factor, and scale-lock reconstruction.
 - `experiments/dirac024_projective_zitter_spin/`: independent one-cycle
   antiperiod, two-cycle return, both-copy rotation bridge, and controls.
+- `experiments/dirac025_velocity_clock/`: independent arbitrary-momentum
+  velocity moments, clock identity, known ratios, and negative controls.
 
 ## Proof-security boundary
 

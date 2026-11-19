@@ -206,3 +206,8 @@ copies. The rest Hamiltonian and spatial spin generator remain distinct, so
 no temporal/spatial identification, rotation rule, phase reset, action term,
 field, coefficient, stencil change, recurrence change or governing equation
 is introduced.
+
+DIRAC-025 likewise leaves the framework unchanged. Its longitudinal velocity
+operator is a normalized combination of the three already-derived Hamiltonian
+momentum responses. The variance/clock theorem adds no native observable,
+force, field, coefficient, stencil weight, recurrence or governing equation.

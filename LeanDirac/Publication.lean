@@ -1,9 +1,9 @@
-import LeanDirac.Dirac024
+import LeanDirac.Dirac025
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-024.
+Sole cumulative publication root through DIRAC-025.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -122,6 +122,15 @@ energy branches while the selected spatial spin generator acts equally on
 them, so the temporal and rotational generators remain explicitly distinct.
 This is a projective continuum-sector identity, not a causal claim that
 zitterbewegung generates spin or a localized nonlinear-electron result.
+
+DIRAC-025 derives a longitudinal velocity observable from the three existing
+Hamiltonian momentum responses.  For every nonzero three-dimensional momentum,
+the resulting operator squares to `c_eff^2`.  Its first and second moments in
+the same positive-frequency state give a variance whose normalized rms is
+exactly the moving phase-clock ratio derived in DIRAC-023.  Equivalently, the
+normalized variance and transport-speed fractions obey a Pythagorean identity.
+No new action, field, coefficient, velocity rule, clock rule, or classical
+hidden path is introduced.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -226,6 +235,16 @@ theorem current_highest_gate_is_dirac024 :
   completedChainThroughPhaseHarmony := current_highest_gate_is_dirac023
   projectiveZitterSpinCycle := dirac024_projective_zitter_spin_cycle
 
+structure CumulativeDirac025Certificate : Prop where
+  completedChainThroughProjectiveCycle : CumulativeDirac024Certificate
+  velocityVarianceClockIdentity : Dirac025VelocityClockCertificate
+
+theorem current_highest_gate_is_dirac025 :
+    CumulativeDirac025Certificate where
+  completedChainThroughProjectiveCycle := current_highest_gate_is_dirac024
+  velocityVarianceClockIdentity :=
+    dirac025_velocity_variance_clock_identity
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
@@ -238,3 +257,4 @@ end LeanDirac
 #print axioms LeanDirac.current_highest_gate_is_dirac022
 #print axioms LeanDirac.current_highest_gate_is_dirac023
 #print axioms LeanDirac.current_highest_gate_is_dirac024
+#print axioms LeanDirac.current_highest_gate_is_dirac025
