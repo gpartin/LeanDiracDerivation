@@ -1,8 +1,8 @@
 {
   "schema_version": "1.4.0",
-  "gate": "DIRAC-022",
+  "gate": "DIRAC-023",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac022 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac023 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -63,7 +63,11 @@
     "Reused the DIRAC-013 Hamiltonian momentum-response velocity; no velocity matrix or oscillation rule was added.",
     "Derived the factor-two frequency from interference of the independently proved opposite-energy phases in a normalized state.",
     "Integrated the proved velocity expectation and proved the amplitude bound; no native position field or force was introduced.",
-    "Retained pure-branch, same-sign, incoherent-mixture and wrong-mass controls and kept localized native-electron motion outside the claim."
+    "Retained pure-branch, same-sign, incoherent-mixture and wrong-mass controls and kept localized native-electron motion outside the claim.",
+    "Followed the existing plane-wave phase along the independently derived current trajectory instead of inserting a Lorentz factor or clock rule.",
+    "Proved the directional phase velocity keeps phase fixed before using it in the group/phase reciprocity theorem.",
+    "Derived the packet-center phase rate, energy/clock reciprocity and relativistic speed factor from the existing dispersion, transport velocity and rest clock.",
+    "Surfaced the existing zitter amplitude-frequency scale lock without modifying the action, mass, speed or observable."
   ],
   "declared_starting_hypotheses": [
     "the noncanonical positive two-field local-plus-exterior-area C19 action",
@@ -94,8 +98,10 @@
     "an observable clock signal in a pure energy eigenstate",
     "an SI electron mass or SI Compton wavelength",
     "localized nonlinear native-electron zitterbewegung",
+    "exact finite-spacing phase harmony or time dilation",
+    "an SI-calibrated moving electron clock",
     "electromagnetic coupling and magnetic g-factor",
     "physical electron identity"
   ],
-  "caveat": "DIRAC-022 derives the standard free-continuum zitterbewegung expectation from the already-derived mass, rest phases and velocity operator. It does not prove a localized nonlinear native electron trembles, an SI frequency or length, uniform fixed-physical-time native-C19 convergence, unrestricted live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
+  "caveat": "DIRAC-023 derives continuum phase harmony and relativistic packet-center clock dilation from the already-derived dispersion, current velocity and action-selected rest clock, and carries forward DIRAC-022's exact zitter amplitude-frequency scale lock. It does not prove exact finite-spacing time dilation, a localized nonlinear native electron, an SI electron clock, unrestricted live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
 }

@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--022 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--023 derivation contract."""
 
 from __future__ import annotations
 
@@ -61,9 +61,12 @@ def main() -> int:
     evidence_022 = json.loads((
         ROOT / "experiments" / "dirac022_zitterbewegung" / "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_023 = json.loads((
+        ROOT / "experiments" / "dirac023_phase_harmony" / "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_022": status.get("highest_passed_gate") == "DIRAC-022",
-        "all_twenty_two_gates_complete": status.get("completed") == 22,
+        "highest_gate_is_023": status.get("highest_passed_gate") == "DIRAC-023",
+        "all_twenty_three_gates_complete": status.get("completed") == 23,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -145,9 +148,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_022": contains(
+        "publication_stops_at_023": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac022"),
+            "theorem current_highest_gate_is_dirac023"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -338,6 +341,24 @@ def main() -> int:
             and contains("LeanDirac/Dirac022.lean",
                          "theorem parametric_rest_velocity_tracks_supplied_mass")
         ),
+        "phase_velocity_has_operational_definition": contains(
+            "LeanDirac/Dirac023.lean",
+            "theorem directional_phase_velocity_keeps_plane_phase_fixed"),
+        "packet_phase_is_followed_on_current_trajectory": contains(
+            "LeanDirac/Dirac023.lean",
+            "theorem plane_phase_along_transport_is_accumulated_clock"),
+        "packet_center_phase_rate_is_derived": contains(
+            "LeanDirac/Dirac023.lean",
+            "theorem continuum_transport_phase_rate_is_mass_square_over_energy"),
+        "relativistic_clock_factor_is_derived": contains(
+            "LeanDirac/Dirac023.lean",
+            "theorem continuum_clock_ratio_is_sqrt_speed_factor"),
+        "group_phase_reciprocity_is_derived": contains(
+            "LeanDirac/Dirac023.lean",
+            "theorem directional_group_phase_velocity_reciprocity"),
+        "zitter_speed_lock_is_retained": contains(
+            "LeanDirac/Dirac023.lean",
+            "theorem zitter_scale_lock_is_emergent_speed"),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -387,6 +408,11 @@ def main() -> int:
             evidence_022.get("status") == "PASS"
             and evidence_022.get("max_error", 1.0) <= 2.0e-11
             and all(evidence_022.get("checks", {}).values())),
+        "independent_phase_harmony_check_passes": (
+            evidence_023.get("status") == "PASS"
+            and evidence_023.get("max_error", 1.0) <= 2.0e-11
+            and evidence_023.get("sample_count") == 6
+            and all(evidence_023.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -396,7 +422,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC022_READY" if passed else "DIRAC022_OPEN",
+        "verdict": "DIRAC023_READY" if passed else "DIRAC023_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

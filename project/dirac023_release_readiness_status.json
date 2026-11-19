@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-023",
+  "highest_gate": "DIRAC-023",
+  "status": "PASS",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac023",
+  "package_artifacts": [
+    "LeanDiracDerivation-DIRAC-023.zip",
+    "LeanDiracDerivation-DIRAC-023.zip.sha256"
+  ],
+  "checks": [
+    "Lean module and cumulative publication theorem compile",
+    "axiom reports contain only propext, Classical.choice and Quot.sound",
+    "independent momentum reconstruction passes finite schema checks",
+    "wrong-transport and wrong-rest-frequency controls pass",
+    "action, native fields, C19 geometry, recurrence and action-derived mass remain unchanged",
+    "claim boundary excludes exact finite-spacing, SI, localized-electron and electromagnetic claims"
+  ],
+  "claim_boundary": "Release readiness certifies only the scoped continuum phase-harmony and packet-center time-dilation theorem."
+}

@@ -1,4 +1,4 @@
-"""Final read-only adversarial audit for DIRAC-001 through DIRAC-022."""
+"""Final read-only adversarial audit for DIRAC-001 through DIRAC-023."""
 
 from __future__ import annotations
 
@@ -33,18 +33,19 @@ def main() -> int:
     )
     clock_status = load("project/dirac021_rest_clock_status.json")
     zitter_status = load("project/dirac022_zitterbewegung_status.json")
-    readiness = load("project/dirac022_release_readiness_status.json")
+    phase_status = load("project/dirac023_phase_harmony_status.json")
+    readiness = load("project/dirac023_release_readiness_status.json")
     boundary = status.get("claim_boundary", "").lower()
 
     checks = {
-        "all_twenty_two_gates_have_honest_passing_status": (
-            status.get("completed") == 22
-            and status.get("highest_passed_gate") == "DIRAC-022"
+        "all_twenty_three_gates_have_honest_passing_status": (
+            status.get("completed") == 23
+            and status.get("highest_passed_gate") == "DIRAC-023"
             and all(
                 value == "PASS" for gate, value in status.get("gates", {}).items()
                 if gate not in (
                     "DIRAC-017", "DIRAC-018", "DIRAC-019", "DIRAC-020",
-                    "DIRAC-021", "DIRAC-022"
+                    "DIRAC-021", "DIRAC-022", "DIRAC-023"
                 )
             )
             and status.get("gates", {}).get("DIRAC-017") ==
@@ -59,6 +60,8 @@ def main() -> int:
                 "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK"
             and status.get("gates", {}).get("DIRAC-022") ==
                 "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG"
+            and status.get("gates", {}).get("DIRAC-023") ==
+                "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION"
         ),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
@@ -69,7 +72,7 @@ def main() -> int:
         "clean_reproduction_gate_passes": reproduction.get("status") == "PASS",
         "current_release_readiness_passes": readiness.get("status") == "PASS",
         "final_theorem_is_action_rooted": (
-            proof.get("highest_gate") == "DIRAC-022"
+            proof.get("highest_gate") == "DIRAC-023"
             and "LeanDirac/Dirac015.lean" in proof.get("files", {})
             and "LeanDirac/Dirac016.lean" in proof.get("files", {})
             and "LeanDirac/Dirac017.lean" in proof.get("files", {})
@@ -79,6 +82,7 @@ def main() -> int:
             and "LeanDirac/Dirac020.lean" in proof.get("files", {})
             and "LeanDirac/Dirac021.lean" in proof.get("files", {})
             and "LeanDirac/Dirac022.lean" in proof.get("files", {})
+            and "LeanDirac/Dirac023.lean" in proof.get("files", {})
             and "LeanDirac/Publication.lean" in proof.get("files", {})
             and all(audit.get("checks", {}).get(name) is True for name in (
                 "native_action_contains_no_dirac_matrix_spinor_or_projector",
@@ -90,7 +94,7 @@ def main() -> int:
         ),
         "publication_names_final_theorem": (
             proof.get("publication_theorem") ==
-                "LeanDirac.current_highest_gate_is_dirac022"
+                "LeanDirac.current_highest_gate_is_dirac023"
             and reproduction.get("formal_theorem") ==
                 "LeanDirac.lfm_free_dirac_continuum_limit"
             and reproduction.get("publication_theorem") ==
@@ -108,6 +112,8 @@ def main() -> int:
             and clock_status.get("publication_theorem") ==
                 "LeanDirac.current_highest_gate_is_dirac021"
             and zitter_status.get("publication_theorem") ==
+                "LeanDirac.current_highest_gate_is_dirac022"
+            and phase_status.get("publication_theorem") ==
                 proof.get("publication_theorem")
         ),
         "copy_translation_extension_is_scoped": (
@@ -248,6 +254,25 @@ def main() -> int:
             and not zitter_status.get("red_team", {}).get("critical_findings")
             and not zitter_status.get("red_team", {}).get("high_findings")
         ),
+        "phase_harmony_and_time_dilation_are_scoped": (
+            phase_status.get("status") ==
+                "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION"
+            and phase_status.get("action_changed") is False
+            and phase_status.get("native_field_changed") is False
+            and phase_status.get("coefficient_changed") is False
+            and phase_status.get("red_team", {}).get(
+                "lorentz_factor_assumed") is False
+            and phase_status.get("red_team", {}).get(
+                "phase_velocity_operationally_verified") is True
+            and phase_status.get("red_team", {}).get(
+                "packet_phase_evaluated_on_independently_derived_current_trajectory") is True
+            and phase_status.get("red_team", {}).get(
+                "clock_slowdown_derived_from_phase_accumulation") is True
+            and phase_status.get("red_team", {}).get(
+                "exact_finite_spacing_claim_excluded") is True
+            and not phase_status.get("red_team", {}).get("critical_findings")
+            and not phase_status.get("red_team", {}).get("high_findings")
+        ),
         "claim_boundary_is_retained": all(
             phrase in boundary for phrase in (
                 "conditional free-dirac continuum derivation",
@@ -264,8 +289,8 @@ def main() -> int:
 
     print(json.dumps({
         "checks": checks,
-        "verdict": "DIRAC_001_022_FINAL_AUDIT_PASS" if not errors
-            else "DIRAC_001_022_FINAL_AUDIT_FAIL",
+        "verdict": "DIRAC_001_023_FINAL_AUDIT_PASS" if not errors
+            else "DIRAC_001_023_FINAL_AUDIT_FAIL",
         "errors": errors,
     }, indent=2))
     return 1 if errors else 0

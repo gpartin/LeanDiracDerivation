@@ -254,6 +254,35 @@ def main() -> int:
     )
     if not guard.validate_dirac022_evidence(inflated_claim_022):
         raise AssertionError("inflated DIRAC-022 claim boundary was accepted")
+    payload_023 = guard.load(guard.EVIDENCE_023)
+    if guard.validate_dirac023_evidence(payload_023):
+        raise AssertionError("passing DIRAC-023 evidence was rejected")
+    broken_clock_023 = copy.deepcopy(payload_023)
+    broken_clock_023["checks"]["clock_slowdown_matches_speed_factor"] = False
+    if not guard.validate_dirac023_evidence(broken_clock_023):
+        raise AssertionError("failed DIRAC-023 clock factor was accepted")
+    broken_phase_023 = copy.deepcopy(payload_023)
+    broken_phase_023["errors"]["packet_center_phase_rate"] = 1.0
+    if not guard.validate_dirac023_evidence(broken_phase_023):
+        raise AssertionError("failed DIRAC-023 phase rate was accepted")
+    nonfinite_023 = copy.deepcopy(payload_023)
+    nonfinite_023["diagnostics"][
+        "minimum_sampled_c_eff_squared_minus_speed_squared"
+    ] = math.nan
+    if not guard.validate_dirac023_evidence(nonfinite_023):
+        raise AssertionError("non-finite DIRAC-023 diagnostic was accepted")
+    ineffective_control_023 = copy.deepcopy(payload_023)
+    ineffective_control_023["negative_controls"][
+        "wrong_transport_max_reciprocity_defect"
+    ] = 0.0
+    if not guard.validate_dirac023_evidence(ineffective_control_023):
+        raise AssertionError("ineffective DIRAC-023 control was accepted")
+    inflated_claim_023 = copy.deepcopy(payload_023)
+    inflated_claim_023["excluded_claims"].remove(
+        "an exact finite-spacing phase-harmony identity"
+    )
+    if not guard.validate_dirac023_evidence(inflated_claim_023):
+        raise AssertionError("inflated DIRAC-023 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

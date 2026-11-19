@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-023",
+  "status": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION",
+  "formal_theorem": "LeanDirac.dirac023_phase_harmony_and_time_dilation",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac023",
+  "action_changed": false,
+  "native_field_changed": false,
+  "coefficient_changed": false,
+  "dispersion_origin": "LeanDirac.continuum_mode_frequency_square",
+  "transport_velocity_origin": "LeanDirac.continuumTransportVelocity and the DIRAC-013/019 current theorem",
+  "rest_clock_origin": "LeanDirac.nativeRestAngularFrequency from DIRAC-021",
+  "independent_evidence": "experiments/dirac023_phase_harmony/result.json",
+  "red_team": {
+    "new_action_term": false,
+    "new_native_field": false,
+    "fitted_coefficient": false,
+    "lorentz_factor_assumed": false,
+    "phase_velocity_operationally_verified": true,
+    "packet_phase_evaluated_on_independently_derived_current_trajectory": true,
+    "clock_slowdown_derived_from_phase_accumulation": true,
+    "energy_clock_reciprocity_proved": true,
+    "group_phase_velocity_reciprocity_proved": true,
+    "zitter_scale_lock_inherited_from_dirac022": true,
+    "exact_finite_spacing_claim_excluded": true,
+    "si_calibration_claim_excluded": true,
+    "localized_electron_claim_excluded": true,
+    "critical_findings": [],
+    "high_findings": []
+  },
+  "claim_boundary": "A continuum-sector theorem deriving phase-velocity meaning, group/phase velocity reciprocity, packet-center phase accumulation, energy/clock reciprocity, and the standard relativistic clock factor from the already-derived C19 dispersion, current velocity, and action-selected rest clock. It is not an exact finite-spacing, SI-calibrated, localized nonlinear-electron, or electromagnetic theorem."
+}

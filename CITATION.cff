@@ -5,11 +5,11 @@ type: software
 authors:
   - family-names: "Partin"
     given-names: "G. D."
-version: "0.22.0-research-dev"
+version: "0.23.0-research-dev"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 abstract: >-
-  A noncanonical Lean 4 research derivation through DIRAC-022. It connects a
+  A noncanonical Lean 4 research derivation through DIRAC-023. It connects a
   positive two-field C19 action to a massive C19 Klein-Gordon tangent and
   proves that a cubical four-component Dirac Hamiltonian squares to its
   continuum symbol. It controls lattice/time corrections and derives the
@@ -30,6 +30,10 @@ abstract: >-
   It further derives the free-continuum zitterbewegung velocity and position
   expectations from the existing Hamiltonian momentum response, including
   the exact native frequency and amplitude with explicit coherence controls.
+  It then derives the phase accumulated along the native current trajectory,
+  energy-clock reciprocity, the relativistic moving-clock factor, and
+  directional group/phase-velocity reciprocity from that same continuum
+  dispersion and current map, without assuming a Lorentz-factor rule.
   Arbitrary nonlocal
   or flavor-mixing roots, exact native finite-spacing packet evolution,
   uniform fixed-physical-time convergence, nonlinear realization on a

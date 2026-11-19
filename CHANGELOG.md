@@ -1,5 +1,21 @@
 # Changelog
 
+## DIRAC-023 (unreleased)
+
+- Evaluated the inherited continuum plane-wave phase along the independently
+  derived current-transport trajectory and proved its rate is `chi0^2/E`.
+- Proved the packet-center clock ratio is the standard relativistic speed
+  factor and is reciprocal to the energy ratio, without assuming a Lorentz
+  factor or adding a clock rule.
+- Proved directional group/phase velocity reciprocity
+  `v_group*v_phase=c_eff^2`, after formally proving that the stated phase
+  velocity keeps the corresponding plane-wave phase fixed.
+- Surfaced the already-proved DIRAC-022 identity that zitter amplitude times
+  zitter angular frequency is exactly `c_eff`.
+- Added independent momentum-space reconstruction, wrong-transport and
+  wrong-rest-frequency controls, a scoped red-team review, and no action,
+  field, coefficient, stencil, recurrence, or governing-equation change.
+
 ## DIRAC-022 (unreleased)
 
 - Derived the free-continuum zitterbewegung velocity expectation from the

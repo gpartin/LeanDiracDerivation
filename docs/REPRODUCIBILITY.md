@@ -151,6 +151,19 @@ velocity expectation, the integrated position law and native amplitude.  It
 also runs pure-branch, same-sign, incoherent-mixture and wrong-mass controls.
 It does not simulate a localized nonlinear native electron.
 
+## Independent DIRAC-023 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac023_phase_harmony/validate_dirac023.py
+```
+
+The program reconstructs the continuum mode energy, current-derived transport
+velocity, packet-center phase rate, group/phase reciprocity, energy/clock
+reciprocity, relativistic clock factor, and inherited zitter scale lock for
+rest, axial, oblique, signed and higher-momentum samples. It rejects altered
+transport and rest-frequency controls. It does not test exact finite-spacing
+time dilation or a localized nonlinear native electron.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -158,11 +171,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 22-gate dependency and claim boundary.
+The first command verifies the complete 23-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-022.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-023.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

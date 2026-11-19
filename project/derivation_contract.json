@@ -29,7 +29,11 @@
     "DIRAC-016": "PASS_EXACT_COPY_TRANSLATION_STRUCTURE",
     "DIRAC-017": "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION",
     "DIRAC-018": "PASS_SCOPED_NATIVE_CUBICAL_FACTORIZATION_CLASSIFICATION",
-    "DIRAC-019": "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT"
+    "DIRAC-019": "PASS_SCOPED_FINITE_POSITIVE_FREQUENCY_MODE_TRANSPORT",
+    "DIRAC-020": "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT",
+    "DIRAC-021": "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK",
+    "DIRAC-022": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG",
+    "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION"
   },
   "dirac006_bridge_mandatory_gates": {
     "formal": [
@@ -309,6 +313,36 @@
       "an SI frequency or SI length",
       "electromagnetic response or magnetic g-factor",
       "zitterbewegung in a pure branch or incoherent mixture"
+    ]
+  },
+  "dirac023_mandatory_gates": {
+    "status": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION",
+    "formal": [
+      "same action and transitive DIRAC-022 derivation",
+      "mode energy inherited from the native C19 continuum dispersion",
+      "transport velocity inherited from the Hamiltonian momentum response and current map",
+      "directional phase velocity proved to keep the corresponding plane-wave phase fixed",
+      "plane-wave phase evaluated along the independently derived transport trajectory",
+      "packet-center phase rate derived as chi0 squared divided by energy",
+      "energy and packet-center clock ratios proved reciprocal",
+      "clock ratio proved equal to the positive square root of one minus speed squared over c_eff squared",
+      "directional group velocity times phase velocity proved equal to c_eff squared",
+      "DIRAC-022 zitter amplitude times angular frequency retained as exactly c_eff",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "rest, axial, oblique, signed and higher-momentum cases reproduce within tolerance",
+      "wrong transport coefficient and wrong rest-frequency controls are rejected",
+      "all sampled massive modes remain subluminal",
+      "all excluded claims remain explicit"
+    ],
+    "excluded_claims": [
+      "an exact finite-spacing phase-harmony identity",
+      "an SI-calibrated electron clock",
+      "a localized nonlinear native lattice electron",
+      "unrestricted live-chi localized-electron motion",
+      "electromagnetic response or magnetic g-factor",
+      "zitterbewegung physically causes spin one-half"
     ]
   }
 }

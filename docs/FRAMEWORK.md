@@ -187,3 +187,12 @@ free-continuum velocity and position expectations.  No native clock, position
 field, oscillation force, action term, fitted coefficient, or electromagnetic
 coupling is introduced.  The result does not assert that a localized native
 electron trembles.
+
+DIRAC-023 also leaves the framework unchanged. It follows the continuum
+plane-wave phase already implied by the C19 dispersion along the packet
+trajectory selected by the already-derived current velocity. The resulting
+clock ratio, energy reciprocity and group/phase velocity relation are readout
+theorems; they add no Lorentz-factor input, clock register, field, force,
+coefficient, stencil term, recurrence rule, or governing equation. Exact
+finite-spacing time dilation, SI calibration and localized nonlinear-electron
+dynamics remain outside this gate.
