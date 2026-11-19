@@ -164,6 +164,20 @@ rest, axial, oblique, signed and higher-momentum samples. It rejects altered
 transport and rest-frequency controls. It does not test exact finite-spacing
 time dilation or a localized nonlinear native electron.
 
+## Independent DIRAC-024 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac024_projective_zitter_spin/validate_dirac024.py
+```
+
+The program reconstructs the action-derived zitter period, one-cycle spinor
+antiperiod, two-cycle state return, periodic density/velocity/position, and
+the `2π`/`4π` endpoint bridges for all three axes and both native copies. It
+rejects a half-cycle return and a period shortened by ten percent, and checks
+that the temporal and spatial generators remain distinct. It does not equate
+time evolution with spatial rotation or simulate a localized nonlinear
+electron.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -171,11 +185,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 23-gate dependency and claim boundary.
+The first command verifies the complete 24-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-023.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-024.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

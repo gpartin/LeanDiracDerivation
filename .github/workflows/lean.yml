@@ -23,13 +23,13 @@ jobs:
           build: false
       - name: Verify release
         run: python scripts/verify_release.py
-      - name: Build deterministic DIRAC-023 publication package
+      - name: Build deterministic DIRAC-024 publication package
         run: python scripts/build_publication_package.py --output-dir dist
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: LeanDiracDerivation-DIRAC-023
+          name: LeanDiracDerivation-DIRAC-024
           path: |
-            dist/LeanDiracDerivation-DIRAC-023.zip
-            dist/LeanDiracDerivation-DIRAC-023.zip.sha256
+            dist/LeanDiracDerivation-DIRAC-024.zip
+            dist/LeanDiracDerivation-DIRAC-024.zip.sha256
           if-no-files-found: error
           retention-days: 90

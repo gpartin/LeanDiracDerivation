@@ -26,7 +26,7 @@ def main() -> int:
     lean_workflow = text(".github/workflows/lean.yml")
     numerical_workflow = text(".github/workflows/numerical.yml")
     status = payload("project/status.json")
-    readiness = payload("project/dirac023_release_readiness_status.json")
+    readiness = payload("project/dirac024_release_readiness_status.json")
 
     if re.search(r"(?m)^\s*lake update\s*$", readme) or \
             re.search(r"(?m)^\s*lake update\s*$", reproducibility):
@@ -70,9 +70,12 @@ def main() -> int:
     if status.get("gates", {}).get("DIRAC-023") != \
             "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION":
         errors.append("machine-readable DIRAC-023 status erases continuum scope")
+    if status.get("gates", {}).get("DIRAC-024") != \
+            "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE":
+        errors.append("machine-readable DIRAC-024 status erases projective scope")
     if readiness.get("package_artifacts") != [
-            "LeanDiracDerivation-DIRAC-023.zip",
-            "LeanDiracDerivation-DIRAC-023.zip.sha256"]:
+            "LeanDiracDerivation-DIRAC-024.zip",
+            "LeanDiracDerivation-DIRAC-024.zip.sha256"]:
         errors.append("current release-readiness artifact names are stale")
     for workflow_name, workflow in (
             ("lean", lean_workflow), ("numerical", numerical_workflow)):
@@ -88,7 +91,8 @@ def main() -> int:
             "dirac020_coherent_spatial_transport",
             "dirac021_rest_clock",
             "dirac022_zitterbewegung",
-            "dirac023_phase_harmony"):
+            "dirac023_phase_harmony",
+            "dirac024_projective_zitter_spin"):
         if not (ROOT / "experiments" / gate / "result.json").is_file():
             errors.append(f"missing independent evidence for {gate}")
     if "continuous-angle Hamiltonian covariance" not in \
@@ -109,6 +113,9 @@ def main() -> int:
     if "exact finite-spacing phase-harmony law" not in \
             text("project/status.json"):
         errors.append("status omits DIRAC-023's continuum-only boundary")
+    if "Temporal and spatial generators remain distinct" not in \
+            text("project/status.json"):
+        errors.append("status omits DIRAC-024's distinct-generator boundary")
     claims = text("docs/CLAIMS.md")
     if "localized dynamically stable carrier" not in claims or \
             "A physical electron" not in claims:

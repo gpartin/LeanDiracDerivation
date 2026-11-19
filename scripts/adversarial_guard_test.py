@@ -283,6 +283,31 @@ def main() -> int:
     )
     if not guard.validate_dirac023_evidence(inflated_claim_023):
         raise AssertionError("inflated DIRAC-023 claim boundary was accepted")
+    payload_024 = guard.load(guard.EVIDENCE_024)
+    if guard.validate_dirac024_evidence(payload_024):
+        raise AssertionError("passing DIRAC-024 evidence was rejected")
+    broken_antiperiod_024 = copy.deepcopy(payload_024)
+    broken_antiperiod_024["checks"][
+        "one_zitter_cycle_negates_the_spinor"
+    ] = False
+    if not guard.validate_dirac024_evidence(broken_antiperiod_024):
+        raise AssertionError("failed DIRAC-024 antiperiod was accepted")
+    nonfinite_024 = copy.deepcopy(payload_024)
+    nonfinite_024["errors"]["state_antiperiod_0"] = math.nan
+    if not guard.validate_dirac024_evidence(nonfinite_024):
+        raise AssertionError("non-finite DIRAC-024 evidence was accepted")
+    ineffective_control_024 = copy.deepcopy(payload_024)
+    ineffective_control_024["negative_controls"][
+        "wrong_period_min_antiperiod_defect"
+    ] = 0.0
+    if not guard.validate_dirac024_evidence(ineffective_control_024):
+        raise AssertionError("ineffective DIRAC-024 control was accepted")
+    inflated_claim_024 = copy.deepcopy(payload_024)
+    inflated_claim_024["excluded_claims"].remove(
+        "time evolution is identical to spatial rotation"
+    )
+    if not guard.validate_dirac024_evidence(inflated_claim_024):
+        raise AssertionError("inflated DIRAC-024 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

@@ -46,6 +46,8 @@ EVIDENCE_FILES = [
     "experiments/dirac022_zitterbewegung/result.json",
     "experiments/dirac023_phase_harmony/validate_dirac023.py",
     "experiments/dirac023_phase_harmony/result.json",
+    "experiments/dirac024_projective_zitter_spin/validate_dirac024.py",
+    "experiments/dirac024_projective_zitter_spin/result.json",
 ]
 
 RELEASE_FILES = [
@@ -73,6 +75,9 @@ RELEASE_FILES = [
     "docs/FORUM_POST_DIRAC022.md",
     "docs/DIRAC023_RED_TEAM.md",
     "docs/FORUM_POST_DIRAC023.md",
+    "docs/DIRAC024_RED_TEAM.md",
+    "docs/FORUM_POST_DIRAC024.md",
+    "docs/DIRAC025_RESEARCH_TARGET.md",
     "docs/FRAMEWORK.md",
     "docs/PROOF_CHAIN.md",
     "docs/RELATED_WORK.md",
@@ -104,6 +109,8 @@ RELEASE_FILES = [
     "project/dirac022_release_readiness_status.json",
     "project/dirac023_phase_harmony_status.json",
     "project/dirac023_release_readiness_status.json",
+    "project/dirac024_projective_zitter_spin_status.json",
+    "project/dirac024_release_readiness_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -161,8 +168,8 @@ def main() -> int:
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac023",
-        "highest_gate": "DIRAC-023",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac024",
+        "highest_gate": "DIRAC-024",
         "files": hashes(proof_files),
     })
     import numpy
@@ -170,7 +177,7 @@ def main() -> int:
         "schema_version": "2.1.0",
         "role": "independent-evidence",
         "action_id": ACTION_ID,
-        "numerical_evidence": "experiments/dirac023_phase_harmony/result.json",
+        "numerical_evidence": "experiments/dirac024_projective_zitter_spin/result.json",
         "cumulative_numerical_evidence": [
             "experiments/dirac010_standard_map/result.json",
             "experiments/dirac011_frequency_mass/result.json",
@@ -184,6 +191,7 @@ def main() -> int:
             "experiments/dirac021_rest_clock/result.json",
             "experiments/dirac022_zitterbewegung/result.json",
             "experiments/dirac023_phase_harmony/result.json",
+            "experiments/dirac024_projective_zitter_spin/result.json",
         ],
         "environment": {
             "python": platform.python_version(),

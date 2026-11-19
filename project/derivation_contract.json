@@ -33,7 +33,8 @@
     "DIRAC-020": "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT",
     "DIRAC-021": "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK",
     "DIRAC-022": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG",
-    "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION"
+    "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION",
+    "DIRAC-024": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE"
   },
   "dirac006_bridge_mandatory_gates": {
     "formal": [
@@ -343,6 +344,31 @@
       "unrestricted live-chi localized-electron motion",
       "electromagnetic response or magnetic g-factor",
       "zitterbewegung physically causes spin one-half"
+    ]
+  },
+  "dirac024_mandatory_gates": {
+    "status": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE",
+    "formal": [
+      "same action and transitive DIRAC-023 derivation",
+      "zitter period inherited from the action-selected opposite-energy branch beat",
+      "one zitter period proved to negate the coherent four-component state",
+      "two zitter periods proved to return the coherent state",
+      "density, velocity and position proved periodic after one zitter period",
+      "2pi and 4pi cubical spinor endpoint bridges proved on both retained copies",
+      "temporal rest Hamiltonian and spatial spin generators kept explicitly distinct",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "five times, three axes and both copies reproduce the one-cycle antiperiod and two-cycle return",
+      "density, velocity, position and endpoint bridges reproduce within tolerance",
+      "half-period and ten-percent wrong-period controls are rejected",
+      "all excluded claims remain explicit"
+    ],
+    "excluded_claims": [
+      "time evolution is identical to spatial rotation",
+      "zitterbewegung physically causes spin one-half",
+      "exact finite-spacing localized-electron motion",
+      "electromagnetic coupling or magnetic g-factor"
     ]
   }
 }

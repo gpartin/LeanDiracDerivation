@@ -5,11 +5,11 @@ type: software
 authors:
   - family-names: "Partin"
     given-names: "G. D."
-version: "0.23.0-research-dev"
+version: "0.24.0-research-dev"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 abstract: >-
-  A noncanonical Lean 4 research derivation through DIRAC-023. It connects a
+  A noncanonical Lean 4 research derivation through DIRAC-024. It connects a
   positive two-field C19 action to a massive C19 Klein-Gordon tangent and
   proves that a cubical four-component Dirac Hamiltonian squares to its
   continuum symbol. It controls lattice/time corrections and derives the
@@ -34,6 +34,12 @@ abstract: >-
   energy-clock reciprocity, the relativistic moving-clock factor, and
   directional group/phase-velocity reciprocity from that same continuum
   dispersion and current map, without assuming a Lorentz-factor rule.
+  It further proves that one independently derived zitter observable period
+  returns density, velocity, and position while negating the coherent
+  four-component state; two periods return the state. Those endpoint actions
+  equal the separately derived cubical 2pi and 4pi spinor actions on both
+  retained copies, while the temporal and spatial generators are proved
+  distinct.
   Arbitrary nonlocal
   or flavor-mixing roots, exact native finite-spacing packet evolution,
   uniform fixed-physical-time convergence, nonlinear realization on a

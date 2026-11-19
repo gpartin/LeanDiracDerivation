@@ -1,9 +1,9 @@
-import LeanDirac.Dirac023
+import LeanDirac.Dirac024
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-023.
+Sole cumulative publication root through DIRAC-024.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -110,6 +110,18 @@ coefficient and carries forward DIRAC-022's previously proved scale lock
 `zitter amplitude * zitter angular frequency = c_eff`.  These are controlled
 continuum-sector identities, not an exact finite-spacing, SI-calibrated, or
 localized nonlinear-electron theorem.
+
+DIRAC-024 closes the proposed projective-cycle comparison without identifying
+time evolution with spatial rotation.  One complete action-derived zitter
+period returns density, velocity and position but multiplies the coherent
+four-component state by `-1`; two periods return the state.  Independently,
+the cubical spin representation multiplies both native copies by `-1` at
+`2*pi` and returns them at `4*pi`.  Lean proves that these endpoint actions
+coincide on both copies.  The rest Hamiltonian has opposite signs on the two
+energy branches while the selected spatial spin generator acts equally on
+them, so the temporal and rotational generators remain explicitly distinct.
+This is a projective continuum-sector identity, not a causal claim that
+zitterbewegung generates spin or a localized nonlinear-electron result.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -205,6 +217,15 @@ theorem current_highest_gate_is_dirac023 :
   completedChainThroughZitterbewegung := current_highest_gate_is_dirac022
   phaseHarmonyAndTimeDilation := dirac023_phase_harmony_and_time_dilation
 
+structure CumulativeDirac024Certificate : Prop where
+  completedChainThroughPhaseHarmony : CumulativeDirac023Certificate
+  projectiveZitterSpinCycle : Dirac024ProjectiveZitterSpinCertificate
+
+theorem current_highest_gate_is_dirac024 :
+    CumulativeDirac024Certificate where
+  completedChainThroughPhaseHarmony := current_highest_gate_is_dirac023
+  projectiveZitterSpinCycle := dirac024_projective_zitter_spin_cycle
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
@@ -216,3 +237,4 @@ end LeanDirac
 #print axioms LeanDirac.current_highest_gate_is_dirac021
 #print axioms LeanDirac.current_highest_gate_is_dirac022
 #print axioms LeanDirac.current_highest_gate_is_dirac023
+#print axioms LeanDirac.current_highest_gate_is_dirac024

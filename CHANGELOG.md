@@ -1,5 +1,19 @@
 # Changelog
 
+## DIRAC-024 (unreleased)
+
+- Proved that one action-derived zitter period negates the coherent
+  four-component state while returning its density, velocity and position.
+- Proved that two zitter periods return the state exactly.
+- Proved on both retained native copies that the one-cycle/two-cycle endpoint
+  actions equal the independently derived cubical `2π` sign and `4π` return.
+- Kept the temporal rest Hamiltonian and spatial spin generators explicit and
+  distinct, preventing a matching endpoint from being mislabeled as identical
+  dynamics or a causal origin of spin.
+- Added half-period and wrong-period controls, independent reconstruction,
+  full-chain audits and deterministic DIRAC-024 packaging without changing
+  the action, fields, coefficients, C19 geometry or recurrence.
+
 ## DIRAC-023 (unreleased)
 
 - Evaluated the inherited continuum plane-wave phase along the independently
