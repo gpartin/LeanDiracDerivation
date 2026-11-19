@@ -308,6 +308,31 @@ def main() -> int:
     )
     if not guard.validate_dirac024_evidence(inflated_claim_024):
         raise AssertionError("inflated DIRAC-024 claim boundary was accepted")
+    payload_025 = guard.load(guard.EVIDENCE_025)
+    if guard.validate_dirac025_evidence(payload_025):
+        raise AssertionError("passing DIRAC-025 evidence was rejected")
+    broken_identity_025 = copy.deepcopy(payload_025)
+    broken_identity_025["checks"][
+        "known_relativistic_ratios_pass"
+    ] = False
+    if not guard.validate_dirac025_evidence(broken_identity_025):
+        raise AssertionError("failed DIRAC-025 ratio identity was accepted")
+    nonfinite_025 = copy.deepcopy(payload_025)
+    nonfinite_025["errors"]["sample_0_operator_square"] = math.nan
+    if not guard.validate_dirac025_evidence(nonfinite_025):
+        raise AssertionError("non-finite DIRAC-025 evidence was accepted")
+    ineffective_control_025 = copy.deepcopy(payload_025)
+    ineffective_control_025["negative_controls"][
+        "wrong_rest_mass_clock_defect"
+    ] = 0.0
+    if not guard.validate_dirac025_evidence(ineffective_control_025):
+        raise AssertionError("ineffective DIRAC-025 control was accepted")
+    inflated_claim_025 = copy.deepcopy(payload_025)
+    inflated_claim_025["excluded_claims"].remove(
+        "a classical hidden path moving at c_eff"
+    )
+    if not guard.validate_dirac025_evidence(inflated_claim_025):
+        raise AssertionError("inflated DIRAC-025 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

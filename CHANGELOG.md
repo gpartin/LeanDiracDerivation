@@ -1,5 +1,18 @@
 # Changelog
 
+## DIRAC-025 (unreleased)
+
+- Constructed the longitudinal velocity operator only from the three existing
+  Hamiltonian momentum responses and proved its square is `c_eff^2` for every
+  nonzero three-dimensional momentum.
+- Derived its first and second moments in the same positive-frequency state
+  and proved its normalized rms fluctuation is exactly the independently
+  derived moving/rest phase-clock ratio.
+- Proved the exact velocity-clock Pythagorean identity and the `3-4-5` control.
+- Added independent arbitrary-momentum reconstruction and three negative
+  controls without changing the action, fields, coefficients, C19 geometry,
+  recurrence, current or clock.
+
 ## DIRAC-024 (unreleased)
 
 - Proved that one action-derived zitter period negates the coherent

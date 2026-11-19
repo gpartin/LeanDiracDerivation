@@ -1,4 +1,7 @@
-# DIRAC-025 research target: light-speed velocity fluctuation and the clock factor
+# DIRAC-025 completed target: velocity fluctuation and the clock factor
+
+**Status:** closed by `LeanDirac.dirac025_velocity_variance_clock_identity`.
+The original pre-proof target is retained below as provenance.
 
 ## Hidden gem found in the DIRAC-001--024 chain
 

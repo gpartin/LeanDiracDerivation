@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-025",
+  "highest_gate": "DIRAC-025",
+  "status": "PASS",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac025",
+  "package_artifacts": [
+    "LeanDiracDerivation-DIRAC-025.zip",
+    "LeanDiracDerivation-DIRAC-025.zip.sha256"
+  ],
+  "checks": [
+    "Lean module and cumulative publication theorem compile",
+    "axiom reports contain only propext, Classical.choice and Quot.sound",
+    "independent four-component matrix reconstruction passes finite schema checks",
+    "both positive-energy spin states pass for arbitrary oblique momenta",
+    "unnormalized direction, transverse substitution and wrong-mass controls are rejected",
+    "action, native fields, C19 geometry, recurrence, mass and current map remain unchanged",
+    "claim boundary excludes a classical hidden path and exact finite-spacing or localized-electron conclusions"
+  ],
+  "claim_boundary": "Release readiness certifies only the scoped continuum velocity-variance/clock identity."
+}

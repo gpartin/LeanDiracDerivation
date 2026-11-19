@@ -34,7 +34,8 @@
     "DIRAC-021": "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK",
     "DIRAC-022": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG",
     "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION",
-    "DIRAC-024": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE"
+    "DIRAC-024": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE",
+    "DIRAC-025": "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY"
   },
   "dirac006_bridge_mandatory_gates": {
     "formal": [
@@ -369,6 +370,34 @@
       "zitterbewegung physically causes spin one-half",
       "exact finite-spacing localized-electron motion",
       "electromagnetic coupling or magnetic g-factor"
+    ]
+  },
+  "dirac025_mandatory_gates": {
+    "status": "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY",
+    "formal": [
+      "same action and transitive DIRAC-024 derivation",
+      "longitudinal velocity operator constructed from the three existing Hamiltonian momentum responses",
+      "momentum direction proved unit for arbitrary nonzero three-dimensional momentum",
+      "longitudinal velocity operator proved to square to c_eff squared",
+      "longitudinal current proved equal to the same-state operator expectation",
+      "positive-frequency mean derived from the existing current relation",
+      "second moment and variance evaluated using the same density and inner product",
+      "normalized rms fluctuation proved equal to the independently derived moving/rest phase-clock ratio",
+      "exact velocity-clock Pythagorean identity and 3-4-5 control proved",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "five arbitrary oblique momenta and both positive-energy spin states reproduce the operator square, mean, variance and clock identity",
+      "3/5 to 4/5, 4/5 to 3/5 and sqrt(3)/2 to 1/2 controls reproduce within tolerance",
+      "unnormalized direction, transverse substitution and wrong-rest-mass controls are rejected",
+      "all excluded claims remain explicit"
+    ],
+    "excluded_claims": [
+      "a classical hidden path moving at c_eff",
+      "an exact finite-spacing native velocity identity",
+      "a localized nonlinear electron",
+      "an SI calibration",
+      "electromagnetic coupling or a magnetic g-factor"
     ]
   }
 }

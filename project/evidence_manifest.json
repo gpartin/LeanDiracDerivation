@@ -2,7 +2,7 @@
   "schema_version": "2.1.0",
   "role": "independent-evidence",
   "action_id": "DIRAC002_COMPLEX_CHI_BASE_C19_V3",
-  "numerical_evidence": "experiments/dirac024_projective_zitter_spin/result.json",
+  "numerical_evidence": "experiments/dirac025_velocity_clock/result.json",
   "cumulative_numerical_evidence": [
     "experiments/dirac010_standard_map/result.json",
     "experiments/dirac011_frequency_mass/result.json",
@@ -16,7 +16,8 @@
     "experiments/dirac021_rest_clock/result.json",
     "experiments/dirac022_zitterbewegung/result.json",
     "experiments/dirac023_phase_harmony/result.json",
-    "experiments/dirac024_projective_zitter_spin/result.json"
+    "experiments/dirac024_projective_zitter_spin/result.json",
+    "experiments/dirac025_velocity_clock/result.json"
   ],
   "environment": {
     "python": "3.14.0",
@@ -49,6 +50,8 @@
     "experiments/dirac023_phase_harmony/result.json": "1beedd071e16c6de74f7df277c3f8fc1629e2c734ae6e77ba668fafc96d923b9",
     "experiments/dirac023_phase_harmony/validate_dirac023.py": "68584f48bc77161b5b64052ec0292069647bfd256e2321f45c47a66450267273",
     "experiments/dirac024_projective_zitter_spin/result.json": "66f22ad21755cfbaf64176e02edde3bc3904d5cbdedcb9a8122f6402ae6addf0",
-    "experiments/dirac024_projective_zitter_spin/validate_dirac024.py": "4cd1f806a9b5aac43b63fe21cc6ecd7c05eff13babc61b589e1c97b00f8111da"
+    "experiments/dirac024_projective_zitter_spin/validate_dirac024.py": "4cd1f806a9b5aac43b63fe21cc6ecd7c05eff13babc61b589e1c97b00f8111da",
+    "experiments/dirac025_velocity_clock/result.json": "54b61ce4febb0a78a999c1413fa435bbac7dba9a981566e8575e1143572ae020",
+    "experiments/dirac025_velocity_clock/validate_dirac025.py": "7d2d4c5ec478cf05a4db364adb8fbdd126fb62e55d2f1d1ec8b7a0a71912157b"
   }
 }

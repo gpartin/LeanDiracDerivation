@@ -48,11 +48,13 @@ jobs:
         run: python experiments/dirac023_phase_harmony/validate_dirac023.py
       - name: Reproduce DIRAC-024 projective zitter-spin cycle
         run: python experiments/dirac024_projective_zitter_spin/validate_dirac024.py
+      - name: Reproduce DIRAC-025 velocity-variance clock identity
+        run: python experiments/dirac025_velocity_clock/validate_dirac025.py
       - name: Validate evidence schema
         run: >-
           python -c "import json;
           from pathlib import Path;
-          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence, validate_dirac013_evidence, validate_dirac016_evidence, validate_dirac017_evidence, validate_dirac018_evidence, validate_dirac019_evidence, validate_dirac020_evidence, validate_dirac021_evidence, validate_dirac022_evidence, validate_dirac023_evidence, validate_dirac024_evidence;
+          from scripts.production_guard import validate_dirac010_evidence, validate_dirac011_evidence, validate_dirac012_evidence, validate_dirac013_evidence, validate_dirac016_evidence, validate_dirac017_evidence, validate_dirac018_evidence, validate_dirac019_evidence, validate_dirac020_evidence, validate_dirac021_evidence, validate_dirac022_evidence, validate_dirac023_evidence, validate_dirac024_evidence, validate_dirac025_evidence;
           p10=json.loads(Path('experiments/dirac010_standard_map/result.json').read_text());
           p11=json.loads(Path('experiments/dirac011_frequency_mass/result.json').read_text());
           p12=json.loads(Path('experiments/dirac012_continuum_evolution/result.json').read_text());
@@ -66,4 +68,5 @@ jobs:
           p22=json.loads(Path('experiments/dirac022_zitterbewegung/result.json').read_text());
           p23=json.loads(Path('experiments/dirac023_phase_harmony/result.json').read_text());
           p24=json.loads(Path('experiments/dirac024_projective_zitter_spin/result.json').read_text());
-          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12)+validate_dirac013_evidence(p13)+validate_dirac016_evidence(p16)+validate_dirac017_evidence(p17)+validate_dirac018_evidence(p18)+validate_dirac019_evidence(p19)+validate_dirac020_evidence(p20)+validate_dirac021_evidence(p21)+validate_dirac022_evidence(p22)+validate_dirac023_evidence(p23)+validate_dirac024_evidence(p24); assert not e, e"
+          p25=json.loads(Path('experiments/dirac025_velocity_clock/result.json').read_text());
+          e=validate_dirac010_evidence(p10)+validate_dirac011_evidence(p11)+validate_dirac012_evidence(p12)+validate_dirac013_evidence(p13)+validate_dirac016_evidence(p16)+validate_dirac017_evidence(p17)+validate_dirac018_evidence(p18)+validate_dirac019_evidence(p19)+validate_dirac020_evidence(p20)+validate_dirac021_evidence(p21)+validate_dirac022_evidence(p22)+validate_dirac023_evidence(p23)+validate_dirac024_evidence(p24)+validate_dirac025_evidence(p25); assert not e, e"
