@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-022
+# Publication-quality audit through DIRAC-023
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac022`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac023`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -52,6 +52,9 @@ The native action and governing equations are unchanged by this repair.
 | High | The doubled frequency could be a renamed definition. | DIRAC-021 would merely announce `2m`. | Defined the relative phase as the quotient of the two independently proved opposite phases and proved that quotient equals the `2 chi0` exponential. Wrong-mass and same-sign controls fail independently. |
 | High | “Compton clock” could overclaim an observable in a pure rest state. | A global phase has no pure-state density signal. | Kept the formal result as a phase/coherence theorem, independently verified constant density for each pure branch, and deferred the explicit cross-branch velocity observable to DIRAC-022. |
 | High | The inverse-mass scale could be conflated with a coordinate length or SI Compton wavelength. | The current continuum speed is `sqrt(12)`, and no SI bridge is proved. | Proved and documented `1/19` as inverse mass and `sqrt(12)/19` as the native-coordinate reduced Compton length; no SI mass or length is claimed. |
+| Critical | Defining phase velocity as `E/p` and immediately multiplying it by `c_eff^2 p/E` could look tautological. | The relation would lack an operational connection to the wave phase. | Proved first that the stated directional phase velocity keeps the inherited plane-wave phase fixed; the transport velocity remains independently inherited from the action-derived current. |
+| High | Defining a Lorentz factor could insert the time-dilation answer. | A renamed target would not show that the lattice-derived motion slows the clock. | Did not define gamma as a premise. Evaluated the inherited wave phase along the independently derived current trajectory, derived rate `chi0^2/E`, then proved its positive rest-clock ratio equals `sqrt(1-|v|^2/c_eff^2)`. |
+| Medium | DIRAC-022's exact amplitude-frequency speed lock was formally proved but underreported. | A nontrivial cross-stage consequence could be lost in the release narrative. | Carried `nativeZitterAmplitude*nativeZitterAngularFrequency=c19ContinuumSpeed` into the DIRAC-023 certificate without changing either quantity. |
 
 ## Formal claim after repair
 
@@ -101,6 +104,14 @@ inserted.  The remaining boundary is physical: the theorem concerns the
 free-continuum four-component readout, not a localized nonlinear native
 electron.
 
+DIRAC-023 follows the existing continuum phase along the current-selected
+packet trajectory. It proves directional group/phase velocity reciprocity,
+energy/clock reciprocity and the standard relativistic clock factor without
+adding a Lorentz rule or changing the action. It also exposes DIRAC-022's exact
+zitter amplitude-frequency speed lock. Exact finite-spacing time dilation,
+SI calibration and localized nonlinear-electron dynamics remain outside the
+certificate.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -111,7 +122,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, and 022 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, 022, and 023 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;

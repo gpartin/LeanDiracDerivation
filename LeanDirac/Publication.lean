@@ -1,9 +1,9 @@
-import LeanDirac.Dirac022
+import LeanDirac.Dirac023
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-022.
+Sole cumulative publication root through DIRAC-023.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -99,6 +99,17 @@ peak-to-peak excursion equals that length.  Pure branches, same-energy-sign
 superpositions, incoherent mixtures, and a wrong-mass reconstruction are
 retained as controls.  This is not a localized native electron trajectory,
 an SI prediction, or an electromagnetic result.
+
+DIRAC-023 follows a finite-momentum plane-wave phase along the transport
+velocity already derived from the native current.  The resulting phase rate
+is `chi0^2/E`; its ratio to the action-selected rest clock squares to
+`1-|v|^2/c_eff^2`, while the energy and clock ratios are reciprocal.  Every
+nonzero directional momentum component also obeys exact group/phase velocity
+reciprocity, `v_group*v_phase=c_eff^2`.  The stage changes no native action or
+coefficient and carries forward DIRAC-022's previously proved scale lock
+`zitter amplitude * zitter angular frequency = c_eff`.  These are controlled
+continuum-sector identities, not an exact finite-spacing, SI-calibrated, or
+localized nonlinear-electron theorem.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -185,6 +196,15 @@ theorem current_highest_gate_is_dirac022 :
   completedChainThroughRestClock := current_highest_gate_is_dirac021
   actionDerivedZitterbewegung := dirac022_action_derived_zitterbewegung
 
+structure CumulativeDirac023Certificate : Prop where
+  completedChainThroughZitterbewegung : CumulativeDirac022Certificate
+  phaseHarmonyAndTimeDilation : Dirac023PhaseHarmonyCertificate
+
+theorem current_highest_gate_is_dirac023 :
+    CumulativeDirac023Certificate where
+  completedChainThroughZitterbewegung := current_highest_gate_is_dirac022
+  phaseHarmonyAndTimeDilation := dirac023_phase_harmony_and_time_dilation
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
@@ -195,3 +215,4 @@ end LeanDirac
 #print axioms LeanDirac.current_highest_gate_is_dirac020
 #print axioms LeanDirac.current_highest_gate_is_dirac021
 #print axioms LeanDirac.current_highest_gate_is_dirac022
+#print axioms LeanDirac.current_highest_gate_is_dirac023

@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-022
+## Established through DIRAC-023
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -163,12 +163,30 @@
   native reduced Compton length `sqrt(12)/19`.
 - Independent matrix reconstruction confirms the Hamiltonian response,
   anticommutation, frequency, position law and controls.
+- The directional phase velocity is tied to the actual plane-wave phase:
+  Lean proves that moving at this speed keeps the corresponding phase fixed.
+- Evaluating the full three-direction plane-wave phase on the packet center
+  moving with the previously derived current velocity gives phase rate
+  `chi0^2/E` rather than an inserted clock law.
+- Relative to the action-selected rest clock, that phase rate is exactly
+  `sqrt(1-|v|^2/c_eff^2)`, while the energy ratio is its reciprocal.
+- Every nonzero directional momentum component obeys the exact continuum
+  identity `v_group*v_phase=c_eff^2`.
+- DIRAC-022's native zitter amplitude and angular frequency obey the exact
+  scale lock `amplitude*frequency=c_eff`; DIRAC-023 makes this previously
+  underreported theorem part of the cumulative certificate.
+- Independent reconstruction confirms these identities for rest, axial,
+  oblique, signed and higher-momentum cases and rejects changed transport and
+  rest-frequency controls.
 
 ## Not established
 
 - Zitterbewegung of a localized nonlinear native lattice electron, rather than
   the proved free-continuum expectation value.
 - An SI frequency or SI position amplitude.
+- Exact finite-spacing phase harmony or time dilation before the declared
+  continuum limit.
+- An SI-calibrated moving electron clock.
 
 - Exact Dirac evolution at finite lattice spacing or finite timestep.
 - Arbitrary nonlinear live-chi Dirac evolution away from the prepared vacuum.
@@ -198,7 +216,7 @@
 - An SI electron mass or SI Compton wavelength.
 - A directly observable clock signal in a pure energy eigenstate; its global
   phase leaves the pure-state density unchanged.
-- Zitterbewegung, its velocity observable, amplitude, or position law.
+- A theorem that zitterbewegung physically causes spin one-half.
 
 The theorem uses a conditional prepared background; it does not provide an
 origin story. The chosen action is not uniquely forced. The cubical square

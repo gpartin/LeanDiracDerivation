@@ -6,7 +6,7 @@ This repository is the production Lean 4 environment for a noncanonical
 attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
-All **22 of 22** derivation gates pass. The chain begins with
+All **23 of 23** derivation gates pass. The chain begins with
 one positive complex-Psi/complex-chi C19 action, proves that its restriction
 and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
@@ -85,6 +85,14 @@ is `sqrt(12)/19`, the native reduced Compton length.  Pure branches,
 same-energy-sign superpositions and incoherent mixtures have zero signal.
 This is a free-continuum expectation-value theorem, not a localized native
 electron trajectory or an SI prediction.
+DIRAC-023 then follows the already-derived plane-wave phase along the packet's
+already-derived current velocity. The accumulated internal phase rate becomes
+`chi0^2/E`; divided by the action-selected rest clock, it is exactly
+`sqrt(1-|v|^2/c_eff^2)`. The energy ratio is its reciprocal, and every nonzero
+directional momentum component obeys `v_group*v_phase=c_eff^2`. No Lorentz
+factor, clock rule, new field, action term, or fitted coefficient is inserted.
+The same gate also surfaces a result already formally present in DIRAC-022:
+zitter amplitude times zitter angular frequency is exactly `c_eff`.
 
 ## Current status
 
@@ -107,6 +115,7 @@ electron trajectory or an SI prediction.
 | DIRAC-020 | PASS (scoped coherent spatial transport) | An explicit normalized finite Fourier frame synthesizes momentum-compatible modes into one coherent spatial field with exact Parseval density, integrated current equal to the density-weighted velocity moment, nonzero current when that moment is nonzero, and an explicit finite-update pointwise phase-error bound. |
 | DIRAC-021 | PASS (scoped action-derived rest clock) | The action-selected rest coefficient gives opposite positive/negative rest energies and exact Dirac time phases; their relative phase has native angular frequency `38=2*19`, with explicit native periods and inverse-mass/Compton scales. Pure global phase, SI mass, and zitterbewegung remain outside this gate. |
 | DIRAC-022 | PASS (scoped action-derived free zitterbewegung) | The DIRAC-013 velocity and DIRAC-021 rest phases give an exact coherent cross-branch velocity oscillation at `2 chi0=38`; its integrated amplitude is `sqrt(12)/38` and peak-to-peak excursion is `sqrt(12)/19`. Pure, same-sign and incoherent controls have zero signal. Localized native-electron motion remains outside this gate. |
+| DIRAC-023 | PASS (scoped continuum phase harmony and time dilation) | Following the inherited plane-wave phase along the current-derived packet trajectory gives phase rate `chi0^2/E`; its rest-clock ratio is exactly the relativistic speed factor, the energy ratio is reciprocal, and directional group and phase velocities multiply to `c_eff^2`. The inherited zitter amplitude-frequency product is exactly `c_eff`. |
 
 See [the complete proof chain](docs/PROOF_CHAIN.md) for every gate and its
 claim boundary.
@@ -121,7 +130,7 @@ python scripts/verify_release.py
 
 The verifier builds every production module, audits the compiled Lean
 environment, checks role-specific manifests, runs adversarial audit controls,
-and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--022
+and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--023
 evidence, audits the final theorem and publication metadata, and verifies the
 release contract. It is read-only: it
 does not install Git hooks or alter the index.
@@ -130,13 +139,15 @@ does not install Git hooks or alter the index.
 
 - [Native framework](docs/FRAMEWORK.md): fields, constants, geometry, action,
   equations, and update.
-- [Formal proof chain](docs/PROOF_CHAIN.md): all 22 gates and theorem boundary.
-- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-022 establish.
+- [Formal proof chain](docs/PROOF_CHAIN.md): all 23 gates and theorem boundary.
+- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-023 establish.
 - [Reproducibility](docs/REPRODUCIBILITY.md): rebuild instructions.
 - [Publication-quality audit](docs/WORLD_CLASS_AUDIT.md): findings, repairs,
   residual scientific boundaries, and acceptance tests.
 - [DIRAC-022 red team](docs/DIRAC022_RED_TEAM.md): observable derivation,
   controls, scope, and release findings.
+- [DIRAC-023 red team](docs/DIRAC023_RED_TEAM.md): phase-harmony derivation,
+  anti-circularity checks, controls, scope, and release findings.
 - [Related work and attribution](docs/RELATED_WORK.md): the geometric
   lattice-fermion lineage and the repository's narrower formal contribution.
 - [Changelog](CHANGELOG.md): current cleanup and historical milestones.
@@ -165,6 +176,8 @@ does not install Git hooks or alter the index.
   opposite-branch coherence, native-period, and unit-scope reconstruction.
 - `experiments/dirac022_zitterbewegung/`: independent Hamiltonian-velocity,
   coherent-current, position-amplitude, and negative-control reconstruction.
+- `experiments/dirac023_phase_harmony/`: independent group/phase velocity,
+  packet-center clock, speed-factor, and scale-lock reconstruction.
 
 ## Proof-security boundary
 

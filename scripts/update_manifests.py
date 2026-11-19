@@ -44,6 +44,8 @@ EVIDENCE_FILES = [
     "experiments/dirac021_rest_clock/result.json",
     "experiments/dirac022_zitterbewegung/validate_dirac022.py",
     "experiments/dirac022_zitterbewegung/result.json",
+    "experiments/dirac023_phase_harmony/validate_dirac023.py",
+    "experiments/dirac023_phase_harmony/result.json",
 ]
 
 RELEASE_FILES = [
@@ -69,6 +71,8 @@ RELEASE_FILES = [
     "docs/DIRAC022_PLAN.md",
     "docs/DIRAC022_RED_TEAM.md",
     "docs/FORUM_POST_DIRAC022.md",
+    "docs/DIRAC023_RED_TEAM.md",
+    "docs/FORUM_POST_DIRAC023.md",
     "docs/FRAMEWORK.md",
     "docs/PROOF_CHAIN.md",
     "docs/RELATED_WORK.md",
@@ -98,6 +102,8 @@ RELEASE_FILES = [
     "project/dirac021_release_readiness_status.json",
     "project/dirac022_zitterbewegung_status.json",
     "project/dirac022_release_readiness_status.json",
+    "project/dirac023_phase_harmony_status.json",
+    "project/dirac023_release_readiness_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -155,8 +161,8 @@ def main() -> int:
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac022",
-        "highest_gate": "DIRAC-022",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac023",
+        "highest_gate": "DIRAC-023",
         "files": hashes(proof_files),
     })
     import numpy
@@ -164,7 +170,7 @@ def main() -> int:
         "schema_version": "2.1.0",
         "role": "independent-evidence",
         "action_id": ACTION_ID,
-        "numerical_evidence": "experiments/dirac022_zitterbewegung/result.json",
+        "numerical_evidence": "experiments/dirac023_phase_harmony/result.json",
         "cumulative_numerical_evidence": [
             "experiments/dirac010_standard_map/result.json",
             "experiments/dirac011_frequency_mass/result.json",
@@ -177,6 +183,7 @@ def main() -> int:
             "experiments/dirac020_coherent_spatial_transport/result.json",
             "experiments/dirac021_rest_clock/result.json",
             "experiments/dirac022_zitterbewegung/result.json",
+            "experiments/dirac023_phase_harmony/result.json",
         ],
         "environment": {
             "python": platform.python_version(),

@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-022. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-023. -/
 
 #audit_lean_dirac_environment
 
@@ -115,6 +115,15 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.incoherent_rest_mixture_has_zero_current
 #print axioms LeanDirac.parametric_rest_velocity_tracks_supplied_mass
 #print axioms LeanDirac.dirac022_action_derived_zitterbewegung
+#print axioms LeanDirac.directional_group_phase_velocity_reciprocity
+#print axioms LeanDirac.directional_phase_velocity_keeps_plane_phase_fixed
+#print axioms LeanDirac.plane_phase_along_transport_is_accumulated_clock
+#print axioms LeanDirac.continuum_transport_phase_rate_is_mass_square_over_energy
+#print axioms LeanDirac.continuum_energy_clock_reciprocity
+#print axioms LeanDirac.continuum_clock_ratio_square_is_speed_factor
+#print axioms LeanDirac.continuum_clock_ratio_is_sqrt_speed_factor
+#print axioms LeanDirac.zitter_scale_lock_is_emergent_speed
+#print axioms LeanDirac.dirac023_phase_harmony_and_time_dilation
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
@@ -123,3 +132,4 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.current_highest_gate_is_dirac020
 #print axioms LeanDirac.current_highest_gate_is_dirac021
 #print axioms LeanDirac.current_highest_gate_is_dirac022
+#print axioms LeanDirac.current_highest_gate_is_dirac023
