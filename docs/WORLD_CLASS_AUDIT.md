@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-023
+# Publication-quality audit through DIRAC-024
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac023`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac024`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -55,6 +55,10 @@ The native action and governing equations are unchanged by this repair.
 | Critical | Defining phase velocity as `E/p` and immediately multiplying it by `c_eff^2 p/E` could look tautological. | The relation would lack an operational connection to the wave phase. | Proved first that the stated directional phase velocity keeps the inherited plane-wave phase fixed; the transport velocity remains independently inherited from the action-derived current. |
 | High | Defining a Lorentz factor could insert the time-dilation answer. | A renamed target would not show that the lattice-derived motion slows the clock. | Did not define gamma as a premise. Evaluated the inherited wave phase along the independently derived current trajectory, derived rate `chi0^2/E`, then proved its positive rest-clock ratio equals `sqrt(1-|v|^2/c_eff^2)`. |
 | Medium | DIRAC-022's exact amplitude-frequency speed lock was formally proved but underreported. | A nontrivial cross-stage consequence could be lost in the release narrative. | Carried `nativeZitterAmplitude*nativeZitterAngularFrequency=c19ContinuumSpeed` into the DIRAC-023 certificate without changing either quantity. |
+| Critical | Matching a zitter period to a spinor sign could be manufactured by choosing the period from the desired rotation. | The new statement would be circular rather than a consequence of the native rest spectrum. | Defined the period from the independently derived `+19/-19` branch beat of DIRAC-021/022, then proved the one-cycle antiperiod and two-cycle return without an angle-frequency premise. |
+| High | Equal endpoint signs could be misreported as equality of time evolution and spatial rotation. | Two distinct generators can agree at isolated endpoints; conflating them would overstate the physics. | Proved the temporal rest generator distinguishes the positive and negative energy branches while the selected spatial spin generator acts equally on them. The certificate asserts only endpoint correspondence. |
+| High | A sign-changing state alone would not establish the observable cycle or both native copies. | The result could be a phase convention on one selected sector. | Proved density, velocity and position return after one cycle, the state returns only after two cycles, and the `2pi/4pi` endpoint bridge holds on both rank-four native copies and all three spin axes. |
+| Medium | A half-cycle or nearby period might satisfy the same claim numerically. | The advertised period would not be selected. | Added half-period velocity-reversal and ten-percent wrong-period rejection controls in the independent reconstruction. |
 
 ## Formal claim after repair
 
@@ -112,6 +116,15 @@ zitter amplitude-frequency speed lock. Exact finite-spacing time dilation,
 SI calibration and localized nonlinear-electron dynamics remain outside the
 certificate.
 
+DIRAC-024 closes a previously unstated projective-cycle link. The zitter
+period inherited from the action-derived opposite-energy beat returns the
+density, velocity and position observables while negating the coherent
+four-component state; two such periods return the state. The same endpoint
+actions are produced by the independently derived cubical `2pi` and `4pi`
+rotations on both retained copies. This is not an identification of the
+temporal and spatial generators and does not prove that zitterbewegung causes
+spin or that a localized nonlinear native electron executes either cycle.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -122,7 +135,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, 022, and 023 reconstructions;
+- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, 022, 023, and 024 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;

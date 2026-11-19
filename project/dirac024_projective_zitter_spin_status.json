@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "DIRAC-024",
+  "status": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE",
+  "formal_theorem": "LeanDirac.dirac024_projective_zitter_spin_cycle",
+  "publication_theorem": "LeanDirac.current_highest_gate_is_dirac024",
+  "action_changed": false,
+  "native_field_changed": false,
+  "coefficient_changed": false,
+  "zitter_period_origin": "DIRAC-021/022 opposite-energy branch beat from the action-selected rest frequency",
+  "spinor_sign_origin": "DIRAC-017 cubical continuous rotation representation",
+  "independent_evidence": "experiments/dirac024_projective_zitter_spin/result.json",
+  "red_team": {
+    "new_action_term": false,
+    "new_native_field": false,
+    "fitted_coefficient": false,
+    "zitter_period_inserted": false,
+    "two_pi_sign_inserted": false,
+    "one_cycle_state_antiperiod_proved": true,
+    "two_cycle_state_return_proved": true,
+    "observables_return_after_one_cycle_proved": true,
+    "bridge_proved_on_both_native_copies": true,
+    "time_and_rotation_generators_kept_distinct": true,
+    "half_period_and_wrong_period_controls_rejected": true,
+    "causal_spin_origin_claim_excluded": true,
+    "localized_electron_claim_excluded": true,
+    "critical_findings": [],
+    "high_findings": []
+  },
+  "claim_boundary": "A continuum-sector theorem that one action-derived zitter observable period negates the coherent four-component state while returning density, velocity and position; two periods return the state. Those endpoint actions equal the independently derived cubical 2pi and 4pi spinor actions on both retained copies. It does not identify temporal and spatial generators, prove that zitterbewegung causes spin, or establish a localized nonlinear native electron."
+}

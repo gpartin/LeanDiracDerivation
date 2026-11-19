@@ -196,3 +196,13 @@ theorems; they add no Lorentz-factor input, clock register, field, force,
 coefficient, stencil term, recurrence rule, or governing equation. Exact
 finite-spacing time dilation, SI calibration and localized nonlinear-electron
 dynamics remain outside this gate.
+
+DIRAC-024 likewise leaves the framework unchanged. It compares the
+action-derived opposite-energy beat cycle with the independently derived
+cubical spinor rotation endpoints. One beat period returns the zitter
+observables but negates the coherent state; two periods return it. The same
+endpoint transformations occur at cubical `2π` and `4π` rotations on both
+copies. The rest Hamiltonian and spatial spin generator remain distinct, so
+no temporal/spatial identification, rotation rule, phase reset, action term,
+field, coefficient, stencil change, recurrence change or governing equation
+is introduced.

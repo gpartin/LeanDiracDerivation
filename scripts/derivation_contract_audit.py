@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--023 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--024 derivation contract."""
 
 from __future__ import annotations
 
@@ -64,9 +64,13 @@ def main() -> int:
     evidence_023 = json.loads((
         ROOT / "experiments" / "dirac023_phase_harmony" / "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_024 = json.loads((
+        ROOT / "experiments" / "dirac024_projective_zitter_spin" /
+        "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_023": status.get("highest_passed_gate") == "DIRAC-023",
-        "all_twenty_three_gates_complete": status.get("completed") == 23,
+        "highest_gate_is_024": status.get("highest_passed_gate") == "DIRAC-024",
+        "all_twenty_four_gates_complete": status.get("completed") == 24,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -148,9 +152,9 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_023": contains(
+        "publication_stops_at_024": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac023"),
+            "theorem current_highest_gate_is_dirac024"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -359,6 +363,24 @@ def main() -> int:
         "zitter_speed_lock_is_retained": contains(
             "LeanDirac/Dirac023.lean",
             "theorem zitter_scale_lock_is_emergent_speed"),
+        "zitter_state_antiperiod_is_derived": contains(
+            "LeanDirac/Dirac024.lean",
+            "theorem coherent_rest_state_one_zitter_cycle"),
+        "zitter_two_cycle_return_is_derived": contains(
+            "LeanDirac/Dirac024.lean",
+            "theorem coherent_rest_state_two_zitter_cycles"),
+        "both_copy_rotation_bridges_are_derived": all(contains(
+            "LeanDirac/Dirac024.lean", theorem) for theorem in (
+                "theorem minus_copy_two_pi_rotation_is_one_zitter_cycle",
+                "theorem plus_copy_two_pi_rotation_is_one_zitter_cycle",
+                "theorem minus_copy_four_pi_rotation_is_two_zitter_cycles",
+                "theorem plus_copy_four_pi_rotation_is_two_zitter_cycles")),
+        "time_and_spatial_generators_are_distinguished": (
+            contains("LeanDirac/Dirac024.lean",
+                     "theorem rest_generator_distinguishes_zitter_branches")
+            and contains("LeanDirac/Dirac024.lean",
+                         "theorem spatial_spin0_acts_equally_on_zitter_branches")
+        ),
         "independent_matrix_check_passes": (
             evidence_010.get("status") == "PASS"
             and evidence_010.get("max_error", 1.0) <= 1.0e-12),
@@ -413,6 +435,11 @@ def main() -> int:
             and evidence_023.get("max_error", 1.0) <= 2.0e-11
             and evidence_023.get("sample_count") == 6
             and all(evidence_023.get("checks", {}).values())),
+        "independent_projective_cycle_check_passes": (
+            evidence_024.get("status") == "PASS"
+            and evidence_024.get("max_error", 1.0) <= 2.0e-11
+            and evidence_024.get("sample_count") == 5
+            and all(evidence_024.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -422,7 +449,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC023_READY" if passed else "DIRAC023_OPEN",
+        "verdict": "DIRAC024_READY" if passed else "DIRAC024_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

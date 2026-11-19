@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-023
+## Established through DIRAC-024
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -178,6 +178,19 @@
 - Independent reconstruction confirms these identities for rest, axial,
   oblique, signed and higher-momentum cases and rejects changed transport and
   rest-frequency controls.
+- One complete action-derived zitter period is exactly the opposite-energy
+  branch-beat period `pi/19`.
+- After one such period the coherent four-component state is negated, while
+  its density, velocity and integrated position have returned; after two
+  periods the state itself returns.
+- On both retained native copies, the one-cycle temporal endpoint equals the
+  independently derived cubical `2π` spinor endpoint, and the two-cycle
+  endpoint equals the cubical `4π` return.
+- The rest Hamiltonian distinguishes the positive- and negative-energy
+  branches while the selected spatial spin generator acts equally on them;
+  the matching projective endpoints therefore do not identify the generators.
+- Independent reconstruction confirms all three axes, both copies and five
+  times, and rejects half-period and wrong-period controls.
 
 ## Not established
 
@@ -217,6 +230,8 @@
 - A directly observable clock signal in a pure energy eigenstate; its global
   phase leaves the pure-state density unchanged.
 - A theorem that zitterbewegung physically causes spin one-half.
+- A theorem that temporal evolution is identical to spatial rotation.
+- A localized nonlinear realization of the projective zitter/spin cycle.
 
 The theorem uses a conditional prepared background; it does not provide an
 origin story. The chosen action is not uniquely forced. The cubical square

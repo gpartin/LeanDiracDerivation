@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.4.0",
+  "schema_version": "1.5.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-023",
-  "next_gate": "DIRAC_ZITTER_SPINOR_PROJECTIVE_PERIODICITY",
-  "completed": 23,
-  "total": 23,
+  "highest_passed_gate": "DIRAC-024",
+  "next_gate": "DIRAC_VELOCITY_VARIANCE_CLOCK_IDENTITY",
+  "completed": 24,
+  "total": 24,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
@@ -29,7 +29,8 @@
     "DIRAC-020": "LeanDirac/Dirac020.lean",
     "DIRAC-021": "LeanDirac/Dirac021.lean",
     "DIRAC-022": "LeanDirac/Dirac022.lean",
-    "DIRAC-023": "LeanDirac/Dirac023.lean"
+    "DIRAC-023": "LeanDirac/Dirac023.lean",
+    "DIRAC-024": "LeanDirac/Dirac024.lean"
   },
   "gate_support_modules": {
     "DIRAC-006": "LeanDirac/Dirac006Restriction.lean",
@@ -58,7 +59,8 @@
     "DIRAC-020": "PASS_SCOPED_COHERENT_SPATIAL_TRANSPORT",
     "DIRAC-021": "PASS_SCOPED_ACTION_DERIVED_REST_CLOCK",
     "DIRAC-022": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG",
-    "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION"
+    "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION",
+    "DIRAC-024": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE"
   },
-  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves scoped cube-copy exchange. DIRAC-017 proves the conditional cubical spin-one-half representation and continuous-angle Hamiltonian covariance only in the stated derived sector. DIRAC-018 gives a scoped local factorization classification and does not classify arbitrary nonlocal or flavor-mixing roots. DIRAC-019/020 prove finite spectral and coherent spatial transport, but not a uniform fixed-physical-time convergence rate. DIRAC-021 derives the action-selected rest phases and native frequency 19; a pure branch's global phase is not claimed to be an observable clock. DIRAC-022 derives the free-continuum zitterbewegung expectation and its exact amplitude-frequency scale lock. DIRAC-023 evaluates the existing plane-wave phase along the independently derived current trajectory and proves directional group/phase velocity reciprocity, energy/clock reciprocity, and the standard relativistic clock slowdown in the same continuum sector. The chain does not establish an exact finite-spacing phase-harmony law, a localized nonlinear native electron trajectory, an SI frequency or length, electromagnetic coupling or g-factor, unrestricted live-chi localized electron transport, electron identity or formation, or canonical LFM status."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves scoped cube-copy exchange. DIRAC-017 proves the conditional cubical spin-one-half representation and continuous-angle Hamiltonian covariance only in the stated derived sector. DIRAC-018 gives a scoped local factorization classification and does not classify arbitrary nonlocal or flavor-mixing roots. DIRAC-019/020 prove finite spectral and coherent spatial transport, but not a uniform fixed-physical-time convergence rate. DIRAC-021 derives the action-selected rest phases and native frequency 19; a pure branch's global phase is not claimed to be an observable clock. DIRAC-022 derives the free-continuum zitterbewegung expectation and its exact amplitude-frequency scale lock. DIRAC-023 evaluates the existing plane-wave phase along the independently derived current trajectory and proves directional group/phase velocity reciprocity, energy/clock reciprocity, and the standard relativistic clock slowdown in the same continuum sector. DIRAC-024 proves that one action-derived zitter observable period negates the coherent state while returning density, velocity and position, and that this endpoint action equals the independently derived cubical 2pi spinor action on both copies; two periods and 4pi return the state. Temporal and spatial generators remain distinct. The chain does not establish an exact finite-spacing phase-harmony law, a localized nonlinear native electron trajectory, zitterbewegung as the cause of spin, an SI frequency or length, electromagnetic coupling or g-factor, unrestricted live-chi localized electron transport, electron identity or formation, or canonical LFM status."
 }
