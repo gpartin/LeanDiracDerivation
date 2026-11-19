@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE_NAME = "LeanDiracDerivation-DIRAC-025.zip"
+ARCHIVE_NAME = "LeanDiracDerivation-DIRAC-030.zip"
 FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 PROVENANCE_NAME = "PROVENANCE.json"
 MANIFEST_NAME = "PACKAGE_MANIFEST.sha256"

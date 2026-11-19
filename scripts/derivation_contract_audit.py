@@ -1,4 +1,4 @@
-"""Read-only audit of the completed DIRAC-001--025 derivation contract."""
+"""Read-only audit of the completed DIRAC-001--030 derivation contract."""
 
 from __future__ import annotations
 
@@ -71,9 +71,12 @@ def main() -> int:
     evidence_025 = json.loads((
         ROOT / "experiments" / "dirac025_velocity_clock" / "result.json"
     ).read_text(encoding="utf-8"))
+    evidence_030 = json.loads((
+        ROOT / "experiments" / "dirac026_030_free_electron" / "result.json"
+    ).read_text(encoding="utf-8"))
     checks = {
-        "highest_gate_is_025": status.get("highest_passed_gate") == "DIRAC-025",
-        "all_twenty_five_gates_complete": status.get("completed") == 25,
+        "highest_gate_is_030": status.get("highest_passed_gate") == "DIRAC-030",
+        "all_thirty_gates_complete": status.get("completed") == 30,
         "base_action_has_no_incidence_import": not contains(
             "LeanDirac/Dirac002.lean", "ChiIncidence"),
         "native_action_restriction_present": contains(
@@ -155,9 +158,19 @@ def main() -> int:
         "final_theorem_does_not_use_inserted_mode_as_bridge": not contains(
             "LeanDirac/Dirac015.lean",
             "controlledCenteredEquationLimit"),
-        "publication_stops_at_025": contains(
+        "publication_stops_at_030": contains(
             "LeanDirac/Publication.lean",
-            "theorem current_highest_gate_is_dirac025"),
+            "theorem current_highest_gate_is_dirac030"),
+        "lorentz_boost_theorem_present": contains(
+            "LeanDirac/Dirac026.lean", "theorem dirac026_free_lorentz_boost"),
+        "pauli_lubanski_theorem_present": contains(
+            "LeanDirac/Dirac027.lean", "theorem dirac027_pauli_lubanski_spin_half"),
+        "wigner_thomas_theorem_present": contains(
+            "LeanDirac/Dirac028.lean", "theorem dirac028_wigner_thomas_half_factor"),
+        "charge_conjugation_theorem_present": contains(
+            "LeanDirac/Dirac029.lean", "theorem dirac029_free_charge_conjugation"),
+        "gordon_theorem_present": contains(
+            "LeanDirac/Dirac030.lean", "theorem dirac030_free_gordon_decomposition"),
         "copy_translation_exchange_present": contains(
             "LeanDirac/Dirac016.lean",
             "theorem raw_axis2_maps_minus_to_plus"),
@@ -464,6 +477,11 @@ def main() -> int:
             and evidence_025.get("sample_count") == 5
             and evidence_025.get("spin_state_count") == 10
             and all(evidence_025.get("checks", {}).values())),
+        "independent_dirac026_030_check_passes": (
+            evidence_030.get("status") == "PASS"
+            and evidence_030.get("max_error", 1.0) <= 5.0e-11
+            and evidence_030.get("native_framework_changed") is False
+            and all(evidence_030.get("checks", {}).values())),
         "zero_critical_high": (
             review.get("status") == "PASS_ZERO_CRITICAL_HIGH"
             and not review.get("critical_findings")
@@ -473,7 +491,7 @@ def main() -> int:
     print(json.dumps({
         "action_id": contract["action_id"],
         "checks": checks,
-        "verdict": "DIRAC025_READY" if passed else "DIRAC025_OPEN",
+        "verdict": "DIRAC030_READY" if passed else "DIRAC030_OPEN",
         "claim_boundary": status["claim_boundary"],
     }, indent=2))
     return 1 if args.strict and not passed else 0

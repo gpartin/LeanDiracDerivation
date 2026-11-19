@@ -1,8 +1,8 @@
 {
   "schema_version": "1.6.0",
-  "gate": "DIRAC-025",
+  "gate": "DIRAC-030",
   "status": "PASS_ZERO_CRITICAL_HIGH",
-  "review_scope": "LeanDirac.current_highest_gate_is_dirac025 and every transitive production dependency",
+  "review_scope": "LeanDirac.current_highest_gate_is_dirac030 and every transitive production dependency",
   "review_basis": [
     "compiled Lean environment audit",
     "complete production-module enumeration",
@@ -70,7 +70,12 @@
     "Surfaced the existing zitter amplitude-frequency scale lock without modifying the action, mass, speed or observable.",
     "Derived the zitter period from the already-proved opposite-energy beat and proved one-cycle state antiperiodicity, two-cycle return, and one-cycle observable periodicity without inserting a phase reset or rotation rule.",
     "Bridged the one-cycle/two-cycle temporal endpoints to the independently derived 2pi/4pi cubical spinor endpoints on both retained copies while proving the temporal and spatial generators remain distinct.",
-    "Constructed the longitudinal velocity operator only from the existing Hamiltonian momentum responses, proved its square and same-state moments, and derived the exact equality between its normalized rms fluctuation and the independently derived moving clock ratio without adding a velocity, clock or hidden-path rule."
+    "Constructed the longitudinal velocity operator only from the existing Hamiltonian momentum responses, proved its square and same-state moments, and derived the exact equality between its normalized rms fluctuation and the independently derived moving clock ratio without adding a velocity, clock or hidden-path rule.",
+    "Constructed Lorentz boosts from the existing cubical alpha operators and proved their algebra, finite inverse, mass shell, density and current without changing the native action.",
+    "Constructed the Pauli-Lubanski invariant from those boost and rotation generators and derived the spin-one-half value rather than supplying it as a label.",
+    "Derived the infinitesimal Wigner-Thomas one-half coefficient from the mixed boost product and proved its uniqueness on a nonzero witness.",
+    "Constructed free charge conjugation as an explicit anti-linear involution and proved frequency plus momentum reversal on both native copies without asserting electric charge or an interacting positron.",
+    "Derived the Gordon current decomposition from the established gamma algebra and free on-shell equations without adding an electromagnetic field, Pauli term, magnetic moment or g factor."
   ],
   "declared_starting_hypotheses": [
     "the noncanonical positive two-field local-plus-exterior-area C19 action",
@@ -107,8 +112,10 @@
     "an SI-calibrated moving electron clock",
     "a classical hidden light-speed path inferred from the velocity operator",
     "an exact native finite-spacing or nonlinear live-chi velocity-clock identity",
+    "exact Lorentz invariance at finite C19 spacing or finite timestep",
+    "electric charge or an interacting positron from free charge conjugation",
     "electromagnetic coupling and magnetic g-factor",
     "physical electron identity"
   ],
-  "caveat": "DIRAC-025 derives the longitudinal velocity operator from the existing Hamiltonian momentum response and proves that its normalized rms fluctuation in the same positive-frequency state equals the independently derived moving/rest phase-clock ratio. It does not infer a classical hidden trajectory, exact finite-spacing dynamics, a localized nonlinear native electron, unrestricted live-chi localized-electron motion, electromagnetic response, a physical electron, or canonical LFM status."
+  "caveat": "DIRAC-026 through DIRAC-030 derive free-sector Lorentz boosts, covariant spin one-half, the Wigner-Thomas half factor, free charge conjugation and the Gordon current split from the existing four-component representation. They do not infer exact finite-spacing Lorentz symmetry, electric charge, an interacting positron, electromagnetic response, magnetic moment, g factor, a localized nonlinear physical electron, or canonical LFM status."
 }

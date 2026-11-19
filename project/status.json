@@ -2,10 +2,10 @@
   "schema_version": "1.6.0",
   "project": "LFM_TO_DIRAC_LEAN_DERIVATION",
   "canonical": false,
-  "highest_passed_gate": "DIRAC-025",
+  "highest_passed_gate": "DIRAC-030",
   "next_gate": "DIRAC_MAGNETIC_PROBE_AND_G_FACTOR",
-  "completed": 25,
-  "total": 25,
+  "completed": 30,
+  "total": 30,
   "gate_modules": {
     "DIRAC-001": "LeanDirac/Dirac001.lean",
     "DIRAC-002": "LeanDirac/Dirac002.lean",
@@ -31,7 +31,12 @@
     "DIRAC-022": "LeanDirac/Dirac022.lean",
     "DIRAC-023": "LeanDirac/Dirac023.lean",
     "DIRAC-024": "LeanDirac/Dirac024.lean",
-    "DIRAC-025": "LeanDirac/Dirac025.lean"
+    "DIRAC-025": "LeanDirac/Dirac025.lean",
+    "DIRAC-026": "LeanDirac/Dirac026.lean",
+    "DIRAC-027": "LeanDirac/Dirac027.lean",
+    "DIRAC-028": "LeanDirac/Dirac028.lean",
+    "DIRAC-029": "LeanDirac/Dirac029.lean",
+    "DIRAC-030": "LeanDirac/Dirac030.lean"
   },
   "gate_support_modules": {
     "DIRAC-006": "LeanDirac/Dirac006Restriction.lean",
@@ -62,7 +67,12 @@
     "DIRAC-022": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG",
     "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION",
     "DIRAC-024": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE",
-    "DIRAC-025": "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY"
+    "DIRAC-025": "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY",
+    "DIRAC-026": "PASS_SCOPED_FREE_LORENTZ_BOOSTS",
+    "DIRAC-027": "PASS_SCOPED_PAULI_LUBANSKI_SPIN_HALF",
+    "DIRAC-028": "PASS_SCOPED_INFINITESIMAL_WIGNER_THOMAS_ROTATION",
+    "DIRAC-029": "PASS_SCOPED_FREE_CHARGE_CONJUGATION",
+    "DIRAC-030": "PASS_SCOPED_FREE_GORDON_CURRENT_DECOMPOSITION"
   },
-  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016 proves scoped cube-copy exchange. DIRAC-017 proves the conditional cubical spin-one-half representation and continuous-angle Hamiltonian covariance only in the stated derived sector. DIRAC-018 gives a scoped local factorization classification and does not classify arbitrary nonlocal or flavor-mixing roots. DIRAC-019/020 prove finite spectral and coherent spatial transport, but not a uniform fixed-physical-time convergence rate. DIRAC-021 derives the action-selected rest phases and native frequency 19; a pure branch's global phase is not claimed to be an observable clock. DIRAC-022 derives the free-continuum zitterbewegung expectation and its exact amplitude-frequency scale lock. DIRAC-023 evaluates the existing plane-wave phase along the independently derived current trajectory and proves directional group/phase velocity reciprocity, energy/clock reciprocity, and the standard relativistic clock slowdown in the same continuum sector. DIRAC-024 proves that one action-derived zitter observable period negates the coherent state while returning density, velocity and position, and that this endpoint action equals the independently derived cubical 2pi spinor action on both copies; two periods and 4pi return the state. Temporal and spatial generators remain distinct. DIRAC-025 derives the longitudinal velocity operator from the existing Hamiltonian response and proves, in the same positive-frequency state, that its normalized rms fluctuation equals the moving phase-clock ratio and obeys an exact velocity-clock Pythagorean identity. It does not assert a classical hidden light-speed path. The chain does not establish an exact finite-spacing phase-harmony law or velocity-clock law, a localized nonlinear native electron trajectory, zitterbewegung as the cause of spin, an SI frequency or length, electromagnetic coupling or g-factor, unrestricted live-chi localized electron transport, electron identity or formation, or canonical LFM status."
+  "claim_boundary": "DIRAC-015 completes the conditional free-Dirac continuum derivation. DIRAC-016--025 add scoped copy, spin, transport, clock, zitterbewegung and velocity identities, including continuous-angle Hamiltonian covariance. The chain does not classify arbitrary nonlocal or flavor-mixing roots, prove a uniform fixed-physical-time convergence rate, or prove localized electron transport. A pure branch's global phase is not claimed to be an observable clock. The chain does not establish a localized nonlinear native electron trajectory, an exact finite-spacing phase-harmony law, or a classical hidden light-speed path. Temporal and spatial generators remain distinct. DIRAC-026 derives free Lorentz boosts; DIRAC-027 derives the Pauli--Lubanski spin-half invariant; DIRAC-028 derives the infinitesimal Wigner--Thomas half factor; DIRAC-029 derives free charge conjugation; DIRAC-030 derives the free Gordon current split. These do not establish exact finite-spacing Lorentz invariance, electric charge or interacting positrons, electromagnetic coupling, magnetic moment or g-factor, SI calibration, electron formation, or canonical LFM status."
 }

@@ -50,6 +50,8 @@ EVIDENCE_FILES = [
     "experiments/dirac024_projective_zitter_spin/result.json",
     "experiments/dirac025_velocity_clock/validate_dirac025.py",
     "experiments/dirac025_velocity_clock/result.json",
+    "experiments/dirac026_030_free_electron/validate_dirac026_030.py",
+    "experiments/dirac026_030_free_electron/result.json",
 ]
 
 RELEASE_FILES = [
@@ -83,6 +85,17 @@ RELEASE_FILES = [
     "docs/DIRAC025_RED_TEAM.md",
     "docs/FORUM_POST_DIRAC025.md",
     "docs/DIRAC026_RESEARCH_TARGET.md",
+    "docs/DIRAC026_RED_TEAM.md",
+    "docs/DIRAC027_RED_TEAM.md",
+    "docs/DIRAC028_RED_TEAM.md",
+    "docs/DIRAC029_RED_TEAM.md",
+    "docs/DIRAC030_RED_TEAM.md",
+    "docs/DIRAC001_030_RED_TEAM.md",
+    "docs/FORUM_POST_DIRAC026.md",
+    "docs/FORUM_POST_DIRAC027.md",
+    "docs/FORUM_POST_DIRAC028.md",
+    "docs/FORUM_POST_DIRAC029.md",
+    "docs/FORUM_POST_DIRAC030.md",
     "docs/FRAMEWORK.md",
     "docs/PROOF_CHAIN.md",
     "docs/RELATED_WORK.md",
@@ -118,6 +131,12 @@ RELEASE_FILES = [
     "project/dirac024_release_readiness_status.json",
     "project/dirac025_velocity_clock_status.json",
     "project/dirac025_release_readiness_status.json",
+    "project/dirac026_lorentz_boost_status.json",
+    "project/dirac027_pauli_lubanski_status.json",
+    "project/dirac028_wigner_thomas_status.json",
+    "project/dirac029_charge_conjugation_status.json",
+    "project/dirac030_gordon_status.json",
+    "project/dirac030_release_readiness_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -175,8 +194,8 @@ def main() -> int:
         "role": "formal-proof",
         "action_id": ACTION_ID,
         "publication_module": "LeanDirac/Publication.lean",
-        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac025",
-        "highest_gate": "DIRAC-025",
+        "publication_theorem": "LeanDirac.current_highest_gate_is_dirac030",
+        "highest_gate": "DIRAC-030",
         "files": hashes(proof_files),
     })
     import numpy
@@ -184,7 +203,7 @@ def main() -> int:
         "schema_version": "2.1.0",
         "role": "independent-evidence",
         "action_id": ACTION_ID,
-        "numerical_evidence": "experiments/dirac025_velocity_clock/result.json",
+        "numerical_evidence": "experiments/dirac026_030_free_electron/result.json",
         "cumulative_numerical_evidence": [
             "experiments/dirac010_standard_map/result.json",
             "experiments/dirac011_frequency_mass/result.json",
@@ -200,6 +219,7 @@ def main() -> int:
             "experiments/dirac023_phase_harmony/result.json",
             "experiments/dirac024_projective_zitter_spin/result.json",
             "experiments/dirac025_velocity_clock/result.json",
+            "experiments/dirac026_030_free_electron/result.json",
         ],
         "environment": {
             "python": platform.python_version(),

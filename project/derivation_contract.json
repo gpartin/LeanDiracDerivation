@@ -35,7 +35,12 @@
     "DIRAC-022": "PASS_SCOPED_ACTION_DERIVED_FREE_ZITTERBEWEGUNG",
     "DIRAC-023": "PASS_SCOPED_CONTINUUM_PHASE_HARMONY_AND_TIME_DILATION",
     "DIRAC-024": "PASS_SCOPED_PROJECTIVE_ZITTER_SPIN_CYCLE",
-    "DIRAC-025": "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY"
+    "DIRAC-025": "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY",
+    "DIRAC-026": "PASS_SCOPED_FREE_LORENTZ_BOOSTS",
+    "DIRAC-027": "PASS_SCOPED_PAULI_LUBANSKI_SPIN_HALF",
+    "DIRAC-028": "PASS_SCOPED_INFINITESIMAL_WIGNER_THOMAS_ROTATION",
+    "DIRAC-029": "PASS_SCOPED_FREE_CHARGE_CONJUGATION",
+    "DIRAC-030": "PASS_SCOPED_FREE_GORDON_CURRENT_DECOMPOSITION"
   },
   "dirac006_bridge_mandatory_gates": {
     "formal": [
@@ -398,6 +403,30 @@
       "a localized nonlinear electron",
       "an SI calibration",
       "electromagnetic coupling or a magnetic g-factor"
+    ]
+  },
+  "dirac026_030_mandatory_gates": {
+    "formal": [
+      "same action and transitive DIRAC-025 derivation",
+      "boost generators derived from the established cubical alpha operators",
+      "Pauli-Lubanski square derived from the same Lorentz generators",
+      "Wigner-Thomas half factor derived and proved unique on a nonzero witness",
+      "free charge conjugation is an explicit anti-linear involution with momentum reversal",
+      "Gordon current decomposition follows from the established gamma algebra and on-shell equations",
+      "standard-foundation-only axiom audit"
+    ],
+    "independent": [
+      "all five matrix identities reproduce within 5e-11",
+      "wrong half factor, omitted boosts, unreversed momentum and omitted spin-current controls are rejected",
+      "native framework hash remains unchanged",
+      "all excluded claims remain explicit"
+    ],
+    "excluded_claims": [
+      "exact finite-spacing Lorentz invariance",
+      "localized nonlinear electron",
+      "electric charge or interacting positron",
+      "electromagnetic magnetic moment or g factor",
+      "SI calibration"
     ]
   }
 }

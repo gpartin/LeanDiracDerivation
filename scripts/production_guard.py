@@ -1,4 +1,4 @@
-"""One-command release audit for the completed DIRAC-001--025 chain.
+"""One-command release audit for the completed DIRAC-001--030 chain.
 
 This is a read-only verifier, not a Git hook.
 """
@@ -40,6 +40,12 @@ STATUS_024 = ROOT / "project" / "dirac024_projective_zitter_spin_status.json"
 READINESS_024 = ROOT / "project" / "dirac024_release_readiness_status.json"
 STATUS_025 = ROOT / "project" / "dirac025_velocity_clock_status.json"
 READINESS_025 = ROOT / "project" / "dirac025_release_readiness_status.json"
+STATUS_026 = ROOT / "project" / "dirac026_lorentz_boost_status.json"
+STATUS_027 = ROOT / "project" / "dirac027_pauli_lubanski_status.json"
+STATUS_028 = ROOT / "project" / "dirac028_wigner_thomas_status.json"
+STATUS_029 = ROOT / "project" / "dirac029_charge_conjugation_status.json"
+STATUS_030 = ROOT / "project" / "dirac030_gordon_status.json"
+READINESS_030 = ROOT / "project" / "dirac030_release_readiness_status.json"
 EVIDENCE_010 = ROOT / "experiments" / "dirac010_standard_map" / "result.json"
 EVIDENCE_011 = ROOT / "experiments" / "dirac011_frequency_mass" / "result.json"
 EVIDENCE_012 = ROOT / "experiments" / "dirac012_continuum_evolution" / "result.json"
@@ -54,6 +60,7 @@ EVIDENCE_022 = ROOT / "experiments" / "dirac022_zitterbewegung" / "result.json"
 EVIDENCE_023 = ROOT / "experiments" / "dirac023_phase_harmony" / "result.json"
 EVIDENCE_024 = ROOT / "experiments" / "dirac024_projective_zitter_spin" / "result.json"
 EVIDENCE_025 = ROOT / "experiments" / "dirac025_velocity_clock" / "result.json"
+EVIDENCE_030 = ROOT / "experiments" / "dirac026_030_free_electron" / "result.json"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -1023,6 +1030,62 @@ def validate_dirac025_evidence(payload: dict) -> list[str]:
     return errors
 
 
+def validate_dirac026_030_evidence(payload: dict) -> list[str]:
+    """Fail closed on the combined independent reconstruction for 026--030."""
+    errors: list[str] = []
+    tolerance = payload.get("tolerance")
+    admitted = tolerance if isinstance(tolerance, (int, float)) and \
+        math.isfinite(tolerance) and 0 < tolerance <= 5.0e-11 else 0.0
+    if payload.get("status") != "PASS":
+        errors.append("DIRAC-026--030 independent verdict is not PASS")
+    if admitted == 0.0:
+        errors.append("DIRAC-026--030 tolerance is invalid")
+    if payload.get("stages") != [
+            "DIRAC-026", "DIRAC-027", "DIRAC-028", "DIRAC-029", "DIRAC-030"]:
+        errors.append("DIRAC-026--030 stage census is incomplete")
+    maximum = payload.get("max_error")
+    if not isinstance(maximum, (int, float)) or not math.isfinite(maximum) or \
+            maximum > admitted:
+        errors.append("DIRAC-026--030 maximum error exceeds tolerance")
+    required_errors = {
+        "026_boost_commutator", "026_rotation_boost", "026_finite_boost",
+        "027_pauli_lubanski", "028_thomas_half",
+        "029_charge_conjugation", "030_gordon_kernel",
+    }
+    component_errors = payload.get("errors")
+    if not isinstance(component_errors, dict) or set(component_errors) != required_errors or \
+            any(not isinstance(value, (int, float)) or not math.isfinite(value) or
+                abs(value) > admitted for value in component_errors.values()):
+        errors.append("DIRAC-026--030 component errors are incomplete or excessive")
+    required_checks = required_errors | {"negative_controls_rejected"}
+    checks = payload.get("checks")
+    if not isinstance(checks, dict) or set(checks) != required_checks or \
+            not all(value is True for value in checks.values()):
+        errors.append("DIRAC-026--030 checks are incomplete or false")
+    negative = payload.get("negative_controls")
+    required_negative = {
+        "wrong_thomas_factor", "pauli_lubanski_without_boosts",
+        "charge_without_momentum_reversal", "gordon_without_spin_term",
+    }
+    if not isinstance(negative, dict) or set(negative) != required_negative or \
+            any(not isinstance(negative.get(key), (int, float)) or
+                not math.isfinite(negative[key]) or negative[key] <= 1.0e-3
+                for key in required_negative):
+        errors.append("DIRAC-026--030 negative controls are malformed or ineffective")
+    if payload.get("native_framework_changed") is not False:
+        errors.append("DIRAC-026--030 evidence reports a native-framework change")
+    required_exclusions = {
+        "exact finite-spacing Lorentz invariance",
+        "localized nonlinear electron",
+        "electric charge or interacting positron",
+        "electromagnetic magnetic moment or g factor",
+        "SI calibration",
+    }
+    if set(payload.get("excluded_claims", [])) != required_exclusions:
+        errors.append("DIRAC-026--030 excluded-claim boundary is incomplete")
+    return errors
+
+
 def validate(run_builds: bool = True) -> list[str]:
     errors: list[str] = []
     framework, e1 = validate_manifest(FRAMEWORK_LOCK)
@@ -1044,6 +1107,11 @@ def validate(run_builds: bool = True) -> list[str]:
     status_023 = load(STATUS_023)
     status_024 = load(STATUS_024)
     status_025 = load(STATUS_025)
+    status_026 = load(STATUS_026)
+    status_027 = load(STATUS_027)
+    status_028 = load(STATUS_028)
+    status_029 = load(STATUS_029)
+    status_030 = load(STATUS_030)
     readiness_019 = load(READINESS_019)
     readiness_020 = load(READINESS_020)
     readiness_021 = load(READINESS_021)
@@ -1051,12 +1119,13 @@ def validate(run_builds: bool = True) -> list[str]:
     readiness_023 = load(READINESS_023)
     readiness_024 = load(READINESS_024)
     readiness_025 = load(READINESS_025)
-    if status.get("highest_passed_gate") != "DIRAC-025":
-        errors.append("status does not stop at DIRAC-025")
+    readiness_030 = load(READINESS_030)
+    if status.get("highest_passed_gate") != "DIRAC-030":
+        errors.append("status does not stop at DIRAC-030")
     if status.get("next_gate") != \
             "DIRAC_MAGNETIC_PROBE_AND_G_FACTOR":
         errors.append("magnetic probe is not the next boundary")
-    if status.get("completed") != 25 or status.get("total") != 25:
+    if status.get("completed") != 30 or status.get("total") != 30:
         errors.append("gate counts are incorrect")
     expected_gate_017 = "PASS_CONDITIONAL_CUBICAL_SPIN_HALF_REPRESENTATION"
     if status.get("gates", {}).get("DIRAC-017") != expected_gate_017:
@@ -1340,7 +1409,33 @@ def validate(run_builds: bool = True) -> list[str]:
                 "LeanDiracDerivation-DIRAC-025.zip",
                 "LeanDiracDerivation-DIRAC-025.zip.sha256"]:
         errors.append("DIRAC-025 release readiness is invalid")
-    publication = "LeanDirac.current_highest_gate_is_dirac025"
+    expected_new_statuses = (
+        (status_026, "DIRAC-026", "PASS_SCOPED_FREE_LORENTZ_BOOSTS",
+         "LeanDirac.dirac026_free_lorentz_boost"),
+        (status_027, "DIRAC-027", "PASS_SCOPED_PAULI_LUBANSKI_SPIN_HALF",
+         "LeanDirac.dirac027_pauli_lubanski_spin_half"),
+        (status_028, "DIRAC-028", "PASS_SCOPED_INFINITESIMAL_WIGNER_THOMAS_ROTATION",
+         "LeanDirac.dirac028_wigner_thomas_half_factor"),
+        (status_029, "DIRAC-029", "PASS_SCOPED_FREE_CHARGE_CONJUGATION",
+         "LeanDirac.dirac029_free_charge_conjugation"),
+        (status_030, "DIRAC-030", "PASS_SCOPED_FREE_GORDON_CURRENT_DECOMPOSITION",
+         "LeanDirac.dirac030_free_gordon_decomposition"),
+    )
+    for payload, gate, expected_status, theorem in expected_new_statuses:
+        if payload.get("gate") != gate or payload.get("status") != expected_status or \
+                payload.get("formal_theorem") != theorem or \
+                payload.get("action_changed") is not False or \
+                payload.get("critical_findings") or payload.get("high_findings"):
+            errors.append(f"{gate} scoped result/status contract is invalid")
+    if readiness_030.get("status") != "PASS" or \
+            readiness_030.get("highest_gate") != "DIRAC-030" or \
+            readiness_030.get("publication_theorem") != \
+                "LeanDirac.current_highest_gate_is_dirac030" or \
+            readiness_030.get("package_artifacts") != [
+                "LeanDiracDerivation-DIRAC-030.zip",
+                "LeanDiracDerivation-DIRAC-030.zip.sha256"]:
+        errors.append("DIRAC-030 release readiness is invalid")
+    publication = "LeanDirac.current_highest_gate_is_dirac030"
     if proof.get("publication_theorem") != publication:
         errors.append("proof manifest names the wrong publication theorem")
     action_ids = {m.get("action_id") for m in (framework, proof, evidence, release)}
@@ -1356,7 +1451,7 @@ def validate(run_builds: bool = True) -> list[str]:
     framework_files = set(framework.get("files", {}))
     if not framework_files or not framework_files < locked:
         errors.append("framework lock is not a nonempty strict subset of proof files")
-    if evidence.get("numerical_evidence") != EVIDENCE_025.relative_to(ROOT).as_posix():
+    if evidence.get("numerical_evidence") != EVIDENCE_030.relative_to(ROOT).as_posix():
         errors.append("evidence manifest names the wrong result")
     cumulative = set(evidence.get("cumulative_numerical_evidence", []))
     expected_evidence = {
@@ -1374,6 +1469,7 @@ def validate(run_builds: bool = True) -> list[str]:
         EVIDENCE_023.relative_to(ROOT).as_posix(),
         EVIDENCE_024.relative_to(ROOT).as_posix(),
         EVIDENCE_025.relative_to(ROOT).as_posix(),
+        EVIDENCE_030.relative_to(ROOT).as_posix(),
     }
     if cumulative != expected_evidence:
         errors.append("evidence manifest does not retain every admitted reconstruction")
@@ -1391,6 +1487,7 @@ def validate(run_builds: bool = True) -> list[str]:
     errors.extend(validate_dirac023_evidence(load(EVIDENCE_023)))
     errors.extend(validate_dirac024_evidence(load(EVIDENCE_024)))
     errors.extend(validate_dirac025_evidence(load(EVIDENCE_025)))
+    errors.extend(validate_dirac026_030_evidence(load(EVIDENCE_030)))
     if run_builds:
         build = run(["lake", "build", *production_modules()])
         if build.returncode:
@@ -1432,7 +1529,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
     print("PRODUCTION_AUDIT_PASS")
-    print("highest_passed_gate=DIRAC-025")
+    print("highest_passed_gate=DIRAC-030")
     print("next_gate=DIRAC_MAGNETIC_PROBE_AND_G_FACTOR")
     return 0
 

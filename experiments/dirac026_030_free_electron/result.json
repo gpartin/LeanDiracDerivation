@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "stages": [
+    "DIRAC-026",
+    "DIRAC-027",
+    "DIRAC-028",
+    "DIRAC-029",
+    "DIRAC-030"
+  ],
+  "status": "PASS",
+  "tolerance": 5e-11,
+  "max_error": 1.1368683772161603e-13,
+  "errors": {
+    "026_boost_commutator": 0.0,
+    "026_rotation_boost": 0.0,
+    "026_finite_boost": 1.1368683772161603e-13,
+    "027_pauli_lubanski": 2.220446049250313e-16,
+    "028_thomas_half": 0.0,
+    "029_charge_conjugation": 7.105427357601002e-15,
+    "030_gordon_kernel": 0.0
+  },
+  "checks": {
+    "026_boost_commutator": true,
+    "026_rotation_boost": true,
+    "026_finite_boost": true,
+    "027_pauli_lubanski": true,
+    "028_thomas_half": true,
+    "029_charge_conjugation": true,
+    "030_gordon_kernel": true,
+    "negative_controls_rejected": true
+  },
+  "negative_controls": {
+    "wrong_thomas_factor": 0.25,
+    "pauli_lubanski_without_boosts": 1.0,
+    "charge_without_momentum_reversal": 5.599999999999994,
+    "gordon_without_spin_term": 0.360555127546399
+  },
+  "native_framework_changed": false,
+  "excluded_claims": [
+    "exact finite-spacing Lorentz invariance",
+    "localized nonlinear electron",
+    "electric charge or interacting positron",
+    "electromagnetic magnetic moment or g factor",
+    "SI calibration"
+  ]
+}

@@ -6,7 +6,7 @@ This repository is the production Lean 4 environment for a noncanonical
 attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
-All **25 of 25** derivation gates pass. The chain begins with
+All **30 of 30** derivation gates pass. The chain begins with
 one positive complex-Psi/complex-chi C19 action, proves that its restriction
 and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
@@ -107,6 +107,14 @@ fluctuation is exactly the DIRAC-023 moving/rest phase-clock ratio. Thus
 `(v/c_eff)^2 + (Delta v/c_eff)^2 = 1`, including the exact `3/5,4/5,5/5`
 control. No velocity rule, clock rule, action term, field or coefficient is
 added, and no classical hidden light-speed path is claimed.
+DIRAC-026--030 extend that same derived free-electron sector without changing
+the native action. They derive the Lorentz boost generators and boosted rest
+states, the Pauli--Lubanski spin invariant `s(s+1)=3/4`, the infinitesimal
+Wigner--Thomas half factor, the free charge-conjugation map between frequency
+branches, and the Gordon decomposition of the conserved Dirac current. These
+are continuum free-sector theorems; they do not add electromagnetism or claim
+an interacting positron, magnetic moment, or exact finite-spacing Lorentz
+symmetry.
 
 ## Current status
 
@@ -132,6 +140,11 @@ added, and no classical hidden light-speed path is claimed.
 | DIRAC-023 | PASS (scoped continuum phase harmony and time dilation) | Following the inherited plane-wave phase along the current-derived packet trajectory gives phase rate `chi0^2/E`; its rest-clock ratio is exactly the relativistic speed factor, the energy ratio is reciprocal, and directional group and phase velocities multiply to `c_eff^2`. The inherited zitter amplitude-frequency product is exactly `c_eff`. |
 | DIRAC-024 | PASS (scoped projective zitter/spin cycle) | One action-derived zitter period returns density, velocity and position while negating the coherent state; two periods return it. Those endpoint actions equal the independently derived cubical `2π` sign and `4π` return on both native copies, while the temporal and spatial generators remain distinct. |
 | DIRAC-025 | PASS (scoped velocity-variance/clock identity) | The Hamiltonian-derived longitudinal velocity operator squares to `c_eff^2`; its same-state mean and second moment give an rms fluctuation exactly equal to the moving/rest phase-clock ratio for every nonzero 3D positive-frequency mode. |
+| DIRAC-026 | PASS (scoped free Lorentz boost) | The existing cubical alpha and spin operators generate the Lorentz algebra; finite rapidity boosts carry rest states to on-shell states with the derived density and current. |
+| DIRAC-027 | PASS (scoped Pauli--Lubanski invariant) | The boost and rotation generators give `W^2=-(3/4)m^2`, the covariant massive spin-one-half invariant. |
+| DIRAC-028 | PASS (scoped Wigner--Thomas factor) | Two infinitesimal non-collinear boosts produce the rotation generator with the uniquely forced coefficient `1/2`. |
+| DIRAC-029 | PASS (scoped free charge conjugation) | A derived anti-linear involution maps a positive-frequency solution at momentum `p` to the negative-frequency solution at `-p`, preserving density on both native copies. |
+| DIRAC-030 | PASS (scoped free Gordon decomposition) | The existing gamma algebra and on-shell equations split the free Dirac current into transport and spin-circulation terms with the forced coefficient `1/(2m)`. |
 
 See [the complete proof chain](docs/PROOF_CHAIN.md) for every gate and its
 claim boundary.
@@ -146,7 +159,7 @@ python scripts/verify_release.py
 
 The verifier builds every production module, audits the compiled Lean
 environment, checks role-specific manifests, runs adversarial audit controls,
-and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--025
+and validates the independently reconstructed DIRAC-010--013 and DIRAC-016--030
 evidence, audits the final theorem and publication metadata, and verifies the
 release contract. It is read-only: it
 does not install Git hooks or alter the index.
@@ -155,8 +168,8 @@ does not install Git hooks or alter the index.
 
 - [Native framework](docs/FRAMEWORK.md): fields, constants, geometry, action,
   equations, and update.
-- [Formal proof chain](docs/PROOF_CHAIN.md): all 25 gates and theorem boundary.
-- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-025 establish.
+- [Formal proof chain](docs/PROOF_CHAIN.md): all 30 gates and theorem boundary.
+- [Claims and non-claims](docs/CLAIMS.md): what DIRAC-015 through DIRAC-030 establish.
 - [Reproducibility](docs/REPRODUCIBILITY.md): rebuild instructions.
 - [Publication-quality audit](docs/WORLD_CLASS_AUDIT.md): findings, repairs,
   residual scientific boundaries, and acceptance tests.
@@ -168,8 +181,16 @@ does not install Git hooks or alter the index.
   generator-separation checks, controls, scope, and release findings.
 - [DIRAC-025 red team](docs/DIRAC025_RED_TEAM.md): velocity-variance/clock
   identity, anti-circularity checks, controls, scope, and release findings.
-- [DIRAC-026 research target](docs/DIRAC026_RESEARCH_TARGET.md): a guarded
-  attempt to derive magnetic response without inserting a Pauli term.
+- [DIRAC-026 red team](docs/DIRAC026_RED_TEAM.md): Lorentz algebra, finite
+  boosts, mass shell, density/current, and scope.
+- [DIRAC-027 red team](docs/DIRAC027_RED_TEAM.md): Pauli--Lubanski invariant
+  and covariant spin-one-half scope.
+- [DIRAC-028 red team](docs/DIRAC028_RED_TEAM.md): Wigner--Thomas half-factor
+  derivation and uniqueness control.
+- [DIRAC-029 red team](docs/DIRAC029_RED_TEAM.md): free charge-conjugation map
+  and antiparticle-claim boundary.
+- [DIRAC-030 red team](docs/DIRAC030_RED_TEAM.md): Gordon identity,
+  on-shell current split, and electromagnetic non-claims.
 - [Related work and attribution](docs/RELATED_WORK.md): the geometric
   lattice-fermion lineage and the repository's narrower formal contribution.
 - [Changelog](CHANGELOG.md): current cleanup and historical milestones.
@@ -204,6 +225,9 @@ does not install Git hooks or alter the index.
   antiperiod, two-cycle return, both-copy rotation bridge, and controls.
 - `experiments/dirac025_velocity_clock/`: independent arbitrary-momentum
   velocity moments, clock identity, known ratios, and negative controls.
+- `experiments/dirac026_030_free_electron/`: independent matrix reconstruction
+  of boosts, the Pauli--Lubanski invariant, Wigner--Thomas factor, free charge
+  conjugation, and the Gordon identity, including five negative controls.
 
 ## Proof-security boundary
 

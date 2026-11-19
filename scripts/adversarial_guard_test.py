@@ -333,6 +333,27 @@ def main() -> int:
     )
     if not guard.validate_dirac025_evidence(inflated_claim_025):
         raise AssertionError("inflated DIRAC-025 claim boundary was accepted")
+    payload_030 = guard.load(guard.EVIDENCE_030)
+    if guard.validate_dirac026_030_evidence(payload_030):
+        raise AssertionError("passing DIRAC-026--030 evidence was rejected")
+    broken_half_030 = copy.deepcopy(payload_030)
+    broken_half_030["checks"]["028_thomas_half"] = False
+    if not guard.validate_dirac026_030_evidence(broken_half_030):
+        raise AssertionError("failed Thomas-half evidence was accepted")
+    nonfinite_030 = copy.deepcopy(payload_030)
+    nonfinite_030["errors"]["027_pauli_lubanski"] = math.nan
+    if not guard.validate_dirac026_030_evidence(nonfinite_030):
+        raise AssertionError("non-finite DIRAC-026--030 evidence was accepted")
+    ineffective_control_030 = copy.deepcopy(payload_030)
+    ineffective_control_030["negative_controls"]["gordon_without_spin_term"] = 0.0
+    if not guard.validate_dirac026_030_evidence(ineffective_control_030):
+        raise AssertionError("ineffective Gordon control was accepted")
+    inflated_claim_030 = copy.deepcopy(payload_030)
+    inflated_claim_030["excluded_claims"].remove(
+        "electric charge or interacting positron"
+    )
+    if not guard.validate_dirac026_030_evidence(inflated_claim_030):
+        raise AssertionError("inflated DIRAC-026--030 claim boundary was accepted")
     print("ADVERSARIAL_GUARD_TEST_PASS")
     return 0
 

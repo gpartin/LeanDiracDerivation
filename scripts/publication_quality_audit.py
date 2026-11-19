@@ -26,7 +26,7 @@ def main() -> int:
     lean_workflow = text(".github/workflows/lean.yml")
     numerical_workflow = text(".github/workflows/numerical.yml")
     status = payload("project/status.json")
-    readiness = payload("project/dirac025_release_readiness_status.json")
+    readiness = payload("project/dirac030_release_readiness_status.json")
 
     if re.search(r"(?m)^\s*lake update\s*$", readme) or \
             re.search(r"(?m)^\s*lake update\s*$", reproducibility):
@@ -76,9 +76,19 @@ def main() -> int:
     if status.get("gates", {}).get("DIRAC-025") != \
             "PASS_SCOPED_VELOCITY_VARIANCE_CLOCK_IDENTITY":
         errors.append("machine-readable DIRAC-025 status erases continuum scope")
+    expected_new = {
+        "DIRAC-026": "PASS_SCOPED_FREE_LORENTZ_BOOSTS",
+        "DIRAC-027": "PASS_SCOPED_PAULI_LUBANSKI_SPIN_HALF",
+        "DIRAC-028": "PASS_SCOPED_INFINITESIMAL_WIGNER_THOMAS_ROTATION",
+        "DIRAC-029": "PASS_SCOPED_FREE_CHARGE_CONJUGATION",
+        "DIRAC-030": "PASS_SCOPED_FREE_GORDON_CURRENT_DECOMPOSITION",
+    }
+    for gate, expected in expected_new.items():
+        if status.get("gates", {}).get(gate) != expected:
+            errors.append(f"machine-readable {gate} status erases scope")
     if readiness.get("package_artifacts") != [
-            "LeanDiracDerivation-DIRAC-025.zip",
-            "LeanDiracDerivation-DIRAC-025.zip.sha256"]:
+            "LeanDiracDerivation-DIRAC-030.zip",
+            "LeanDiracDerivation-DIRAC-030.zip.sha256"]:
         errors.append("current release-readiness artifact names are stale")
     for workflow_name, workflow in (
             ("lean", lean_workflow), ("numerical", numerical_workflow)):
@@ -96,7 +106,8 @@ def main() -> int:
             "dirac022_zitterbewegung",
             "dirac023_phase_harmony",
             "dirac024_projective_zitter_spin",
-            "dirac025_velocity_clock"):
+            "dirac025_velocity_clock",
+            "dirac026_030_free_electron"):
         if not (ROOT / "experiments" / gate / "result.json").is_file():
             errors.append(f"missing independent evidence for {gate}")
     if "continuous-angle Hamiltonian covariance" not in \
@@ -123,6 +134,12 @@ def main() -> int:
     if "classical hidden light-speed path" not in \
             text("project/status.json"):
         errors.append("status omits DIRAC-025's operator-interpretation boundary")
+    for phrase in (
+            "exact finite-spacing Lorentz invariance",
+            "electric charge or interacting positrons",
+            "magnetic moment or g-factor"):
+        if phrase not in text("project/status.json"):
+            errors.append(f"status omits DIRAC-026--030 boundary: {phrase}")
     claims = text("docs/CLAIMS.md")
     if "localized dynamically stable carrier" not in claims or \
             "A physical electron" not in claims:

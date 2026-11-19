@@ -1,9 +1,9 @@
-import LeanDirac.Dirac025
+import LeanDirac.Dirac030
 
 namespace LeanDirac
 
 /-!
-Sole cumulative publication root through DIRAC-025.
+Sole cumulative publication root through DIRAC-030.
 
 The nested certificate starts from the positive two-field C19 action, retains
 the exact native second-order and first-order maps, derives the cubical
@@ -131,6 +131,21 @@ exactly the moving phase-clock ratio derived in DIRAC-023.  Equivalently, the
 normalized variance and transport-speed fractions obey a Pythagorean identity.
 No new action, field, coefficient, velocity rule, clock rule, or classical
 hidden path is introduced.
+
+DIRAC-026 constructs Lorentz boosts from the same cubical transport
+generators. It proves the rotation/boost algebra, finite rapidity inverse,
+boosted free states, mass shell and transformed current without changing the
+native action. DIRAC-027 combines those boosts and rotations into the
+Pauli--Lubanski operator and obtains the spin-half Casimir `-3*m^2/4`.
+DIRAC-028 derives the infinitesimal Wigner--Thomas rotation as one half of the
+non-collinear boost commutator and proves that coefficient unique on a nonzero
+native witness. DIRAC-029 derives the free anti-linear charge-conjugation map,
+its involution and its positive/negative-frequency intertwining on both cube
+copies. DIRAC-030 derives the covariant gamma and spin-tensor operators and
+proves the on-shell Gordon decomposition of the free current. These are
+continuum-sector free-electron results; exact finite-spacing Lorentz symmetry,
+electric interactions, magnetic moment and localized nonlinear electron
+claims remain outside their scope.
 -/
 
 structure CumulativeDirac015Certificate : Prop where
@@ -245,6 +260,51 @@ theorem current_highest_gate_is_dirac025 :
   velocityVarianceClockIdentity :=
     dirac025_velocity_variance_clock_identity
 
+structure CumulativeDirac026Certificate : Prop where
+  completedChainThroughVelocityClock : CumulativeDirac025Certificate
+  freeLorentzBoosts : Dirac026FreeLorentzBoostCertificate
+
+theorem current_highest_gate_is_dirac026 :
+    CumulativeDirac026Certificate where
+  completedChainThroughVelocityClock := current_highest_gate_is_dirac025
+  freeLorentzBoosts := dirac026_free_lorentz_boost
+
+structure CumulativeDirac027Certificate : Prop where
+  completedChainThroughBoosts : CumulativeDirac026Certificate
+  pauliLubanskiSpinHalf : Dirac027PauliLubanskiCertificate
+
+theorem current_highest_gate_is_dirac027 :
+    CumulativeDirac027Certificate where
+  completedChainThroughBoosts := current_highest_gate_is_dirac026
+  pauliLubanskiSpinHalf := dirac027_pauli_lubanski_spin_half
+
+structure CumulativeDirac028Certificate : Prop where
+  completedChainThroughRelativisticSpin : CumulativeDirac027Certificate
+  wignerThomasHalfFactor : Dirac028WignerThomasCertificate
+
+theorem current_highest_gate_is_dirac028 :
+    CumulativeDirac028Certificate where
+  completedChainThroughRelativisticSpin := current_highest_gate_is_dirac027
+  wignerThomasHalfFactor := dirac028_wigner_thomas_half_factor
+
+structure CumulativeDirac029Certificate : Prop where
+  completedChainThroughThomasRotation : CumulativeDirac028Certificate
+  freeChargeConjugation : Dirac029ChargeConjugationCertificate
+
+theorem current_highest_gate_is_dirac029 :
+    CumulativeDirac029Certificate where
+  completedChainThroughThomasRotation := current_highest_gate_is_dirac028
+  freeChargeConjugation := dirac029_free_charge_conjugation
+
+structure CumulativeDirac030Certificate : Prop where
+  completedChainThroughChargeConjugation : CumulativeDirac029Certificate
+  freeGordonDecomposition : Dirac030GordonCertificate
+
+theorem current_highest_gate_is_dirac030 :
+    CumulativeDirac030Certificate where
+  completedChainThroughChargeConjugation := current_highest_gate_is_dirac029
+  freeGordonDecomposition := dirac030_free_gordon_decomposition
+
 end LeanDirac
 
 #print axioms LeanDirac.current_highest_gate_is_dirac015
@@ -258,3 +318,8 @@ end LeanDirac
 #print axioms LeanDirac.current_highest_gate_is_dirac023
 #print axioms LeanDirac.current_highest_gate_is_dirac024
 #print axioms LeanDirac.current_highest_gate_is_dirac025
+#print axioms LeanDirac.current_highest_gate_is_dirac026
+#print axioms LeanDirac.current_highest_gate_is_dirac027
+#print axioms LeanDirac.current_highest_gate_is_dirac028
+#print axioms LeanDirac.current_highest_gate_is_dirac029
+#print axioms LeanDirac.current_highest_gate_is_dirac030
