@@ -7,7 +7,7 @@ slower than the limiting speed, and its internal phase clock slows by the
 usual relativistic factor. DIRAC-025 now proves those are not merely two
 parallel formulas.
 
-Using the velocity operation already derived from the Hamiltonian, Lean finds
+Using the velocity operator already derived from the Hamiltonian, Lean finds
 that its full squared value is always the limiting speed squared. But a
 positive-energy massive state has a smaller average velocity. The difference
 between those two quantities is its velocity spread. The surprising result is
