@@ -1,7 +1,7 @@
 import LeanDirac.Publication
 import LeanDirac.EnvironmentAudit
 
-/-! Axiom audit for the cumulative base-action chain through DIRAC-025. -/
+/-! Axiom audit for the cumulative base-action chain through DIRAC-030. -/
 
 #audit_lean_dirac_environment
 
@@ -140,6 +140,20 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.velocity_clock_pythagorean_identity
 #print axioms LeanDirac.three_four_five_clock_control
 #print axioms LeanDirac.dirac025_velocity_variance_clock_identity
+#print axioms LeanDirac.boost_commutator_01
+#print axioms LeanDirac.boosted_positive_rest_is_energy_eigenstate
+#print axioms LeanDirac.dirac026_free_lorentz_boost
+#print axioms LeanDirac.pauli_lubanski_square_is_spin_half
+#print axioms LeanDirac.dirac027_pauli_lubanski_spin_half
+#print axioms LeanDirac.mixed_wigner_term_01_is_half_rotation
+#print axioms LeanDirac.thomas_half_factor_unique
+#print axioms LeanDirac.dirac028_wigner_thomas_half_factor
+#print axioms LeanDirac.standard_charge_conjugation_involution
+#print axioms LeanDirac.standard_charge_conjugation_c19_hamiltonian
+#print axioms LeanDirac.dirac029_free_charge_conjugation
+#print axioms LeanDirac.c19_gordon_kernel_identity
+#print axioms LeanDirac.gordon_current_decomposition
+#print axioms LeanDirac.dirac030_free_gordon_decomposition
 #print axioms LeanDirac.current_highest_gate_is_dirac015
 #print axioms LeanDirac.current_highest_gate_is_dirac016
 #print axioms LeanDirac.current_highest_gate_is_dirac017
@@ -151,3 +165,8 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.current_highest_gate_is_dirac023
 #print axioms LeanDirac.current_highest_gate_is_dirac024
 #print axioms LeanDirac.current_highest_gate_is_dirac025
+#print axioms LeanDirac.current_highest_gate_is_dirac026
+#print axioms LeanDirac.current_highest_gate_is_dirac027
+#print axioms LeanDirac.current_highest_gate_is_dirac028
+#print axioms LeanDirac.current_highest_gate_is_dirac029
+#print axioms LeanDirac.current_highest_gate_is_dirac030

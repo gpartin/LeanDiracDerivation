@@ -1,6 +1,6 @@
 # Claims and non-claims
 
-## Established through DIRAC-025
+## Established through DIRAC-030
 
 - One explicit positive action contains exactly two native complex C3 field
   families on C19 geometry.
@@ -202,6 +202,26 @@
 - Independent reconstruction confirms both positive-energy spin states at
   five oblique momenta, the `3/5 -> 4/5`, `4/5 -> 3/5`, and
   `sqrt(3)/2 -> 1/2` controls, and rejects three wrong substitutions.
+- The rotation and boost generators derived from the existing cubical gamma
+  operators obey the Lorentz Lie algebra, and the finite rapidity boost has an
+  explicit inverse.
+- Boosted native rest states obey the derived mass shell and carry the
+  corresponding density and current.
+- The Pauli--Lubanski invariant constructed from those same generators is
+  exactly `W^2=-(3/4)m^2`, the massive spin-one-half value.
+- The antisymmetric second-order term from two infinitesimal non-collinear
+  boosts is exactly one half of their commutator; a nonzero witness proves
+  that coefficient is unique.
+- A concrete anti-linear involution derived from complex conjugation and the
+  established alpha/beta representation maps the free Hamiltonian at momentum
+  `p` to the opposite-frequency Hamiltonian at `-p`, preserving density on
+  both native copies.
+- The covariant gamma algebra proves the Gordon kernel identity and, for
+  on-shell free states with nonzero mass, the current decomposition into
+  transport and spin-circulation terms with coefficient `1/(2m)`.
+- Independent matrix reconstruction confirms all five results and rejects a
+  wrong Thomas coefficient, omitted boost generator, unreversed momentum,
+  omitted Gordon spin term, and other malformed substitutions.
 
 ## Not established
 
@@ -245,6 +265,11 @@
 - A localized nonlinear realization of the projective zitter/spin cycle.
 - A classical hidden path inferred from the velocity-operator spectrum.
 - An exact finite-spacing or nonlinear live-chi velocity-clock identity.
+- Exact Lorentz symmetry at finite C19 spacing or finite timestep.
+- Electric charge, an interacting positron, or a particle/antiparticle
+  selection rule from the free charge-conjugation theorem.
+- Electromagnetic minimal coupling, a magnetic moment, or a `g` factor from
+  the free Gordon decomposition.
 
 The theorem uses a conditional prepared background; it does not provide an
 origin story. The chosen action is not uniquely forced. The cubical square

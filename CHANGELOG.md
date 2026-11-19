@@ -1,5 +1,19 @@
 # Changelog
 
+## DIRAC-026--030 (unreleased)
+
+- Derived free Lorentz boost generators and finite boosted rest states from
+  the existing cubical alpha/spin representation.
+- Derived the Pauli--Lubanski invariant `W^2=-(3/4)m^2` and the uniquely forced
+  infinitesimal Wigner--Thomas half factor.
+- Derived the free anti-linear charge-conjugation map, including momentum and
+  frequency reversal on both native copies.
+- Derived the free Gordon current decomposition from the existing covariant
+  gamma algebra and on-shell equations.
+- Added independent matrix reconstruction, targeted negative controls, five
+  stage red teams and one cumulative DIRAC-001--030 red team. No native field,
+  action term, C19 weight, update rule or coefficient changed.
+
 ## DIRAC-025 (unreleased)
 
 - Constructed the longitudinal velocity operator only from the three existing

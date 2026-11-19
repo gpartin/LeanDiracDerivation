@@ -211,3 +211,10 @@ DIRAC-025 likewise leaves the framework unchanged. Its longitudinal velocity
 operator is a normalized combination of the three already-derived Hamiltonian
 momentum responses. The variance/clock theorem adds no native observable,
 force, field, coefficient, stencil weight, recurrence or governing equation.
+
+DIRAC-026 through DIRAC-030 also leave the framework unchanged. Lorentz boosts,
+the Pauli--Lubanski invariant, the Wigner--Thomas half factor, free charge
+conjugation and the Gordon current split are downstream algebraic consequences
+of the already-derived continuum four-component sector. They are not new
+native fields, action terms, C19 couplings, update rules or electromagnetic
+interactions.

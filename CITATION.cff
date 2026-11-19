@@ -5,11 +5,11 @@ type: software
 authors:
   - family-names: "Partin"
     given-names: "G. D."
-version: "0.25.0-research-dev"
+version: "0.30.0-research-dev"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 abstract: >-
-  A noncanonical Lean 4 research derivation through DIRAC-025. It connects a
+  A noncanonical Lean 4 research derivation through DIRAC-030. It connects a
   positive two-field C19 action to a massive C19 Klein-Gordon tangent and
   proves that a cubical four-component Dirac Hamiltonian squares to its
   continuum symbol. It controls lattice/time corrections and derives the
@@ -45,6 +45,10 @@ abstract: >-
   in every nonzero positive-frequency mode equals the independently derived
   moving/rest phase-clock ratio, with an exact velocity-clock Pythagorean
   identity.
+  It additionally derives free Lorentz boosts, the Pauli--Lubanski
+  spin-one-half invariant, the Wigner--Thomas half factor, free charge
+  conjugation, and the Gordon current decomposition from the same established
+  four-component sector without changing the native action.
   Arbitrary nonlocal
   or flavor-mixing roots, exact native finite-spacing packet evolution,
   uniform fixed-physical-time convergence, nonlinear realization on a

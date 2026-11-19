@@ -1,7 +1,7 @@
 # Formal proof chain
 
 The sole publication root is
-`LeanDirac.current_highest_gate_is_dirac025`. Each passing gate is a theorem
+`LeanDirac.current_highest_gate_is_dirac030`. Each passing gate is a theorem
 dependency of that root, not a status label standing in for proof.
 
 | Gate | Status | Formal contribution | Next dependency |
@@ -31,6 +31,11 @@ dependency of that root, not a status label standing in for proof.
 | DIRAC-023 | PASS (scoped continuum phase harmony and time dilation) | Evaluates the inherited plane-wave phase on the packet trajectory selected by the already-derived current velocity. The phase rate is `chi0^2/E`; its rest-clock ratio is exactly `sqrt(1-|v|^2/c_eff^2)`, the energy ratio is reciprocal, and every nonzero directional component satisfies `v_group*v_phase=c_eff^2`. It also carries DIRAC-022's exact `zitter amplitude * zitter frequency = c_eff` identity into the cumulative certificate. | Test the exact projective relation between one zitter period and the existing `2π` spinor sign change, without claiming causal identity. |
 | DIRAC-024 | PASS (scoped projective zitter/spin cycle) | Proves one action-derived zitter period negates the coherent state while returning density, velocity and position, and two periods return the state. On both native copies these endpoints equal the independently derived cubical `2π` sign and `4π` return. The rest Hamiltonian and spatial spin generators remain explicitly distinct. | Construct the longitudinal velocity operator from the inherited momentum responses and compare its same-state variance with the independently derived moving clock. |
 | DIRAC-025 | PASS (scoped velocity-variance/clock identity) | Proves the Hamiltonian-derived longitudinal velocity operator squares to `c_eff^2`; its mean is the current velocity and its same-state normalized rms fluctuation equals the DIRAC-023 moving/rest clock ratio for every nonzero 3D positive-frequency mode. | Determine whether a uniquely derived reciprocal phase probe yields the standard magnetic response without inserting a Pauli term or coefficient. |
+| DIRAC-026 | PASS (scoped free Lorentz boost) | Constructs boosts from the established cubical alpha matrices, proves the Lorentz rotation/boost commutators and finite inverse, and carries rest states to on-shell states with the derived density and current. | Form the covariant spin invariant from the same generators. |
+| DIRAC-027 | PASS (scoped Pauli--Lubanski invariant) | Constructs the Pauli--Lubanski vector from the DIRAC-026 Lorentz generators and proves `W^2=-(3/4)m^2`, including the native mass shell. | Derive the non-collinear-boost rotation coefficient. |
+| DIRAC-028 | PASS (scoped Wigner--Thomas factor) | Expands the antisymmetric mixed term of two infinitesimal boosts, proves it is one half of their commutator, and proves the coefficient is unique on a nonzero native witness. | Derive the free particle/antiparticle conjugation map. |
+| DIRAC-029 | PASS (scoped free charge conjugation) | Constructs an anti-linear involution from the established representation, proves density preservation, and maps positive frequency at `p` to negative frequency at `-p` on both native copies. | Decompose the free conserved current without adding an interaction. |
+| DIRAC-030 | PASS (scoped free Gordon decomposition) | Derives covariant gamma and sigma operators from the existing alpha/beta representation, proves the Gordon kernel identity and the on-shell current split with coefficient `1/(2m)`. | Treat any external-field response as a new, separately gated interaction program. |
 
 ## Current theorem boundary
 
@@ -90,6 +95,14 @@ Hamiltonian response and proves its normalized rms equals the independently
 derived moving clock factor. It does not reinterpret the operator spectrum as
 a classical trajectory or extend the result beyond the controlled continuum
 sector.
+DIRAC-026--030 finish this free-sector extension: Lorentz boosts, the
+Pauli--Lubanski spin invariant, the Wigner--Thomas half factor, free charge
+conjugation, and the Gordon current identity are all derived from the same
+established four-component representation. They add no field, action term,
+electromagnetic potential, Pauli interaction, or fitted coefficient. The
+results remain continuum free-sector statements and do not establish exact
+finite-spacing Lorentz symmetry, electric charge, an interacting positron,
+magnetic moment, or a `g` factor.
 
 ## Axiom policy
 

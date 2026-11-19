@@ -190,6 +190,18 @@ reproduces the exact `3/5 -> 4/5`, `4/5 -> 3/5`, and
 `sqrt(3)/2 -> 1/2` ratios, and rejects unnormalized-direction,
 transverse-direction and wrong-mass inputs.
 
+## Independent DIRAC-026--030 reconstruction
+
+```bash
+.venv/Scripts/python experiments/dirac026_030_free_electron/validate_dirac026_030.py
+```
+
+The program independently reconstructs the Lorentz generator algebra, finite
+boost, Pauli--Lubanski invariant, infinitesimal Wigner--Thomas factor, free
+charge-conjugation intertwiner and Gordon kernel. It also rejects a quarter
+Thomas factor, omission of boost terms, failure to reverse momentum, and
+omission of the Gordon spin term.
+
 ## Final audit and deterministic package
 
 ```bash
@@ -197,11 +209,11 @@ python scripts/final_chain_audit.py
 python scripts/build_publication_package.py --output-dir dist
 ```
 
-The first command verifies the complete 25-gate dependency and claim boundary.
+The first command verifies the complete 30-gate dependency and claim boundary.
 The second packages exactly the committed Git tree with fixed timestamps,
 writes
 an internal SHA-256 manifest, reopens the archive, and verifies every byte. It
-produces `dist/LeanDiracDerivation-DIRAC-025.zip` and its checksum. The archive
+produces `dist/LeanDiracDerivation-DIRAC-030.zip` and its checksum. The archive
 also embeds `PROVENANCE.json` with the exact Git commit, Lean toolchain, action
 identifier, highest gate and publication theorem. These steps
 test reproducibility; they do not add a mathematical or physical premise.

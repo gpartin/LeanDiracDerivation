@@ -1,9 +1,9 @@
-# Publication-quality audit through DIRAC-025
+# Publication-quality audit through DIRAC-030
 
 ## Scope and method
 
 This audit reviews the exact production dependency chain rooted at
-`LeanDirac.current_highest_gate_is_dirac025`, its independent evidence,
+`LeanDirac.current_highest_gate_is_dirac030`, its independent evidence,
 machine-readable status, release automation, archival metadata, and public
 claim language. It distinguishes three questions that must not be collapsed:
 
@@ -59,6 +59,11 @@ The native action and governing equations are unchanged by this repair.
 | High | Equal endpoint signs could be misreported as equality of time evolution and spatial rotation. | Two distinct generators can agree at isolated endpoints; conflating them would overstate the physics. | Proved the temporal rest generator distinguishes the positive and negative energy branches while the selected spatial spin generator acts equally on them. The certificate asserts only endpoint correspondence. |
 | High | A sign-changing state alone would not establish the observable cycle or both native copies. | The result could be a phase convention on one selected sector. | Proved density, velocity and position return after one cycle, the state returns only after two cycles, and the `2pi/4pi` endpoint bridge holds on both rank-four native copies and all three spin axes. |
 | Medium | A half-cycle or nearby period might satisfy the same claim numerically. | The advertised period would not be selected. | Added half-period velocity-reversal and ten-percent wrong-period rejection controls in the independent reconstruction. |
+| Critical | A Lorentz boost could have been introduced as a supplied standard matrix. | Lorentz covariance would be assumed rather than derived from the cubical sector. | DIRAC-026 defines boosts from the already-established native alpha operators, proves their commutators with the independently derived rotations, constructs a finite boost and inverse, and checks the resulting mass shell and current. |
+| Critical | Writing `3/4` into a spin label could make the Pauli--Lubanski result tautological. | The covariant spin-one-half claim would not follow from the generators. | DIRAC-027 constructs every component of `W` from the DIRAC-026 rotation/boost generators and proves its square before specializing to the native mass shell. |
+| High | The Thomas half could be selected by convention. | The characteristic half factor would be an inserted coefficient. | DIRAC-028 derives the mixed second-order term as half the boost commutator and proves uniqueness against a nonzero matrix witness; an independent quarter-factor control fails. |
+| Critical | A field named `antiparticle` could merely relabel the desired answer. | Charge conjugation and the second frequency branch would be circular. | DIRAC-029 defines an explicit anti-linear map, proves involution and density preservation, and proves the Hamiltonian intertwining with momentum reversal. The claim is restricted to free charge conjugation and does not infer electric charge. |
+| Critical | The Gordon split could be copied from the continuum textbook identity. | The transport/spin-current decomposition would not be a consequence of this chain. | DIRAC-030 reconstructs gamma and sigma from the established alpha/beta representation and proves the componentwise kernel identity and on-shell decomposition. Removing the spin term fails independently. |
 
 ## Formal claim after repair
 
@@ -132,6 +137,15 @@ the independently derived phase accumulation. The same-state second moment
 then fixes the variance. The theorem explicitly excludes a classical hidden
 light-speed trajectory and exact native finite-spacing dynamics.
 
+DIRAC-026--030 close five additional free-electron identities using only the
+already-derived four-component sector. The Lorentz generators, covariant spin
+Casimir, infinitesimal Wigner--Thomas factor, anti-linear free conjugation and
+Gordon current split are all theorem dependencies of the new publication
+root. None changes the native action, fields, C19 geometry, update or prepared
+sector. Their boundary is explicit: exact finite-spacing Lorentz invariance,
+electric charge, interacting antiparticles, electromagnetic coupling,
+magnetic moment and `g` factor remain unproved.
+
 ## Acceptance tests
 
 The repair is accepted only if all of the following pass from the repaired
@@ -142,7 +156,7 @@ tree:
 - explicit axiom reports for the cumulative theorem and the new continuous
   covariance theorem, with no foundation outside `propext`,
   `Classical.choice`, and `Quot.sound`;
-- independent DIRAC-010, 011, 012, 013, 016, 017, 018, 019, 020, 021, 022, 023, 024, and 025 reconstructions;
+- independent DIRAC-010, 011, 012, 013, and DIRAC-016 through DIRAC-030 reconstructions;
 - adversarial mutations of evidence status, completeness, finiteness, and
   tolerances;
 - derivation-contract, final-chain, and publication-quality audits;
