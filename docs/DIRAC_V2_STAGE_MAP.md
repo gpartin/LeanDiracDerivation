@@ -50,3 +50,6 @@ of the native action around an admitted uniform zero-energy vacuum.  It is
 not a localized nonlinear electron theorem.  Root orientation, global sign
 and the two cubical flavor charts remain representation freedoms and are not
 misreported as action-selected observables.
+
+The requirement-by-requirement completion review is recorded in
+[`DIRAC_V2_COMPLETION_AUDIT.md`](DIRAC_V2_COMPLETION_AUDIT.md).
