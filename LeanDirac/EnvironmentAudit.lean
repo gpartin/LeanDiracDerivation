@@ -1,10 +1,20 @@
-import Mathlib.Util.AssertNoSorry
+/-
+Copyright (c) 2026 G. D. Partin. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+Authors: G. D. Partin
+-/
+
+module
+
+public import Mathlib.Util.AssertNoSorry
+
+@[expose] public section
 
 /-! Compiler-environment audit used by the publication boundary. -/
 
 open Lean Meta Elab Command
 
-private def allowedFoundationAxiom (name : Name) : Bool :=
+private meta def allowedFoundationAxiom (name : Name) : Bool :=
   name == ``propext || name == ``Classical.choice || name == ``Quot.sound
 
 /--

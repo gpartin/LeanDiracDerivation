@@ -1,9 +1,19 @@
-import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
-import Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.Complex.Exponential
-import Mathlib.Analysis.Complex.Trigonometric
-import Mathlib.Tactic
+/-
+Copyright (c) 2026 G. D. Partin. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+Authors: G. D. Partin
+-/
+
+module
+
+public import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
+public import Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+public import Mathlib.Analysis.Complex.Exponential
+public import Mathlib.Analysis.Complex.Trigonometric
+public import Mathlib.Tactic
+
+@[expose] public section
 
 namespace LeanDirac
 

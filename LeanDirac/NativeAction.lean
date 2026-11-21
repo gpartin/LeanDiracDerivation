@@ -1,5 +1,15 @@
-import LeanDirac.ExteriorArea
-import LeanDirac.C19Geometry
+/-
+Copyright (c) 2026 G. D. Partin. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+Authors: G. D. Partin
+-/
+
+module
+
+public import LeanDirac.ExteriorArea
+public import LeanDirac.C19Geometry
+
+@[expose] public section
 
 namespace LeanDirac
 

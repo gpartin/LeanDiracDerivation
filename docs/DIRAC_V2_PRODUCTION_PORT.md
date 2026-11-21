@@ -32,6 +32,14 @@ proof modules plus the reviewed release artifacts and entry-point updates.
 The resulting production diff must be checked independently to confirm that
 no numbered historical file changed.
 
+The clean-base build established one required compatibility patch.  The five
+non-numbered foundation/audit files `Foundation.lean`, `ExteriorArea.lean`,
+`C19Geometry.lean`, `NativeAction.lean`, and `EnvironmentAudit.lean` must use
+Lean 4.33 `module`/`public import` headers so that the new module-form V2 files
+can import them.  Their mathematical declarations are unchanged.  Without
+that header-only conversion Lean rejects the import before checking any V2
+theorem; with it the clean V2 target builds.
+
 ## Promotion sequence
 
 ```text
