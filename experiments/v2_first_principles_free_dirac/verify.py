@@ -215,8 +215,9 @@ def main() -> None:
     for key, expected in expected_verdicts.items():
         require_equal(verdicts.get(key), expected, f"verdict {key}")
 
-    if build_output.strip():
-        print(build_output.strip())
+    if not build_output.strip():
+        raise SystemExit("Lean target build produced no audit output")
+    print("Lean target build: PASS")
     print(
         "v2_first_principles_free_dirac: "
         "PASS_WITH_SCOPED_OPEN_GATES_AND_COMPILED_AXIOM_AUDIT"
