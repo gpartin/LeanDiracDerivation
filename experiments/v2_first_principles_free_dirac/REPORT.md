@@ -8,10 +8,11 @@ admitted uniform vacuum, and the resulting second-order phase space is mapped
 losslessly to a four-component first-order equation. No simulation is a
 premise.
 
-The mathematical chain now compiles through one canonical spectral readout.
-The artifact seal is temporarily `PENDING_FINAL_AUDIT_AND_HASH_SEAL` while
-the independent top-down review, source hashes, and clean publication
-verifier are completed.
+The mathematical chain compiles through one canonical spectral readout.  An
+independent top-down mathematical audit found no critical/high defect.  The
+proof sources, compiled audit support, toolchain, Lake definition, and pinned
+dependency manifest are hash-sealed against the recorded proof-source commit;
+the final verifier is run only from a clean descendant checkout.
 
 The intended scoped verdict table is:
 
@@ -261,6 +262,6 @@ Classical.choice
 Quot.sound
 ```
 
-The artifact is not resealed until every manifest module builds, the cumulative
-theorem passes that compiled audit, the red-team repairs pass, and the final
+Every manifest module builds, the cumulative theorem passes the compiled
+environment and declaration audits, the red-team repairs pass, and the final
 source hashes are recorded.

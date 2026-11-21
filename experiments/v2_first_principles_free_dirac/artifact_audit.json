@@ -1,9 +1,9 @@
 {
   "audit_version": "1.3.0",
-  "status": "PENDING_FINAL_AUDIT_AND_HASH_SEAL",
-  "verified_date": null,
-  "build_result": "3774-job cumulative target build passed; final clean verifier pending",
-  "axiom_result": "module reports standard foundations only; final manifest audit pending",
+  "status": "PASS_WITH_SCOPED_OPEN_GATES_AND_COMPILED_AUDIT",
+  "verified_date": "2026-11-21",
+  "build_result": "Clean production-base target build passed all 3775 jobs",
+  "axiom_result": "Compiled environment and listed cumulative theorems use standard foundations only",
   "required_files": [
     "REPORT.md",
     "RCA.md",
@@ -167,7 +167,45 @@
     "lakefile.lean",
     "lake-manifest.json"
   ],
-  "proof_source_commit": "PENDING_PRODUCTION_PROOF_COMMIT",
-  "source_hashes_sha256": {},
-  "audit_support_hashes_sha256": {}
+  "proof_source_commit": "9eaf90dfb7cb59f69c519f58d79038bc1b1a5da8",
+  "source_hashes_sha256": {
+    "LeanDirac/Foundation.lean": "ca54ec7e31cc51814ae7b49ae19afeb1215e3234ad3dfbd2e9e71db37db5ee8a",
+    "LeanDirac/ExteriorArea.lean": "05c67f2b6cdc750f59da30ffc413870ac5d70f948ea5f643294617ad4f5fb5ad",
+    "LeanDirac/C19Geometry.lean": "8b95b44471f82dbc00b935389a86eec4d7e0d8d863b33aacfbc9e907f86274a9",
+    "LeanDirac/NativeAction.lean": "0b032ec201f88c3840c3914c6e8b346c7db00920058b281f2fb7dbb3698dbb4f",
+    "LeanDirac/V2.lean": "5ca4d7a6c389751da587015fc6ae23d65d5b293e702f9057d9fac28b76955d35",
+    "LeanDirac/V2/NativeVariation.lean": "ed649c5b02584de99b187e1976fcef22208b3dd294d209177d878822b04df02c",
+    "LeanDirac/V2/C19Fourier.lean": "42be460c9d25469e1a6d3f9c9cabe157dabb72a5eb80ad05c80e2b4a79a7d222",
+    "LeanDirac/V2/UniformVacuumTangent.lean": "d01fec6b9637b30b2bc9f9768ec59115d51bda35f0091a6ce7cfd976c798ecbb",
+    "LeanDirac/V2/UniformVacuumEulerLagrange.lean": "884035e42fbe5bc70a06acd2c5b6e789d85fc9e5f2506b1038091f7434bb35ae",
+    "LeanDirac/V2/FinitePeriodicTangent.lean": "2f825f1d3839f95e15399c0cb447cc4575b154700556277bf06693b066739c57",
+    "LeanDirac/V2/FinitePeriodicFourierBasis.lean": "a4887ca50b8d0bd99b55a40e2fdf266c26742756562631c5261bd577411cb2af",
+    "LeanDirac/V2/CubicalClifford.lean": "f846f957db3b5d6e5d8475011a05336b8d0be6ac518fd7365bd1cc16abfee1ce",
+    "LeanDirac/V2/NativeC19CliffordRoot.lean": "71c2089768b16ffed378a3066beabd430d5e7110dcd28f486c6aa1d8bc514469",
+    "LeanDirac/V2/FirstPrinciplesFreeDirac.lean": "e7debda2da184d25aa73037c32fbb9ab065e34ba2fb9b905bd05f183ce6d65fe",
+    "LeanDirac/V2/ReadoutCharacterization.lean": "b7cfe0e6f9d34f7d209c27239358a021bca82ac3ee1f0c07e56ae52c12cc96b4",
+    "LeanDirac/V2/NativeCubicalCompression.lean": "aa5e1a25caa995ba7dfe28947f58e45aa23e4619831c514d64b21c8b9062e0ac",
+    "LeanDirac/V2/UniformVacuumDiscreteTime.lean": "526258a2c3d72063f72b060ef83eba9ebd628b9d57ebad09941599cd7fcd6b75",
+    "LeanDirac/V2/UniformVacuumVerletTime.lean": "ed0732520822fd80597e0a20d986bb2e01b3073a7ad7d60f743efdb03f670f4a",
+    "LeanDirac/V2/UniformVacuumVerletStability.lean": "7244b6bca2853ff98a4de629b7072ea1537c5cb47f447cb9ae76e02c0514682e",
+    "LeanDirac/V2/UniformVacuumVerletDispersion.lean": "d0779b9282bfa6c1e4ab4d515f887c8ff367cf8127cc126a84bf546140e2306d",
+    "LeanDirac/V2/UniformVacuumCurrentBridge.lean": "42b7b3a4ba77efae63f08ddfb1cd2e901b3ded09a5482ec1b18f1059ac5ecd06",
+    "LeanDirac/V2/PositiveFrequencyCurrentBridge.lean": "5c205a860161c057340b97bcb02bf11347b8a8afd5978ecc865a4ae7e8956743",
+    "LeanDirac/V2/CanonicalSpectralReadout.lean": "fa1053facfd30bba9180be15ec46760121de7d0ac6d535f080e583a5c39b9158",
+    "LeanDirac/V2/FinitePeriodicSector.lean": "fef8883484e746e60c122cfec16ac47d26f7856f85d4ed15ed75f00b3f9b64dc",
+    "LeanDirac/V2/PositionSpaceFreeDirac.lean": "edbf54ccf7ab0d0ff38c1b9ccf65a5b602fc287624a0ab409e4d9a6c650f2852",
+    "LeanDirac/V2/CanonicalSpectralExactChain.lean": "63ba7b63eaff510a377b99221dcf3dd5dee9d98c5312a0c8623dcf40d5f254c2",
+    "LeanDirac/V2/PositiveFrequencyPacketScope.lean": "5440cdfaa5e5b4a8931f153770e70e182deda1b78acdfa9fdc0051023691efb7",
+    "LeanDirac/V2/PositiveFrequencyPacketBridge.lean": "88f93369934d7c6424713c59346b33f7792881f24c29afc8f447c57484604bb7",
+    "LeanDirac/V2/CovariantFreeDirac.lean": "d0aa6629cbcf688d4b52c1aeea2ea0dc5262eb2a79a578d1cc96176a3e1f4201",
+    "LeanDirac/V2/CompleteFreeDirac.lean": "6a2506f3469dfad5ee28437ce85dd2bb2bfc9c512ac221e4e9fe3bd1ab972317"
+  },
+  "audit_support_hashes_sha256": {
+    "LeanDirac/EnvironmentAudit.lean": "5c72d20bd45d74cbc487bd955dccd49313378e0166e5660364a1fd1420735bd5",
+    "experiments/v2_first_principles_free_dirac/AxiomAudit.lean": "3a082948aee0321a68f5d7addcab5ec8dfade55e64214567d3c3eba9a8d96541",
+    "experiments/v2_first_principles_free_dirac/verify.py": "7dea9e69400b012f2a9760b7e37ad46ede7f30f8e75b6f06fc000423f74c492e",
+    "lean-toolchain": "a0ada3782cd088719516bbfdf37b9e7032230e211bf424b85d952ee650c51091",
+    "lakefile.lean": "f32d28e4c2387d25b2f28e95fa214c50e80421d1e84a9b59f6259c60094f5092",
+    "lake-manifest.json": "89765e45125d0632130d275f55a66e8acf24930232d674467595da79166b0e1e"
+  }
 }
