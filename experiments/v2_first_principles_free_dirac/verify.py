@@ -22,7 +22,9 @@ ROOT = HERE.parents[1]
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    # Git may materialize text files with CRLF on Windows and LF on Linux.
+    # Seal their repository content rather than the platform-specific checkout.
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def run(command: list[str]) -> subprocess.CompletedProcess[str]:
