@@ -22,7 +22,11 @@ history at tag `v1-legacy-final`.
 
 At each lattice site the native fields are `Psi_i, chi_i : C^3`. The declared
 geometry is C19: six face bonds of weight 2 and twelve edge bonds of weight 1.
-The constants are `chi0 = 19`, `kappa = 1/63`, and `B = 1197`.
+The geometric normalization is `chi0 = 19`, identified with the nineteen
+C19 cube modes (center, six faces, and twelve edges). The chi kinetic
+normalization is declared as `B = 1197`; equivalently the existing
+parameterization writes `kappa = 1/63` and `B = chi0 / kappa`. V2 does not
+yet derive this remaining dimensionless normalization.
 
 The proof starts from one real reciprocal action `L = T - U`, derives both
 Euler--Lagrange equations, and derives the centered two-layer update. The full
@@ -37,7 +41,8 @@ derives:
 - reciprocal native field variation from the action;
 - an exact native zero-energy vacuum and the full finite-lattice tangent;
 - the closed four-complex-component phase space;
-- the cubical Clifford root and both rank-four copies;
+- the cubical Clifford root and an exhaustive direct-sum decomposition into
+  exactly two rank-four copies;
 - the standard alpha/beta form, nonnegative mass, and three transport terms;
 - centered/Verlet time evolution with an explicit vanishing time defect;
 - the position-space free Dirac equation with the explicit C19 remainder;
@@ -47,6 +52,13 @@ There is no external, prepared, period-two, maintained, or Dirac-shaped
 background. The expansion point is one exact zero-energy vacuum solution
 proved from the native action. Selecting a representative of the degenerate
 vacuum family is not claimed to be a cosmological origin mechanism.
+
+Within the declared cubical root, the two four-component sectors are a
+formal prediction, not discarded doubling. Lean proves that both sectors
+are invariant, disjoint, exhaustive, and carry the same free Dirac operator.
+The interpretation that an electron measurement accesses one sector without
+revealing which one was accessed is a physical hypothesis; it is not itself
+a theorem in this repository.
 
 The theorem is a free linear tangent result. It does not claim a nonlinear
 localized electron or any later physical consequence.

@@ -85,6 +85,11 @@ B\ddot\chi_i=-\frac{\delta U}{\delta\chi_i^\dagger}.
 The Dirac field, its matrices, and its first-order equation are not native
 inputs.
 
+The value \(\chi_0=19\) is identified with the nineteen C19 cube modes: one
+center, six faces, and twelve edges. Once \(\chi_0\) is fixed geometrically,
+\(\kappa=1/63\) merely parameterizes the remaining chi kinetic normalization
+\(B=\chi_0/\kappa=1197\). This report does not claim a derivation of \(B\).
+
 ## 2. What “no prepared background” means
 
 The action admits the uniform state
@@ -99,8 +104,9 @@ zero-\(\Psi\) texture with \(\|\chi_i\|=\chi_0\) independently at each site
 has zero potential. Therefore this derivation imports no period-two pattern,
 corner rays, or maintained substrate, but it does select a uniform member of
 the vacuum family. The present action **does not dynamically align** arbitrary
-sitewise vacuum orientations. That selection question is outside this
-theorem and is not hidden as a pass.
+sitewise vacuum orientations. That selection and any cosmological origin
+story are intentionally outside the free-equation theorem and are not
+premises of the result.
 
 ## 3. Hessian of the full action
 
@@ -156,8 +162,12 @@ that its phase-space readout is bijective: no native tangent coordinate is
 discarded and no extra coordinate is added.
 
 `CubicalClifford.lean` constructs signed incidence operators from cube
-geometry and proves their squares and anticommutators. It retains both
-rank-four flavor copies. `NativeCubicalCompression.lean` proves the same
+geometry and proves their squares and anticommutators.
+`FlavorClassification.lean` proves that the eight-corner fiber is the direct
+sum of exactly two disjoint rank-four flavor sectors: every amplitude
+decomposes into them, each eigenspace is exhausted by its four-component
+embedding, and their intersection is zero. `NativeCubicalCompression.lean`
+proves the same
 native phase-space generator intertwines with each cubical representation,
 with the explicit finite-C19 spatial defect carried through.
 
@@ -167,6 +177,11 @@ coordinates with eight physical lattice sites, and it does not delete the
 second flavor. Orientation, the global square-root sign, and flavor are
 representation freedoms; the action proves admission of this factorization,
 not a unique dynamical selection among equivalent charts.
+
+The two sectors are consequently a prediction of the declared cubical root.
+The further claim that measurement accesses one sector without identifying
+which one is an interpretation reserved for physical validation, not a
+formal consequence proved here.
 
 ## 6. Mass, time, and three spatial directions
 
