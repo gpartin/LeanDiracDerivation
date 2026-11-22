@@ -21,7 +21,8 @@ Canonical public artifact:
 | Project Intentions | Updated | Issue 55 comment `7073165369` | None. |
 | Formalization Corpus | Updated | Issue 9 comment `7073165692` | None. |
 | CSI listing | V2 update sent in accepted-listing email thread | https://constraintsystemsinstitute.org/lean/?framework=beyond-aasc | Await maintainer confirmation. |
-| PRLog | Copy prepared; not posted | `PRESS_RELEASE_V2.md` | Create/login to account and submit public release. |
+| Press Release Network (PRN) | Submitted by email for editorial review | https://pressrelease.network/submit-press-release | Await acceptance or correction request in Gmail. |
+| PRLog | Copy prepared; held | `PRESS_RELEASE_V2.md` | Do not duplicate while PRN reviews; PRN explicitly rejects bulk-blast submissions. Use only if PRN declines. |
 | Zulip | Excluded | — | Do not post because of prior moderation action. |
 
 ## Claim boundary used for every submission
