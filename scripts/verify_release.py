@@ -1,4 +1,4 @@
-"""Single entry point for the V2 first-principles Dirac proof audit."""
+"""Single entry point for the cumulative V3 proof audit."""
 
 from __future__ import annotations
 
@@ -16,8 +16,8 @@ def run(*command: str) -> None:
 
 
 def main() -> int:
-    run(sys.executable, "experiments/v2_first_principles_free_dirac/verify.py")
-    print("V2_RELEASE_VERIFICATION_PASS")
+    run(sys.executable, "experiments/v3_lorentz_spin/verify.py")
+    print("V3_RELEASE_VERIFICATION_PASS")
     return 0
 
 

@@ -1,0 +1,25 @@
+{
+  "audit_version": "3.0.0-research",
+  "status": "PASS_WITH_SCOPED_CONTINUUM_CLAIMS",
+  "verified_date": "2026-11-22",
+  "proof_source_commit": "c31d26af09a83b85afaa12b70474921a62533374",
+  "required_files": [
+    "REPORT.md",
+    "RCA.md",
+    "summary.json",
+    "artifact_audit.json",
+    "AxiomAudit.lean",
+    "verify.py"
+  ],
+  "lean_targets": ["LeanDirac", "LeanDiracAudit"],
+  "allowed_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "axiom_theorems": [
+    "LeanDirac.V2.complete_first_principles_free_dirac",
+    "LeanDirac.V2.standard_cubical_continuous_turn_add",
+    "LeanDirac.V2.oriented_dirac_symbol_rotation_covariant",
+    "LeanDirac.V2.oriented_dirac_symbol_boost_covariant",
+    "LeanDirac.V2.cubical_pauli_lubanski_orthogonal",
+    "LeanDirac.V2.rest_pauli_lubanski_spin_half",
+    "LeanDirac.V2.lorentz_spin_half_from_native_action"
+  ]
+}
