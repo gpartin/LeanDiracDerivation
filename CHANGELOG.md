@@ -1,5 +1,19 @@
 # Changelog
 
+## DIRAC V2 first-principles free equation (unreleased)
+
+- Added an independent top-down proof from the native complex-Psi/complex-chi
+  C19 action to the complete free linearized Dirac equation.
+- Replaced V1's prepared period-two entrance with the Hessian at an exact
+  uniform zero-energy solution of the native action; no external or maintained
+  background enters the V2 proof.
+- Derived the lossless four-component readout, cubical Clifford root, standard
+  alpha/beta representation, `m = chi0`, all three transport generators,
+  centered/Verlet time limit, and density/current bridge in one dependency
+  chain.
+- Added compiled declaration, import-closure, axiom, source-hash and toolchain
+  audits. The historical numbered V1 sources remain unchanged.
+
 ## DIRAC-026--030 (unreleased)
 
 - Derived free Lorentz boost generators and finite boosted rest states from

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "line": "DIRAC-V2",
-  "objective": "Replace the prepared-background entrance while preserving and revalidating the DIRAC-001--040 derivation structure.",
+  "objective": "Derive the complete free linearized Dirac equation from the native two-field C19 action without an external, prepared, period-two, or maintained background.",
   "historical_chain_preserved": true,
   "stages": {
     "DIRAC-V2-001": "PASS_REUSED",
@@ -19,7 +19,7 @@
     "DIRAC-V2-013": "PASS_CANONICAL_SPECTRAL_DENSITY_CURRENT_WITH_CONTROLLED_C19_LIMIT",
     "DIRAC-V2-014": "PASS_ADVERSARIAL_MATH_AUDIT",
     "DIRAC-V2-015": "PASS_CUMULATIVE_THEOREM_AND_SEALED_ARTIFACT",
-    "DIRAC-V2-016--040": "RETAINED_PENDING_REVALIDATION"
+    "DIRAC-V2-016--040": "OUT_OF_SCOPE_DOWNSTREAM_CONSEQUENCES"
   },
   "stage_map": "docs/DIRAC_V2_STAGE_MAP.md",
   "cumulative_module": "LeanDirac/V2/CompleteFreeDirac.lean",

@@ -1,29 +1,29 @@
 # DIRAC V2 production port contract
 
-V2 is developed as additive proof modules and will not rewrite the accepted
-`DIRAC-001`--`DIRAC-040` history in `gpartin/LeanDiracDerivation`.
+V2 is an additive top-down equation derivation and does not rewrite the
+accepted V1 history in `gpartin/LeanDiracDerivation`.
 
 ## Compatibility rules
 
 1. Keep every published `LeanDirac/DiracNNN.lean` file and public declaration
-   name intact unless a separately versioned replacement is required.
+   name intact as V1 provenance.
 2. Add the proved `LeanDirac/V2/` modules as the implementation layer.
-3. Expose compatibility theorems at the existing numbered stage boundaries.
-4. Update only cumulative imports, the stage tracker, README, axiom audit, and
-   release manifest needed to make the completed chain visible.
+3. Expose `LeanDirac.V2` from the root facade; no numbered compatibility
+   wrappers are required.
+4. Update only cumulative imports, V2 metadata, documentation, audit entry
+   points, and release manifests needed to make the completed chain visible.
 5. Rebuild the complete historical and V2 targets from a clean checkout before
    promotion.
 6. Do not publish exploratory movement scripts or result directories as part
    of the production proof patch unless a release artifact explicitly cites
    them.
-7. If an accepted theorem is superseded, retain it and add a versioned stronger
-   theorem; never silently change its meaning.
+7. Consequence stages after emergence of the free Dirac equation are outside
+   the present V2 integration scope.
 
 ## Current source-control evidence
 
-The **current uncommitted V2 proof diff** does not modify
-`LeanDirac/Dirac001.lean` through `LeanDirac/Dirac040.lean`.  The research
-branch history, however, contains earlier numbered-stage work and must not be
+The V2 production diff does not modify any numbered historical source. The
+research branch history contains earlier numbered-stage work and must not be
 merged or cherry-picked wholesale into production.
 
 Production promotion therefore starts from the intended public-main commit

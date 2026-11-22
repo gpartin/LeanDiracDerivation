@@ -1,16 +1,15 @@
 # DIRAC V2 stage map
 
-V2 preserves the readable `DIRAC-001` through `DIRAC-040` derivation
-structure while replacing the V1 prepared-background entrance.  The Lean
-implementation remains split into content-named modules so that definitions
-are not duplicated merely to manufacture stage files.  A stage passes only
-when the theorem named below exists and its transitive dependencies pass the
-compiled axiom audit.
+V2 is the independent top-down route from the native action through emergence
+of the complete free Dirac equation. It maps onto the useful V1 stage names
+through `DIRAC-V2-015`, but it does not need to reproduce downstream V1
+consequence stages. The Lean implementation remains split into content-named
+modules so definitions are not duplicated merely to manufacture stage files.
+A stage passes only when the theorem named below exists and its transitive
+dependencies pass the compiled axiom audit.
 
-The historical `LeanDirac/Dirac001.lean` through `Dirac040.lean` files remain
-unchanged provenance.  `RETAINED_PENDING_REVALIDATION` means the historical
-theorem is preserved but is not yet credited to V2 until its hypotheses are
-supplied by the V2 cumulative theorem.
+The historical numbered files remain unchanged V1 provenance. They are not
+dependencies of V2.
 
 | V2 gate | V1 role retained | V2 proof boundary | Status |
 |---|---|---|---|
@@ -29,27 +28,28 @@ supplied by the V2 cumulative theorem.
 | DIRAC-V2-013 | Density and current | One bijective canonical spectral readout now carries the full native generator, exact C19 defect, centered/Verlet update, positive-mode U(1) density, literal C19 bond current, and finite Fourier position-space equation.  The current remainder is bounded by `16 r^3 rho` and tends to zero.  Pointwise packet equality is explicitly disproved; the correct integrated finite-torus charge bridge is proved by Fourier orthogonality. | PASS |
 | DIRAC-V2-014 | Adversarial audit | Independent top-down review found no critical/high mathematical defect; it confirmed the native-action path, lossless operator bridge, controlled C19/time corrections, and scoped nonlinear/localized exclusions. | PASS |
 | DIRAC-V2-015 | Cumulative action-to-Dirac theorem | `CompleteFreeDirac` builds on the clean production base; proof and audit/toolchain sources are hash-sealed, all required declarations are compiled, and the compiled-environment audit admits only the standard Lean foundations. | PASS |
-| DIRAC-V2-016--040 | Free-sector consequences | Historical copy, spin, packet, boost, invariant, symmetry and Pauli-sector theorems are preserved. Each will be revalidated against V2-015 rather than automatically inherited. | RETAINED_PENDING_REVALIDATION |
+| DIRAC-V2-016--040 | Downstream consequences | Historical copy, spin, packet, boost, invariant, symmetry and Pauli-sector results are preserved in V1 but are outside this equation-derivation scope. | OUT_OF_SCOPE |
 
 ## Dependency rule
 
 The controlling route is:
 
 ```text
-DIRAC-V2-001 -> ... -> DIRAC-V2-015 -> revalidate DIRAC-V2-016--040
+DIRAC-V2-001 -> ... -> DIRAC-V2-015
 ```
 
-No V1 prepared-background certificate may satisfy a V2 gate.  Conversely, a
-downstream V1 theorem is reused rather than rewritten when its only inputs are
-operators or identities now supplied by V2-015.
+No V1 prepared-background certificate or downstream consequence theorem may
+satisfy a V2 gate.
 
 ## Current claim boundary
 
 The target of V2-015 is the complete **free, linear tangent Dirac equation**
-of the native action around an admitted uniform zero-energy vacuum.  It is
-not a localized nonlinear electron theorem.  Root orientation, global sign
-and the two cubical flavor charts remain representation freedoms and are not
-misreported as action-selected observables.
+of the native action in one exact uniform zero-energy vacuum sector. The
+sector is a proved native critical point and global minimum, not an external,
+prepared, period-two, or maintained background. Dynamic alignment of arbitrary
+vacuum orientations is an origin question and is not claimed. Root
+orientation, global sign and the two cubical flavor charts remain
+representation freedoms rather than action-selected observables.
 
 The requirement-by-requirement completion review is recorded in
 [`DIRAC_V2_COMPLETION_AUDIT.md`](DIRAC_V2_COMPLETION_AUDIT.md).
