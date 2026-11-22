@@ -1,61 +1,21 @@
 cff-version: 1.2.0
 message: "If you use this formal research artifact, please cite it using this metadata."
-title: "Lean LFM-to-Dirac Derivation"
+title: "Lean LFM-to-Dirac Derivation V2"
 type: software
 authors:
   - family-names: "Partin"
     given-names: "G. D."
-version: "0.30.0-research-dev"
+version: "2.0.0-research"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 abstract: >-
-  A noncanonical Lean 4 research derivation through DIRAC-030. It connects a
-  positive two-field C19 action to a massive C19 Klein-Gordon tangent and
-  proves that a cubical four-component Dirac Hamiltonian squares to its
-  continuum symbol. It controls lattice/time corrections and derives the
-  positive-frequency density/current limit from the same action. It also
-  formalizes copy exchange under cube translation and a conditional cubical
-  spin-one-half representation with exact conventional-spin intertwiners,
-  explicit spectrum, continuous unitarity, 2pi sign reversal, 4pi return,
-  and quarter-turn plus all-angle interpreted-Hamiltonian covariance. Within
-  a stated real local flavor-preserving cubical-incidence class it also
-  classifies the continuum square root independently on both rank-four
-  copies and proves the C19 scalar-symbol zero census. It also proves a finite
-  positive-frequency spectral transport theorem and an explicit coherent
-  finite spatial Fourier transport theorem with a proved periodic cubic
-  character-to-momentum bridge, Parseval density, integrated current, and a
-  finite-update pointwise phase-error bound. It further derives the native
-  zero-momentum rest frequency, opposite-energy rest phases, and the doubled
-  relative phase of a coherent branch pair without adding a clock rule.
-  It further derives the free-continuum zitterbewegung velocity and position
-  expectations from the existing Hamiltonian momentum response, including
-  the exact native frequency and amplitude with explicit coherence controls.
-  It then derives the phase accumulated along the native current trajectory,
-  energy-clock reciprocity, the relativistic moving-clock factor, and
-  directional group/phase-velocity reciprocity from that same continuum
-  dispersion and current map, without assuming a Lorentz-factor rule.
-  It further proves that one independently derived zitter observable period
-  returns density, velocity, and position while negating the coherent
-  four-component state; two periods return the state. Those endpoint actions
-  equal the separately derived cubical 2pi and 4pi spinor actions on both
-  retained copies, while the temporal and spatial generators are proved
-  distinct.
-  It further derives the longitudinal velocity operator from the existing
-  Hamiltonian momentum response and proves that its normalized rms fluctuation
-  in every nonzero positive-frequency mode equals the independently derived
-  moving/rest phase-clock ratio, with an exact velocity-clock Pythagorean
-  identity.
-  It additionally derives free Lorentz boosts, the Pauli--Lubanski
-  spin-one-half invariant, the Wigner--Thomas half factor, free charge
-  conjugation, and the Gordon current decomposition from the same established
-  four-component sector without changing the native action.
-  Arbitrary nonlocal
-  or flavor-mixing roots, exact native finite-spacing packet evolution,
-  uniform fixed-physical-time convergence, nonlinear realization on a
-  localized carrier, localized native zitterbewegung, an SI
-  electron mass, a physical electron, and electromagnetic coupling remain
-  open. This
-  development version is newer than the archived v0.15.0 release.
+  A Lean 4 derivation of the complete free linearized Dirac equation from a
+  declared reciprocal complex-Psi/complex-chi C19 lattice action. The formal
+  chain derives the action variation, exact native vacuum, finite-lattice
+  tangent, cubical Clifford root, four-component readout, mass, time and three
+  transport terms, and density/current bridge with controlled lattice and
+  timestep corrections. It contains no external or maintained prepared
+  background and makes no nonlinear localized-electron claim.
 references:
   - type: article
     authors:
@@ -71,22 +31,10 @@ references:
         given-names: "P."
       - family-names: "Joos"
         given-names: "H."
-    title: "The Dirac-Kähler equation and fermions on the lattice"
-    journal: "Zeitschrift für Physik C"
+    title: "The Dirac-Kahler equation and fermions on the lattice"
+    journal: "Zeitschrift fur Physik C"
     volume: 15
     start: 343
     end: 365
     year: 1982
     doi: "10.1007/BF01614426"
-  - type: article
-    authors:
-      - family-names: "Rabin"
-        given-names: "J. M."
-    title: "Homology theory of lattice fermion doubling"
-    journal: "Nuclear Physics B"
-    volume: 201
-    issue: 2
-    start: 315
-    end: 332
-    year: 1982
-    doi: "10.1016/0550-3213(82)90434-5"

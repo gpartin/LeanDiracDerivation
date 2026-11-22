@@ -2,13 +2,14 @@
   "schema_version": "1.0.0",
   "line": "DIRAC-V2",
   "objective": "Derive the complete free linearized Dirac equation from the native two-field C19 action without an external, prepared, period-two, or maintained background.",
-  "historical_chain_preserved": true,
+  "historical_chain_preserved_in_current_tree": false,
+  "historical_chain_reference": "v1-legacy-final",
   "stages": {
-    "DIRAC-V2-001": "PASS_REUSED",
-    "DIRAC-V2-002": "PASS_REUSED",
+    "DIRAC-V2-001": "PASS",
+    "DIRAC-V2-002": "PASS",
     "DIRAC-V2-003": "PASS",
     "DIRAC-V2-004": "PASS",
-    "DIRAC-V2-005": "PASS_REPLACED",
+    "DIRAC-V2-005": "PASS_NATIVE_VACUUM_WITHOUT_MAINTAINED_BACKGROUND",
     "DIRAC-V2-006": "PASS",
     "DIRAC-V2-007": "PASS",
     "DIRAC-V2-008": "PASS",
@@ -18,10 +19,9 @@
     "DIRAC-V2-012": "PASS_EXACT_STABLE_DISPERSION_AND_FREQUENCY_LIMIT",
     "DIRAC-V2-013": "PASS_CANONICAL_SPECTRAL_DENSITY_CURRENT_WITH_CONTROLLED_C19_LIMIT",
     "DIRAC-V2-014": "PASS_ADVERSARIAL_MATH_AUDIT",
-    "DIRAC-V2-015": "PASS_CUMULATIVE_THEOREM_AND_SEALED_ARTIFACT",
-    "DIRAC-V2-016--040": "OUT_OF_SCOPE_DOWNSTREAM_CONSEQUENCES"
+    "DIRAC-V2-015": "PASS_CUMULATIVE_THEOREM_AND_SEALED_ARTIFACT"
   },
-  "stage_map": "docs/DIRAC_V2_STAGE_MAP.md",
+  "stage_map": "docs/PROOF_CHAIN.md",
   "cumulative_module": "LeanDirac/V2/CompleteFreeDirac.lean",
   "claim_scope": "free linear tangent Dirac equation; no localized nonlinear electron claim"
 }

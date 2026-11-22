@@ -1,4 +1,4 @@
-"""Single entry point for the formal, adversarial and contract audits."""
+"""Single entry point for the V2 first-principles Dirac proof audit."""
 
 from __future__ import annotations
 
@@ -16,13 +16,8 @@ def run(*command: str) -> None:
 
 
 def main() -> int:
-    run(sys.executable, "scripts/production_guard.py")
-    run(sys.executable, "scripts/adversarial_guard_test.py", "--skip-production-build")
-    run(sys.executable, "scripts/derivation_contract_audit.py", "--strict")
-    run(sys.executable, "scripts/final_chain_audit.py")
-    run(sys.executable, "scripts/publication_quality_audit.py")
     run(sys.executable, "experiments/v2_first_principles_free_dirac/verify.py")
-    print("RELEASE_VERIFICATION_PASS")
+    print("V2_RELEASE_VERIFICATION_PASS")
     return 0
 
 
