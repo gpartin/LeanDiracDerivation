@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Native-vacuum C19 Dirac bridge and two-sector classification"
+  description: >-
+    A standalone Lean 4 statement and proof surface extracted from V2 of the
+    Lean LFM-to-Dirac derivation. It proves that the declared native vacuum has
+    zero potential, derives the exact C19 tangent coefficient from the native
+    modal action, factors its isotropic quadratic symbol by a concrete cubical
+    first-order operator, and proves an exhaustive disjoint two-sector
+    classification preserved by that operator. No prepared background or
+    nonlinear localized-electron claim is used.
+  authors:
+    - "G. D. Partin"
+  license: "MIT"
+  responsible_maintainers:
+    - "G. D. Partin"
+
+classification:
+  arxiv: ["math-ph", "cs.LO", "hep-lat"]
+  msc2020: ["03B35", "81Q05", "81T25"]
+
+sources:
+  - title: "Lean LFM-to-Dirac Derivation V2"
+    type: original-proof
+    relationship: other
+    id: "https://doi.org/10.5281/zenodo.24432641"
+    location: "https://github.com/gpartin/LeanDiracDerivation"
+    license: "MIT"
+    author_endorsement: "participated"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    The selected declarations expose the exact native-vacuum potential and
+    modal tangent, a cubical square root, and an exhaustive preserved
+    two-sector split. They do not establish a nonlinear localized electron,
+    experimental validation, or a vacuum-selection origin story.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+  main_results:
+    - "LFMDiracV2Challenge.exact_vacuum_has_zero_potential"
+    - "LFMDiracV2Challenge.native_action_gives_c19_tangent"
+    - "LFMDiracV2Challenge.cubical_first_order_square"
+    - "LFMDiracV2Challenge.cubical_two_sector_classification"
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["OpenAI Codex"]
+      framework: "Codex desktop"
+      tool_setup: "Human-directed AI-assisted Lean development and red-team verification"
+      cost:
+        wall_time: "multi-session research program"
+        spend_usd: "subscription-based; not tracked"
+        hardware: "local Windows workstation"
+  spend_usd: "subscription-based; not tracked"
+
+fidelity:
+  divergences: >-
+    Historical priority and physical originality are not established. The
+    submission is deliberately narrower than the complete V2 repository and
+    makes only the theorem-level claims listed above.
+
+review:
+  status: "self-assessed and agent-reviewed"
+  reviewers: ["G. D. Partin", "OpenAI Codex"]
+  notes: "Independent expert peer review has not yet been completed."
+
+acknowledgements: "Lean, Mathlib, Palomar Registry, OpenAI Codex, and public reviewers."
