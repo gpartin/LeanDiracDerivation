@@ -16,7 +16,7 @@ Canonical public artifact:
 | best-of-lean4 | Open PR | https://github.com/34j/best-of-lean4/pull/307 | Await maintainer review after DOI-link update. |
 | Lemmata | Open PR | https://github.com/ZIB-IOL/lemmata/pull/18 | Await maintainer review of strengthened two-sector theorem. |
 | VibeRegistry | Ready for review | https://github.com/GasStationManager/VibeRegistry/pull/13 | Await maintainer review. |
-| Palomar | Package validated, not submitted | Branch `submission/palomar-v2-free-dirac`, commit `1869d1706b95f1f18c3a04b3cb14b177b6bd3295` | Obtain exact author authorization, then run intake. |
+| Palomar | Package validated; author authorization received; authenticated intake open | Branch `submission/palomar-v2-free-dirac`, commit `1869d1706b95f1f18c3a04b3cb14b177b6bd3295` | Complete the GitHub OAuth form with repository `gpartin/LeanDiracDerivation`, comparator `comparator.json`, and no prior Palomar ID. |
 | Lax | Public draft submitted; official Linux inspector passed | https://laxarchive.org/lax-277496/ | Await review. Do not permanently register without separate approval. |
 | Project Intentions | Updated | Issue 55 comment `7073165369` | None. |
 | Formalization Corpus | Updated | Issue 9 comment `7073165692` | None. |
