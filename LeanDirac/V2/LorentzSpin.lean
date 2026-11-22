@@ -425,6 +425,102 @@ theorem standard_cubical_continuous_turn_preserves_density
   apply standard_cubical_rotor_coefficients_preserves_density
   exact Real.cos_sq_add_sin_sq (nativeCubicalSpinScale * angle)
 
+/-- The positive four-component inner product underlying the density/current
+bridge.  It is introduced here only to state Hermiticity of the already
+derived rotation generator. -/
+def cubicalCell4Inner (z w : CubicalCell4) : ℂ :=
+  ∑ component, star (z component) * w component
+
+theorem standard_cubical_spin_is_hermitian
+    (axis : Fin 3) (z w : CubicalCell4) :
+    cubicalCell4Inner z (standardCubicalSpin axis w) =
+      cubicalCell4Inner (standardCubicalSpin axis z) w := by
+  fin_cases axis <;> apply Complex.ext <;>
+    simp [cubicalCell4Inner, standardCubicalSpin,
+      standardCubicalPlaneBivector, standardCubicalGamma,
+      cubicalStandardAlphaX, cubicalStandardAlphaY,
+      cubicalStandardAlphaZ, Fin.sum_univ_four,
+      Complex.mul_re, Complex.mul_im] <;> ring
+
+theorem standard_cubical_continuous_turn_zero
+    (axis : Fin 3) (z : CubicalCell4) :
+    standardCubicalContinuousTurn 0 axis z = z := by
+  funext component
+  simp [standardCubicalContinuousTurn, standardCubicalRotorCoefficients]
+
+/-- The finite rotations are a representation of the additive angle group;
+the half angle is not reinserted here but is the unique scale proved above. -/
+theorem standard_cubical_continuous_turn_add
+    (first second : ℝ) (axis : Fin 3) (z : CubicalCell4) :
+    standardCubicalContinuousTurn (first + second) axis z =
+      standardCubicalContinuousTurn first axis
+        (standardCubicalContinuousTurn second axis z) := by
+  funext component
+  fin_cases axis <;> fin_cases component <;>
+    simp [standardCubicalContinuousTurn, standardCubicalRotorCoefficients,
+      standardCubicalSpin, standardCubicalPlaneBivector,
+      standardCubicalGamma, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ,
+      native_cubical_spin_scale_eq_half, mul_add,
+      Real.cos_add, Real.sin_add] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq] <;> ring
+
+theorem standard_cubical_continuous_turn_inverse
+    (angle : ℝ) (axis : Fin 3) (z : CubicalCell4) :
+    standardCubicalContinuousTurn (-angle) axis
+        (standardCubicalContinuousTurn angle axis z) = z := by
+  rw [← standard_cubical_continuous_turn_add]
+  simp [standard_cubical_continuous_turn_zero]
+
+theorem rotor_cosine_has_derivative_zero :
+    HasDerivAt
+      (fun angle : ℝ => Real.cos (nativeCubicalSpinScale * angle)) 0 0 := by
+  have hlinear : HasDerivAt
+      (fun angle : ℝ => nativeCubicalSpinScale * angle)
+      nativeCubicalSpinScale 0 := by
+    convert HasDerivAt.const_mul nativeCubicalSpinScale
+      (hasDerivAt_id 0) using 1 <;> norm_num [id_eq]
+  convert (Real.hasDerivAt_cos (nativeCubicalSpinScale * 0)).comp 0
+    hlinear using 1 <;> simp [Function.comp_def]
+
+theorem rotor_sine_has_derived_half_slope :
+    HasDerivAt
+      (fun angle : ℝ => Real.sin (nativeCubicalSpinScale * angle))
+      nativeCubicalSpinScale 0 := by
+  have hlinear : HasDerivAt
+      (fun angle : ℝ => nativeCubicalSpinScale * angle)
+      nativeCubicalSpinScale 0 := by
+    convert HasDerivAt.const_mul nativeCubicalSpinScale
+      (hasDerivAt_id 0) using 1 <;> norm_num [id_eq]
+  convert (Real.hasDerivAt_sin (nativeCubicalSpinScale * 0)).comp 0
+    hlinear using 1 <;> simp [Function.comp_def]
+
+/-- Componentwise differentiation at the identity recovers `-i S` from the
+finite rotor, closing the generator-to-group direction rather than merely
+checking selected endpoint angles. -/
+theorem standard_cubical_continuous_turn_has_derivative
+    (axis : Fin 3) (z : CubicalCell4) (component : Fin 4) :
+    HasDerivAt
+      (fun angle : ℝ => standardCubicalContinuousTurn angle axis z component)
+      (-I * standardCubicalSpin axis z component) 0 := by
+  have hcos := rotor_cosine_has_derivative_zero.ofReal_comp
+  have hsin := rotor_sine_has_derived_half_slope.ofReal_comp
+  have hfirst := hcos.mul_const (z component)
+  have hsecond :=
+    ((hsin.const_mul (2 * I)).mul_const
+      (standardCubicalSpin axis z component))
+  convert hfirst.sub hsecond using 1
+  · funext angle
+    simp [standardCubicalContinuousTurn, standardCubicalRotorCoefficients]
+  · have hscale : (nativeCubicalSpinScale : ℂ) = (1 / 2 : ℂ) := by
+      rw [native_cubical_spin_scale_eq_half]
+      norm_num
+    have hcoeff : 2 * I * (nativeCubicalSpinScale : ℂ) = I := by
+      rw [hscale]
+      ring
+    rw [hcoeff]
+    simp
+
 theorem cubical_continuous_turn_two_pi
     (axis : Fin 3) (amplitude : CubicalCell8) :
     cubicalContinuousTurn (2 * Real.pi) axis amplitude =
@@ -489,9 +585,43 @@ theorem cubical_continuous_turn_intertwines_plus
 
 /-! ## Lorentz boosts from the already-derived transport operators -/
 
+def cubicalBoost
+    (axis : Fin 3) (amplitude : CubicalCell8) : CubicalCell8 :=
+  fun corner => (I / 2) * cubicalGamma axis amplitude corner
+
 def standardCubicalBoost
     (axis : Fin 3) (z : CubicalCell4) : CubicalCell4 :=
   fun component => (I / 2) * standardCubicalGamma axis z component
+
+theorem cubical_boost_intertwines_minus
+    (axis : Fin 3) (z : CubicalCell4) :
+    cubicalBoost axis (cubicalDiracEmbedMinus z) =
+      cubicalDiracEmbedMinus (standardCubicalBoost axis z) := by
+  funext corner
+  fin_cases axis <;> fin_cases corner <;>
+    simp [cubicalBoost, standardCubicalBoost, cubicalGamma,
+      cubicalIncidenceSign, cubicalFlip, cubicalFlip0,
+      cubicalFlip1, cubicalFlip2, cubicalBit0, cubicalBit1,
+      standardCubicalGamma, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ,
+      cubicalDiracEmbedMinus, cubicalEmbedMinus,
+      standardToCubicalMinus] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq]
+
+theorem cubical_boost_intertwines_plus
+    (axis : Fin 3) (z : CubicalCell4) :
+    cubicalBoost axis (cubicalDiracEmbedPlus z) =
+      cubicalDiracEmbedPlus (standardCubicalBoost axis z) := by
+  funext corner
+  fin_cases axis <;> fin_cases corner <;>
+    simp [cubicalBoost, standardCubicalBoost, cubicalGamma,
+      cubicalIncidenceSign, cubicalFlip, cubicalFlip0,
+      cubicalFlip1, cubicalFlip2, cubicalBit0, cubicalBit1,
+      standardCubicalGamma, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ,
+      cubicalDiracEmbedPlus, cubicalEmbedPlus,
+      standardToCubicalPlus] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq]
 
 theorem standard_cubical_gamma_square
     (axis : Fin 3) (z : CubicalCell4) :
@@ -670,15 +800,139 @@ theorem cubical_boost_commutes_transverse_gamma_space
         cubicalStandardBeta, cubicalStandardAlphaX,
         cubicalStandardAlphaY, cubicalStandardAlphaZ] <;> ring_nf
 
-/-- In the massive rest frame, `W^0 = 0` and `W^i = mass * S^i`, so the
-Minkowski square is `-mass^2` times the rotation Casimir. -/
-def restFramePauliLubanskiSquare
-    (mass : ℂ) (z : CubicalCell4) : CubicalCell4 :=
+/-! ## The complete continuum symbol and its Lorentz response -/
+
+/-- The oriented continuum Dirac symbol in the gamma frame derived above.
+Momentum is data, not a force or a new native field. -/
+def orientedCubicalDiracSymbol
+    (energy mass : ℂ) (momentum : Fin 3 → ℂ)
+    (z : CubicalCell4) : CubicalCell4 :=
   fun component =>
-    -mass^2 *
-      (standardCubicalSpin 0 (standardCubicalSpin 0 z) component +
-        standardCubicalSpin 1 (standardCubicalSpin 1 z) component +
-        standardCubicalSpin 2 (standardCubicalSpin 2 z) component)
+    energy * orientedCubicalGammaTime z component -
+      momentum 0 * orientedCubicalGammaSpace 0 z component -
+      momentum 1 * orientedCubicalGammaSpace 1 z component -
+      momentum 2 * orientedCubicalGammaSpace 2 z component -
+      mass * z component
+
+/-- Infinitesimal active rotation of a spatial momentum about a cube axis. -/
+def cubicalMomentumRotation
+    (axis : Fin 3) (momentum : Fin 3 → ℂ) : Fin 3 → ℂ :=
+  match axis with
+  | 0 => ![0, -momentum 2, momentum 1]
+  | 1 => ![momentum 2, 0, -momentum 0]
+  | _ => ![-momentum 1, momentum 0, 0]
+
+/-- The spinor commutator and the momentum rotation give the same variation
+of the *whole* Dirac symbol.  This closes more than gamma-matrix algebra: the
+four-component operator and its momentum argument transform together. -/
+theorem oriented_dirac_symbol_rotation_covariant
+    (axis : Fin 3) (energy mass : ℂ) (momentum : Fin 3 → ℂ)
+    (z : CubicalCell4) :
+    (fun component =>
+      standardCubicalSpin axis
+          (orientedCubicalDiracSymbol energy mass momentum z) component -
+        orientedCubicalDiracSymbol energy mass momentum
+          (standardCubicalSpin axis z) component) =
+      fun component => I *
+        orientedCubicalDiracSymbol 0 0
+          (cubicalMomentumRotation axis momentum) z component := by
+  funext component
+  fin_cases axis <;> fin_cases component <;>
+    simp [orientedCubicalDiracSymbol, cubicalMomentumRotation,
+      standardCubicalSpin,
+      standardCubicalPlaneBivector, orientedCubicalGammaTime,
+      orientedCubicalGammaSpace, standardCubicalGamma,
+      cubicalStandardBeta, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq] <;> ring
+
+/-- Infinitesimal boost of four-momentum in the selected cube direction. -/
+def cubicalMomentumBoostEnergy
+    (axis : Fin 3) (momentum : Fin 3 → ℂ) : ℂ := momentum axis
+
+def cubicalMomentumBoostSpace
+    (axis : Fin 3) (energy : ℂ) : Fin 3 → ℂ :=
+  fun other => if other = axis then energy else 0
+
+theorem oriented_dirac_symbol_boost_covariant
+    (axis : Fin 3) (energy mass : ℂ) (momentum : Fin 3 → ℂ)
+    (z : CubicalCell4) :
+    (fun component =>
+      standardCubicalBoost axis
+          (orientedCubicalDiracSymbol energy mass momentum z) component -
+        orientedCubicalDiracSymbol energy mass momentum
+          (standardCubicalBoost axis z) component) =
+      fun component => I *
+        orientedCubicalDiracSymbol
+          (cubicalMomentumBoostEnergy axis momentum) 0
+          (cubicalMomentumBoostSpace axis energy) z component := by
+  funext component
+  fin_cases axis <;> fin_cases component <;>
+    simp [orientedCubicalDiracSymbol, cubicalMomentumBoostEnergy,
+      cubicalMomentumBoostSpace, standardCubicalBoost,
+      orientedCubicalGammaTime, orientedCubicalGammaSpace,
+      standardCubicalGamma, cubicalStandardBeta,
+      cubicalStandardAlphaX, cubicalStandardAlphaY,
+      cubicalStandardAlphaZ] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq] <;> ring
+
+/-! ## Pauli--Lubanski vector from momentum and Lorentz generators -/
+
+def cubicalPauliLubanskiTime
+    (momentum : Fin 3 → ℂ) (z : CubicalCell4) : CubicalCell4 :=
+  fun component =>
+    momentum 0 * standardCubicalSpin 0 z component +
+      momentum 1 * standardCubicalSpin 1 z component +
+      momentum 2 * standardCubicalSpin 2 z component
+
+def cubicalMomentumCrossBoost
+    (momentum : Fin 3 → ℂ) (axis : Fin 3)
+    (z : CubicalCell4) : CubicalCell4 :=
+  match axis with
+  | 0 => fun component =>
+      momentum 1 * standardCubicalBoost 2 z component -
+        momentum 2 * standardCubicalBoost 1 z component
+  | 1 => fun component =>
+      momentum 2 * standardCubicalBoost 0 z component -
+        momentum 0 * standardCubicalBoost 2 z component
+  | _ => fun component =>
+      momentum 0 * standardCubicalBoost 1 z component -
+        momentum 1 * standardCubicalBoost 0 z component
+
+def cubicalPauliLubanskiSpace
+    (energy : ℂ) (momentum : Fin 3 → ℂ) (axis : Fin 3)
+    (z : CubicalCell4) : CubicalCell4 :=
+  fun component =>
+    energy * standardCubicalSpin axis z component +
+      cubicalMomentumCrossBoost momentum axis z component
+
+/-- The derived Pauli--Lubanski vector is orthogonal to four-momentum for
+arbitrary energy and momentum. -/
+theorem cubical_pauli_lubanski_orthogonal
+    (energy : ℂ) (momentum : Fin 3 → ℂ) (z : CubicalCell4) :
+    (fun component =>
+      energy * cubicalPauliLubanskiTime momentum z component -
+        momentum 0 * cubicalPauliLubanskiSpace energy momentum 0 z component -
+        momentum 1 * cubicalPauliLubanskiSpace energy momentum 1 z component -
+        momentum 2 * cubicalPauliLubanskiSpace energy momentum 2 z component) =
+      fun _ => 0 := by
+  funext component
+  fin_cases component <;>
+    simp [cubicalPauliLubanskiTime, cubicalPauliLubanskiSpace,
+      cubicalMomentumCrossBoost] <;> ring
+
+def cubicalPauliLubanskiSquare
+    (energy : ℂ) (momentum : Fin 3 → ℂ)
+    (z : CubicalCell4) : CubicalCell4 :=
+  fun component =>
+    cubicalPauliLubanskiTime momentum
+        (cubicalPauliLubanskiTime momentum z) component -
+      cubicalPauliLubanskiSpace energy momentum 0
+        (cubicalPauliLubanskiSpace energy momentum 0 z) component -
+      cubicalPauliLubanskiSpace energy momentum 1
+        (cubicalPauliLubanskiSpace energy momentum 1 z) component -
+      cubicalPauliLubanskiSpace energy momentum 2
+        (cubicalPauliLubanskiSpace energy momentum 2 z) component
 
 theorem standard_spin_component_square
     (axis : Fin 3) (z : CubicalCell4) :
@@ -693,18 +947,16 @@ theorem standard_spin_component_square
 
 theorem rest_pauli_lubanski_spin_half
     (mass : ℂ) (z : CubicalCell4) :
-    restFramePauliLubanskiSquare mass z =
+    cubicalPauliLubanskiSquare mass (fun _ => 0) z =
       fun component => -(3 / 4 : ℂ) * mass^2 * z component := by
   funext component
-  rw [show restFramePauliLubanskiSquare mass z component =
-    -mass^2 *
-      (standardCubicalSpin 0 (standardCubicalSpin 0 z) component +
-        standardCubicalSpin 1 (standardCubicalSpin 1 z) component +
-        standardCubicalSpin 2 (standardCubicalSpin 2 z) component) by rfl]
-  rw [congrFun (standard_spin_component_square 0 z) component,
-    congrFun (standard_spin_component_square 1 z) component,
-    congrFun (standard_spin_component_square 2 z) component]
-  ring
+  fin_cases component <;>
+    simp [cubicalPauliLubanskiSquare, cubicalPauliLubanskiTime,
+      cubicalPauliLubanskiSpace, cubicalMomentumCrossBoost,
+      standardCubicalSpin, standardCubicalPlaneBivector,
+      standardCubicalGamma, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq] <;> ring
 
 /-! ## Cumulative theorem -/
 
@@ -761,6 +1013,39 @@ structure LorentzSpinHalfCertificate : Prop where
   finiteRotationIsUnitary : ∀ angle axis z,
     cubicalCell4Density (standardCubicalContinuousTurn angle axis z) =
       cubicalCell4Density z
+  spinGeneratorIsHermitian : ∀ axis z w,
+    cubicalCell4Inner z (standardCubicalSpin axis w) =
+      cubicalCell4Inner (standardCubicalSpin axis z) w
+  finiteRotationGroup :
+    (∀ axis z, standardCubicalContinuousTurn 0 axis z = z) ∧
+    (∀ first second axis z,
+      standardCubicalContinuousTurn (first + second) axis z =
+        standardCubicalContinuousTurn first axis
+          (standardCubicalContinuousTurn second axis z)) ∧
+    (∀ angle axis z,
+      standardCubicalContinuousTurn (-angle) axis
+        (standardCubicalContinuousTurn angle axis z) = z)
+  finiteRotationGenerator : ∀ axis z component,
+    HasDerivAt
+      (fun angle : ℝ =>
+        standardCubicalContinuousTurn angle axis z component)
+      (-I * standardCubicalSpin axis z component) 0
+  finiteRotationBothCopies :
+    (∀ angle axis z,
+      cubicalContinuousTurn angle axis (cubicalDiracEmbedMinus z) =
+        cubicalDiracEmbedMinus
+          (standardCubicalContinuousTurn angle axis z)) ∧
+    (∀ angle axis z,
+      cubicalContinuousTurn angle axis (cubicalDiracEmbedPlus z) =
+        cubicalDiracEmbedPlus
+          (standardCubicalContinuousTurn angle axis z))
+  boostBothCopies :
+    (∀ axis z,
+      cubicalBoost axis (cubicalDiracEmbedMinus z) =
+        cubicalDiracEmbedMinus (standardCubicalBoost axis z)) ∧
+    (∀ axis z,
+      cubicalBoost axis (cubicalDiracEmbedPlus z) =
+        cubicalDiracEmbedPlus (standardCubicalBoost axis z))
   boostCommutators :
     (∀ z, (fun component =>
       standardCubicalBoost 0 (standardCubicalBoost 1 z) component -
@@ -818,8 +1103,35 @@ structure LorentzSpinHalfCertificate : Prop where
     (∀ axis other, axis ≠ other → ∀ z,
       standardCubicalBoost axis (orientedCubicalGammaSpace other z) =
         orientedCubicalGammaSpace other (standardCubicalBoost axis z))
+  fullDiracSymbolCovariance :
+    (∀ axis energy mass momentum z,
+      (fun component =>
+        standardCubicalSpin axis
+            (orientedCubicalDiracSymbol energy mass momentum z) component -
+          orientedCubicalDiracSymbol energy mass momentum
+            (standardCubicalSpin axis z) component) =
+        fun component => I *
+          orientedCubicalDiracSymbol 0 0
+            (cubicalMomentumRotation axis momentum) z component) ∧
+    (∀ axis energy mass momentum z,
+      (fun component =>
+        standardCubicalBoost axis
+            (orientedCubicalDiracSymbol energy mass momentum z) component -
+          orientedCubicalDiracSymbol energy mass momentum
+            (standardCubicalBoost axis z) component) =
+        fun component => I *
+          orientedCubicalDiracSymbol
+            (cubicalMomentumBoostEnergy axis momentum) 0
+            (cubicalMomentumBoostSpace axis energy) z component)
+  pauliLubanskiOrthogonal : ∀ energy momentum z,
+    (fun component =>
+      energy * cubicalPauliLubanskiTime momentum z component -
+        momentum 0 * cubicalPauliLubanskiSpace energy momentum 0 z component -
+        momentum 1 * cubicalPauliLubanskiSpace energy momentum 1 z component -
+        momentum 2 * cubicalPauliLubanskiSpace energy momentum 2 z component) =
+      fun _ => 0
   restPauliLubanskiCasimir : ∀ mass z,
-    restFramePauliLubanskiSquare mass z =
+    cubicalPauliLubanskiSquare mass (fun _ => 0) z =
       fun component => -(3 / 4 : ℂ) * mass^2 * z component
 
 theorem lorentz_spin_half_from_native_action :
@@ -838,6 +1150,19 @@ theorem lorentz_spin_half_from_native_action :
   fourPiReturn := cubical_continuous_turn_four_pi
   finiteRotationIsUnitary :=
     standard_cubical_continuous_turn_preserves_density
+  spinGeneratorIsHermitian := standard_cubical_spin_is_hermitian
+  finiteRotationGroup :=
+    ⟨standard_cubical_continuous_turn_zero,
+      standard_cubical_continuous_turn_add,
+      standard_cubical_continuous_turn_inverse⟩
+  finiteRotationGenerator :=
+    standard_cubical_continuous_turn_has_derivative
+  finiteRotationBothCopies :=
+    ⟨cubical_continuous_turn_intertwines_minus,
+      cubical_continuous_turn_intertwines_plus⟩
+  boostBothCopies :=
+    ⟨cubical_boost_intertwines_minus,
+      cubical_boost_intertwines_plus⟩
   boostCommutators :=
     ⟨cubical_boost_commutator_01, cubical_boost_commutator_12,
       cubical_boost_commutator_20⟩
@@ -856,6 +1181,10 @@ theorem lorentz_spin_half_from_native_action :
       fun axis other haxis z =>
         cubical_boost_commutes_transverse_gamma_space
           axis other haxis z⟩
+  fullDiracSymbolCovariance :=
+    ⟨oriented_dirac_symbol_rotation_covariant,
+      oriented_dirac_symbol_boost_covariant⟩
+  pauliLubanskiOrthogonal := cubical_pauli_lubanski_orthogonal
   restPauliLubanskiCasimir := rest_pauli_lubanski_spin_half
 
 end
