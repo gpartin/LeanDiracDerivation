@@ -1,4 +1,4 @@
-# Lean LFM-to-Dirac Derivation V3
+# Lean LFM-to-Dirac Derivation V3 + local V4 research
 
 [![Lean proof](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml/badge.svg)](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml)
 
@@ -97,6 +97,27 @@ claim boundary are documented in
 This is an infinitesimal continuum-sector Lorentz theorem. It does not claim
 exact Lorentz invariance at finite lattice spacing, a localized nonlinear
 electron, electromagnetic coupling, or a dynamical rule selecting one copy.
+
+## V4 localized-electron research
+
+V4 begins from the unchanged V3 action and does not alter any released V2/V3
+theorem. Its first proved gate constructs an exact, freely updated, fixed-center
+localized `Psi`--`chi` orbit on every periodic C19 box of side at least three:
+
+```lean
+#check LeanDirac.V4.exact_localized_rest_seed
+```
+
+The orbit includes the eight-site carrier, its live `chi` halo, both committed
+time layers, and ordinary exterior vacuum. Both fields advance under the native
+centered update; neither is held or reset. The proof is symbolic in `B` and
+requires only `B > 1`, so it does not derive or require the numerical value
+`1197` for this rest solution.
+
+This is deliberately not yet called an electron theorem. Stability, the map
+from this same localized carrier to the V3 four-component sectors, operational
+spin one-half, translation, and same-carrier Dirac current remain open V4
+gates. See [the V4 gate ledger](docs/V4_LOCALIZED_ELECTRON.md).
 
 ## Reproduce
 

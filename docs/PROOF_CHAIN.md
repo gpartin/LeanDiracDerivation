@@ -1,4 +1,4 @@
-# V2 proof chain
+# V2/V3 proof chain and V4 research boundary
 
 Only this chain is active on `main`.
 
@@ -33,7 +33,7 @@ chain.  Its detailed falsification gates are in
 | LS-005 | Density-preserving finite rotation, `2*pi` sign reversal, and `4*pi` return | PASS |
 | LS-006 | Rotation/boost Lorentz Lie algebra | PASS |
 | LS-007 | Mass invariance and infinitesimal gamma-four-vector covariance | PASS |
-| LS-008 | Cumulative Lorentz/spin certificate with standard Lean foundations only | PROOF PASS; release seal pending review |
+| LS-008 | Cumulative Lorentz/spin certificate with standard Lean foundations only | PASS on `main` |
 
 The dependency route is strictly top-down:
 
@@ -51,3 +51,8 @@ native action
 ```
 
 No historical V1 module is imported by this route.
+
+V4 is a separate downstream research line. Its exact status is maintained in
+[`V4_LOCALIZED_ELECTRON.md`](V4_LOCALIZED_ELECTRON.md). A V4 proof may reuse
+V2/V3 results, but no free-field theorem is counted as a localized-particle
+theorem without an explicit same-carrier bridge.

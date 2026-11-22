@@ -1,0 +1,22 @@
+{
+  "version": "V4-research",
+  "base_commit": "34502e7041091572052b1dd19b264bc129746d79",
+  "base_status": "V3_RELEASED_ON_MAIN",
+  "action_changed": false,
+  "canonical_stencil": "C19",
+  "first_theorem": "LeanDirac.V4.exact_localized_rest_seed",
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "gates": {
+    "V4-001": "PASS",
+    "V4-002": "OPEN",
+    "V4-003": "SCOPED_FIXED_CENTER_OBSTRUCTION_NONCOMPACT_OPEN",
+    "V4-004": "OPEN",
+    "V4-005": "SCOPED_FIXED_CENTER_OBSTRUCTION_TRAVELING_FAMILY_OPEN",
+    "V4-006": "OPEN",
+    "V4-007": "OPEN",
+    "V4-008": "OPEN",
+    "V4-009": "OPEN",
+    "V4-010": "OPEN"
+  },
+  "claim_boundary": "Exact localized fixed-center native orbit only. Exact symbolic controls rule out a compact fixed-center Bloch/Clifford transport block, but do not rule out a noncompact joint-field bundle or translated relative-periodic family. Stability, localized spin, translation, and same-carrier Dirac dynamics remain open."
+}
