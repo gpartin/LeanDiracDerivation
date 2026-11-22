@@ -27,6 +27,13 @@ neighbors with relative weight 1. The constants are
 \chi_0=19,\qquad \kappa=\frac1{63},\qquad B=\frac{\chi_0}{\kappa}=1197.
 \]
 
+Here `chi0 = 19` is the declared geometric C19 mode count: one center, six
+faces, and twelve edges. Once that value is fixed, `kappa = 1/63` is an
+equivalent parameterization of the single remaining chi kinetic
+normalization `B = 1197`. The present derivation does not derive `B` from
+the lattice action or from a known measured constant; it must therefore be
+treated as a declared dimensionless framework constant.
+
 ## Action
 
 \[

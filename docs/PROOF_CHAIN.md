@@ -12,7 +12,7 @@ Only this chain is active on `main`.
 | V2-006 | Full finite-lattice Hessian, invariant transverse sector, and C19 transport | PASS |
 | V2-007 | Bijective four-complex-component phase-space readout | PASS |
 | V2-008 | Exact first-order generator intertwining | PASS |
-| V2-009 | Cubical incidence Clifford root, both rank-four copies, and C19 remainder | PASS |
+| V2-009 | Cubical incidence Clifford root, exhaustive direct sum of exactly two rank-four copies, and C19 remainder | PASS |
 | V2-010 | Proved change of coordinates to standard alpha/beta form | PASS |
 | V2-011 | Positive/negative frequency grading and `m = chi0` | PASS |
 | V2-012 | Exact centered/Verlet dispersion and continuum time limit | PASS |

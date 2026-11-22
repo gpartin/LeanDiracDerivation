@@ -23,3 +23,4 @@ import LeanDirac.EnvironmentAudit
 #print axioms LeanDirac.V2.lfm_canonical_spectral_positive_mode_has_density_current
 #print axioms LeanDirac.V2.lfm_canonical_spectral_positive_c19_flux_is_dirac_current
 #print axioms LeanDirac.V2.complete_first_principles_free_dirac
+#print axioms LeanDirac.V2.cubical_flavor_classification

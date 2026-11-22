@@ -28,6 +28,7 @@
     "LeanDirac.V2.NativeC19CliffordRoot",
     "LeanDirac.V2.FirstPrinciplesFreeDirac",
     "LeanDirac.V2.ReadoutCharacterization",
+    "LeanDirac.V2.FlavorClassification",
     "LeanDirac.V2.NativeCubicalCompression",
     "LeanDirac.V2.UniformVacuumDiscreteTime",
     "LeanDirac.V2.UniformVacuumVerletTime",
@@ -70,6 +71,7 @@
     "uniform_action_tangent_intertwines_cubical_dirac",
     "first_principles_free_dirac",
     "cubical_phase_readout_unique_from_intertwining",
+    "cubical_flavor_classification",
     "native_exact_generator_intertwines_cubical_minus",
     "native_exact_generator_intertwines_cubical_plus",
     "uniform_centered_update_through_same_dirac_readout",
@@ -128,6 +130,7 @@
     "LeanDirac.V2.NativeC19CliffordRoot",
     "LeanDirac.V2.FirstPrinciplesFreeDirac",
     "LeanDirac.V2.ReadoutCharacterization",
+    "LeanDirac.V2.FlavorClassification",
     "LeanDirac.V2.NativeCubicalCompression",
     "LeanDirac.V2.UniformVacuumDiscreteTime",
     "LeanDirac.V2.UniformVacuumVerletTime",
@@ -158,7 +161,8 @@
     "LeanDirac.V2.canonical_spectral_native_tangent_is_free_dirac",
     "LeanDirac.V2.lfm_canonical_spectral_positive_mode_has_density_current",
     "LeanDirac.V2.lfm_canonical_spectral_positive_c19_flux_is_dirac_current",
-    "LeanDirac.V2.complete_first_principles_free_dirac"
+    "LeanDirac.V2.complete_first_principles_free_dirac",
+    "LeanDirac.V2.cubical_flavor_classification"
   ],
   "audit_support_files": [
     "LeanDirac/EnvironmentAudit.lean",
@@ -168,7 +172,7 @@
     "lakefile.lean",
     "lake-manifest.json"
   ],
-  "proof_source_commit": "0d7c7467232e16dd374cefc3df3848443219a12a",
+  "proof_source_commit": "bfe0820523cfcb44125a32a7786c31d48cae1b3a",
   "source_hashes_sha256": {
     "LeanDirac/Foundation.lean": "ca54ec7e31cc51814ae7b49ae19afeb1215e3234ad3dfbd2e9e71db37db5ee8a",
     "LeanDirac/ExteriorArea.lean": "05c67f2b6cdc750f59da30ffc413870ac5d70f948ea5f643294617ad4f5fb5ad",
@@ -185,6 +189,7 @@
     "LeanDirac/V2/NativeC19CliffordRoot.lean": "71c2089768b16ffed378a3066beabd430d5e7110dcd28f486c6aa1d8bc514469",
     "LeanDirac/V2/FirstPrinciplesFreeDirac.lean": "e7debda2da184d25aa73037c32fbb9ab065e34ba2fb9b905bd05f183ce6d65fe",
     "LeanDirac/V2/ReadoutCharacterization.lean": "b7cfe0e6f9d34f7d209c27239358a021bca82ac3ee1f0c07e56ae52c12cc96b4",
+    "LeanDirac/V2/FlavorClassification.lean": "1a32aadca15e5655ae18c16ee5c36759b1171f53be7afc60a7b9e1d09ba85d43",
     "LeanDirac/V2/NativeCubicalCompression.lean": "aa5e1a25caa995ba7dfe28947f58e45aa23e4619831c514d64b21c8b9062e0ac",
     "LeanDirac/V2/UniformVacuumDiscreteTime.lean": "526258a2c3d72063f72b060ef83eba9ebd628b9d57ebad09941599cd7fcd6b75",
     "LeanDirac/V2/UniformVacuumVerletTime.lean": "ed0732520822fd80597e0a20d986bb2e01b3073a7ad7d60f743efdb03f670f4a",
@@ -199,11 +204,11 @@
     "LeanDirac/V2/PositiveFrequencyPacketScope.lean": "5440cdfaa5e5b4a8931f153770e70e182deda1b78acdfa9fdc0051023691efb7",
     "LeanDirac/V2/PositiveFrequencyPacketBridge.lean": "88f93369934d7c6424713c59346b33f7792881f24c29afc8f447c57484604bb7",
     "LeanDirac/V2/CovariantFreeDirac.lean": "d0aa6629cbcf688d4b52c1aeea2ea0dc5262eb2a79a578d1cc96176a3e1f4201",
-    "LeanDirac/V2/CompleteFreeDirac.lean": "6a2506f3469dfad5ee28437ce85dd2bb2bfc9c512ac221e4e9fe3bd1ab972317"
+    "LeanDirac/V2/CompleteFreeDirac.lean": "1b330f6af1e6cd0a89cfdd16668aab7547aeaa0c2364abd912fd2ec2f530b849"
   },
   "audit_support_hashes_sha256": {
     "LeanDirac/EnvironmentAudit.lean": "5c72d20bd45d74cbc487bd955dccd49313378e0166e5660364a1fd1420735bd5",
-    "experiments/v2_first_principles_free_dirac/AxiomAudit.lean": "3a082948aee0321a68f5d7addcab5ec8dfade55e64214567d3c3eba9a8d96541",
+    "experiments/v2_first_principles_free_dirac/AxiomAudit.lean": "f3aa4f661e092c8b18980c18362bc7219b88fd958728303f7d995721a7a327fd",
     "experiments/v2_first_principles_free_dirac/verify.py": "6dd9c8b8fc128c2167268bf1635a78edf7ebdacb580f98be954e416406dde77d",
     "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
     "lakefile.lean": "f32d28e4c2387d25b2f28e95fa214c50e80421d1e84a9b59f6259c60094f5092",

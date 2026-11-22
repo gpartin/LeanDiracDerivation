@@ -10,6 +10,7 @@
     "lossless_four_component_first_order_bridge": "PASS",
     "mass_time_three_transport_terms": "PASS",
     "cube_incidence_clifford_identification": "PASS",
+    "two_rank_four_flavor_sectors_exhaustive": "PASS",
     "uniform_tangent_u1_continuity": "PASS",
     "canonical_spectral_readout_bijective": "PASS",
     "same_readout_exact_c19_verlet_position_chain": "PASS",
@@ -20,11 +21,12 @@
     "pointwise_positive_packet_charge_bridge": "PROVED_FALSE",
     "arbitrary_noether_equals_positive_dirac_density": "PROVED_FALSE",
     "uniform_vacuum_dynamic_selection": "OPEN_OUTSIDE_THEOREM",
+    "chi_kinetic_normalization_B": "DECLARED_NOT_DERIVED",
     "localized_nonlinear_moving_electron": "SEPARATE_OPEN_GATE"
   },
   "starting_law": {
     "fields": ["Psi_i in C^3", "chi_i in C^3"],
-    "constants": {"chi0": 19, "kappa": "1/63", "B": 1197},
+    "constants": {"chi0": 19, "chi0_provenance": "C19 mode count: 1 center + 6 faces + 12 edges", "kappa": "1/63", "B": 1197, "B_provenance": "declared chi kinetic normalization; not derived"},
     "geometry": "C19; face weight 2; edge weight 1",
     "action": "T - U_local - U_area",
     "equations": [
@@ -42,7 +44,7 @@
     "two-channel phase space has four complex coordinates",
     "lossless KG phase-space readout exactly intertwines with a Weyl Dirac Hamiltonian",
     "fixed basis change gives the conventional Dirac Hamiltonian",
-    "both cube-incidence Clifford copies intertwine with that operator",
+    "the eight-corner fiber decomposes exhaustively into exactly two disjoint rank-four flavor sectors and both intertwine with that operator",
     "positive mass is chi0",
     "exact C19 spatial remainder and centered-time branch remain explicit",
     "the actual centered two-layer update passes through the same readout with one explicit joint time-space defect",
@@ -77,6 +79,7 @@
     "LeanDirac/V2/NativeC19CliffordRoot.lean",
     "LeanDirac/V2/FirstPrinciplesFreeDirac.lean",
     "LeanDirac/V2/ReadoutCharacterization.lean",
+    "LeanDirac/V2/FlavorClassification.lean",
     "LeanDirac/V2/NativeCubicalCompression.lean",
     "LeanDirac/V2/UniformVacuumDiscreteTime.lean",
     "LeanDirac/V2/UniformVacuumVerletTime.lean",

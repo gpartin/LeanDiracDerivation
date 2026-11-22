@@ -13,6 +13,7 @@ public import LeanDirac.V2.CanonicalSpectralReadout
 public import LeanDirac.V2.CanonicalSpectralExactChain
 public import LeanDirac.V2.PositiveFrequencyPacketBridge
 public import LeanDirac.V2.ReadoutCharacterization
+public import LeanDirac.V2.FlavorClassification
 public import LeanDirac.V2.FinitePeriodicFourierBasis
 public import LeanDirac.V2.FinitePeriodicSector
 public import LeanDirac.V2.NativeCubicalCompression
@@ -542,6 +543,8 @@ structure CompleteFreeDiracCertificate : Prop where
   nativeActionToDirac : FirstPrinciplesFreeDiracCertificate
   readoutCharacterizedWithoutExtraChoice :
     CubicalReadoutCharacterizationCertificate
+  twoFourComponentSectorsAreExhaustive :
+    CubicalFlavorClassificationCertificate
   fullNativePeriodicSectorInjective : ∀ (L : ℕ) [NeZero L]
       (momentum : LatticeMomentum)
       (mode : PeriodicC19FourierMode L momentum),
@@ -1000,6 +1003,8 @@ theorem complete_first_principles_free_dirac :
   nativeActionToDirac := first_principles_free_dirac
   readoutCharacterizedWithoutExtraChoice :=
     cubical_readout_characterization
+  twoFourComponentSectorsAreExhaustive :=
+    cubical_flavor_classification
   fullNativePeriodicSectorInjective :=
     fun _ _ _ mode => periodic_full_native_tangent_embed_injective mode
   fullNativePhaseGeneratorIntertwines :=
