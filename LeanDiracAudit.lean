@@ -7,3 +7,4 @@ import LeanDirac.EnvironmentAudit
 
 #audit_lean_dirac_environment
 #print axioms LeanDirac.V2.complete_first_principles_free_dirac
+#print axioms LeanDirac.V2.lorentz_spin_half_from_native_action

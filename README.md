@@ -1,10 +1,11 @@
-# Lean LFM-to-Dirac Derivation V2
+# Lean LFM-to-Dirac Derivation V3
 
 [![Lean proof](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml/badge.svg)](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml)
 
-This repository contains one production proof line: the V2 top-down Lean 4
-derivation of the complete free linearized Dirac equation from the declared
-two-field C19 lattice action.
+This repository contains one cumulative production proof line. V2 derives the
+complete free linearized Dirac equation from the declared two-field C19 lattice
+action. V3 continues from that theorem and derives the Lorentz/spin-one-half
+representation carried by both exhaustive cubical copies.
 
 The default import is unambiguous:
 
@@ -12,6 +13,7 @@ The default import is unambiguous:
 import LeanDirac
 
 #check LeanDirac.V2.complete_first_principles_free_dirac
+#check LeanDirac.V2.lorentz_spin_half_from_native_action
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -71,6 +73,30 @@ a theorem in this repository.
 The theorem is a free linear tangent result. It does not claim a nonlinear
 localized electron or any later physical consequence, and it does not derive
 or require the numerical value `B = 1197` within that transverse free sector.
+
+## V3 Lorentz and spin extension
+
+V3 continues from the proved free-Dirac boundary without
+changing the action, equations, C19 stencil, vacuum, or readout.  It derives
+the spatial rotation generators directly from the cubical gamma operators,
+proves that their unique nonzero closure scale is `1/2`, and then proves the
+spin-one-half spectrum, Casimir `3/4`, density-preserving finite rotations,
+`2*pi` sign reversal, `4*pi` return, and the rotation/boost Lorentz algebra.
+It also proves the finite rotation group law and generator derivative,
+intertwines rotations and boosts through both exhaustive cubical copies,
+proves covariance of the full continuum Dirac symbol while four-momentum and
+the spinor transform together, and constructs the Pauli--Lubanski vector from
+four-momentum and the derived Lorentz generators before obtaining its rest
+Casimir `-3 m^2 / 4`.
+
+The cumulative local theorem is
+`LeanDirac.V2.lorentz_spin_half_from_native_action`.  The exact chain and
+claim boundary are documented in
+[docs/LORENTZ_SPIN_CHAIN.md](docs/LORENTZ_SPIN_CHAIN.md).
+
+This is an infinitesimal continuum-sector Lorentz theorem. It does not claim
+exact Lorentz invariance at finite lattice spacing, a localized nonlinear
+electron, electromagnetic coupling, or a dynamical rule selecting one copy.
 
 ## Reproduce
 

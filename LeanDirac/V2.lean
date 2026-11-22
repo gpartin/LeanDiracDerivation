@@ -6,14 +6,15 @@ Authors: G. D. Partin
 
 module
 
-public import LeanDirac.V2.CompleteFreeDirac
+public import LeanDirac.V2.LorentzSpin
 
 @[expose] public section
 
 /-!
-# Additive V2 free-Dirac proof facade
+# V2 free-Dirac, Lorentz, and spin-one-half proof facade
 
 This module exposes the preparation-independent linear-tangent derivation
-without changing any historical `DIRAC-NNN` theorem or importing the
-localized-movement research tree.
+together with its native cubical Lorentz/spin representation.  It changes no
+historical `DIRAC-NNN` theorem and does not import the localized-movement
+research tree.
 -/

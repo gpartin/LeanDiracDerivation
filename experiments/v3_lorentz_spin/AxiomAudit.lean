@@ -1,0 +1,22 @@
+module
+
+import LeanDirac.V2
+import LeanDirac.EnvironmentAudit
+
+#audit_lean_dirac_environment
+#check LeanDirac.V2.standard_cubical_spin_is_hermitian
+#check LeanDirac.V2.standard_cubical_continuous_turn_add
+#check LeanDirac.V2.standard_cubical_continuous_turn_has_derivative
+#check LeanDirac.V2.oriented_dirac_symbol_rotation_covariant
+#check LeanDirac.V2.oriented_dirac_symbol_boost_covariant
+#check LeanDirac.V2.cubical_pauli_lubanski_orthogonal
+#check LeanDirac.V2.rest_pauli_lubanski_spin_half
+#print axioms LeanDirac.V2.complete_first_principles_free_dirac
+#print axioms LeanDirac.V2.standard_cubical_continuous_turn_add
+#print axioms LeanDirac.V2.oriented_dirac_symbol_rotation_covariant
+#print axioms LeanDirac.V2.oriented_dirac_symbol_boost_covariant
+#print axioms LeanDirac.V2.cubical_pauli_lubanski_orthogonal
+#print axioms LeanDirac.V2.rest_pauli_lubanski_spin_half
+#print axioms LeanDirac.V2.lorentz_spin_half_from_native_action
+
+#eval IO.println "LEAN_DIRAC_V3_AXIOM_AUDIT_PASS"
