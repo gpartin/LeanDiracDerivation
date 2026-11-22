@@ -8,13 +8,13 @@ derived for the free linear sector.
 | Gate | Required result | Status |
 |---|---|---|
 | V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS** |
-| V4-002 | Spectral and nonlinear stability of that same orbit | **OPEN** |
+| V4-002 | Spectral and nonlinear stability of that same orbit | **FAIL FOR CANONICAL ACTION; ACTION-HESSIAN REPAIR REQUIRED** |
 | V4-003 | Lossless four-component readout of the same localized phase space | **SCOPED FIXED-CENTER OBSTRUCTION; NONCOMPACT OPTION OPEN** |
 | V4-004 | Operational spin-one-half action on the localized carrier | **OPEN** |
 | V4-005 | Native translation tangent and nonzero signed bond current | **SCOPED FIXED-CENTER OBSTRUCTION; TRAVELING FAMILY OPEN** |
 | V4-006 | Freely solved multi-cell traveling/relative-periodic branch | **OPEN** |
 | V4-007 | Same-state agreement with Dirac mass, transport, density, and current | **OPEN** |
-| V4-008 | Determine whether localized dynamics selects `B`, remains uniform in it, or rules out the incumbent value | **OPEN** |
+| V4-008 | Determine whether localized dynamics selects `B`, remains uniform in it, or rules out the incumbent value | **PARTIAL: STRONG DYNAMICAL DEPENDENCE; NO NATIVE SELECTION** |
 | V4-009 | Determine the dynamical role of both cubical four-component copies | **OPEN** |
 | V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **OPEN** |
 
@@ -29,13 +29,28 @@ uses no holding force, background reset, projection, or Dirac matrix.
 The result is symbolic in `B` and holds for `B > 1` under the stated timestep
 condition. It therefore does not select `B = 1197`.
 
-## First unresolved obligation
+## V4-002 full tangent result
 
-V4-002 is first: exact closure is not stability. The full Floquet/tangent
-operator must include carrier, halo, exterior, both committed layers, and both
-fields. A stable rest orbit then becomes the input to the same-carrier readout
-and motion gates. Translation cannot be claimed from the independent V3
-plane-wave theorem.
+The complete mass-normalized tangent and exact co-rotating two-layer Floquet
+map now include every `Psi`/`chi` component, all carrier/halo/exterior sites,
+and both committed layers. The unchanged action has a finite continuum-time
+growth rate approaching approximately `1.037`. It is unchanged between
+side-three and side-four boxes, while the one-step multiplier approaches one
+at the expected rate as `dt` shrinks. This is a physical tangent instability,
+not a timestep or boundary artifact.
+
+The leading canonical mode is entirely on the eight carrier sites and lies in
+their independent radial/phase span. It has negligible translation overlap.
+V4-002 therefore fails for the canonical action, and V4-003 through V4-007
+cannot be promoted as same-carrier electron results.
+
+A generic bounded bond polynomial,
+`F(s) = s - 0.8 s^2 / chi0^4 + 0.03 s^3 / chi0^8`, combined with research
+`B = 229`, reduces the matched side-three rate to about `0.0755` and the
+side-four rate to about `0.0422`. Both remain positive and converge under
+timestep refinement. This is a diagnostic research candidate only: its
+coefficients are not derived, it is box-sensitive, and it does not pass the
+stability gate.
 
 ## Fixed-center tangent classification
 

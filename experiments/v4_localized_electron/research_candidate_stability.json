@@ -1,0 +1,810 @@
+{
+  "status": "NUMERICAL_FULL_TANGENT_CLASSIFICATION",
+  "action_changed": true,
+  "rows": [
+    {
+      "side": 3,
+      "dt": 0.0078125,
+      "chi_kinetic_inertia_B": 229.0,
+      "area_scale": 1.0,
+      "repair_strength": 0.0,
+      "parallel_overlap_strength": 0.0,
+      "local_cross_density_scale": 1.0,
+      "local_self_potential_scale": 1.0,
+      "spectral_geometry_strength": 0.0,
+      "bond_quartic_coefficient": -0.8,
+      "bond_sextic_coefficient": 0.03,
+      "exact_rest_amplitude_sq": 178.11712525151484,
+      "positive_rest_amplitude_roots": [
+        178.1171252515148
+      ],
+      "configuration_real_dimension": 324,
+      "two_layer_real_dimension": 648,
+      "exact_orbit_one_step_defect": 1.0420997398365224e-10,
+      "mass_normalized_reciprocity_defect": 1.121463005245096e-17,
+      "local_area_split_defect": 3.358994373623924e-17,
+      "spectral_radius": 1.0005915961902865,
+      "leading_growth_rate_per_unit_time": 0.07570192207955162,
+      "minimum_multiplier_modulus": 0.9994087535890078,
+      "multipliers_outside_unit_circle_1e_8": 81,
+      "multipliers_inside_unit_circle_1e_8": 81,
+      "largest_multipliers": [
+        {
+          "real": 1.0005914030271024,
+          "imag": -0.0006217353777890899,
+          "modulus": 1.0005915961902865
+        },
+        {
+          "real": 1.0005914030271024,
+          "imag": 0.0006217353777890899,
+          "modulus": 1.0005915961902865
+        },
+        {
+          "real": 1.0005914030269283,
+          "imag": 0.0006217353775683221,
+          "modulus": 1.0005915961901122
+        },
+        {
+          "real": 1.0005914030269283,
+          "imag": -0.0006217353775683221,
+          "modulus": 1.0005915961901122
+        },
+        {
+          "real": 1.0003186095839283,
+          "imag": 0.0014558559590376835,
+          "modulus": 1.0003196690041123
+        },
+        {
+          "real": 1.0003186095839283,
+          "imag": -0.0014558559590376835,
+          "modulus": 1.0003196690041123
+        },
+        {
+          "real": 1.0001431892249402,
+          "imag": 0.0,
+          "modulus": 1.0001431892249402
+        },
+        {
+          "real": 1.0001431891927361,
+          "imag": 0.0,
+          "modulus": 1.0001431891927361
+        },
+        {
+          "real": 1.0000926536574006,
+          "imag": -1.0891401969412883e-07,
+          "modulus": 1.0000926536574064
+        },
+        {
+          "real": 1.0000926536574006,
+          "imag": 1.0891401969412883e-07,
+          "modulus": 1.0000926536574064
+        },
+        {
+          "real": 1.000000337034142,
+          "imag": 0.0,
+          "modulus": 1.000000337034142
+        },
+        {
+          "real": 0.9999998262585421,
+          "imag": 0.0006478078618045724,
+          "modulus": 1.0000000360860695
+        }
+      ],
+      "leading_mode_translation_overlap_sq": 0.1045028914844041,
+      "leading_mode_global_radial_phase_overlap_sq": 5.545833894255573e-22,
+      "leading_mode_independent_corner_radial_phase_overlap_sq": 5.622238176016355e-16,
+      "leading_mode_independent_corner_radial_overlap_sq": 5.532307082654462e-17,
+      "leading_mode_independent_corner_phase_overlap_sq": 5.0690074677574e-16,
+      "leading_mode_mass_weighted_psi_fraction": 0.004193779942357669,
+      "leading_mode_mass_weighted_psi_component_fractions": [
+        0.00033500633600325603,
+        0.002605387668172254,
+        0.0012533859381821588
+      ],
+      "leading_mode_mass_weighted_chi_component_fractions": [
+        2.714943883847579e-16,
+        2.9102307017785947e-16,
+        0.995806220057642
+      ],
+      "leading_mode_mass_weighted_core_fraction": 0.9970596059958245,
+      "leading_mode_action_sensitivities": {
+        "local": {
+          "eigenvalue_derivative_real": -2.0412446644214957e-05,
+          "eigenvalue_derivative_imag": 0.00030869624160329056,
+          "growth_rate_derivative": -0.002635785524334927
+        },
+        "area": {
+          "eigenvalue_derivative_real": -1.6965181460385186e-06,
+          "eigenvalue_derivative_imag": -3.1936139346241953e-06,
+          "growth_rate_derivative": -0.00021677203493540576
+        },
+        "positive_density_memory": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "local_parallel_overlap": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "spectral_geometry": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        }
+      },
+      "scope": "Complete two-layer tangent on the stated finite periodic box in the exact internal co-rotating frame; numerical eigenspectrum, not a Lean theorem."
+    },
+    {
+      "side": 3,
+      "dt": 0.00390625,
+      "chi_kinetic_inertia_B": 229.0,
+      "area_scale": 1.0,
+      "repair_strength": 0.0,
+      "parallel_overlap_strength": 0.0,
+      "local_cross_density_scale": 1.0,
+      "local_self_potential_scale": 1.0,
+      "spectral_geometry_strength": 0.0,
+      "bond_quartic_coefficient": -0.8,
+      "bond_sextic_coefficient": 0.03,
+      "exact_rest_amplitude_sq": 178.12075661982823,
+      "positive_rest_amplitude_roots": [
+        178.1207566198282
+      ],
+      "configuration_real_dimension": 324,
+      "two_layer_real_dimension": 648,
+      "exact_orbit_one_step_defect": 2.6052049406880634e-11,
+      "mass_normalized_reciprocity_defect": 5.795979654660317e-18,
+      "local_area_split_defect": 4.238119398962583e-17,
+      "spectral_radius": 1.000295183333794,
+      "leading_growth_rate_per_unit_time": 0.0755557825959246,
+      "minimum_multiplier_modulus": 0.9997049037737772,
+      "multipliers_outside_unit_circle_1e_8": 81,
+      "multipliers_inside_unit_circle_1e_8": 77,
+      "largest_multipliers": [
+        {
+          "real": 1.0002951350523959,
+          "imag": -0.00031079140604514666,
+          "modulus": 1.000295183333794
+        },
+        {
+          "real": 1.0002951350523959,
+          "imag": 0.00031079140604514666,
+          "modulus": 1.000295183333794
+        },
+        {
+          "real": 1.000295135052189,
+          "imag": 0.0003107914059652383,
+          "modulus": 1.0002951833335871
+        },
+        {
+          "real": 1.000295135052189,
+          "imag": -0.0003107914059652383,
+          "modulus": 1.0002951833335871
+        },
+        {
+          "real": 1.0000560336158317,
+          "imag": 0.0,
+          "modulus": 1.0000560336158317
+        },
+        {
+          "real": 1.0000560331457156,
+          "imag": 0.0,
+          "modulus": 1.0000560331457156
+        },
+        {
+          "real": 1.0000362642647478,
+          "imag": 3.367252327009399e-08,
+          "modulus": 1.0000362642647482
+        },
+        {
+          "real": 1.0000362642647478,
+          "imag": -3.367252327009399e-08,
+          "modulus": 1.0000362642647482
+        },
+        {
+          "real": 1.0000001682632438,
+          "imag": 0.0,
+          "modulus": 1.0000001682632438
+        },
+        {
+          "real": 1.000000060263024,
+          "imag": -2.316552279972628e-06,
+          "modulus": 1.000000060265707
+        },
+        {
+          "real": 1.000000060263024,
+          "imag": 2.316552279972628e-06,
+          "modulus": 1.000000060265707
+        },
+        {
+          "real": 1.0000000390215709,
+          "imag": -2.4583529681269017e-06,
+          "modulus": 1.0000000390245924
+        }
+      ],
+      "leading_mode_translation_overlap_sq": 0.10232151005553247,
+      "leading_mode_global_radial_phase_overlap_sq": 1.0547580322961895e-19,
+      "leading_mode_independent_corner_radial_phase_overlap_sq": 1.4095643782006814e-15,
+      "leading_mode_independent_corner_radial_overlap_sq": 1.3604162788302652e-16,
+      "leading_mode_independent_corner_phase_overlap_sq": 1.273522750316482e-15,
+      "leading_mode_mass_weighted_psi_fraction": 0.004185405824772168,
+      "leading_mode_mass_weighted_psi_component_fractions": [
+        0.00023574501010004486,
+        0.002702702157391576,
+        0.0012469586572805475
+      ],
+      "leading_mode_mass_weighted_chi_component_fractions": [
+        7.044907730153189e-16,
+        7.172135137878136e-16,
+        0.9958145941752264
+      ],
+      "leading_mode_mass_weighted_core_fraction": 0.9970615528325084,
+      "leading_mode_action_sensitivities": {
+        "local": {
+          "eigenvalue_derivative_real": -5.250693757598456e-06,
+          "eigenvalue_derivative_imag": 7.723775497942497e-05,
+          "growth_rate_derivative": -0.0013499224856100608
+        },
+        "area": {
+          "eigenvalue_derivative_real": -4.273130065253331e-07,
+          "eigenvalue_derivative_imag": -7.978677166967661e-07,
+          "growth_rate_derivative": -0.00010929640021753166
+        },
+        "positive_density_memory": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "local_parallel_overlap": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "spectral_geometry": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        }
+      },
+      "scope": "Complete two-layer tangent on the stated finite periodic box in the exact internal co-rotating frame; numerical eigenspectrum, not a Lean theorem."
+    },
+    {
+      "side": 3,
+      "dt": 0.001953125,
+      "chi_kinetic_inertia_B": 229.0,
+      "area_scale": 1.0,
+      "repair_strength": 0.0,
+      "parallel_overlap_strength": 0.0,
+      "local_cross_density_scale": 1.0,
+      "local_self_potential_scale": 1.0,
+      "spectral_geometry_strength": 0.0,
+      "bond_quartic_coefficient": -0.8,
+      "bond_sextic_coefficient": 0.03,
+      "exact_rest_amplitude_sq": 178.12166450696697,
+      "positive_rest_amplitude_roots": [
+        178.1216645069669
+      ],
+      "configuration_real_dimension": 324,
+      "two_layer_real_dimension": 648,
+      "exact_orbit_one_step_defect": 6.5156768871565865e-12,
+      "mass_normalized_reciprocity_defect": 2.6444469032190845e-18,
+      "local_area_split_defect": 3.4561144941054746e-17,
+      "spectral_radius": 1.000147509438816,
+      "leading_growth_rate_per_unit_time": 0.0755192629086298,
+      "minimum_multiplier_modulus": 0.9998525123172708,
+      "multipliers_outside_unit_circle_1e_8": 101,
+      "multipliers_inside_unit_circle_1e_8": 105,
+      "largest_multipliers": [
+        {
+          "real": 1.0001474973699236,
+          "imag": -0.00015537485345179514,
+          "modulus": 1.000147509438816
+        },
+        {
+          "real": 1.0001474973699236,
+          "imag": 0.00015537485345179514,
+          "modulus": 1.000147509438816
+        },
+        {
+          "real": 1.0001474973694546,
+          "imag": -0.00015537485341299284,
+          "modulus": 1.000147509438347
+        },
+        {
+          "real": 1.0001474973694546,
+          "imag": 0.00015537485341299284,
+          "modulus": 1.000147509438347
+        },
+        {
+          "real": 1.0000257149752947,
+          "imag": 0.0,
+          "modulus": 1.0000257149752947
+        },
+        {
+          "real": 1.0000257144849238,
+          "imag": 0.0,
+          "modulus": 1.0000257144849238
+        },
+        {
+          "real": 1.0000166459114723,
+          "imag": -1.4626763053025233e-08,
+          "modulus": 1.0000166459114723
+        },
+        {
+          "real": 1.0000166459114723,
+          "imag": 1.4626763053025233e-08,
+          "modulus": 1.0000166459114723
+        },
+        {
+          "real": 1.0000005643244383,
+          "imag": -1.3002013277503127e-06,
+          "modulus": 1.0000005643252834
+        },
+        {
+          "real": 1.0000005643244383,
+          "imag": 1.3002013277503127e-06,
+          "modulus": 1.0000005643252834
+        },
+        {
+          "real": 1.0000005220798447,
+          "imag": 1.3265624819248644e-06,
+          "modulus": 1.0000005220807244
+        },
+        {
+          "real": 1.0000005220798447,
+          "imag": -1.3265624819248644e-06,
+          "modulus": 1.0000005220807244
+        }
+      ],
+      "leading_mode_translation_overlap_sq": 0.09902580570586636,
+      "leading_mode_global_radial_phase_overlap_sq": 2.8645627700874184e-18,
+      "leading_mode_independent_corner_radial_phase_overlap_sq": 9.487506732786981e-14,
+      "leading_mode_independent_corner_radial_overlap_sq": 9.290157807066225e-15,
+      "leading_mode_independent_corner_phase_overlap_sq": 8.558490952075585e-14,
+      "leading_mode_mass_weighted_psi_fraction": 0.00418332349720851,
+      "leading_mode_mass_weighted_psi_component_fractions": [
+        1.3151939772011207e-05,
+        0.0029248114172408775,
+        0.0012453601401956214
+      ],
+      "leading_mode_mass_weighted_chi_component_fractions": [
+        4.986867602282286e-14,
+        4.5629684298236896e-14,
+        0.9958166765026958
+      ],
+      "leading_mode_mass_weighted_core_fraction": 0.997062036642987,
+      "leading_mode_action_sensitivities": {
+        "local": {
+          "eigenvalue_derivative_real": -1.3163079079624022e-06,
+          "eigenvalue_derivative_imag": 1.9327682621985352e-05,
+          "growth_rate_derivative": -0.000675387342323681
+        },
+        "area": {
+          "eigenvalue_derivative_real": -1.0717083489527587e-07,
+          "eigenvalue_derivative_imag": -1.995394719186033e-07,
+          "growth_rate_derivative": -5.4847504871661396e-05
+        },
+        "positive_density_memory": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "local_parallel_overlap": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "spectral_geometry": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        }
+      },
+      "scope": "Complete two-layer tangent on the stated finite periodic box in the exact internal co-rotating frame; numerical eigenspectrum, not a Lean theorem."
+    },
+    {
+      "side": 4,
+      "dt": 0.0078125,
+      "chi_kinetic_inertia_B": 229.0,
+      "area_scale": 1.0,
+      "repair_strength": 0.0,
+      "parallel_overlap_strength": 0.0,
+      "local_cross_density_scale": 1.0,
+      "local_self_potential_scale": 1.0,
+      "spectral_geometry_strength": 0.0,
+      "bond_quartic_coefficient": -0.8,
+      "bond_sextic_coefficient": 0.03,
+      "exact_rest_amplitude_sq": 178.11712525151484,
+      "positive_rest_amplitude_roots": [
+        178.1171252515148
+      ],
+      "configuration_real_dimension": 768,
+      "two_layer_real_dimension": 1536,
+      "exact_orbit_one_step_defect": 1.0420997398365224e-10,
+      "mass_normalized_reciprocity_defect": 7.395199463547343e-18,
+      "local_area_split_defect": 2.177250114624428e-17,
+      "spectral_radius": 1.0003315842437952,
+      "leading_growth_rate_per_unit_time": 0.04243574808181349,
+      "minimum_multiplier_modulus": 0.9996685256678597,
+      "multipliers_outside_unit_circle_1e_8": 256,
+      "multipliers_inside_unit_circle_1e_8": 256,
+      "largest_multipliers": [
+        {
+          "real": 1.0003313850855537,
+          "imag": 0.0006312277867751882,
+          "modulus": 1.0003315842437952
+        },
+        {
+          "real": 1.0003313850855537,
+          "imag": -0.0006312277867751882,
+          "modulus": 1.0003315842437952
+        },
+        {
+          "real": 1.0003313850854951,
+          "imag": -0.0006312277867192572,
+          "modulus": 1.0003315842437366
+        },
+        {
+          "real": 1.0003313850854951,
+          "imag": 0.0006312277867192572,
+          "modulus": 1.0003315842437366
+        },
+        {
+          "real": 1.000318609590229,
+          "imag": 0.0014558559540200709,
+          "modulus": 1.0003196690104057
+        },
+        {
+          "real": 1.000318609590229,
+          "imag": -0.0014558559540200709,
+          "modulus": 1.0003196690104057
+        },
+        {
+          "real": 1.0001431892378083,
+          "imag": 0.0,
+          "modulus": 1.0001431892378083
+        },
+        {
+          "real": 1.0001431890343895,
+          "imag": 0.0,
+          "modulus": 1.0001431890343895
+        },
+        {
+          "real": 1.0000982652334423,
+          "imag": 0.000646584231423164,
+          "modulus": 1.0000984742484658
+        },
+        {
+          "real": 1.0000982652334423,
+          "imag": -0.000646584231423164,
+          "modulus": 1.0000984742484658
+        },
+        {
+          "real": 1.0000982652325505,
+          "imag": -0.0006465842312164682,
+          "modulus": 1.0000984742475738
+        },
+        {
+          "real": 1.0000982652325505,
+          "imag": 0.0006465842312164682,
+          "modulus": 1.0000984742475738
+        }
+      ],
+      "leading_mode_translation_overlap_sq": 0.08424284375434993,
+      "leading_mode_global_radial_phase_overlap_sq": 2.071532974213441e-22,
+      "leading_mode_independent_corner_radial_phase_overlap_sq": 2.017236703931256e-17,
+      "leading_mode_independent_corner_radial_overlap_sq": 1.4105294771852357e-18,
+      "leading_mode_independent_corner_phase_overlap_sq": 1.8761837562130137e-17,
+      "leading_mode_mass_weighted_psi_fraction": 0.004288703742348876,
+      "leading_mode_mass_weighted_psi_component_fractions": [
+        0.0034737127068395967,
+        0.00022372447870161506,
+        0.0005912665568076633
+      ],
+      "leading_mode_mass_weighted_chi_component_fractions": [
+        0.00045622769563606277,
+        0.007040408625677489,
+        0.9882146599363376
+      ],
+      "leading_mode_mass_weighted_core_fraction": 0.9888059264931452,
+      "leading_mode_action_sensitivities": {
+        "local": {
+          "eigenvalue_derivative_real": -8.839450702527042e-05,
+          "eigenvalue_derivative_imag": -0.0003240780909788432,
+          "growth_rate_derivative": -0.011336911414191273
+        },
+        "area": {
+          "eigenvalue_derivative_real": -3.444822373562643e-06,
+          "eigenvalue_derivative_imag": 2.197748392319455e-06,
+          "growth_rate_derivative": -0.00044061356255313555
+        },
+        "positive_density_memory": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "local_parallel_overlap": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "spectral_geometry": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        }
+      },
+      "scope": "Complete two-layer tangent on the stated finite periodic box in the exact internal co-rotating frame; numerical eigenspectrum, not a Lean theorem."
+    },
+    {
+      "side": 4,
+      "dt": 0.00390625,
+      "chi_kinetic_inertia_B": 229.0,
+      "area_scale": 1.0,
+      "repair_strength": 0.0,
+      "parallel_overlap_strength": 0.0,
+      "local_cross_density_scale": 1.0,
+      "local_self_potential_scale": 1.0,
+      "spectral_geometry_strength": 0.0,
+      "bond_quartic_coefficient": -0.8,
+      "bond_sextic_coefficient": 0.03,
+      "exact_rest_amplitude_sq": 178.12075661982823,
+      "positive_rest_amplitude_roots": [
+        178.1207566198282
+      ],
+      "configuration_real_dimension": 768,
+      "two_layer_real_dimension": 1536,
+      "exact_orbit_one_step_defect": 2.6052049406880634e-11,
+      "mass_normalized_reciprocity_defect": 3.822057262391747e-18,
+      "local_area_split_defect": 3.109220672947083e-17,
+      "spectral_radius": 1.0001651707290402,
+      "leading_growth_rate_per_unit_time": 0.04228021500343946,
+      "minimum_multiplier_modulus": 0.9998348565479023,
+      "multipliers_outside_unit_circle_1e_8": 255,
+      "multipliers_inside_unit_circle_1e_8": 255,
+      "largest_multipliers": [
+        {
+          "real": 1.0001651208867515,
+          "imag": -0.0003157547145158844,
+          "modulus": 1.0001651707290402
+        },
+        {
+          "real": 1.0001651208867515,
+          "imag": 0.0003157547145158844,
+          "modulus": 1.0001651707290402
+        },
+        {
+          "real": 1.000165120886496,
+          "imag": -0.0003157547144062011,
+          "modulus": 1.0001651707287846
+        },
+        {
+          "real": 1.000165120886496,
+          "imag": 0.0003157547144062011,
+          "modulus": 1.0001651707287846
+        },
+        {
+          "real": 1.0000560338308264,
+          "imag": -6.991987182240557e-11,
+          "modulus": 1.0000560338308264
+        },
+        {
+          "real": 1.0000560338308264,
+          "imag": 6.991987182240557e-11,
+          "modulus": 1.0000560338308264
+        },
+        {
+          "real": 1.00004920991212,
+          "imag": -0.00032395138772339777,
+          "modulus": 1.0000492623817876
+        },
+        {
+          "real": 1.00004920991212,
+          "imag": 0.00032395138772339777,
+          "modulus": 1.0000492623817876
+        },
+        {
+          "real": 1.0000492099102207,
+          "imag": 0.00032395138726576395,
+          "modulus": 1.000049262379888
+        },
+        {
+          "real": 1.0000492099102207,
+          "imag": -0.00032395138726576395,
+          "modulus": 1.000049262379888
+        },
+        {
+          "real": 1.0000447269515735,
+          "imag": 0.0003233744837394949,
+          "modulus": 1.000044779234762
+        },
+        {
+          "real": 1.0000447269515735,
+          "imag": -0.0003233744837394949,
+          "modulus": 1.000044779234762
+        }
+      ],
+      "leading_mode_translation_overlap_sq": 0.07692086103635565,
+      "leading_mode_global_radial_phase_overlap_sq": 5.783511095996245e-20,
+      "leading_mode_independent_corner_radial_phase_overlap_sq": 2.8365923621275884e-15,
+      "leading_mode_independent_corner_radial_overlap_sq": 1.9961160880641628e-16,
+      "leading_mode_independent_corner_phase_overlap_sq": 2.6369807533212105e-15,
+      "leading_mode_mass_weighted_psi_fraction": 0.004282416263550374,
+      "leading_mode_mass_weighted_psi_component_fractions": [
+        0.0019738981317604224,
+        0.0017209468716487275,
+        0.0005875712601412245
+      ],
+      "leading_mode_mass_weighted_chi_component_fractions": [
+        0.003474578513673182,
+        0.003985620920484485,
+        0.988257384302292
+      ],
+      "leading_mode_mass_weighted_core_fraction": 0.9888449555624361,
+      "leading_mode_action_sensitivities": {
+        "local": {
+          "eigenvalue_derivative_real": -2.2381932727706643e-05,
+          "eigenvalue_derivative_imag": 8.098964238578541e-05,
+          "growth_rate_derivative": -0.0057353727484410295
+        },
+        "area": {
+          "eigenvalue_derivative_real": -8.639516787396716e-07,
+          "eigenvalue_derivative_imag": -5.477858437809937e-07,
+          "growth_rate_derivative": -0.00022109082902803978
+        },
+        "positive_density_memory": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "local_parallel_overlap": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "spectral_geometry": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        }
+      },
+      "scope": "Complete two-layer tangent on the stated finite periodic box in the exact internal co-rotating frame; numerical eigenspectrum, not a Lean theorem."
+    },
+    {
+      "side": 4,
+      "dt": 0.001953125,
+      "chi_kinetic_inertia_B": 229.0,
+      "area_scale": 1.0,
+      "repair_strength": 0.0,
+      "parallel_overlap_strength": 0.0,
+      "local_cross_density_scale": 1.0,
+      "local_self_potential_scale": 1.0,
+      "spectral_geometry_strength": 0.0,
+      "bond_quartic_coefficient": -0.8,
+      "bond_sextic_coefficient": 0.03,
+      "exact_rest_amplitude_sq": 178.12166450696697,
+      "positive_rest_amplitude_roots": [
+        178.1216645069669
+      ],
+      "configuration_real_dimension": 768,
+      "two_layer_real_dimension": 1536,
+      "exact_orbit_one_step_defect": 6.5156768871565865e-12,
+      "mass_normalized_reciprocity_defect": 1.743916139439639e-18,
+      "local_area_split_defect": 4.357450709598426e-17,
+      "spectral_radius": 1.0000825060009009,
+      "leading_growth_rate_per_unit_time": 0.042241329903606524,
+      "minimum_multiplier_modulus": 0.9999175008059529,
+      "multipliers_outside_unit_circle_1e_8": 269,
+      "multipliers_inside_unit_circle_1e_8": 269,
+      "largest_multipliers": [
+        {
+          "real": 1.0000824935375325,
+          "imag": 0.0001578885468101385,
+          "modulus": 1.0000825060009009
+        },
+        {
+          "real": 1.0000824935375325,
+          "imag": -0.0001578885468101385,
+          "modulus": 1.0000825060009009
+        },
+        {
+          "real": 1.0000824935370387,
+          "imag": -0.0001578885469136989,
+          "modulus": 1.000082506000407
+        },
+        {
+          "real": 1.0000824935370387,
+          "imag": 0.0001578885469136989,
+          "modulus": 1.000082506000407
+        },
+        {
+          "real": 1.0000257148371776,
+          "imag": 0.0,
+          "modulus": 1.0000257148371776
+        },
+        {
+          "real": 1.000025713964668,
+          "imag": 0.0,
+          "modulus": 1.000025713964668
+        },
+        {
+          "real": 1.0000246210736603,
+          "imag": 0.0001620559947355381,
+          "modulus": 1.0000246342044097
+        },
+        {
+          "real": 1.0000246210736603,
+          "imag": -0.0001620559947355381,
+          "modulus": 1.0000246342044097
+        },
+        {
+          "real": 1.0000246210689088,
+          "imag": 0.00016205599037260948,
+          "modulus": 1.0000246341996575
+        },
+        {
+          "real": 1.0000246210689088,
+          "imag": -0.00016205599037260948,
+          "modulus": 1.0000246341996575
+        },
+        {
+          "real": 1.0000223788392049,
+          "imag": 0.00016176766951871109,
+          "modulus": 1.0000223919233016
+        },
+        {
+          "real": 1.0000223788392049,
+          "imag": -0.00016176766951871109,
+          "modulus": 1.0000223919233016
+        }
+      ],
+      "leading_mode_translation_overlap_sq": 0.07434126669717978,
+      "leading_mode_global_radial_phase_overlap_sq": 1.6301437248530182e-18,
+      "leading_mode_independent_corner_radial_phase_overlap_sq": 5.27626163211842e-14,
+      "leading_mode_independent_corner_radial_overlap_sq": 3.70180079539854e-15,
+      "leading_mode_independent_corner_phase_overlap_sq": 4.9060815525786364e-14,
+      "leading_mode_mass_weighted_psi_fraction": 0.004280853287486106,
+      "leading_mode_mass_weighted_psi_component_fractions": [
+        0.0010754761394705,
+        0.0026187244552332363,
+        0.0005866526927823692
+      ],
+      "leading_mode_mass_weighted_chi_component_fractions": [
+        0.005278242411610462,
+        0.0021728833552877034,
+        0.9882680209456156
+      ],
+      "leading_mode_mass_weighted_core_fraction": 0.9888546736384507,
+      "leading_mode_action_sensitivities": {
+        "local": {
+          "eigenvalue_derivative_real": -5.6117648446921065e-06,
+          "eigenvalue_derivative_imag": -2.0259313443360206e-05,
+          "growth_rate_derivative": -0.002874623997175006
+        },
+        "area": {
+          "eigenvalue_derivative_real": -2.1632499464815867e-07,
+          "eigenvalue_derivative_imag": 1.3687466616383956e-07,
+          "growth_rate_derivative": -0.00011073819542436076
+        },
+        "positive_density_memory": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "local_parallel_overlap": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        },
+        "spectral_geometry": {
+          "eigenvalue_derivative_real": 0.0,
+          "eigenvalue_derivative_imag": 0.0,
+          "growth_rate_derivative": 0.0
+        }
+      },
+      "scope": "Complete two-layer tangent on the stated finite periodic box in the exact internal co-rotating frame; numerical eigenspectrum, not a Lean theorem."
+    }
+  ]
+}

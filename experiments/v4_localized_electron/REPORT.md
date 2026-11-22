@@ -21,13 +21,22 @@ localized electron or movement.
 The proof is symbolic in `B` and uses `B > 1`; it neither derives nor requires
 `B = 1197` for the exact rest orbit.
 
-## Next gate
+## V4-002 classification
 
-V4-002 must derive the complete localized Floquet/tangent operator and decide
-whether the rest orbit is spectrally and nonlinearly stable. The operator must
-retain `Psi`, `chi`, both time layers, the first shell, the exterior, and both
-cubical copies. A translation eigenmode, if present, is then the principled
-starting point for V4-005 and V4-006.
+The complete localized Floquet/tangent operator has now been calculated. It
+retains `Psi`, `chi`, all sites, both time layers, and the exact internal
+co-rotating frame. The canonical orbit is spectrally unstable with a converged
+growth rate near `1.037`; V4-002 is therefore **FAIL**, not merely open.
+
+The failure begins inside the carrier. Its leading mode is an independent
+corner amplitude/phase shear, not a translation or exterior wave. Bounded
+generic bond-polynomial research and a changed `chi` inertia reduce the rate by
+more than an order of magnitude, but a slower transverse `chi` mode remains.
+The best recorded research trial is not admitted and does not change V40.
+
+The next valid calculation is an action-Hessian response-rank derivation for
+that transverse `chi` channel. Downstream localized-electron gates remain
+blocked until one action produces a stable orbit.
 
 ## Reproduced fixed-center obstruction
 

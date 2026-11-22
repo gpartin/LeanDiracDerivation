@@ -8,15 +8,15 @@
   "axioms": ["propext", "Classical.choice", "Quot.sound"],
   "gates": {
     "V4-001": "PASS",
-    "V4-002": "OPEN",
+    "V4-002": "FAIL_CANONICAL_ACTION_HESSIAN_REPAIR_REQUIRED",
     "V4-003": "SCOPED_FIXED_CENTER_OBSTRUCTION_NONCOMPACT_OPEN",
     "V4-004": "OPEN",
     "V4-005": "SCOPED_FIXED_CENTER_OBSTRUCTION_TRAVELING_FAMILY_OPEN",
     "V4-006": "OPEN",
     "V4-007": "OPEN",
-    "V4-008": "OPEN",
+    "V4-008": "PARTIAL_STRONG_DYNAMICAL_DEPENDENCE_NO_NATIVE_SELECTION",
     "V4-009": "OPEN",
     "V4-010": "OPEN"
   },
-  "claim_boundary": "Exact localized fixed-center native orbit only. Exact symbolic controls rule out a compact fixed-center Bloch/Clifford transport block, but do not rule out a noncompact joint-field bundle or translated relative-periodic family. Stability, localized spin, translation, and same-carrier Dirac dynamics remain open."
+  "claim_boundary": "Exact localized fixed-center native orbit only. The complete tangent proves that this orbit is spectrally unstable under the canonical action. A bounded research action reduces but does not eliminate the growth and is not admitted. Exact symbolic controls separately rule out a compact fixed-center Bloch/Clifford transport block, but do not rule out a noncompact joint-field bundle or translated relative-periodic family. Localized spin, translation, and same-carrier Dirac dynamics remain unproved."
 }

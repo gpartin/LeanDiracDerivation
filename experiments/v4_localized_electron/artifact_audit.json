@@ -1,0 +1,21 @@
+{
+  "classification": "V4_002_CANONICAL_ACTION_SPECTRAL_STABILITY_FAIL",
+  "canonical_action_changed": false,
+  "research_candidate_admitted": false,
+  "files": {
+    "canonical_stability.json": "4a5a06f682723e23e48a8a9c5bb5946ba8629304596e31a31f49ba77757c41fa",
+    "research_candidate_stability.json": "b50180bee72aac47bd697696d59399e8b564b3a9c8c94af64d9cddb25e6d19d9",
+    "fixed_center_obstruction.json": "7d5bf3a94e0d15160baf5a91a63785581985c6c031f08afba7f2ff6acb7b189c"
+  },
+  "verification": [
+    "python experiments/v4_localized_electron/stability_verify.py",
+    "python experiments/v4_localized_electron/verify.py",
+    "lake build"
+  ],
+  "markers": [
+    "V4_STABILITY_CLASSIFICATION_REPRODUCED_CANONICAL_FAIL",
+    "V4_LOCALIZED_REST_VERIFICATION_PASS",
+    "Build completed successfully (3888 jobs)."
+  ],
+  "claim_boundary": "The exact rest orbit remains proved. The unchanged action fails V4-002 spectral stability. The bounded research family is diagnostic only and leaves positive, box-sensitive growth. No localized electron, motion, spin, or same-carrier Dirac pass follows."
+}
