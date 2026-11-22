@@ -89,6 +89,11 @@ The value \(\chi_0=19\) is identified with the nineteen C19 cube modes: one
 center, six faces, and twelve edges. Once \(\chi_0\) is fixed geometrically,
 \(\kappa=1/63\) merely parameterizes the remaining chi kinetic normalization
 \(B=\chi_0/\kappa=1197\). This report does not claim a derivation of \(B\).
+More specifically, the finite-lattice transverse theorem is uniform in
+\(B\): its free-Dirac mass and transport generator do not use the numerical
+value 1197. The parameter remains part of the full substrate dynamics because
+it controls live-\(\chi\) inertia, nonlinear response, and future localized
+moving-electron constructions.
 
 ## 2. What “no prepared background” means
 
