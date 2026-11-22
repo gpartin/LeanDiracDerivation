@@ -33,17 +33,15 @@ elab "#audit_lean_dirac_environment" : command => do
       let moduleData := env.header.moduleData[moduleIdx]!
       for h : declarationIdx in *...moduleData.constNames.size do
         let name := moduleData.constNames[declarationIdx]
-        let some info := env.find? name |
+        let some _info := env.find? name |
           throwError "production declaration missing from environment: {name}"
-        match info with
-        | .axiomInfo _ =>
-            throwError "custom axiom declaration in production module: {name}"
-        | _ =>
-            let axioms ← Lean.collectAxioms name
-            if axioms.contains ``sorryAx then
-              throwError "production declaration contains sorry: {name}"
-            for axiomName in axioms do
-              unless allowedFoundationAxiom axiomName do
-                throwError
-                  "production declaration {name} depends on nonstandard axiom: {axiomName}"
+        let axioms ← Lean.collectAxioms name
+        if axioms.contains name then
+          throwError "custom axiom declaration in production module: {name}"
+        if axioms.contains ``sorryAx then
+          throwError "production declaration contains sorry: {name}"
+        for axiomName in axioms do
+          unless allowedFoundationAxiom axiomName do
+            throwError
+              "production declaration {name} depends on nonstandard axiom: {axiomName}"
   logInfo "LEAN_DIRAC_ENVIRONMENT_AUDIT_PASS"
