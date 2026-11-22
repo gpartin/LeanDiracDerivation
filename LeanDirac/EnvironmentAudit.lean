@@ -33,7 +33,8 @@ elab "#audit_lean_dirac_environment" : command => do
       let moduleData := env.header.moduleData[moduleIdx]!
       for h : declarationIdx in *...moduleData.constNames.size do
         let name := moduleData.constNames[declarationIdx]
-        let info := moduleData.constants[declarationIdx]!
+        let some info := env.find? name |
+          throwError "production declaration missing from environment: {name}"
         match info with
         | .axiomInfo _ =>
             throwError "custom axiom declaration in production module: {name}"
