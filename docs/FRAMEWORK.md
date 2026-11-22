@@ -1,29 +1,18 @@
-# Native framework
+# Declared native framework
 
-This document fixes the noncanonical substrate candidate used by the formal
-chain through DIRAC-021. It is a declared starting model, not a claim that the
-model is canonical LFM or uniquely selected by deeper physics.
+The derivation starts from this discrete model. It does not assume a Dirac
+field, Dirac matrix, spinor rule, selected cube ray, projector, or maintained
+background.
 
-## Fields and constants
+## Fields and geometry
 
-At every cubic-lattice site i there are exactly two native field families:
+At every periodic cubic-lattice site `i`:
 
 \[
 \Psi_i\in\mathbb C^3,\qquad \chi_i\in\mathbb C^3.
 \]
 
-The fixed constants are
-
-\[
-\chi_0=19,\qquad \kappa=\frac1{63},\qquad
-B=\frac{\chi_0}{\kappa}=1197.
-\]
-
-C19 contains six face neighbors of weight 2 and twelve edge neighbors of
-weight 1. There is no independent link, spinor, projector, matrix, track, or
-gauge register.
-
-Define
+Let
 
 \[
 \rho_{\Psi,i}=\Psi_i^\dagger\Psi_i,\qquad
@@ -31,13 +20,22 @@ Define
 W_i=\chi_i\wedge\Psi_i.
 \]
 
-## Action
-
-The Lagrangian is L=T-U, with
+C19 contains six face neighbors with relative weight 2 and twelve edge
+neighbors with relative weight 1. The constants are
 
 \[
-T=\frac12\sum_i\lVert\dot\Psi_i\rVert^2+
-\frac B2\sum_i\lVert\dot\chi_i\rVert^2,
+\chi_0=19,\qquad \kappa=\frac1{63},\qquad B=\frac{\chi_0}{\kappa}=1197.
+\]
+
+## Action
+
+\[
+L=T-U,
+\]
+
+\[
+T=\frac12\sum_i\|\dot\Psi_i\|^2+
+\frac B2\sum_i\|\dot\chi_i\|^2,
 \]
 
 \[
@@ -48,173 +46,24 @@ U_{\rm local}=\sum_i\left[
 \]
 
 \[
-U_{\rm area}=\sum_{i,n\in C19}
-\frac{w_n}{2\chi_0^2}\lVert W_{i+n}-W_i\rVert^2,
+U_{\rm area}=\sum_{(i,n)\in C19}
+\frac{w_n}{2\chi_0^2}\|W_{i+n}-W_i\|^2,
 \qquad U=U_{\rm local}+U_{\rm area}.
 \]
 
-No shape-holding, signed-incidence, gamma, beta, or Dirac term appears in the
-native action.
-
-## Equations and update
-
-Both equations are variations of the single action:
+The native equations are derived by variation:
 
 \[
 \ddot\Psi_i=-\frac{\delta U}{\delta\Psi_i^\dagger},\qquad
 B\ddot\chi_i=-\frac{\delta U}{\delta\chi_i^\dagger}.
 \]
 
-The formal native time map is the synchronous centered recurrence
+The native synchronous centered update is
 
 \[
 q_i^{n+1}=2q_i^n-q_i^{n-1}+\Delta t^2 a_i(q^n).
 \]
 
-Lean proves the reciprocal variations and the discrete-action update.
-
-## Conditional prepared background
-
-The chain assumes an already-running eight-corner complex-Psi/complex-chi
-background. It proves what can run if that state is present; it does not claim
-cosmological formation or unique state selection. The rays and companion map
-are formalized in `LeanDirac/PreparedBackground.lean`.
-
-## Downstream Dirac readout
-
-The cubical Clifford operators first appear after the native C19 transport
-symbol has been derived. They are a low-momentum square-root readout of its
-isotropic quadratic term, not native action terms. Lean retains the exact
-finite-lattice remainder and proves the standard four-component change of
-basis for both native copies.
-
-DIRAC-012 linearizes this same action on the prepared complex-chi vacuum. The
-local potential supplies the rest coefficient and the exterior-area bonds
-supply the exact C19 transport coefficient. No Dirac operator is added to the
-action. The downstream cubical square root and the centered recurrence's own
-characteristic roots construct a first-order branch. Lean proves that branch
-solves the continuum centered recurrence exactly, that its complete native
-defect is the retained C19 spatial remainder, and that its one-step generator
-converges to the same Dirac Hamiltonian. The older exponential-mode residual
-is retained only as a supporting scalar bound.
-
-DIRAC-013 varies the same restricted bond action under local phase changes to
-derive the oriented C19 flow and its exact local continuity identity. The
-positive-frequency graph already derived in DIRAC-011 then fixes the explicit
-normalization to four-component density. The standard Dirac current is the
-low-momentum derivative of the exact C19 group flow, not an added action term.
-
-DIRAC-015 packages these results in one theorem. In the declared prepared
-sector, the action-derived massive C19 tangent is the discrete
-Klein--Gordon-type second-order system. The derived cubical four-component
-Hamiltonian is its continuum square root: squaring it recovers the continuum
-mass-plus-momentum symbol. The finite C19 spacing and centered-time update are
-not hidden; their remainders remain explicit. DIRAC-014 and DIRAC-015 add no
-new action terms or governing fields.
-
-DIRAC-016 leaves that framework unchanged and studies the two retained
-rank-four copies under the already-defined period-two corner translations.
-Unsigned translation in one cube direction exchanges the copies and returns
-after a second translation. The signed incidence readout preserves them
-separately. This is an exact geometric statement, not a new transport law or
-a proof of a localized moving electron.
-
-DIRAC-017 also leaves the framework unchanged. It forms oriented plane
-bivectors from the already-derived signed cube-incidence operators. Matching
-their actual three-axis rotation commutator selects the unique nonzero real
-generator scale `1/2`; the corresponding Casimir is `3/4`. The normalized
-geometric quarter-turn preserves the full positive-definite native inner
-product and both copies. Covariance and unitarity uniquely characterize its
-positive coefficients within the native scalar-plus-plane rotor family.
-Continuous rotations compose, give a sign change at `2π`, return at `4π`,
-intertwine with conventional four-component spin on both copies, commute with
-the mass grading, and rotate the complete interpreted Hamiltonian covariantly
-for every real angle. The corresponding quarter-turn identity is also proved
-directly.
-No spin matrix, half-angle rule, action term, or runtime projection is added.
-The result is a conditional spin-one-half representation theorem for the
-derived continuum sector, not a claim that native dynamics rotates a
-localized electron or an electromagnetic theorem.
-
-DIRAC-018 again leaves the action and update unchanged. It asks whether the
-cubical square root was merely chosen or is forced by the already-proved
-geometry. Within the declared real, local, first-order, flavor-preserving
-cubical-incidence class, two generating cube rotations force one common
-transport coefficient; exact continuum squaring fixes its magnitude and the
-upstream positive mass/current orientation fixes its sign. The argument is
-proved independently on both rank-four copies, with no assumed equality of
-their coefficients. The theorem also closes the exact flavor-sector census
-and the first-Brillouin-zone zero census of the scalar C19 symbol. Its scope
-does not include nonlocal or flavor-mixing roots, an exact finite-spacing
-factorization, a universal doubling theorem, or localized-electron dynamics.
-
-DIRAC-019 leaves the framework unchanged. It iterates the stable
-positive-frequency branch already derived from the centered recurrence,
-proves density conservation for every update count, and derives finite-family
-transport from the already-established current/group-velocity relation. It
-adds no translation command or movement force. Its formal scope remains a
-finite spectral family; coherent spatial localization and nonlinear live-chi
-electron motion remain open.
-
-DIRAC-020 also leaves the framework unchanged. It explicitly constructs the
-normalized finite Fourier frame on a finite periodic lattice, synthesizes the
-DIRAC-019 modes into one coherent spatial field, and proves that each periodic
-cubic character's axis-step phase matches the momentum stored in its native
-positive-frequency mode. It then proves Parseval density,
-integrated-current transport, and a finite-update pointwise phase-error bound.
-This is a spatial readout of the already-derived linear branch, not a native
-action term or translation rule. Exact finite-spacing evolution, a uniform
-fixed-physical-time estimate carrying the C19 remainder, and nonlinear
-live-chi localized-electron transport remain open.
-
-DIRAC-021 again leaves the framework unchanged. It carries the nonnegative
-rest coefficient selected in DIRAC-011 into the zero-momentum four-component
-Hamiltonian, proves explicit positive- and negative-energy rest states and
-their first-order time equations, and derives the relative branch phase from
-the quotient of their opposite exact phases. In native units the resulting
-rest angular frequency is `19` and the coherent opposite-branch relative
-frequency is `38`. The inverse-mass scale is `1/19`; because this derivation's
-continuum limiting speed is `sqrt(12)`, the native-coordinate reduced Compton
-length is `sqrt(12)/19`. No clock register, action term, field, or fitted mass
-is introduced. A pure branch's global phase is not asserted to be observable,
-and SI calibration, zitterbewegung, electromagnetic response, and a localized
-physical electron remain open.
-
-DIRAC-022 leaves the framework unchanged.  It specializes the velocity already
-proved to be the Hamiltonian momentum response, constructs a normalized
-coherent positive/negative rest-branch state from DIRAC-021, and derives the
-free-continuum velocity and position expectations.  No native clock, position
-field, oscillation force, action term, fitted coefficient, or electromagnetic
-coupling is introduced.  The result does not assert that a localized native
-electron trembles.
-
-DIRAC-023 also leaves the framework unchanged. It follows the continuum
-plane-wave phase already implied by the C19 dispersion along the packet
-trajectory selected by the already-derived current velocity. The resulting
-clock ratio, energy reciprocity and group/phase velocity relation are readout
-theorems; they add no Lorentz-factor input, clock register, field, force,
-coefficient, stencil term, recurrence rule, or governing equation. Exact
-finite-spacing time dilation, SI calibration and localized nonlinear-electron
-dynamics remain outside this gate.
-
-DIRAC-024 likewise leaves the framework unchanged. It compares the
-action-derived opposite-energy beat cycle with the independently derived
-cubical spinor rotation endpoints. One beat period returns the zitter
-observables but negates the coherent state; two periods return it. The same
-endpoint transformations occur at cubical `2π` and `4π` rotations on both
-copies. The rest Hamiltonian and spatial spin generator remain distinct, so
-no temporal/spatial identification, rotation rule, phase reset, action term,
-field, coefficient, stencil change, recurrence change or governing equation
-is introduced.
-
-DIRAC-025 likewise leaves the framework unchanged. Its longitudinal velocity
-operator is a normalized combination of the three already-derived Hamiltonian
-momentum responses. The variance/clock theorem adds no native observable,
-force, field, coefficient, stencil weight, recurrence or governing equation.
-
-DIRAC-026 through DIRAC-030 also leave the framework unchanged. Lorentz boosts,
-the Pauli--Lubanski invariant, the Wigner--Thomas half factor, free charge
-conjugation and the Gordon current split are downstream algebraic consequences
-of the already-derived continuum four-component sector. They are not new
-native fields, action terms, C19 couplings, update rules or electromagnetic
-interactions.
+The Dirac operator appears only after the action variation, vacuum proof,
+finite-lattice Hessian, phase-space construction, and cubical incidence root.
+It is not a third native equation.
