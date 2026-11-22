@@ -21,6 +21,7 @@ def main() -> int:
     run(sys.executable, "scripts/derivation_contract_audit.py", "--strict")
     run(sys.executable, "scripts/final_chain_audit.py")
     run(sys.executable, "scripts/publication_quality_audit.py")
+    run(sys.executable, "experiments/v2_first_principles_free_dirac/verify.py")
     print("RELEASE_VERIFICATION_PASS")
     return 0
 

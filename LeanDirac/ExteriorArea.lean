@@ -1,4 +1,14 @@
-import LeanDirac.Foundation
+/-
+Copyright (c) 2026 G. D. Partin. All rights reserved.
+Released under MIT license as described in the file LICENSE.
+Authors: G. D. Partin
+-/
+
+module
+
+public import LeanDirac.Foundation
+
+@[expose] public section
 
 namespace LeanDirac
 

@@ -91,6 +91,9 @@ RELEASE_FILES = [
     "docs/DIRAC029_RED_TEAM.md",
     "docs/DIRAC030_RED_TEAM.md",
     "docs/DIRAC001_030_RED_TEAM.md",
+    "docs/DIRAC_V2_COMPLETION_AUDIT.md",
+    "docs/DIRAC_V2_PRODUCTION_PORT.md",
+    "docs/DIRAC_V2_STAGE_MAP.md",
     "docs/FORUM_POST_DIRAC026.md",
     "docs/FORUM_POST_DIRAC027.md",
     "docs/FORUM_POST_DIRAC028.md",
@@ -137,6 +140,7 @@ RELEASE_FILES = [
     "project/dirac029_charge_conjugation_status.json",
     "project/dirac030_gordon_status.json",
     "project/dirac030_release_readiness_status.json",
+    "project/dirac_v2_stage_status.json",
     "project/no_bolton_review.json",
     "project/status.json",
     "requirements.txt",
@@ -148,6 +152,12 @@ RELEASE_FILES = [
     "scripts/publication_quality_audit.py",
     "scripts/update_manifests.py",
     "scripts/verify_release.py",
+    "experiments/v2_first_principles_free_dirac/AxiomAudit.lean",
+    "experiments/v2_first_principles_free_dirac/RCA.md",
+    "experiments/v2_first_principles_free_dirac/REPORT.md",
+    "experiments/v2_first_principles_free_dirac/artifact_audit.json",
+    "experiments/v2_first_principles_free_dirac/summary.json",
+    "experiments/v2_first_principles_free_dirac/verify.py",
 ]
 
 

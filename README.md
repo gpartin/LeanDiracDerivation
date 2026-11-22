@@ -6,7 +6,47 @@ This repository is the production Lean 4 environment for a noncanonical
 attempt to derive the free Dirac equation from a local two-field cubic-lattice
 substrate.
 
-All **30 of 30** derivation gates pass. The chain begins with
+## Current first-principles route: DIRAC V2
+
+DIRAC V2 is the current top-down route through the complete **free,
+linearized Dirac equation**. It begins with the native complex
+`Psi`/complex `chi` C19 action and derives, in one compiled dependency chain,
+the reciprocal field variation, the finite periodic tangent operator, a
+lossless four-component phase-space readout, the cubical Clifford root, the
+standard alpha/beta representation, the mass `m = chi0`, all three transport
+terms, the centered/Verlet time limit, and the associated density/current
+bridge. Its cumulative theorem is
+`LeanDirac.V2.complete_first_principles_free_dirac`.
+
+V2 uses no externally prescribed, prepared, period-two, or maintained
+background. It takes the exact Hessian of the native action in one uniform
+zero-energy vacuum sector. Lean proves that sector is itself an exact critical
+point and global zero-energy minimum, and its linear chi forcing vanishes, so
+no holding force is present. The theorem does not claim an origin mechanism
+that dynamically aligns arbitrary vacuum orientations.
+
+The finite C19 spatial remainder and centered-time correction remain explicit
+and vanish in the declared low-momentum/continuum limit. Positive-frequency
+packet charge is exact after finite-torus integration; the current has an
+explicit C19 remainder bound. No simulation result is a premise of the Lean
+theorem.
+
+Reproduce V2 directly with:
+
+```bash
+lake build LeanDirac.V2
+python experiments/v2_first_principles_free_dirac/verify.py
+```
+
+See the [V2 stage map](docs/DIRAC_V2_STAGE_MAP.md),
+[completion audit](docs/DIRAC_V2_COMPLETION_AUDIT.md), and
+[cumulative theorem](LeanDirac/V2/CompleteFreeDirac.lean).
+
+## Preserved V1 history and downstream consequences
+
+The historical V1 chain remains intact for provenance. All **30 of 30** V1
+derivation and consequence gates pass under their original scopes. The V1
+chain begins with
 one positive complex-Psi/complex-chi C19 action, proves that its restriction
 and variation commute with the retained eight-site embedding, and derives a cubical
 low-momentum square root with an explicit fourth-order lattice remainder, and
