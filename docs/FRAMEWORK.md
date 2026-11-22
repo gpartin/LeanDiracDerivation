@@ -35,10 +35,10 @@ the lattice action or from a known measured constant; it must therefore be
 treated as a declared dimensionless framework constant.
 
 The role of this declaration must be kept separate from the free-Dirac
-theorem. `B` weights the kinetic response of the full live `chi` field.  The
+theorem. `B` weights the kinetic response of the full live `chi` field. The
 finite-periodic transverse action theorem is proved for arbitrary `B`, and at
 the selected exact vacuum the linear transverse `Psi` sector has a vanishing
-`Psi`--`chi` cross Hessian.  Consequently the derived free-Dirac mass and
+`Psi`--`chi` cross Hessian. Consequently the derived free-Dirac mass and
 transport generator do not select or require the numerical value `1197`.
 That value remains part of the full nonlinear substrate and can affect
 nonlinear `chi` response, localization, and a future moving-electron branch.

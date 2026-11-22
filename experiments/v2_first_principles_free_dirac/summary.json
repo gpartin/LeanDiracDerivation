@@ -21,12 +21,12 @@
     "pointwise_positive_packet_charge_bridge": "PROVED_FALSE",
     "arbitrary_noether_equals_positive_dirac_density": "PROVED_FALSE",
     "uniform_vacuum_dynamic_selection": "OPEN_OUTSIDE_THEOREM",
-    "chi_kinetic_normalization_B": "DECLARED_NOT_DERIVED",
+    "chi_kinetic_normalization_B": "DECLARED_NOT_DERIVED; NUMERICAL VALUE NOT REQUIRED BY FREE TRANSVERSE DIRAC THEOREM",
     "localized_nonlinear_moving_electron": "SEPARATE_OPEN_GATE"
   },
   "starting_law": {
     "fields": ["Psi_i in C^3", "chi_i in C^3"],
-    "constants": {"chi0": 19, "chi0_provenance": "C19 mode count: 1 center + 6 faces + 12 edges", "kappa": "1/63", "B": 1197, "B_provenance": "declared chi kinetic normalization; not derived"},
+    "constants": {"chi0": 19, "chi0_provenance": "C19 mode count: 1 center + 6 faces + 12 edges", "kappa": "1/63", "B": 1197, "B_provenance": "declared chi kinetic normalization; not derived; numerical value is not required by the free transverse Dirac theorem"},
     "geometry": "C19; face weight 2; edge weight 1",
     "action": "T - U_local - U_area",
     "equations": [
@@ -41,6 +41,7 @@
     "exact transverse energy equals two massive scalar C19 quadratic forms plus explicit quartic remainder",
     "linear Psi-chi cross blocks vanish and the transverse sector is invariant in the full tangent system",
     "the longitudinal Psi component is Hessian-decoupled from the two transverse transport channels",
+    "the finite-lattice transverse free-Dirac reduction is uniform in B; B remains relevant to full live-chi and nonlinear dynamics",
     "two-channel phase space has four complex coordinates",
     "lossless KG phase-space readout exactly intertwines with a Weyl Dirac Hamiltonian",
     "fixed basis change gives the conventional Dirac Hamiltonian",

@@ -30,10 +30,10 @@ parameterization writes `kappa = 1/63` and `B = chi0 / kappa`. V2 does not
 yet derive this remaining dimensionless normalization.
 
 That declaration belongs to the full substrate dynamics, but it is not an
-independently established prerequisite for the free-Dirac result.  The
+independently established prerequisite for the free-Dirac result. The
 finite-lattice transverse theorem is uniform in `B`: at the proved vacuum its
 linear transverse `Psi` sector has no linear `chi` motion, and its Dirac mass
-and transport generator contain no numerical use of `1197`.  The value of `B`
+and transport generator contain no numerical use of `1197`. The value of `B`
 remains relevant to live-`chi` inertia, nonlinear response, and any future
 localized moving-electron construction.
 
