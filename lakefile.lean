@@ -11,3 +11,5 @@ lean_lib LeanDirac
 
 lean_lib LeanDiracAudit
 
+lean_lib Solution
+
