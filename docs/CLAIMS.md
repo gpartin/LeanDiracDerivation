@@ -20,12 +20,19 @@ is a proposed physical reading, not a Lean theorem.
 The cumulative theorem and every transitive dependency compile without
 `sorry`, custom axioms, or assumed Dirac matrices.
 
+The free transverse reduction is uniform in the substrate kinetic parameter
+`B`. In particular, the proof does not use the numerical value `B = 1197` to
+obtain the free-Dirac mass, Clifford transport, or current. This is a scope
+result, not a claim that `B` is irrelevant to the full theory: it continues to
+control live-`chi` inertia outside this decoupled linear sector.
+
 ## Not claimed
 
 - a derivation of the native action itself;
 - dynamic cosmological selection or an origin story for one vacuum
   orientation (explicitly outside the target theorem);
-- derivation of the chi kinetic normalization `B = 1197`;
+- derivation of the chi kinetic normalization `B = 1197`, or a proof that this
+  value is required for free Dirac emergence;
 - a nonlinear localized electron or its motion;
 - electromagnetic interaction or later particle properties;
 - exact continuum symmetry at finite lattice spacing.

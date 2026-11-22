@@ -28,6 +28,14 @@ normalization is declared as `B = 1197`; equivalently the existing
 parameterization writes `kappa = 1/63` and `B = chi0 / kappa`. V2 does not
 yet derive this remaining dimensionless normalization.
 
+That declaration belongs to the full substrate dynamics, but it is not an
+independently established prerequisite for the free-Dirac result. The
+finite-lattice transverse theorem is uniform in `B`: at the proved vacuum its
+linear transverse `Psi` sector has no linear `chi` motion, and its Dirac mass
+and transport generator contain no numerical use of `1197`. The value of `B`
+remains relevant to live-`chi` inertia, nonlinear response, and any future
+localized moving-electron construction.
+
 The proof starts from one real reciprocal action `L = T - U`, derives both
 Euler--Lagrange equations, and derives the centered two-layer update. The full
 action is stated in [docs/FRAMEWORK.md](docs/FRAMEWORK.md).
@@ -61,7 +69,8 @@ revealing which one was accessed is a physical hypothesis; it is not itself
 a theorem in this repository.
 
 The theorem is a free linear tangent result. It does not claim a nonlinear
-localized electron or any later physical consequence.
+localized electron or any later physical consequence, and it does not derive
+or require the numerical value `B = 1197` within that transverse free sector.
 
 ## Reproduce
 
