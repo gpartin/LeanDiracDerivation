@@ -12,6 +12,7 @@ The default import is unambiguous:
 import LeanDirac
 
 #check LeanDirac.V2.complete_first_principles_free_dirac
+#check LeanDirac.V2.lorentz_spin_half_from_native_action
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -27,6 +28,14 @@ C19 cube modes (center, six faces, and twelve edges). The chi kinetic
 normalization is declared as `B = 1197`; equivalently the existing
 parameterization writes `kappa = 1/63` and `B = chi0 / kappa`. V2 does not
 yet derive this remaining dimensionless normalization.
+
+That declaration belongs to the full substrate dynamics, but it is not an
+independently established prerequisite for the free-Dirac result.  The
+finite-lattice transverse theorem is uniform in `B`: at the proved vacuum its
+linear transverse `Psi` sector has no linear `chi` motion, and its Dirac mass
+and transport generator contain no numerical use of `1197`.  The value of `B`
+remains relevant to live-`chi` inertia, nonlinear response, and any future
+localized moving-electron construction.
 
 The proof starts from one real reciprocal action `L = T - U`, derives both
 Euler--Lagrange equations, and derives the centered two-layer update. The full
@@ -61,7 +70,24 @@ revealing which one was accessed is a physical hypothesis; it is not itself
 a theorem in this repository.
 
 The theorem is a free linear tangent result. It does not claim a nonlinear
-localized electron or any later physical consequence.
+localized electron or any later physical consequence, and it does not derive
+or require the numerical value `B = 1197` within that transverse free sector.
+
+## Local Lorentz and spin extension
+
+The review branch continues from the proved free-Dirac boundary without
+changing the action, equations, C19 stencil, vacuum, or readout.  It derives
+the spatial rotation generators directly from the cubical gamma operators,
+proves that their unique nonzero closure scale is `1/2`, and then proves the
+spin-one-half spectrum, Casimir `3/4`, density-preserving finite rotations,
+`2*pi` sign reversal, `4*pi` return, and the rotation/boost Lorentz algebra.
+It also verifies infinitesimal covariance of the mass and gamma four-vector,
+for both exhaustive cubical copies.
+
+The cumulative local theorem is
+`LeanDirac.V2.lorentz_spin_half_from_native_action`.  The exact chain and
+claim boundary are documented in
+[docs/LORENTZ_SPIN_CHAIN.md](docs/LORENTZ_SPIN_CHAIN.md).
 
 ## Reproduce
 
