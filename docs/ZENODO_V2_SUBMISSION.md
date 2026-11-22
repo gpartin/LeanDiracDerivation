@@ -9,6 +9,10 @@ record at DOI `10.5281/zenodo.24150001`.
 - DOI: `10.5281/zenodo.24432641`
 - Archive: `LeanDiracDerivation-v2.0.0-research.zip`
 - Publication status: published as a new standalone deposition
+- Metadata audit: the live record currently reports resource type `Preprint`,
+  has no version value, and uses the title `A derivation of Dirac's electron
+  equation from 1st principles`. The intended software metadata below has not
+  yet been applied to the live record.
 
 ## Source artifact
 
@@ -20,10 +24,10 @@ record at DOI `10.5281/zenodo.24150001`.
 
 ## Metadata
 
-- Upload type: Software
+- Intended upload type: Software
 - Title: `Lean LFM-to-Dirac Derivation V2`
 - Creator: `Partin, G. D.`
-- Version: `2.0.0-research`
+- Intended version: `2.0.0-research`
 - License: `MIT`
 - Publication date: `2026-11-21`
 

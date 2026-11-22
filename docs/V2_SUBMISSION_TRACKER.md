@@ -10,7 +10,7 @@ Canonical public artifact:
 | Destination | Status | Public reference | Next action |
 |---|---|---|---|
 | GitHub release | Published | `v2.0.0-research` | Monitor issues and reviews. |
-| Zenodo | Published | `10.5281/zenodo.24432641` | None. This is a standalone V2 record. |
+| Zenodo | Published; metadata correction needed | `10.5281/zenodo.24432641` | Change resource type from Preprint to Software, set version `2.0.0-research`, and align the title/description with the scoped V2 release. |
 | Software Heritage | Save requested; live status check blocked by anti-bot challenge | Request `2677930` | Recheck archival completion in a normal browser. |
 | LeanPool | Open replacement request | https://github.com/LeanPool/lean-pool/issues/961 | Await maintainer review. V2 DOI comment was attempted but the GitHub App lacks write access to this repository. |
 | best-of-lean4 | Open PR | https://github.com/34j/best-of-lean4/pull/307 | Await maintainer review after DOI-link update. |
