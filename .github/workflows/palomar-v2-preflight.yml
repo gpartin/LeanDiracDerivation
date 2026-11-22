@@ -1,0 +1,16 @@
+name: Palomar V2 preflight
+
+on:
+  workflow_dispatch:
+
+jobs:
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+    with:
+      repository: gpartin/LeanDiracDerivation
+      commit: 094626b2bf44c08619591f7747b77aa53f87a08e
+      pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+      request_id: diracv2pf001
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I am a responsible author or maintainer"}'
