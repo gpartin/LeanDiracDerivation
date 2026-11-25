@@ -20,12 +20,15 @@ python scripts/verify_release.py
 
 The verifier requires a clean checkout and full Git history because it checks
 the sealed proof-source commit as an ancestor of the current revision. It then
-builds the V2 dependency closure, checks every required declaration, audits
-compiled axiom dependencies, and verifies the source seals.
+builds the cumulative V3.1 dependency closure, checks every required
+declaration, runs the historical-sign moving-frame regression, audits compiled
+axiom dependencies, and verifies all release-facing source, documentation,
+audit, and reproduction seals.
 
 Expected final markers:
 
 ```text
-v2_first_principles_free_dirac: PASS_WITH_SCOPED_OPEN_GATES_AND_COMPILED_AXIOM_AUDIT
-V2_RELEASE_VERIFICATION_PASS
+LEAN_DIRAC_V3_PAULI_LUBANSKI_REGRESSION_PASS
+V3_LORENTZ_SPIN_RELEASE_VERIFICATION_PASS
+V3_RELEASE_VERIFICATION_PASS
 ```

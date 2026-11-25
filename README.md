@@ -76,27 +76,33 @@ or require the numerical value `B = 1197` within that transverse free sector.
 
 ## V3 Lorentz and spin extension
 
-V3 continues from the proved free-Dirac boundary without
+V3.1 continues from the proved free-Dirac boundary without
 changing the action, equations, C19 stencil, vacuum, or readout.  It derives
 the spatial rotation generators directly from the cubical gamma operators,
-proves that their unique nonzero closure scale is `1/2`, and then proves the
+proves that their unique nonzero closure scale is `1/2`, proves that this
+normalization is also uniquely selected within the explicit local
+plane-bivector class by covariance of the native transport directions, and
+then proves the
 spin-one-half spectrum, Casimir `3/4`, density-preserving finite rotations,
 `2*pi` sign reversal, `4*pi` return, and the rotation/boost Lorentz algebra.
 It also proves the finite rotation group law and generator derivative,
 intertwines rotations and boosts through both exhaustive cubical copies,
-proves covariance of the full continuum Dirac symbol while four-momentum and
+proves infinitesimal covariance of the low-momentum Dirac operator while four-momentum and
 the spinor transform together, and constructs the Pauli--Lubanski vector from
-four-momentum and the derived Lorentz generators before obtaining its rest
-Casimir `-3 m^2 / 4`.
+four-momentum and the derived Lorentz generators. Its boost and rotation
+four-vector laws are proved for all axes before obtaining its rest Casimir
+`-3 m^2 / 4`.
 
 The cumulative local theorem is
 `LeanDirac.V2.lorentz_spin_half_from_native_action`.  The exact chain and
 claim boundary are documented in
 [docs/LORENTZ_SPIN_CHAIN.md](docs/LORENTZ_SPIN_CHAIN.md).
 
-This is an infinitesimal continuum-sector Lorentz theorem. It does not claim
-exact Lorentz invariance at finite lattice spacing, a localized nonlinear
-electron, electromagnetic coupling, or a dynamical rule selecting one copy.
+This is an infinitesimal low-momentum operator/representation theorem. It does
+not prove fixed-physical-scale finite-time solution convergence, exact Lorentz
+invariance at finite lattice spacing, unrestricted uniqueness of physical
+rotations, a localized nonlinear electron, electromagnetic coupling, or a
+dynamical rule selecting one copy.
 
 ## Reproduce
 

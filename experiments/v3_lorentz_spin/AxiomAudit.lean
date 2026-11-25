@@ -9,12 +9,24 @@ import LeanDirac.EnvironmentAudit
 #check LeanDirac.V2.standard_cubical_continuous_turn_has_derivative
 #check LeanDirac.V2.oriented_dirac_symbol_rotation_covariant
 #check LeanDirac.V2.oriented_dirac_symbol_boost_covariant
+#check LeanDirac.V2.exists_unique_cubical_operational_rotation_scale
+#check LeanDirac.V2.native_cubical_spin_is_operational_rotation
+#check LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_time
+#check LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_space
+#check LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_time
+#check LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_space
 #check LeanDirac.V2.cubical_pauli_lubanski_orthogonal
 #check LeanDirac.V2.rest_pauli_lubanski_spin_half
 #print axioms LeanDirac.V2.complete_first_principles_free_dirac
 #print axioms LeanDirac.V2.standard_cubical_continuous_turn_add
 #print axioms LeanDirac.V2.oriented_dirac_symbol_rotation_covariant
 #print axioms LeanDirac.V2.oriented_dirac_symbol_boost_covariant
+#print axioms LeanDirac.V2.exists_unique_cubical_operational_rotation_scale
+#print axioms LeanDirac.V2.native_cubical_spin_is_operational_rotation
+#print axioms LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_time
+#print axioms LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_space
+#print axioms LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_time
+#print axioms LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_space
 #print axioms LeanDirac.V2.cubical_pauli_lubanski_orthogonal
 #print axioms LeanDirac.V2.rest_pauli_lubanski_spin_half
 #print axioms LeanDirac.V2.lorentz_spin_half_from_native_action
