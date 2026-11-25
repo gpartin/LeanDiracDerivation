@@ -14,7 +14,7 @@ derived for the free linear sector.
 | Gate | Required result | Status |
 |---|---|---|
 | V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS; CLEAN-BRANCH REBUILD RECORDED IN `v4_001_revalidation.json`** |
-| V4-002 | Nonlinear rest stability of that same orbit | **STOPPED AFTER 5 RCAS: ALL FIVE FULL TWO-LAYER TANGENT SCREENS FAIL; NO COHERENT FINAL ACTION** |
+| V4-002 | Nonlinear rest stability of that same orbit | **STOPPED AFTER 5 CORRECTED RCAS: COMPLETE-FRAME CLOCK REPAIR GREATLY IMPROVES BUT DOES NOT CLOSE LINEAR STABILITY** |
 | V4-003 | Lossless localized four-component readout, including both committed layers | **NOT STARTED; BLOCKED BY V4-002** |
 | V4-004 | Operational spin-one-half action on that localized carrier | **NOT STARTED; BLOCKED BY V4-002** |
 | V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NOT STARTED; BLOCKED BY V4-002; HISTORICAL CONTROLS RETAINED** |
@@ -26,20 +26,29 @@ derived for the free linear sector.
 
 ### 2026-11-25 coherent-chain stop
 
-The clean `feature/v4-coherent-chain` rebuild passed V4-001. V4-002 then
-tested the movement incumbent and four reciprocal phase/timing variations
-with the full `Psi`--`chi`, two-committed-layer Floquet operator. Every test
-retained a multiplier outside the unit circle. The best case was the unchanged
-movement incumbent, with multiplier modulus `1.0030599618422145` and growth
-rate `0.7821541600324176`; approximately 97.0% of its leading mode power is in
-`Psi`. The four repairs worsened that result. The required nonlinear 100-cycle
-gate was not run because its necessary linear-stability gate failed.
+The clean `feature/v4-coherent-chain` rebuild passed V4-001. An initial
+V4-002 screen accidentally used the older movement incumbent and is retained
+only as superseded provenance. The corrected screen uses the actual
+complete-frame clock action: six-face frame transport at `6/19`, the matched
+parallel material coordinate `chi^dagger Psi`, its native-clock potential,
+and the derived spacetime-face response.
+
+That correction is material. It lowers the full `Psi`--`chi`,
+two-committed-layer growth rate from `0.7821541600` to `0.0610029580` while
+preserving the exact rest solution. The largest multiplier nevertheless
+remains `1.0002383212`, and approximately 97.74% of its leading-mode power is
+in `Psi`. Spacetime calibration, matched-frame strength, clock-potential
+strength, both symplectic signs, triangle completion, and transverse material
+completion do not place the spectrum on the unit circle. The negative
+symplectic response is the best repair at growth `0.0553607134`, but it still
+fails. The required nonlinear 100-cycle gate was not run because its
+necessary linear-stability gate failed.
 
 This triggers the declared five-RCA stop rule. V4-003 through V4-010 are
 dependency-blocked, not failed on their own merits. The scoped RCA and the
 next research route are recorded in
-`experiments/v4_localized_electron/V4_002_RCA_STOP.md`. No V4 release is
-promoted and `main` remains unchanged.
+`experiments/v4_localized_electron/V4_002_COMPLETE_FRAME_RCA_STOP.md`. No V4
+release is promoted and `main` remains unchanged.
 
 ### 2026-11-25 gate correction
 

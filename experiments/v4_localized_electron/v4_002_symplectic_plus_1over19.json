@@ -1,0 +1,27 @@
+{
+  "stage": "V4-002",
+  "status": "LINEAR_STABILITY_SCREEN",
+  "action_module": "live_clifford_bond_action.py",
+  "action_module_sha256": "919f3ecb9d3d45afa8c978e01854d004bf47fe3dc6ff7faeeaa4dd304169cb5b",
+  "action_description": "complete-frame action: symplectic timing plus_1over19",
+  "cache_file": "live_clifford_tangent_blocks_joint_face_laplacian_plus_frame_oscillator_0p315789473684_plaquette_0_spacetime_0p00554016620499_symplectic_0p0526315789474_overlap_0_overlapface_0_overlapmatched_1_overlappotential_1_dt_0p00390625.npz",
+  "cache_provenance": "Exact tangent cache inherited from checkpoint d56b63a; the recorded SHA-256 is the authoritative identity.",
+  "cache_sha256": "1e09b47c28fceb4a070d49fba227f2000c1a692c7d1c97cd2f8734bcc29729e7",
+  "dt": 0.00390625,
+  "state_dimension": 1500,
+  "box_side": 5,
+  "phase_space_dimension": 3000,
+  "eigensolver": "dense",
+  "computed_eigenvalue_count": 3000,
+  "arpack_converged": true,
+  "leading_multiplier_real": 1.0015829125483746,
+  "leading_multiplier_imag": 1.7089644914542276e-05,
+  "leading_multiplier_modulus": 1.0015829126941718,
+  "leading_growth_rate_per_unit_time": 0.4049052693403834,
+  "leading_mode_field_power_fractions": {
+    "Psi": 0.42864729143153624,
+    "chi": 0.5713527085684635
+  },
+  "verdict": "LINEAR_STABILITY_FAIL",
+  "claim_boundary": "This is a full two-layer tangent screen, not the nonlinear 100-cycle V4-002 acceptance gate."
+}

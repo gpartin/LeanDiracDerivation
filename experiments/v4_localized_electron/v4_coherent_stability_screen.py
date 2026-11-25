@@ -15,7 +15,7 @@ import json
 from pathlib import Path
 
 import numpy as np
-from scipy.linalg import lu_factor, lu_solve
+from scipy.linalg import eig, lu_factor, lu_solve
 from scipy.sparse.linalg import ArpackNoConvergence, LinearOperator, eigs
 
 import canonical_noncoplanar_bifurcation_audit as native_time
@@ -46,6 +46,8 @@ def main() -> None:
     parser.add_argument("--tolerance", type=float, default=1e-9)
     parser.add_argument("--maxiter", type=int, default=12000)
     parser.add_argument("--ncv", type=int, default=96)
+    parser.add_argument("--solver", choices=("arnoldi", "dense"),
+                        default="arnoldi")
     args = parser.parse_args()
 
     cache = args.cache.resolve()
@@ -81,21 +83,31 @@ def main() -> None:
             factor, current @ q + backward @ p, check_finite=False)
         return np.concatenate((successor, q))
 
-    operator = LinearOperator(
-        (2 * dimension, 2 * dimension), matvec=matvec,
-        dtype=np.float64)
-    rng = np.random.default_rng(4002)
-    try:
-        values, vectors = eigs(
-            operator, k=args.eigenvalues, which="LM",
-            v0=rng.normal(size=2 * dimension), tol=args.tolerance,
-            maxiter=args.maxiter, ncv=args.ncv, return_eigenvectors=True)
+    if args.solver == "dense":
+        forward = -lu_solve(factor, current, check_finite=False)
+        history = -lu_solve(factor, backward, check_finite=False)
+        identity = np.eye(dimension)
+        zero = np.zeros_like(identity)
+        monodromy = np.block([[forward, history], [identity, zero]])
+        values, vectors = eig(monodromy, check_finite=False)
         converged = True
-    except ArpackNoConvergence as error:
-        values, vectors = error.eigenvalues, error.eigenvectors
-        converged = False
-        if values is None or len(values) == 0:
-            raise
+    else:
+        operator = LinearOperator(
+            (2 * dimension, 2 * dimension), matvec=matvec,
+            dtype=np.float64)
+        rng = np.random.default_rng(4002)
+        try:
+            values, vectors = eigs(
+                operator, k=args.eigenvalues, which="LM",
+                v0=rng.normal(size=2 * dimension), tol=args.tolerance,
+                maxiter=args.maxiter, ncv=args.ncv,
+                return_eigenvectors=True)
+            converged = True
+        except ArpackNoConvergence as error:
+            values, vectors = error.eigenvalues, error.eigenvectors
+            converged = False
+            if values is None or len(values) == 0:
+                raise
     moduli = np.abs(values)
     leading = int(np.argmax(moduli))
     current_mode = vectors[:dimension, leading].reshape(
@@ -115,8 +127,9 @@ def main() -> None:
         "state_dimension": dimension,
         "box_side": side,
         "phase_space_dimension": 2 * dimension,
+        "eigensolver": args.solver,
         "computed_eigenvalue_count": int(len(values)),
-        "arpack_converged": converged,
+        "eigensolver_converged": converged,
         "leading_multiplier_real": float(values[leading].real),
         "leading_multiplier_imag": float(values[leading].imag),
         "leading_multiplier_modulus": float(moduli[leading]),

@@ -1,4 +1,9 @@
-# V4-002 five-RCA stop report
+# Superseded V4-002 five-RCA stop report
+
+**Status:** Superseded on 2026-11-25 by
+`V4_002_COMPLETE_FRAME_RCA_STOP.md`. This report tested an earlier movement
+incumbent that omitted the subsequently derived complete-frame clock repair.
+Its measurements remain provenance but do not control the coherent V4 chain.
 
 ## Issue
 
