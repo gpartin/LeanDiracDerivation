@@ -1,0 +1,69 @@
+{
+  "status": "V4_006_CONSERVATIVE_FACE_FRAME_ACTION_REPLACEMENT_SCREEN_NOT_ADMITTED",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "candidate_sha256": "a8b764832673afccc3dd9f21afe764125a2739e783cb0019f706a8cc4e5d6cbd",
+  "state_sha256": "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "mode": "plain",
+      "generic_real_inner_product_defect": 1.25418310916718e-18,
+      "generic_local_phase_cross_defect": 0.035114639110005605,
+      "rest_delta_DEL_norm": 304.5346466171497,
+      "rest_candidate_preconditioned_acceleration_defect": 0.35017306065345116,
+      "required_candidate_receiver_gain": [
+        144233046.12725145,
+        57051413.6213314
+      ],
+      "integrated_candidate_receiver_inflow": [
+        -50301876.6303689,
+        -63643240.65454
+      ],
+      "baseline_fraction_delivered": [
+        0.20501578662254719,
+        0.09877782012931278
+      ],
+      "candidate_fraction_delivered": [
+        -0.3487541723689967,
+        -1.1155418703024729
+      ],
+      "additional_candidate_inflow": [
+        -79872495.46398328,
+        -69278795.90745573
+      ],
+      "maximum_baseline_path_defect": 1.583315329248987,
+      "maximum_candidate_path_defect": 21.30427626430603
+    },
+    {
+      "mode": "aligned",
+      "generic_real_inner_product_defect": 6.207625169519885e-18,
+      "generic_local_phase_cross_defect": 6.071508464725958e-18,
+      "rest_delta_DEL_norm": 6.356108300500706e-09,
+      "rest_candidate_preconditioned_acceleration_defect": 4.002137846103568e-12,
+      "required_candidate_receiver_gain": [
+        144235813.67237204,
+        57052840.85233616
+      ],
+      "integrated_candidate_receiver_inflow": [
+        29570505.87186369,
+        5627855.614175946
+      ],
+      "baseline_fraction_delivered": [
+        0.20501578662254719,
+        0.09877782012931278
+      ],
+      "candidate_fraction_delivered": [
+        0.20501500368717257,
+        0.09864286388020416
+      ],
+      "additional_candidate_inflow": [
+        -112.96175068716737,
+        -7699.638739780235
+      ],
+      "maximum_baseline_path_defect": 1.583315329248987,
+      "maximum_candidate_path_defect": 1.5831856802979796
+    }
+  ],
+  "claim_boundary": "Native local frame transport comparison, scope limited to same-state phase momentum and rest/dynamic residual. Not installed, not a stage pass."
+}

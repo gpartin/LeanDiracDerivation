@@ -1,0 +1,167 @@
+{
+  "status": "V4_006_PHASE_CORRECTED_FREE_PERIOD_COLLOCATION_SCREEN",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "action_configuration": {
+    "link": "joint_face_laplacian_plus_frame_oscillator",
+    "scale": 1197.0,
+    "spacetime_scale": 0.01662049861495845,
+    "parallel_matched_scale": 1.0,
+    "parallel_clock_potential_scale": 1.0,
+    "optional_scales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "chi_payload": 1.0
+  },
+  "rest_raw_sha256": "5df770deed55eda30942d9a5db50e19d0a5087b698c865f5600a37193c693b8e",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "nodes": 5,
+  "seed": "local",
+  "period_window_updates": [
+    8782.0,
+    35128.0
+  ],
+  "fixed_comparator_period_control": 17564,
+  "solved_continuous_period_updates": 17564.0,
+  "rounded_period_updates": 17564,
+  "rounded_crossing_time": 68.609375,
+  "solved_speed_cells_per_time": -0.014575267592803462,
+  "phase_per_step": 0.07441466045024688,
+  "reference_phase_per_step": 0.07423579507567751,
+  "initial_acceleration_defect": 0.7747219141608823,
+  "final_acceleration_defect": 0.773892807065212,
+  "holdout_acceleration_defect": 0.785960231845281,
+  "final_raw_DEL_RMS": 185.51473221454862,
+  "holdout_raw_DEL_RMS": 163.77413595352243,
+  "per_node": [
+    {
+      "fraction": 0.0,
+      "defect": 0.07352444108279993
+    },
+    {
+      "fraction": 0.2,
+      "defect": 0.5167614358333497
+    },
+    {
+      "fraction": 0.4,
+      "defect": 0.7417931444711058
+    },
+    {
+      "fraction": 0.6,
+      "defect": 1.4354493014299807
+    },
+    {
+      "fraction": 0.8,
+      "defect": 0.333662094004001
+    }
+  ],
+  "worst_node_Psi_residual_power_fraction": 0.9577674899012317,
+  "initial_metrics": {
+    "Psi_core_fidelity": 0.9999999999989877,
+    "chi_contrast_fidelity": 1.0,
+    "Psi_exterior_fraction": 1.0128435658534578e-12,
+    "chi_exterior_relative_norm": 5.786459238769427e-09,
+    "Psi_norm_relative_to_rest": 1.0000000000005065,
+    "chi_contrast_norm_relative_to_rest": 1.0000000000000002
+  },
+  "charge_reference": [
+    297227477.7057461,
+    113638802.2826263
+  ],
+  "charge_samples": [
+    [
+      297287672.564348,
+      113654314.04270801
+    ],
+    [
+      297151013.7510413,
+      113622986.24001096
+    ],
+    [
+      297185818.09909177,
+      113648611.56231739
+    ],
+    [
+      297166682.0492108,
+      113641346.39579731
+    ],
+    [
+      297155288.66826594,
+      113625654.56108692
+    ]
+  ],
+  "maximum_charge_defect_over_reference_Psi_charge": [
+    0.00025725735485505847,
+    5.321191276600938e-05
+  ],
+  "interval_energy_samples": [
+    5652725396.611011,
+    5654824204.881042,
+    5688377828.445881,
+    5688114925.993531,
+    5654566260.914123
+  ],
+  "maximum_relative_energy_variation": 0.006267592081627061,
+  "optimizer_evaluations": 45,
+  "trace": [
+    0.7747219141608823,
+    0.7758789164380937,
+    0.7750058905264032,
+    0.7746865578541293,
+    0.7743422491653728,
+    0.7745523175259761,
+    0.7744609722234509,
+    0.7744061724592488,
+    0.7743756087292811,
+    0.7743593248327999,
+    0.7743508930915356,
+    0.7743465986367579,
+    0.7743444309146967,
+    0.7743433418024286,
+    0.7743427959258572,
+    0.774342522663313,
+    0.774342276517355,
+    0.7743422628438242,
+    0.7743422560071211,
+    0.7743422498545941,
+    0.7743422492338632,
+    0.7742466937784754,
+    0.7742175365635972,
+    0.7741625014835899,
+    0.7741359373742187,
+    0.7741169063393422,
+    0.7740803682063349,
+    0.7740602828021047,
+    0.7744544870851873,
+    0.7740540888366244,
+    0.7740115820385195,
+    0.7742805703650965,
+    0.7739797731510377,
+    0.7742912072171005,
+    0.773993904086983,
+    0.7739718835235321,
+    0.7742722255973907,
+    0.7739657726515142,
+    0.7742725923287151,
+    0.773934082880085,
+    0.774149533445566,
+    0.7739076509426704,
+    0.7738928070654036,
+    0.7746765956753188,
+    0.7744611329565361
+  ],
+  "initial_core_fixed": true,
+  "initial_exterior_free": true,
+  "runtime_forcing": false,
+  "project_face_capacity_BVP_chart": true,
+  "phase_chart": "all_coordinates",
+  "exact_reduction_DEL_check": 2.679917633873495e-13,
+  "claim_boundary": "Finite collocation with free exterior, interior and crossing time. Endpoint chart is exact, but native DEL and independent holdout residual must vanish before a free-release test. Not a pass or a no-go."
+}

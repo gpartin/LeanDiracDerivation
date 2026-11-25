@@ -1,0 +1,93 @@
+{
+  "status": "RESEARCH_EVIDENCE_INTEGRITY_PASS__NOT_MOVEMENT_PASS",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "source_hashes": {
+    "v4_006_face_phase_momentum.py": "af4b6a12b30b9dd3259cd602d7c18e1ee94e0ed4e58085a0f767388420ca23bf",
+    "v4_006_local_phase_transfer_rank.py": "0fe415723851b8bec4005c89bb2ca89bf96f41233ef895cd55a41954a2a40852",
+    "v4_006_relative_receiver_phase_transfer.py": "e185a0ead3e3ede1364e38a380f013fbd332d8e55f1d37a1c11297ce33ed10da",
+    "v4_006_phase_corrected_handoff.py": "2a5b4ea63d278ea923ab6f4671e4315a0687ad44eabf7fbda903741d2f09ef85",
+    "v4_006_face_frame_transport_probe.py": "560e596acb80256872428023d9f58b1cbe12fdf140ae1db0f65105cffa23aab9",
+    "v4_006_face_frame_transport_action.py": "a8b764832673afccc3dd9f21afe764125a2739e783cb0019f706a8cc4e5d6cbd"
+  },
+  "research_lean_source": {
+    "path": "LeanDirac/V4/FacePhaseMomentum.lean",
+    "sha256": "cf6bcc68958acfecc27464ecb7acba587a3c2b2ef1de1566f7f1b41f43f38493"
+  },
+  "state_artifacts": {
+    "cfb55d40556c0f05ca12817bf083c9513f51d8c565c7a210db18d59d00bb9973": "v4_006_face_charge_transport_seed.npz",
+    "ebb5ac6699bfdd865706f1b761db439db4a85060f0ee776b4d1c4f4196a2fee8": "v4_006_face_capacity_matched_speed.npz",
+    "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d": "v4_006_antiphase_handoff.npz",
+    "f1725953a1bf03854e76ec3ef58a33f1591da0877f19016efd4f97a7d0396583": "v4_006_antiphase_phase_balanced_handoff.npz",
+    "50c92284188c49a8614f6d384e439d901aeaa62ae62a2c44c6013af21a6fe13c": "v4_006_antiphase_transfer_seed.npz"
+  },
+  "artifacts": {
+    "v4_006_face_phase_momentum_seed.json": {
+      "sha256": "4f49c62535562f38e380b3581716c83456fe08683f14ab95f622622079385d9c",
+      "source": "v4_006_face_phase_momentum.py",
+      "status": "V4_006_EXACT_NATIVE_FACE_PHASE_MOMENTUM_AND_HANDOFF_FLUX_DIAGNOSTIC"
+    },
+    "v4_006_face_phase_momentum_matched.json": {
+      "sha256": "4e96b6f17e6866c038722eb8a0bd2c71b74ca441624b87fb89d7753e60188beb",
+      "source": "v4_006_face_phase_momentum.py",
+      "status": "V4_006_EXACT_NATIVE_FACE_PHASE_MOMENTUM_AND_HANDOFF_FLUX_DIAGNOSTIC"
+    },
+    "v4_006_face_phase_momentum_antiphase_bvp.json": {
+      "sha256": "1d4a6bfe5326077d0525c523fe9cac4dfbc315b7cbeb623e93898134852fc194",
+      "source": "v4_006_face_phase_momentum.py",
+      "status": "V4_006_EXACT_NATIVE_FACE_PHASE_MOMENTUM_AND_HANDOFF_FLUX_DIAGNOSTIC"
+    },
+    "v4_006_face_phase_momentum_antiphase_balanced.json": {
+      "sha256": "df2ebf342e9144c938854a06260862fda06f5e9d7152ecb1b7563899851f6764",
+      "source": "v4_006_face_phase_momentum.py",
+      "status": "V4_006_EXACT_NATIVE_FACE_PHASE_MOMENTUM_AND_HANDOFF_FLUX_DIAGNOSTIC"
+    },
+    "v4_006_local_phase_transfer_rank.json": {
+      "sha256": "f46fd9203111b7a2f8b5b459440d1167daefcdb80bae701c92bad961938bffda",
+      "source": "v4_006_local_phase_transfer_rank.py",
+      "status": "V4_006_LOCAL_PHASE_MOMENTUM_INVERSE_REQUIREMENT"
+    },
+    "v4_006_local_phase_transfer_rank_antiphase.json": {
+      "sha256": "0223a62c6161b80facff6e85f17ff0d8a265fce7c17773b41d68c9855754cb5a",
+      "source": "v4_006_local_phase_transfer_rank.py",
+      "status": "V4_006_LOCAL_PHASE_MOMENTUM_INVERSE_REQUIREMENT"
+    },
+    "v4_006_relative_receiver_phase_transfer.json": {
+      "sha256": "8fe7c6a464bb5f93f94dd6b2eed44507f61dc7cb155a346792c99727beb21bbd",
+      "source": "v4_006_relative_receiver_phase_transfer.py",
+      "status": "V4_006_RELATIVE_RECEIVER_PHASE_NATIVE_FLUX_SCREEN"
+    },
+    "v4_006_antiphase_face_routing.json": {
+      "sha256": "8e75630360221826469d0a986e6d01085e4e3ab94f8762beadcedf6452a4b006",
+      "source": "v4_006_relative_receiver_phase_transfer.py",
+      "status": "V4_006_RELATIVE_RECEIVER_PHASE_NATIVE_FLUX_SCREEN"
+    },
+    "v4_006_antiphase_handoff.json": {
+      "sha256": "bd9f5dcbbdd4db6fe648ed3f109b675d62d8ed9d0c01416f0a3a902d9233ef95",
+      "source": "v4_006_phase_corrected_handoff.py",
+      "status": "V4_006_PHASE_CORRECTED_FREE_PERIOD_COLLOCATION_SCREEN"
+    },
+    "v4_006_antiphase_phase_balanced_handoff.json": {
+      "sha256": "74b66486c48589c1d663e598dfa58be249b5b4f6f6ea170b2ca9416627094a86",
+      "source": "v4_006_phase_corrected_handoff.py",
+      "status": "V4_006_PHASE_CORRECTED_FREE_PERIOD_COLLOCATION_SCREEN"
+    },
+    "v4_006_face_frame_transport_probe.json": {
+      "sha256": "1acf9f2a7fb9c84c9f68993743112eb506c32cd31621610156aee8ec262abb08",
+      "source": "v4_006_face_frame_transport_probe.py",
+      "status": "V4_006_CONSERVATIVE_FACE_FRAME_ACTION_REPLACEMENT_SCREEN_NOT_ADMITTED"
+    }
+  },
+  "stage_status": {
+    "V4-001": "PASS",
+    "V4-002": "PASS",
+    "V4-003": "PASS",
+    "V4-004": "PASS",
+    "V4-005": "PASS",
+    "V4-006": "OPEN",
+    "V4-007": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-008": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-009": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-010": "NOT_STARTED__BLOCKED_BY_V4_006"
+  },
+  "claim_boundary": "Evidence integrity only. Compile the separate Lean module and full chain independently."
+}

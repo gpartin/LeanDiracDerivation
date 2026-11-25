@@ -1,0 +1,162 @@
+{
+  "status": "V4_006_PHASE_CORRECTED_FREE_PERIOD_COLLOCATION_SCREEN",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "action_configuration": {
+    "link": "joint_face_laplacian_plus_frame_oscillator",
+    "scale": 1197.0,
+    "spacetime_scale": 0.01662049861495845,
+    "parallel_matched_scale": 1.0,
+    "parallel_clock_potential_scale": 1.0,
+    "optional_scales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "chi_payload": 1.0
+  },
+  "rest_raw_sha256": "5df770deed55eda30942d9a5db50e19d0a5087b698c865f5600a37193c693b8e",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "nodes": 5,
+  "seed": "local",
+  "period_window_updates": [
+    8782.0,
+    35128.0
+  ],
+  "fixed_comparator_period_control": 17564,
+  "solved_continuous_period_updates": 17564.0,
+  "rounded_period_updates": 17564,
+  "rounded_crossing_time": 68.609375,
+  "solved_speed_cells_per_time": -0.014575267592803462,
+  "phase_per_step": 0.0743949290266414,
+  "reference_phase_per_step": 0.07423579507567751,
+  "initial_acceleration_defect": 0.7747219141608825,
+  "initial_optimizer_objective": 3.449375785080706,
+  "final_acceleration_defect": 0.7192594029348666,
+  "holdout_acceleration_defect": 0.822080559187431,
+  "final_raw_DEL_RMS": 182.60787476704226,
+  "holdout_raw_DEL_RMS": 163.03757039045607,
+  "per_node": [
+    {
+      "fraction": 0.0,
+      "defect": 0.08326466207989237
+    },
+    {
+      "fraction": 0.2,
+      "defect": 0.542778219129971
+    },
+    {
+      "fraction": 0.4,
+      "defect": 0.7849504027733525
+    },
+    {
+      "fraction": 0.6,
+      "defect": 1.23932077847901
+    },
+    {
+      "fraction": 0.8,
+      "defect": 0.36478228802129753
+    }
+  ],
+  "worst_node_Psi_residual_power_fraction": 0.9404968160334717,
+  "initial_metrics": {
+    "Psi_core_fidelity": 0.9999592747031969,
+    "chi_contrast_fidelity": 0.9998476063919045,
+    "Psi_exterior_fraction": 4.072529680310699e-05,
+    "chi_exterior_relative_norm": 0.012345721341712973,
+    "Psi_norm_relative_to_rest": 1.0000203632703788,
+    "chi_contrast_norm_relative_to_rest": 1.0000762055140835
+  },
+  "charge_reference": [
+    297227477.7057461,
+    113638802.2826263
+  ],
+  "charge_samples": [
+    [
+      297066228.8809639,
+      110090332.73813987
+    ],
+    [
+      297038710.0919987,
+      101404419.30412617
+    ],
+    [
+      297071215.00951564,
+      119437688.76843998
+    ],
+    [
+      297047831.3179034,
+      120602217.992767
+    ],
+    [
+      297041950.4525387,
+      102129428.6827318
+    ]
+  ],
+  "maximum_charge_defect_over_reference_Psi_charge": [
+    0.0006350947604322674,
+    0.04116168220023087
+  ],
+  "interval_energy_samples": [
+    5648819705.594245,
+    5653381305.939434,
+    5685975416.366308,
+    5685023900.343776,
+    5652925082.843638
+  ],
+  "maximum_relative_energy_variation": 0.006534623886187686,
+  "optimizer_evaluations": 36,
+  "trace": [
+    3.449375785080706,
+    3.4486231904738758,
+    3.449174478718294,
+    3.4486790346442344,
+    3.4486284197697694,
+    3.448625868785575,
+    3.448624534423529,
+    3.4486238508192137,
+    3.4486235356806874,
+    3.4486232077614605,
+    3.4486231916010595,
+    3.4486232001946315,
+    3.4486231785515007,
+    3.4486231893439196,
+    3.448623194157919,
+    3.4486231799440983,
+    3.4480172038569004,
+    3.447494851437601,
+    3.4451847054478772,
+    3.432509208287437,
+    3.3001529522066466,
+    2.7790637351601024,
+    2.613890388046488,
+    2.1575402135649346,
+    1.9824843987307952,
+    1.9004419830014665,
+    1.8664473725100676,
+    1.8460779098536242,
+    1.8199192196170775,
+    1.7792904597734258,
+    1.709055093704323,
+    1.72211590912807,
+    1.6657356731498796,
+    1.601889147438936,
+    1.5484025199661142,
+    1.5006526958075226
+  ],
+  "initial_core_fixed": true,
+  "initial_exterior_free": true,
+  "runtime_forcing": false,
+  "project_face_capacity_BVP_chart": true,
+  "phase_chart": "all_coordinates",
+  "exact_reduction_DEL_check": 2.679917633873495e-13,
+  "native_phase_balance_conditioning": true,
+  "local_phase_balance_rms_in_transfer_units": 1.316681083617957,
+  "holdout_local_phase_balance_rms_in_transfer_units": 1.9170948696266148,
+  "claim_boundary": "Finite collocation with free exterior, interior and crossing time. Endpoint chart is exact, but native DEL and independent holdout residual must vanish before a free-release test. Not a pass or a no-go."
+}

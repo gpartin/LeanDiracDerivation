@@ -1,0 +1,877 @@
+{
+  "status": "V4_006_LOCAL_PHASE_MOMENTUM_INVERSE_REQUIREMENT",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "period_updates": 17564,
+  "endpoint_Psi_phase": 3.14159265358979,
+  "phase_rate_prefactor": 22727.33484738506,
+  "rows": [
+    {
+      "axis": 0,
+      "sign": -1,
+      "fraction": 0.25,
+      "phase_imbalance_formula_relative_defect": 1.1328901802548411e-08,
+      "matrix_identity_defect": 5.77163815518705e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8762115318893249,
+        "receiver_required_rate": [
+          1276347.9733556432,
+          337361.2114204842
+        ],
+        "receiver_actual_rate": [
+          386612.3479326821,
+          56872.49379438187
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.13648570029867202,
+        "inflow_rate_relative_defect": 0.38046836724285954,
+        "local_balance_relative_defect": 0.4469239633768281,
+        "velocity_correction_norm_ratio": 64.5012589147905,
+        "corrected_velocity_norm_ratio": 64.50768742438346,
+        "retained_original_velocity_component": 0.9146676245594834,
+        "receiver_inflow_rate": [
+          526081.8039704951,
+          129106.84723765029
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 4.740444498344989e-10,
+        "inflow_rate_relative_defect": 9.1467101125502e-10,
+        "local_balance_relative_defect": 7.822431712798972e-10,
+        "velocity_correction_norm_ratio": 5.633727625709929,
+        "corrected_velocity_norm_ratio": 6.028600659096447,
+        "retained_original_velocity_component": 2.8025694730854434,
+        "receiver_inflow_rate": [
+          1276347.9743030905,
+          337361.2124141904
+        ]
+      }
+    },
+    {
+      "axis": 0,
+      "sign": -1,
+      "fraction": 0.5,
+      "phase_imbalance_formula_relative_defect": 2.5155277735310253e-09,
+      "matrix_identity_defect": 6.232857487771923e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8601006918839302,
+        "receiver_required_rate": [
+          7064335.3429435445,
+          3064747.8370301863
+        ],
+        "receiver_actual_rate": [
+          1064426.1152503367,
+          364135.44711881253
+        ],
+        "full_DEL_acceleration_defect": 1.6451795038709132,
+        "full_local_phase_defect_rate_over_K": 213.04446450731797
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.24570884782202176,
+        "inflow_rate_relative_defect": 0.6931438705385002,
+        "local_balance_relative_defect": 0.7605275288376856,
+        "velocity_correction_norm_ratio": 7.535348271790387,
+        "corrected_velocity_norm_ratio": 7.690676431382837,
+        "retained_original_velocity_component": 1.6825151975265413,
+        "receiver_inflow_rate": [
+          2805000.9624672085,
+          549303.2225513383
+        ],
+        "full_DEL_acceleration_defect": 13.64790633201594,
+        "full_local_phase_defect_rate_over_K": 1520.0135885600903
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 3.199990690836697e-11,
+        "inflow_rate_relative_defect": 7.140347297178927e-11,
+        "local_balance_relative_defect": 6.383289996219858e-11,
+        "velocity_correction_norm_ratio": 7.666528516461217,
+        "corrected_velocity_norm_ratio": 8.201949831294757,
+        "retained_original_velocity_component": 4.748160770681534,
+        "receiver_inflow_rate": [
+          7064335.342724907,
+          3064747.8366802535
+        ],
+        "full_DEL_acceleration_defect": 27.006263776500813,
+        "full_local_phase_defect_rate_over_K": 5903.387239642488
+      }
+    },
+    {
+      "axis": 0,
+      "sign": -1,
+      "fraction": 0.75,
+      "phase_imbalance_formula_relative_defect": 3.4516592588300648e-09,
+      "matrix_identity_defect": 8.997287566666174e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.789350963621378,
+        "receiver_required_rate": [
+          696176.516356624,
+          385448.19817283575
+        ],
+        "receiver_actual_rate": [
+          292877.85955857846,
+          -36861.9945789276
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.14469490962265957,
+        "inflow_rate_relative_defect": 0.4325487359114718,
+        "local_balance_relative_defect": 0.5083829616405544,
+        "velocity_correction_norm_ratio": 46.787654886825834,
+        "corrected_velocity_norm_ratio": 46.80253004680915,
+        "retained_original_velocity_component": 1.196084486878082,
+        "receiver_inflow_rate": [
+          349424.31859876093,
+          -39494.83309573874
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 4.575321150589107e-10,
+        "inflow_rate_relative_defect": 8.764963768711227e-10,
+        "local_balance_relative_defect": 7.47601926748634e-10,
+        "velocity_correction_norm_ratio": 7.216899518064612,
+        "corrected_velocity_norm_ratio": 7.576688511101993,
+        "retained_original_velocity_component": 3.161285070211843,
+        "receiver_inflow_rate": [
+          696176.5154242357,
+          385448.197216395
+        ]
+      }
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "fraction": 0.25,
+      "phase_imbalance_formula_relative_defect": 1.0623804244928017e-08,
+      "matrix_identity_defect": 8.602203525747947e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.7893509636218615,
+        "receiver_required_rate": [
+          1375153.2886106346,
+          372690.3225124207
+        ],
+        "receiver_actual_rate": [
+          385810.9380812334,
+          56071.08394293327
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.14469490962402348,
+        "inflow_rate_relative_defect": 0.43254873591491094,
+        "local_balance_relative_defect": 0.5083829616438899,
+        "velocity_correction_norm_ratio": 46.787654888489485,
+        "corrected_velocity_norm_ratio": 46.80253004847227,
+        "retained_original_velocity_component": 1.1960844868777813,
+        "receiver_inflow_rate": [
+          544761.44848508,
+          113087.98876117416
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 4.598228490516235e-10,
+        "inflow_rate_relative_defect": 8.834884501945505e-10,
+        "local_balance_relative_defect": 7.543991305454778e-10,
+        "velocity_correction_norm_ratio": 7.216899518211264,
+        "corrected_velocity_norm_ratio": 7.5766885112564015,
+        "retained_original_velocity_component": 3.1612850703233906,
+        "receiver_inflow_rate": [
+          1375153.2895463172,
+          372690.3234825745
+        ]
+      }
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "fraction": 0.5,
+      "phase_imbalance_formula_relative_defect": 1.7615788522349205e-09,
+      "matrix_identity_defect": 5.1618475681329425e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8601006918837165,
+        "receiver_required_rate": [
+          7464469.735426123,
+          3060569.223755823
+        ],
+        "receiver_actual_rate": [
+          1071133.751508695,
+          370843.0833769951
+        ],
+        "full_DEL_acceleration_defect": 1.4999505834176394,
+        "full_local_phase_defect_rate_over_K": 213.14307622512277
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.24570884782225716,
+        "inflow_rate_relative_defect": 0.6931438705381675,
+        "local_balance_relative_defect": 0.7605275288375442,
+        "velocity_correction_norm_ratio": 7.535348271808479,
+        "corrected_velocity_norm_ratio": 7.69067643140077,
+        "retained_original_velocity_component": 1.6825151975281296,
+        "receiver_inflow_rate": [
+          3007633.9189289557,
+          393399.3838736917
+        ],
+        "full_DEL_acceleration_defect": 12.23026287841906,
+        "full_local_phase_defect_rate_over_K": 1534.5485642909757
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 3.078587594440183e-11,
+        "inflow_rate_relative_defect": 6.88450547667427e-11,
+        "local_balance_relative_defect": 6.15787922445755e-11,
+        "velocity_correction_norm_ratio": 7.66652851645871,
+        "corrected_velocity_norm_ratio": 8.201949831292334,
+        "retained_original_velocity_component": 4.748160770680869,
+        "receiver_inflow_rate": [
+          7464469.735635705,
+          3060569.2240942274
+        ],
+        "full_DEL_acceleration_defect": 27.154953747952618,
+        "full_local_phase_defect_rate_over_K": 5903.001990366516
+      }
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "fraction": 0.75,
+      "phase_imbalance_formula_relative_defect": 3.868303958278866e-09,
+      "matrix_identity_defect": 1.0112478854860081e-16,
+      "baseline": {
+        "local_balance_relative_defect": 0.8762115318893565,
+        "receiver_required_rate": [
+          712352.278822408,
+          338768.12190128764
+        ],
+        "receiver_actual_rate": [
+          292923.64803404885,
+          -36816.20610345722
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.13648570029982524,
+        "inflow_rate_relative_defect": 0.3804683672461568,
+        "local_balance_relative_defect": 0.4469239633799566,
+        "velocity_correction_norm_ratio": 64.50125891677793,
+        "corrected_velocity_norm_ratio": 64.5076874263707,
+        "retained_original_velocity_component": 0.9146676245593905,
+        "receiver_inflow_rate": [
+          420437.61069816555,
+          -34295.200276924596
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 4.774198154309443e-10,
+        "inflow_rate_relative_defect": 9.213307737207699e-10,
+        "local_balance_relative_defect": 7.879852855134961e-10,
+        "velocity_correction_norm_ratio": 5.633727625856185,
+        "corrected_velocity_norm_ratio": 6.028600659247715,
+        "retained_original_velocity_component": 2.8025694731734103,
+        "receiver_inflow_rate": [
+          712352.2778682922,
+          338768.1209000157
+        ]
+      }
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "fraction": 0.25,
+      "phase_imbalance_formula_relative_defect": 3.863303497084838e-09,
+      "matrix_identity_defect": 1.0839157095430134e-16,
+      "baseline": {
+        "local_balance_relative_defect": 0.825706608967736,
+        "receiver_required_rate": [
+          1184966.9092042309,
+          322351.8203963996
+        ],
+        "receiver_actual_rate": [
+          352950.1772125849,
+          52169.61835831961
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.22467569101736284,
+        "inflow_rate_relative_defect": 0.5532114753304643,
+        "local_balance_relative_defect": 0.5838184648128645,
+        "velocity_correction_norm_ratio": 63.354013249229155,
+        "corrected_velocity_norm_ratio": 63.36848223423058,
+        "retained_original_velocity_component": 1.4167729432454546,
+        "receiver_inflow_rate": [
+          458929.625036037,
+          -3406.332742728519
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.653710794590471e-10,
+        "inflow_rate_relative_defect": 5.120544029460053e-10,
+        "local_balance_relative_defect": 4.3792558070334616e-10,
+        "velocity_correction_norm_ratio": 10.005664294590845,
+        "corrected_velocity_norm_ratio": 10.308685231359346,
+        "retained_original_velocity_component": 3.5778366115980886,
+        "receiver_inflow_rate": [
+          1184966.9098671952,
+          322351.82115016493
+        ]
+      }
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "fraction": 0.5,
+      "phase_imbalance_formula_relative_defect": 1.6168986241237796e-09,
+      "matrix_identity_defect": 7.758783366282051e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8227492409559324,
+        "receiver_required_rate": [
+          5154396.662440251,
+          1738334.5085741517
+        ],
+        "receiver_actual_rate": [
+          895563.4907178665,
+          352354.93235626916
+        ],
+        "full_DEL_acceleration_defect": 0.9545357018489404,
+        "full_local_phase_defect_rate_over_K": 137.4702066601203
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.22592058864239636,
+        "inflow_rate_relative_defect": 0.6702262955529451,
+        "local_balance_relative_defect": 0.7377278406360605,
+        "velocity_correction_norm_ratio": 7.319549473857987,
+        "corrected_velocity_norm_ratio": 7.475792835549774,
+        "retained_original_velocity_component": 1.655837009901286,
+        "receiver_inflow_rate": [
+          2114577.146057964,
+          481949.9058514382
+        ],
+        "full_DEL_acceleration_defect": 22.611059878255517,
+        "full_local_phase_defect_rate_over_K": 2014.9921681736662
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 8.278396595716429e-12,
+        "inflow_rate_relative_defect": 1.965626683524673e-11,
+        "local_balance_relative_defect": 1.7828377812590786e-11,
+        "velocity_correction_norm_ratio": 6.4340712268676175,
+        "corrected_velocity_norm_ratio": 7.107974973809347,
+        "retained_original_velocity_component": 5.063017837947113,
+        "receiver_inflow_rate": [
+          5154396.662476491,
+          1738334.5086427848
+        ],
+        "full_DEL_acceleration_defect": 20.248333900162834,
+        "full_local_phase_defect_rate_over_K": 2453.658025721673
+      }
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "fraction": 0.75,
+      "phase_imbalance_formula_relative_defect": 4.777132890018676e-09,
+      "matrix_identity_defect": 8.358935022547176e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8812890024551269,
+        "receiver_required_rate": [
+          2476444.049626611,
+          1197371.9663940135
+        ],
+        "receiver_actual_rate": [
+          426054.8939863779,
+          125274.3351333399
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.25115702687697167,
+        "inflow_rate_relative_defect": 0.5020538224814498,
+        "local_balance_relative_defect": 0.5201099561049976,
+        "velocity_correction_norm_ratio": 39.94765802990981,
+        "corrected_velocity_norm_ratio": 39.96864643339228,
+        "retained_original_velocity_component": 1.338657821451832,
+        "receiver_inflow_rate": [
+          1499373.9995315694,
+          124533.87576994856
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.6030396274184434e-10,
+        "inflow_rate_relative_defect": 5.024539793861338e-10,
+        "local_balance_relative_defect": 4.2976808119757403e-10,
+        "velocity_correction_norm_ratio": 9.77071110714702,
+        "corrected_velocity_norm_ratio": 10.057493260759228,
+        "retained_original_velocity_component": 3.3431875754455675,
+        "receiver_inflow_rate": [
+          2476444.048957099,
+          1197371.9656335192
+        ]
+      }
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "fraction": 0.25,
+      "phase_imbalance_formula_relative_defect": 2.3552407581874648e-09,
+      "matrix_identity_defect": 1.0443313654973193e-16,
+      "baseline": {
+        "local_balance_relative_defect": 0.8812890024537776,
+        "receiver_required_rate": [
+          1098223.7821465705,
+          291041.64884174726
+        ],
+        "receiver_actual_rate": [
+          353419.86880851194,
+          52639.3099542758
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.25115702687723523,
+        "inflow_rate_relative_defect": 0.5020538224856463,
+        "local_balance_relative_defect": 0.5201099561106654,
+        "velocity_correction_norm_ratio": 39.947658024262964,
+        "corrected_velocity_norm_ratio": 39.96864642774845,
+        "retained_original_velocity_component": 1.338657821454253,
+        "receiver_inflow_rate": [
+          394389.19842003507,
+          24492.26810255589
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.6788033804664734e-10,
+        "inflow_rate_relative_defect": 5.189695296338028e-10,
+        "local_balance_relative_defect": 4.444873144742555e-10,
+        "velocity_correction_norm_ratio": 9.77071110756223,
+        "corrected_velocity_norm_ratio": 10.057493261194322,
+        "retained_original_velocity_component": 3.343187575764629,
+        "receiver_inflow_rate": [
+          1098223.7828340994,
+          291041.6496325814
+        ]
+      }
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "fraction": 0.5,
+      "phase_imbalance_formula_relative_defect": 1.890515889841674e-09,
+      "matrix_identity_defect": 1.0593291003771441e-16,
+      "baseline": {
+        "local_balance_relative_defect": 0.8227492409559642,
+        "receiver_required_rate": [
+          4871230.595393302,
+          1768790.048923296
+        ],
+        "receiver_actual_rate": [
+          891935.6522125849,
+          348727.0938509875
+        ],
+        "full_DEL_acceleration_defect": 0.8613303153144422,
+        "full_local_phase_defect_rate_over_K": 137.32922244828563
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.22592058864270034,
+        "inflow_rate_relative_defect": 0.670226295553031,
+        "local_balance_relative_defect": 0.7377278406362483,
+        "velocity_correction_norm_ratio": 7.319549473875341,
+        "corrected_velocity_norm_ratio": 7.475792835566739,
+        "retained_original_velocity_component": 1.6558370099010984,
+        "receiver_inflow_rate": [
+          2026549.4043590268,
+          336425.97330687026
+        ],
+        "full_DEL_acceleration_defect": 22.098072500462948,
+        "full_local_phase_defect_rate_over_K": 2030.6670378564252
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 8.732799460126654e-12,
+        "inflow_rate_relative_defect": 2.1146516458731806e-11,
+        "local_balance_relative_defect": 1.9259473070211943e-11,
+        "velocity_correction_norm_ratio": 6.434071226871218,
+        "corrected_velocity_norm_ratio": 7.107974973813076,
+        "retained_original_velocity_component": 5.063017837950436,
+        "receiver_inflow_rate": [
+          4871230.595355786,
+          1768790.0488483123
+        ],
+        "full_DEL_acceleration_defect": 20.055969021902428,
+        "full_local_phase_defect_rate_over_K": 2453.681329671339
+      }
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "fraction": 0.75,
+      "phase_imbalance_formula_relative_defect": 2.741806493125398e-09,
+      "matrix_identity_defect": 6.945421868484253e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8257066089677657,
+        "receiver_required_rate": [
+          2356349.185220904,
+          1218468.0201690185
+        ],
+        "receiver_actual_rate": [
+          425755.7914969193,
+          124975.23264388125
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.22467569101685836,
+        "inflow_rate_relative_defect": 0.5532114753298473,
+        "local_balance_relative_defect": 0.5838184648120605,
+        "velocity_correction_norm_ratio": 63.35401324957964,
+        "corrected_velocity_norm_ratio": 63.36848223458093,
+        "retained_original_velocity_component": 1.4167729432439862,
+        "receiver_inflow_rate": [
+          1178708.0467759152,
+          125802.0306470664
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.6607068983563044e-10,
+        "inflow_rate_relative_defect": 5.124878524758833e-10,
+        "local_balance_relative_defect": 4.380072589554377e-10,
+        "velocity_correction_norm_ratio": 10.005664294599331,
+        "corrected_velocity_norm_ratio": 10.308685231367262,
+        "retained_original_velocity_component": 3.577836611594786,
+        "receiver_inflow_rate": [
+          2356349.184555499,
+          1218468.0194171527
+        ]
+      }
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "fraction": 0.25,
+      "phase_imbalance_formula_relative_defect": 4.373730305460318e-09,
+      "matrix_identity_defect": 6.680898603881472e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8452068722693399,
+        "receiver_required_rate": [
+          1220117.7041909697,
+          332797.4393697588
+        ],
+        "receiver_actual_rate": [
+          368328.9884038894,
+          56123.7100177038
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.24359445702872934,
+        "inflow_rate_relative_defect": 0.39745177067740495,
+        "local_balance_relative_defect": 0.46452301257881806,
+        "velocity_correction_norm_ratio": 285.25641245668885,
+        "corrected_velocity_norm_ratio": 285.25778373126025,
+        "retained_original_velocity_component": 0.8911658049177237,
+        "receiver_inflow_rate": [
+          499593.01429041196,
+          115873.99089864986
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.8423593245501153e-10,
+        "inflow_rate_relative_defect": 5.207390597549724e-10,
+        "local_balance_relative_defect": 4.3632526157354176e-10,
+        "velocity_correction_norm_ratio": 6.936266954042877,
+        "corrected_velocity_norm_ratio": 7.202690060398805,
+        "retained_original_velocity_component": 2.3834724242102494,
+        "receiver_inflow_rate": [
+          1220117.7048610838,
+          332797.4399809239
+        ]
+      }
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "fraction": 0.5,
+      "phase_imbalance_formula_relative_defect": 4.978387213482853e-09,
+      "matrix_identity_defect": 9.341389241154913e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8334713123422423,
+        "receiver_required_rate": [
+          5941957.860675481,
+          2346683.3600089834
+        ],
+        "receiver_actual_rate": [
+          1022714.9829941472,
+          423502.56621597457
+        ],
+        "full_DEL_acceleration_defect": 1.4340221523766716,
+        "full_local_phase_defect_rate_over_K": 167.57625264687445
+      },
+      "phase_only_correction": {
+        "rank": 23,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.16964673367286617,
+        "inflow_rate_relative_defect": 0.37775575037204606,
+        "local_balance_relative_defect": 0.392581582313532,
+        "velocity_correction_norm_ratio": 14.979046781075482,
+        "corrected_velocity_norm_ratio": 15.017198936973148,
+        "retained_original_velocity_component": 1.072210721489836,
+        "receiver_inflow_rate": [
+          4267611.213857788,
+          3215179.0659356774
+        ],
+        "full_DEL_acceleration_defect": 98.25954844510044,
+        "full_local_phase_defect_rate_over_K": 3533.910659369122
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 1.3063511685234037e-12,
+        "inflow_rate_relative_defect": 3.110773849257513e-12,
+        "local_balance_relative_defect": 2.8236904984930748e-12,
+        "velocity_correction_norm_ratio": 4.224828210669595,
+        "corrected_velocity_norm_ratio": 4.729738400879057,
+        "retained_original_velocity_component": 2.760625965540165,
+        "receiver_inflow_rate": [
+          5941957.860668626,
+          2346683.359995874
+        ],
+        "full_DEL_acceleration_defect": 8.706424789809592,
+        "full_local_phase_defect_rate_over_K": 553.1676761329265
+      }
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "fraction": 0.75,
+      "phase_imbalance_formula_relative_defect": 4.033761260693617e-09,
+      "matrix_identity_defect": 8.372932287476837e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8606522970907191,
+        "receiver_required_rate": [
+          1725533.5026810805,
+          838213.2366138379
+        ],
+        "receiver_actual_rate": [
+          402374.59028256097,
+          90169.31189716297
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.24289891569179736,
+        "inflow_rate_relative_defect": 0.4240386807861957,
+        "local_balance_relative_defect": 0.5050804620991027,
+        "velocity_correction_norm_ratio": 299.94508167768464,
+        "corrected_velocity_norm_ratio": 299.9479552385724,
+        "retained_original_velocity_component": 1.361914583874588,
+        "receiver_inflow_rate": [
+          1257184.3900977832,
+          747398.9148997457
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.9153877502339994e-10,
+        "inflow_rate_relative_defect": 5.315797726380546e-10,
+        "local_balance_relative_defect": 4.4450136204837726e-10,
+        "velocity_correction_norm_ratio": 7.002294440860714,
+        "corrected_velocity_norm_ratio": 7.303065051642158,
+        "retained_original_velocity_component": 2.651315856004102,
+        "receiver_inflow_rate": [
+          1725533.5020104737,
+          838213.2360150103
+        ]
+      }
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "fraction": 0.25,
+      "phase_imbalance_formula_relative_defect": 3.0566685705750336e-09,
+      "matrix_identity_defect": 9.651095056231747e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8606522970910168,
+        "receiver_required_rate": [
+          1220117.704193557,
+          332797.43937095004
+        ],
+        "receiver_actual_rate": [
+          368328.9884032878,
+          56123.710017127
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.2428989156928885,
+        "inflow_rate_relative_defect": 0.4240386807857432,
+        "local_balance_relative_defect": 0.5050804621010933,
+        "velocity_correction_norm_ratio": 299.9450816879304,
+        "corrected_velocity_norm_ratio": 299.9479552488181,
+        "retained_original_velocity_component": 1.3619145838812108,
+        "receiver_inflow_rate": [
+          489813.4509461798,
+          117616.48233295293
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.895347507209426e-10,
+        "inflow_rate_relative_defect": 5.321324817010944e-10,
+        "local_balance_relative_defect": 4.4647013828290355e-10,
+        "velocity_correction_norm_ratio": 7.002294440842599,
+        "corrected_velocity_norm_ratio": 7.303065051635837,
+        "retained_original_velocity_component": 2.6513158560847905,
+        "receiver_inflow_rate": [
+          1220117.7048565845,
+          332797.43998403207
+        ]
+      }
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "fraction": 0.5,
+      "phase_imbalance_formula_relative_defect": 6.5508634152358775e-09,
+      "matrix_identity_defect": 7.635037500059864e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8334713123423856,
+        "receiver_required_rate": [
+          5941957.860669163,
+          2346683.3599994457
+        ],
+        "receiver_actual_rate": [
+          1022714.9829909407,
+          423502.56621313473
+        ],
+        "full_DEL_acceleration_defect": 1.128691862546281,
+        "full_local_phase_defect_rate_over_K": 167.64468481044815
+      },
+      "phase_only_correction": {
+        "rank": 23,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.16964673367249808,
+        "inflow_rate_relative_defect": 0.3777557503724046,
+        "local_balance_relative_defect": 0.39258158231348633,
+        "velocity_correction_norm_ratio": 14.9790467810951,
+        "corrected_velocity_norm_ratio": 15.017198936992763,
+        "retained_original_velocity_component": 1.0722107214905747,
+        "receiver_inflow_rate": [
+          3960639.269662984,
+          3151063.1329061068
+        ],
+        "full_DEL_acceleration_defect": 95.79220759820375,
+        "full_local_phase_defect_rate_over_K": 3564.411440568566
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.336256181065266e-12,
+        "inflow_rate_relative_defect": 5.6183053957305395e-12,
+        "local_balance_relative_defect": 5.108869352527419e-12,
+        "velocity_correction_norm_ratio": 4.224828210675025,
+        "corrected_velocity_norm_ratio": 4.729738400883927,
+        "retained_original_velocity_component": 2.760625965540256,
+        "receiver_inflow_rate": [
+          5941957.86068125,
+          2346683.360023339
+        ],
+        "full_DEL_acceleration_defect": 7.993406966271773,
+        "full_local_phase_defect_rate_over_K": 552.8682411550167
+      }
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "fraction": 0.75,
+      "phase_imbalance_formula_relative_defect": 4.727787819157644e-09,
+      "matrix_identity_defect": 9.171125336183013e-17,
+      "baseline": {
+        "local_balance_relative_defect": 0.8452068722698411,
+        "receiver_required_rate": [
+          1725533.502682749,
+          838213.2366445295
+        ],
+        "receiver_actual_rate": [
+          402374.5902823763,
+          90169.31189775275
+        ]
+      },
+      "phase_only_correction": {
+        "rank": 24,
+        "raw_columns": 137,
+        "storage_rate_relative_defect": 0.24359445702919438,
+        "inflow_rate_relative_defect": 0.3974517706785917,
+        "local_balance_relative_defect": 0.46452301258071915,
+        "velocity_correction_norm_ratio": 285.25641246875995,
+        "corrected_velocity_norm_ratio": 285.2577837433313,
+        "retained_original_velocity_component": 0.8911658049159604,
+        "receiver_inflow_rate": [
+          1290556.0636582524,
+          714324.111858527
+        ]
+      },
+      "full_velocity_correction": {
+        "rank": 78,
+        "raw_columns": 1500,
+        "storage_rate_relative_defect": 2.851622573041262e-10,
+        "inflow_rate_relative_defect": 5.241889648515889e-10,
+        "local_balance_relative_defect": 4.398388142562437e-10,
+        "velocity_correction_norm_ratio": 6.936266954114395,
+        "corrected_velocity_norm_ratio": 7.202690060479886,
+        "retained_original_velocity_component": 2.3834724242981795,
+        "receiver_inflow_rate": [
+          1725533.5020117112,
+          838213.2360235762
+        ]
+      }
+    }
+  ],
+  "claim_boundary": "Exact finite-layer oscillator first variation and numerical rank of a local inverse velocity requirement on defined charge-capacity seeds. This is not integrated motion or a new action rule."
+}

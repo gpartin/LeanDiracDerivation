@@ -1,0 +1,1126 @@
+{
+  "status": "V4_006_EXACT_NATIVE_FACE_PHASE_MOMENTUM_AND_HANDOFF_FLUX_DIAGNOSTIC",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "state_sha256": "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "dt": 0.00390625,
+  "period_updates": 17564,
+  "axis": 0,
+  "sign": -1,
+  "face_formula_controls": [
+    {
+      "case": "rest",
+      "endpoint_momentum_relative_defect": 5.754311276410479e-16,
+      "flux_divergence_relative_defect": 2.7814125168584554e-16,
+      "midpoint_flux_relative_defect": 1.0851259965243359e-16,
+      "global_flux_sum": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": "moving_seed",
+      "endpoint_momentum_relative_defect": 4.714968652527154e-16,
+      "flux_divergence_relative_defect": 2.449382588541107e-16,
+      "midpoint_flux_relative_defect": 8.809088143450405e-17,
+      "global_flux_sum": [
+        -1.6766346585632976e-13,
+        -5.308083915703058e-13
+      ]
+    },
+    {
+      "case": "independent_perturbation",
+      "endpoint_momentum_relative_defect": 2.367616630344285e-14,
+      "flux_divergence_relative_defect": 2.5204860919200585e-14,
+      "midpoint_flux_relative_defect": 6.273815949201512e-15,
+      "global_flux_sum": [
+        7.275957614183426e-12,
+        -9.313225746154785e-09
+      ]
+    }
+  ],
+  "receiver_site_count": 4,
+  "required_native_receiver_charge_gain": [
+    144235813.8403097,
+    57052840.86587521
+  ],
+  "integrated_native_receiver_inflow": [
+    29570618.833614375,
+    5635555.252915727
+  ],
+  "receiver_charge_gain_fraction_delivered": [
+    0.20501578662254719,
+    0.09877782012931278
+  ],
+  "required_face_receiver_charge_gain": [
+    144035369.8920101,
+    56827333.04026182
+  ],
+  "full_integral_samples": 17,
+  "face_integral_refinement": [
+    {
+      "samples": 33,
+      "receiver_face_integrated_inflow": [
+        29581466.933517054,
+        5610600.680351176
+      ],
+      "face_channels_integrated_inflow": {
+        "Psi": 23970866.504487656,
+        "W": 5610600.4290294,
+        "chi": 0.2513217738672177
+      }
+    },
+    {
+      "samples": 257,
+      "receiver_face_integrated_inflow": [
+        29586927.253136683,
+        5610622.865313618
+      ],
+      "face_channels_integrated_inflow": {
+        "Psi": 23976304.63938248,
+        "W": 5610622.613754197,
+        "chi": 0.25155942654937746
+      }
+    }
+  ],
+  "rows": [
+    {
+      "fraction": 0.0,
+      "global_charge_previous": [
+        297287672.564348,
+        113654314.04270798
+      ],
+      "global_charge_next": [
+        297287404.54461247,
+        113654046.43303269
+      ],
+      "full_local_balance_relative_defect": 1.0778776946662033e-16,
+      "full_global_torque": [
+        -1.051560985439054e-08,
+        -1.7597093395287322e-08
+      ],
+      "receiver_charge_previous": [
+        -1.0446859072507184,
+        -47477.1605594367
+      ],
+      "receiver_charge_next": [
+        45.44614624145693,
+        -47476.01006446156
+      ],
+      "receiver_required_rate": [
+        11901.65303006916,
+        294.5267136353068
+      ],
+      "receiver_actual_native_inflow_rate": [
+        11901.688558296752,
+        11.606948120519519
+      ],
+      "receiver_face_inflow_rate": [
+        11894.361283688035,
+        0.12445684087606423
+      ],
+      "receiver_other_action_inflow_rate": [
+        7.327274608717289,
+        11.482491279643455
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 11894.237836168148,
+        "W": 0.12344751988922846,
+        "chi": 0.0010093209867818587
+      },
+      "sender_required_rate": [
+        94262.38437080383,
+        68397.16597557068
+      ],
+      "sender_actual_inflow_rate": [
+        7753.923530578613,
+        14190.073885440826
+      ],
+      "local_residual_norm_per_dt": [
+        133370.90894191983,
+        1735624.7602161602
+      ],
+      "face_residual_norm_per_dt": [
+        133112.9139643549,
+        971160.0243386504
+      ]
+    },
+    {
+      "fraction": 0.0625,
+      "global_charge_previous": [
+        295724151.1717089,
+        112674807.74740252
+      ],
+      "global_charge_next": [
+        295721977.36557585,
+        112673532.49662459
+      ],
+      "full_local_balance_relative_defect": 1.8359121454189057e-16,
+      "full_global_torque": [
+        -7.97745775295177e-09,
+        -1.2749588791984107e-08
+      ],
+      "receiver_charge_previous": [
+        157374.379188937,
+        -38356.828976838246
+      ],
+      "receiver_charge_next": [
+        157658.60486967882,
+        -38331.672925045365
+      ],
+      "receiver_required_rate": [
+        72761.77426990867,
+        6439.949258977547
+      ],
+      "receiver_actual_native_inflow_rate": [
+        61362.0161537081,
+        655.3781715119258
+      ],
+      "receiver_face_inflow_rate": [
+        61324.50820417603,
+        590.7180016537559
+      ],
+      "receiver_other_action_inflow_rate": [
+        37.50794953207151,
+        64.66016985816941
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 60733.79257553941,
+        "W": 590.7156286366175,
+        "chi": 0.00237301713832494
+      },
+      "sender_required_rate": [
+        -121913.43845748901,
+        -44185.84150600433
+      ],
+      "sender_actual_inflow_rate": [
+        -39464.236335754395,
+        18199.26928472519
+      ],
+      "local_residual_norm_per_dt": [
+        332155.72386875015,
+        1726603.6629091976
+      ],
+      "face_residual_norm_per_dt": [
+        330563.12796203356,
+        966287.4416761864
+      ]
+    },
+    {
+      "fraction": 0.125,
+      "global_charge_previous": [
+        293930255.1343946,
+        111660767.33228573
+      ],
+      "global_charge_next": [
+        293929889.3284794,
+        111660603.99925455
+      ],
+      "full_local_balance_relative_defect": 2.0326351058332103e-16,
+      "full_global_torque": [
+        2.191290367056913e-09,
+        6.076392205180583e-09
+      ],
+      "receiver_charge_previous": [
+        787396.4449048443,
+        60108.89690186088
+      ],
+      "receiver_charge_next": [
+        788375.2922644292,
+        60304.63754532851
+      ],
+      "receiver_required_rate": [
+        250584.92405372113,
+        50109.60472771153
+      ],
+      "receiver_actual_native_inflow_rate": [
+        146026.75303459167,
+        4188.024354536086
+      ],
+      "receiver_face_inflow_rate": [
+        145959.24795426265,
+        4037.1063816445458
+      ],
+      "receiver_other_action_inflow_rate": [
+        67.50508032902871,
+        150.91797289154056
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 141922.1386960398,
+        "W": 4037.1092582228725,
+        "chi": -0.0028765783226845087
+      },
+      "sender_required_rate": [
+        165704.74622535706,
+        110995.99433422089
+      ],
+      "sender_actual_inflow_rate": [
+        -114899.70196914673,
+        28413.443450927734
+      ],
+      "local_residual_norm_per_dt": [
+        541678.1644361957,
+        2182561.5713324887
+      ],
+      "face_residual_norm_per_dt": [
+        540304.4965372002,
+        1221778.8087551445
+      ]
+    },
+    {
+      "fraction": 0.1875,
+      "global_charge_previous": [
+        296080048.1693529,
+        112978309.26087287
+      ],
+      "global_charge_next": [
+        296084479.47646624,
+        112980974.07335554
+      ],
+      "full_local_balance_relative_defect": 1.3912774805356378e-16,
+      "full_global_torque": [
+        1.7884214486813507e-08,
+        2.813057533789198e-08
+      ],
+      "receiver_charge_previous": [
+        2647358.64493409,
+        510608.2371427229
+      ],
+      "receiver_charge_next": [
+        2649955.896109011,
+        511290.74667096575
+      ],
+      "receiver_required_rate": [
+        664896.3007798195,
+        174722.43923017383
+      ],
+      "receiver_actual_native_inflow_rate": [
+        259865.41766241193,
+        19316.031835455447
+      ],
+      "receiver_face_inflow_rate": [
+        259780.34391527885,
+        19064.994341490907
+      ],
+      "receiver_other_action_inflow_rate": [
+        85.07374713310855,
+        251.03749396453713
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 240715.3291587767,
+        "W": 19065.014756502096,
+        "chi": -0.020415011189470533
+      },
+      "sender_required_rate": [
+        587601.7773036957,
+        369559.4282698631
+      ],
+      "sender_actual_inflow_rate": [
+        -205824.65928649902,
+        37964.86275959015
+      ],
+      "local_residual_norm_per_dt": [
+        917773.7598489319,
+        4003590.5134190717
+      ],
+      "face_residual_norm_per_dt": [
+        916146.8808651032,
+        2298787.927182509
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "global_charge_previous": [
+        302697272.6803265,
+        117013586.54298018
+      ],
+      "global_charge_next": [
+        302703860.0502844,
+        117017688.34308545
+      ],
+      "full_local_balance_relative_defect": 1.615537545368761e-16,
+      "full_global_torque": [
+        -5.138534522180719e-09,
+        -1.743517480238192e-08
+      ],
+      "receiver_charge_previous": [
+        6895742.115215422,
+        1641083.2526370252
+      ],
+      "receiver_charge_next": [
+        6901052.97051771,
+        1642468.4935230468
+      ],
+      "receiver_required_rate": [
+        1359578.9573856592,
+        354621.6668215543
+      ],
+      "receiver_actual_native_inflow_rate": [
+        405250.56243240833,
+        62130.45243743062
+      ],
+      "receiver_face_inflow_rate": [
+        405137.92899231525,
+        61779.59570831555
+      ],
+      "receiver_other_action_inflow_rate": [
+        112.63344009307912,
+        350.85672911506845
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 343358.2948945329,
+        "W": 61779.63409778234,
+        "chi": -0.03838946676114574
+      },
+      "sender_required_rate": [
+        82632.99643135071,
+        150541.421959877
+      ],
+      "sender_actual_inflow_rate": [
+        -310632.5739555359,
+        33594.40003633499
+      ],
+      "local_residual_norm_per_dt": [
+        1320200.7938425497,
+        6405641.636030095
+      ],
+      "face_residual_norm_per_dt": [
+        1317935.618616067,
+        3825053.522606924
+      ]
+    },
+    {
+      "fraction": 0.3125,
+      "global_charge_previous": [
+        307432350.11259854,
+        120089759.08916192
+      ],
+      "global_charge_next": [
+        307432925.6529345,
+        120090301.28860943
+      ],
+      "full_local_balance_relative_defect": 5.735078850155531e-16,
+      "full_global_torque": [
+        -1.262276872714163e-08,
+        5.4543750193504566e-08
+      ],
+      "receiver_charge_previous": [
+        14602303.739324084,
+        3514943.6994352625
+      ],
+      "receiver_charge_next": [
+        14611158.432572396,
+        3516958.4734879015
+      ],
+      "receiver_required_rate": [
+        2266801.471568227,
+        515782.1574755013
+      ],
+      "receiver_actual_native_inflow_rate": [
+        590511.6325800419,
+        141917.01305517554
+      ],
+      "receiver_face_inflow_rate": [
+        590351.6429006974,
+        141456.9047494614
+      ],
+      "receiver_other_action_inflow_rate": [
+        159.989679344435,
+        460.10830571415136
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 448894.7039895606,
+        "W": 141456.93891113685,
+        "chi": -0.03416167537216097
+      },
+      "sender_required_rate": [
+        -2227815.285200119,
+        -1106172.0231075287
+      ],
+      "sender_actual_inflow_rate": [
+        -454453.11782455444,
+        -7411.311716079712
+      ],
+      "local_residual_norm_per_dt": [
+        1959941.7455461759,
+        8111553.775787117
+      ],
+      "face_residual_norm_per_dt": [
+        1957527.985055405,
+        5070730.034700482
+      ]
+    },
+    {
+      "fraction": 0.375,
+      "global_charge_previous": [
+        302165733.5219814,
+        116869903.29940914
+      ],
+      "global_charge_next": [
+        302155791.7900771,
+        116863544.92251888
+      ],
+      "full_local_balance_relative_defect": 1.8329204263997772e-16,
+      "full_global_torque": [
+        4.223803073108874e-08,
+        3.835139670240978e-08
+      ],
+      "receiver_charge_previous": [
+        26676865.731610715,
+        6183353.636026347
+      ],
+      "receiver_charge_next": [
+        26690240.134876817,
+        6186374.5470577
+      ],
+      "receiver_required_rate": [
+        3423847.236121893,
+        773353.224026382
+      ],
+      "receiver_actual_native_inflow_rate": [
+        799325.6274499893,
+        241798.91471469402
+      ],
+      "receiver_face_inflow_rate": [
+        799135.9074876696,
+        241232.9453679602
+      ],
+      "receiver_other_action_inflow_rate": [
+        189.71996231965022,
+        565.969346733822
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 557902.9558735313,
+        "W": 241232.9516141383,
+        "chi": -0.006246178061701357
+      },
+      "sender_required_rate": [
+        -5567666.95217514,
+        -2905403.8181385994
+      ],
+      "sender_actual_inflow_rate": [
+        -660122.7054386139,
+        -104463.55675983429
+      ],
+      "local_residual_norm_per_dt": [
+        3185184.1674726675,
+        8079705.652666973
+      ],
+      "face_residual_norm_per_dt": [
+        3180165.749519138,
+        5268953.285106863
+      ]
+    },
+    {
+      "fraction": 0.4375,
+      "global_charge_previous": [
+        288915220.15423363,
+        108200356.10454258
+      ],
+      "global_charge_next": [
+        288903494.69058776,
+        108192578.840832
+      ],
+      "full_local_balance_relative_defect": 4.580023626182375e-16,
+      "full_global_torque": [
+        6.207691281881594e-09,
+        -2.0935274647725555e-08
+      ],
+      "receiver_charge_previous": [
+        44607966.537760526,
+        10856157.567889195
+      ],
+      "receiver_charge_next": [
+        44627567.66553979,
+        10862090.083321728
+      ],
+      "receiver_required_rate": [
+        5017888.711493015,
+        1518723.9507285357
+      ],
+      "receiver_actual_native_inflow_rate": [
+        967868.6695485115,
+        318211.53043961525
+      ],
+      "receiver_face_inflow_rate": [
+        967700.920734108,
+        317635.1780841196
+      ],
+      "receiver_other_action_inflow_rate": [
+        167.748814403516,
+        576.3523554956482
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 650065.7634057963,
+        "W": 317635.1573283118,
+        "chi": 0.02075580775272101
+      },
+      "sender_required_rate": [
+        -7591468.974531174,
+        -3661388.24005286
+      ],
+      "sender_actual_inflow_rate": [
+        -883600.057715416,
+        -234634.89309487864
+      ],
+      "local_residual_norm_per_dt": [
+        4075857.049941802,
+        5542290.488089487
+      ],
+      "face_residual_norm_per_dt": [
+        4068149.8261036407,
+        3867341.9369829777
+      ]
+    },
+    {
+      "fraction": 0.5,
+      "global_charge_previous": [
+        281732225.37706375,
+        103449688.53002237
+      ],
+      "global_charge_next": [
+        281732418.1427754,
+        103449884.27615069
+      ],
+      "full_local_balance_relative_defect": 2.5481525407374096e-16,
+      "full_global_torque": [
+        -3.474706407876346e-08,
+        3.047351939624084e-08
+      ],
+      "receiver_charge_previous": [
+        69928477.36545996,
+        20031782.193769544
+      ],
+      "receiver_charge_next": [
+        69954736.30759187,
+        20042712.785192806
+      ],
+      "receiver_required_rate": [
+        6722289.185769081,
+        2798231.4043552876
+      ],
+      "receiver_actual_native_inflow_rate": [
+        1006528.0182666779,
+        319411.8286521435
+      ],
+      "receiver_face_inflow_rate": [
+        1006389.8115444235,
+        318992.33517658897
+      ],
+      "receiver_other_action_inflow_rate": [
+        138.2067222543701,
+        419.49347555454005
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 687397.5077034507,
+        "W": 318992.3038409727,
+        "chi": 0.031335616193246096
+      },
+      "sender_required_rate": [
+        -7102552.280316353,
+        -2781132.6887106895
+      ],
+      "sender_actual_inflow_rate": [
+        -1011264.6130132675,
+        -324100.57940244675
+      ],
+      "local_residual_norm_per_dt": [
+        4211994.615783717,
+        3318485.4258068176
+      ],
+      "face_residual_norm_per_dt": [
+        4203616.256359008,
+        2238512.852621648
+      ]
+    },
+    {
+      "fraction": 0.5625,
+      "global_charge_previous": [
+        289120867.67609215,
+        108415720.9248657
+      ],
+      "global_charge_next": [
+        289132466.8199457,
+        108423375.78964233
+      ],
+      "full_local_balance_relative_defect": 3.206949921101532e-16,
+      "full_global_torque": [
+        6.013788436462636e-09,
+        2.0636137016709675e-08
+      ],
+      "receiver_charge_previous": [
+        100407080.40925586,
+        34163315.004219845
+      ],
+      "receiver_charge_next": [
+        100434971.61324611,
+        34177337.932107165
+      ],
+      "receiver_required_rate": [
+        7140148.221504211,
+        3589869.539154306
+      ],
+      "receiver_actual_native_inflow_rate": [
+        878083.8532686234,
+        228728.81393796206
+      ],
+      "receiver_face_inflow_rate": [
+        877947.8468888972,
+        228500.10077131417
+      ],
+      "receiver_other_action_inflow_rate": [
+        136.00637972602271,
+        228.71316664788174
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 649447.7801728962,
+        "W": 228500.06671600105,
+        "chi": 0.03405531311000232
+      },
+      "sender_required_rate": [
+        -5303954.692858696,
+        -1471846.787465334
+      ],
+      "sender_actual_inflow_rate": [
+        -969999.8323764801,
+        -320150.78279948235
+      ],
+      "local_residual_norm_per_dt": [
+        3918961.556705186,
+        5554192.9894977
+      ],
+      "face_residual_norm_per_dt": [
+        3911435.056281391,
+        3877591.3449460855
+      ]
+    },
+    {
+      "fraction": 0.625,
+      "global_charge_previous": [
+        301896584.4199482,
+        116612168.1159662
+      ],
+      "global_charge_next": [
+        301905924.0393032,
+        116617924.19290513
+      ],
+      "full_local_balance_relative_defect": 3.1875817706027553e-16,
+      "full_global_torque": [
+        -3.791796045679237e-09,
+        -5.403634837510357e-08
+      ],
+      "receiver_charge_previous": [
+        127687401.30352445,
+        48497585.356894135
+      ],
+      "receiver_charge_next": [
+        127707777.6820443,
+        48508636.170406826
+      ],
+      "receiver_required_rate": [
+        5216352.901082039,
+        2829008.2592487335
+      ],
+      "receiver_actual_native_inflow_rate": [
+        656271.7255392075,
+        99778.27582788467
+      ],
+      "receiver_face_inflow_rate": [
+        656146.1884823684,
+        99567.45865191499
+      ],
+      "receiver_other_action_inflow_rate": [
+        125.53705683906446,
+        210.8171759696852
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 556578.7652289873,
+        "W": 99567.42325338109,
+        "chi": 0.03539853389884229
+      },
+      "sender_required_rate": [
+        -3656617.069924593,
+        -773291.4755972028
+      ],
+      "sender_actual_inflow_rate": [
+        -798641.9545719624,
+        -241000.8387824893
+      ],
+      "local_residual_norm_per_dt": [
+        2963987.0189706204,
+        8099009.561711069
+      ],
+      "face_residual_norm_per_dt": [
+        2959087.7423299807,
+        5280891.975378395
+      ]
+    },
+    {
+      "fraction": 0.6875,
+      "global_charge_previous": [
+        306700753.37976795,
+        119364042.6018763
+      ],
+      "global_charge_next": [
+        306700041.291147,
+        119363360.9892729
+      ],
+      "full_local_balance_relative_defect": 2.228971050335512e-16,
+      "full_global_torque": [
+        1.1861896433495644e-08,
+        -8.337892564130382e-09
+      ],
+      "receiver_charge_previous": [
+        143420165.66668504,
+        57048127.57769852
+      ],
+      "receiver_charge_next": [
+        143428440.62731865,
+        57052557.238660306
+      ],
+      "receiver_required_rate": [
+        2118389.9221954346,
+        1133993.2062177658
+      ],
+      "receiver_actual_native_inflow_rate": [
+        452923.0544538498,
+        4983.399064540863
+      ],
+      "receiver_face_inflow_rate": [
+        452850.79668516375,
+        4596.4527428899455
+      ],
+      "receiver_other_action_inflow_rate": [
+        72.2577686861041,
+        386.9463216509139
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 448254.37208550406,
+        "W": 4596.42459965968,
+        "chi": 0.02814323027791943
+      },
+      "sender_required_rate": [
+        -2446677.0292856693,
+        -557169.8303184807
+      ],
+      "sender_actual_inflow_rate": [
+        -588079.1331310272,
+        -139468.79549834132
+      ],
+      "local_residual_norm_per_dt": [
+        1770504.7977442394,
+        8128279.020406014
+      ],
+      "face_residual_norm_per_dt": [
+        1768286.1728392525,
+        5086142.447557992
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "global_charge_previous": [
+        302197673.3775506,
+        116514073.41363597
+      ],
+      "global_charge_next": [
+        302191573.64680684,
+        116510456.40917872
+      ],
+      "full_local_balance_relative_defect": 2.199249508420484e-16,
+      "full_global_torque": [
+        3.810176627267007e-08,
+        1.6212401129923633e-08
+      ],
+      "receiver_charge_previous": [
+        147336121.46222696,
+        59034052.538540035
+      ],
+      "receiver_charge_next": [
+        147336069.01060015,
+        59033882.67096549
+      ],
+      "receiver_required_rate": [
+        -13427.616459846497,
+        -43486.099083423615
+      ],
+      "receiver_actual_native_inflow_rate": [
+        310353.1883878708,
+        -34447.24432229996
+      ],
+      "receiver_face_inflow_rate": [
+        310340.23733255186,
+        -34986.414190921685
+      ],
+      "receiver_other_action_inflow_rate": [
+        12.951055318902945,
+        539.1698686217296
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 345326.6635754464,
+        "W": -34986.42624289449,
+        "chi": 0.012051972805465994
+      },
+      "sender_required_rate": [
+        -1468595.3911573887,
+        -395428.64371690154
+      ],
+      "sender_actual_inflow_rate": [
+        -402779.5748934746,
+        -59696.51924441755
+      ],
+      "local_residual_norm_per_dt": [
+        1178028.9600420098,
+        6395977.128114116
+      ],
+      "face_residual_norm_per_dt": [
+        1176072.213741169,
+        3830333.463613055
+      ]
+    },
+    {
+      "fraction": 0.8125,
+      "global_charge_previous": [
+        296211668.74951637,
+        113108294.3996169
+      ],
+      "global_charge_next": [
+        296207804.6764858,
+        113106195.27369925
+      ],
+      "full_local_balance_relative_defect": 1.7477320807644205e-16,
+      "full_global_torque": [
+        -3.304107678109499e-08,
+        1.1003268320328115e-08
+      ],
+      "receiver_charge_previous": [
+        145746407.06128198,
+        58080712.15393185
+      ],
+      "receiver_charge_next": [
+        145744470.00061685,
+        58079641.67067241
+      ],
+      "receiver_required_rate": [
+        -495887.5302696228,
+        -274043.71441698074
+      ],
+      "receiver_actual_native_inflow_rate": [
+        205727.53908729553,
+        -38264.81000947952
+      ],
+      "receiver_face_inflow_rate": [
+        205732.69294249988,
+        -38774.71764476329
+      ],
+      "receiver_other_action_inflow_rate": [
+        -5.15385520435666,
+        509.9076352837619
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 244507.40999137308,
+        "W": -38774.71704887318,
+        "chi": -0.0005958900990208349
+      },
+      "sender_required_rate": [
+        -710522.4905004501,
+        -194936.0588726923
+      ],
+      "sender_actual_inflow_rate": [
+        -258395.95258969069,
+        -17912.36667905748
+      ],
+      "local_residual_norm_per_dt": [
+        825451.6934250438,
+        3967437.473781136
+      ],
+      "face_residual_norm_per_dt": [
+        823950.5892805111,
+        2295275.5341451867
+      ]
+    },
+    {
+      "fraction": 0.875,
+      "global_charge_previous": [
+        294500181.7852311,
+        112230013.6428149
+      ],
+      "global_charge_next": [
+        294500737.4766791,
+        112230366.50713655
+      ],
+      "full_local_balance_relative_defect": 2.2555740171726e-16,
+      "full_global_torque": [
+        3.107921423893463e-08,
+        9.096221903024257e-09
+      ],
+      "receiver_charge_previous": [
+        144281759.02412656,
+        57287956.82263739
+      ],
+      "receiver_charge_next": [
+        144281204.29147097,
+        57287647.66972263
+      ],
+      "receiver_required_rate": [
+        -142011.5598268509,
+        -79143.14617729187
+      ],
+      "receiver_actual_native_inflow_rate": [
+        114640.23289203644,
+        -28671.5450592041
+      ],
+      "receiver_face_inflow_rate": [
+        114632.60416497673,
+        -29114.04325374944
+      ],
+      "receiver_other_action_inflow_rate": [
+        7.628727059720404,
+        442.4981945453419
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 143746.64413248916,
+        "W": -29114.03996751245,
+        "chi": -0.003286236991016267
+      },
+      "sender_required_rate": [
+        -261688.5018474087,
+        -55255.872949942015
+      ],
+      "sender_actual_inflow_rate": [
+        -145486.66728105396,
+        -3722.547866546549
+      ],
+      "local_residual_norm_per_dt": [
+        496915.94034553214,
+        2159392.455777638
+      ],
+      "face_residual_norm_per_dt": [
+        495382.2716857901,
+        1219540.4510062013
+      ]
+    },
+    {
+      "fraction": 0.9375,
+      "global_charge_previous": [
+        296222876.5502116,
+        113173656.49783295
+      ],
+      "global_charge_next": [
+        296224745.8324096,
+        113174627.7111271
+      ],
+      "full_local_balance_relative_defect": 1.3851834383028184e-16,
+      "full_global_torque": [
+        -5.2152652329797606e-09,
+        -8.3191377672035e-09
+      ],
+      "receiver_charge_previous": [
+        144294527.80338243,
+        57225170.47697018
+      ],
+      "receiver_charge_next": [
+        144294817.8513286,
+        57225200.97295953
+      ],
+      "receiver_required_rate": [
+        74252.27423095703,
+        7806.973273277283
+      ],
+      "receiver_actual_native_inflow_rate": [
+        39202.89808559418,
+        -18407.093463897705
+      ],
+      "receiver_face_inflow_rate": [
+        39186.38176444809,
+        -18853.611325524373
+      ],
+      "receiver_other_action_inflow_rate": [
+        16.516321146090377,
+        446.5178616266667
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 58039.9924892716,
+        "W": -18853.610724823513,
+        "chi": -0.0006007008616712994
+      },
+      "sender_required_rate": [
+        -73679.113752136,
+        -6823.437747248914
+      ],
+      "sender_actual_inflow_rate": [
+        -61238.55957803503,
+        -591.5495874146
+      ],
+      "local_residual_norm_per_dt": [
+        291838.14213953755,
+        1720122.1718957517
+      ],
+      "face_residual_norm_per_dt": [
+        290125.597330911,
+        963490.5118642756
+      ]
+    },
+    {
+      "fraction": 1.0,
+      "global_charge_previous": [
+        297287672.56434834,
+        113654314.04283385
+      ],
+      "global_charge_next": [
+        297287404.5446104,
+        113654046.43279634
+      ],
+      "full_local_balance_relative_defect": 1.4451570505440124e-16,
+      "full_global_torque": [
+        -1.0334589746090106e-08,
+        -1.5133057378639406e-08
+      ],
+      "receiver_charge_previous": [
+        144235812.7956238,
+        57005363.70531577
+      ],
+      "receiver_charge_next": [
+        144235176.40604624,
+        57004828.36774601
+      ],
+      "receiver_required_rate": [
+        -162915.73185920715,
+        -137046.4178571701
+      ],
+      "receiver_actual_native_inflow_rate": [
+        -7794.229932785034,
+        -14198.31917142868
+      ],
+      "receiver_face_inflow_rate": [
+        -7798.857206799404,
+        -14646.61546833957
+      ],
+      "receiver_other_action_inflow_rate": [
+        4.627274014369505,
+        448.2962969108903
+      ],
+      "receiver_face_channel_inflow_rates": {
+        "Psi": 6847.759042714595,
+        "W": -14646.616249514,
+        "chi": 0.0007811744269048404
+      },
+      "sender_required_rate": [
+        -11861.374538088645,
+        -266.3786507570185
+      ],
+      "sender_actual_inflow_rate": [
+        -11861.399229069164,
+        -3.361281640827656
+      ],
+      "local_residual_norm_per_dt": [
+        133370.90894100454,
+        1735624.7716382714
+      ],
+      "face_residual_norm_per_dt": [
+        133112.91396880982,
+        971160.0290321799
+      ]
+    }
+  ],
+  "claim_boundary": "Exact local phase identities and quadrature of the chosen candidate path. It is not a native orbit unless local balance and full DEL vanish; no fit or runtime correction."
+}

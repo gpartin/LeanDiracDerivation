@@ -1250,3 +1250,17 @@ boundary-value problem on the stable action; the arbitrary-momentum Bloch
 symbol remains a separate continuum comparator. Full timing evidence and RCA
 are in
 `experiments/v4_localized_electron/TIMING_REPAIR_REPORT.md`.
+
+## Exact face phase-momentum transfer (2026-11-25)
+
+The current is now derived by varying the existing matched face action at
+both time endpoints. An opposite-phase donor and recipient can share a
+constant rotating bond difference while the recipient acquires phase
+momentum. This exact one-face identity is compiled in Lean; it is not a
+whole-cube movement proof. All six signed axial path screens correct the
+current direction with the half-turn, but the nonlinear x-handoff delivered
+only 20.50% of required Psi and 9.88% of required chi charge. The other face
+orientations store most of the endpoint phase momentum. Both new
+face-frame material-transport replacements were rejected. The frozen action
+and V4-001–005 scopes remain unchanged; V4-006 stays OPEN.
+See [the exact derivation and RCA](../experiments/v4_localized_electron/V4_006_PHASE_MOMENTUM_TRANSFER_RCA.md).

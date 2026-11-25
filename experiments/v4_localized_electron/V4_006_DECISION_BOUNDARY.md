@@ -3,7 +3,21 @@
 V4-006 is **open**, but it is no longer an undifferentiated receiver-orientation
 problem. Two different motion questions were being mixed.
 
-### Current controlling refinement — native face charge
+### Current controlling refinement — exact one-face phase transfer
+
+The action-derived signed phase current now explains why a same-phase
+receiver was not accumulating the required native phase momentum. The
+opposite-phase donor/receiver pair has an exact single-bond transfer identity
+that preserves the native clock, proved in Lean. For the tested full cube
+paths the half-turn corrects the direction in all six signed axial cases
+but supplies only about 19–21% of required Psi and 10–17% of chi face charge.
+Most of the endpoint phase momentum is stored in the two transverse bond
+orientations. A conservative face-frame material replacement was rejected.
+The next calculation is the native exchange between the face orientations,
+not a new clock or a rigid translation rule. No complete orbit is admitted.
+See [the phase-momentum RCA](V4_006_PHASE_MOMENTUM_TRANSFER_RCA.md).
+
+### Prior refinement — native face charge
 
 The prior direct-prong and parallel clock mechanisms are already installed
 in the frozen V4-002–005 research action, which still passes those scoped
@@ -65,7 +79,7 @@ not receiver `chi` orientation. Timestep refinement does not remove it, and
 the reusable reciprocal action basis tested so far does not span the missing
 response.
 
-## Only next research question
+## Earlier extended-packet research question (not the current compact-handoff gate)
 
 Derive a local reciprocal action response that closes the identified in-plane
 `Psi` amplitude/phase mode while preserving:

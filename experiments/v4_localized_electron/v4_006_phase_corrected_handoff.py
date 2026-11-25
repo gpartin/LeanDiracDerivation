@@ -118,6 +118,7 @@ def main():
     p.add_argument('--seed',choices=('fourier','local'),default='local');p.add_argument('--warm-start',type=Path)
     p.add_argument('--project-face-capacity',action='store_true');p.add_argument('--fast-exact-reduction',action='store_true')
     p.add_argument('--phase-chart',choices=('all_coordinates','site','prong'),default='all_coordinates')
+    p.add_argument('--native-phase-balance-residual',action='store_true',help='also scale the exact local phase contraction of DEL in native charge-transfer units')
     p.add_argument('--output',type=Path,required=True);p.add_argument('--state-output',type=Path,required=True)
     a=p.parse_args();rank.lock_inertia();torch.set_num_threads(2);dt=a.dt
     if a.nodes<3 or a.nodes%2!=1:raise ValueError('odd temporal node count required')
@@ -188,11 +189,28 @@ def main():
     # Charge is not substituted for DEL. The conserved rest-carrier phase
     # charges are checked separately after the solve, so an apparent vacuum
     # or wrong-charge root cannot pass by shrinking its action residual.
-    def objective():
-        acceleration,*_=evaluate(times)
-        return torch.sum(acceleration**2)/(a.nodes*norm**2)
+    def local_phase_units(raw,current,n):
+        # Minus the exact sitewise DEL contracted with the native two U(1)
+        # generators is the local charge-continuity defect per interval.
+        v=current.reshape(-1,SIDE,SIDE,SIDE,4,3);g=raw.reshape(v.shape)
+        pp=torch.sum(v[...,0,:]*g[...,1,:]-v[...,1,:]*g[...,0,:],dim=-1)
+        cc=torch.sum(v[...,2,:]*g[...,3,:]-v[...,3,:]*g[...,2,:],dim=-1)
+        # Divide by expected charge per full crossing, expressed per native
+        # step. This is merely an alternative residual conditioning, not
+        # an additional governing equation or force.
+        return torch.stack((pp,cc),dim=-1)*n/torch.clamp(abs(refcharge),min=1.)
 
-    initial=float(torch.sqrt(objective()).detach());trace=[]
+    def objective():
+        acceleration,raw,before,current,after,n,_=evaluate(times)
+        value=torch.sum(acceleration**2)/(a.nodes*norm**2)
+        if a.native_phase_balance_residual:
+            pr=local_phase_units(raw,current,n)
+            qdef=(charge(before[0],current[0],dt)-refcharge)/torch.clamp(abs(refcharge),min=1.)
+            value=value+torch.sum(pr**2)/a.nodes+torch.sum(qdef**2)
+        return value
+
+    initial_obj=float(torch.sqrt(objective()).detach());initial_accel,*_=evaluate(times)
+    initial=float(torch.linalg.vector_norm(initial_accel).detach()/(np.sqrt(a.nodes)*norm));trace=[]
     reduction_check=None
     if a.fast_exact_reduction:
         _,_,bp,cp,fp,_,_=evaluate(times)
@@ -209,7 +227,7 @@ def main():
     nodes,n,phase=data();nvalue=float(n.detach());rounded=int(round(nvalue));phase_value=float(phase.detach())
     holdout=times+0.5/a.nodes
     accel,raw,before,current,after,_,_=evaluate(times,True,True)
-    test,test_raw,_,_,_,_,_=evaluate(holdout,True,True)
+    test,test_raw,test_before,test_current,_,_,_=evaluate(holdout,True,True)
     charges=[];energy=[]
     for i in range(a.nodes):
         charges.append(charge(before[i].detach(),current[i].detach(),dt).detach().numpy())
@@ -224,7 +242,7 @@ def main():
             'period_window_updates':[a.reference_updates/a.period_window,a.reference_updates*a.period_window],
             'fixed_comparator_period_control':a.fixed_period_updates,'solved_continuous_period_updates':nvalue,'rounded_period_updates':rounded,
             'rounded_crossing_time':rounded*dt,'solved_speed_cells_per_time':a.sign/(rounded*dt),'phase_per_step':phase_value,'reference_phase_per_step':theta,
-            'initial_acceleration_defect':initial,'final_acceleration_defect':float(torch.linalg.vector_norm(accel).detach()/(np.sqrt(a.nodes)*norm)),
+            'initial_acceleration_defect':initial,'initial_optimizer_objective':initial_obj,'final_acceleration_defect':float(torch.linalg.vector_norm(accel).detach()/(np.sqrt(a.nodes)*norm)),
             'holdout_acceleration_defect':float(torch.linalg.vector_norm(test).detach()/(np.sqrt(a.nodes)*norm)),'final_raw_DEL_RMS':float(torch.sqrt(torch.mean(raw**2)).detach()),
             'holdout_raw_DEL_RMS':float(torch.sqrt(torch.mean(test_raw**2)).detach()),'per_node':pernode,
             'worst_node_Psi_residual_power_fraction':float(torch.sum(abs(vp)**2)/max(peak_power,1e-300)),
@@ -233,6 +251,9 @@ def main():
             'interval_energy_samples':energy.tolist(),'maximum_relative_energy_variation':float(np.max(abs(energy-energy[0]))/max(np.max(abs(energy)),1e-300)),
             'optimizer_evaluations':len(trace),'trace':trace,'initial_core_fixed':True,'initial_exterior_free':True,'runtime_forcing':False,
             'project_face_capacity_BVP_chart':a.project_face_capacity,'phase_chart':a.phase_chart,'exact_reduction_DEL_check':reduction_check,
+            'native_phase_balance_conditioning':a.native_phase_balance_residual,
+            'local_phase_balance_rms_in_transfer_units':float(torch.linalg.vector_norm(local_phase_units(raw,current,rounded)).detach()/np.sqrt(a.nodes)),
+            'holdout_local_phase_balance_rms_in_transfer_units':float(torch.linalg.vector_norm(local_phase_units(test_raw,test_current,rounded)).detach()/np.sqrt(a.nodes)),
             'claim_boundary':'Finite collocation with free exterior, interior and crossing time. Endpoint chart is exact, but native DEL and independent holdout residual must vanish before a free-release test. Not a pass or a no-go.'}
     np.savez_compressed(a.state_output,nodes=nodes.detach().numpy(),period_updates=nvalue,phase_per_step=phase_value,dt=dt,axis=a.axis,sign=a.sign)
     a.output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8');print(json.dumps({k:v for k,v in result.items() if k not in ('trace','charge_samples','interval_energy_samples')},indent=2))
