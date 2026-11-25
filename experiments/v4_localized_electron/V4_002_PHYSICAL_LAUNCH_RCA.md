@@ -65,10 +65,29 @@ the malformed `Psi` handoff and later participates in the feedback cycle.
 
 ## Corrective action
 
-Do not add another unsigned frame-disagreement penalty or simply increase the
-existing stiffness. Derive and rank-test the smallest real, local, reciprocal,
-rest-null, odd-in-native-current `Psi`--`chi` phase-space response that acts on
-the measured along-`Psi` amplitude/phase residual. It must:
+Do not restart the neighbor-communication search. That mechanism is already
+present in the cumulative candidate: the normalized squared-`chi`-wedge
+kinetic connection transmits matching `Psi` and `chi` prongs across an
+orthogonal carrier/exterior interface, the six-face completion supplies the
+first receiver handoff, and the parallel `chi^dagger Psi` coordinate plus its
+matched clock potential completes the live frame. The current tangent cache
+contains all of those pieces.
+
+The remaining task is to derive the *additional response rank* required by the
+measured along-`Psi` amplitude/phase residual, or prove that a finite integer
+cell relative-periodic preparation closes it even though the smooth tangent
+does not. First:
+
+1. freeze the cumulative action and verify its finite-hop boundary-value orbit
+   with both committed layers, rather than re-solving the already-correct
+   receiver orientation;
+2. compress the exact residual through the frozen four-component readout and
+   test whether a preparation change can cancel it without changing the
+   action;
+3. only if that fails, rank-test a new real, local, reciprocal, rest-null
+   phase-space invariant against the remaining within-sector block.
+
+Any new invariant must:
 
 1. have zero first variation on the exact rest orbit;
 2. have correct-sign response on the measured residual without fitting its
@@ -79,6 +98,9 @@ the measured along-`Psi` amplitude/phase residual. It must:
 5. reduce the one-update residual, then the one-cycle error, before any new
    100-cycle run.
 
-This diagnosis does not prove that no alternate preparation or reciprocal
-action works. No action is changed or promoted by this RCA.
+The previously tested odd-current cube-symplectic, curl--overlap, simple signed
+face-frame, and C19 triangle candidates do not satisfy this requirement; they
+must not be rediscovered or described as the missing mechanism. This diagnosis
+does not prove that no alternate preparation or reciprocal action works. No
+action is changed or promoted by this RCA.
 
