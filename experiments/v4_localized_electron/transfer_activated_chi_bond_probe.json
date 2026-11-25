@@ -1,0 +1,41 @@
+{
+  "status": "V4_TRANSFER_ACTIVATED_CHI_BOND_RESPONSE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_delta": "Delta T=(B/(2*24)) sum_C19 w * [(a_i^2+a_j^2)/2] |chi_j-chi_i|^2, a=rhoPsiDot/[2 chi0(rhoPsi+kappa chi0^2)]",
+  "real_positive_reciprocal": true,
+  "cubic_and_C19_symmetric": true,
+  "contains_corner_copy_or_Dirac_label": false,
+  "rest_control": {
+    "action_value_left_interval": 2.3296009372713967e-26,
+    "rest_DEL_column_norm": 3.086482397894596e-11
+  },
+  "movement_response": [
+    {
+      "input_orbit": "edge_snap_transfer_charge_four_update_orbit",
+      "column_norm": 3604.575811923454,
+      "correlation_with_required_response": 0.0741079701037808,
+      "unconstrained_optimal_coefficient": 0.4330634441201559,
+      "positive_optimal_coefficient": 0.4330634441201559,
+      "positive_relative_residual": 0.997250223748833,
+      "positive_explained_squared_fraction": 0.00549199123290256,
+      "undirected_half_coefficient_relative_residual": 0.9973160054420516,
+      "undirected_half_coefficient_improvement": 0.0026839945579484326,
+      "unit_coefficient_relative_residual": 1.0019582364464397
+    },
+    {
+      "input_orbit": "direct_chi_bond_four_update_orbit",
+      "column_norm": 3605.591280684541,
+      "correlation_with_required_response": 0.11099047598971044,
+      "unconstrained_optimal_coefficient": 0.6061850528051892,
+      "positive_optimal_coefficient": 0.6061850528051892,
+      "positive_relative_residual": 0.9938214700033289,
+      "positive_explained_squared_fraction": 0.012318885760422504,
+      "undirected_half_coefficient_relative_residual": 0.9940116250425116,
+      "undirected_half_coefficient_improvement": 0.005988374957488385,
+      "unit_coefficient_relative_residual": 0.9964338513772114
+    }
+  ],
+  "verdict": "ADVANCE_TRANSFER_ACTIVATED_BOND",
+  "claim_boundary": "This is an action-response screen. A favorable positive column does not establish coefficient provenance, rest stability, an exact moving orbit, or a Dirac pass."
+}

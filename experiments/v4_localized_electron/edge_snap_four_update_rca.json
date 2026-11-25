@@ -1,0 +1,95 @@
+{
+  "status": "V4_FOUR_UPDATE_EDGE_ORBIT_RCA",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_variant": "unspecified",
+  "rows": [
+    {
+      "layer": 0,
+      "fraction_of_total_residual": 0.47711487299560107,
+      "psi_fraction": 0.017220252327226102,
+      "chi_fraction": 0.9827797476727739,
+      "chi_component_fractions": [
+        0.046553444773345984,
+        0.029522882065260356,
+        0.9239236731613933
+      ],
+      "support_fractions": {
+        "core": 0.28857319659568625,
+        "first_shell": 0.34175768160732384,
+        "distant": 0.36966912179699
+      }
+    },
+    {
+      "layer": 1,
+      "fraction_of_total_residual": 0.10432127112537351,
+      "psi_fraction": 0.03557888507187229,
+      "chi_fraction": 0.9644211149281278,
+      "chi_component_fractions": [
+        0.12379234397412156,
+        0.5188220914014184,
+        0.35738556462446025
+      ],
+      "support_fractions": {
+        "core": 0.2997540706295238,
+        "first_shell": 0.31577521137403586,
+        "distant": 0.3844707179964404
+      }
+    },
+    {
+      "layer": 2,
+      "fraction_of_total_residual": 0.31499336684205503,
+      "psi_fraction": 0.07432604950978836,
+      "chi_fraction": 0.9256739504902116,
+      "chi_component_fractions": [
+        0.028649376270820728,
+        0.04552043437619511,
+        0.9258301893529843
+      ],
+      "support_fractions": {
+        "core": 0.3831679663421095,
+        "first_shell": 0.2977304016297647,
+        "distant": 0.31910163202812586
+      }
+    },
+    {
+      "layer": 3,
+      "fraction_of_total_residual": 0.10357048903697035,
+      "psi_fraction": 0.03674275398677339,
+      "chi_fraction": 0.9632572460132265,
+      "chi_component_fractions": [
+        0.1309222999557053,
+        0.5085988953614408,
+        0.3604788046828541
+      ],
+      "support_fractions": {
+        "core": 0.26105311749101906,
+        "first_shell": 0.3533122019838511,
+        "distant": 0.3856346805251299
+      }
+    }
+  ],
+  "first_departure_layer": 0,
+  "largest_residual": {
+    "layer": 0,
+    "site": [
+      3,
+      2,
+      1
+    ],
+    "field": "chi",
+    "component": 2,
+    "fraction_of_total_residual": 0.01720764107840729
+  },
+  "aggregate_field_fractions": {
+    "psi": 0.0391453505961107,
+    "chi": 0.9608546494038894
+  },
+  "issue": "The charge-guided four-update path advances edge-to-edge but does not satisfy the native discrete Euler-Lagrange equations.",
+  "why_it_matters": "Without closure, the path is a prepared interpolation rather than a freely moving electron.",
+  "symptoms": "The matched search retains a finite action residual even after enforcing the two native phase-charge continuities.",
+  "expected_symptoms": "A moving branch would drive every layer residual to numerical zero while preserving carrier identity and charge.",
+  "root_cause": "The unresolved response is localized below by field, component, site and layer.  It is evidence for the next action channel, not for increasing the launch amplitude.",
+  "corrective_action": "Project the residual against the remaining cubic C19 three-site and plaquette action bases and admit only a positive reciprocal term with nonzero response in this exact channel.",
+  "claim_boundary": "This classifies one optimized path; it is not an action-class no-go or a Dirac movement pass."
+}

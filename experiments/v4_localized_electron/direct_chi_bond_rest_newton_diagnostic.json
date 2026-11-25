@@ -1,0 +1,86 @@
+{
+  "status": "V4_DIRECT_CHI_BOND_REST_NEWTON_DIAGNOSTIC",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "iteration": 0,
+      "residual_norm": 2.068297327025141,
+      "largest_singular_value": 49.87267109802638,
+      "smallest_singular_value": 2.5547920095572852e-06,
+      "condition_number": 19521225.568052687,
+      "rank_rcond_1e_12": 324,
+      "newton_step_norm": 49.88337776513764,
+      "line_search": [
+        {
+          "alpha": 1.0,
+          "residual_norm": 231369.092481748
+        },
+        {
+          "alpha": 0.5,
+          "residual_norm": 204014.67777071847
+        },
+        {
+          "alpha": 0.25,
+          "residual_norm": 70695.58694589468
+        },
+        {
+          "alpha": 0.125,
+          "residual_norm": 20093.047506284856
+        },
+        {
+          "alpha": 0.0625,
+          "residual_norm": 5319.985743703796
+        },
+        {
+          "alpha": 0.03125,
+          "residual_norm": 1367.6791208064878
+        },
+        {
+          "alpha": 0.015625,
+          "residual_norm": 347.7460306312481
+        },
+        {
+          "alpha": 0.0078125,
+          "residual_norm": 88.8260588614448
+        },
+        {
+          "alpha": 0.00390625,
+          "residual_norm": 23.624824266562012
+        },
+        {
+          "alpha": 0.001953125,
+          "residual_norm": 7.3145138683918995
+        },
+        {
+          "alpha": 0.0009765625,
+          "residual_norm": 3.314556117036961
+        },
+        {
+          "alpha": 0.00048828125,
+          "residual_norm": 2.36710227036546
+        },
+        {
+          "alpha": 0.000244140625,
+          "residual_norm": 2.14157204344156
+        }
+      ],
+      "accepted_residual_norm": 2.068297327025141,
+      "accepted": false
+    }
+  ],
+  "final": {
+    "continuation": 1.0,
+    "normalized_del_rms": 3.74978484808872e-07,
+    "raw_del_rms": 2.183202734082093,
+    "theta_psi": 0.0505127093345969,
+    "theta_chi": 8.594699858132785e-07,
+    "psi_exterior_fraction": 0.028184336291058987,
+    "psi_carrier_overlap_sq": 0.997046396614016,
+    "relative_state_deformation": 0.4610317216823277,
+    "chi_relative_deformation": 0.49217653052484933
+  },
+  "newton_direction_improved": false,
+  "verdict": "NO_DESCENT_ALONG_EXACT_NEWTON_DIRECTION",
+  "claim_boundary": "This diagnoses the local nonlinear solve only; it is not a proof that no remote branch exists and not an action pass."
+}

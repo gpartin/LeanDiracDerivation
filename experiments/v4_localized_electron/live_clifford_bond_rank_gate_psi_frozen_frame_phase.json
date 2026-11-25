@@ -1,0 +1,29 @@
+{
+  "status": "V4_LIVE_CLIFFORD_BOND_RANK_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "link_source": "psi_frozen_frame_phase",
+  "sector_source": "eigenspaces of i times the product of the three live-Psi edge-overlap generators",
+  "rows": [
+    {
+      "sector": "live_plus",
+      "complex_dimension": 4,
+      "real_lift_rank": 8,
+      "response_rank": 0,
+      "relative_cross_block": 0.9931198016167149,
+      "response_norm": 3.7661911562279175e-13,
+      "leakage_norm": 3.7402790139236956e-13
+    },
+    {
+      "sector": "live_minus",
+      "complex_dimension": 4,
+      "real_lift_rank": 8,
+      "response_rank": 0,
+      "relative_cross_block": 0.9945890794679548,
+      "response_norm": 3.82813834051836e-13,
+      "leakage_norm": 3.8074245881721396e-13
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_ACTION_INCREMENT_LEAKS_SECTORS",
+  "claim_boundary": "Co-rotating three-layer Hessian of the new action increment on one carrier center. A pass still requires a moving time graph, the surrounding shell, full spectrum, and nonlinear motion."
+}

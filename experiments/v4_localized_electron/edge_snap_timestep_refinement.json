@@ -1,0 +1,35 @@
+{
+  "status": "V4_EDGE_SNAP_TIMESTEP_REFINEMENT_FAIL",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "artifact": "edge_snap_tensor_four_update_orbit.json",
+      "updates": 4,
+      "dt": 0.1,
+      "translation_time": 0.4,
+      "stored_scaled_del_rms": 0.003387666335222558,
+      "physical_equation_residual": 0.3387666335222558,
+      "charge_defects": {
+        "psi": 0.00030892487574306864,
+        "chi": 0.00016987151104315478
+      }
+    },
+    {
+      "artifact": "edge_snap_tensor_eight_update_orbit.json",
+      "updates": 8,
+      "dt": 0.05,
+      "translation_time": 0.4,
+      "stored_scaled_del_rms": 0.0016899275812182048,
+      "physical_equation_residual": 0.6759710324872817,
+      "charge_defects": {
+        "psi": 0.0005084948952202142,
+        "chi": 0.0001079944159534745
+      }
+    }
+  ],
+  "refined_over_coarse_physical_residual_ratio": 1.995388463908069,
+  "verdict": "RAW_DEL_SHRINKS_BUT_PHYSICAL_RESIDUAL_DOES_NOT_CONVERGE",
+  "root_cause_update": "The smaller eight-layer stored number is partly the automatic dt scaling of the discrete action residual. On the common physical equation scale the mismatch grows, so additional temporal subdivision cannot replace the missing chi response.",
+  "next_action": "Use the refined orbit residual as the inverse requirement for the next local reciprocal action basis; do not extend to sixteen updates until the physical residual decreases under refinement."
+}

@@ -1,0 +1,96 @@
+{
+  "status": "V4_C27_BODY_GYRO_NATIVE_TRANSPORT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 5,
+  "dt": 0.00390625,
+  "a": 0.10533571208748423,
+  "coefficients": {
+    "local_common_area_velocity": 299.3553357120875,
+    "local_relative_area_velocity": -299.1446642879125,
+    "body_common_area_velocity": -0.05266785604374211,
+    "body_relative_area_velocity": 0.0
+  },
+  "coefficient_rule": "c=(a+B/4,a-B/4,-a/2,0), a=2dt/sin(theta); selected by native inertia and body-incidence normalization",
+  "rest_DEL_rms": 1.897404223927844e-12,
+  "axis_rows": [
+    {
+      "phase_ramp_axis": 0,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        4.6816715379422964e-05,
+        4.635736571283614e-05,
+        2.1251017968113567e-06
+      ],
+      "relative_third_singular_value": 0.04539194558158577,
+      "missing_physical_direction": [
+        -0.0022549179069778196,
+        0.02391967182601451,
+        0.9997113406603771
+      ]
+    },
+    {
+      "phase_ramp_axis": 1,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        4.683770906388036e-05,
+        4.5941750155374755e-05,
+        2.117728825619698e-06
+      ],
+      "relative_third_singular_value": 0.04521418463766876,
+      "missing_physical_direction": [
+        0.03825286849466688,
+        -0.000738699705531416,
+        0.999267818142201
+      ]
+    },
+    {
+      "phase_ramp_axis": 2,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        5.294009454406196e-05,
+        3.907668720184933e-05,
+        4.791571499499663e-06
+      ],
+      "relative_third_singular_value": 0.09050931134079568,
+      "missing_physical_direction": [
+        -0.0008156648324688863,
+        0.002432163292193454,
+        0.9999967096308875
+      ]
+    }
+  ],
+  "all_axes_robust_rank_three": true,
+  "verdict": "C27_BODY_GYRO_NATIVE_TRANSPORT_RANK_PASS",
+  "claim_boundary": "Exact rest and linear fixed-charge response only. This is not nonlinear translation or Dirac-current matching."
+}

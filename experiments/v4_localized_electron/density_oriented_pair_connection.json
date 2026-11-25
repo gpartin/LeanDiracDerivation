@@ -1,0 +1,134 @@
+{
+  "status": "V4_DENSITY_ORIENTED_PAIR_CONNECTION_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "terms": {
+    "common_pair_connection": {
+      "two_interval_action": 1.627103930474812e-32,
+      "rest_DEL_norm": 3.8903503023710345e-17
+    },
+    "relative_pair_connection": {
+      "two_interval_action": 4.1839815355066594e-32,
+      "rest_DEL_norm": 3.9642568859722505e-17
+    }
+  },
+  "rest_force_singular_values": [
+    4.6911669435798153e-17,
+    2.973736847907161e-17
+  ],
+  "rest_preserving_kernel_dimension": 2,
+  "rest_preserving_kernel": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "linear_response": [
+    {
+      "name": "common_pair_connection",
+      "added_mass_quadratic": -3.325148026704566e-07,
+      "added_gyro_quadratic_magnitude": 7.513925571980484e-05,
+      "added_stiffness_quadratic": -5.300765980978494e-18,
+      "three_axis_translation_response_norms": [
+        5.363873268242166e-06,
+        5.364531477467265e-06,
+        3.4756006217995638e-06
+      ]
+    },
+    {
+      "name": "relative_pair_connection",
+      "added_mass_quadratic": 7.0844614042945e-18,
+      "added_gyro_quadratic_magnitude": 3.301302543273284e-15,
+      "added_stiffness_quadratic": 1.1368925277564099e-17,
+      "three_axis_translation_response_norms": [
+        3.6058719866723903e-06,
+        3.6053578572110367e-06,
+        6.659868208027824e-06
+      ]
+    }
+  ],
+  "natural_coefficient": {
+    "value": 22743.0,
+    "provenance": "B times chi0, the native inertia-clock scale"
+  },
+  "natural_coefficient_spectrum": [
+    {
+      "label": "common_0.5_natural",
+      "common": 11371.5,
+      "relative": 0.0,
+      "minimum_mass_eigenvalue": 0.9840788103914342,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.8669243504444226e-13,
+      "maximum_multiplier_modulus": 1.0007973833935155,
+      "maximum_growth_rate": 0.20404880698212316,
+      "growing_multiplier_count_at_1e_minus_7": 186
+    },
+    {
+      "label": "common_0.75_natural",
+      "common": 17057.25,
+      "relative": 0.0,
+      "minimum_mass_eigenvalue": 0.9774952887753656,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.893893592713386e-13,
+      "maximum_multiplier_modulus": 1.0004611274251478,
+      "maximum_growth_rate": 0.11802141147388974,
+      "growing_multiplier_count_at_1e_minus_7": 188
+    },
+    {
+      "label": "common_1_natural",
+      "common": 22743.0,
+      "relative": 0.0,
+      "minimum_mass_eigenvalue": 0.9709117454768242,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9394979287668206e-13,
+      "maximum_multiplier_modulus": 1.0002774655902738,
+      "maximum_growth_rate": 0.07102133857684617,
+      "growing_multiplier_count_at_1e_minus_7": 184
+    },
+    {
+      "label": "common_1.25_natural",
+      "common": 28428.75,
+      "relative": 0.0,
+      "minimum_mass_eigenvalue": 0.9643281804961046,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 2.0070303717306103e-13,
+      "maximum_multiplier_modulus": 1.0003538305784063,
+      "maximum_growth_rate": 0.09056460675311721,
+      "growing_multiplier_count_at_1e_minus_7": 184
+    },
+    {
+      "label": "common_1.5_natural",
+      "common": 34114.5,
+      "relative": 0.0,
+      "minimum_mass_eigenvalue": 0.9577445938331993,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 2.0405452524654303e-13,
+      "maximum_multiplier_modulus": 1.0004222808718106,
+      "maximum_growth_rate": 0.10808108450198017,
+      "growing_multiplier_count_at_1e_minus_7": 190
+    },
+    {
+      "label": "common_2_natural",
+      "common": 45486.0,
+      "relative": 0.0,
+      "minimum_mass_eigenvalue": 0.9445773554636641,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 2.17657307638425e-13,
+      "maximum_multiplier_modulus": 1.0004337607353666,
+      "maximum_growth_rate": 0.11101867222368743,
+      "growing_multiplier_count_at_1e_minus_7": 186
+    }
+  ],
+  "verdict": "REST_PRESERVING_THREE_AXIS_CONNECTION_REDUCES_BUT_RETAINS_GROWTH",
+  "claim_boundary": "Exact first variation of two symmetry-allowed one-forms at the current rest orbit and the complete finite-hull linear spectrum for the declared common-channel coefficient scan. The natural B*chi0 coefficient reduces the maximum growth rate but does not remove all growing modes, prove nonlinear motion, close V4-006, or admit an action."
+}

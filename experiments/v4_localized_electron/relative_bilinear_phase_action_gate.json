@@ -1,0 +1,46 @@
+{
+  "status": "V4_RELATIVE_BILINEAR_PHASE_ACTION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "sum_C19 w Im[conj(tau_i) tau_j]^2/(2 chi0^12), tau_i=conj(Psi_i dot Psi_i)(chi_i dot chi_i)",
+  "positive_square": true,
+  "preserves_global_U1xU1": true,
+  "normalized_rest_value": 2.911258322045099e-28,
+  "normalized_rest_force_norm": 1.8772490230868048e-13,
+  "raw_curvature_on_residual": 2.12863870487172e+16,
+  "normalized_curvature_on_residual": 9.617423560176572,
+  "coefficient_scan": [
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9415014489597828e-13,
+      "maximum_multiplier_modulus": 1.000264082733119,
+      "maximum_growth_rate": 0.06759625456944608,
+      "growing_multiplier_count_at_1e_minus_7": 185,
+      "coefficient": 0.002770083102493075,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9338505660191405e-13,
+      "maximum_multiplier_modulus": 1.0007270462119287,
+      "maximum_growth_rate": 0.18605620271777734,
+      "growing_multiplier_count_at_1e_minus_7": 191,
+      "coefficient": 0.05263157894736842,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9486850502367554e-13,
+      "maximum_multiplier_modulus": 1.0027913355843279,
+      "maximum_growth_rate": 0.7135864426564441,
+      "growing_multiplier_count_at_1e_minus_7": 199,
+      "coefficient": 1.0,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    }
+  ],
+  "verdict": "RELATIVE_PHASE_ACTION_RETAINS_GROWTH",
+  "claim_boundary": "The phase square is derived from native bilinears and screened at three native coefficient scales. A spectral pass would still require minimality, coefficient provenance, refinements, nonlinear conservation, motion, and Dirac-current agreement."
+}

@@ -1,0 +1,109 @@
+{
+  "status": "V4_C27_BODY_GYRO_BASIS_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_delta": "unit positive joint-W body-diagonal Dirichlet potential plus the complete reduced local/body common/relative W-linear gyroscopic basis",
+  "basis_names": [
+    "local_common_area_velocity",
+    "local_relative_area_velocity",
+    "body_common_area_velocity",
+    "body_relative_area_velocity"
+  ],
+  "basis_force_rank": 2,
+  "basis_force_singular_values": [
+    5.058726519524849,
+    2.529363259762437,
+    2.74641241644646e-16,
+    1.0626249143984235e-16
+  ],
+  "coefficients": {
+    "local_common_area_velocity": 0.10533571208748464,
+    "local_relative_area_velocity": 0.10533571208748466,
+    "body_common_area_velocity": -0.02633392802187542,
+    "body_relative_area_velocity": -0.026333928021875435
+  },
+  "coefficient_rule": "minimum-norm solution cancelling the independently calculated unit C27 native rest torque; no Dirac target is used",
+  "native_discrete_clock_rate": 19.004363539373443,
+  "rest_force_relative_remainder": 8.344427360705383e-14,
+  "paired_rest_DEL_rms": 1.8945208114613297e-12,
+  "axis_rows": [
+    {
+      "phase_ramp_axis": 0,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        4.698873868371961e-05,
+        4.63556842812228e-05,
+        2.1398732045921203e-06
+      ],
+      "relative_third_singular_value": 0.04554012864647357,
+      "missing_physical_direction": [
+        -0.0022487515843112073,
+        -0.005801592063502368,
+        0.9999806421355568
+      ]
+    },
+    {
+      "phase_ramp_axis": 1,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        4.7014025050976085e-05,
+        4.5888537610045015e-05,
+        2.092942215117175e-06
+      ],
+      "relative_third_singular_value": 0.04451740119778837,
+      "missing_physical_direction": [
+        0.008680569926861547,
+        -0.0007528859189907749,
+        0.9999620397137772
+      ]
+    },
+    {
+      "phase_ramp_axis": 2,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        5.2966443772640245e-05,
+        3.928867618864559e-05,
+        3.408518564821883e-06
+      ],
+      "relative_third_singular_value": 0.0643524148884345,
+      "missing_physical_direction": [
+        -0.0004612245461893328,
+        0.0020667525668456098,
+        0.9999977579003593
+      ]
+    }
+  ],
+  "all_axes_robust_rank_three": true,
+  "verdict": "C27_GYRO_BASIS_PRESERVES_REST_AND_CLOSES_TRANSPORT",
+  "claim_boundary": "Rest-force and linear fixed-charge rank screen only. It does not prove symplectic nondegeneracy, bounded dynamics, full spectral stability, nonlinear handoff, or Dirac current matching."
+}

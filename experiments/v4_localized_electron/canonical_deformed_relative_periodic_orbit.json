@@ -1,0 +1,27 @@
+{
+  "status": "V4_CANONICAL_DEFORMED_CELL_ORBIT_INCONCLUSIVE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "row": {
+    "updates_per_cell": 32,
+    "initial_objective": 1.6300130272131628,
+    "final_boundary_residual": 0.047596321325898035,
+    "unreset_second_cell_residual": 2.470696801149633,
+    "solved_dt": 0.014569761010571336,
+    "solved_translation_time": 0.46623235233828275,
+    "solved_psi_phase": 8.157318576445586,
+    "solved_chi_phase": -0.35520774170351777,
+    "optimizer_evaluations": 2003,
+    "minimum_objective_trace": 0.04760400932097623,
+    "carrier_metrics": {
+      "eight_site_psi_fidelity": 0.5669767634011829,
+      "psi_core_containment": 0.6240865366810507,
+      "chi_track_fidelity": 0.9498783811042897,
+      "psi_charge": 1343.873180128532
+    },
+    "same_carrier": false,
+    "converged_same_carrier": false
+  },
+  "verdict": "NO_SAME_CARRIER_ORBIT_CONVERGED",
+  "claim_boundary": "Charge-constrained numerical shooting test in one direction. Nonconvergence is not a universal no-go. A pass would still require refinement, all axes/signs, Dirac current, and Lean."
+}

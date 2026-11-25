@@ -1,0 +1,200 @@
+{
+  "status": "V4_EXACT_TRANSLATION_CHI_DUAL_FRAME_PRECURSOR_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "axis": 0,
+  "sign": 1,
+  "target_pattern": "same eight-site Psi-chi carrier values and entire native profile translated exactly one cell",
+  "action_candidate": "positive reciprocal chi density-mold kinetic action using the regularized inverse Gram matrix of the live chi, Psi, chi-wedge-Psi frame on every C19 bond",
+  "rest_reduction": "rhoPsiDot=0 on the exact rest orbit, hence activation=0 and the paired Psi kinetic square equals the canonical one",
+  "coefficient_provenance": "factor 6 from the six C19 face transport directions",
+  "dual_frame_regularizer": 0.000835421888053467,
+  "core_values_held_exact_during_inverse_gate": true,
+  "dt": 0.07962298862411822,
+  "psi_phase": 3.1415913359847485,
+  "chi_phase": 5.785811362193119e-07,
+  "compact_profile_del_norm": 8929967.366315866,
+  "first_shell_case": {
+    "support": "C19_first_shell",
+    "free_site_count": 48,
+    "free_real_coordinate_count": 576,
+    "lsmr_stop_code": 7,
+    "lsmr_iterations": 25,
+    "linear_relative_residual": 0.05661480115307384,
+    "correction_norm_over_state_norm": 0.0008979986955421218,
+    "nonlinear_scale_rows": [
+      {
+        "scale": 0.0,
+        "relative_residual": 1.0
+      },
+      {
+        "scale": 0.01,
+        "relative_residual": 0.9897749520466214
+      },
+      {
+        "scale": 0.02,
+        "relative_residual": 0.9790480335338024
+      },
+      {
+        "scale": 0.03,
+        "relative_residual": 0.9678618824853098
+      },
+      {
+        "scale": 0.04,
+        "relative_residual": 0.9562634930203023
+      },
+      {
+        "scale": 0.05,
+        "relative_residual": 0.9443031604209712
+      },
+      {
+        "scale": 0.06,
+        "relative_residual": 0.932033364764952
+      },
+      {
+        "scale": 0.07,
+        "relative_residual": 0.9195076439359662
+      },
+      {
+        "scale": 0.08,
+        "relative_residual": 0.9067795039031596
+      },
+      {
+        "scale": 0.09,
+        "relative_residual": 0.8939014082704733
+      },
+      {
+        "scale": 0.1,
+        "relative_residual": 0.8809238810195552
+      },
+      {
+        "scale": 0.2,
+        "relative_residual": 0.7543407910356983
+      },
+      {
+        "scale": 0.30000000000000004,
+        "relative_residual": 0.6469699568320902
+      },
+      {
+        "scale": 0.4,
+        "relative_residual": 0.5603848572363448
+      },
+      {
+        "scale": 0.5,
+        "relative_residual": 0.4896842088539826
+      },
+      {
+        "scale": 0.6000000000000001,
+        "relative_residual": 0.43096796031530804
+      },
+      {
+        "scale": 0.7,
+        "relative_residual": 0.38179885978024086
+      },
+      {
+        "scale": 0.8,
+        "relative_residual": 0.34057565218547736
+      },
+      {
+        "scale": 0.9000000000000001,
+        "relative_residual": 0.3061040170769468
+      },
+      {
+        "scale": 1.0,
+        "relative_residual": 0.2773916854866383
+      }
+    ],
+    "best_nonlinear": {
+      "scale": 1.0,
+      "relative_residual": 0.2773916854866383
+    },
+    "best_nonlinear_residual_diagnostics": {
+      "Psi_power_fraction": 0.9969716898050541,
+      "chi_power_fraction": 0.0030283101949457407,
+      "core_power_fraction": 0.0008206242447069771,
+      "first_shell_power_fraction": 0.7618657680014097,
+      "far_exterior_power_fraction": 0.23731360775388327,
+      "complex_component_power_fractions": [
+        0.5874998064255992,
+        0.41226470896970974,
+        0.00023548460469085717
+      ],
+      "maximum_residual_site": [
+        1,
+        2,
+        3
+      ],
+      "maximum_residual_site_power_fraction": 0.08985942262945222
+    }
+  },
+  "first_shell_and_clock_case": {
+    "free_site_count": 48,
+    "free_real_coordinate_count": 576,
+    "lsmr_stop_code": 7,
+    "lsmr_iterations": 25,
+    "linear_relative_residual": 0.05578868624589822,
+    "correction_norm_over_state_norm": 0.0009052278386293937,
+    "linear_bounded_dt_coordinate_change": 0.0003337892741705143,
+    "linear_psi_phase_change": -0.003991178370016594,
+    "linear_chi_phase_change": -0.007642649880748817,
+    "best_nonlinear": {
+      "scale": 1.0,
+      "relative_residual": 0.2804149063156397
+    },
+    "best_dt": 0.0796231138509031,
+    "best_psi_phase": 3.137600157614732,
+    "best_chi_phase": -0.007642071299612598,
+    "best_nonlinear_residual_diagnostics": {
+      "Psi_power_fraction": 0.9970658224422905,
+      "chi_power_fraction": 0.0029341775577094347,
+      "core_power_fraction": 0.0008098012893057343,
+      "first_shell_power_fraction": 0.7730208052322921,
+      "far_exterior_power_fraction": 0.22616939347840212,
+      "complex_component_power_fractions": [
+        0.6070426542898698,
+        0.39272083469682206,
+        0.00023651101330736835
+      ],
+      "maximum_residual_site": [
+        1,
+        2,
+        3
+      ],
+      "maximum_residual_site_power_fraction": 0.09106019193778431
+    },
+    "full_nonlinear_solve": {
+      "initial_relative_residual": 0.28041490631563976,
+      "final_relative_residual": 0.015955456140624616,
+      "minimum_trace_residual": 0.015955456140624616,
+      "optimizer_evaluations": 27,
+      "correction_norm_over_state_norm": 0.001384376904903565,
+      "dt": 0.07962314229307844,
+      "dt_bounds": [
+        0.000244140625,
+        0.08
+      ],
+      "psi_phase": 3.1383898310133382,
+      "chi_phase": -0.0021180188892400437,
+      "residual_diagnostics": {
+        "Psi_power_fraction": 0.6480163703406666,
+        "chi_power_fraction": 0.3519836296593334,
+        "core_power_fraction": 0.20852022145162236,
+        "first_shell_power_fraction": 0.5606605788939938,
+        "far_exterior_power_fraction": 0.23081919965438394,
+        "complex_component_power_fractions": [
+          0.3039516524717053,
+          0.6306919238558868,
+          0.06535642367240777
+        ],
+        "maximum_residual_site": [
+          1,
+          2,
+          2
+        ],
+        "maximum_residual_site_power_fraction": 0.043820090088590606
+      }
+    }
+  },
+  "verdict": "FULL_FRAME_PRECURSOR_ADVANCES_TO_NONLINEAR_PROFILE_SOLVE",
+  "claim_boundary": "One signed-axis inverse-profile action screen. A favorable result requires action boundedness/well-posedness, a nonlinear exact profile, all axes/signs, free evolution, conservation, and Dirac-current validation."
+}

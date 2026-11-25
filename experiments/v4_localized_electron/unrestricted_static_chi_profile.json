@@ -1,0 +1,46 @@
+{
+  "status": "V4_UNRESTRICTED_STATIC_CHI_FIXED_CHARGE_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "lambda_self": 0.25,
+  "density_coupling": 1.0,
+  "derived_amplitude_sq": 167.93943298969072,
+  "target_psi_charge": 20597.692529632037,
+  "symmetry_rank_removed": 10,
+  "configuration_dimension": 324,
+  "rows": [
+    {
+      "chi_stiffness": 0.0,
+      "solver_success": true,
+      "solver_status": 1,
+      "solver_nfev": 1,
+      "cost": 1.3404507871262124e-26,
+      "optimality": 8.699836405806812e-12,
+      "stationary_rms": 9.09637060120484e-15,
+      "largest_stationary_component": 7.579122514774402e-14,
+      "reduced_residual_norm": 1.637345893283525e-13,
+      "omega_psi": 15.331191253706674,
+      "psi_charge_relative_error": 0.0,
+      "psi_carrier_overlap_sq": 1.0,
+      "psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0
+    },
+    {
+      "chi_stiffness": 1e-06,
+      "solver_success": false,
+      "solver_status": 0,
+      "solver_nfev": 160,
+      "cost": 1.4872601215806065e-09,
+      "optimality": 1.9097040263965475e-06,
+      "stationary_rms": 3.0299534705945953e-06,
+      "largest_stationary_component": 2.0393005495131015e-05,
+      "reduced_residual_norm": 5.453916247212835e-05,
+      "omega_psi": 15.33111941654289,
+      "psi_charge_relative_error": 4.817864665978911e-10,
+      "psi_carrier_overlap_sq": 0.9999895897639609,
+      "psi_exterior_fraction": 3.237684629933132e-11,
+      "chi_exterior_deviation_rms": 0.0004949191908893447
+    }
+  ],
+  "claim_boundary": "Existence and carrier identity only; no stability, movement, or Dirac promotion follows without the full constrained spectrum."
+}

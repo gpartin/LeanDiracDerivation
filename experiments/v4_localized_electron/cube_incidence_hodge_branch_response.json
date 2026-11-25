@@ -1,0 +1,133 @@
+{
+  "status": "V4_C19_HODGE_BRANCH_RESPONSE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "branch": "hodge_relative_activated",
+  "branch_epsilon_for_operator_derivative": 0.0001,
+  "branch_tangent_over_rest_norm": 0.06891968196994486,
+  "operator_evaluation": {
+    "method": "exact Hessian-vector products on baseline Krylov span",
+    "snapshot_count": 1359,
+    "retained_rank": 28,
+    "relative_projection_error": 3.5011964330084614e-12,
+    "singular_threshold": 1.4177009622799076e-08
+  },
+  "single_direction": {
+    "matrix_scale": 0.051877143682441,
+    "response_norm": 0.04965746749821112,
+    "desired_correlation": 0.45292214963249994,
+    "baseline_relative_error": 0.5873664373821328,
+    "diagnostic_fitted_relative_error": 0.46856494286503675,
+    "diagnostic_fitted_action_coefficient": 22.83640451752255
+  },
+  "small_union": {
+    "directions": [
+      {
+        "direction": "hodge_relative_activated_branch",
+        "matrix_scale": 0.051877143682441,
+        "response_norm": 0.04965746749821112,
+        "desired_correlation": 0.45292214963249994
+      },
+      {
+        "direction": "activated_chi_curl",
+        "matrix_scale": 10.55582451069414,
+        "response_norm": 0.0044709626738867626,
+        "desired_correlation": -0.3430853965363764
+      },
+      {
+        "direction": "complete_frame_common_relative",
+        "matrix_scale": 2.6138720032689378,
+        "response_norm": 0.0001246016983435541,
+        "desired_correlation": 0.3278150819518876
+      },
+      {
+        "direction": "complete_frame_overlap",
+        "matrix_scale": 2.771297941915117,
+        "response_norm": 0.18923291518268645,
+        "desired_correlation": 0.2127730108399276
+      },
+      {
+        "direction": "installed_cube_incidence",
+        "matrix_scale": 0.06265720842487062,
+        "response_norm": 0.06010180035453465,
+        "desired_correlation": -0.5507583490545792
+      },
+      {
+        "direction": "existing_density_connection",
+        "matrix_scale": 0.014676971786384593,
+        "response_norm": 0.04191919778277177,
+        "desired_correlation": 0.6902683679114311
+      },
+      {
+        "direction": "existing_cube_incidence_connection",
+        "matrix_scale": 0.06265720842487063,
+        "response_norm": 0.06010180035515115,
+        "desired_correlation": -0.550758349122061
+      },
+      {
+        "direction": "joint_phase_lock",
+        "matrix_scale": 0.08097587882561755,
+        "response_norm": 0.33451230703610724,
+        "desired_correlation": 0.5563367902289544
+      },
+      {
+        "direction": "relative_bilinear_phase",
+        "matrix_scale": 0.3190925241569338,
+        "response_norm": 0.5947729539186554,
+        "desired_correlation": 0.584272013497876
+      },
+      {
+        "direction": "area_bilinear_phase",
+        "matrix_scale": 0.11198784349711279,
+        "response_norm": 0.6784303973378483,
+        "desired_correlation": 0.5905203963692756
+      },
+      {
+        "direction": "density_oriented_common_pair",
+        "matrix_scale": 333.7983693377448,
+        "response_norm": 0.041919197785231496,
+        "desired_correlation": 0.690268367907943
+      },
+      {
+        "direction": "density_oriented_relative_pair",
+        "matrix_scale": 339.323559760177,
+        "response_norm": 0.04106835453120653,
+        "desired_correlation": -0.2587768090372647
+      }
+    ],
+    "response_rank": 10,
+    "singular_values": [
+      0.8901841065354222,
+      0.33493272279715763,
+      0.2106351166097712,
+      0.1370984905592683,
+      0.07656846952175744,
+      0.03960801159289805,
+      0.031658793030544495,
+      0.02049035353483829,
+      0.004138614363617323,
+      0.00011248625534814255,
+      4.622840891665888e-12,
+      2.760454629186437e-12
+    ],
+    "diagnostic_relative_error": 0.17885943802061205,
+    "diagnostic_coefficients": {
+      "hodge_relative_activated_branch": 1.45083023791284,
+      "activated_chi_curl": -60.319293935705176,
+      "complete_frame_common_relative": 577.1969428532698,
+      "complete_frame_overlap": 5.224827190038375,
+      "installed_cube_incidence": -12.909569520058172,
+      "existing_density_connection": -3.018072623735269,
+      "existing_cube_incidence_connection": -12.909568700563021,
+      "joint_phase_lock": 0.7790549939826336,
+      "relative_bilinear_phase": 1.18843747494609,
+      "area_bilinear_phase": 0.5275100934863636,
+      "density_oriented_common_pair": -3.018072984126593,
+      "density_oriented_relative_pair": 3.1832765472285733,
+      "phase_alignment": -0.1680543951371099,
+      "target_rescaling": 0.009897995654268086
+    }
+  },
+  "verdict": "HODGE_BRANCH_MOTION_RESPONSE_MEASURED_ON_KRYLOV_SPAN",
+  "claim_boundary": "The fitted coefficients are inverse diagnostics, not admitted action constants. A V4-006 pass requires a geometry-selected coefficient, finite re-solved orbit, free motion, and all regression gates."
+}

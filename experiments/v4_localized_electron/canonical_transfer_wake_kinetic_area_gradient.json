@@ -1,0 +1,160 @@
+{
+  "status": "V4_CANONICAL_TRANSFER_WAKE_KINETIC_GATE",
+  "mode": "area_gradient",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "screen_strength": 1.0,
+  "coefficient_provenance": "unit dimension-normalized basis screen; no coefficient selected",
+  "rows": [
+    {
+      "fraction_of_rest_norm": 0.0,
+      "added_rest_DEL_rms": 23.70648605303621,
+      "candidate_rest_DEL_rms": 23.706486053036205,
+      "previous_block_condition_number": 1209.6582295104652,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            0.0003679839511109803,
+            0.0002774248730618828,
+            1.5628227624648685e-17
+          ],
+          "relative_third_singular_value": 4.24698620074748e-14
+        },
+        {
+          "axis": 1,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            0.0003679839511109981,
+            0.00027742487306186447,
+            2.177868900780005e-17
+          ],
+          "relative_third_singular_value": 5.918380120123978e-14
+        },
+        {
+          "axis": 2,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            0.00038235485413603507,
+            0.0003823548541360032,
+            2.8290833137818426e-17
+          ],
+          "relative_third_singular_value": 7.399103955864268e-14
+        }
+      ],
+      "axis_ranks": [
+        2,
+        2,
+        2
+      ],
+      "minimum_relative_third_singular_value": 4.24698620074748e-14
+    },
+    {
+      "fraction_of_rest_norm": 0.003,
+      "added_rest_DEL_rms": 23.70648605303612,
+      "candidate_rest_DEL_rms": 23.706486053036116,
+      "previous_block_condition_number": 1209.658229510267,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            0.00036155360397802035,
+            0.00026811905637943984,
+            4.730665427509594e-17
+          ],
+          "relative_third_singular_value": 1.3084271254552843e-13
+        },
+        {
+          "axis": 1,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            0.0003615536039780252,
+            0.0002681190563794405,
+            2.0879984662036063e-17
+          ],
+          "relative_third_singular_value": 5.775073027153429e-14
+        },
+        {
+          "axis": 2,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            0.0003821247231166525,
+            0.0003690909759546465,
+            2.813770316914614e-17
+          ],
+          "relative_third_singular_value": 7.363486701318839e-14
+        }
+      ],
+      "axis_ranks": [
+        2,
+        2,
+        2
+      ],
+      "minimum_relative_third_singular_value": 5.775073027153429e-14
+    }
+  ],
+  "verdict": "TRANSFER_WAKE_KINETIC_DOES_NOT_CLOSE_TRANSPORT",
+  "claim_boundary": "Positive reciprocal kinetic-basis response only. A rank pass would still require an exact re-solved rest orbit, symplectic well-posedness, coefficient provenance, stability, finite translation, and same-state Dirac current."
+}

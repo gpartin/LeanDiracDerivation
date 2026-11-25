@@ -1,0 +1,30 @@
+{
+  "status": "V4_CANONICAL_TRANSFER_ACTION_NULLSPACE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": [
+    "transfer_odd_kinetic",
+    "negative_transfer_odd_potential"
+  ],
+  "basis_rest_DEL_norms": [
+    534.518382572895,
+    534.5183825728965
+  ],
+  "normalized_column_correlation": -0.9999999999999996,
+  "normalized_singular_values": [
+    1.4142135623730947,
+    9.19880928509737e-15
+  ],
+  "rest_preserving_null_vector": [
+    0.7071067811865479,
+    0.7071067811865472
+  ],
+  "normalized_null_residual": 9.204014448424303e-15,
+  "frequency_identity_error": 0.0,
+  "random_kinetic_value": 272.2860695874063,
+  "random_positive_potential_energy": 0.7428183253304539,
+  "canonical_kinetic_plus_candidate_is_positive_definite": true,
+  "derivation": "The two rest-response columns are exact opposites after native normalization. Their equal positive-action coefficients are fixed by 2(1-cos theta)=dt^2 chi0^2, giving the null vector (1,1) without fitting a transport or Dirac target.",
+  "verdict": "REST_NULLSPACE_DERIVED_WITH_POSITIVE_RECIPROCAL_ACTION",
+  "claim_boundary": "Exact rest-response and positivity structure for this two-term basis. Transport rank, continuum, and nonlinear movement are separate gates."
+}

@@ -1,0 +1,154 @@
+{
+  "status": "V4_CUBE_INCIDENCE_MOVING_SUBSTRATE_GATE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "nonlinear_drift_rows": [
+    {
+      "drift_channel": "Psi_phase",
+      "signed_speed": -0.05,
+      "DEL_norm": 0.007416762886358713,
+      "DEL_norm_per_abs_speed": 0.14833525772717426
+    },
+    {
+      "drift_channel": "Psi_phase",
+      "signed_speed": -0.01,
+      "DEL_norm": 0.0014833525772567165,
+      "DEL_norm_per_abs_speed": 0.14833525772567163
+    },
+    {
+      "drift_channel": "Psi_phase",
+      "signed_speed": 0.01,
+      "DEL_norm": 0.0014833525768936735,
+      "DEL_norm_per_abs_speed": 0.14833525768936734
+    },
+    {
+      "drift_channel": "Psi_phase",
+      "signed_speed": 0.05,
+      "DEL_norm": 0.007416762886030773,
+      "DEL_norm_per_abs_speed": 0.14833525772061545
+    },
+    {
+      "drift_channel": "chi_phase",
+      "signed_speed": -0.05,
+      "DEL_norm": 0.00017396671895254806,
+      "DEL_norm_per_abs_speed": 0.003479334379050961
+    },
+    {
+      "drift_channel": "chi_phase",
+      "signed_speed": -0.01,
+      "DEL_norm": 3.4793343916129865e-05,
+      "DEL_norm_per_abs_speed": 0.0034793343916129866
+    },
+    {
+      "drift_channel": "chi_phase",
+      "signed_speed": 0.01,
+      "DEL_norm": 3.479334361491573e-05,
+      "DEL_norm_per_abs_speed": 0.0034793343614915725
+    },
+    {
+      "drift_channel": "chi_phase",
+      "signed_speed": 0.05,
+      "DEL_norm": 0.00017396671862585675,
+      "DEL_norm_per_abs_speed": 0.003479334372517135
+    },
+    {
+      "drift_channel": "translation_x",
+      "signed_speed": -0.05,
+      "DEL_norm": 0.010449165063341885,
+      "DEL_norm_per_abs_speed": 0.2089833012668377
+    },
+    {
+      "drift_channel": "translation_x",
+      "signed_speed": -0.01,
+      "DEL_norm": 0.002089832996681997,
+      "DEL_norm_per_abs_speed": 0.2089832996681997
+    },
+    {
+      "drift_channel": "translation_x",
+      "signed_speed": 0.01,
+      "DEL_norm": 0.002089832988505277,
+      "DEL_norm_per_abs_speed": 0.2089832988505277
+    },
+    {
+      "drift_channel": "translation_x",
+      "signed_speed": 0.05,
+      "DEL_norm": 0.010449164857972199,
+      "DEL_norm_per_abs_speed": 0.20898329715944397
+    },
+    {
+      "drift_channel": "translation_y",
+      "signed_speed": -0.05,
+      "DEL_norm": 0.010448150007062099,
+      "DEL_norm_per_abs_speed": 0.20896300014124197
+    },
+    {
+      "drift_channel": "translation_y",
+      "signed_speed": -0.01,
+      "DEL_norm": 0.0020896300261508726,
+      "DEL_norm_per_abs_speed": 0.20896300261508724
+    },
+    {
+      "drift_channel": "translation_y",
+      "signed_speed": 0.01,
+      "DEL_norm": 0.0020896300382100465,
+      "DEL_norm_per_abs_speed": 0.20896300382100466
+    },
+    {
+      "drift_channel": "translation_y",
+      "signed_speed": 0.05,
+      "DEL_norm": 0.010448150309978334,
+      "DEL_norm_per_abs_speed": 0.20896300619956668
+    },
+    {
+      "drift_channel": "translation_z",
+      "signed_speed": -0.05,
+      "DEL_norm": 0.009183949550842788,
+      "DEL_norm_per_abs_speed": 0.18367899101685575
+    },
+    {
+      "drift_channel": "translation_z",
+      "signed_speed": -0.01,
+      "DEL_norm": 0.0018367898759601034,
+      "DEL_norm_per_abs_speed": 0.18367898759601034
+    },
+    {
+      "drift_channel": "translation_z",
+      "signed_speed": 0.01,
+      "DEL_norm": 0.0018367898593854163,
+      "DEL_norm_per_abs_speed": 0.18367898593854162
+    },
+    {
+      "drift_channel": "translation_z",
+      "signed_speed": 0.05,
+      "DEL_norm": 0.009183949128202109,
+      "DEL_norm_per_abs_speed": 0.18367898256404216
+    }
+  ],
+  "linear_superposition_rows": [
+    {
+      "drift_channel": "Psi_phase",
+      "maximum_packet_change_after_subtracting_drift": 6.671832826575724e-11
+    },
+    {
+      "drift_channel": "chi_phase",
+      "maximum_packet_change_after_subtracting_drift": 1.2044312776059896e-10
+    },
+    {
+      "drift_channel": "translation_x",
+      "maximum_packet_change_after_subtracting_drift": 6.078913375271974e-10
+    },
+    {
+      "drift_channel": "translation_y",
+      "maximum_packet_change_after_subtracting_drift": 6.775254914970718e-10
+    },
+    {
+      "drift_channel": "translation_z",
+      "maximum_packet_change_after_subtracting_drift": 6.52792312402004e-10
+    }
+  ],
+  "minimum_simple_translation_DEL_norm": 0.0018367898593854163,
+  "maximum_linear_background_effect_on_packet": 6.775254914970718e-10,
+  "verdict": "SIMPLE_MOVING_SUBSTRATE_DOES_NOT_REPAIR_V4_006",
+  "root_cause": "A moving coordinate lattice is not a new native field state. The tested translation and phase velocities are not exact nonlinear rest-orbit continuations, while a tangent background superposes independently and therefore cannot change the packet sector defect. A finite-amplitude self-consistent running field branch would be a distinct background and must first be solved from the action.",
+  "claim_boundary": "This rejects simple boosted-rest and linear drift repairs. It is not a no-go for every finite-amplitude running Psi-chi branch."
+}

@@ -1,0 +1,51 @@
+{
+  "status": "V4_LIVE_CLIFFORD_LONG_TANGENT",
+  "link_source": "psi_frame_phase",
+  "action_scale": 1.0,
+  "chi_payload": 1.0,
+  "relative_grade_scale": null,
+  "cycles": 0.01,
+  "steps": 1,
+  "case_count": 1,
+  "maximum_phase_aligned_shape_error": 0.00538491783248707,
+  "maximum_psi_cross_block": 2.559139003206099e-05,
+  "maximum_norm_drift": 0.00043809572790243223,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "samples": [
+        {
+          "step": 0,
+          "cycles": 0.0,
+          "native_vs_dirac_relative_error": 2.9173969195136054e-16,
+          "phase_aligned_shape_error": 2.932983138882191e-16,
+          "psi_outside_four_component_fraction": 1.2968162857877828e-15,
+          "induced_chi_fraction": 0.0,
+          "norm_ratio": 0.9999999999999998
+        },
+        {
+          "step": 1,
+          "cycles": 0.011812280932601607,
+          "native_vs_dirac_relative_error": 0.005460519697875699,
+          "phase_aligned_shape_error": 0.00538491783248707,
+          "psi_outside_four_component_fraction": 2.559139003206099e-05,
+          "induced_chi_fraction": 6.452955443769037e-05,
+          "norm_ratio": 1.0004380957279024
+        }
+      ],
+      "maximum_phase_aligned_shape_error": 0.00538491783248707,
+      "maximum_psi_cross_block": 2.559139003206099e-05,
+      "maximum_induced_chi_fraction": 6.452955443769037e-05,
+      "maximum_norm_drift": 0.00043809572790243223
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_LONG_TANGENT_PASS",
+  "claim_boundary": "Full two-field linear recurrence about the localized rest orbit. Nonlinear translation, current, refinement, and 100 cycles remain."
+}

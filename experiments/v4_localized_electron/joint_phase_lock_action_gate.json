@@ -1,0 +1,44 @@
+{
+  "status": "V4_JOINT_PHASE_LOCK_ACTION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "sum_C19 w Im[(chi_i^dagger chi_j)(Psi_i^dagger Psi_j)]^2/(2 chi0^4)",
+  "positive_square": true,
+  "rest_value": 10851.100844755401,
+  "rest_force_norm": 1776.248463373056,
+  "unit_curvature_on_previous_residual": -8.077017639319973,
+  "coefficient_scan": [
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 4.0115070651729164e-13,
+      "maximum_multiplier_modulus": 1.0011179117561984,
+      "maximum_growth_rate": 0.2860255636878454,
+      "growing_multiplier_count_at_1e_minus_7": 197,
+      "phase_lock_coefficient": 0.05263157894736842,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 3.6670974457208785e-12,
+      "maximum_multiplier_modulus": 1.009192662249647,
+      "maximum_growth_rate": 2.342570726368662,
+      "growing_multiplier_count_at_1e_minus_7": 189,
+      "phase_lock_coefficient": 1.0,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 6.097723897464227e-10,
+      "maximum_multiplier_modulus": 1.0912749077525068,
+      "maximum_growth_rate": 22.36074313852146,
+      "growing_multiplier_count_at_1e_minus_7": 197,
+      "phase_lock_coefficient": 19.0,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    }
+  ],
+  "verdict": "JOINT_PHASE_LOCK_RETAINS_GROWTH",
+  "claim_boundary": "This is a positive reciprocal research action screen at three declared geometric normalizations. A linear spectrum pass would still require coefficient provenance, timestep/box refinement, nonlinear conservation, movement, and same-state Dirac current."
+}

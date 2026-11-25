@@ -1,0 +1,200 @@
+{
+  "status": "V4_FACE_COMPACT_GRADIENT_BRIDGE_DIAGNOSTIC",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "readout_admitted": false,
+  "readout_family": "chi = a envelope + b positive_face_laplacian(envelope)",
+  "rows": [
+    {
+      "flavor": "plus",
+      "coefficients": {
+        "constant_real": -0.028903665650419304,
+        "constant_imag": 0.02890328352916345,
+        "face_laplacian_real": -0.02890366501430381,
+        "face_laplacian_imag": 0.028903401784463347
+      },
+      "optimizer_success": true,
+      "optimizer_evaluations": 10,
+      "native_kinetic_coefficient_limit": 0.028903665650804,
+      "coefficient_at_limit": true,
+      "training_rms": 0.00018028628115762728,
+      "controls": [
+        {
+          "role": "train_axis",
+          "direction": "x",
+          "sign": -1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            -0.35,
+            0.0,
+            0.0
+          ],
+          "relative_error": 0.006420851738915474
+        },
+        {
+          "role": "train_axis",
+          "direction": "y",
+          "sign": 1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            0.0,
+            0.35,
+            0.0
+          ],
+          "relative_error": 0.00729494312934525
+        },
+        {
+          "role": "train_axis",
+          "direction": "z",
+          "sign": -1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            0.0,
+            0.0,
+            -0.35
+          ],
+          "relative_error": 0.006844264189852091
+        },
+        {
+          "role": "held_diagonal",
+          "direction": "diagonal",
+          "sign": -1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            -0.20207259421636903,
+            -0.20207259421636903,
+            -0.20207259421636903
+          ],
+          "relative_error": 0.006143114209324895
+        },
+        {
+          "role": "held_narrow_slow",
+          "direction": "diagonal",
+          "sign": 1,
+          "width": 0.95,
+          "wave_number": 0.2,
+          "momentum": [
+            0.11547005383792516,
+            0.11547005383792516,
+            0.11547005383792516
+          ],
+          "relative_error": 0.009111247968463899
+        },
+        {
+          "role": "held_wide_slow",
+          "direction": "x",
+          "sign": 1,
+          "width": 1.6,
+          "wave_number": 0.2,
+          "momentum": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "relative_error": 0.0067165307928621675
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "coefficients": {
+        "constant_real": -0.028903665650763254,
+        "constant_imag": 0.028903665650791995,
+        "face_laplacian_real": -0.028903665650756107,
+        "face_laplacian_imag": 0.028903665650795583
+      },
+      "optimizer_success": true,
+      "optimizer_evaluations": 11,
+      "native_kinetic_coefficient_limit": 0.028903665650804,
+      "coefficient_at_limit": true,
+      "training_rms": 0.00021790063101787238,
+      "controls": [
+        {
+          "role": "train_axis",
+          "direction": "x",
+          "sign": -1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            -0.35,
+            0.0,
+            0.0
+          ],
+          "relative_error": 0.008949486139515482
+        },
+        {
+          "role": "train_axis",
+          "direction": "y",
+          "sign": 1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            0.0,
+            0.35,
+            0.0
+          ],
+          "relative_error": 0.008666478781590175
+        },
+        {
+          "role": "train_axis",
+          "direction": "z",
+          "sign": -1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            0.0,
+            0.0,
+            -0.35
+          ],
+          "relative_error": 0.008152098649061064
+        },
+        {
+          "role": "held_diagonal",
+          "direction": "diagonal",
+          "sign": -1,
+          "width": 1.35,
+          "wave_number": 0.35,
+          "momentum": [
+            -0.20207259421636903,
+            -0.20207259421636903,
+            -0.20207259421636903
+          ],
+          "relative_error": 0.006646861038411195
+        },
+        {
+          "role": "held_narrow_slow",
+          "direction": "diagonal",
+          "sign": 1,
+          "width": 0.95,
+          "wave_number": 0.2,
+          "momentum": [
+            0.11547005383792516,
+            0.11547005383792516,
+            0.11547005383792516
+          ],
+          "relative_error": 0.006535360014986018
+        },
+        {
+          "role": "held_wide_slow",
+          "direction": "x",
+          "sign": 1,
+          "width": 1.6,
+          "wave_number": 0.2,
+          "momentum": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "relative_error": 0.00735313108964512
+        }
+      ]
+    }
+  ],
+  "maximum_held_out_relative_error": 0.009111247968463899,
+  "verdict": "DIAGNOSTIC_ONLY",
+  "claim_boundary": "The coefficients were selected with a Dirac comparator. They identify whether one compact-gradient response has sufficient rank, but are not an independently derived native readout and cannot close V4-006."
+}

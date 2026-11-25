@@ -1,0 +1,384 @@
+{
+  "status": "V4_CORRECTED_CHI_HANDOFF_FREDHOLM_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "axis": 0,
+  "sign": 1,
+  "side": 5,
+  "amplitude_sq": 167.93943298969072,
+  "complex_second_derivative_convention": "explicit_real_sq_plus_imag_sq",
+  "component_gradient_norms": {
+    "canonical": 1.0330404553713e-12,
+    "carve": 0.0,
+    "interface": 4.484242127845606e-31
+  },
+  "component_mixed_symmetry_defects": {
+    "canonical": 5.983196050352275e-13,
+    "carve": 0.0,
+    "interface": 1.548924765341578e-31
+  },
+  "legacy_comparison": {
+    "hessian_relative_difference": 0.006644150449862467,
+    "forcing_relative_difference": 4.4468393204944205e-09
+  },
+  "cases": {
+    "canonical": {
+      "rank": 159,
+      "nullity": 591,
+      "spectral_scale": 722.0000000000007,
+      "cutoff": 7.220000000000008e-07,
+      "minimum_eigenvalue": -25.12113402061884,
+      "maximum_eigenvalue": 722.0000000000007,
+      "forcing_norm": 121.56338424419312,
+      "cokernel_norm": 60.579406392834215,
+      "cokernel_fraction": 0.4983359649739925
+    },
+    "canonical_plus_carve": {
+      "rank": 739,
+      "nullity": 11,
+      "spectral_scale": 723.2580979236621,
+      "cutoff": 7.232580979236622e-07,
+      "minimum_eigenvalue": -25.12113402061868,
+      "maximum_eigenvalue": 723.2580979236621,
+      "forcing_norm": 121.56338424419312,
+      "cokernel_norm": 28.84081594324726,
+      "cokernel_fraction": 0.23724920231994068
+    },
+    "canonical_plus_interface": {
+      "rank": 307,
+      "nullity": 443,
+      "spectral_scale": 722.0000000000009,
+      "cutoff": 7.22000000000001e-07,
+      "minimum_eigenvalue": -25.121134020618705,
+      "maximum_eigenvalue": 722.0000000000009,
+      "forcing_norm": 121.56338424419312,
+      "cokernel_norm": 1.901737762460238e-11,
+      "cokernel_fraction": 1.5644001475313328e-13
+    },
+    "canonical_plus_carve_plus_interface": {
+      "rank": 747,
+      "nullity": 3,
+      "spectral_scale": 723.2580979236621,
+      "cutoff": 7.232580979236622e-07,
+      "minimum_eigenvalue": -25.121134020618815,
+      "maximum_eigenvalue": 723.2580979236621,
+      "forcing_norm": 121.56338424419312,
+      "cokernel_norm": 6.829665039167616e-13,
+      "cokernel_fraction": 5.618192584576599e-15
+    }
+  },
+  "combined_residual_location_norms": {
+    "shared_face": 2.752337683809568e-13,
+    "source_only": 2.7523376838095187e-13,
+    "destination_only": 1.0376436009495139e-13,
+    "exterior": 5.515151389871429e-13
+  },
+  "combined_residual_top_sites": [
+    {
+      "site": [
+        2,
+        2,
+        2
+      ],
+      "location": "shared_face",
+      "norm": 1.9354312853067808e-13,
+      "real_components": [
+        -6.754865302750746e-40,
+        -2.5737838887299356e-29,
+        -1.306477434816707e-26
+      ],
+      "imag_components": [
+        2.104305746170881e-40,
+        -1.9354312853067808e-13,
+        3.564583389414049e-27
+      ]
+    },
+    {
+      "site": [
+        2,
+        1,
+        2
+      ],
+      "location": "shared_face",
+      "norm": 1.935431285306764e-13,
+      "real_components": [
+        1.368556586361008e-13,
+        -2.3511532906056646e-28,
+        -1.7210136749974063e-27
+      ],
+      "imag_components": [
+        -7.901365135367617e-14,
+        -1.1174217735698852e-13,
+        7.077557039012588e-27
+      ]
+    },
+    {
+      "site": [
+        1,
+        1,
+        2
+      ],
+      "location": "source_only",
+      "norm": 1.9354312853067558e-13,
+      "real_components": [
+        -2.1736321821879856e-28,
+        -2.810084280764536e-28,
+        -3.84811736077787e-27
+      ],
+      "imag_components": [
+        -1.5802730270735186e-13,
+        1.1174217735698814e-13,
+        -4.782119009925974e-27
+      ]
+    },
+    {
+      "site": [
+        1,
+        2,
+        2
+      ],
+      "location": "source_only",
+      "norm": 1.9354312853067258e-13,
+      "real_components": [
+        1.3685565863609825e-13,
+        -1.0162803963094343e-27,
+        -1.471667511991254e-26
+      ],
+      "imag_components": [
+        7.901365135367399e-14,
+        1.1174217735698657e-13,
+        -4.7547787201618874e-27
+      ]
+    },
+    {
+      "site": [
+        0,
+        3,
+        1
+      ],
+      "location": "exterior",
+      "norm": 5.188218004747963e-14,
+      "real_components": [
+        -2.5430327607449617e-27,
+        -1.0712280462188085e-26,
+        2.5197547392933954e-29
+      ],
+      "imag_components": [
+        -4.890701533627777e-29,
+        8.222870463262484e-27,
+        5.188218004747963e-14
+      ]
+    },
+    {
+      "site": [
+        3,
+        1,
+        1
+      ],
+      "location": "destination_only",
+      "norm": 5.1882180047477626e-14,
+      "real_components": [
+        1.8134440819435322e-27,
+        -7.327990005207288e-27,
+        -5.854224492749774e-29
+      ],
+      "imag_components": [
+        7.090983143271169e-27,
+        2.489660834307443e-27,
+        5.1882180047477626e-14
+      ]
+    },
+    {
+      "site": [
+        0,
+        2,
+        1
+      ],
+      "location": "exterior",
+      "norm": 5.1882180047477456e-14,
+      "real_components": [
+        3.992621450995711e-27,
+        -3.671727301636013e-27,
+        4.801442464458864e-29
+      ],
+      "imag_components": [
+        -1.5629220499925477e-26,
+        -2.059313881185882e-28,
+        5.1882180047477456e-14
+      ]
+    },
+    {
+      "site": [
+        3,
+        1,
+        0
+      ],
+      "location": "exterior",
+      "norm": 5.18821800474769e-14,
+      "real_components": [
+        -1.3276015145421542e-27,
+        -1.2456161653372524e-26,
+        1.6354949289451856e-29
+      ],
+      "imag_components": [
+        7.773518137292172e-27,
+        1.0219915077577683e-27,
+        5.18821800474769e-14
+      ]
+    },
+    {
+      "site": [
+        3,
+        2,
+        2
+      ],
+      "location": "destination_only",
+      "norm": 5.188218004747548e-14,
+      "real_components": [
+        -1.038964206055092e-26,
+        -8.866673588741845e-27,
+        1.8022891900863042e-29
+      ],
+      "imag_components": [
+        -2.960882016402647e-28,
+        4.890653568855296e-28,
+        5.188218004747548e-14
+      ]
+    },
+    {
+      "site": [
+        3,
+        2,
+        1
+      ],
+      "location": "destination_only",
+      "norm": 5.188218004747528e-14,
+      "real_components": [
+        -1.0619558628621232e-26,
+        -9.542118572283416e-27,
+        2.1545024361350025e-29
+      ],
+      "imag_components": [
+        2.8452580416760088e-27,
+        1.0602775180263814e-26,
+        5.188218004747528e-14
+      ]
+    },
+    {
+      "site": [
+        3,
+        2,
+        0
+      ],
+      "location": "exterior",
+      "norm": 5.1882180047474906e-14,
+      "real_components": [
+        -9.378934815341939e-27,
+        -4.187288662583966e-27,
+        -1.4383293239296706e-29
+      ],
+      "imag_components": [
+        3.879125761268032e-27,
+        6.251724545938698e-27,
+        5.1882180047474906e-14
+      ]
+    },
+    {
+      "site": [
+        3,
+        1,
+        2
+      ],
+      "location": "destination_only",
+      "norm": 5.18821800474744e-14,
+      "real_components": [
+        1.580775555091047e-27,
+        -7.233718155873388e-27,
+        8.61790753996633e-31
+      ],
+      "imag_components": [
+        -1.4923172643458953e-28,
+        -3.765710502051287e-27,
+        5.18821800474744e-14
+      ]
+    },
+    {
+      "site": [
+        4,
+        2,
+        1
+      ],
+      "location": "exterior",
+      "norm": 5.188218004747438e-14,
+      "real_components": [
+        -3.6636520927100236e-27,
+        -7.064960597096175e-27,
+        -1.0313209065454761e-29
+      ],
+      "imag_components": [
+        5.454517267776389e-27,
+        4.883796234350387e-27,
+        5.188218004747438e-14
+      ]
+    },
+    {
+      "site": [
+        0,
+        4,
+        0
+      ],
+      "location": "exterior",
+      "norm": 5.188218004747403e-14,
+      "real_components": [
+        -9.879680580443492e-27,
+        -8.75833157661746e-27,
+        2.9719134345890596e-29
+      ],
+      "imag_components": [
+        -6.737995856926989e-27,
+        2.330710749840494e-27,
+        5.188218004747403e-14
+      ]
+    },
+    {
+      "site": [
+        2,
+        1,
+        0
+      ],
+      "location": "exterior",
+      "norm": 5.1882180047473625e-14,
+      "real_components": [
+        -2.0397829462335837e-27,
+        -7.439889024040473e-27,
+        2.0771460022618027e-29
+      ],
+      "imag_components": [
+        9.161028438712567e-27,
+        4.1769855193682535e-27,
+        5.1882180047473625e-14
+      ]
+    },
+    {
+      "site": [
+        4,
+        2,
+        0
+      ],
+      "location": "exterior",
+      "norm": 5.18821800474736e-14,
+      "real_components": [
+        -4.744319883616511e-27,
+        -1.8691863124675006e-27,
+        -8.148781354652505e-30
+      ],
+      "imag_components": [
+        1.0735335099604243e-28,
+        9.429383770170746e-28,
+        5.18821800474736e-14
+      ]
+    }
+  ],
+  "verdict": "CORRECTED_HESSIAN_RESPONSE_CLASSIFIED",
+  "claim_boundary": "This is an infinitesimal solvability audit along a prescribed charge-preserving geometric path.  It does not prove a moving orbit or admit either research action term."
+}

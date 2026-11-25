@@ -1,0 +1,22 @@
+{
+  "status": "V4_FACE_IDENTITY_POSITIVE_CONE_PARTIAL_IMPROVEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "zero_on_rest_candidate_count": 6,
+  "joint_response_rank": 5,
+  "positive_cone_weights": {
+    "opposite_corner_factorization": 0.7205479982595763,
+    "edge_commutator": 0.27945200174042373
+  },
+  "total_diagnostic_strength": 0.1,
+  "rest_DEL_rms": 3.6391910891633e-13,
+  "incumbent_growth_rate": 0.07498283977332108,
+  "single_face_growth_rate": 0.036751669398873546,
+  "two_term_cone_growth_rate": 0.036111140095001056,
+  "relative_reduction_from_incumbent": 0.518407942348305,
+  "converged_outer_eigenvalues": 2,
+  "full_spectrum_converged": false,
+  "verdict": "INDEPENDENT_LOOP_RESPONSE_CONFIRMED_STABILITY_OPEN",
+  "next_falsifiable_step": "cache the five face Hessians and solve the quadratic outer spectrum, then iteratively add every exposed unstable family to the positive semidefinite cone",
+  "claim_boundary": "No action admission, stability pass, movement pass, V4-006 closure, Dirac closure, or canonical promotion."
+}

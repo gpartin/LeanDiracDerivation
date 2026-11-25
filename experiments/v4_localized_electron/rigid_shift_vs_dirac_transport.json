@@ -1,0 +1,57 @@
+{
+  "status": "V4_RIGID_SHIFT_VS_DIRAC_TRANSPORT_DIAGNOSIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "mass": 1.0,
+  "momentum": 0.6,
+  "energy": 1.16619037896906,
+  "dirac_group_velocity": 0.5144957554275266,
+  "positive_edge_channel_weight": 0.7572478777137632,
+  "negative_edge_channel_weight": 0.24275212228623663,
+  "expected_positive_weight": 0.7572478777137632,
+  "expected_negative_weight": 0.24275212228623672,
+  "channel_weight_defect": 8.326672684688674e-17,
+  "rows": [
+    {
+      "dt": 0.2,
+      "conditional_walk_state_error": 0.0012446129955881113,
+      "conditional_walk_generator_error": 0.13561848588420788,
+      "rigid_shift_state_error": 0.11317758398237467,
+      "rigid_shift_generator_error": 0.5687670555260843,
+      "conditional_walk_flavor_leakage": 0.0
+    },
+    {
+      "dt": 0.1,
+      "conditional_walk_state_error": 0.00015604768330927424,
+      "conditional_walk_generator_error": 0.06795226690386752,
+      "rigid_shift_state_error": 0.056611475511419575,
+      "rigid_shift_generator_error": 0.5668360116857726,
+      "conditional_walk_flavor_leakage": 0.0
+    },
+    {
+      "dt": 0.05,
+      "conditional_walk_state_error": 1.952070654137986e-05,
+      "conditional_walk_generator_error": 0.03399403199273888,
+      "rigid_shift_state_error": 0.02830857362185714,
+      "rigid_shift_generator_error": 0.5663518790199159,
+      "conditional_walk_flavor_leakage": 0.0
+    },
+    {
+      "dt": 0.025,
+      "conditional_walk_state_error": 2.4405493338887056e-06,
+      "conditional_walk_generator_error": 0.01699925395626483,
+      "rigid_shift_state_error": 0.014154641307514194,
+      "rigid_shift_generator_error": 0.5662307597300112,
+      "conditional_walk_flavor_leakage": 0.0
+    }
+  ],
+  "massless_single_channel_rigid_shift_error": 1.7914684188828267e-17,
+  "issue": "The prior edge gate translated the complete massive carrier in one direction as one scalar object.",
+  "why_it_matters": "Massive Dirac transport conditionally sends two internal channels to each adjacent edge and mixes them locally; a rigid whole-carrier shift is not the equation being derived.",
+  "symptoms": "The conditional walk converges to the cubical Dirac generator under timestep refinement, while the rigid-shift generator retains an order-one mismatch. Rigid shift is exact only for the massless single-chirality control.",
+  "expected_symptoms": "A correct native movement bridge should reproduce signed +/- gamma bond currents and beta mixing inside each flavor copy.",
+  "root_cause": "The test target conflated carrier-envelope translation with the microscopic conditional motion of its four spinor channels.",
+  "corrective_action": "Replace the rigid endpoint gate with a frozen cubical readout that measures the two signed edge-channel currents and local mass mixing. Then compare their recombination to Dirac current; do not install the conditional shift in the native action.",
+  "copy_result": "Both flavor copies obey the same conditional shift independently; transport does not exchange or alternate the copies.",
+  "claim_boundary": "This repairs the independent comparator. It does not establish that the current Psi-chi action generates these channel currents."
+}

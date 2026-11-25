@@ -1,0 +1,118 @@
+{
+  "status": "V4_C19_HODGE_REST_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "operator": "D(tau,W)=(-div19 W, grad19 tau+curl19 W)",
+  "native_fields": "tau=(chi dot psi)/chi0, W=(chi cross psi)/chi0; common/relative and unactivated/activated variants",
+  "square_identity": {
+    "scalar_relative_error": 1.9877659477122888e-16,
+    "vector_relative_error": 1.9241558111716934e-16
+  },
+  "basis": [
+    "tensor_common_local",
+    "tensor_common_C19_gradient",
+    "tensor_relative_local",
+    "tensor_relative_C19_gradient",
+    "area_common_local",
+    "area_common_C19_gradient",
+    "area_relative_local",
+    "area_relative_C19_gradient",
+    "hodge_common",
+    "hodge_common_activated",
+    "hodge_relative",
+    "hodge_relative_activated"
+  ],
+  "rest_DEL_norms": {
+    "tensor_common_local": 1.7262560117566925,
+    "tensor_common_C19_gradient": 17.331472807211547,
+    "tensor_relative_local": 1.7262560117566927,
+    "tensor_relative_C19_gradient": 15.707981186035433,
+    "area_common_local": 1.7262560117566925,
+    "area_common_C19_gradient": 20.715072141080313,
+    "area_relative_local": 1.312156454689753,
+    "area_relative_C19_gradient": 10.758944353507784,
+    "hodge_common": 1.6243841733666229,
+    "hodge_common_activated": 0.2104029376803872,
+    "hodge_relative": 1.6564443530128088,
+    "hodge_relative_activated": 0.18965464507872223
+  },
+  "normalized_force_rank": 9,
+  "nullity": 3,
+  "normalized_singular_values": [
+    2.7635437012364035,
+    1.257216493191773,
+    1.18637946881202,
+    0.8059899306091619,
+    0.6019058705350323,
+    0.5174115244043983,
+    0.27586930935997334,
+    0.11566593806118165,
+    0.07502693313602814,
+    1.585427024617784e-15,
+    4.881642658713897e-16,
+    2.3458112259051316e-16
+  ],
+  "nullspace_directions": [
+    {
+      "hodge_fraction": 8.737600954698878e-16,
+      "rest_DEL_norm": 2.8117790056619816e-15,
+      "coefficients": {
+        "tensor_common_local": 0.39080734853207505,
+        "tensor_relative_local": 0.841382669044055,
+        "area_common_local": 0.3732335470393898,
+        "area_common_C19_gradient": 0.00644514778938242
+      }
+    },
+    {
+      "hodge_fraction": 4.9086893818281155e-15,
+      "rest_DEL_norm": 1.98914389420033e-15,
+      "coefficients": {
+        "tensor_common_local": -0.6869162616966713,
+        "tensor_relative_local": 0.4199735839682722,
+        "area_common_local": -0.5762762301805366,
+        "area_common_C19_gradient": 0.14026383965379013
+      }
+    },
+    {
+      "hodge_fraction": 2.0745781508652114e-15,
+      "rest_DEL_norm": 5.52012161670554e-16,
+      "coefficients": {
+        "tensor_common_local": -0.6891789180411336,
+        "tensor_relative_local": 0.0017802273268316344,
+        "area_common_local": 0.7245836033891603,
+        "area_common_C19_gradient": -0.0028020381684328763
+      }
+    }
+  ],
+  "hodge_nullspace_directions": 0,
+  "maximum_hodge_fraction_in_reported_null_basis": 4.9086893818281155e-15,
+  "individual_hodge_cancellation_by_old_basis": [
+    {
+      "hodge_term": "hodge_common",
+      "raw_rest_DEL_norm": 1.6243841733666229,
+      "best_cancelled_rest_DEL_norm": 1.6243841733666238,
+      "best_cancelled_relative_residual": 1.0000000000000004
+    },
+    {
+      "hodge_term": "hodge_common_activated",
+      "raw_rest_DEL_norm": 0.2104029376803872,
+      "best_cancelled_rest_DEL_norm": 0.21040293768038718,
+      "best_cancelled_relative_residual": 0.9999999999999999
+    },
+    {
+      "hodge_term": "hodge_relative",
+      "raw_rest_DEL_norm": 1.6564443530128088,
+      "best_cancelled_rest_DEL_norm": 1.6564443530128097,
+      "best_cancelled_relative_residual": 1.0000000000000004
+    },
+    {
+      "hodge_term": "hodge_relative_activated",
+      "raw_rest_DEL_norm": 0.18965464507872223,
+      "best_cancelled_rest_DEL_norm": 0.1896546450787223,
+      "best_cancelled_relative_residual": 1.0000000000000002
+    }
+  ],
+  "exact_rest_preserving_hodge_direction_found": false,
+  "verdict": "HODGE_CONNECTION_REQUIRES_RESOLVED_REST_ORBIT",
+  "interpretation": "The complete first-order C19 square root exists geometrically, but it may enter the action only if its rest force cancels exactly or the carrier is re-solved as a deformed native orbit."
+}

@@ -1,0 +1,53 @@
+{
+  "status": "V4_TWO_UPDATE_EDGE_ORBIT_INCONCLUSIVE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "relative_period_updates": 2,
+  "axis": 0,
+  "sign": 1,
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "dt": 0.03981149431205911,
+      "translation_phase_psi": 3.1415913359847485,
+      "translation_phase_chi": 5.785811362193119e-07,
+      "initial_scaled_del_rms": 0.008565363934430673,
+      "final_scaled_del_rms": 0.006810633731852012,
+      "relative_residual_reduction": 0.20486347293721796,
+      "optimizer_evaluations": 459,
+      "minimum_trace_residual": 0.006810633731852012,
+      "intermediate_psi_charge": 679.6424194734104,
+      "endpoint_psi_charge": 1343.515463917526,
+      "charge_relative_change": -0.49413130125673677,
+      "intermediate_center_of_density": [
+        1.9966535827235503,
+        1.4263223684898758,
+        1.573630375033493
+      ],
+      "endpoint_constraint_defect": 0.0
+    },
+    {
+      "coefficient": 1.149584487534626,
+      "dt": 0.03981149431205911,
+      "translation_phase_psi": 3.1415913359847485,
+      "translation_phase_chi": 5.785811362193119e-07,
+      "initial_scaled_del_rms": 0.011328386427603697,
+      "final_scaled_del_rms": 0.0015365927679214671,
+      "relative_residual_reduction": 0.8643590790496627,
+      "optimizer_evaluations": 506,
+      "minimum_trace_residual": 0.0015365927679214671,
+      "intermediate_psi_charge": 4372.969353130164,
+      "endpoint_psi_charge": 1343.515463917526,
+      "charge_relative_change": 2.25487087463744,
+      "intermediate_center_of_density": [
+        1.999504946915486,
+        1.5000084258319009,
+        1.5000205294828066
+      ],
+      "endpoint_constraint_defect": 0.0
+    }
+  ],
+  "density_mold_candidate_better_than_metric_incumbent": true,
+  "verdict": "NO_CONVERGED_TWO_UPDATE_ORBIT_FROM_THIS_INITIALIZATION",
+  "claim_boundary": "A failed nonlinear solve is not a no-go theorem. A pass would still require independent free evolution, all directions, rest stability, conservation, and Dirac current checks."
+}

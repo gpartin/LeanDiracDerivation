@@ -1,0 +1,385 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_wedge_metric_sq",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "chi_lift": "prior",
+  "chi_scales": {
+    "plus": [
+      0.0003479600832739469,
+      -5.499963616435744e-09
+    ],
+    "minus": [
+      0.0003044126836514495,
+      1.3588621367613447e-08
+    ]
+  },
+  "requested_updates": 4,
+  "all_solvers_converged": true,
+  "maximum_native_vs_dirac_relative_error": 0.00996209039444734,
+  "maximum_outside_four_component_fraction": 0.00024792936396836844,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.0008853140458219764,
+          "outside_four_component_fraction": 2.5674789152050224e-05,
+          "native_norm_ratio": 0.9995123150025156
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "native_vs_dirac_relative_error": 0.0026325434011903455,
+          "outside_four_component_fraction": 7.646990037516599e-05,
+          "native_norm_ratio": 0.9985576659073859
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "native_vs_dirac_relative_error": 0.005203497844638364,
+          "outside_four_component_fraction": 0.00015116830794948674,
+          "native_norm_ratio": 0.9971677093974016
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "native_vs_dirac_relative_error": 0.008546321227278037,
+          "outside_four_component_fraction": 0.00024792936396836844,
+          "native_norm_ratio": 0.9953842527715816
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 9,
+          "native_vs_dirac_relative_error": 0.0008336790340144986,
+          "outside_four_component_fraction": 2.3814486988479117e-05,
+          "native_norm_ratio": 0.9999142338345386
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.0024786853438969044,
+          "outside_four_component_fraction": 7.09806819252213e-05,
+          "native_norm_ratio": 0.999749790782148
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_vs_dirac_relative_error": 0.004899955696473759,
+          "outside_four_component_fraction": 0.0001405292724344713,
+          "native_norm_ratio": 0.99951644938911
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.008050652297804209,
+          "outside_four_component_fraction": 0.0002310129679812379,
+          "native_norm_ratio": 0.9992264694156467
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_vs_dirac_relative_error": 0.0009093330466802632,
+          "outside_four_component_fraction": 2.426681746303065e-05,
+          "native_norm_ratio": 0.9995390979607752
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "native_vs_dirac_relative_error": 0.0027206792040477628,
+          "outside_four_component_fraction": 7.226312545870642e-05,
+          "native_norm_ratio": 0.9986364598825281
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "native_vs_dirac_relative_error": 0.005409806941706533,
+          "outside_four_component_fraction": 0.00014291888392126319,
+          "native_norm_ratio": 0.9973223206251313
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "native_vs_dirac_relative_error": 0.008936115727621432,
+          "outside_four_component_fraction": 0.00023465421352886987,
+          "native_norm_ratio": 0.9956373199840934
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.0008620825670358148,
+          "outside_four_component_fraction": 2.4279989431263364e-05,
+          "native_norm_ratio": 0.9997246112019479
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "native_vs_dirac_relative_error": 0.002570636556552558,
+          "outside_four_component_fraction": 7.22306871744006e-05,
+          "native_norm_ratio": 0.9991750410527055
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "native_vs_dirac_relative_error": 0.005099152990562963,
+          "outside_four_component_fraction": 0.00014266214760620647,
+          "native_norm_ratio": 0.9983596133313155
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.008410867588617588,
+          "outside_four_component_fraction": 0.0002338424108703011,
+          "native_norm_ratio": 0.9972935039803524
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.0006885279209967286,
+          "outside_four_component_fraction": 2.3824876340436704e-05,
+          "native_norm_ratio": 1.0000457368749016
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.002064089347267603,
+          "outside_four_component_fraction": 7.092077592675837e-05,
+          "native_norm_ratio": 1.000134049720327
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 30,
+          "native_vs_dirac_relative_error": 0.004113525647055368,
+          "outside_four_component_fraction": 0.00014014541549992203,
+          "native_norm_ratio": 1.0002615787807099
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.006812149136283887,
+          "outside_four_component_fraction": 0.00022982191533159343,
+          "native_norm_ratio": 1.0004248088793755
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_vs_dirac_relative_error": 0.0007778203751486494,
+          "outside_four_component_fraction": 2.2329276940254375e-05,
+          "native_norm_ratio": 0.9996560937411323
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 13,
+          "native_vs_dirac_relative_error": 0.0023332078404749994,
+          "outside_four_component_fraction": 6.660529927816124e-05,
+          "native_norm_ratio": 0.9989705716648647
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.004651573277956566,
+          "outside_four_component_fraction": 0.00013209452388256984,
+          "native_norm_ratio": 0.997953679435502
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 13,
+          "native_vs_dirac_relative_error": 0.007704205886213355,
+          "outside_four_component_fraction": 0.00021773406342145719,
+          "native_norm_ratio": 0.9966234616614471
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.000879215530412574,
+          "outside_four_component_fraction": 2.338586069632396e-05,
+          "native_norm_ratio": 0.9998760561179509
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.0026237259947783807,
+          "outside_four_component_fraction": 6.941482852139858e-05,
+          "native_norm_ratio": 0.9996168387620629
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.005204569962116884,
+          "outside_four_component_fraction": 0.0001367871906252273,
+          "native_norm_ratio": 0.9992147424250069
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.008578160607935986,
+          "outside_four_component_fraction": 0.00022369436191095596,
+          "native_norm_ratio": 0.9986661700845001
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.0010292888174150646,
+          "outside_four_component_fraction": 2.0339713786235734e-05,
+          "native_norm_ratio": 0.9997577875118663
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 13,
+          "native_vs_dirac_relative_error": 0.003063906292983136,
+          "outside_four_component_fraction": 6.035667424262271e-05,
+          "native_norm_ratio": 0.9992709273636676
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 27,
+          "native_vs_dirac_relative_error": 0.006061456154384559,
+          "outside_four_component_fraction": 0.00011908271829259104,
+          "native_norm_ratio": 0.9985430556025703
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 13,
+          "native_vs_dirac_relative_error": 0.00996209039444734,
+          "outside_four_component_fraction": 0.00019527382312509235,
+          "native_norm_ratio": 0.9975838211459214
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "Four unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

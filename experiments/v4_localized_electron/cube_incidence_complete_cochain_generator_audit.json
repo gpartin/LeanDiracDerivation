@@ -1,0 +1,1105 @@
+{
+  "status": "V4_COMPLETE_COCHAIN_NATIVE_GENERATOR_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "embedding": "complete eight-corner cubical cochains, separated into the two native rank-four flavor copies and lifted over all 125 centers",
+  "comparator": "independent exact-C19 centered-time Dirac one-step map in the carrier co-rotating frame",
+  "rows": [
+    {
+      "flavor": "plus",
+      "cases": [
+        {
+          "direction": "rest",
+          "momentum": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c19_first_symbol": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "native_vs_discrete_dirac_map_error": 0.0242454236337108,
+          "maximum_other_momentum_leakage": 0.06330949498641826,
+          "clifford_expansion_defect": 9.762176570552919e-17,
+          "leading_residual_channels": [
+            {
+              "channel": "beta",
+              "coefficient_real": -0.013526306747406682,
+              "coefficient_imag": 0.0018591857177505788,
+              "magnitude": 0.013653481085716832
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.013499159485856282,
+              "coefficient_imag": -0.0018473139527608617,
+              "magnitude": 0.013624972501427244
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.008793311680190508,
+              "coefficient_imag": -0.00017272901910304292,
+              "magnitude": 0.008795007994255328
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.008682541601345878,
+              "coefficient_imag": -0.00014736496446100908,
+              "magnitude": 0.008683792091698905
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.0003661058149882924,
+              "coefficient_imag": 0.002521220562443469,
+              "magnitude": 0.00254766296677092
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.000309309063656291,
+              "coefficient_imag": 0.002482845050530455,
+              "magnitude": 0.0025020374980810156
+            },
+            {
+              "channel": "alpha_x*alpha_z",
+              "coefficient_real": 0.0013221082890046937,
+              "coefficient_imag": -0.002025355193350082,
+              "magnitude": 0.0024186843504444863
+            },
+            {
+              "channel": "alpha_z",
+              "coefficient_real": -0.0013730907262946067,
+              "coefficient_imag": 0.0019381539650177811,
+              "magnitude": 0.002375251341384822
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": null
+        },
+        {
+          "direction": "x",
+          "momentum": [
+            1.2566370614359172,
+            0.0,
+            0.0
+          ],
+          "c19_first_symbol": [
+            0.9510565162951535,
+            0.0,
+            0.0
+          ],
+          "native_vs_discrete_dirac_map_error": 0.025232130803573293,
+          "maximum_other_momentum_leakage": 0.06483505682098335,
+          "clifford_expansion_defect": 9.894120319455505e-17,
+          "leading_residual_channels": [
+            {
+              "channel": "beta",
+              "coefficient_real": -0.013603598013730957,
+              "coefficient_imag": 0.0018960024532203848,
+              "magnitude": 0.013735090251680276
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.013283833850988358,
+              "coefficient_imag": -0.0020298058178388357,
+              "magnitude": 0.013438018955143521
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.008447351019706291,
+              "coefficient_imag": 0.0015093012426278618,
+              "magnitude": 0.008581126353290162
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.008359652161861133,
+              "coefficient_imag": 0.0012009577416339447,
+              "magnitude": 0.00844547711881928
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.003283696525967083,
+              "coefficient_imag": 0.003037912613053158,
+              "magnitude": 0.0044734299948915885
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.0025230567081518827,
+              "coefficient_imag": 0.003064232350454122,
+              "magnitude": 0.003969299062822025
+            },
+            {
+              "channel": "beta*alpha_x*alpha_z",
+              "coefficient_real": -0.002200847641062733,
+              "coefficient_imag": 0.002665955058765815,
+              "magnitude": 0.0034570285961401065
+            },
+            {
+              "channel": "alpha_x*alpha_z",
+              "coefficient_real": 0.0022256212217064216,
+              "coefficient_imag": -0.002586962817889208,
+              "magnitude": 0.003412589404492028
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 4.554907686737869,
+          "transport_increment_clifford_expansion_defect": 9.422427952309213e-17,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.008725757976849425,
+              "coefficient_imag": -0.0013202628208095247,
+              "magnitude": 0.008825074854445331
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.008756660083362584,
+              "coefficient_imag": -0.0009735438079025928,
+              "magnitude": 0.00881061197428766
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": -0.006159484893193996,
+              "coefficient_imag": 0.003211597314915129,
+              "magnitude": 0.0069464819486309125
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": -0.005509615154223426,
+              "coefficient_imag": 0.0032106416321562004,
+              "magnitude": 0.006376839251367644
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.002593037469586668,
+              "coefficient_imag": -0.0034193558292872216,
+              "magnitude": 0.004291367801291441
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.002458484105007531,
+              "coefficient_imag": 0.0032684556174815364,
+              "magnitude": 0.00408985894842613
+            },
+            {
+              "channel": "beta*alpha_x*alpha_z",
+              "coefficient_real": -0.0009613673723583504,
+              "coefficient_imag": 0.0007009128847409081,
+              "magnitude": 0.0011897504346000554
+            },
+            {
+              "channel": "alpha_x*alpha_z",
+              "coefficient_real": 0.0009035129327017276,
+              "coefficient_imag": -0.0005616076245391259,
+              "magnitude": 0.0010638321030593861
+            }
+          ]
+        },
+        {
+          "direction": "y",
+          "momentum": [
+            0.0,
+            1.2566370614359172,
+            0.0
+          ],
+          "c19_first_symbol": [
+            0.0,
+            0.9510565162951535,
+            0.0
+          ],
+          "native_vs_discrete_dirac_map_error": 0.03152291847363809,
+          "maximum_other_momentum_leakage": 0.05528990952364006,
+          "clifford_expansion_defect": 1.0050644623978677e-16,
+          "leading_residual_channels": [
+            {
+              "channel": "beta",
+              "coefficient_real": -0.018060434934411538,
+              "coefficient_imag": 0.005173490652996145,
+              "magnitude": 0.01878681227767902
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.01774632802448864,
+              "coefficient_imag": -0.0052272911121485095,
+              "magnitude": 0.01850018191056233
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.003456668848928238,
+              "coefficient_imag": 0.005960485010565024,
+              "magnitude": 0.006890278738361838
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.0037267954164925446,
+              "coefficient_imag": 0.00578228127757541,
+              "magnitude": 0.006879228216114723
+            },
+            {
+              "channel": "alpha_z",
+              "coefficient_real": -0.005199866552402334,
+              "coefficient_imag": -0.0022134767274964613,
+              "magnitude": 0.005651379600235767
+            },
+            {
+              "channel": "beta*alpha_z",
+              "coefficient_real": -0.0050740032027086655,
+              "coefficient_imag": -0.0021646979459694835,
+              "magnitude": 0.00551646858944944
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.0030586480098377727,
+              "coefficient_imag": 0.004310107010873853,
+              "magnitude": 0.005285106441053814
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.0029367478893283527,
+              "coefficient_imag": 0.004306122339539128,
+              "magnitude": 0.005212214286515133
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 5.244795624836886,
+          "transport_increment_clifford_expansion_defect": 9.255589898149782e-17,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "alpha_x",
+              "coefficient_real": -0.005225872752417641,
+              "coefficient_imag": 0.006107849975026033,
+              "magnitude": 0.008038381512586141
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": -0.005066516263697964,
+              "coefficient_imag": 0.005955010296678453,
+              "magnitude": 0.007818678576579445
+            },
+            {
+              "channel": "alpha_z",
+              "coefficient_real": -0.0038267758261077275,
+              "coefficient_imag": -0.004151630692514243,
+              "magnitude": 0.005646259879806169
+            },
+            {
+              "channel": "beta",
+              "coefficient_real": -0.004534128187004855,
+              "coefficient_imag": 0.0033143049352455664,
+              "magnitude": 0.005616309786682449
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.0042840947897446295,
+              "coefficient_imag": -0.0035853480618592724,
+              "magnitude": 0.005586428992853585
+            },
+            {
+              "channel": "beta*alpha_z",
+              "coefficient_real": -0.003777377599364355,
+              "coefficient_imag": -0.004042003267541335,
+              "magnitude": 0.005532302589609
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.004465111354241494,
+              "coefficient_imag": 0.00322699093413096,
+              "magnitude": 0.005509146022274206
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.0042471685386323565,
+              "coefficient_imag": -0.003379977159387648,
+              "magnitude": 0.005427954144383564
+            }
+          ]
+        },
+        {
+          "direction": "z",
+          "momentum": [
+            0.0,
+            0.0,
+            1.2566370614359172
+          ],
+          "c19_first_symbol": [
+            0.0,
+            0.0,
+            0.9510565162951535
+          ],
+          "native_vs_discrete_dirac_map_error": 0.024223976056428766,
+          "maximum_other_momentum_leakage": 0.06443375065095376,
+          "clifford_expansion_defect": 9.498291808460768e-17,
+          "leading_residual_channels": [
+            {
+              "channel": "beta",
+              "coefficient_real": -0.014152163160628842,
+              "coefficient_imag": -0.00013237683653630818,
+              "magnitude": 0.014152782261870332
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.013988466958883117,
+              "coefficient_imag": 4.464469998468538e-05,
+              "magnitude": 0.01398853820129185
+            },
+            {
+              "channel": "beta*alpha_x*alpha_z",
+              "coefficient_real": -0.003960467852005583,
+              "coefficient_imag": 0.004297978230482103,
+              "magnitude": 0.005844477947299295
+            },
+            {
+              "channel": "alpha_x*alpha_z",
+              "coefficient_real": 0.004153115240205112,
+              "coefficient_imag": -0.0039167231997646445,
+              "magnitude": 0.0057086852095730905
+            },
+            {
+              "channel": "alpha_z",
+              "coefficient_real": -0.005235345657791134,
+              "coefficient_imag": -0.00028879021247508465,
+              "magnitude": 0.005243304677717468
+            },
+            {
+              "channel": "beta*alpha_z",
+              "coefficient_real": -0.004444167661988164,
+              "coefficient_imag": 0.00013935452104719972,
+              "magnitude": 0.004446351975541032
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.0008778189609068987,
+              "coefficient_imag": 0.0033425920797023837,
+              "magnitude": 0.0034559351758122973
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.0005961651608030286,
+              "coefficient_imag": -0.0033952986397379164,
+              "magnitude": 0.003447240309575392
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 4.470022801329618,
+          "transport_increment_clifford_expansion_defect": 1.249983311300346e-16,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": -0.006932196761667832,
+              "coefficient_imag": -0.0018620788049957485,
+              "magnitude": 0.0071779307198169846
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": -0.0069379776789779465,
+              "coefficient_imag": -0.0016429232101353077,
+              "magnitude": 0.007129847890971975
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.0017101746975916065,
+              "coefficient_imag": -0.0044805810467537675,
+              "magnitude": 0.004795863218734624
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.001886924692586072,
+              "coefficient_imag": -0.004392704924862879,
+              "magnitude": 0.004780830613230889
+            },
+            {
+              "channel": "alpha_z",
+              "coefficient_real": -0.0038622549314965265,
+              "coefficient_imag": -0.0022269441774928666,
+              "magnitude": 0.004458283697291887
+            },
+            {
+              "channel": "alpha_y",
+              "coefficient_real": -0.003674900386896179,
+              "coefficient_imag": 0.0011694278418882171,
+              "magnitude": 0.0038564821185885227
+            },
+            {
+              "channel": "beta*alpha_y",
+              "coefficient_real": -0.0035504064878282044,
+              "coefficient_imag": 0.0008875867483613384,
+              "magnitude": 0.003659671633450091
+            },
+            {
+              "channel": "beta*alpha_z",
+              "coefficient_real": -0.0031475420586438525,
+              "coefficient_imag": -0.001737950800524652,
+              "magnitude": 0.0035954824427295233
+            }
+          ]
+        },
+        {
+          "direction": "diagonal",
+          "momentum": [
+            1.2566370614359172,
+            1.2566370614359172,
+            1.2566370614359172
+          ],
+          "c19_first_symbol": [
+            0.5129472561958756,
+            0.5129472561958756,
+            0.5129472561958756
+          ],
+          "native_vs_discrete_dirac_map_error": 0.0388249780948805,
+          "maximum_other_momentum_leakage": 0.06295882726371904,
+          "clifford_expansion_defect": 7.837491944411564e-17,
+          "leading_residual_channels": [
+            {
+              "channel": "identity",
+              "coefficient_real": 0.018252933490932377,
+              "coefficient_imag": 0.004017102469357911,
+              "magnitude": 0.018689748346987507
+            },
+            {
+              "channel": "beta",
+              "coefficient_real": -0.018144664559038074,
+              "coefficient_imag": -0.0035300962747637343,
+              "magnitude": 0.018484870344936507
+            },
+            {
+              "channel": "alpha_y",
+              "coefficient_real": -0.008875534957716437,
+              "coefficient_imag": -0.003478893491203904,
+              "magnitude": 0.009532985928280151
+            },
+            {
+              "channel": "alpha_y*alpha_z",
+              "coefficient_real": 0.00074173106873481,
+              "coefficient_imag": -0.009353225906167831,
+              "magnitude": 0.009382590251638165
+            },
+            {
+              "channel": "beta*alpha_y",
+              "coefficient_real": -0.008647203258998272,
+              "coefficient_imag": -0.003455767508949795,
+              "magnitude": 0.009312166948586317
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.004947581493415457,
+              "coefficient_imag": 0.007806274101409966,
+              "magnitude": 0.009242103547371188
+            },
+            {
+              "channel": "beta*alpha_y*alpha_z",
+              "coefficient_real": -0.0007542556204878887,
+              "coefficient_imag": 0.009182554674257442,
+              "magnitude": 0.009213479901034395
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.004887293162909316,
+              "coefficient_imag": 0.007409226837466632,
+              "magnitude": 0.008875938079395098
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 8.706477674210221,
+          "transport_increment_clifford_expansion_defect": 1.3518310544480326e-16,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "alpha_y",
+              "coefficient_real": -0.010608688499969024,
+              "coefficient_imag": -0.0020683262013870395,
+              "magnitude": 0.010808433973741023
+            },
+            {
+              "channel": "beta*alpha_y",
+              "coefficient_real": -0.010354435012662162,
+              "coefficient_imag": -0.0021055266905373685,
+              "magnitude": 0.01056634123412685
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.009846380798441905,
+              "coefficient_imag": 0.0021308219195831264,
+              "magnitude": 0.010074304783998813
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.009551392447418684,
+              "coefficient_imag": -0.002172999930259485,
+              "magnitude": 0.009795459477814933
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.004753774005076095,
+              "coefficient_imag": 0.005864416422118773,
+              "magnitude": 0.007549155400662618
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.005256890557071747,
+              "coefficient_imag": 0.00532342905087951,
+              "magnitude": 0.007481563686073789
+            },
+            {
+              "channel": "alpha_y*alpha_z",
+              "coefficient_real": 0.001067838439824258,
+              "coefficient_imag": -0.007128306719678848,
+              "magnitude": 0.007207845421718263
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.005253398977897609,
+              "coefficient_imag": 0.004888006275023161,
+              "magnitude": 0.00717570945381998
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "cases": [
+        {
+          "direction": "rest",
+          "momentum": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c19_first_symbol": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "native_vs_discrete_dirac_map_error": 0.04778943128088416,
+          "maximum_other_momentum_leakage": 0.07650619262482491,
+          "clifford_expansion_defect": 1.2621152319735973e-16,
+          "leading_residual_channels": [
+            {
+              "channel": "identity",
+              "coefficient_real": 0.015476036853210695,
+              "coefficient_imag": 0.009127864901222233,
+              "magnitude": 0.017967349118245025
+            },
+            {
+              "channel": "beta",
+              "coefficient_real": -0.015413233725642465,
+              "coefficient_imag": -0.009127124481372432,
+              "magnitude": 0.017912905269099992
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": -0.006375826321073956,
+              "coefficient_imag": 0.011654232020484712,
+              "magnitude": 0.013284287156780022
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": -0.0061575495546393995,
+              "coefficient_imag": 0.011595459927991318,
+              "magnitude": 0.013128979680824108
+            },
+            {
+              "channel": "alpha_y",
+              "coefficient_real": -0.009530286327873618,
+              "coefficient_imag": -0.006427632123653462,
+              "magnitude": 0.011495251724441564
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": -0.009986563905318704,
+              "coefficient_imag": -0.005684261391673728,
+              "magnitude": 0.011490965416529931
+            },
+            {
+              "channel": "beta*alpha_y",
+              "coefficient_real": -0.009450211766631576,
+              "coefficient_imag": -0.006368080984033064,
+              "magnitude": 0.011395567465176335
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": 0.009882029396856697,
+              "coefficient_imag": 0.005614665591753374,
+              "magnitude": 0.011365692882862849
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": null
+        },
+        {
+          "direction": "x",
+          "momentum": [
+            1.2566370614359172,
+            0.0,
+            0.0
+          ],
+          "c19_first_symbol": [
+            0.9510565162951535,
+            0.0,
+            0.0
+          ],
+          "native_vs_discrete_dirac_map_error": 0.05001477321131377,
+          "maximum_other_momentum_leakage": 0.06379276007444458,
+          "clifford_expansion_defect": 1.095150757503368e-16,
+          "leading_residual_channels": [
+            {
+              "channel": "beta",
+              "coefficient_real": -0.018034147168554282,
+              "coefficient_imag": -0.009766789515753016,
+              "magnitude": 0.020509038045264275
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.01756478048978999,
+              "coefficient_imag": 0.010434489780655082,
+              "magnitude": 0.020430371769429512
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.007122251117365227,
+              "coefficient_imag": 0.013780095792666733,
+              "magnitude": 0.015511850342041134
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.007057790795063757,
+              "coefficient_imag": 0.01298713250426356,
+              "magnitude": 0.014781002049596833
+            },
+            {
+              "channel": "alpha_x*alpha_z",
+              "coefficient_real": -0.012341199603674979,
+              "coefficient_imag": -0.00562309939259008,
+              "magnitude": 0.01356187503395804
+            },
+            {
+              "channel": "beta*alpha_x*alpha_z",
+              "coefficient_real": 0.011438638606296916,
+              "coefficient_imag": 0.005359092890843678,
+              "magnitude": 0.012631798358830682
+            },
+            {
+              "channel": "beta*alpha_y",
+              "coefficient_real": -0.010464840903557477,
+              "coefficient_imag": -0.004507244721331784,
+              "magnitude": 0.011394215642805032
+            },
+            {
+              "channel": "beta*alpha_y*alpha_z",
+              "coefficient_real": 0.008716765857744169,
+              "coefficient_imag": -0.006033731359584963,
+              "magnitude": 0.010601316953019253
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 10.596882254198015,
+          "transport_increment_clifford_expansion_defect": 1.441072721353608e-16,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.014255011397853174,
+              "coefficient_imag": -0.012579666811911932,
+              "magnitude": 0.019011926968396507
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.012953088926517439,
+              "coefficient_imag": -0.012585854508276454,
+              "magnitude": 0.018060626967017823
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.014397406697482735,
+              "coefficient_imag": -0.010443776304927904,
+              "magnitude": 0.017786449424213206
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.014333454931923574,
+              "coefficient_imag": 0.010426481406361751,
+              "magnitude": 0.0177245435710681
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.0014774619868184345,
+              "coefficient_imag": 0.009600110288477764,
+              "magnitude": 0.009713136026713006
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.00173969784974443,
+              "coefficient_imag": 0.008803422498560146,
+              "magnitude": 0.008973672397439098
+            },
+            {
+              "channel": "alpha_x*alpha_z",
+              "coefficient_real": -0.004039738071336377,
+              "coefficient_imag": -0.000569113553923115,
+              "magnitude": 0.004079629140285125
+            },
+            {
+              "channel": "beta*alpha_x*alpha_z",
+              "coefficient_real": 0.0032432841478419894,
+              "coefficient_imag": 4.7928401415551934e-05,
+              "magnitude": 0.0032436382651746774
+            }
+          ]
+        },
+        {
+          "direction": "y",
+          "momentum": [
+            0.0,
+            1.2566370614359172,
+            0.0
+          ],
+          "c19_first_symbol": [
+            0.0,
+            0.9510565162951535,
+            0.0
+          ],
+          "native_vs_discrete_dirac_map_error": 0.023634468588964622,
+          "maximum_other_momentum_leakage": 0.0666094797895201,
+          "clifford_expansion_defect": 4.767145661365781e-17,
+          "leading_residual_channels": [
+            {
+              "channel": "beta",
+              "coefficient_real": -0.01531669993692156,
+              "coefficient_imag": 0.00025790769642757667,
+              "magnitude": 0.015318871150889988
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.014991152802310642,
+              "coefficient_imag": -0.00010761721330134648,
+              "magnitude": 0.014991539073985198
+            },
+            {
+              "channel": "beta*alpha_x*alpha_z",
+              "coefficient_real": 0.0031919501147710293,
+              "coefficient_imag": 0.002606317432503416,
+              "magnitude": 0.004120853806452976
+            },
+            {
+              "channel": "alpha_x*alpha_z",
+              "coefficient_real": -0.003238522675690029,
+              "coefficient_imag": -0.002526589843438414,
+              "magnitude": 0.004107515716089793
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.0013300628427847408,
+              "coefficient_imag": 0.0031774871753122917,
+              "magnitude": 0.0034446323337956855
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": -0.0015230323741367497,
+              "coefficient_imag": 0.0028694881473153894,
+              "magnitude": 0.0032486289169820753
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.0011159005320444885,
+              "coefficient_imag": 0.002495260140596071,
+              "magnitude": 0.0027334149276435687
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.001099084353846464,
+              "coefficient_imag": -0.0024559672827058152,
+              "magnitude": 0.0026906805292697764
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 11.079928370790373,
+          "transport_increment_clifford_expansion_defect": 9.14629972955457e-17,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.011102464437363194,
+              "coefficient_imag": 0.008179521532269798,
+              "magnitude": 0.013790188145191482
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.01098111375070316,
+              "coefficient_imag": -0.008070632874459189,
+              "magnitude": 0.013627911586159612
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.007700412821342331,
+              "coefficient_imag": -0.010368395639873237,
+              "magnitude": 0.012915106881634225
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.007465892998876593,
+              "coefficient_imag": -0.010398541561924395,
+              "magnitude": 0.012801141546195932
+            },
+            {
+              "channel": "beta*alpha_y",
+              "coefficient_real": 0.010799133096559672,
+              "coefficient_imag": 0.004748555846114435,
+              "magnitude": 0.01179703599472673
+            },
+            {
+              "channel": "alpha_y",
+              "coefficient_real": 0.01021351448140422,
+              "coefficient_imag": 0.004809071244112649,
+              "magnitude": 0.011289067467811718
+            },
+            {
+              "channel": "alpha_z",
+              "coefficient_real": 0.010133546076462732,
+              "coefficient_imag": 0.0035769377648748983,
+              "magnitude": 0.0107463128494187
+            },
+            {
+              "channel": "beta*alpha_z",
+              "coefficient_real": 0.010064984057236354,
+              "coefficient_imag": 0.003725728125438061,
+              "magnitude": 0.010732425361357151
+            }
+          ]
+        },
+        {
+          "direction": "z",
+          "momentum": [
+            0.0,
+            0.0,
+            1.2566370614359172
+          ],
+          "c19_first_symbol": [
+            0.0,
+            0.0,
+            0.9510565162951535
+          ],
+          "native_vs_discrete_dirac_map_error": 0.03190884806606686,
+          "maximum_other_momentum_leakage": 0.10550415449424964,
+          "clifford_expansion_defect": 7.931053005774017e-17,
+          "leading_residual_channels": [
+            {
+              "channel": "identity",
+              "coefficient_real": 0.019863188869080978,
+              "coefficient_imag": -0.0022890696161006596,
+              "magnitude": 0.01999465207889694
+            },
+            {
+              "channel": "beta",
+              "coefficient_real": -0.019828446425530975,
+              "coefficient_imag": 0.0023674453041102905,
+              "magnitude": 0.01996927852773119
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.0069723795261156345,
+              "coefficient_imag": -0.0015136778223277028,
+              "magnitude": 0.007134794797750193
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.006843861326565463,
+              "coefficient_imag": -0.0016707088708132112,
+              "magnitude": 0.0070448354124331624
+            },
+            {
+              "channel": "alpha_y*alpha_z",
+              "coefficient_real": 0.0007199899336281376,
+              "coefficient_imag": -0.0037571888926765957,
+              "magnitude": 0.0038255527548026616
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.0026904251679521147,
+              "coefficient_imag": 0.0027105806664516484,
+              "magnitude": 0.0038191144436494208
+            },
+            {
+              "channel": "beta*alpha_y*alpha_z",
+              "coefficient_real": -0.0009528222882858603,
+              "coefficient_imag": 0.003602631725350387,
+              "magnitude": 0.0037265031412244123
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.0026841751279662565,
+              "coefficient_imag": -0.0024941755143296504,
+              "magnitude": 0.003664110753494529
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 13.638557013643238,
+          "transport_increment_clifford_expansion_defect": 1.2153353738540856e-16,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.013219687647639422,
+              "coefficient_imag": -0.013324940891297925,
+              "magnitude": 0.01877003439681808
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.013129929080755031,
+              "coefficient_imag": -0.01310913775031902,
+              "magnitude": 0.018553827912926642
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.01267698907327082,
+              "coefficient_imag": 0.008394842058125376,
+              "magnitude": 0.015204585661723849
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.012566204524822953,
+              "coefficient_imag": -0.008108841106083023,
+              "magnitude": 0.014955360251207011
+            },
+            {
+              "channel": "alpha_y",
+              "coefficient_real": 0.011044899367636016,
+              "coefficient_imag": 0.008571503962339511,
+              "magnitude": 0.013980718229676486
+            },
+            {
+              "channel": "beta*alpha_y",
+              "coefficient_real": 0.011050099280610556,
+              "coefficient_imag": 0.008352043921119372,
+              "magnitude": 0.013851401798072894
+            },
+            {
+              "channel": "alpha_y*alpha_z",
+              "coefficient_real": 0.009481263610967844,
+              "coefficient_imag": -0.008093882997322752,
+              "magnitude": 0.012466166276566881
+            },
+            {
+              "channel": "beta*alpha_y*alpha_z",
+              "coefficient_real": -0.00947245440468876,
+              "coefficient_imag": 0.007954060317199562,
+              "magnitude": 0.012369093256118506
+            }
+          ]
+        },
+        {
+          "direction": "diagonal",
+          "momentum": [
+            1.2566370614359172,
+            1.2566370614359172,
+            1.2566370614359172
+          ],
+          "c19_first_symbol": [
+            0.5129472561958756,
+            0.5129472561958756,
+            0.5129472561958756
+          ],
+          "native_vs_discrete_dirac_map_error": 0.028635774714524696,
+          "maximum_other_momentum_leakage": 0.08979210213565272,
+          "clifford_expansion_defect": 5.12561820734325e-17,
+          "leading_residual_channels": [
+            {
+              "channel": "beta",
+              "coefficient_real": -0.01928286608368138,
+              "coefficient_imag": 0.0012017216110267585,
+              "magnitude": 0.019320275858061613
+            },
+            {
+              "channel": "identity",
+              "coefficient_real": 0.01901021906345876,
+              "coefficient_imag": -0.0011152763307266961,
+              "magnitude": 0.01904290603176338
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.0006148150640878454,
+              "coefficient_imag": -0.0031820032817093126,
+              "magnitude": 0.0032408552031582927
+            },
+            {
+              "channel": "alpha_y*alpha_z",
+              "coefficient_real": -0.00022320477197279476,
+              "coefficient_imag": -0.00313335493499542,
+              "magnitude": 0.0031412948793278833
+            },
+            {
+              "channel": "beta*alpha_y*alpha_z",
+              "coefficient_real": 0.0001441130275570564,
+              "coefficient_imag": 0.003061260238215543,
+              "magnitude": 0.0030646505201721032
+            },
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.0011382236448119335,
+              "coefficient_imag": -0.002783050341649872,
+              "magnitude": 0.0030068126429437588
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.002920547770912297,
+              "coefficient_imag": 0.0005269719152414312,
+              "magnitude": 0.0029677093324033624
+            },
+            {
+              "channel": "alpha_y",
+              "coefficient_real": -0.002555404555935647,
+              "coefficient_imag": -0.001258163706976912,
+              "magnitude": 0.0028483448453532705
+            }
+          ],
+          "transport_increment_error_after_rest_subtraction": 13.801912679932249,
+          "transport_increment_clifford_expansion_defect": 1.0939393563429459e-16,
+          "leading_transport_increment_residual_channels": [
+            {
+              "channel": "beta*alpha_x",
+              "coefficient_real": 0.00751404996588589,
+              "coefficient_imag": -0.014437282362134585,
+              "magnitude": 0.016275628064496686
+            },
+            {
+              "channel": "alpha_x",
+              "coefficient_real": 0.006772364618727243,
+              "coefficient_imag": -0.014777463209700631,
+              "magnitude": 0.01625540960551423
+            },
+            {
+              "channel": "alpha_x*alpha_y",
+              "coefficient_real": 0.010648703837231025,
+              "coefficient_imag": 0.007221209019426557,
+              "magnitude": 0.012866264147580145
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y",
+              "coefficient_real": -0.010607076431282312,
+              "coefficient_imag": -0.007225592176397277,
+              "magnitude": 0.012834299853076452
+            },
+            {
+              "channel": "alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.011593623019292384,
+              "coefficient_imag": -0.0037600790292398713,
+              "magnitude": 0.012188120815761375
+            },
+            {
+              "channel": "beta*alpha_x*alpha_y*alpha_z",
+              "coefficient_real": 0.011520260875095958,
+              "coefficient_imag": -0.0036530135889475384,
+              "magnitude": 0.012085566553178302
+            },
+            {
+              "channel": "beta*alpha_z",
+              "coefficient_real": 0.009569413873138052,
+              "coefficient_imag": 0.006651147606807727,
+              "magnitude": 0.011653816815230587
+            },
+            {
+              "channel": "alpha_y*alpha_z",
+              "coefficient_real": 0.008538068905366913,
+              "coefficient_imag": -0.007470049039641578,
+              "magnitude": 0.011344613404054077
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "worst_native_vs_discrete_dirac_map_error": 0.05001477321131377,
+  "worst_transport_increment_error_after_rest_subtraction": 13.801912679932249,
+  "dominant_channel_counts": {
+    "beta": 7,
+    "identity": 3
+  },
+  "verdict": "CURRENT_ACTION_COMPLETE_COCHAIN_GENERATOR_MISMATCH",
+  "claim_boundary": "Linear one-step Fourier response of the current research action. No action coefficient is fitted.  This is not nonlinear mobile carrier closure or V4-006 acceptance."
+}

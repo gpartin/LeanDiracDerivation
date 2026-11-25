@@ -1,0 +1,169 @@
+{
+  "status": "V4_MIXED_PRONG_DIRAC_NONLINEAR",
+  "action_weights": {
+    "common": 0.25,
+    "relative_prongs": 0.75,
+    "provenance": "one common and three direct prong channels"
+  },
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "requested_updates": 4,
+  "all_solvers_converged": false,
+  "maximum_relative_packet_error": Infinity,
+  "maximum_outside_packet_lift_fraction": Infinity,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.0010024967170958739
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.00022980391387708566
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.0002790489793339565
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.00015673272246430182
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.002768734025795802
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.0008445829699169276
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.0004161452015486913
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "completed_updates": 1,
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 0.001600886452544853
+        }
+      ]
+    }
+  ],
+  "verdict": "MIXED_PRONG_NONLINEAR_SHORT_RUN_OPEN",
+  "claim_boundary": "Four unrestricted nonlinear updates at 0.01% tangent amplitude for both copies, both signs, one axis and a diagonal. Current, two translations, 100 cycles and refinement remain."
+}

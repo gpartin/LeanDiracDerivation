@@ -1,0 +1,755 @@
+{
+  "status": "V4_FRACTIONAL_ORBIT_ACTION_RCA",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "updates_per_cell": 64,
+      "dt": 0.0625,
+      "cell_speed": 0.25,
+      "axis": 0,
+      "odd_norm_over_state_norm": 0.311768227777258,
+      "even_norm_over_state_norm": 4.424751402627979,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.39774765010900226,
+          "beta_odd_fraction": 0.6022523498909976,
+          "flavor_plus_fraction": 0.68118888872306,
+          "flavor_minus_fraction": 0.3188111112769397
+        },
+        "chi": {
+          "beta_even_fraction": 0.4919345227608397,
+          "beta_odd_fraction": 0.5080654772391604,
+          "flavor_plus_fraction": 0.8153781826650816,
+          "flavor_minus_fraction": 0.18462181733491845
+        },
+        "carrier_site_power_fraction": 0.7294646458597257,
+        "Psi_power_fraction": 0.8760014802523347
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.19111322764873012,
+          "beta_odd_fraction": 0.8088867723512698,
+          "flavor_plus_fraction": 0.6782246947540159,
+          "flavor_minus_fraction": 0.32177530524598386
+        },
+        "chi": {
+          "beta_even_fraction": 0.5000695429391371,
+          "beta_odd_fraction": 0.49993045706086303,
+          "flavor_plus_fraction": 0.5000336301780737,
+          "flavor_minus_fraction": 0.4999663698219264
+        },
+        "carrier_site_power_fraction": 0.6825923234906148,
+        "Psi_power_fraction": 2.1124477649961424e-06
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.1338227077663382,
+          "even_norm_over_state_norm": 4.424987142099625,
+          "odd_correlation_with_total": 0.5081803311772486,
+          "even_correlation_with_total": 0.9999987849750028
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 2.5986159961812685e-18,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": -0.009749649009881449
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.26914343264496404,
+          "even_norm_over_state_norm": 0.006885894803448856,
+          "odd_correlation_with_total": 0.9030986540421578,
+          "even_correlation_with_total": -0.031038077362720084
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.0037306697341550027,
+          "even_norm_over_state_norm": 0.00013046229998891758,
+          "odd_correlation_with_total": 0.18738942586392973,
+          "even_correlation_with_total": -0.12753160139144615
+        }
+      ],
+      "term_sum_odd_relative_defect": 7.33760670504684e-14,
+      "term_sum_even_relative_defect": 5.232825215059939e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.0625,
+      "cell_speed": 0.25,
+      "axis": 1,
+      "odd_norm_over_state_norm": 0.3385925733730758,
+      "even_norm_over_state_norm": 3.8503620360558517,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.602154114464548,
+          "beta_odd_fraction": 0.3978458855354519,
+          "flavor_plus_fraction": 0.6779826071272916,
+          "flavor_minus_fraction": 0.3220173928727082
+        },
+        "chi": {
+          "beta_even_fraction": 0.5081219846700968,
+          "beta_odd_fraction": 0.4918780153299031,
+          "flavor_plus_fraction": 0.9082930294500854,
+          "flavor_minus_fraction": 0.09170697054991472
+        },
+        "carrier_site_power_fraction": 0.6492730766761708,
+        "Psi_power_fraction": 0.8572735100485174
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.27006786487369333,
+          "beta_odd_fraction": 0.7299321351263066,
+          "flavor_plus_fraction": 0.8637590270313925,
+          "flavor_minus_fraction": 0.1362409729686074
+        },
+        "chi": {
+          "beta_even_fraction": 0.5000686920887388,
+          "beta_odd_fraction": 0.49993130791126106,
+          "flavor_plus_fraction": 0.500016918406094,
+          "flavor_minus_fraction": 0.499983081593906
+        },
+        "carrier_site_power_fraction": 0.6044397047814574,
+        "Psi_power_fraction": 5.597663587676063e-06
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.1587174544629336,
+          "even_norm_over_state_norm": 3.8502048590071656,
+          "odd_correlation_with_total": 0.44727212338346706,
+          "even_correlation_with_total": 0.9999969341536409
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 2.5986159961812685e-18,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.011349633281471752
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.30241045829830454,
+          "even_norm_over_state_norm": 0.009500042829620137,
+          "odd_correlation_with_total": 0.8829751433146579,
+          "even_correlation_with_total": 0.01829030641637033
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.0036437175344030555,
+          "even_norm_over_state_norm": 0.00012258004453415187,
+          "odd_correlation_with_total": 0.15966186624837703,
+          "even_correlation_with_total": -0.03897460717692489
+        }
+      ],
+      "term_sum_odd_relative_defect": 5.209483830683501e-14,
+      "term_sum_even_relative_defect": 6.398647673441341e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.0625,
+      "cell_speed": 0.25,
+      "axis": 2,
+      "odd_norm_over_state_norm": 0.2846252023872384,
+      "even_norm_over_state_norm": 3.850633972863439,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.500257898834265,
+          "beta_odd_fraction": 0.49974210116573503,
+          "flavor_plus_fraction": 0.49975302984391423,
+          "flavor_minus_fraction": 0.5002469701560858
+        },
+        "chi": {
+          "beta_even_fraction": 0.5000000000000117,
+          "beta_odd_fraction": 0.49999999999998823,
+          "flavor_plus_fraction": 0.5000965446142257,
+          "flavor_minus_fraction": 0.49990345538577435
+        },
+        "carrier_site_power_fraction": 0.5995662643277808,
+        "Psi_power_fraction": 0.824389438845741
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.6065286531671301,
+          "beta_odd_fraction": 0.39347134683286994,
+          "flavor_plus_fraction": 0.3761289830292529,
+          "flavor_minus_fraction": 0.6238710169707472
+        },
+        "chi": {
+          "beta_even_fraction": 0.4999999999999777,
+          "beta_odd_fraction": 0.5000000000000223,
+          "flavor_plus_fraction": 0.4997670617306658,
+          "flavor_minus_fraction": 0.5002329382693342
+        },
+        "carrier_site_power_fraction": 0.6044868405965533,
+        "Psi_power_fraction": 2.480721681151149e-06
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.14679875248977453,
+          "even_norm_over_state_norm": 3.8502048402587437,
+          "odd_correlation_with_total": 0.3186299267781831,
+          "even_correlation_with_total": 0.9999985519264767
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 2.5986159961812685e-18,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.01053371737393526
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.27561098945482526,
+          "even_norm_over_state_norm": 0.006553622876000475,
+          "odd_correlation_with_total": 0.8625421885605226,
+          "even_correlation_with_total": 0.06742948492822776
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.004395111513887411,
+          "even_norm_over_state_norm": 0.00011804631730396575,
+          "odd_correlation_with_total": 0.028354364662727127,
+          "even_correlation_with_total": -0.06098818432315158
+        }
+      ],
+      "term_sum_odd_relative_defect": 6.532750071466012e-14,
+      "term_sum_even_relative_defect": 5.742482953385023e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.03125,
+      "cell_speed": 0.5,
+      "axis": 0,
+      "odd_norm_over_state_norm": 0.40337617101664264,
+      "even_norm_over_state_norm": 8.849807054222538,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.44659845359899125,
+          "beta_odd_fraction": 0.5534015464010087,
+          "flavor_plus_fraction": 0.6057878249188733,
+          "flavor_minus_fraction": 0.3942121750811268
+        },
+        "chi": {
+          "beta_even_fraction": 0.49346534282603327,
+          "beta_odd_fraction": 0.5065346571739666,
+          "flavor_plus_fraction": 0.8144248675852693,
+          "flavor_minus_fraction": 0.1855751324147306
+        },
+        "carrier_site_power_fraction": 0.9105025748466407,
+        "Psi_power_fraction": 0.7875783440061983
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.4737300508469518,
+          "beta_odd_fraction": 0.5262699491530481,
+          "flavor_plus_fraction": 0.12694032566778682,
+          "flavor_minus_fraction": 0.8730596743322132
+        },
+        "chi": {
+          "beta_even_fraction": 0.5000331806046145,
+          "beta_odd_fraction": 0.49996681939538556,
+          "flavor_plus_fraction": 0.5000002348049459,
+          "flavor_minus_fraction": 0.4999997651950542
+        },
+        "carrier_site_power_fraction": 0.6826666368846657,
+        "Psi_power_fraction": 4.154309751712962e-07
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.15881384349466318,
+          "even_norm_over_state_norm": 8.84997509651223,
+          "odd_correlation_with_total": 0.5285725785191933,
+          "even_correlation_with_total": 0.9999998220307719
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 1.2993079980906342e-18,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": -0.009503107479226803
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.3479311383460641,
+          "even_norm_over_state_norm": 0.005273929313286201,
+          "odd_correlation_with_total": 0.922582861203396,
+          "even_correlation_with_total": -0.02806705408106763
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.005901818623064559,
+          "even_norm_over_state_norm": 0.00016060614409115238,
+          "odd_correlation_with_total": -0.2649652523765263,
+          "even_correlation_with_total": -0.11483749462524016
+        }
+      ],
+      "term_sum_odd_relative_defect": 7.184879516897759e-14,
+      "term_sum_even_relative_defect": 4.129945802120351e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.03125,
+      "cell_speed": 0.5,
+      "axis": 1,
+      "odd_norm_over_state_norm": 0.4141296839460869,
+      "even_norm_over_state_norm": 7.7005450431466995,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.5534347327802401,
+          "beta_odd_fraction": 0.4465652672197599,
+          "flavor_plus_fraction": 0.6385365756841476,
+          "flavor_minus_fraction": 0.3614634243158526
+        },
+        "chi": {
+          "beta_even_fraction": 0.5065728857470262,
+          "beta_odd_fraction": 0.4934271142529736,
+          "flavor_plus_fraction": 0.9081488501000035,
+          "flavor_minus_fraction": 0.09185114989999627
+        },
+        "carrier_site_power_fraction": 0.8658078366059192,
+        "Psi_power_fraction": 0.795660773878464
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.3353928845026425,
+          "beta_odd_fraction": 0.6646071154973574,
+          "flavor_plus_fraction": 0.24563102819075477,
+          "flavor_minus_fraction": 0.7543689718092451
+        },
+        "chi": {
+          "beta_even_fraction": 0.5000371054969294,
+          "beta_odd_fraction": 0.4999628945030707,
+          "flavor_plus_fraction": 0.4999900767932888,
+          "flavor_minus_fraction": 0.5000099232067112
+        },
+        "carrier_site_power_fraction": 0.6044466000621963,
+        "Psi_power_fraction": 9.577539134313312e-07
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.18835763670960579,
+          "even_norm_over_state_norm": 7.700411161632826,
+          "odd_correlation_with_total": 0.5416031891974251,
+          "even_correlation_with_total": 0.9999995334583042
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 1.2993079980906342e-18,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.010999106067427884
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.35120821148072123,
+          "even_norm_over_state_norm": 0.007399634928241192,
+          "odd_correlation_with_total": 0.8932742781209152,
+          "even_correlation_with_total": 0.019193960310189325
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.005362361730671431,
+          "even_norm_over_state_norm": 0.0001459092399943677,
+          "odd_correlation_with_total": -0.3003666046795354,
+          "even_correlation_with_total": -0.031212707020537182
+        }
+      ],
+      "term_sum_odd_relative_defect": 7.856532810565517e-14,
+      "term_sum_even_relative_defect": 3.839994000552893e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.03125,
+      "cell_speed": 0.5,
+      "axis": 2,
+      "odd_norm_over_state_norm": 0.3574444788674444,
+      "even_norm_over_state_norm": 7.700795733434549,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.5004267288893134,
+          "beta_odd_fraction": 0.49957327111068667,
+          "flavor_plus_fraction": 0.5002630414575888,
+          "flavor_minus_fraction": 0.4997369585424113
+        },
+        "chi": {
+          "beta_even_fraction": 0.4999999999999751,
+          "beta_odd_fraction": 0.5000000000000249,
+          "flavor_plus_fraction": 0.49999468946814,
+          "flavor_minus_fraction": 0.5000053105318599
+        },
+        "carrier_site_power_fraction": 0.8550608383723858,
+        "Psi_power_fraction": 0.6979985644591091
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.5093979587532235,
+          "beta_odd_fraction": 0.4906020412467765,
+          "flavor_plus_fraction": 0.6075255088394798,
+          "flavor_minus_fraction": 0.39247449116052024
+        },
+        "chi": {
+          "beta_even_fraction": 0.499999999999979,
+          "beta_odd_fraction": 0.5000000000000211,
+          "flavor_plus_fraction": 0.49990092813137216,
+          "flavor_minus_fraction": 0.5000990718686278
+        },
+        "carrier_site_power_fraction": 0.6044692858082453,
+        "Psi_power_fraction": 5.655082668940001e-07
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.17421313984940287,
+          "even_norm_over_state_norm": 7.7004108691167685,
+          "odd_correlation_with_total": 0.3660167754978121,
+          "even_correlation_with_total": 0.999999767902116
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 1.2993079980906342e-18,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.010533096350085652
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.3364459089347148,
+          "even_norm_over_state_norm": 0.005249416369655874,
+          "odd_correlation_with_total": 0.8782267169668052,
+          "even_correlation_with_total": 0.07502798781940667
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.006506551845092686,
+          "even_norm_over_state_norm": 0.0001454031968916575,
+          "odd_correlation_with_total": -0.2760661734505327,
+          "even_correlation_with_total": -0.04952835114617468
+        }
+      ],
+      "term_sum_odd_relative_defect": 8.317388271269165e-14,
+      "term_sum_even_relative_defect": 3.939599956317641e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.015625,
+      "cell_speed": 1.0,
+      "axis": 0,
+      "odd_norm_over_state_norm": 0.43714497382560696,
+      "even_norm_over_state_norm": 17.69985958914757,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.46116125720443707,
+          "beta_odd_fraction": 0.5388387427955631,
+          "flavor_plus_fraction": 0.5873447979207258,
+          "flavor_minus_fraction": 0.4126552020792743
+        },
+        "chi": {
+          "beta_even_fraction": 0.49384848185242997,
+          "beta_odd_fraction": 0.5061515181475701,
+          "flavor_plus_fraction": 0.8141819163643019,
+          "flavor_minus_fraction": 0.18581808363569813
+        },
+        "carrier_site_power_fraction": 0.9225269176933735,
+        "Psi_power_fraction": 0.7632395800260572
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.5764006188292695,
+          "beta_odd_fraction": 0.4235993811707306,
+          "flavor_plus_fraction": 0.28927779310002694,
+          "flavor_minus_fraction": 0.7107222068999731
+        },
+        "chi": {
+          "beta_even_fraction": 0.5000093909834796,
+          "beta_odd_fraction": 0.4999906090165203,
+          "flavor_plus_fraction": 0.4999994274171393,
+          "flavor_minus_fraction": 0.5000005725828607
+        },
+        "carrier_site_power_fraction": 0.6827060530464746,
+        "Psi_power_fraction": 2.728618247070032e-07
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.16446934920663955,
+          "even_norm_over_state_norm": 17.699950839178438,
+          "odd_correlation_with_total": 0.521231156023835,
+          "even_correlation_with_total": 0.999999986577463
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 6.496539990453171e-19,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": -0.009425061679166511
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.380350714896871,
+          "even_norm_over_state_norm": 0.002897157520747536,
+          "odd_correlation_with_total": 0.9305333258860418,
+          "even_correlation_with_total": -0.027661228084157483
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.00763731179288973,
+          "even_norm_over_state_norm": 9.709004308576494e-05,
+          "odd_correlation_with_total": -0.3287270437634629,
+          "even_correlation_with_total": -0.11199415807953196
+        }
+      ],
+      "term_sum_odd_relative_defect": 1.7461027864328973e-13,
+      "term_sum_even_relative_defect": 3.6987272528533254e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.015625,
+      "cell_speed": 1.0,
+      "axis": 1,
+      "odd_norm_over_state_norm": 0.44845384191132054,
+      "even_norm_over_state_norm": 15.400897119296305,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.5388936390163979,
+          "beta_odd_fraction": 0.4611063609836021,
+          "flavor_plus_fraction": 0.6269979081708267,
+          "flavor_minus_fraction": 0.37300209182917327
+        },
+        "chi": {
+          "beta_even_fraction": 0.5061862226622232,
+          "beta_odd_fraction": 0.49381377733777687,
+          "flavor_plus_fraction": 0.9080977117943874,
+          "flavor_minus_fraction": 0.09190228820561264
+        },
+        "carrier_site_power_fraction": 0.876178279401725,
+        "Psi_power_fraction": 0.7750989631267633
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.4951410734772241,
+          "beta_odd_fraction": 0.5048589265227759,
+          "flavor_plus_fraction": 0.29086597788628304,
+          "flavor_minus_fraction": 0.7091340221137169
+        },
+        "chi": {
+          "beta_even_fraction": 0.500010684453646,
+          "beta_odd_fraction": 0.49998931554635395,
+          "flavor_plus_fraction": 0.49999646158822303,
+          "flavor_minus_fraction": 0.500003538411777
+        },
+        "carrier_site_power_fraction": 0.6044540165240906,
+        "Psi_power_fraction": 5.318804957843427e-07
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.19506522382458752,
+          "even_norm_over_state_norm": 15.400823471591233,
+          "odd_correlation_with_total": 0.5481416975838993,
+          "even_correlation_with_total": 0.9999999646700561
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 6.496539990453171e-19,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.01085443459139081
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.3804547373260691,
+          "even_norm_over_state_norm": 0.004070492317109436,
+          "odd_correlation_with_total": 0.9042340307385607,
+          "even_correlation_with_total": 0.018870298792067197
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.00702674060406683,
+          "even_norm_over_state_norm": 8.811112257642176e-05,
+          "odd_correlation_with_total": -0.3543124475050497,
+          "even_correlation_with_total": -0.029730536399599314
+        }
+      ],
+      "term_sum_odd_relative_defect": 1.8959262950670053e-13,
+      "term_sum_even_relative_defect": 3.688870916185347e-15
+    },
+    {
+      "updates_per_cell": 64,
+      "dt": 0.015625,
+      "cell_speed": 1.0,
+      "axis": 2,
+      "odd_norm_over_state_norm": 0.3905234702770868,
+      "even_norm_over_state_norm": 15.401038295796912,
+      "odd_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.5004666788413807,
+          "beta_odd_fraction": 0.49953332115861926,
+          "flavor_plus_fraction": 0.500353667403569,
+          "flavor_minus_fraction": 0.49964633259643093
+        },
+        "chi": {
+          "beta_even_fraction": 0.4999999999999265,
+          "beta_odd_fraction": 0.5000000000000735,
+          "flavor_plus_fraction": 0.5000809551700385,
+          "flavor_minus_fraction": 0.4999190448299616
+        },
+        "carrier_site_power_fraction": 0.8702987650139815,
+        "Psi_power_fraction": 0.6692164014917773
+      },
+      "even_channels": {
+        "Psi": {
+          "beta_even_fraction": 0.4802968843495897,
+          "beta_odd_fraction": 0.5197031156504104,
+          "flavor_plus_fraction": 0.6933345697636955,
+          "flavor_minus_fraction": 0.3066654302363046
+        },
+        "chi": {
+          "beta_even_fraction": 0.49999999999997796,
+          "beta_odd_fraction": 0.5000000000000221,
+          "flavor_plus_fraction": 0.499972369350584,
+          "flavor_minus_fraction": 0.5000276306494159
+        },
+        "carrier_site_power_fraction": 0.6044604302329846,
+        "Psi_power_fraction": 4.4308574945170755e-07
+      },
+      "term_rows": [
+        {
+          "term": "canonical_V40",
+          "odd_norm_over_state_norm": 0.18041702853970296,
+          "even_norm_over_state_norm": 15.40082268370424,
+          "odd_correlation_with_total": 0.3667113262343426,
+          "even_correlation_with_total": 0.9999999822050515
+        },
+        {
+          "term": "activated_positive_bonds",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 6.496539990453171e-19,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.010538520409391645
+        },
+        {
+          "term": "area_bilinear_phase",
+          "odd_norm_over_state_norm": 0.0,
+          "even_norm_over_state_norm": 0.0,
+          "odd_correlation_with_total": 0.0,
+          "even_correlation_with_total": 0.0
+        },
+        {
+          "term": "density_oriented_connection",
+          "odd_norm_over_state_norm": 0.3664634771623978,
+          "even_norm_over_state_norm": 0.0029070000195058616,
+          "odd_correlation_with_total": 0.8916608770491957,
+          "even_correlation_with_total": 0.07569737583030654
+        },
+        {
+          "term": "cube_incidence_symplectic",
+          "odd_norm_over_state_norm": 0.008898415560861623,
+          "even_norm_over_state_norm": 8.899222526019004e-05,
+          "odd_correlation_with_total": -0.2695584366317916,
+          "even_correlation_with_total": -0.04681446587340489
+        }
+      ],
+      "term_sum_odd_relative_defect": 2.143069888206422e-13,
+      "term_sum_even_relative_defect": 3.7118663739507235e-15
+    }
+  ],
+  "speed_summary": [
+    {
+      "speed": 0.25,
+      "odd_norm_range": [
+        0.2846252023872384,
+        0.3385925733730758
+      ],
+      "even_norm_range": [
+        3.8503620360558517,
+        4.424751402627979
+      ]
+    },
+    {
+      "speed": 0.5,
+      "odd_norm_range": [
+        0.3574444788674444,
+        0.4141296839460869
+      ],
+      "even_norm_range": [
+        7.7005450431466995,
+        8.849807054222538
+      ]
+    },
+    {
+      "speed": 1.0,
+      "odd_norm_range": [
+        0.3905234702770868,
+        0.44845384191132054
+      ],
+      "even_norm_range": [
+        15.400897119296305,
+        17.69985958914757
+      ]
+    }
+  ],
+  "verdict": "FINITE_ORBIT_RESIDUAL_DECOMPOSED",
+  "claim_boundary": "Exact DEL inverse diagnosis at the shared rest layer. The odd residual is a requirement for action research, not an admitted force or fitted coefficient."
+}

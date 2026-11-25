@@ -1,0 +1,316 @@
+{
+  "status": "V4_EDGE_SNAP_ACTION_RESPONSE_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "B": 1197.0,
+  "historical_B_rejected": 229.0,
+  "side": 5,
+  "amplitude_sq": 167.93943298969072,
+  "target": "same-assignment one-C19-face-edge shift in both signs of all three axes, with the fixed phases from edge_snap_verlet_gate",
+  "gyroscopic": {
+    "basis_count": 30,
+    "basis_names": [
+      "relative_local",
+      "relative_bond",
+      "common_gamma",
+      "psi_berry",
+      "chi_berry",
+      "psi_density_common",
+      "chi_density_common",
+      "psi_berry_rho_psi",
+      "psi_berry_rho_chi",
+      "chi_berry_rho_psi",
+      "chi_berry_rho_chi",
+      "psi_density_relative",
+      "chi_density_relative",
+      "triangle_common",
+      "triangle_psi",
+      "triangle_chi",
+      "chi_berry_density_difference_sq",
+      "psi_bond_berry",
+      "chi_bond_berry",
+      "overlap_common_berry",
+      "overlap_relative_berry",
+      "overlap_bond_common_berry",
+      "overlap_bond_relative_berry",
+      "area_plaquette_relative_berry",
+      "chi_berry_area_weight",
+      "psi_berry_area_weight",
+      "normalized_area_common",
+      "normalized_area_relative",
+      "normalized_area_bond_common",
+      "normalized_area_bond_relative"
+    ],
+    "direction_rows": [
+      {
+        "axis": 0,
+        "sign": -1,
+        "canonical_del_residual_norm": 1864889.7049854803,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.17045127518326147
+      },
+      {
+        "axis": 0,
+        "sign": 1,
+        "canonical_del_residual_norm": 1864889.7049819112,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.1704512550496767
+      },
+      {
+        "axis": 1,
+        "sign": -1,
+        "canonical_del_residual_norm": 1666311.8195932254,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.130239050949127
+      },
+      {
+        "axis": 1,
+        "sign": 1,
+        "canonical_del_residual_norm": 1666311.8195932226,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.13023906080684647
+      },
+      {
+        "axis": 2,
+        "sign": -1,
+        "canonical_del_residual_norm": 1666311.8195931648,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.10100169756941228
+      },
+      {
+        "axis": 2,
+        "sign": 1,
+        "canonical_del_residual_norm": 1666311.8195931087,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.1010016993902041
+      }
+    ],
+    "direction_reversal": {
+      "basis_even_norm": 1.7511799748726082e-08,
+      "basis_odd_norm": 0.01412885798747488,
+      "basis_odd_over_even": 806819.2984277759,
+      "target_even_norm": 3.4641016151370656,
+      "target_odd_norm": 2.18503683890627e-06,
+      "target_odd_over_even": 6.307658035660175e-07
+    },
+    "unconstrained_fit": {
+      "active_columns": 30,
+      "response_rank": 28,
+      "relative_residual": 0.9929914026477081,
+      "explained_squared_fraction": 0.013968074267737163,
+      "coefficients": {
+        "relative_local": 636858565222774.9,
+        "relative_bond": 99146.85046473562,
+        "common_gamma": -524577101836827.06,
+        "psi_berry": 167.41962774301473,
+        "chi_berry": 2730.1805178850536,
+        "psi_density_common": 25138.163680351998,
+        "chi_density_common": 5693.588910052475,
+        "psi_berry_rho_psi": -3097.64807667453,
+        "psi_berry_rho_chi": -112281463498152.0,
+        "chi_berry_rho_psi": 1161435667017097.5,
+        "chi_berry_rho_chi": -4638.516940129054,
+        "psi_density_relative": -29271.901937427043,
+        "chi_density_relative": -25015.913653903335,
+        "triangle_common": 34836034.67423092,
+        "triangle_psi": 157458.0046222051,
+        "triangle_chi": 508334.70872881945,
+        "chi_berry_density_difference_sq": 2001.4481041405736,
+        "psi_bond_berry": -927.3706472155371,
+        "chi_bond_berry": -146.3291014618169,
+        "overlap_common_berry": 1764151150309.3347,
+        "overlap_relative_berry": -1453122165546.5225,
+        "overlap_bond_common_berry": 2.7842912476604216,
+        "overlap_bond_relative_berry": -1.804854773951342,
+        "area_plaquette_relative_berry": 94.19907465424237,
+        "chi_berry_area_weight": 11464.83091232504,
+        "psi_berry_area_weight": 13263.324025625769,
+        "normalized_area_common": 63429.29268006734,
+        "normalized_area_relative": 56235.2514977715,
+        "normalized_area_bond_common": 5809.681018208495,
+        "normalized_area_bond_relative": -103018.19959201214
+      }
+    },
+    "exact_rest_constrained_fit": {
+      "rest_response_rank": 5,
+      "rest_preserving_dimension": 25,
+      "movement_relative_residual": 0.9930185274587993,
+      "movement_explained_squared_fraction": 0.013914204123557927,
+      "absolute_scaled_rest_defect": 18.930117721060913
+    },
+    "verdict": "WRONG_DIRECTION_REVERSAL_PARITY: velocity-linear one-forms reverse while the required second-order snap response is even; the complete tested basis explains too little even before positivity and rest constraints."
+  },
+  "symmetric_kinetic": {
+    "basis_count": 11,
+    "basis_names": [
+      "relative_kinetic",
+      "parallel_kinetic",
+      "psi_gradient_kinetic",
+      "chi_gradient_kinetic",
+      "area_gradient_kinetic",
+      "area_local_kinetic",
+      "area_relative_gradient_kinetic",
+      "overlap_common_kinetic",
+      "psi_orientation_kinetic",
+      "chi_orientation_kinetic",
+      "normalized_area_wave"
+    ],
+    "direction_rows": [
+      {
+        "axis": 0,
+        "sign": -1,
+        "canonical_del_residual_norm": 1864889.7049854803,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9793843717321762
+      },
+      {
+        "axis": 0,
+        "sign": 1,
+        "canonical_del_residual_norm": 1864889.7049819112,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9793843717325668
+      },
+      {
+        "axis": 1,
+        "sign": -1,
+        "canonical_del_residual_norm": 1666311.8195932254,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9758795294689849
+      },
+      {
+        "axis": 1,
+        "sign": 1,
+        "canonical_del_residual_norm": 1666311.8195932226,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9758795294689809
+      },
+      {
+        "axis": 2,
+        "sign": -1,
+        "canonical_del_residual_norm": 1666311.8195931648,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9758795294689866
+      },
+      {
+        "axis": 2,
+        "sign": 1,
+        "canonical_del_residual_norm": 1666311.8195931087,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9758795294689875
+      }
+    ],
+    "direction_reversal": {
+      "basis_even_norm": 3.5045983906254263,
+      "basis_odd_norm": 1.8135189145649393e-06,
+      "basis_odd_over_even": 5.174683979242771e-07,
+      "target_even_norm": 3.4641016151370656,
+      "target_odd_norm": 2.18503683890627e-06,
+      "target_odd_over_even": 6.307658035660175e-07
+    },
+    "unconstrained_fit": {
+      "active_columns": 10,
+      "response_rank": 9,
+      "relative_residual": 0.2036639740521708,
+      "explained_squared_fraction": 0.9585209856732767,
+      "coefficients": {
+        "relative_kinetic": -66.74614742498473,
+        "parallel_kinetic": -161.4743169290237,
+        "psi_gradient_kinetic": 39.60840420311126,
+        "chi_gradient_kinetic": -0.9278456858888642,
+        "area_gradient_kinetic": 3070.171791592156,
+        "area_local_kinetic": -15.111558551314657,
+        "area_relative_gradient_kinetic": -87.7660239233408,
+        "psi_orientation_kinetic": 32.61615926244471,
+        "chi_orientation_kinetic": -225.64151982688915,
+        "normalized_area_wave": -3175.888806872614
+      }
+    },
+    "nonnegative_additions_fit": {
+      "active_columns": 10,
+      "response_rank": 9,
+      "relative_residual": 1.0000000000000004,
+      "explained_squared_fraction": -8.881784197001252e-16,
+      "coefficients": {}
+    },
+    "best_single_basis": {
+      "basis": "chi_gradient_kinetic",
+      "coefficient": -0.9657593860329211,
+      "relative_residual": 0.21301607719136464
+    },
+    "exact_rest_constrained_fit": {
+      "rest_response_rank": 3,
+      "rest_preserving_dimension": 7,
+      "movement_relative_residual": 0.21001320522904687,
+      "movement_explained_squared_fraction": 0.9558944536294223,
+      "absolute_scaled_rest_defect": 1.2296469663896854e-10
+    },
+    "verdict": "CORRECT_PARITY_BUT_WRONG_POSITIVE_ADDITION_SIGN: the even kinetic class contains the missing channel, but an arbitrary sum of the tested positive squares cannot reduce the defect."
+  },
+  "factorized_c19_metric": {
+    "action_family": "T_chi=(B/2)<chiDot,[I+a D19/24+b (D19/24)^2]chiDot>",
+    "unconstrained_coefficients": [
+      -2.3948762413019593,
+      1.3419859237319782
+    ],
+    "unconstrained_relative_residual": 0.07924974318878339,
+    "positive_boundary_optimizer_success": true,
+    "positive_boundary_coefficients": [
+      -2.1108179861557694,
+      1.1138881193433694
+    ],
+    "positive_boundary_relative_residual": 0.09562003065583764,
+    "positive_boundary_minimum_symbol": 1.000000082740371e-08,
+    "positive_boundary_minimum_x": 0.9476666666666667,
+    "geometric_factorization": "I-2(D19/24)+(D19/24)^2=(I-D19/24)^2=(A19/24)^2",
+    "geometric_coefficients": [
+      -2.0,
+      1.0
+    ],
+    "geometric_relative_residual": 0.09891010977036092,
+    "geometric_symbol_minimum": 0.0,
+    "geometric_zero_mode": "D19 eigenvalue 24",
+    "kappa_regularization": 0.015873015873015872,
+    "direction_rows": [
+      {
+        "axis": 0,
+        "sign": -1,
+        "semidefinite_relative_residual": 0.09347115302611572,
+        "kappa_regularized_relative_residual": 0.10161600857758857
+      },
+      {
+        "axis": 0,
+        "sign": 1,
+        "semidefinite_relative_residual": 0.0934711530250509,
+        "kappa_regularized_relative_residual": 0.10161600857650417
+      },
+      {
+        "axis": 1,
+        "sign": -1,
+        "semidefinite_relative_residual": 0.10152037479349382,
+        "kappa_regularized_relative_residual": 0.11003511996114909
+      },
+      {
+        "axis": 1,
+        "sign": 1,
+        "semidefinite_relative_residual": 0.10152037479350315,
+        "kappa_regularized_relative_residual": 0.11003511996115861
+      },
+      {
+        "axis": 2,
+        "sign": -1,
+        "semidefinite_relative_residual": 0.10152037479348816,
+        "kappa_regularized_relative_residual": 0.1100351199611433
+      },
+      {
+        "axis": 2,
+        "sign": 1,
+        "semidefinite_relative_residual": 0.10152037479348647,
+        "kappa_regularized_relative_residual": 0.11003511996114158
+      }
+    ],
+    "interpretation": "The C19-average square has the correct even-in-velocity channel, but without kappa its kinetic metric is singular.  Kappa makes the update invertible but the fixed-phase exact snap still has a finite residual.  This is a response oracle, not an admitted action or a moving solution."
+  },
+  "root_cause_update": "Literal translation needs an even-in-velocity neighbor momentum response.  The earlier gyroscopic hypothesis has the wrong direction-reversal parity.  A factorized C19 kinetic metric nearly supplies the response without changing the rest orbit, but its unregularized limit is singular and therefore erases resistance rather than proving a deterministic native snap.",
+  "next_test": "Derive the smallest positive, invertible, field-dependent C19 kinetic square whose connection force closes the remaining receiver residual; then derive its implicit reciprocal update and re-solve the phases and translation time.",
+  "claim_boundary": "This is a discrete Euler-Lagrange response-rank calculation, not a freely moving carrier, action admission, Dirac pass, or identification of one numerical update with a substrate tick."
+}

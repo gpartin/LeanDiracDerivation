@@ -1,0 +1,162 @@
+{
+  "status": "V4_EXACT_REST_POSITIVE_ACTION_CONE_FEASIBILITY",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "constraint_set": {
+    "same_exact_rest_orbit": true,
+    "positive_reciprocal_action_terms": true,
+    "C19_cubic_symmetry": true,
+    "no_prepared_rays_or_Dirac_objects": true,
+    "unchanged_uniform_quadratic_Dirac_symbol": true,
+    "three_axis_fixed_charge_response": true,
+    "nonsingular_discrete_Legendre_map": true,
+    "linear_stability_target": "spectral_radius <= 1+1e-7"
+  },
+  "admitted_screen_basis": [
+    "odd transfer-coordinate harmonic oscillator",
+    "even transfer-coordinate harmonic oscillator",
+    "density-balance positive square",
+    "pointwise parallel-overlap positive square"
+  ],
+  "excluded_before_coefficient_search": [
+    {
+      "basis": "spectral area-curvature square",
+      "reason": "not rest-null on this carrier",
+      "unit_rest_DEL_rms": 0.025855564355407548,
+      "rest_energy": 2986.167031270297
+    }
+  ],
+  "parallel_overlap_response": {
+    "tested_strength": 0.1,
+    "leading_radius_change_at_first_incumbent": 3.9679370900103095e-13,
+    "conclusion": "no resolved response on the leading unstable mode"
+  },
+  "screen_rows": [
+    {
+      "odd_transfer_strength": 0.5,
+      "even_transfer_strength": 0.15,
+      "density_balance_strength": 0.25,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 1.1903960384241087e-13,
+      "Legendre_condition_number": 1202.0257298661754,
+      "spectral_radius": 1.000721479583931,
+      "growth_rate": 0.18463217731913303,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 1.0,
+      "even_transfer_strength": 0.15,
+      "density_balance_strength": 0.5,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 2.099670329831883e-13,
+      "Legendre_condition_number": 1205.919706554295,
+      "spectral_radius": 1.000510252713167,
+      "growth_rate": 0.13059138010041504,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 1.0,
+      "even_transfer_strength": 1.0,
+      "density_balance_strength": 0.5,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 3.5410540291105594e-13,
+      "Legendre_condition_number": 1212.5838725506899,
+      "spectral_radius": 1.0003568417828275,
+      "growth_rate": 0.09133520126482003,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 1.0,
+      "even_transfer_strength": 2.0,
+      "density_balance_strength": 0.5,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 5.37950479757649e-13,
+      "Legendre_condition_number": 1220.514907584435,
+      "spectral_radius": 1.000339527787141,
+      "growth_rate": 0.08690436112008937,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 1.0,
+      "even_transfer_strength": 4.0,
+      "density_balance_strength": 0.5,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 9.016161978221183e-13,
+      "Legendre_condition_number": 1236.6710911952316,
+      "spectral_radius": 1.000360033199913,
+      "growth_rate": 0.09215191129921045,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 0.5,
+      "even_transfer_strength": 2.0,
+      "density_balance_strength": 0.5,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 4.4698009698775923e-13,
+      "Legendre_condition_number": 1216.5455060161225,
+      "spectral_radius": 1.0003264661939348,
+      "growth_rate": 0.0835617063532499,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 0.0,
+      "even_transfer_strength": 2.0,
+      "density_balance_strength": 0.5,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 3.63919792091303e-13,
+      "Legendre_condition_number": 1212.662283614944,
+      "spectral_radius": 1.000292944617761,
+      "growth_rate": 0.07498283977332108,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 0.0,
+      "even_transfer_strength": 4.0,
+      "density_balance_strength": 0.5,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 7.376899650265811e-13,
+      "Legendre_condition_number": 1228.5950108615891,
+      "spectral_radius": 1.0003504801587237,
+      "growth_rate": 0.08970720125432548,
+      "ritz_count": 4,
+      "arpack_converged": true
+    },
+    {
+      "odd_transfer_strength": 0.0,
+      "even_transfer_strength": 2.0,
+      "density_balance_strength": 1.0,
+      "parallel_strength": 0.0,
+      "rest_DEL_rms": 3.63919792091303e-13,
+      "Legendre_condition_number": 1212.662283614944,
+      "spectral_radius": 1.0002944243356047,
+      "growth_rate": 0.07536153632398158,
+      "ritz_count": 4,
+      "arpack_converged": true
+    }
+  ],
+  "best_resolved_row": {
+    "odd_transfer_strength": 0.0,
+    "even_transfer_strength": 2.0,
+    "density_balance_strength": 0.5,
+    "parallel_strength": 0.0,
+    "rest_DEL_rms": 3.63919792091303e-13,
+    "Legendre_condition_number": 1212.662283614944,
+    "spectral_radius": 1.000292944617761,
+    "growth_rate": 0.07498283977332108,
+    "ritz_count": 4,
+    "arpack_converged": true
+  },
+  "canonical_growth_rate": 1.036009262774485,
+  "best_growth_reduction_fraction": 0.9276233886437335,
+  "unresolved_edge": "The lower-density even=2 solve did not converge efficiently; therefore this is a resolved screen failure, not an analytic no-go for every real coefficient in the continuous cone.",
+  "verdict": "DECLARED_EXACT_REST_POSITIVE_CONE_NO_STABILITY_PASS",
+  "promotion_consequence": "Do not admit a coefficient or run a claimed finite handoff. The next action search must relax exact preservation of the old amplitudes and solve a nearby stable carrier while preserving its eight-site identity relations.",
+  "claim_boundary": "Scoped to the declared exact-rest, positive, local/C19 basis and the resolved side-five coefficient screen. It is not a universal two-field or all-action no-go."
+}

@@ -1,0 +1,104 @@
+{
+  "status": "V4_PERSONAL_TOUCH_COMPLETE_FRAME_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate": "plane_kinetic",
+  "base_even_strength": 0.0,
+  "base_density_strength": 0.0,
+  "action_delta": "positive local kinetic metric for the time derivative of the joint plane tensor Psi Psi^dagger + chi chi^dagger",
+  "coefficient_rule": "unit relative weights are fixed by the Hilbert--Schmidt norm; overall strength is continuation only and is not admitted",
+  "rows": [
+    {
+      "strength": 0.001,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 1.849656054341904e-15,
+          "augmented_norm": 3.329380897815427e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0040551211191522,
+      "growth_rate": 1.0360118465547072,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 0.01,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 1.4480056355118443e-15,
+          "augmented_norm": 2.6064101439213198e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0040552123251527,
+      "growth_rate": 1.0360351009902298,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 0.1,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 2.721118913159384e-15,
+          "augmented_norm": 4.898014043686891e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0040561244648338,
+      "growth_rate": 1.0362676655438863,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 1.0,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 5.198905705517896e-15,
+          "augmented_norm": 9.358030269932213e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.004065253876592,
+      "growth_rate": 1.0385953429794268,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 10.0,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 4.590025941088278e-15,
+          "augmented_norm": 8.2620466939589e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0041573675046025,
+      "growth_rate": 1.0620798795404347,
+      "count_above_1_plus_1e_minus_7": 20
+    }
+  ],
+  "verdict": "COMPLETE_FRAME_BRANCH_NO_IMPROVEMENT",
+  "claim_boundary": "Unrestricted side-three rest-branch continuation and full dense spectrum. A favorable row still requires coefficient provenance, side-five/timestep refinement, nonlinear stability, and motion."
+}

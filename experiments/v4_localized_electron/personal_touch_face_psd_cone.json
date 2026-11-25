@@ -1,0 +1,76 @@
+{
+  "status": "V4_FACE_PSD_CONE_DERIVATION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "dimension": 1500,
+  "mass_lowest_eigenvalues": [
+    0.9972457885733141,
+    0.9972457885733141,
+    0.9972457885735452,
+    0.9972457885735452,
+    0.9972457885735452,
+    0.9972457885735452,
+    0.9972457885735452,
+    0.9972457885735452
+  ],
+  "basis": [
+    "diagonal_symmetric",
+    "diagonal_antisymmetric",
+    "diagonal_reversed",
+    "diagonal_conjugate",
+    "edge_commutator"
+  ],
+  "trace": [
+    {
+      "iteration": 0,
+      "minimum_generalized_stiffness": -25.211500767391634,
+      "negative_count_in_lowest_block": 64,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linear_program_failure": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "final_coefficients": {},
+  "final_lowest_generalized_stiffness": [
+    -25.211500767391627,
+    -25.211500767391612,
+    -25.211500767375554,
+    -25.211500767375554,
+    -25.211500767375547,
+    -25.211500767375533,
+    -25.21150076732512,
+    -25.2115007673251,
+    -25.211500767200718,
+    -25.21150076717423,
+    -25.21150076716833,
+    -25.211500767153034,
+    -25.21150076714187,
+    -25.211500767126573,
+    -25.21150076712079,
+    -25.211500767094364,
+    -3.562430517338065,
+    -3.561456960611139,
+    -3.0538538656248564,
+    -3.0512585251829307,
+    -2.783346230404491,
+    -2.7791619739756737,
+    -1.7628979024655993,
+    -1.7628061684932268,
+    -0.8781805913350222,
+    -0.8770265205445555,
+    -0.6332641998321313,
+    -0.6316817084252868,
+    -0.510956544581487,
+    -0.5108639880438289,
+    -0.18812242689024714,
+    -0.18808934036804173
+  ],
+  "negative_count_in_final_lowest_block": 128,
+  "verdict": "POSITIVE_FACE_CONE_REMAINS_INDEFINITE",
+  "claim_boundary": "Positive-mass continuous co-rotating energy criterion at the exact side-five rest orbit. A pass still requires exact finite-dt Floquet, timestep/box refinement, nonlinear stability, coefficient provenance, movement, and Dirac-current gates."
+}

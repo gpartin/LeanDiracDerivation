@@ -1,0 +1,742 @@
+{
+  "status": "V4_MIXED_PRONG_DIRAC_NATIVE_SCAN",
+  "coefficient_policy": "geometric rational controls only; no coefficient admitted from the Dirac comparison",
+  "scan": [
+    {
+      "relative_prong_weight": 0.0,
+      "common_channel_weight": 1.0,
+      "geometric_interpretation": "diagnostic control",
+      "maximum_native_next_vs_dirac_relative_error": 0.021568653506602333,
+      "mean_native_next_vs_dirac_relative_error": 0.011866534431722378,
+      "maximum_native_outside_frozen_lift_fraction": 0.015758877903317262,
+      "rows": [
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.019006151369417735,
+          "native_outside_frozen_lift_fraction": 0.013932537096248292
+        },
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.01764864854362122,
+          "native_outside_frozen_lift_fraction": 0.012921862057530148
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.009060294970395814,
+          "native_outside_frozen_lift_fraction": 0.006819892308643706
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.010984397567366393,
+          "native_outside_frozen_lift_fraction": 0.00835057588660963
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.009324060430367107,
+          "native_outside_frozen_lift_fraction": 0.007029518397259399
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.011321462306520157,
+          "native_outside_frozen_lift_fraction": 0.008553368560755005
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.0023576739280330512,
+          "native_outside_frozen_lift_fraction": 0.0014576669947696699
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.0064583464399820215,
+          "native_outside_frozen_lift_fraction": 0.004824358079822498
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.013278969330444512,
+          "native_outside_frozen_lift_fraction": 0.009707628136559183
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.013332076296755258,
+          "native_outside_frozen_lift_fraction": 0.009760088392703821
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.013049536397319995,
+          "native_outside_frozen_lift_fraction": 0.009500885856096855
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.014818074185200023,
+          "native_outside_frozen_lift_fraction": 0.010825148307527836
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.007209284412945661,
+          "native_outside_frozen_lift_fraction": 0.005179283443470594
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.021568653506602333,
+          "native_outside_frozen_lift_fraction": 0.015758877903317262
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.00822141933090463,
+          "native_outside_frozen_lift_fraction": 0.006051256942507473
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.012225501891682129,
+          "native_outside_frozen_lift_fraction": 0.009053524087943347
+        }
+      ]
+    },
+    {
+      "relative_prong_weight": 0.25,
+      "common_channel_weight": 0.75,
+      "geometric_interpretation": "diagnostic control",
+      "maximum_native_next_vs_dirac_relative_error": 0.009356339959278544,
+      "mean_native_next_vs_dirac_relative_error": 0.005875672578688056,
+      "maximum_native_outside_frozen_lift_fraction": 7.785202141693921e-05,
+      "rows": [
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.003679948401796184,
+          "native_outside_frozen_lift_fraction": 7.175549128609913e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.004453146273800502,
+          "native_outside_frozen_lift_fraction": 7.116977013653599e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.005915289274499494,
+          "native_outside_frozen_lift_fraction": 7.45586787505664e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.005841124053089786,
+          "native_outside_frozen_lift_fraction": 7.457461564945608e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.006182922108131551,
+          "native_outside_frozen_lift_fraction": 7.465733631968478e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.005591285720591009,
+          "native_outside_frozen_lift_fraction": 7.49540417557375e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.0028110968454889028,
+          "native_outside_frozen_lift_fraction": 7.303933555667845e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.0028569923007258284,
+          "native_outside_frozen_lift_fraction": 7.507738760455761e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.0060099212068359525,
+          "native_outside_frozen_lift_fraction": 7.597490465076101e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.005135564083790358,
+          "native_outside_frozen_lift_fraction": 7.643087072400775e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.008948732602167647,
+          "native_outside_frozen_lift_fraction": 7.520629796753652e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.008701182929621845,
+          "native_outside_frozen_lift_fraction": 6.951432894223806e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.009356339959278544,
+          "native_outside_frozen_lift_fraction": 7.785202141693921e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.008356510054550247,
+          "native_outside_frozen_lift_fraction": 6.86581079001773e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.005319924412872728,
+          "native_outside_frozen_lift_fraction": 6.607720766852418e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.004850781031768318,
+          "native_outside_frozen_lift_fraction": 7.255834420661414e-05
+        }
+      ]
+    },
+    {
+      "relative_prong_weight": 0.3333333333333333,
+      "common_channel_weight": 0.6666666666666667,
+      "geometric_interpretation": "diagnostic control",
+      "maximum_native_next_vs_dirac_relative_error": 0.012414284912095596,
+      "mean_native_next_vs_dirac_relative_error": 0.00771724194678762,
+      "maximum_native_outside_frozen_lift_fraction": 8.759198330563738e-05,
+      "rows": [
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.004733029893565838,
+          "native_outside_frozen_lift_fraction": 7.183712421018171e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.005811683419403269,
+          "native_outside_frozen_lift_fraction": 7.258604247037266e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.007788423521699576,
+          "native_outside_frozen_lift_fraction": 7.908811428065024e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.00766164907938335,
+          "native_outside_frozen_lift_fraction": 7.908468487182518e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.008121474983253997,
+          "native_outside_frozen_lift_fraction": 7.933910511781195e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.0073534254790825725,
+          "native_outside_frozen_lift_fraction": 7.944726523248375e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.003552889850247049,
+          "native_outside_frozen_lift_fraction": 7.444291635774823e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.0035430656032056896,
+          "native_outside_frozen_lift_fraction": 7.603284150894723e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.007948601635043462,
+          "native_outside_frozen_lift_fraction": 8.039363916913728e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.006755154333752499,
+          "native_outside_frozen_lift_fraction": 7.740899830335414e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.011905274195923335,
+          "native_outside_frozen_lift_fraction": 8.53413873682622e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.011537937080974253,
+          "native_outside_frozen_lift_fraction": 8.043242234310041e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.012414284912095596,
+          "native_outside_frozen_lift_fraction": 8.759198330563738e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.011108924280577057,
+          "native_outside_frozen_lift_fraction": 7.946198058525628e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.006964960740826562,
+          "native_outside_frozen_lift_fraction": 7.078987968994647e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.0062750921395678064,
+          "native_outside_frozen_lift_fraction": 7.936872319042541e-05
+        }
+      ]
+    },
+    {
+      "relative_prong_weight": 0.5,
+      "common_channel_weight": 0.5,
+      "geometric_interpretation": "equal aggregate common and relative weights",
+      "maximum_native_next_vs_dirac_relative_error": 0.018590310233186327,
+      "mean_native_next_vs_dirac_relative_error": 0.011474308368535161,
+      "maximum_native_outside_frozen_lift_fraction": 0.0001171470911043446,
+      "rows": [
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.006920439784188725,
+          "native_outside_frozen_lift_fraction": 7.473642279537188e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.008588342182407694,
+          "native_outside_frozen_lift_fraction": 7.921477440808061e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.011603350014871738,
+          "native_outside_frozen_lift_fraction": 9.381088020597146e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.011373934666152974,
+          "native_outside_frozen_lift_fraction": 9.358290032173252e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.012070823694537946,
+          "native_outside_frozen_lift_fraction": 9.426677931391385e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.010950554925761876,
+          "native_outside_frozen_lift_fraction": 9.396755487527873e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.0051424105532805915,
+          "native_outside_frozen_lift_fraction": 7.916398613022022e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.005041070785951184,
+          "native_outside_frozen_lift_fraction": 8.027030289827649e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.011879757692127058,
+          "native_outside_frozen_lift_fraction": 9.479084591077364e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.010071098499294932,
+          "native_outside_frozen_lift_fraction": 8.279524605059626e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.01787547636565875,
+          "native_outside_frozen_lift_fraction": 0.00011537837916280753
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.017270853781814692,
+          "native_outside_frozen_lift_fraction": 0.00011088363933251881
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.018590310233186327,
+          "native_outside_frozen_lift_fraction": 0.0001171470911043446
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.016677775220247337,
+          "native_outside_frozen_lift_fraction": 0.00010980050524197514
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.010320959885711462,
+          "native_outside_frozen_lift_fraction": 8.3382100019388e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.009211775611369283,
+          "native_outside_frozen_lift_fraction": 9.583408977236625e-05
+        }
+      ]
+    },
+    {
+      "relative_prong_weight": 0.75,
+      "common_channel_weight": 0.25,
+      "geometric_interpretation": "one common plus three relative channels equally counted",
+      "maximum_native_next_vs_dirac_relative_error": 0.02804327519520712,
+      "mean_native_next_vs_dirac_relative_error": 0.017269309123099305,
+      "maximum_native_outside_frozen_lift_fraction": 0.00017454332924526534,
+      "rows": [
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.010330349221596046,
+          "native_outside_frozen_lift_fraction": 8.387508404253006e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.012872488375036984,
+          "native_outside_frozen_lift_fraction": 9.558266093211529e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.017486735948390984,
+          "native_outside_frozen_lift_fraction": 0.0001229460540137999
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.017109645684243134,
+          "native_outside_frozen_lift_fraction": 0.00012283457056749903
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.018167303188960413,
+          "native_outside_frozen_lift_fraction": 0.00012446041177471568
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.01650899895958158,
+          "native_outside_frozen_lift_fraction": 0.0001226471476344608
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.0077034442960263495,
+          "native_outside_frozen_lift_fraction": 8.832642603747004e-05
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.007529960426777336,
+          "native_outside_frozen_lift_fraction": 9.076670764948166e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.017883452689793123,
+          "native_outside_frozen_lift_fraction": 0.00011909662346285936
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.015179584514637199,
+          "native_outside_frozen_lift_fraction": 9.999780032714565e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.027003951773150695,
+          "native_outside_frozen_lift_fraction": 0.0001704658236200992
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.026045672970702358,
+          "native_outside_frozen_lift_fraction": 0.00016288497918565643
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.02804327519520712,
+          "native_outside_frozen_lift_fraction": 0.00017454332924526534
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.02520167610184043,
+          "native_outside_frozen_lift_fraction": 0.00015971350465496725
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.015486823321899709,
+          "native_outside_frozen_lift_fraction": 0.00010442116256111903
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.013755583301745398,
+          "native_outside_frozen_lift_fraction": 0.00012033063492187294
+        }
+      ]
+    },
+    {
+      "relative_prong_weight": 1.0,
+      "common_channel_weight": 0.0,
+      "geometric_interpretation": "diagnostic control",
+      "maximum_native_next_vs_dirac_relative_error": 0.4377812606106884,
+      "mean_native_next_vs_dirac_relative_error": 0.18060205543707833,
+      "maximum_native_outside_frozen_lift_fraction": 0.0012075635253295542,
+      "rows": [
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.12477107873729242,
+          "native_outside_frozen_lift_fraction": 0.0008952197556434467
+        },
+        {
+          "flavor": "plus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.19810755474656827,
+          "native_outside_frozen_lift_fraction": 0.0004256620407943741
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.026858714673321855,
+          "native_outside_frozen_lift_fraction": 0.0006072429960400825
+        },
+        {
+          "flavor": "plus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.06201724223644426,
+          "native_outside_frozen_lift_fraction": 0.0012075635253295542
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.07726867942581943,
+          "native_outside_frozen_lift_fraction": 0.000826022848036556
+        },
+        {
+          "flavor": "plus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.0257705937236088,
+          "native_outside_frozen_lift_fraction": 0.000945155757150531
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.06693165901880607,
+          "native_outside_frozen_lift_fraction": 0.0003861344843654592
+        },
+        {
+          "flavor": "plus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.02104612147177503,
+          "native_outside_frozen_lift_fraction": 0.0002541551458155133
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.18244604543283532,
+          "native_outside_frozen_lift_fraction": 0.00017847290948568964
+        },
+        {
+          "flavor": "minus",
+          "direction": "x",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.23630061392666685,
+          "native_outside_frozen_lift_fraction": 0.00045989774113534756
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.34361539253062473,
+          "native_outside_frozen_lift_fraction": 8.1242677909408e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "y",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.3439275795273293,
+          "native_outside_frozen_lift_fraction": 0.0002821627741322643
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.4377812606106884,
+          "native_outside_frozen_lift_fraction": 0.00016936628913995162
+        },
+        {
+          "flavor": "minus",
+          "direction": "z",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.24858761965641837,
+          "native_outside_frozen_lift_fraction": 6.564547965861418e-05
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": -1,
+          "native_next_vs_dirac_relative_error": 0.256519620671828,
+          "native_outside_frozen_lift_fraction": 0.0005581258701181855
+        },
+        {
+          "flavor": "minus",
+          "direction": "diagonal",
+          "sign": 1,
+          "native_next_vs_dirac_relative_error": 0.23768311060322606,
+          "native_outside_frozen_lift_fraction": 0.0009217881116290579
+        }
+      ]
+    }
+  ],
+  "best_diagnostic_weight": 0.25,
+  "best_diagnostic_maximum_error": 0.009356339959278544,
+  "verdict": "GEOMETRIC_MIXED_PRONG_NATIVE_UPDATE_PASS",
+  "claim_boundary": "One-step tangent scan. No weight is admitted until derived independently and passed through nonlinear/current/endurance gates."
+}

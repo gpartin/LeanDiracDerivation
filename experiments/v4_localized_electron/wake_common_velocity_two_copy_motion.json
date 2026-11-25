@@ -1,0 +1,116 @@
+{
+  "status": "V4_WAKE_COMMON_VELOCITY_TWO_COPY_MOTION",
+  "cycles": 10,
+  "rows": [
+    {
+      "relative_phase": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "native_Psi_displacement": [
+        -0.1339115401955535,
+        -0.10098500100616992,
+        0.06661881545354742
+      ],
+      "target_Psi_displacement": [
+        0.03647874541564544,
+        3.968932060827157e-05,
+        4.768165741886321e-05
+      ],
+      "native_joint_displacement": [
+        -0.2983622722960795,
+        -0.3501912999061654,
+        0.4173159762628753
+      ],
+      "target_joint_displacement": [
+        0.03647868043191149,
+        3.968272757415292e-05,
+        4.774879104019192e-05
+      ],
+      "native_norm_ratio": 1.0004959216707827
+    },
+    {
+      "relative_phase": {
+        "real": 0.0,
+        "imag": 1.0
+      },
+      "native_Psi_displacement": [
+        -0.38681698127463005,
+        0.12379902492933503,
+        -0.09372932192213934
+      ],
+      "target_Psi_displacement": [
+        0.03971366209917093,
+        -0.0003968506731890642,
+        0.0017446779917844601
+      ],
+      "native_joint_displacement": [
+        -0.34170978562568255,
+        0.13099707152952078,
+        -0.19687891941420865
+      ],
+      "target_joint_displacement": [
+        0.03971353029167801,
+        -0.000398377732644839,
+        0.001746070052513815
+      ],
+      "native_norm_ratio": 1.000495696544171
+    },
+    {
+      "relative_phase": {
+        "real": -1.0,
+        "imag": 0.0
+      },
+      "native_Psi_displacement": [
+        -0.6407457634417086,
+        0.12513796047472692,
+        -0.19605106406444683
+      ],
+      "target_Psi_displacement": [
+        0.03852708755942391,
+        0.0007512163717122711,
+        0.0007321931852688479
+      ],
+      "native_joint_displacement": [
+        -0.30960391316907154,
+        0.460593457201246,
+        -0.7047233595908351
+      ],
+      "target_joint_displacement": [
+        0.0385270408900773,
+        0.0007510084698152397,
+        0.0007320834334083592
+      ],
+      "native_norm_ratio": 1.0004953301964963
+    },
+    {
+      "relative_phase": {
+        "real": -0.0,
+        "imag": -1.0
+      },
+      "native_Psi_displacement": [
+        -0.27288584858498854,
+        0.09994166503936919,
+        -0.30103093267880476
+      ],
+      "target_Psi_displacement": [
+        0.031431437939676954,
+        0.0030609204049572014,
+        0.001095881234356444
+      ],
+      "native_joint_displacement": [
+        -0.2767662859220228,
+        -0.010052314367920978,
+        -0.11816534595579453
+      ],
+      "target_joint_displacement": [
+        0.03143243490348002,
+        0.0030640460165400896,
+        0.0010916572006642866
+      ],
+      "native_norm_ratio": 1.000495696544171
+    }
+  ],
+  "verdict": "TWO_COPY_PHYSICAL_MOTION_MEASURED",
+  "claim_boundary": "Linear tangent and site-density diagnostic. A favorable lateral cancellation must still pass exact pattern and nonlinear gates."
+}

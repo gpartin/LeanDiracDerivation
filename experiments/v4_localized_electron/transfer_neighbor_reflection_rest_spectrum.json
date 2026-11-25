@@ -1,0 +1,37 @@
+{
+  "status": "V4_TRANSFER_NEIGHBOR_REFLECTION_REST_GATE_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "rest_del_rms_residual": 2.2682617720542403e-12,
+      "following_block_condition_number": 1549.0937887156686,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.34893583961127,
+      "spectral_radius": 1.0029404627367902,
+      "growth_rate_per_unit_time": 0.7516538962737709,
+      "reciprocal_pairing_defect": 3.3157920853454925e-12,
+      "name": "incumbent"
+    },
+    {
+      "coefficient": 0.02631578947368421,
+      "rest_del_rms_residual": 2.3386083973253363e-12,
+      "following_block_condition_number": 1561.2319623760022,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.34756428528974,
+      "spectral_radius": 1.0029404620995481,
+      "growth_rate_per_unit_time": 0.7516537336180923,
+      "reciprocal_pairing_defect": 3.4130476223026562e-12,
+      "name": "native_frame_reflection"
+    }
+  ],
+  "growth_rate_delta": -1.626556785927491e-07,
+  "coefficient_provenance": "1/(2 chi0), midpoint and chi0 normalization",
+  "verdict": "RETAIN_FOR_MOVEMENT_RCA",
+  "claim_boundary": "Complete side-three two-layer rest-spectrum gate only; the carrier remains unstable and no movement or Dirac gate passes."
+}

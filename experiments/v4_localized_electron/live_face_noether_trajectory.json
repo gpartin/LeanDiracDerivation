@@ -1,0 +1,109 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_face_wedge_laplacian_smooth",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "chi_lift": "prior",
+  "chi_scales": {
+    "plus": [
+      0.0003479600832739469,
+      -5.499963616435744e-09
+    ],
+    "minus": [
+      0.0003044126836514495,
+      1.3588621367613447e-08
+    ]
+  },
+  "requested_updates": 4,
+  "carrier_wave_number": 0.35,
+  "packet_width": 1.35,
+  "readout": "local",
+  "dirac_time_comparator": "centered",
+  "face_gradient_coefficient": null,
+  "solver_tolerance_RMS": 1e-10,
+  "rest_roundoff_subtracted": true,
+  "all_solvers_converged": true,
+  "maximum_native_vs_dirac_relative_error": 0.0083900672524189,
+  "maximum_outside_four_component_fraction": 0.00021562814627669176,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "solver_residual_RMS": 9.608685700653503e-11,
+          "native_vs_dirac_relative_error": 0.0008697142676075847,
+          "outside_four_component_fraction": 2.2305068476847847e-05,
+          "within_four_component_relative_error": 0.0008694284831336712,
+          "phase_amplitude_aligned_shape_error": 0.0007100306586171271,
+          "phase_plane_coefficients": [
+            0.9995010607917901,
+            -5.761108933793862e-05
+          ],
+          "native_norm_ratio": 0.9995013146497042,
+          "nonlinear_vs_local_tangent_relative_error": 0.0051810536520598685
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "solver_residual_RMS": 9.528097503021615e-11,
+          "native_vs_dirac_relative_error": 0.002585692755050725,
+          "outside_four_component_fraction": 6.640565272599566e-05,
+          "within_four_component_relative_error": 0.0025848424150004376,
+          "phase_amplitude_aligned_shape_error": 0.0021184506117501523,
+          "phase_plane_coefficients": [
+            0.9985229119943747,
+            -0.0001272204886657524
+          ],
+          "native_norm_ratio": 0.9985251673321875,
+          "nonlinear_vs_local_tangent_relative_error": 0.005178612057869905
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "solver_residual_RMS": 8.512944491842469e-11,
+          "native_vs_dirac_relative_error": 0.005109744205225561,
+          "outside_four_component_fraction": 0.00013132081420402973,
+          "within_four_component_relative_error": 0.005108066210931246,
+          "phase_amplitude_aligned_shape_error": 0.004200790253560893,
+          "phase_plane_coefficients": [
+            0.9970954473293734,
+            -0.00016254498450519986
+          ],
+          "native_norm_ratio": 0.9971043095607361,
+          "nonlinear_vs_local_tangent_relative_error": 0.005182593159902058
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "solver_residual_RMS": 9.391162182075151e-11,
+          "native_vs_dirac_relative_error": 0.0083900672524189,
+          "outside_four_component_fraction": 0.00021562814627669176,
+          "within_four_component_relative_error": 0.008387322020754295,
+          "phase_amplitude_aligned_shape_error": 0.006920563013904393,
+          "phase_plane_coefficients": [
+            0.9952581413140572,
+            -0.00011752562799575496
+          ],
+          "native_norm_ratio": 0.9952822091530692,
+          "nonlinear_vs_local_tangent_relative_error": 0.0051926396576389144
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "4 unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

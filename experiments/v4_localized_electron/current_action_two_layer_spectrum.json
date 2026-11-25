@@ -1,0 +1,110 @@
+{
+  "status": "V4_CURRENT_ACTION_TWO_LAYER_SPECTRUM",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "dt": 0.00390625,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.8661265945692644e-13,
+      "maximum_multiplier_modulus": 1.0040551109852294,
+      "growing_multiplier_count_at_1e-7": 184,
+      "maximum_growth_rate": 1.036009262748103,
+      "positive_phase_count": 1016,
+      "negative_phase_count": 1016,
+      "real_axis_count": 32,
+      "growing_mode_target_overlap_min": 0.015041891312187715,
+      "growing_mode_target_overlap_max": 0.9999999999481414,
+      "growing_mode_target_overlap_mean": 0.9168280894259112,
+      "growing_modes_with_target_overlap_above_0p99": 164,
+      "target_overlap_rank_boundary_1000": 0.9999938077033927,
+      "target_overlap_next_mode": 0.9999938076932929,
+      "fastest_growing_mode": {
+        "multiplier_real": 1.0040550541026665,
+        "multiplier_imag": 0.00033797404193161573,
+        "multiplier_modulus": 1.0040551109852294,
+        "growth_rate": 1.036009262748103,
+        "target_overlap": 0.9999958773292262,
+        "generalized_stiffness_contributions": {
+          "bare_V40": -1.0807423181893132,
+          "carrier_carrier_chi_tight_frame": 6.394420758471558e-21,
+          "carrier_carrier_Psi_tight_frame": -3.282232579351298e-17,
+          "total": -1.0807423181893125
+        },
+        "field_component_power_fractions": [
+          [
+            0.24963817434206517,
+            0.24963817436007257,
+            9.999868804523965e-24
+          ],
+          [
+            0.24963817441845929,
+            0.249638174351329,
+            1.2021839284580434e-23
+          ],
+          [
+            0.0003618256321029817,
+            0.0007072677619545638,
+            1.1329785181575554e-21
+          ],
+          [
+            0.00036182563220030136,
+            1.6383501816233683e-05,
+            5.595431976437308e-22
+          ]
+        ],
+        "bare_V40_curvature_breakdown": {
+          "local_potential": 124.79412422017782,
+          "C19_area_bond_potential": 6.254158373039049,
+          "co_rotating_centrifugal": -131.76511364131844,
+          "reconstructed_total": -0.7168310481015681,
+          "matrix_total": -1.0807423181893132,
+          "discrete_rotating_frame_remainder": -0.36391127008774515,
+          "minimum_additional_positive_curvature_for_neutrality": 1.0807423181893132
+        },
+        "native_charge_tangents": {
+          "Psi": {
+            "derivative_real": -2.4495960815329454e-12,
+            "derivative_imag": -7.000622304076387e-11,
+            "normalized_tangent_cosine": 5.2932675516367055e-15,
+            "left_invariance_relative_residual": 1.9416743226110084e-15
+          },
+          "chi": {
+            "derivative_real": -9.872519513010047e-08,
+            "derivative_imag": -8.80677362147253e-08,
+            "normalized_tangent_cosine": 8.32876705032703e-15,
+            "left_invariance_relative_residual": 2.410994543643346e-15
+          }
+        }
+      }
+    },
+    {
+      "dt": 0.001953125,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 9.359761652598184e-14,
+      "maximum_multiplier_modulus": 1.0020255086866332,
+      "growing_multiplier_count_at_1e-7": 184,
+      "maximum_growth_rate": 1.0360115761769078,
+      "positive_phase_count": 1013,
+      "negative_phase_count": 1013,
+      "real_axis_count": 38
+    },
+    {
+      "dt": 0.0009765625,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 4.6850827836212275e-14,
+      "maximum_multiplier_modulus": 1.0010122425922483,
+      "growing_multiplier_count_at_1e-7": 184,
+      "maximum_growth_rate": 1.0360121550639956,
+      "positive_phase_count": 1020,
+      "negative_phase_count": 1020,
+      "real_axis_count": 24
+    }
+  ],
+  "growth_rate_refinement_relative_change": 5.587647644782572e-07,
+  "verdict": "TWO_LAYER_NATIVE_GROWTH_CONVERGED",
+  "claim_boundary": "This is the linear spectrum of the finite native hull derived from the exact rest orbit. It is not a nonlinear lifetime or a universal no-go. A converged growing mode blocks promotion of this action/readout branch until its native cause is repaired."
+}

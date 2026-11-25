@@ -1,0 +1,64 @@
+{
+  "status": "V4_DIRECT_CHI_BOND_REST_FREDHOLM",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "jacobian_shape": [
+    324,
+    324
+  ],
+  "largest_singular_value": 73.25757486160639,
+  "smallest_singular_value": 1.2234599074493224e-15,
+  "thresholds": {
+    "relative_1e-08": {
+      "rank": 149,
+      "nullity": 175,
+      "cokernel_dimension": 175,
+      "squared_forcing_obstruction_fraction": 0.199963015757447,
+      "relative_forcing_obstruction": 0.44717224394795235
+    },
+    "relative_1e-10": {
+      "rank": 149,
+      "nullity": 175,
+      "cokernel_dimension": 175,
+      "squared_forcing_obstruction_fraction": 0.199963015757447,
+      "relative_forcing_obstruction": 0.44717224394795235
+    },
+    "relative_1e-12": {
+      "rank": 149,
+      "nullity": 175,
+      "cokernel_dimension": 175,
+      "squared_forcing_obstruction_fraction": 0.199963015757447,
+      "relative_forcing_obstruction": 0.44717224394795235
+    },
+    "relative_1e-14": {
+      "rank": 150,
+      "nullity": 174,
+      "cokernel_dimension": 174,
+      "squared_forcing_obstruction_fraction": 0.1999296210425863,
+      "relative_forcing_obstruction": 0.44713490250995425
+    }
+  },
+  "selected_relative_tolerance": 1e-12,
+  "selected_obstruction_by_field": {
+    "psi_fraction": 0.16785271000188026,
+    "chi_fraction": 0.8321472899981197,
+    "chi_component_fractions": [
+      0.03298844102590213,
+      0.045633163867747274,
+      0.9213783951063506
+    ]
+  },
+  "selected_largest_entry": {
+    "site": [
+      1,
+      0,
+      1
+    ],
+    "field_part": "chi_real",
+    "component": 2,
+    "value": 0.7682650846634144,
+    "fraction_of_obstruction_power": 0.14501520809360072
+  },
+  "verdict": "SMOOTH_REST_BRANCH_FIRST_ORDER_OBSTRUCTED",
+  "claim_boundary": "This is the first-order Fredholm test at the original rest orbit. It does not exclude a disconnected or finite-amplitude rest branch."
+}

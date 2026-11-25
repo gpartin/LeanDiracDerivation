@@ -1,0 +1,31 @@
+{
+  "status": "V4_DIRECT_CHI_BOND_REST_NEWTON",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "solver_success": false,
+  "solver_status": 0,
+  "solver_message": "The maximum number of function evaluations is exceeded.",
+  "function_evaluations": 20,
+  "jacobian_evaluations": 13,
+  "cost": 2.138926916489672,
+  "optimality": 2.2053411837980383,
+  "fixed_phase_gauge_coordinates": [
+    3,
+    323
+  ],
+  "final": {
+    "continuation": 1.0,
+    "normalized_del_rms": 3.74978484808872e-07,
+    "raw_del_rms": 2.183202734082093,
+    "theta_psi": 0.0505127093345969,
+    "theta_chi": 8.594699858132785e-07,
+    "psi_exterior_fraction": 0.028184336291058987,
+    "psi_carrier_overlap_sq": 0.997046396614016,
+    "relative_state_deformation": 0.4610317216823277,
+    "chi_relative_deformation": 0.49217653052484933
+  },
+  "exact_rest_orbit_found": false,
+  "carrier_identity_retained": true,
+  "verdict": "DIRECT_CHI_BOND_REST_BRANCH_NOT_CLOSED",
+  "claim_boundary": "This is a gauge-fixed nonlinear rest solve. It is not a stability, movement, or action-admission result."
+}

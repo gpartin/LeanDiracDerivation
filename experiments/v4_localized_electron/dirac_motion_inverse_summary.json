@@ -1,0 +1,43 @@
+{
+  "status": "ACTION_PHASE_SPACE_CONNECTION_REQUIRED",
+  "date": "2026-11-24",
+  "canonical_version": "V40.0.0",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "v4_006_closed": false,
+  "comparison": {
+    "operator": "independently evolved discrete Dirac comparator using the exact C19 symbol and cubical Clifford generators",
+    "native_feedback_from_comparator": false,
+    "runtime_projection_or_reset": false
+  },
+  "results": {
+    "localized_translation_curvature": [
+      0.21820788098276284,
+      0.2203872312128102,
+      0.22028310630060033
+    ],
+    "exceptional_position_action_candidates": 32,
+    "exceptional_rest_nullity": 18,
+    "exceptional_best_rest_preserving_relative_residual": 0.249661042608482,
+    "exceptional_best_unconstrained_relative_residual": 0.16215547505954,
+    "beta_stagger_first_step_relative_error": 4.971973286750563e-06,
+    "beta_stagger_one_cycle_phase_aligned_error": 0.27039019609399334,
+    "copy_exchange_one_cycle_phase_aligned_error": 0.5740721807946656,
+    "spin_diagonal_first_step_relative_error": 4.562154006125906e-06,
+    "spin_diagonal_one_cycle_phase_aligned_error": 0.21734020943942156,
+    "native_synchronized_frame_one_cycle_phase_aligned_error": 0.5026047546131948
+  },
+  "root_cause": "The current action launches the short-time signed transfer but does not supply a full-rank native phase-space connection that transports the four-component internal frame across both C19 face and edge bonds. The mismatch accumulates in the carrier-localized in-plane Psi amplitude/phase channel.",
+  "next_falsifiable_calculation": "Enumerate the smallest real local reciprocal field-dependent Psi-chi kinetic or symplectic action class, impose rest-orbit cancellation and Hamiltonian admissibility, and rank-test its response against the measured one-cycle spin-diagonal residual before solving any coefficient.",
+  "artifacts": [
+    "DIRAC_MOTION_INVERSE_RESEARCH.md",
+    "cube_incidence_dirac_inverse_schur.json",
+    "cube_incidence_dirac_translation_requirement.json",
+    "cube_incidence_exceptional_discretization_screen.json",
+    "cube_incidence_staggered_packet_gate.json",
+    "cube_incidence_copy_exchange_packet_gate.json",
+    "cube_incidence_spin_diagonal_packet_gate.json",
+    "cube_incidence_native_frame_connection.json",
+    "cube_incidence_native_frame_synchronization.json"
+  ]
+}

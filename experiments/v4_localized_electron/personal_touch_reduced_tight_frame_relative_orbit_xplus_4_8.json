@@ -1,0 +1,44 @@
+{
+  "status": "V4_REDUCED_TIGHT_FRAME_RELATIVE_ORBIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "device": "cuda",
+  "rows": [
+    {
+      "axis": 0,
+      "sign": 1,
+      "updates_per_cell": 4,
+      "initial_relative_boundary_residual": 1.5940208326021876,
+      "final_relative_boundary_residual": 0.6858655429159619,
+      "endpoint_relative_residual": 0.3964298238923022,
+      "preceding_layer_relative_residual": 0.5596918238532036,
+      "unreset_second_cell_endpoint_residual": 5.219568345428714e+121,
+      "solved_dt": 0.025374278346376265,
+      "solved_translation_time": 0.10149711338550506,
+      "solved_psi_phase": 3.1386739218768005,
+      "solved_chi_phase": -0.0595915929357487,
+      "optimizer_evaluations": 210,
+      "minimum_objective_trace": 0.6858655432537655,
+      "converged": false
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "updates_per_cell": 8,
+      "initial_relative_boundary_residual": 2.0796826800759636,
+      "final_relative_boundary_residual": 0.19701036246457995,
+      "endpoint_relative_residual": 0.12742990161057585,
+      "preceding_layer_relative_residual": 0.15024880396843138,
+      "unreset_second_cell_endpoint_residual": 1.3107575895472678,
+      "solved_dt": 0.009282471848580396,
+      "solved_translation_time": 0.07425977478864317,
+      "solved_psi_phase": 6.684901064455045,
+      "solved_chi_phase": -0.7632895620920312,
+      "optimizer_evaluations": 220,
+      "minimum_objective_trace": 0.1970103649903325,
+      "converged": false
+    }
+  ],
+  "verdict": "NO_ORBIT_CONVERGED_FROM_TESTED_SEEDS",
+  "claim_boundary": "Free one-cell shooting with fixed exact carrier at one layer. Nonconvergence is not a no-go for a deformed carrier or other periods. V4-006 passes only with two handoffs in both signs of all axes and the same-state Dirac-current gate."
+}

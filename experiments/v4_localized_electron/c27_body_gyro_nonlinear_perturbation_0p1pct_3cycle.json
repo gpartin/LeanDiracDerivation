@@ -1,0 +1,1247 @@
+{
+  "status": "V4_C27_BODY_GYRO_NONLINEAR_PERTURBATION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "theta": 0.07423579507567751,
+  "steps_per_cycle": 85,
+  "cycles_requested": 3,
+  "rest_DEL_rms": 2.0116107416097747e-12,
+  "solver_tolerance": 1e-08,
+  "rows": [
+    {
+      "sign": 1.0,
+      "chi_clock_fraction": 0.001,
+      "converged_all_steps": true,
+      "completed_steps": 255,
+      "maximum_phase_space_amplification": 205.5094027985704,
+      "maximum_amplification_step": 158,
+      "maximum_amplification_decomposition": {
+        "field_fractions": {
+          "psi": 0.8025151551826087,
+          "chi": 0.19748484481739134
+        },
+        "carrier_fractions_of_field": {
+          "psi": 0.999999558283127,
+          "chi": 0.28903413182419285
+        },
+        "component_fractions_of_total": {
+          "psi": [
+            0.4333503534902761,
+            0.36916465124988174,
+            1.504424508562016e-07
+          ],
+          "chi": [
+            0.08054602810062,
+            0.11629176853055556,
+            0.0006470481862157301
+          ]
+        }
+      },
+      "maximum_DEL_rms": 9.855883721894918e-09,
+      "maximum_phase_aligned_shape_residual": 0.002463679609827518,
+      "full_jacobian_fallbacks": 2,
+      "samples": [
+        {
+          "step": 1,
+          "cycle": 0.011764705882352941,
+          "phase_space_amplification": 0.9999518840121894,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 1.3669419614487835e-06,
+            "removed_psi_phase": -2.106603485276438e-07,
+            "removed_chi_phase": 7.414238789040054e-05
+          },
+          "solver_final_DEL_rms": 3.00293457282082e-11,
+          "solver_iterations": 3,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.94018858988002,
+            167.9405951870839
+          ],
+          "exterior_psi_density_rms": 6.242563294731136e-20,
+          "carrier_chi_density_minmax": [
+            167.939873745186,
+            167.94003979921212
+          ],
+          "exterior_chi_density_rms_change": 0.00017181545988822775
+        },
+        {
+          "step": 5,
+          "cycle": 0.058823529411764705,
+          "phase_space_amplification": 6.388700556677246,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 2.080725552448601e-05,
+            "removed_psi_phase": -1.1521616182743288e-05,
+            "removed_chi_phase": 0.00036586780715424993
+          },
+          "solver_final_DEL_rms": 6.397676090258059e-09,
+          "solver_iterations": 3,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.95092642213825,
+            167.95669234824987
+          ],
+          "exterior_psi_density_rms": 1.967534685444525e-16,
+          "carrier_chi_density_minmax": [
+            167.94604173874615,
+            167.94860004973793
+          ],
+          "exterior_chi_density_rms_change": 0.0025497894133851
+        },
+        {
+          "step": 10,
+          "cycle": 0.11764705882352941,
+          "phase_space_amplification": 13.401174877099884,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 7.787357390010969e-05,
+            "removed_psi_phase": -7.926840201616533e-05,
+            "removed_chi_phase": 0.0007054149556430804
+          },
+          "solver_final_DEL_rms": 8.322532899751297e-11,
+          "solver_iterations": 4,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.98004498370696,
+            168.00077265530757
+          ],
+          "exterior_psi_density_rms": 1.1336977146654506e-14,
+          "carrier_chi_density_minmax": [
+            167.9635286208346,
+            167.97311664105968
+          ],
+          "exterior_chi_density_rms_change": 0.009075516426034713
+        },
+        {
+          "step": 15,
+          "cycle": 0.17647058823529413,
+          "phase_space_amplification": 20.631263890200074,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.00016872448029074119,
+            "removed_psi_phase": -0.0002483065845142242,
+            "removed_chi_phase": 0.000996778311922761
+          },
+          "solver_final_DEL_rms": 8.80837469536555e-10,
+          "solver_iterations": 4,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.02198872524744,
+            168.06653643806408
+          ],
+          "exterior_psi_density_rms": 1.4201327597076086e-13,
+          "carrier_chi_density_minmax": [
+            167.99142006972403,
+            168.01252545252078
+          ],
+          "exterior_chi_density_rms_change": 0.018875491953739186
+        },
+        {
+          "step": 20,
+          "cycle": 0.23529411764705882,
+          "phase_space_amplification": 28.489117377620257,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0002825111477719024,
+            "removed_psi_phase": -0.0005531890393846094,
+            "removed_chi_phase": 0.0012221477527567374
+          },
+          "solver_final_DEL_rms": 6.07141079539341e-09,
+          "solver_iterations": 4,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.0718327049916,
+            168.14642725783696
+          ],
+          "exterior_psi_density_rms": 8.881417059984968e-13,
+          "carrier_chi_density_minmax": [
+            168.0289541240234,
+            168.0656660713662
+          ],
+          "exterior_chi_density_rms_change": 0.030905020075263915
+        },
+        {
+          "step": 25,
+          "cycle": 0.29411764705882354,
+          "phase_space_amplification": 37.55259263784691,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0004083695918527924,
+            "removed_psi_phase": -0.001014416478725859,
+            "removed_chi_phase": 0.0013693799892307236
+          },
+          "solver_final_DEL_rms": 2.163351955540627e-10,
+          "solver_iterations": 5,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.12389608201286,
+            168.23128634076184
+          ],
+          "exterior_psi_density_rms": 3.6231150633114282e-12,
+          "carrier_chi_density_minmax": [
+            168.07351576737972,
+            168.13068274999011
+          ],
+          "exterior_chi_density_rms_change": 0.04386679141327285
+        },
+        {
+          "step": 30,
+          "cycle": 0.35294117647058826,
+          "phase_space_amplification": 48.55420561496301,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.000542114696023983,
+            "removed_psi_phase": -0.0016360799687577584,
+            "removed_chi_phase": 0.001432818667934556
+          },
+          "solver_final_DEL_rms": 8.964487015390891e-10,
+          "solver_iterations": 5,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.17247961973433,
+            168.31113158054146
+          ],
+          "exterior_psi_density_rms": 1.0939698728427313e-11,
+          "carrier_chi_density_minmax": [
+            168.12420314600072,
+            168.20512086762108
+          ],
+          "exterior_chi_density_rms_change": 0.05631868611131238
+        },
+        {
+          "step": 35,
+          "cycle": 0.4117647058823529,
+          "phase_space_amplification": 61.936665831224985,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0006792166014820131,
+            "removed_psi_phase": -0.0024049492480434577,
+            "removed_chi_phase": 0.0014131738883507107
+          },
+          "solver_final_DEL_rms": 6.605041229821937e-10,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.21238362221743,
+            168.37608399291656
+          ],
+          "exterior_psi_density_rms": 2.628740095793866e-11,
+          "carrier_chi_density_minmax": [
+            168.17991760681616,
+            168.28614700205804
+          ],
+          "exterior_chi_density_rms_change": 0.06680745833334543
+        },
+        {
+          "step": 40,
+          "cycle": 0.47058823529411764,
+          "phase_space_amplification": 77.44620540722768,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0008084291171319026,
+            "removed_psi_phase": -0.003291248638378191,
+            "removed_chi_phase": 0.0013168324709901204
+          },
+          "solver_final_DEL_rms": 1.3634316474312006e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.23925063618,
+            168.41745776239486
+          ],
+          "exterior_psi_density_rms": 5.2671861293752327e-11,
+          "carrier_chi_density_minmax": [
+            168.23960029393683,
+            168.37081938277112
+          ],
+          "exterior_chi_density_rms_change": 0.07401189229104799
+        },
+        {
+          "step": 45,
+          "cycle": 0.5294117647058824,
+          "phase_space_amplification": 94.38278581499354,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0009205595390184496,
+            "removed_psi_phase": -0.004250966836947187,
+            "removed_chi_phase": 0.0011550537652982938
+          },
+          "solver_final_DEL_rms": 1.5967608474430996e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.24972223107284,
+            168.42868079216376
+          ],
+          "exterior_psi_density_rms": 9.092995850158257e-11,
+          "carrier_chi_density_minmax": [
+            168.30240359974235,
+            168.45629057770495
+          ],
+          "exterior_chi_density_rms_change": 0.0768598682541074
+        },
+        {
+          "step": 50,
+          "cycle": 0.5882352941176471,
+          "phase_space_amplification": 111.94996003121184,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.001017058484911972,
+            "removed_psi_phase": -0.0052291665111975985,
+            "removed_chi_phase": 0.0009431115272313327
+          },
+          "solver_final_DEL_rms": 7.857752780049776e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.24155312248857,
+            168.40972096098213
+          ],
+          "exterior_psi_density_rms": 1.3865342723968543e-10,
+          "carrier_chi_density_minmax": [
+            168.3676363114686,
+            168.53990613718403
+          ],
+          "exterior_chi_density_rms_change": 0.07459949321620113
+        },
+        {
+          "step": 55,
+          "cycle": 0.6470588235294118,
+          "phase_space_amplification": 129.17803587608486,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0011027809944207272,
+            "removed_psi_phase": -0.006163841151293505,
+            "removed_chi_phase": 0.0006991400324963107
+          },
+          "solver_final_DEL_rms": 1.8935267202780887e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.21377525314227,
+            168.38663282588527
+          ],
+          "exterior_psi_density_rms": 1.9063670403962243e-10,
+          "carrier_chi_density_minmax": [
+            168.43460851832302,
+            168.61926767001344
+          ],
+          "exterior_chi_density_rms_change": 0.066838213718679
+        },
+        {
+          "step": 60,
+          "cycle": 0.7058823529411765,
+          "phase_space_amplification": 144.83405489307518,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0011773522901087335,
+            "removed_psi_phase": -0.006990162365485649,
+            "removed_chi_phase": 0.00044265620184378006
+          },
+          "solver_final_DEL_rms": 7.517893570663261e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.16683200776598,
+            168.33451884155866
+          ],
+          "exterior_psi_density_rms": 2.4082574612994707e-10,
+          "carrier_chi_density_minmax": [
+            168.50077672810264,
+            168.69232326164757
+          ],
+          "exterior_chi_density_rms_change": 0.05357740550706155
+        },
+        {
+          "step": 65,
+          "cycle": 0.7647058823529411,
+          "phase_space_amplification": 157.68288283305486,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.00124160222282344,
+            "removed_psi_phase": -0.007644989302803641,
+            "removed_chi_phase": 0.00019313151216563155
+          },
+          "solver_final_DEL_rms": 3.8254122446024805e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.10254637777638,
+            168.25390801221968
+          ],
+          "exterior_psi_density_rms": 2.848221352888661e-10,
+          "carrier_chi_density_minmax": [
+            168.56572802317478,
+            168.75745270285753
+          ],
+          "exterior_chi_density_rms_change": 0.035272337029328034
+        },
+        {
+          "step": 70,
+          "cycle": 0.8235294117647058,
+          "phase_space_amplification": 166.75127932664358,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0013041561467575886,
+            "removed_psi_phase": -0.008071341460947028,
+            "removed_chi_phase": -3.105892012553012e-05
+          },
+          "solver_final_DEL_rms": 6.685732074510432e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.97870188815384,
+            168.14725034155177
+          ],
+          "exterior_psi_density_rms": 3.217633352083148e-10,
+          "carrier_chi_density_minmax": [
+            168.62902737267814,
+            168.81347371654292
+          ],
+          "exterior_chi_density_rms_change": 0.013373093955661318
+        },
+        {
+          "step": 75,
+          "cycle": 0.8823529411764706,
+          "phase_space_amplification": 171.29877805786512,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0013732641898701761,
+            "removed_psi_phase": -0.008222488135220089,
+            "removed_chi_phase": -0.00021346812140403567
+          },
+          "solver_final_DEL_rms": 8.274488504367843e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.8114024030058,
+            168.0188342652649
+          ],
+          "exterior_psi_density_rms": 3.5498422710252556e-10,
+          "carrier_chi_density_minmax": [
+            168.6897300114668,
+            168.8595735912071
+          ],
+          "exterior_chi_density_rms_change": 0.015749272205489488
+        },
+        {
+          "step": 80,
+          "cycle": 0.9411764705882353,
+          "phase_space_amplification": 170.77651831545674,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0014495196649668605,
+            "removed_psi_phase": -0.008065391457697206,
+            "removed_chi_phase": -0.00034058829957982326
+          },
+          "solver_final_DEL_rms": 7.027122121184806e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.63660638556368,
+            167.87448104717598
+          ],
+          "exterior_psi_density_rms": 3.9169264290710764e-10,
+          "carrier_chi_density_minmax": [
+            168.7469512786032,
+            168.89526291501798
+          ],
+          "exterior_chi_density_rms_change": 0.04311788210431296
+        },
+        {
+          "step": 85,
+          "cycle": 1.0,
+          "phase_space_amplification": 165.02125294542307,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0015315055816162437,
+            "removed_psi_phase": -0.007583346326385394,
+            "removed_chi_phase": -0.00040308183709401754
+          },
+          "solver_final_DEL_rms": 3.725504174743374e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.46495461863896,
+            167.7450850678681
+          ],
+          "exterior_psi_density_rms": 4.42178505906935e-10,
+          "carrier_chi_density_minmax": [
+            168.79989568420015,
+            168.92042181647628
+          ],
+          "exterior_chi_density_rms_change": 0.07162845449354896
+        },
+        {
+          "step": 90,
+          "cycle": 1.0588235294117647,
+          "phase_space_amplification": 154.4616825660473,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0016191626685904486,
+            "removed_psi_phase": -0.0067777529966237485,
+            "removed_chi_phase": -0.0003968057988620035
+          },
+          "solver_final_DEL_rms": 9.781314340930433e-10,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.30756015794276,
+            167.65183126102292
+          ],
+          "exterior_psi_density_rms": 5.186241037164864e-10,
+          "carrier_chi_density_minmax": [
+            168.84791439761545,
+            168.9353872144404
+          ],
+          "exterior_chi_density_rms_change": 0.09910764098748476
+        },
+        {
+          "step": 95,
+          "cycle": 1.1176470588235294,
+          "phase_space_amplification": 140.16789036648552,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0017086020056044815,
+            "removed_psi_phase": -0.005668906586656693,
+            "removed_chi_phase": -0.000323233053481858
+          },
+          "solver_final_DEL_rms": 5.741061667333662e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.17540129517562,
+            167.5680695375555
+          ],
+          "exterior_psi_density_rms": 6.331125997072839e-10,
+          "carrier_chi_density_minmax": [
+            168.89054167543114,
+            168.94096647824605
+          ],
+          "exterior_chi_density_rms_change": 0.12386636840284829
+        },
+        {
+          "step": 100,
+          "cycle": 1.1764705882352942,
+          "phase_space_amplification": 124.00108179368597,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0017917635677504892,
+            "removed_psi_phase": -0.004295497328084817,
+            "removed_chi_phase": -0.00018930376959852175
+          },
+          "solver_final_DEL_rms": 8.265046226774083e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.07834423617047,
+            167.49614687207037
+          ],
+          "exterior_psi_density_rms": 7.946933628403974e-10,
+          "carrier_chi_density_minmax": [
+            168.92552075881744,
+            168.9698535216776
+          ],
+          "exterior_chi_density_rms_change": 0.1443882824680843
+        },
+        {
+          "step": 105,
+          "cycle": 1.2352941176470589,
+          "phase_space_amplification": 109.03019899606748,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0018619774401883763,
+            "removed_psi_phase": -0.002712550968650248,
+            "removed_chi_phase": -6.97751699736006e-06
+          },
+          "solver_final_DEL_rms": 2.5385179026251666e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.02396783177414,
+            167.43860964281174
+          ],
+          "exterior_psi_density_rms": 1.0061023441692694e-09,
+          "carrier_chi_density_minmax": [
+            168.92893168376074,
+            168.99349362655812
+          ],
+          "exterior_chi_density_rms_change": 0.15941777506761512
+        },
+        {
+          "step": 110,
+          "cycle": 1.2941176470588236,
+          "phase_space_amplification": 99.62509547395524,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0019148339239117044,
+            "removed_psi_phase": -0.0009879382508208173,
+            "removed_chi_phase": 0.0002074790809399459
+          },
+          "solver_final_DEL_rms": 4.320710330676589e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.01663944919824,
+            167.39698729682362
+          ],
+          "exterior_psi_density_rms": 1.2614075647335402e-09,
+          "carrier_chi_density_minmax": [
+            168.9143116297259,
+            169.01090957039656
+          ],
+          "exterior_chi_density_rms_change": 0.16805052655942446
+        },
+        {
+          "step": 115,
+          "cycle": 1.3529411764705883,
+          "phase_space_amplification": 99.78433476991445,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0019459656460519865,
+            "removed_psi_phase": 0.0008021071185900529,
+            "removed_chi_phase": 0.00043474983657928204
+          },
+          "solver_final_DEL_rms": 1.5922465824298081e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.0328116930386,
+            167.37182507108616
+          ],
+          "exterior_psi_density_rms": 1.5460714842525138e-09,
+          "carrier_chi_density_minmax": [
+            168.89611112837437,
+            169.02477907664888
+          ],
+          "exterior_chi_density_rms_change": 0.16979434155497442
+        },
+        {
+          "step": 120,
+          "cycle": 1.411764705882353,
+          "phase_space_amplification": 109.92634726647394,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0019527903150503665,
+            "removed_psi_phase": 0.0025780980482815415,
+            "removed_chi_phase": 0.000654411185527376
+          },
+          "solver_final_DEL_rms": 1.3746821180152963e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.04271482241506,
+            167.36278188097938
+          ],
+          "exterior_psi_density_rms": 1.8400911657862421e-09,
+          "carrier_chi_density_minmax": [
+            168.87585263633662,
+            169.03047363602332
+          ],
+          "exterior_chi_density_rms_change": 0.16460791269569608
+        },
+        {
+          "step": 125,
+          "cycle": 1.4705882352941178,
+          "phase_space_amplification": 126.68171209780785,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0019374010164138497,
+            "removed_psi_phase": 0.004262777395753566,
+            "removed_chi_phase": 0.000847174626215796
+          },
+          "solver_final_DEL_rms": 7.475618331773876e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.067023437573,
+            167.36885600873703
+          ],
+          "exterior_psi_density_rms": 2.1231983684793486e-09,
+          "carrier_chi_density_minmax": [
+            168.85471238572558,
+            169.033361334039
+          ],
+          "exterior_chi_density_rms_change": 0.15291828930909301
+        },
+        {
+          "step": 130,
+          "cycle": 1.5294117647058822,
+          "phase_space_amplification": 145.92205966377142,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0019060328195399992,
+            "removed_psi_phase": 0.005786538842798166,
+            "removed_chi_phase": 0.0009967872242857324
+          },
+          "solver_final_DEL_rms": 3.3418163552062996e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.1249094739073,
+            167.41738348732852
+          ],
+          "exterior_psi_density_rms": 2.3798606902398092e-09,
+          "carrier_chi_density_minmax": [
+            168.83333593433866,
+            169.02869626785707
+          ],
+          "exterior_chi_density_rms_change": 0.1355993462080067
+        },
+        {
+          "step": 135,
+          "cycle": 1.588235294117647,
+          "phase_space_amplification": 164.52984631462587,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0018671851831377959,
+            "removed_psi_phase": 0.007092107173398934,
+            "removed_chi_phase": 0.0010912923897696282
+          },
+          "solver_final_DEL_rms": 2.1140877791508746e-10,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.21258047516335,
+            167.5850725332951
+          ],
+          "exterior_psi_density_rms": 2.602014301593193e-09,
+          "carrier_chi_density_minmax": [
+            168.81180951570508,
+            169.01572160610766
+          ],
+          "exterior_chi_density_rms_change": 0.11390197797283494
+        },
+        {
+          "step": 140,
+          "cycle": 1.6470588235294117,
+          "phase_space_amplification": 180.52478636862875,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.001830555001283089,
+            "removed_psi_phase": 0.008137867451374584,
+            "removed_chi_phase": 0.0011238261736558498
+          },
+          "solver_final_DEL_rms": 1.6907221995259614e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.32483677110582,
+            167.75556916190112
+          ],
+          "exterior_psi_density_rms": 2.788857369345506e-09,
+          "carrier_chi_density_minmax": [
+            168.78975530720052,
+            168.99369059762606
+          ],
+          "exterior_chi_density_rms_change": 0.08936873523405515
+        },
+        {
+          "step": 145,
+          "cycle": 1.7058823529411764,
+          "phase_space_amplification": 192.8020064818718,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0018063023693607415,
+            "removed_psi_phase": 0.008899605954688906,
+            "removed_chi_phase": 0.001093119279056564
+          },
+          "solver_final_DEL_rms": 6.050208110963205e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.45558521268842,
+            167.91618807030167
+          ],
+          "exterior_psi_density_rms": 2.9445456180449335e-09,
+          "carrier_chi_density_minmax": [
+            168.76644120994726,
+            168.96202863428894
+          ],
+          "exterior_chi_density_rms_change": 0.06383514520813947
+        },
+        {
+          "step": 150,
+          "cycle": 1.7647058823529411,
+          "phase_space_amplification": 200.9235725970074,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0018042016856750981,
+            "removed_psi_phase": 0.009370776267365986,
+            "removed_chi_phase": 0.0010035110417547575
+          },
+          "solver_final_DEL_rms": 2.6321030691644457e-09,
+          "solver_iterations": 10,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.55971541883753,
+            168.05589809058077
+          ],
+          "exterior_psi_density_rms": 3.0752812510685463e-09,
+          "carrier_chi_density_minmax": [
+            168.74086381674164,
+            168.92047231168965
+          ],
+          "exterior_chi_density_rms_change": 0.03989131835569952
+        },
+        {
+          "step": 155,
+          "cycle": 1.8235294117647058,
+          "phase_space_amplification": 204.9388810180811,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.001830332374446561,
+            "removed_psi_phase": 0.009561469179843816,
+            "removed_chi_phase": 0.0008641939735638501
+          },
+          "solver_final_DEL_rms": 2.7445920915663847e-09,
+          "solver_iterations": 10,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.63388824071973,
+            168.16606324224747
+          ],
+          "exterior_psi_density_rms": 3.1869331096359544e-09,
+          "carrier_chi_density_minmax": [
+            168.71186745292013,
+            168.8691017836832
+          ],
+          "exterior_chi_density_rms_change": 0.023936270762460143
+        },
+        {
+          "step": 160,
+          "cycle": 1.8823529411764706,
+          "phase_space_amplification": 205.1837952843041,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0018821137818646814,
+            "removed_psi_phase": 0.009496185900866944,
+            "removed_chi_phase": 0.0006878274743485285
+          },
+          "solver_final_DEL_rms": 2.049140913837854e-09,
+          "solver_iterations": 10,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.71482021333793,
+            168.24101372468354
+          ],
+          "exterior_psi_density_rms": 3.28358884646702e-09,
+          "carrier_chi_density_minmax": [
+            168.65949801912166,
+            168.80830432400091
+          ],
+          "exterior_chi_density_rms_change": 0.0281266490885286
+        },
+        {
+          "step": 165,
+          "cycle": 1.9411764705882353,
+          "phase_space_amplification": 202.1692894982494,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0019498948968533854,
+            "removed_psi_phase": 0.009210629562692193,
+            "removed_chi_phase": 0.0004890841178882847
+          },
+          "solver_final_DEL_rms": 7.2234978453392015e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.80083936913132,
+            168.3020110991376
+          ],
+          "exterior_psi_density_rms": 3.3670029985361387e-09,
+          "carrier_chi_density_minmax": [
+            168.57308043597064,
+            168.73877390360911
+          ],
+          "exterior_chi_density_rms_change": 0.04303310664647513
+        },
+        {
+          "step": 170,
+          "cycle": 2.0,
+          "phase_space_amplification": 196.59057902022099,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002024432582008492,
+            "removed_psi_phase": 0.008747992142191161,
+            "removed_chi_phase": 0.0002835575982253841
+          },
+          "solver_final_DEL_rms": 4.084096289389579e-09,
+          "solver_iterations": 9,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.88900817097866,
+            168.37018062603008
+          ],
+          "exterior_psi_density_rms": 3.4368791282694462e-09,
+          "carrier_chi_density_minmax": [
+            168.48474127839566,
+            168.66157717573682
+          ],
+          "exterior_chi_density_rms_change": 0.0575494504251589
+        },
+        {
+          "step": 175,
+          "cycle": 2.0588235294117645,
+          "phase_space_amplification": 189.25112215642196,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0020984880151464526,
+            "removed_psi_phase": 0.008155244192798818,
+            "removed_chi_phase": 8.692493337699422e-05
+          },
+          "solver_final_DEL_rms": 5.946563940529961e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.97446824322043,
+            168.40275123954967
+          ],
+          "exterior_psi_density_rms": 3.4919203451300033e-09,
+          "carrier_chi_density_minmax": [
+            168.39725943928852,
+            168.57820600044275
+          ],
+          "exterior_chi_density_rms_change": 0.06910905330824393
+        },
+        {
+          "step": 180,
+          "cycle": 2.1176470588235294,
+          "phase_space_amplification": 180.8580714951971,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0021634769508162266,
+            "removed_psi_phase": 0.007479695672471015,
+            "removed_chi_phase": -8.598123337243107e-05
+          },
+          "solver_final_DEL_rms": 4.047389710346068e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.05894707820033,
+            168.40166250181358
+          ],
+          "exterior_psi_density_rms": 3.5313447191199587e-09,
+          "carrier_chi_density_minmax": [
+            168.31319413775776,
+            168.5126143764663
+          ],
+          "exterior_chi_density_rms_change": 0.07718449162850138
+        },
+        {
+          "step": 185,
+          "cycle": 2.176470588235294,
+          "phase_space_amplification": 171.97339567637425,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002212304792301637,
+            "removed_psi_phase": 0.006765913315135355,
+            "removed_chi_phase": -0.00022219665161992368
+          },
+          "solver_final_DEL_rms": 3.081563835139365e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.09382097232142,
+            168.39814834320282
+          ],
+          "exterior_psi_density_rms": 3.5562718015453706e-09,
+          "carrier_chi_density_minmax": [
+            168.2347475017717,
+            168.45731721149372
+          ],
+          "exterior_chi_density_rms_change": 0.08186493502693801
+        },
+        {
+          "step": 190,
+          "cycle": 2.235294117647059,
+          "phase_space_amplification": 163.15912737541095,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0022450259407293303,
+            "removed_psi_phase": 0.0060530585746951596,
+            "removed_chi_phase": -0.00031139382380992005
+          },
+          "solver_final_DEL_rms": 2.1944902170279137e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            168.01214757088238,
+            168.42623667420833
+          ],
+          "exterior_psi_density_rms": 3.5703242152312875e-09,
+          "carrier_chi_density_minmax": [
+            168.16377783396806,
+            168.3978844256982
+          ],
+          "exterior_chi_density_rms_change": 0.08355197295397611
+        },
+        {
+          "step": 195,
+          "cycle": 2.2941176470588234,
+          "phase_space_amplification": 154.96793039827125,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0022665485319404315,
+            "removed_psi_phase": 0.005372727106811903,
+            "removed_chi_phase": -0.00034622346145604503
+          },
+          "solver_final_DEL_rms": 1.3267225105511758e-09,
+          "solver_iterations": 8,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.931379844783,
+            168.43206415176107
+          ],
+          "exterior_psi_density_rms": 3.5790297636587972e-09,
+          "carrier_chi_density_minmax": [
+            168.1018666621159,
+            168.33532667768355
+          ],
+          "exterior_chi_density_rms_change": 0.08283498082698842
+        },
+        {
+          "step": 200,
+          "cycle": 2.3529411764705883,
+          "phase_space_amplification": 147.77205661787482,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002281099153545484,
+            "removed_psi_phase": 0.004747411044791416,
+            "removed_chi_phase": -0.0003225118324234723
+          },
+          "solver_final_DEL_rms": 8.506017226488708e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.8610782157254,
+            168.4147914966034
+          ],
+          "exterior_psi_density_rms": 3.5880916693400873e-09,
+          "carrier_chi_density_minmax": [
+            168.0503190525912,
+            168.27099791139446
+          ],
+          "exterior_chi_density_rms_change": 0.08039824030244794
+        },
+        {
+          "step": 205,
+          "cycle": 2.411764705882353,
+          "phase_space_amplification": 141.79502518448825,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002293178017317948,
+            "removed_psi_phase": 0.004189718326242732,
+            "removed_chi_phase": -0.0002396516200423396
+          },
+          "solver_final_DEL_rms": 4.711383130205605e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.80990495580565,
+            168.38947131631983
+          ],
+          "exterior_psi_density_rms": 3.6011442281749123e-09,
+          "carrier_chi_density_minmax": [
+            168.01009744103945,
+            168.2065467088394
+          ],
+          "exterior_chi_density_rms_change": 0.07694894545914259
+        },
+        {
+          "step": 210,
+          "cycle": 2.4705882352941178,
+          "phase_space_amplification": 137.24343440579725,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002309223135685609,
+            "removed_psi_phase": 0.0037023414044894494,
+            "removed_chi_phase": -0.00010108225669269992
+          },
+          "solver_final_DEL_rms": 2.8444456934134845e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.78490716490896,
+            168.41545706495288
+          ],
+          "exterior_psi_density_rms": 3.617898223661942e-09,
+          "carrier_chi_density_minmax": [
+            167.98178402446763,
+            168.14848225499244
+          ],
+          "exterior_chi_density_rms_change": 0.07317429470400924
+        },
+        {
+          "step": 215,
+          "cycle": 2.5294117647058822,
+          "phase_space_amplification": 134.1743279938528,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002332820033634644,
+            "removed_psi_phase": 0.003278642961897047,
+            "removed_chi_phase": 8.560420219308407e-05
+          },
+          "solver_final_DEL_rms": 4.509279445721159e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.7910617137502,
+            168.4255852939059
+          ],
+          "exterior_psi_density_rms": 3.633374828084149e-09,
+          "carrier_chi_density_minmax": [
+            167.95636187045503,
+            168.10452603400168
+          ],
+          "exterior_chi_density_rms_change": 0.06972021121527079
+        },
+        {
+          "step": 220,
+          "cycle": 2.588235294117647,
+          "phase_space_amplification": 132.33753761317078,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0023615811470774507,
+            "removed_psi_phase": 0.0029038764897443567,
+            "removed_chi_phase": 0.00030921892645295867
+          },
+          "solver_final_DEL_rms": 1.7979604965652674e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.83085674205302,
+            168.4212377839703
+          ],
+          "exterior_psi_density_rms": 3.6384346555351072e-09,
+          "carrier_chi_density_minmax": [
+            167.91979523405243,
+            168.06707022638193
+          ],
+          "exterior_chi_density_rms_change": 0.06717326804072132
+        },
+        {
+          "step": 225,
+          "cycle": 2.6470588235294117,
+          "phase_space_amplification": 131.33312301186658,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0023911319735179224,
+            "removed_psi_phase": 0.0025572194145517626,
+            "removed_chi_phase": 0.0005559986313942321
+          },
+          "solver_final_DEL_rms": 5.772513715307906e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.9037496541619,
+            168.402985731417
+          ],
+          "exterior_psi_density_rms": 3.6214811624729346e-09,
+          "carrier_chi_density_minmax": [
+            167.89919085769813,
+            168.04061287796273
+          ],
+          "exterior_chi_density_rms_change": 0.06602797400492144
+        },
+        {
+          "step": 230,
+          "cycle": 2.7058823529411766,
+          "phase_space_amplification": 130.7887422773021,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002417904417335447,
+            "removed_psi_phase": 0.002214562876387846,
+            "removed_chi_phase": 0.0008107101850938202
+          },
+          "solver_final_DEL_rms": 1.4779731663883267e-09,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.92092980021874,
+            168.36965956005596
+          ],
+          "exterior_psi_density_rms": 3.5711669836329516e-09,
+          "carrier_chi_density_minmax": [
+            167.89522971874868,
+            168.02156813890966
+          ],
+          "exterior_chi_density_rms_change": 0.06662444699727291
+        },
+        {
+          "step": 235,
+          "cycle": 2.764705882352941,
+          "phase_space_amplification": 130.3433561547819,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002437880747565747,
+            "removed_psi_phase": 0.0018516276306374164,
+            "removed_chi_phase": 0.0010577528000852911
+          },
+          "solver_final_DEL_rms": 6.639850055717886e-10,
+          "solver_iterations": 7,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.94919719471721,
+            168.3229729045542
+          ],
+          "exterior_psi_density_rms": 3.479785208946088e-09,
+          "carrier_chi_density_minmax": [
+            167.90765110086207,
+            168.01304764654196
+          ],
+          "exterior_chi_density_rms_change": 0.06905982617902036
+        },
+        {
+          "step": 240,
+          "cycle": 2.823529411764706,
+          "phase_space_amplification": 129.7272284485488,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0024480367499875844,
+            "removed_psi_phase": 0.0014469588178356784,
+            "removed_chi_phase": 0.0012824725848765782
+          },
+          "solver_final_DEL_rms": 8.238105530318487e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.9842939664493,
+            168.26544850442744
+          ],
+          "exterior_psi_density_rms": 3.3465214280322466e-09,
+          "carrier_chi_density_minmax": [
+            167.91347548484396,
+            168.04644014757332
+          ],
+          "exterior_chi_density_rms_change": 0.07311599563749238
+        },
+        {
+          "step": 245,
+          "cycle": 2.8823529411764706,
+          "phase_space_amplification": 128.99154700341,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.0024503216888332484,
+            "removed_psi_phase": 0.0009845890789645234,
+            "removed_chi_phase": 0.0014726959939434577
+          },
+          "solver_final_DEL_rms": 3.621334693145082e-09,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.96242418325943,
+            168.39951144713788
+          ],
+          "exterior_psi_density_rms": 3.179257146796484e-09,
+          "carrier_chi_density_minmax": [
+            167.93659419278487,
+            168.08464170690445
+          ],
+          "exterior_chi_density_rms_change": 0.07825688209309946
+        },
+        {
+          "step": 250,
+          "cycle": 2.9411764705882355,
+          "phase_space_amplification": 128.586419309098,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002452188032502219,
+            "removed_psi_phase": 0.00045622284443446793,
+            "removed_chi_phase": 0.001620013833088635
+          },
+          "solver_final_DEL_rms": 7.88137198247039e-10,
+          "solver_iterations": 6,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.95635888669665,
+            168.52160303978158
+          ],
+          "exterior_psi_density_rms": 2.99381768515247e-09,
+          "carrier_chi_density_minmax": [
+            167.9768090110475,
+            168.12568729046146
+          ],
+          "exterior_chi_density_rms_change": 0.0837059674303451
+        },
+        {
+          "step": 255,
+          "cycle": 3.0,
+          "phase_space_amplification": 129.2154056787186,
+          "phase_aligned_shape": {
+            "relative_shape_residual": 0.002463679609827518,
+            "removed_psi_phase": -0.00013733957731946556,
+            "removed_chi_phase": 0.0017202970749308731
+          },
+          "solver_final_DEL_rms": 3.502507103029137e-09,
+          "solver_iterations": 5,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.96564151721594,
+            168.6186951824189
+          ],
+          "exterior_psi_density_rms": 2.8105617155571336e-09,
+          "carrier_chi_density_minmax": [
+            168.02714295791068,
+            168.1678270488798
+          ],
+          "exterior_chi_density_rms_change": 0.08857337517586035
+        }
+      ]
+    }
+  ],
+  "verdict": "C27_BODY_GYRO_NONLINEAR_PERTURBATION_NUMERIC_PASS",
+  "claim_boundary": "Unrestricted nonlinear implicit evolution and solver closure only. A numerical pass is not yet the 100-cycle stability, translation, containment, conservation, or Dirac-current gate."
+}

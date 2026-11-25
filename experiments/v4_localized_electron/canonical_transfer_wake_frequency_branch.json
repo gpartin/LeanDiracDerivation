@@ -1,0 +1,92 @@
+{
+  "status": "V4_CANONICAL_TRANSFER_WAKE_FREQUENCY_BRANCH",
+  "mode": "transfer_odd",
+  "strength": 0.0001,
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "constraint": "candidate-action Psi U(1) charge equals canonical rest charge",
+  "target_charge": 25509.211212275266,
+  "trace": [
+    {
+      "iteration": 0,
+      "field_residual_rms": 0.0005521719171226415,
+      "relative_charge_residual": 0.0019929072420090785,
+      "frequency_shift_fraction": 6.0630457252863374e-05,
+      "theta": 0.07424029602587748,
+      "accepted_scale": 0.0078125,
+      "trial_score": 0.002063333151052953
+    },
+    {
+      "iteration": 1,
+      "field_residual_rms": 0.0005508231117399449,
+      "relative_charge_residual": 0.001988451053409973,
+      "frequency_shift_fraction": 6.020596422379675e-05,
+      "theta": 0.07424026451329997,
+      "accepted_scale": 0.0009765625,
+      "trial_score": 0.0020630685755541876
+    },
+    {
+      "iteration": 2,
+      "field_residual_rms": 0.0005508337450863087,
+      "relative_charge_residual": 0.0019881735670492593,
+      "frequency_shift_fraction": 6.023927119252191e-05,
+      "theta": 0.07424026698586927,
+      "accepted_scale": 0.0625,
+      "trial_score": 0.002022276008123479
+    },
+    {
+      "iteration": 3,
+      "field_residual_rms": 0.0005895418303678944,
+      "relative_charge_residual": 0.0019344354947318106,
+      "frequency_shift_fraction": 5.673745949739938e-05,
+      "theta": 0.07424000702609387,
+      "accepted_scale": 0.015625,
+      "trial_score": 0.0020078714688985455
+    },
+    {
+      "iteration": 4,
+      "field_residual_rms": 0.0005981703673876409,
+      "relative_charge_residual": 0.0019167003018719794,
+      "frequency_shift_fraction": 5.613042833364143e-05,
+      "theta": 0.07423996196265281,
+      "accepted_scale": 0.03125,
+      "trial_score": 0.0019948580958824825
+    },
+    {
+      "iteration": 5,
+      "field_residual_rms": 0.000604781352420161,
+      "relative_charge_residual": 0.0019009729978284081,
+      "frequency_shift_fraction": 5.3380030214359966e-05,
+      "theta": 0.07423975778466163,
+      "accepted_scale": 0.0625,
+      "trial_score": 0.0019396188630741715
+    },
+    {
+      "iteration": 6,
+      "field_residual_rms": 0.0006344368682837346,
+      "relative_charge_residual": 0.0018329242194251973,
+      "frequency_shift_fraction": 4.5216667511397063e-05,
+      "theta": 0.07423915177094088,
+      "accepted_scale": 0.0625,
+      "trial_score": 0.0019109690830734721
+    },
+    {
+      "iteration": 7,
+      "field_residual_rms": 0.0006652631969646666,
+      "relative_charge_residual": 0.0017914317500890226,
+      "frequency_shift_fraction": 6.410639258035712e-05,
+      "theta": 0.07424055406470015,
+      "accepted_scale": 0.125,
+      "trial_score": 0.0018964615959282866
+    }
+  ],
+  "final_field_residual_rms": 0.0008016278541645156,
+  "final_relative_charge_residual": 0.0017187086339046703,
+  "frequency_shift_fraction": 4.8707368172659806e-05,
+  "final_theta": 0.07423941090587986,
+  "state_displacement_over_rest": 0.02052554219969311,
+  "halo_psi_power_fraction": 0.00016332495204329471,
+  "halo_chi_deviation_norm": 4.1045512721783775,
+  "verdict": "TRANSFER_WAKE_STATE_FREQUENCY_ORBIT_NOT_YET_SOLVED",
+  "claim_boundary": "Joint native state/frequency solve at fixed action-derived charge. A solved orbit would still require coefficient provenance, spectrum, current, continuum, and finite-translation gates."
+}

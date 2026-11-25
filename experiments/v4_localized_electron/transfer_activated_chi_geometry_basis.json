@@ -1,0 +1,40 @@
+{
+  "status": "V4_TRANSFER_ACTIVATED_CHI_GEOMETRY_BASIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "input_orbit": "transfer_activated_chi_bond_four_update_orbit",
+  "basis": [
+    "full_difference",
+    "radial_magnitude",
+    "orientation_area"
+  ],
+  "all_terms_real_positive_reciprocal_cubic": true,
+  "contains_corner_copy_or_Dirac_label": false,
+  "single_channels": {
+    "full_difference": {
+      "correlation": -0.006963882377046922,
+      "positive_optimal_coefficient": 0.0,
+      "positive_explained_squared_fraction": 0.0
+    },
+    "radial_magnitude": {
+      "correlation": 0.05822853492770249,
+      "positive_optimal_coefficient": 1.3549222943162473,
+      "positive_explained_squared_fraction": 0.00339056227982637
+    },
+    "orientation_area": {
+      "correlation": -0.024144761484461815,
+      "positive_optimal_coefficient": 0.0,
+      "positive_explained_squared_fraction": 0.0
+    }
+  },
+  "positive_joint_fit": {
+    "response_rank": 3,
+    "coefficients": {
+      "radial_magnitude": 1.3549222943162482
+    },
+    "relative_residual": 0.9983032794297394,
+    "explained_squared_fraction": 0.0033905622798277024
+  },
+  "verdict": "RETIRE_SPLIT_CHI_GEOMETRY_BASIS",
+  "claim_boundary": "Inverse response coefficients are diagnostics only. A survivor still needs native coefficient provenance, spectrum, charge, and free-orbit gates."
+}

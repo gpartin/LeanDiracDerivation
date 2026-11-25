@@ -1,0 +1,213 @@
+{
+  "status": "V4_CROSS_COVARIANCE_TANGENT_RESEARCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rest_del_rms_residual": 2.2205746647133055e-11,
+  "rest_derived_speed_squared": 17.228814273993482,
+  "kinetic_rest_gradient_norm": 7584.4925267277395,
+  "potential_rest_gradient_norm": 439.5746643974898,
+  "bond_potential_rest_gradient_norm": 17.14135445443126,
+  "kinetic_potential_gradient_cosine": -0.99853091367272,
+  "unit_action_rest_gradient_norm": 410.9657426025653,
+  "dmass_minimum_eigenvalue": -1.0362534513373007e-15,
+  "dmass_maximum_eigenvalue": 1.125000000000002,
+  "symmetry_checks": {
+    "mass_asymmetry": 0.0,
+    "gyro_symmetric_part": 2.8103355200037534e-14,
+    "stiffness_asymmetry": 0.0
+  },
+  "rows": [
+    {
+      "component": "rest_ratio",
+      "eta": 0.0,
+      "maximum_growth": 0.03270684353360799,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "rest_ratio",
+      "eta": 1e-08,
+      "maximum_growth": 0.032706849850970554,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084694302859,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "rest_ratio",
+      "eta": 1e-07,
+      "maximum_growth": 0.0327069067698325,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106085706802697,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "rest_ratio",
+      "eta": 1e-06,
+      "maximum_growth": 0.03270747595490582,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106095831803933,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "rest_ratio",
+      "eta": 1e-05,
+      "maximum_growth": 0.03271316744345755,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 26,
+      "mass_minimum_eigenvalue": 0.610619708180267,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "rest_ratio",
+      "eta": 0.0001,
+      "maximum_growth": 0.03598140873403356,
+      "growth_count_above_1e_2": 13,
+      "growth_count_above_1e_4": 33,
+      "mass_minimum_eigenvalue": 0.6107209581804413,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "rest_ratio",
+      "eta": 0.001,
+      "maximum_growth": 0.044884896446831316,
+      "growth_count_above_1e_2": 18,
+      "growth_count_above_1e_4": 34,
+      "mass_minimum_eigenvalue": 0.6117334581803068,
+      "mass_negative_count": 0
+    }
+  ],
+  "component_rows": [
+    {
+      "component": "kinetic_only",
+      "eta": 1e-08,
+      "maximum_growth": 0.03270693014716686,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084694302859,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "kinetic_only",
+      "eta": 1e-07,
+      "maximum_growth": 0.03270770967950408,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106085706802697,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "kinetic_only",
+      "eta": 1e-06,
+      "maximum_growth": 0.037605898396301685,
+      "growth_count_above_1e_2": 13,
+      "growth_count_above_1e_4": 29,
+      "mass_minimum_eigenvalue": 0.6106095831803933,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "kinetic_only",
+      "eta": 1e-05,
+      "maximum_growth": 0.06016594523483652,
+      "growth_count_above_1e_2": 15,
+      "growth_count_above_1e_4": 25,
+      "mass_minimum_eigenvalue": 0.610619708180267,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "potential_only",
+      "eta": 1e-08,
+      "maximum_growth": 0.03270683909806618,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "potential_only",
+      "eta": 1e-07,
+      "maximum_growth": 0.032706799241145196,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "potential_only",
+      "eta": 1e-06,
+      "maximum_growth": 0.03270640065013595,
+      "growth_count_above_1e_2": 10,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "potential_only",
+      "eta": 1e-05,
+      "maximum_growth": 0.03270241445965327,
+      "growth_count_above_1e_2": 10,
+      "growth_count_above_1e_4": 27,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "one_hop_bond_potential",
+      "eta": 1e-06,
+      "maximum_growth": 0.03270682499973311,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "one_hop_bond_potential",
+      "eta": 1e-05,
+      "maximum_growth": 0.032706658245803544,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "one_hop_bond_potential",
+      "eta": 0.0001,
+      "maximum_growth": 0.032704990639949555,
+      "growth_count_above_1e_2": 10,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "one_hop_bond_potential",
+      "eta": 0.001,
+      "maximum_growth": 0.03268830967682983,
+      "growth_count_above_1e_2": 9,
+      "growth_count_above_1e_4": 26,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "one_hop_bond_potential",
+      "eta": 0.01,
+      "maximum_growth": 0.05329351943829416,
+      "growth_count_above_1e_2": 14,
+      "growth_count_above_1e_4": 21,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "component": "one_hop_bond_potential",
+      "eta": 0.1,
+      "maximum_growth": 0.0993381460791207,
+      "growth_count_above_1e_2": 17,
+      "growth_count_above_1e_4": 31,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    }
+  ],
+  "claim_boundary": "Fixed-orbit quadratic screen only. A favorable row requires analytic variation and a freely re-solved nonlinear orbit."
+}

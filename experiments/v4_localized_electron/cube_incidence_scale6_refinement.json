@@ -1,0 +1,57 @@
+{
+  "status": "V4_CUBE_INCIDENCE_SCALE6_REFINEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "scale": 1,
+      "dt": 0.00390625,
+      "maximum_multiplier_modulus": 1.0000000464893057,
+      "excess_modulus": 4.6489305738361963e-08,
+      "growth_rate": 1.1901261992379961e-05,
+      "growing_multiplier_count_at_1e_minus_7": 0
+    },
+    {
+      "scale": 1,
+      "dt": 0.001953125,
+      "maximum_multiplier_modulus": 1.0000000719258302,
+      "excess_modulus": 7.192583018067467e-08,
+      "growth_rate": 3.682602372813428e-05,
+      "growing_multiplier_count_at_1e_minus_7": 0
+    },
+    {
+      "scale": 1,
+      "dt": 0.0009765625,
+      "maximum_multiplier_modulus": 1.0000000461973808,
+      "excess_modulus": 4.619738080968716e-08,
+      "growth_rate": 4.7306116856410315e-05,
+      "growing_multiplier_count_at_1e_minus_7": 0
+    },
+    {
+      "scale": 6,
+      "dt": 0.00390625,
+      "maximum_multiplier_modulus": 1.0000000542423848,
+      "excess_modulus": 5.424238480600252e-08,
+      "growth_rate": 1.3886050133730411e-05,
+      "growing_multiplier_count_at_1e_minus_7": 0
+    },
+    {
+      "scale": 6,
+      "dt": 0.001953125,
+      "maximum_multiplier_modulus": 1.0000000754042557,
+      "excess_modulus": 7.540425572827303e-08,
+      "growth_rate": 3.860697747731061e-05,
+      "growing_multiplier_count_at_1e_minus_7": 0
+    },
+    {
+      "scale": 6,
+      "dt": 0.0009765625,
+      "maximum_multiplier_modulus": 1.0000000554682478,
+      "excess_modulus": 5.546824777269421e-08,
+      "growth_rate": 5.679948414395496e-05,
+      "growing_multiplier_count_at_1e_minus_7": 0
+    }
+  ],
+  "verdict": "UNIT_AND_SCALE6_CENTERED_TIME_REFINEMENT_PASS",
+  "claim_boundary": "Refinement of the fixed rotating-frame tangent pencil. The underlying action blocks are those derived at dt=1/256; a full nonlinear re-derived orbit and implicit update remain open."
+}

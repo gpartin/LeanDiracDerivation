@@ -1,0 +1,125 @@
+{
+  "status": "V4_LOOP_CURVATURE_INVERSE_ACTION_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "failing_multipliers": {
+    "pre_loop_mixed_Psi_chi_mode": {
+      "real": 1.00029294441855,
+      "imag": 1.9963437914800706e-05,
+      "modulus": 1.000292944617761
+    },
+    "post_loop_Psi_exterior_mode": {
+      "real": 1.0002592467535936,
+      "imag": 1.789966882452437e-05,
+      "modulus": 1.0002592469137512
+    }
+  },
+  "inverse_requirement": "positive restoring curvature on the cubic orbit of the mixed Psi-chi carrier twist/shear, with rigid phase and translation directions retained as null or symmetry directions",
+  "forbidden_oracle": "the rank-one Hessian projector onto the saved unstable mode; used only to score alignment and never installed in an action",
+  "candidate_class": "lowest local positive plaquette commutator curvatures of native Psi/chi dyads, summed over xy, xz, and yz planes",
+  "rows": [
+    {
+      "candidate": "W_opposite_corner_factorization",
+      "positive_square": true,
+      "cubic_plane_sum": true,
+      "energy_at_exact_rest": 6.058451752097371e-28,
+      "rest_force_norm": 5.935572855733198e-13,
+      "rest_force_rms": 1.5325583213636984e-14,
+      "mode_responses": {
+        "pre_loop_mixed_Psi_chi_mode": {
+          "quadrature_averaged_Hessian_curvature": 119.66226790877508,
+          "Hessian_image_norm_per_mode_norm": 178.68102665855278,
+          "rank_one_oracle_alignment": 0.669697673818729
+        },
+        "post_loop_Psi_exterior_mode": {
+          "quadrature_averaged_Hessian_curvature": 215.16889865677132,
+          "Hessian_image_norm_per_mode_norm": 371.7833081555782,
+          "rank_one_oracle_alignment": 0.5787481415565077
+        }
+      }
+    },
+    {
+      "candidate": "combined_ordered_frame_plaquette_curvature",
+      "positive_square": true,
+      "cubic_plane_sum": true,
+      "energy_at_exact_rest": 0.0,
+      "rest_force_norm": 0.0,
+      "rest_force_rms": 0.0,
+      "mode_responses": {
+        "pre_loop_mixed_Psi_chi_mode": {
+          "quadrature_averaged_Hessian_curvature": 177939490.5051465,
+          "Hessian_image_norm_per_mode_norm": 283704530.2132618,
+          "rank_one_oracle_alignment": 0.6272000322708583
+        },
+        "post_loop_Psi_exterior_mode": {
+          "quadrature_averaged_Hessian_curvature": 8444.383007093184,
+          "Hessian_image_norm_per_mode_norm": 1784266.860368995,
+          "rank_one_oracle_alignment": 0.00473269060511881
+        }
+      }
+    },
+    {
+      "candidate": "area_frame_plaquette_curvature",
+      "positive_square": true,
+      "cubic_plane_sum": true,
+      "energy_at_exact_rest": 0.0,
+      "rest_force_norm": 0.0,
+      "rest_force_rms": 0.0,
+      "mode_responses": {
+        "pre_loop_mixed_Psi_chi_mode": {
+          "quadrature_averaged_Hessian_curvature": 1.4243089353777868e+16,
+          "Hessian_image_norm_per_mode_norm": 2.2721896966200336e+16,
+          "rank_one_oracle_alignment": 0.6268442012110604
+        },
+        "post_loop_Psi_exterior_mode": {
+          "quadrature_averaged_Hessian_curvature": 672458588421.5957,
+          "Hessian_image_norm_per_mode_norm": 142767600837987.6,
+          "rank_one_oracle_alignment": 0.00471016242112733
+        }
+      }
+    },
+    {
+      "candidate": "separated_ordered_frame_plaquette_curvature",
+      "positive_square": true,
+      "cubic_plane_sum": true,
+      "energy_at_exact_rest": 16969515758.272419,
+      "rest_force_norm": 2706959676.9719853,
+      "rest_force_rms": 69893398.31845005,
+      "mode_responses": {
+        "pre_loop_mixed_Psi_chi_mode": {
+          "quadrature_averaged_Hessian_curvature": 92903502.95270346,
+          "Hessian_image_norm_per_mode_norm": 165924858.1003788,
+          "rank_one_oracle_alignment": 0.5599131077544757
+        },
+        "post_loop_Psi_exterior_mode": {
+          "quadrature_averaged_Hessian_curvature": 37733973.34361532,
+          "Hessian_image_norm_per_mode_norm": 49740636.10129056,
+          "rank_one_oracle_alignment": 0.7586146117386765
+        }
+      }
+    },
+    {
+      "candidate": "cross_frame_plaquette_curvature",
+      "positive_square": true,
+      "cubic_plane_sum": true,
+      "energy_at_exact_rest": 7777694722.541527,
+      "rest_force_norm": 1335629146.657369,
+      "rest_force_rms": 34485796.27808809,
+      "mode_responses": {
+        "pre_loop_mixed_Psi_chi_mode": {
+          "quadrature_averaged_Hessian_curvature": 9082180.909811333,
+          "Hessian_image_norm_per_mode_norm": 28601121.254052628,
+          "rank_one_oracle_alignment": 0.3175463237660461
+        },
+        "post_loop_Psi_exterior_mode": {
+          "quadrature_averaged_Hessian_curvature": 19716845.810270347,
+          "Hessian_image_norm_per_mode_norm": 35396731.477231406,
+          "rank_one_oracle_alignment": 0.5570244761992506
+        }
+      }
+    }
+  ],
+  "best_screen_candidate": "W_opposite_corner_factorization",
+  "verdict": "LOOP_ACTION_CLASS_HAS_NONZERO_REQUIRED_RESPONSE",
+  "claim_boundary": "A nonzero aligned Hessian response only earns a Fredholm rest-branch and full Floquet test. It is not coefficient provenance, an admitted action, stability, movement, or Dirac closure."
+}

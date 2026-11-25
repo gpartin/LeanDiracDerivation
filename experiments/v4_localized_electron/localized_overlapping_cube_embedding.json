@@ -1,0 +1,416 @@
+{
+  "status": "V4_LOCALIZED_OVERLAPPING_CUBE_EMBEDDING_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "construction": "Translation-equivariant overlapping-cube synthesis using the prepared carrier's native Psi ray and chi companion at each corner; each flavor copy is tested independently.",
+  "copies": [
+    {
+      "flavor": "plus",
+      "fiber_dimension_complex": 4,
+      "representative_rows": [
+        {
+          "momentum": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.966810798710804,
+              1.134176273977648,
+              0.0
+            ],
+            "condition_number_on_range": 1.966810798710804e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.4142135623730947,
+              1.4142135623730947,
+              0.0
+            ],
+            "condition_number_on_range": 1.4142135623730947e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              48.94484733278292,
+              48.92923082636001,
+              1.7220603801096284,
+              0.7221488052952908
+            ],
+            "condition_number_on_range": 67.77667839908575
+          }
+        },
+        {
+          "momentum": [
+            0.7853981633974483,
+            0.0,
+            0.0
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.966810798710804,
+              1.1341762739776478,
+              0.0
+            ],
+            "condition_number_on_range": 1.966810798710804e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.414213562373095,
+              1.414213562373095,
+              0.0
+            ],
+            "condition_number_on_range": 1.4142135623730947e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              48.94484733278292,
+              48.92923082636001,
+              1.7220603801096264,
+              0.7221488052952929
+            ],
+            "condition_number_on_range": 67.77667839908555
+          }
+        },
+        {
+          "momentum": [
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.6782421103427616,
+              1.0878894332937852,
+              0.0
+            ],
+            "condition_number_on_range": 1.6782421103427614e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.5564863413504064,
+              0.6501151673437361,
+              0.0
+            ],
+            "condition_number_on_range": 1.5564863413504062e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              53.8619876223416,
+              22.514732621480906,
+              1.218100770938636,
+              0.5592766987979415
+            ],
+            "condition_number_on_range": 96.3065111385968
+          }
+        },
+        {
+          "momentum": [
+            3.141592653589793,
+            3.141592653589793,
+            3.141592653589793
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.966810798710804,
+              1.1341762739776475,
+              0.0
+            ],
+            "condition_number_on_range": 1.966810798710804e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.4142135623730947,
+              1.4142135623730947,
+              0.0
+            ],
+            "condition_number_on_range": 1.4142135623730947e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              48.94484733278293,
+              48.92923082636002,
+              1.7220603801096257,
+              0.7221488052952949
+            ],
+            "condition_number_on_range": 67.77667839908538
+          }
+        }
+      ],
+      "dense_grid_point_count": 4923,
+      "joint_rank_deficient_point_count": 0,
+      "minimum_joint_smallest_singular_value": 0.08250535522596807,
+      "minimum_location": [
+        3.141592653589793,
+        0.0,
+        3.141592653589793
+      ]
+    },
+    {
+      "flavor": "minus",
+      "fiber_dimension_complex": 4,
+      "representative_rows": [
+        {
+          "momentum": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.6473142321810308,
+              0.36284332992983154,
+              0.0
+            ],
+            "condition_number_on_range": 1.6473142321810307e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.4142135623730947,
+              1.4142135623730947,
+              0.0
+            ],
+            "condition_number_on_range": 1.4142135623730947e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              48.944844610116895,
+              48.92923025849394,
+              1.0821759241321203,
+              0.08250535522597706
+            ],
+            "condition_number_on_range": 593.2323359624354
+          }
+        },
+        {
+          "momentum": [
+            0.7853981633974483,
+            0.0,
+            0.0
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.6473142321810306,
+              0.36284332992983154,
+              0.0
+            ],
+            "condition_number_on_range": 1.6473142321810304e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.4142135623730951,
+              1.414213562373095,
+              0.0
+            ],
+            "condition_number_on_range": 1.414213562373095e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              48.944844610116895,
+              48.929230258493924,
+              1.0821759241321205,
+              0.08250535522597795
+            ],
+            "condition_number_on_range": 593.232335962429
+          }
+        },
+        {
+          "momentum": [
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.6782421103427616,
+              1.0878894332937854,
+              0.0
+            ],
+            "condition_number_on_range": 1.6782421103427614e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.891388450104744,
+              1.2559260603991085,
+              0.0
+            ],
+            "condition_number_on_range": 1.8913884501047438e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              65.44141961335976,
+              43.46364877146876,
+              1.372959206560756,
+              0.7895327198151872
+            ],
+            "condition_number_on_range": 82.8862667384807
+          }
+        },
+        {
+          "momentum": [
+            3.141592653589793,
+            3.141592653589793,
+            3.141592653589793
+          ],
+          "psi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.6473142321810306,
+              0.3628433299298314,
+              0.0
+            ],
+            "condition_number_on_range": 1.6473142321810304e+30
+          },
+          "chi_only": {
+            "rank": 2,
+            "singular_values": [
+              1.4142135623730947,
+              1.4142135623730947,
+              0.0
+            ],
+            "condition_number_on_range": 1.4142135623730947e+30
+          },
+          "joint_native_fields": {
+            "rank": 4,
+            "singular_values": [
+              48.9448446101169,
+              48.92923025849394,
+              1.0821759241321203,
+              0.08250535522596915
+            ],
+            "condition_number_on_range": 593.2323359624924
+          }
+        }
+      ],
+      "dense_grid_point_count": 4923,
+      "joint_rank_deficient_point_count": 0,
+      "minimum_joint_smallest_singular_value": 0.08250535522596915,
+      "minimum_location": [
+        3.141592653589793,
+        3.141592653589793,
+        3.141592653589793
+      ]
+    }
+  ],
+  "both_copy_rows": [
+    {
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "psi_only": {
+        "rank": 2,
+        "singular_values": [
+          2.0000000000000004,
+          1.9999999999999998,
+          0.0
+        ],
+        "condition_number_on_range": 2.0000000000000003e+30
+      },
+      "chi_only": {
+        "rank": 2,
+        "singular_values": [
+          2.0,
+          1.9999999999999993,
+          0.0
+        ],
+        "condition_number_on_range": 1.9999999999999998e+30
+      },
+      "joint_native_fields": {
+        "rank": 4,
+        "singular_values": [
+          69.20983192742011,
+          69.19537556802477,
+          2.000000000000001,
+          1.4139181653326724,
+          7.367633901358484e-15,
+          0.0
+        ],
+        "condition_number_on_range": 6.920983192742011e+31
+      }
+    },
+    {
+      "momentum": [
+        0.7853981633974483,
+        0.7853981633974483,
+        0.7853981633974483
+      ],
+      "psi_only": {
+        "rank": 2,
+        "singular_values": [
+          1.9999999999999998,
+          1.9999999999999998,
+          0.0
+        ],
+        "condition_number_on_range": 1.9999999999999995e+30
+      },
+      "chi_only": {
+        "rank": 2,
+        "singular_values": [
+          1.9999999999999998,
+          1.9999999999999998,
+          0.0
+        ],
+        "condition_number_on_range": 1.9999999999999995e+30
+      },
+      "joint_native_fields": {
+        "rank": 4,
+        "singular_values": [
+          69.20983192742011,
+          69.19537556802477,
+          2.0000000000000075,
+          1.4139181653326671,
+          6.3582451826013205e-15,
+          0.0
+        ],
+        "condition_number_on_range": 6.920983192742011e+31
+      }
+    }
+  ],
+  "copy_image_comparison": [
+    {
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "plus_minus_image_projector_defect": 7.684522090433837e-15
+    },
+    {
+      "momentum": [
+        0.7853981633974483,
+        0.7853981633974483,
+        0.7853981633974483
+      ],
+      "plus_minus_image_projector_defect": 1.3056778968366718e-15
+    }
+  ],
+  "translation_intertwiner_max_defect": 6.72905295985248e-15,
+  "single_copy_joint_embedding_full_rank_on_sampled_grid": true,
+  "verdict": "SPATIAL_LOCALIZED_LIFT_CANDIDATE_SURVIVES",
+  "interpretation": "Psi alone and chi alone each have only three complex channels and cannot inject a four-complex-component flavor fiber. Their joint six-channel native field can do so if the reported rank is four. Translation intertwining follows from the convolutional overlapping-cube construction rather than identifying internal corners with physical sites. The both-copy rank and image projector defect also test whether the two algebraic copies remain distinct after this native spatial lift.",
+  "claim_boundary": "This is a spatial rank and translation-equivariance audit. It does not yet include both committed time layers, prove native tangent closure, or establish a freely moving electron.",
+  "next_test": "Lift the surviving spatial map into the complete two-layer Psi/chi tangent, compute (I-EE^dagger)L_native E, and require the same E to reproduce mass, signed transport, density, and current."
+}

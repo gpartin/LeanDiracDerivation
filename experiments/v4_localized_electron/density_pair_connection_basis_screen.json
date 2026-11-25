@@ -1,0 +1,96 @@
+{
+  "status": "V4_DENSITY_PAIR_CONNECTION_BASIS_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "channels": [
+    {
+      "feature": "rho_Psi",
+      "two_interval_action": 1.627103930474812e-32,
+      "rest_DEL_norm": 3.8903503023710345e-17,
+      "mode_mass_directional_sum": 6.490996558854265e-08,
+      "mode_gyro_response_norm": 0.0009089362502486293,
+      "mode_stiffness_directional_sum": 7.397955253004989e-19,
+      "translation_response_norms": [
+        6.074820465435423e-06,
+        6.034313020381398e-06,
+        5.64198276141025e-06
+      ]
+    },
+    {
+      "feature": "rho_chi",
+      "two_interval_action": 7.748113954641962e-33,
+      "rest_DEL_norm": 4.097599287825248e-18,
+      "mode_mass_directional_sum": 8.265907068388423e-25,
+      "mode_gyro_response_norm": 0.000941525656189473,
+      "mode_stiffness_directional_sum": 4.2431968087201624e-19,
+      "translation_response_norms": [
+        4.20511090692312e-06,
+        4.204804723601403e-06,
+        4.230153667981422e-06
+      ]
+    },
+    {
+      "feature": "area_density",
+      "two_interval_action": 0.0,
+      "rest_DEL_norm": 2.697318911005694e-18,
+      "mode_mass_directional_sum": 3.0196517496731815e-08,
+      "mode_gyro_response_norm": 0.0006028694846472246,
+      "mode_stiffness_directional_sum": -2.1290806940823676e-19,
+      "translation_response_norms": [
+        2.023104828917465e-06,
+        2.0230675271188783e-06,
+        3.2788412255641474e-06
+      ]
+    },
+    {
+      "feature": "sigma_Psi_anisotropy",
+      "two_interval_action": 1.0041266848426283e-17,
+      "rest_DEL_norm": 1.3278354266571365e-17,
+      "mode_mass_directional_sum": 4.0206578183692014e-08,
+      "mode_gyro_response_norm": 0.0007179316513062644,
+      "mode_stiffness_directional_sum": -3.1952421260545724e-18,
+      "translation_response_norms": [
+        4.533177521936227e-06,
+        4.509718019139166e-06,
+        5.228527918792651e-06
+      ]
+    },
+    {
+      "feature": "sigma_chi_anisotropy",
+      "two_interval_action": 1.0068979852766506e-17,
+      "rest_DEL_norm": 7.499863383055125e-18,
+      "mode_mass_directional_sum": -9.084013702708586e-19,
+      "mode_gyro_response_norm": 0.0007119588635837338,
+      "mode_stiffness_directional_sum": 4.8309556431472184e-18,
+      "translation_response_norms": [
+        3.1648089664357687e-06,
+        3.16535743013113e-06,
+        3.935709597601715e-06
+      ]
+    },
+    {
+      "feature": "area_bilinear_anisotropy",
+      "two_interval_action": 1.5011970787118802e-33,
+      "rest_DEL_norm": 2.812971058739832e-18,
+      "mode_mass_directional_sum": 1.3052068214989598e-08,
+      "mode_gyro_response_norm": 0.00026058281850557216,
+      "mode_stiffness_directional_sum": 1.009883332789096e-19,
+      "translation_response_norms": [
+        8.744560008266847e-07,
+        8.744363929560543e-07,
+        1.4172337005532855e-06
+      ]
+    }
+  ],
+  "three_axis_response_singular_values": [
+    1.3719056910832596e-05,
+    8.574057997911957e-06,
+    4.394709168905123e-06,
+    1.8946380545787418e-06,
+    1.6242023798356447e-08,
+    1.3469904880263256e-21
+  ],
+  "three_axis_response_rank": 5,
+  "verdict": "SCALAR_ORIENTATION_BASIS_SCREENED",
+  "claim_boundary": "Directional derivatives identify independent action responses. They do not replace a full matrix spectrum or admit a term."
+}

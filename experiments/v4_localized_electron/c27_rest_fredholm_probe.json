@@ -1,0 +1,44 @@
+{
+  "status": "V4_C27_JOINT_W_REST_FREDHOLM_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_delta": "joint W body-diagonal positive Dirichlet energy",
+  "active_state_coordinates": 768,
+  "clock_coordinates": 1,
+  "baseline_residual_norm": 6.062516122939322e-11,
+  "unit_c27_forcing_norm": 0.7594488455436111,
+  "lsmr_stop_code": 2,
+  "lsmr_iterations": 3,
+  "lsmr_reported_residual_norm": 0.09419803599108924,
+  "linear_range_relative_residual": 0.12403473458926116,
+  "correction_norm": 0.2665542542812578,
+  "clock_correction": 3.6898374427167664e-06,
+  "nonlinear_controls": [
+    {
+      "strength": 0.0001,
+      "uncorrected_residual_norm": 7.594490011135727e-05,
+      "corrected_residual_norm": 9.419788925013568e-06,
+      "corrected_over_uncorrected": 0.12403451596093251,
+      "corrected_over_strength_squared": 941.9788925013568,
+      "carrier_overlap": 1.0000000000000002
+    },
+    {
+      "strength": 0.001,
+      "uncorrected_residual_norm": 0.0007594488610986969,
+      "corrected_residual_norm": 9.41965878928403e-05,
+      "corrected_over_uncorrected": 0.12403282527353562,
+      "corrected_over_strength_squared": 94.19658789284031,
+      "carrier_overlap": 1.0
+    },
+    {
+      "strength": 0.01,
+      "uncorrected_residual_norm": 0.00759448847099083,
+      "corrected_residual_norm": 0.0009418355818465978,
+      "corrected_over_uncorrected": 0.12401567076494877,
+      "corrected_over_strength_squared": 9.418355818465978,
+      "carrier_overlap": 0.9999999999999786
+    }
+  ],
+  "verdict": "C27_JOINT_W_REST_CONTINUATION_OBSTRUCTED_IN_FIRST_SHELL",
+  "claim_boundary": "Matrix-free first-order range and small-strength nonlinear control only. A feasibility pass is not a solved finite C27 rest branch, spectrum pass, transport pass, or action admission."
+}

@@ -1,0 +1,145 @@
+{
+  "status": "V4_CANONICAL_NONCOPLANAR_AUGMENTED_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "fraction_of_rest_norm": 0.01,
+      "orbit_residual_rms": 1.583126377895985e-12,
+      "amplitude_constraint": 0.0,
+      "multiplier": 1.3727684675715049e-14,
+      "unconstrained_residual_rms": 1.583126377895985e-12,
+      "trace": [
+        {
+          "iteration": 0,
+          "orbit_residual_rms": 3.259237068144668e-11,
+          "amplitude_constraint": 0.0,
+          "multiplier": 0.0,
+          "augmented_norm": 5.866626722660402e-10
+        },
+        {
+          "iteration": 1,
+          "orbit_residual_rms": 1.583126377895985e-12,
+          "amplitude_constraint": 0.0,
+          "multiplier": 1.3727684675715049e-14,
+          "augmented_norm": 2.8496034086605493e-11
+        }
+      ],
+      "psi_locked_fidelity": 0.9999289346921665,
+      "chi_locked_fidelity": 0.9993603824067772,
+      "maximum_opposite_pair_error": 0.00020082582123990002,
+      "carrier_W_singular_values": [
+        335.7833853102868,
+        335.7833785235709,
+        8.008390191304166,
+        8.008231183092198,
+        1.197236002588171e-12,
+        8.557857672786435e-13
+      ],
+      "carrier_W_third_over_second": 0.023849870790260106,
+      "exterior_psi_power_fraction": 1.7610605898732266e-25
+    },
+    {
+      "fraction_of_rest_norm": 0.02,
+      "orbit_residual_rms": 3.3146986246184593e-12,
+      "amplitude_constraint": 0.0,
+      "multiplier": -1.38791007088827e-15,
+      "unconstrained_residual_rms": 3.3146986246184593e-12,
+      "trace": [
+        {
+          "iteration": 0,
+          "orbit_residual_rms": 0.00935115280057396,
+          "amplitude_constraint": 0.0,
+          "multiplier": 0.0,
+          "augmented_norm": 0.16832075041033126
+        },
+        {
+          "iteration": 1,
+          "orbit_residual_rms": 1.4327621822814285e-05,
+          "amplitude_constraint": 4.440892098500626e-16,
+          "multiplier": 8.443220240419882e-06,
+          "augmented_norm": 0.0002575820228647672
+        },
+        {
+          "iteration": 2,
+          "orbit_residual_rms": 1.1413918221840523e-07,
+          "amplitude_constraint": -4.440892098500626e-16,
+          "multiplier": -2.318292334903098e-10,
+          "augmented_norm": 2.0545057451380392e-06
+        },
+        {
+          "iteration": 3,
+          "orbit_residual_rms": 3.3146986246184593e-12,
+          "amplitude_constraint": 0.0,
+          "multiplier": -1.38791007088827e-15,
+          "augmented_norm": 5.966461918423985e-11
+        }
+      ],
+      "psi_locked_fidelity": 0.9997152284127555,
+      "chi_locked_fidelity": 0.9974401536175083,
+      "maximum_opposite_pair_error": 0.0008769518334500675,
+      "carrier_W_singular_values": [
+        335.52135151972936,
+        335.47173131464723,
+        16.021533072284765,
+        16.021106842341645,
+        5.105132521223604e-12,
+        2.909659357171443e-12
+      ],
+      "carrier_W_third_over_second": 0.047758220966933794,
+      "exterior_psi_power_fraction": 2.7928263813307157e-08
+    },
+    {
+      "fraction_of_rest_norm": 0.03,
+      "orbit_residual_rms": 1.5160934846158699e-12,
+      "amplitude_constraint": 0.0,
+      "multiplier": -3.0928816800288924e-15,
+      "unconstrained_residual_rms": 1.5160934846158699e-12,
+      "trace": [
+        {
+          "iteration": 0,
+          "orbit_residual_rms": 0.015589842455333295,
+          "amplitude_constraint": 4.440892098500626e-16,
+          "multiplier": 0.0,
+          "augmented_norm": 0.2806171641959993
+        },
+        {
+          "iteration": 1,
+          "orbit_residual_rms": 4.025146165989124e-05,
+          "amplitude_constraint": -4.440892098500626e-16,
+          "multiplier": 3.570794036365224e-05,
+          "augmented_norm": 0.0007225241532027403
+        },
+        {
+          "iteration": 2,
+          "orbit_residual_rms": 1.6839636644060606e-06,
+          "amplitude_constraint": 0.0,
+          "multiplier": -2.9928528065656552e-09,
+          "augmented_norm": 3.031135173625094e-05
+        },
+        {
+          "iteration": 3,
+          "orbit_residual_rms": 1.5160934846158699e-12,
+          "amplitude_constraint": 0.0,
+          "multiplier": -3.0928816800288924e-15,
+          "augmented_norm": 2.728974854939418e-11
+        }
+      ],
+      "psi_locked_fidelity": 0.9993577405324846,
+      "chi_locked_fidelity": 0.9942347621886949,
+      "maximum_opposite_pair_error": 0.0020002466377073143,
+      "carrier_W_singular_values": [
+        335.0788627939308,
+        334.95587704780206,
+        24.041048007454982,
+        24.040993610937203,
+        9.658994727891495e-12,
+        7.223999682766601e-12
+      ],
+      "carrier_W_third_over_second": 0.07177377575621414,
+      "exterior_psi_power_fraction": 7.028983295861423e-07
+    }
+  ],
+  "verdict": "FINITE_CANONICAL_NONCOPLANAR_REST_BRANCH_SOLVED",
+  "claim_boundary": "Finite constrained relative equilibria on side three. A pass is not stability, translation, Dirac current, or box refinement."
+}

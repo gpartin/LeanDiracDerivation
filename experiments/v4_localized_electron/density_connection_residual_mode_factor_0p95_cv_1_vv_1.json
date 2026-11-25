@@ -1,0 +1,218 @@
+{
+  "status": "V4_DENSITY_CONNECTION_RESIDUAL_MODE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "coefficient": {
+    "common": 21605.85,
+    "relative": 0.0,
+    "provenance": "B times chi0",
+    "carrier_vacuum": 1.0,
+    "vacuum_vacuum": 1.0
+  },
+  "multiplier": {
+    "real": 1.0002763697314896,
+    "imag": 0.00024695812797188545,
+    "modulus": 1.0002764002172224,
+    "growth_rate": 0.07074867858422804,
+    "phase": 0.0002468898900615155
+  },
+  "field_power_fractions": {
+    "Psi_real_coordinates": 0.3815094601285892,
+    "Psi_imag_coordinates": 0.3851937216217192,
+    "chi_real_coordinates": 0.15508334238698324,
+    "chi_imag_coordinates": 0.07821347586270821
+  },
+  "C3_component_power_fractions": [
+    0.49191340083215873,
+    0.508086599167841,
+    5.353958401764747e-17
+  ],
+  "spatial_region_power_fractions": {
+    "carrier": 1.0,
+    "first_C19_shell": 3.8073674840557325e-17,
+    "remaining_exterior": 3.863165151885209e-17
+  },
+  "geometric_subspace_overlaps": {
+    "translations": 0.0014639453634840878,
+    "global_phase_radial": 4.393539398118149e-18,
+    "carrier_corner_all": 0.5882264599005274,
+    "carrier_corner_radial": 0.08104877133096862,
+    "carrier_corner_phase": 0.5071776885695588,
+    "plus_copy_envelope": 0.9999999999999998,
+    "minus_copy_envelope": 0.9999999999999998
+  },
+  "top_spatial_fourier_modes": [
+    {
+      "index": [
+        2,
+        3,
+        3
+      ],
+      "wavevector": [
+        2.5132741228718345,
+        -2.5132741228718345,
+        -2.5132741228718345
+      ],
+      "power_fraction": 0.016820749606441986
+    },
+    {
+      "index": [
+        2,
+        4,
+        3
+      ],
+      "wavevector": [
+        2.5132741228718345,
+        -1.2566370614359172,
+        -2.5132741228718345
+      ],
+      "power_fraction": 0.015979250422987402
+    },
+    {
+      "index": [
+        2,
+        3,
+        4
+      ],
+      "wavevector": [
+        2.5132741228718345,
+        -2.5132741228718345,
+        -1.2566370614359172
+      ],
+      "power_fraction": 0.015527897015193443
+    },
+    {
+      "index": [
+        1,
+        2,
+        1
+      ],
+      "wavevector": [
+        1.2566370614359172,
+        2.5132741228718345,
+        1.2566370614359172
+      ],
+      "power_fraction": 0.015507501929708066
+    },
+    {
+      "index": [
+        3,
+        4,
+        3
+      ],
+      "wavevector": [
+        -2.5132741228718345,
+        -1.2566370614359172,
+        -2.5132741228718345
+      ],
+      "power_fraction": 0.015309062484804056
+    },
+    {
+      "index": [
+        2,
+        3,
+        2
+      ],
+      "wavevector": [
+        2.5132741228718345,
+        -2.5132741228718345,
+        2.5132741228718345
+      ],
+      "power_fraction": 0.014724098736430912
+    },
+    {
+      "index": [
+        1,
+        2,
+        0
+      ],
+      "wavevector": [
+        1.2566370614359172,
+        2.5132741228718345,
+        0.0
+      ],
+      "power_fraction": 0.013835860321827934
+    },
+    {
+      "index": [
+        1,
+        3,
+        2
+      ],
+      "wavevector": [
+        1.2566370614359172,
+        -2.5132741228718345,
+        2.5132741228718345
+      ],
+      "power_fraction": 0.013656453435927807
+    },
+    {
+      "index": [
+        2,
+        4,
+        2
+      ],
+      "wavevector": [
+        2.5132741228718345,
+        -1.2566370614359172,
+        2.5132741228718345
+      ],
+      "power_fraction": 0.013453071558106973
+    },
+    {
+      "index": [
+        1,
+        2,
+        2
+      ],
+      "wavevector": [
+        1.2566370614359172,
+        2.5132741228718345,
+        2.5132741228718345
+      ],
+      "power_fraction": 0.013322350443613993
+    },
+    {
+      "index": [
+        1,
+        3,
+        3
+      ],
+      "wavevector": [
+        1.2566370614359172,
+        -2.5132741228718345,
+        -2.5132741228718345
+      ],
+      "power_fraction": 0.013280378356767862
+    },
+    {
+      "index": [
+        0,
+        2,
+        1
+      ],
+      "wavevector": [
+        0.0,
+        2.5132741228718345,
+        1.2566370614359172
+      ],
+      "power_fraction": 0.012883270006531115
+    }
+  ],
+  "unit_connection_quadratics_on_residual": {
+    "common": {
+      "mass": 6.258323062891392e-11,
+      "gyro": -2.419241794312101e-22,
+      "stiffness": -2.6111450168087608e-20,
+      "gyro_magnitude": 4.104973920839169e-06
+    },
+    "relative": {
+      "mass": 3.2064242073578596e-10,
+      "gyro": -6.652914934358278e-22,
+      "stiffness": 7.029864320966317e-20,
+      "gyro_magnitude": 1.1396979653798528e-07
+    }
+  },
+  "verdict": "RESIDUAL_MODE_CLASSIFIED_FOR_ACTION_INVERSE",
+  "claim_boundary": "This classifies the fastest finite-hull linear mode after the natural common-pair connection. It does not prove nonlinear instability outside the declared orbit, admit an action, or close V4-006."
+}

@@ -1,0 +1,223 @@
+{
+  "status": "V4_PERSONAL_TOUCH_COMPLETE_FRAME_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate": "plane",
+  "base_even_strength": 0.0,
+  "base_density_strength": 0.0,
+  "action_delta": "positive reciprocal C19 Hilbert--Schmidt differences of the joint local plane tensor Psi Psi^dagger + chi chi^dagger",
+  "coefficient_rule": "unit relative weights are fixed by the Hilbert--Schmidt norm; overall strength is continuation only and is not admitted",
+  "rows": [
+    {
+      "strength": 0.0001,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 5.77596684885909e-05,
+          "augmented_norm": 0.0010396740327946361,
+          "accepted_scale": 1.0,
+          "accepted_damping": 7.749458779135163e-10
+        },
+        {
+          "iteration": 1,
+          "DEL_rms": 1.7896793281731718e-10,
+          "augmented_norm": 3.221422790711709e-09,
+          "accepted_scale": 1.0,
+          "accepted_damping": 7.749427178245893e-10
+        },
+        {
+          "iteration": 2,
+          "DEL_rms": 6.602301859527892e-15,
+          "augmented_norm": 1.1884143347150205e-13
+        }
+      ],
+      "theta_Psi": 0.07423579645904087,
+      "theta_chi": -1.4309117574039194e-18,
+      "Psi_carrier_fidelity": 1.0000000000000002,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 2.049103480040877e-05,
+      "spectral_radius": 1.0040551391493322,
+      "growth_rate": 1.0360164436390162,
+      "count_above_1_plus_1e_minus_7": 28
+    },
+    {
+      "strength": 0.001,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 0.0005198333345090282,
+          "augmented_norm": 0.009357000021162507,
+          "accepted_scale": 1.0,
+          "accepted_damping": 7.749427178166096e-10
+        },
+        {
+          "iteration": 1,
+          "DEL_rms": 1.4494828227824733e-08,
+          "augmented_norm": 2.609069081008452e-07,
+          "accepted_scale": 1.0,
+          "accepted_damping": 7.749142800161609e-10
+        },
+        {
+          "iteration": 2,
+          "DEL_rms": 7.562155642691063e-15,
+          "augmented_norm": 1.3611880156843915e-13
+        }
+      ],
+      "theta_Psi": 0.07423580888180989,
+      "theta_chi": -1.1633644874385703e-13,
+      "Psi_carrier_fidelity": 1.0000000000000002,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.00020490206165180717,
+      "spectral_radius": 1.0040553925646625,
+      "growth_rate": 1.0360810559434945,
+      "count_above_1_plus_1e_minus_7": 28
+    },
+    {
+      "strength": 0.01,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 0.005198002005551822,
+          "augmented_norm": 0.0935640360999328,
+          "accepted_scale": 1.0,
+          "accepted_damping": 7.749142793697844e-10
+        },
+        {
+          "iteration": 1,
+          "DEL_rms": 1.4441802967926665e-06,
+          "augmented_norm": 2.5995245342267997e-05,
+          "accepted_scale": 0.25,
+          "accepted_damping": 7.746302028241206e-10
+        },
+        {
+          "iteration": 2,
+          "DEL_rms": 6.10067658614643e-07,
+          "augmented_norm": 1.0981217855063574e-05,
+          "accepted_scale": 1.0,
+          "accepted_damping": 7.746302005090129e-10
+        },
+        {
+          "iteration": 3,
+          "DEL_rms": 2.9545159229599218e-09,
+          "augmented_norm": 5.318128661327859e-08,
+          "accepted_scale": 1.0,
+          "accepted_damping": 7.746302535476327e-10
+        },
+        {
+          "iteration": 4,
+          "DEL_rms": 2.086647410750322e-12,
+          "augmented_norm": 3.7559653393505796e-11
+        }
+      ],
+      "theta_Psi": 0.07423593304831508,
+      "theta_chi": -5.778316035880771e-07,
+      "Psi_carrier_fidelity": 1.0000000000000002,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0020478201176074634,
+      "spectral_radius": 1.0040578630583339,
+      "growth_rate": 1.0367109470894358,
+      "count_above_1_plus_1e_minus_7": 32
+    },
+    {
+      "strength": 0.1,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 0.0519469212170716,
+          "augmented_norm": 0.9350445819072888,
+          "accepted_scale": 0.0078125,
+          "accepted_damping": 7.746302535498256e-10
+        },
+        {
+          "iteration": 1,
+          "DEL_rms": 0.02875703092880535,
+          "augmented_norm": 0.5176265567184963,
+          "accepted_scale": 1.0,
+          "accepted_damping": 1.2472737653377557e-08
+        },
+        {
+          "iteration": 2,
+          "DEL_rms": 0.0017230444251062579,
+          "augmented_norm": 0.03101479965191264,
+          "accepted_scale": 1.0,
+          "accepted_damping": 1.90472241040935e-08
+        },
+        {
+          "iteration": 3,
+          "DEL_rms": 1.559271913358079e-05,
+          "augmented_norm": 0.00028066894440445425,
+          "accepted_scale": 1.0,
+          "accepted_damping": 1.836447208188806e-08
+        },
+        {
+          "iteration": 4,
+          "DEL_rms": 1.3225202749825485e-09,
+          "augmented_norm": 2.3805364949685873e-08,
+          "accepted_scale": 1.0,
+          "accepted_damping": 1.8358242128443384e-08
+        },
+        {
+          "iteration": 5,
+          "DEL_rms": 1.686156647978184e-14,
+          "augmented_norm": 3.035081966360732e-13
+        }
+      ],
+      "theta_Psi": 0.0743561378512687,
+      "theta_chi": -0.00012207184481148386,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.007225239796436098,
+      "spectral_radius": 1.0040797142459925,
+      "growth_rate": 1.0422821829490214,
+      "count_above_1_plus_1e_minus_7": 32
+    },
+    {
+      "strength": 1.0,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 0.5186942906150189,
+          "augmented_norm": 9.336497231070341,
+          "accepted_scale": 0.5,
+          "accepted_damping": 1.8358241599992935e-08
+        },
+        {
+          "iteration": 1,
+          "DEL_rms": 0.13744762576374125,
+          "augmented_norm": 2.4740572637473424,
+          "accepted_scale": 1.0,
+          "accepted_damping": 2.2247775977281297e-07
+        },
+        {
+          "iteration": 2,
+          "DEL_rms": 0.0012187536206692585,
+          "augmented_norm": 0.021937565172046654,
+          "accepted_scale": 1.0,
+          "accepted_damping": 2.0150959391321554e-07
+        },
+        {
+          "iteration": 3,
+          "DEL_rms": 5.558075635504193e-07,
+          "augmented_norm": 1.0004536143907548e-05,
+          "accepted_scale": 1.0,
+          "accepted_damping": 2.0108166439783922e-07
+        },
+        {
+          "iteration": 4,
+          "DEL_rms": 1.583689125865382e-13,
+          "augmented_norm": 2.85064042655769e-12
+        }
+      ],
+      "theta_Psi": 0.07554104327256869,
+      "theta_chi": -0.00040394178892161586,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.06338019487379579,
+      "spectral_radius": 1.0043428561928107,
+      "growth_rate": 1.109364020967005,
+      "count_above_1_plus_1e_minus_7": 24
+    }
+  ],
+  "verdict": "COMPLETE_FRAME_BRANCH_NO_IMPROVEMENT",
+  "claim_boundary": "Unrestricted side-three rest-branch continuation and full dense spectrum. A favorable row still requires coefficient provenance, side-five/timestep refinement, nonlinear stability, and motion."
+}

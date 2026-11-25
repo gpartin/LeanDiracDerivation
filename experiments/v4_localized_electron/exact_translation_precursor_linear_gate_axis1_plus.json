@@ -1,0 +1,356 @@
+{
+  "status": "V4_EXACT_TRANSLATION_PRECURSOR_LINEAR_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "axis": 1,
+  "sign": 1,
+  "exact_translation_map": "complete joint Psi-chi profile shifted one cell with no runtime projection, reset, receiver preload, or copied force",
+  "core_values_held_exact_during_inverse_gate": true,
+  "dt": 0.07962298862412115,
+  "psi_phase": -7.543261418791188e-07,
+  "chi_phase": 4.4072912742501706e-07,
+  "baseline_recurrence_norm": 121.9049058071167,
+  "cases": [
+    {
+      "support": "C19_first_shell",
+      "free_site_count": 48,
+      "free_real_coordinate_count": 576,
+      "lsmr_stop_code": 2,
+      "lsmr_iterations": 25,
+      "linear_relative_residual": 0.6914231112147615,
+      "correction_norm_over_state_norm": 0.1727490680747047,
+      "nonlinear_scale_rows": [
+        {
+          "scale": 0.0,
+          "relative_residual": 1.0
+        },
+        {
+          "scale": 0.01,
+          "relative_residual": 0.9947959866881766
+        },
+        {
+          "scale": 0.02,
+          "relative_residual": 0.9896228267278434
+        },
+        {
+          "scale": 0.03,
+          "relative_residual": 0.9844808264721973
+        },
+        {
+          "scale": 0.04,
+          "relative_residual": 0.9793703039188493
+        },
+        {
+          "scale": 0.05,
+          "relative_residual": 0.9742915885463767
+        },
+        {
+          "scale": 0.06,
+          "relative_residual": 0.9692450211456125
+        },
+        {
+          "scale": 0.07,
+          "relative_residual": 0.9642309536454535
+        },
+        {
+          "scale": 0.08,
+          "relative_residual": 0.9592497489329674
+        },
+        {
+          "scale": 0.09,
+          "relative_residual": 0.9543017806675729
+        },
+        {
+          "scale": 0.1,
+          "relative_residual": 0.9493874330890634
+        },
+        {
+          "scale": 0.2,
+          "relative_residual": 0.9021847749411761
+        },
+        {
+          "scale": 0.30000000000000004,
+          "relative_residual": 0.858836837408318
+        },
+        {
+          "scale": 0.4,
+          "relative_residual": 0.8198640160172755
+        },
+        {
+          "scale": 0.5,
+          "relative_residual": 0.7858282573875414
+        },
+        {
+          "scale": 0.6000000000000001,
+          "relative_residual": 0.7572890785962759
+        },
+        {
+          "scale": 0.7,
+          "relative_residual": 0.7347514091225034
+        },
+        {
+          "scale": 0.8,
+          "relative_residual": 0.7186112997385573
+        },
+        {
+          "scale": 0.9000000000000001,
+          "relative_residual": 0.7091100227259862
+        },
+        {
+          "scale": 1.0,
+          "relative_residual": 0.7063091835991046
+        }
+      ],
+      "best_nonlinear": {
+        "scale": 1.0,
+        "relative_residual": 0.7063091835991046
+      },
+      "best_nonlinear_residual_diagnostics": {
+        "Psi_power_fraction": 0.3159490730863503,
+        "chi_power_fraction": 0.6840509269136497,
+        "core_power_fraction": 0.499016208575466,
+        "first_shell_power_fraction": 0.27283036498065955,
+        "far_exterior_power_fraction": 0.22815342644387454,
+        "complex_component_power_fractions": [
+          0.4411613242419371,
+          0.2804953236225769,
+          0.2783433521354858
+        ],
+        "maximum_residual_site": [
+          2,
+          2,
+          1
+        ],
+        "maximum_residual_site_power_fraction": 0.07486081461053216
+      }
+    },
+    {
+      "support": "all_exterior_sites",
+      "free_site_count": 117,
+      "free_real_coordinate_count": 1404,
+      "lsmr_stop_code": 7,
+      "lsmr_iterations": 180,
+      "linear_relative_residual": 0.45676536408351465,
+      "correction_norm_over_state_norm": 1361.5078908261294,
+      "nonlinear_scale_rows": [
+        {
+          "scale": 0.0,
+          "relative_residual": 1.0
+        },
+        {
+          "scale": 0.01,
+          "relative_residual": 162.6405391342245
+        },
+        {
+          "scale": 0.02,
+          "relative_residual": 1301.0834958284836
+        },
+        {
+          "scale": 0.03,
+          "relative_residual": 4391.145046164533
+        },
+        {
+          "scale": 0.04,
+          "relative_residual": 10408.631100285267
+        },
+        {
+          "scale": 0.05,
+          "relative_residual": 20329.34959968615
+        },
+        {
+          "scale": 0.06,
+          "relative_residual": 35129.108616555364
+        },
+        {
+          "scale": 0.07,
+          "relative_residual": 55783.71624393102
+        },
+        {
+          "scale": 0.08,
+          "relative_residual": 83268.9805799201
+        },
+        {
+          "scale": 0.09,
+          "relative_residual": 118560.70972421858
+        },
+        {
+          "scale": 0.1,
+          "relative_residual": 162634.71177711428
+        },
+        {
+          "scale": 0.2,
+          "relative_residual": 1301077.5244277068
+        },
+        {
+          "scale": 0.30000000000000004,
+          "relative_residual": 4391136.538749979
+        },
+        {
+          "scale": 0.4,
+          "relative_residual": 10408619.855533438
+        },
+        {
+          "scale": 0.5,
+          "relative_residual": 20329335.575569503
+        },
+        {
+          "scale": 0.6000000000000001,
+          "relative_residual": 35129091.799649745
+        },
+        {
+          "scale": 0.7,
+          "relative_residual": 55783696.62856568
+        },
+        {
+          "scale": 0.8,
+          "relative_residual": 83268958.16310889
+        },
+        {
+          "scale": 0.9000000000000001,
+          "relative_residual": 118560684.50407106
+        },
+        {
+          "scale": 1.0,
+          "relative_residual": 162634683.75224352
+        }
+      ],
+      "best_nonlinear": {
+        "scale": 0.0,
+        "relative_residual": 1.0
+      },
+      "best_nonlinear_residual_diagnostics": {
+        "Psi_power_fraction": 0.17327938306122853,
+        "chi_power_fraction": 0.8267206169387714,
+        "core_power_fraction": 0.6248500313249193,
+        "first_shell_power_fraction": 0.37514996867508066,
+        "far_exterior_power_fraction": 6.338606900749194e-26,
+        "complex_component_power_fractions": [
+          0.40189741651852284,
+          0.2094291846939463,
+          0.3886733987875306
+        ],
+        "maximum_residual_site": [
+          2,
+          2,
+          1
+        ],
+        "maximum_residual_site_power_fraction": 0.09303881352591853
+      }
+    }
+  ],
+  "best_case": {
+    "support": "C19_first_shell",
+    "free_site_count": 48,
+    "free_real_coordinate_count": 576,
+    "lsmr_stop_code": 2,
+    "lsmr_iterations": 25,
+    "linear_relative_residual": 0.6914231112147615,
+    "correction_norm_over_state_norm": 0.1727490680747047,
+    "nonlinear_scale_rows": [
+      {
+        "scale": 0.0,
+        "relative_residual": 1.0
+      },
+      {
+        "scale": 0.01,
+        "relative_residual": 0.9947959866881766
+      },
+      {
+        "scale": 0.02,
+        "relative_residual": 0.9896228267278434
+      },
+      {
+        "scale": 0.03,
+        "relative_residual": 0.9844808264721973
+      },
+      {
+        "scale": 0.04,
+        "relative_residual": 0.9793703039188493
+      },
+      {
+        "scale": 0.05,
+        "relative_residual": 0.9742915885463767
+      },
+      {
+        "scale": 0.06,
+        "relative_residual": 0.9692450211456125
+      },
+      {
+        "scale": 0.07,
+        "relative_residual": 0.9642309536454535
+      },
+      {
+        "scale": 0.08,
+        "relative_residual": 0.9592497489329674
+      },
+      {
+        "scale": 0.09,
+        "relative_residual": 0.9543017806675729
+      },
+      {
+        "scale": 0.1,
+        "relative_residual": 0.9493874330890634
+      },
+      {
+        "scale": 0.2,
+        "relative_residual": 0.9021847749411761
+      },
+      {
+        "scale": 0.30000000000000004,
+        "relative_residual": 0.858836837408318
+      },
+      {
+        "scale": 0.4,
+        "relative_residual": 0.8198640160172755
+      },
+      {
+        "scale": 0.5,
+        "relative_residual": 0.7858282573875414
+      },
+      {
+        "scale": 0.6000000000000001,
+        "relative_residual": 0.7572890785962759
+      },
+      {
+        "scale": 0.7,
+        "relative_residual": 0.7347514091225034
+      },
+      {
+        "scale": 0.8,
+        "relative_residual": 0.7186112997385573
+      },
+      {
+        "scale": 0.9000000000000001,
+        "relative_residual": 0.7091100227259862
+      },
+      {
+        "scale": 1.0,
+        "relative_residual": 0.7063091835991046
+      }
+    ],
+    "best_nonlinear": {
+      "scale": 1.0,
+      "relative_residual": 0.7063091835991046
+    },
+    "best_nonlinear_residual_diagnostics": {
+      "Psi_power_fraction": 0.3159490730863503,
+      "chi_power_fraction": 0.6840509269136497,
+      "core_power_fraction": 0.499016208575466,
+      "first_shell_power_fraction": 0.27283036498065955,
+      "far_exterior_power_fraction": 0.22815342644387454,
+      "complex_component_power_fractions": [
+        0.4411613242419371,
+        0.2804953236225769,
+        0.2783433521354858
+      ],
+      "maximum_residual_site": [
+        2,
+        2,
+        1
+      ],
+      "maximum_residual_site_power_fraction": 0.07486081461053216
+    }
+  },
+  "verdict": "CANONICAL_LINEAR_PRECURSOR_DOES_NOT_CLOSE_EXACT_SHIFT",
+  "claim_boundary": "Linearized inverse profile test at one signed axis and the fixed compact-carrier phases. A favorable result requires a full nonlinear exact-profile solve, all axes/signs, free evolution, conservation, and Dirac-current validation. A failure is not a no-go for a changed reciprocal action."
+}

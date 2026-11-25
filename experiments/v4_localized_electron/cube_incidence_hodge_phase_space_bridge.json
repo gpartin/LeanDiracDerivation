@@ -1,0 +1,48 @@
+{
+  "status": "V4_C19_HODGE_PHASE_SPACE_BRIDGE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "previous_layer_source": "independent centered-time C19 Dirac comparator; measurement test only, never a native force or update",
+  "rows": [
+    {
+      "copy": "plus",
+      "input_real_dimension": 1000,
+      "configuration_rank": 500,
+      "previous_layer_aligned_to_current_carrier_frame": true,
+      "phase_space_rank": 1000,
+      "phase_space_condition_number": 447022856.51706594,
+      "smallest_retained_singular": 1.2729217532129103e-07,
+      "hodge_phase_space_cross_block": 0.7847654282660484,
+      "positive_frequency_rank": 500,
+      "positive_frequency_condition_number": 54.07354831912139,
+      "positive_frequency_smallest_retained_singular": 0.0370609379341355,
+      "positive_frequency_hodge_cross_block": 0.7827498615029792
+    },
+    {
+      "copy": "minus",
+      "input_real_dimension": 1000,
+      "configuration_rank": 500,
+      "previous_layer_aligned_to_current_carrier_frame": true,
+      "phase_space_rank": 1000,
+      "phase_space_condition_number": 8256320916.163805,
+      "smallest_retained_singular": 6.881269657566392e-09,
+      "hodge_phase_space_cross_block": 0.7884832364662031,
+      "positive_frequency_rank": 500,
+      "positive_frequency_condition_number": 54.06630782388154,
+      "positive_frequency_smallest_retained_singular": 0.03706249041834544,
+      "positive_frequency_hodge_cross_block": 0.7856029747684773
+    }
+  ],
+  "copy_phase_space_overlap": {
+    "count": 1000,
+    "minimum_singular": 0.9999895596548788,
+    "maximum_singular": 1.0000000000000047,
+    "count_above_1_minus_1e_minus_10": 993
+  },
+  "both_copies_lossless": true,
+  "both_copies_hodge_closed": false,
+  "both_positive_frequency_readouts_lossless": false,
+  "both_positive_frequency_readouts_hodge_closed": false,
+  "verdict": "HODGE_PHASE_SPACE_READOUT_REMAINS_INCOMPLETE",
+  "claim_boundary": "Linear positive-frequency tangent around one exact rest orbit. The previous layer is comparator-specified, so a passing rank would still require an independently native layer relation, mass/current mapping, and nonlinear continuation."
+}

@@ -1,0 +1,427 @@
+{
+  "status": "V4_FULL_NATIVE_FIXED_CHARGE_TRANSPORT_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "unchanged incumbent discrete two-field interval action",
+  "construction": "odd neighboring-center ramps of every independent real/imaginary Psi and chi C3 frame channel in both cubical copies",
+  "axis_rows": [
+    {
+      "phase_ramp_axis": 0,
+      "target_count": 96,
+      "center_readouts": {
+        "Psi": {
+          "fixed_charge_center_rank": 2,
+          "fixed_charge_center_singular_values": [
+            2.6111379716136437e-06,
+            2.610873637257226e-06,
+            1.5679337792684671e-15
+          ],
+          "relative_third_singular_value": 6.004791000375625e-10,
+          "missing_physical_direction": [
+            1.2155325611210005e-11,
+            2.6232385652038385e-11,
+            1.0
+          ]
+        },
+        "chi": {
+          "fixed_charge_center_rank": 3,
+          "fixed_charge_center_singular_values": [
+            2.673261235444726e+18,
+            1.2725340200457048e+17,
+            1.1726882462478466e+17
+          ],
+          "relative_third_singular_value": 0.043867326945050966,
+          "missing_physical_direction": [
+            -0.0014222859594501655,
+            -0.9198840920851147,
+            -0.3921877538008977
+          ]
+        },
+        "common": {
+          "fixed_charge_center_rank": 2,
+          "fixed_charge_center_singular_values": [
+            5.222275933251826e-06,
+            5.221747257736874e-06,
+            4.807109708163042e-14
+          ],
+          "relative_third_singular_value": 9.205009022129042e-09,
+          "missing_physical_direction": [
+            1.0391729629229721e-09,
+            9.916584858645353e-10,
+            1.0
+          ]
+        }
+      },
+      "fixed_charge_center_rank": 2,
+      "fixed_charge_center_singular_values": [
+        2.6111379716136437e-06,
+        2.610873637257226e-06,
+        1.5679337792684671e-15
+      ],
+      "relative_third_singular_value": 6.004791000375625e-10,
+      "missing_physical_direction": [
+        1.2155325611210005e-11,
+        2.6232385652038385e-11,
+        1.0
+      ],
+      "normalized_constraint_rank": 5,
+      "normalized_constraint_singular_values": [
+        1.0569484971241683,
+        1.0017334058646123,
+        1.0000000000029683,
+        0.9957649434659902,
+        0.9422538062327364
+      ],
+      "coefficient_norm": 383091.9967091418,
+      "achieved_constraints": [
+        2.738088369369507e-07,
+        5.53131103515625e-05,
+        1.0,
+        6.691695808580533e-16,
+        -6.785465962349055e-26
+      ],
+      "relative_constraint_defect": 7.062058591301096e-16,
+      "DEL_relative_residual": 5.54146567977307e-16,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.5026136860092456,
+        "first_shell_including_core": 0.9999999997773349,
+        "outside_first_shell": 2.22665154541849e-10
+      },
+      "target_support_power_fractions": {
+        "eight_site_core": 0.5,
+        "first_shell_including_core": 1.0,
+        "outside_first_shell": 0.0
+      },
+      "largest_coefficient_channels": [
+        {
+          "label": "minus_1_psi_companion_real",
+          "coefficient": -72342.7949172404
+        },
+        {
+          "label": "minus_0_psi_companion_imag",
+          "coefficient": 72173.3822187865
+        },
+        {
+          "label": "plus_0_psi_companion_real",
+          "coefficient": -70657.2025597984
+        },
+        {
+          "label": "minus_2_psi_companion_real",
+          "coefficient": -70168.62151506325
+        },
+        {
+          "label": "plus_2_psi_companion_imag",
+          "coefficient": -70037.3848299354
+        },
+        {
+          "label": "plus_1_psi_companion_imag",
+          "coefficient": -69225.82014788466
+        },
+        {
+          "label": "plus_0_chi_ray_imag",
+          "coefficient": -68955.34825908809
+        },
+        {
+          "label": "plus_3_psi_companion_real",
+          "coefficient": -68832.44978095478
+        },
+        {
+          "label": "minus_3_psi_companion_imag",
+          "coefficient": 68626.86996825683
+        },
+        {
+          "label": "minus_1_chi_ray_imag",
+          "coefficient": -68332.85121267647
+        },
+        {
+          "label": "plus_1_chi_ray_real",
+          "coefficient": -68292.14645864794
+        },
+        {
+          "label": "minus_3_chi_ray_real",
+          "coefficient": 67956.72883700531
+        }
+      ]
+    },
+    {
+      "phase_ramp_axis": 1,
+      "target_count": 96,
+      "center_readouts": {
+        "Psi": {
+          "fixed_charge_center_rank": 2,
+          "fixed_charge_center_singular_values": [
+            2.611137971632972e-06,
+            2.6078090139535027e-06,
+            1.5283263932441064e-15
+          ],
+          "relative_third_singular_value": 5.853104699359532e-10,
+          "missing_physical_direction": [
+            1.1638904900502622e-10,
+            3.1495765336241254e-11,
+            1.0
+          ]
+        },
+        "chi": {
+          "fixed_charge_center_rank": 3,
+          "fixed_charge_center_singular_values": [
+            2.648136660976318e+18,
+            1.3148158920872165e+17,
+            1.172988067980746e+17
+          ],
+          "relative_third_singular_value": 0.04429484645812378,
+          "missing_physical_direction": [
+            -0.7242365546904355,
+            0.0008110914304336297,
+            0.6895511257193474
+          ]
+        },
+        "common": {
+          "fixed_charge_center_rank": 2,
+          "fixed_charge_center_singular_values": [
+            5.222275931556418e-06,
+            5.215618027020239e-06,
+            3.773866063894639e-14
+          ],
+          "relative_third_singular_value": 7.226477714611869e-09,
+          "missing_physical_direction": [
+            1.3943755723034875e-09,
+            7.862953171577059e-10,
+            1.0
+          ]
+        }
+      },
+      "fixed_charge_center_rank": 2,
+      "fixed_charge_center_singular_values": [
+        2.611137971632972e-06,
+        2.6078090139535027e-06,
+        1.5283263932441064e-15
+      ],
+      "relative_third_singular_value": 5.853104699359532e-10,
+      "missing_physical_direction": [
+        1.1638904900502622e-10,
+        3.1495765336241254e-11,
+        1.0
+      ],
+      "normalized_constraint_rank": 5,
+      "normalized_constraint_singular_values": [
+        1.0967158506996062,
+        1.023245672388791,
+        1.0000000000026037,
+        0.9862307720274262,
+        0.8817774668604493
+      ],
+      "coefficient_norm": 383671.94005469186,
+      "achieved_constraints": [
+        5.4016709327697754e-08,
+        -9.775161743164062e-05,
+        1.960237527853792e-16,
+        0.9999999999999999,
+        3.877409121342317e-26
+      ],
+      "relative_constraint_defect": 3.2784989083980846e-16,
+      "DEL_relative_residual": 6.8242627234267e-16,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.5021041300275897,
+        "first_shell_including_core": 0.9999999998688608,
+        "outside_first_shell": 1.3113932374339839e-10
+      },
+      "target_support_power_fractions": {
+        "eight_site_core": 0.5,
+        "first_shell_including_core": 1.0,
+        "outside_first_shell": 0.0
+      },
+      "largest_coefficient_channels": [
+        {
+          "label": "plus_0_psi_companion_imag",
+          "coefficient": -112461.66813432044
+        },
+        {
+          "label": "minus_3_psi_companion_real",
+          "coefficient": -112371.64653201746
+        },
+        {
+          "label": "plus_2_psi_companion_imag",
+          "coefficient": 110775.20846509624
+        },
+        {
+          "label": "minus_1_psi_companion_real",
+          "coefficient": 108474.38065318901
+        },
+        {
+          "label": "minus_3_chi_ray_imag",
+          "coefficient": -107808.8193930177
+        },
+        {
+          "label": "minus_1_chi_ray_imag",
+          "coefficient": 107554.06452106407
+        },
+        {
+          "label": "plus_0_chi_ray_real",
+          "coefficient": -105577.73258382127
+        },
+        {
+          "label": "plus_2_chi_ray_real",
+          "coefficient": 104427.43189448168
+        },
+        {
+          "label": "plus_2_chi_companion_real",
+          "coefficient": -57868.05809711409
+        },
+        {
+          "label": "plus_1_psi_ray_imag",
+          "coefficient": -57856.69315791781
+        },
+        {
+          "label": "minus_3_chi_companion_real",
+          "coefficient": -57754.71139617593
+        },
+        {
+          "label": "minus_2_psi_ray_real",
+          "coefficient": -57309.47400217927
+        }
+      ]
+    },
+    {
+      "phase_ramp_axis": 2,
+      "target_count": 96,
+      "center_readouts": {
+        "Psi": {
+          "fixed_charge_center_rank": 2,
+          "fixed_charge_center_singular_values": [
+            2.611137971719416e-06,
+            2.6098392139498782e-06,
+            1.2105046001411223e-15
+          ],
+          "relative_third_singular_value": 4.635927374393064e-10,
+          "missing_physical_direction": [
+            6.143458687902628e-11,
+            -4.034801298083705e-11,
+            1.0
+          ]
+        },
+        "chi": {
+          "fixed_charge_center_rank": 3,
+          "fixed_charge_center_singular_values": [
+            2.644822630764865e+18,
+            1.2444566824035141e+17,
+            1.178989073192334e+17
+          ],
+          "relative_third_singular_value": 0.044577245350149564,
+          "missing_physical_direction": [
+            0.17019607180685578,
+            0.9854095597239221,
+            0.0011387476548118303
+          ]
+        },
+        "common": {
+          "fixed_charge_center_rank": 3,
+          "fixed_charge_center_singular_values": [
+            5.222275932491008e-06,
+            5.219678418811679e-06,
+            8.022906146991381e-13
+          ],
+          "relative_third_singular_value": 1.5362853764727213e-07,
+          "missing_physical_direction": [
+            2.586565117841965e-09,
+            2.8633410979592277e-09,
+            1.0
+          ]
+        }
+      },
+      "fixed_charge_center_rank": 2,
+      "fixed_charge_center_singular_values": [
+        2.611137971719416e-06,
+        2.6098392139498782e-06,
+        1.2105046001411223e-15
+      ],
+      "relative_third_singular_value": 4.635927374393064e-10,
+      "missing_physical_direction": [
+        6.143458687902628e-11,
+        -4.034801298083705e-11,
+        1.0
+      ],
+      "normalized_constraint_rank": 5,
+      "normalized_constraint_singular_values": [
+        1.075949335619213,
+        1.0156182490366745,
+        1.0000000000010563,
+        0.9842198513989043,
+        0.9176948749527043
+      ],
+      "coefficient_norm": 826101775972944.4,
+      "achieved_constraints": [
+        -24.0,
+        282624.0,
+        0.0,
+        8.940696716308594e-08,
+        1.0
+      ],
+      "relative_constraint_defect": 3.1135759211678284e-16,
+      "DEL_relative_residual": 5.494849426719861e-16,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.5019715264037032,
+        "first_shell_including_core": 0.9999999999647801,
+        "outside_first_shell": 3.5219884537904476e-11
+      },
+      "target_support_power_fractions": {
+        "eight_site_core": 0.4999999999999999,
+        "first_shell_including_core": 0.9999999999999998,
+        "outside_first_shell": 0.0
+      },
+      "largest_coefficient_channels": [
+        {
+          "label": "plus_3_psi_companion_real",
+          "coefficient": -265412728754727.28
+        },
+        {
+          "label": "minus_3_psi_companion_real",
+          "coefficient": 247115760527512.84
+        },
+        {
+          "label": "minus_2_psi_ray_imag",
+          "coefficient": -197645520358130.94
+        },
+        {
+          "label": "plus_0_psi_ray_real",
+          "coefficient": 195572815709100.75
+        },
+        {
+          "label": "minus_0_chi_companion_imag",
+          "coefficient": 184432405302309.03
+        },
+        {
+          "label": "plus_1_chi_ray_imag",
+          "coefficient": 183968367664038.97
+        },
+        {
+          "label": "minus_1_chi_ray_imag",
+          "coefficient": 180507419502816.38
+        },
+        {
+          "label": "plus_0_psi_companion_real",
+          "coefficient": 178839174936541.28
+        },
+        {
+          "label": "plus_0_chi_ray_imag",
+          "coefficient": -160422773710442.44
+        },
+        {
+          "label": "minus_0_psi_ray_real",
+          "coefficient": 153275887574349.56
+        },
+        {
+          "label": "minus_0_psi_companion_real",
+          "coefficient": 148410846018850.0
+        },
+        {
+          "label": "minus_1_chi_ray_real",
+          "coefficient": 139976990925450.98
+        }
+      ]
+    }
+  ],
+  "all_axes_robust_rank_three": false,
+  "all_axes_common_charge_rank_three": false,
+  "verdict": "UNCHANGED_ACTION_FULL_NATIVE_SPACE_REMAINS_TRANSPORT_DEFICIENT",
+  "claim_boundary": "This is an exhaustive linearized preparation and readout screen within the declared local carrier-frame family. A pass is not native selection, nonlinear hopping, stability, or Dirac closure. A common-charge result is not a physical-current mapping until the same four-component embedding derives that density."
+}

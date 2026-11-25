@@ -1,0 +1,15 @@
+{
+  "status": "V4_PERSONAL_TOUCH_CONSERVATION_EVIDENCE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "preserved_incumbent": {
+    "variational_update": "implicit discrete Euler-Lagrange update",
+    "rest_DEL_rms_control": 1.8388873197993755e-13,
+    "Legendre_block_condition_number_control": 1204.751049825214,
+    "reversibility_and_Noether_verdict": "IMPLICIT_UPDATE_REVERSIBLE_AND_NOETHER_CONSERVING",
+    "source": "canonical_transfer_oscillator_implicit_update.json"
+  },
+  "new_candidate_policy": "A candidate that does not improve the preserved-best full Floquet spectrum is rejected before expensive nonlinear conservation and movement gates.",
+  "new_candidate_conservation_status": "NOT_RUN_AFTER_SPECTRAL_REJECTION",
+  "interpretation": "No rejected candidate is credited with conservation evidence, and no lack of a downstream run is treated as a conservation failure. The action ladder stopped at the declared ten consecutive no-improvement condition."
+}

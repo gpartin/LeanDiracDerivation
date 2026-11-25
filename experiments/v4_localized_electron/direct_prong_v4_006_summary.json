@@ -1,0 +1,72 @@
+{
+  "status": "V4_006_DIRECT_PRONG_RESEARCH_COMPLETE",
+  "v4_006": "OPEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "short_tangent_max_DEL_residual": 0.000262268694,
+  "short_nonlinear_four_update_final_error": 0.0157931,
+  "short_nonlinear_four_update_final_leakage": 0.000780025,
+  "independent_prong_leading_multiplier": 1.011458828,
+  "stable_common_leading_multiplier": 1.0000000000000018,
+  "stable_common_rest_DEL_RMS": 3.611645973283916e-13,
+  "stable_common_ten_cycle": {
+    "native_Psi_density_displacement": [
+      0.03690486310676455,
+      0.2656172183107621,
+      -0.4914749790506763
+    ],
+    "Dirac_Psi_density_displacement": [
+      0.038544038077461096,
+      -0.01612218865921733,
+      0.018082810088282386
+    ],
+    "native_joint_Psi_chi_displacement": [
+      -0.17695537937306582,
+      0.06807697678566438,
+      -0.013825665728727898
+    ]
+  },
+  "integer_cell_handoff_pass": false,
+  "two_handoff_pass": false,
+  "one_hundred_cycle_nonlinear_pass": false,
+  "first_departure": {
+    "update": 2,
+    "relative_total_error": 0.002514450655763002,
+    "Psi_error_power_fraction": 0.9997910377316417,
+    "chi_error_power_fraction": 0.00020896226835834708,
+    "classification": "receiving-shell in-plane Psi orientation precedes chi separation"
+  },
+  "oriented_area_trials": {
+    "full_material_wave_ten_cycle_error": 1.2608798547234836,
+    "full_material_wave_update_64_error": 0.14696224212109804,
+    "cube_eigenvalue": 27.0,
+    "directed_action_spatial_shift": 54.0,
+    "derived_local_frequency_squared": 307.0,
+    "spatial_balance_relative_residual": 8.763399229683023e-17,
+    "connection_only_ten_cycle_error": 1.419139843029713
+  },
+  "live_frame_decomposition": {
+    "Psi_parallel_to_chi_fraction": 0.48580785838678797,
+    "Psi_transverse_to_chi_fraction": 0.5141921416132121,
+    "classification": "first error requires both chi-dagger-Psi and chi-cross-Psi channels"
+  },
+  "complete_frame_trials": {
+    "full_gradient_coherence_ten_cycle_error": 3.406401081723498,
+    "projective_area_ten_cycle_error": 1.4210135965009387,
+    "parallel_overlap_material_ten_cycle_error": 1.3128373743819437,
+    "parallel_overlap_bond_ten_cycle_error": 1.262786354922381,
+    "parallel_overlap_bond_leakage": 0.10204733043818331,
+    "complete_live_frame_wave_ten_cycle_error": 1.1993742530508897,
+    "complete_live_frame_wave_update_64_error": 0.31755463448193866,
+    "complete_frame_connection_ten_cycle_error": 1.419139843029098,
+    "complete_live_frame_wave_Psi_displacement": [
+      -0.05303390485981474,
+      0.14745845757199305,
+      -0.36088579263526377
+    ],
+    "psi_only_velocity_stable": false,
+    "density_activated_chi_completion_stable": false
+  },
+  "next_inverse_requirement": "odd-in-native-current complete-frame transfer that preserves the stable common metric",
+  "verdict": "STABLE_FORWARD_PSI_CHANNEL_FOUND_SIGNED_COMPLETE_FRAME_TRANSFER_OPEN"
+}

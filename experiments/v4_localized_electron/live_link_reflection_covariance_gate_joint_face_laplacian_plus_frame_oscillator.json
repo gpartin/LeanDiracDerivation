@@ -1,0 +1,55 @@
+{
+  "status": "V4_LIVE_LINK_REFLECTION_COVARIANCE_GATE",
+  "link_source": "joint_face_laplacian_plus_frame_oscillator",
+  "scale": 0.05263157894736842,
+  "maximum_interval_relative_defect": 7.265757958922138e-12,
+  "rows": [
+    {
+      "sample": 0,
+      "axis": 0,
+      "interval_relative_defect": 3.317091462669662e-12
+    },
+    {
+      "sample": 0,
+      "axis": 1,
+      "interval_relative_defect": 5.786223902894461e-12
+    },
+    {
+      "sample": 0,
+      "axis": 2,
+      "interval_relative_defect": 7.265757958922138e-12
+    },
+    {
+      "sample": 1,
+      "axis": 0,
+      "interval_relative_defect": 1.3426119548063574e-12
+    },
+    {
+      "sample": 1,
+      "axis": 1,
+      "interval_relative_defect": 2.3119631016250897e-13
+    },
+    {
+      "sample": 1,
+      "axis": 2,
+      "interval_relative_defect": 1.2505773822954933e-12
+    },
+    {
+      "sample": 2,
+      "axis": 0,
+      "interval_relative_defect": 1.877524381650206e-12
+    },
+    {
+      "sample": 2,
+      "axis": 1,
+      "interval_relative_defect": 2.736661832315581e-12
+    },
+    {
+      "sample": 2,
+      "axis": 2,
+      "interval_relative_defect": 2.005463794660616e-12
+    }
+  ],
+  "verdict": "LIVE_LINK_REFLECTION_COVARIANT",
+  "claim_boundary": "Random-state action covariance under the three coordinate and native-vector reflections. It does not prove carrier motion."
+}

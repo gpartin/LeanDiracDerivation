@@ -1,0 +1,63 @@
+{
+  "status": "V4_MIXED_PRONG_DIRAC_NONLINEAR",
+  "action_weights": {
+    "common": 0.25,
+    "relative_prongs": 0.75,
+    "provenance": "one common and three direct prong channels"
+  },
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "requested_updates": 4,
+  "all_solvers_converged": true,
+  "maximum_relative_packet_error": 0.015793056322452703,
+  "maximum_outside_packet_lift_fraction": 0.0007800249378842697,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 18,
+          "native_vs_dirac_lift_relative_error": 0.0016437911123657167,
+          "outside_packet_lift_fraction": 7.918693728321747e-05,
+          "norm_ratio": 0.9993233691590774
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 19,
+          "native_vs_dirac_lift_relative_error": 0.004886061061832356,
+          "outside_packet_lift_fraction": 0.00023667973132424628,
+          "norm_ratio": 0.9980159903901286
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 18,
+          "native_vs_dirac_lift_relative_error": 0.009642288898366826,
+          "outside_packet_lift_fraction": 0.000470996673770897,
+          "norm_ratio": 0.9961481022201835
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 18,
+          "native_vs_dirac_lift_relative_error": 0.015793056322452703,
+          "outside_packet_lift_fraction": 0.0007800249378842697,
+          "norm_ratio": 0.9938109086597887
+        }
+      ]
+    }
+  ],
+  "verdict": "MIXED_PRONG_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "Four unrestricted nonlinear updates at 0.01% tangent amplitude for both copies, both signs, one axis and a diagonal. Current, two translations, 100 cycles and refinement remain."
+}

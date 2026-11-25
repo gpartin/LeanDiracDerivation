@@ -1,0 +1,154 @@
+{
+  "status": "V4_C27_BODY_GYRO_NATIVE_TIMESTEP_REFINEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "rates": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "coefficient_rule": "c=(a+B/4,a-B/4,-a/2,0), a=2dt/sin(theta), with continuum a=2/chi0",
+  "rows": [
+    {
+      "rate": 128,
+      "dt": 0.0078125,
+      "theta": 0.14857411499776466,
+      "a": 0.1055542781506391,
+      "a_continuum_limit": 0.10526315789473684,
+      "coefficients": [
+        299.35555427815063,
+        -299.14444572184937,
+        -0.05277713907531955,
+        0.0
+      ],
+      "rest_DEL_rms": 1.0091132946702948e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1574.5121313778166,
+      "spectral_radius": 1.0000000524166635,
+      "growth_rate_per_unit_time": 6.709332746287525e-06,
+      "reciprocal_pairing_defect": 7.461349316173482e-10,
+      "largest_moduli": [
+        1.0000000524166635,
+        1.0000000512313805,
+        1.0000000512313805,
+        1.0000000498752026,
+        1.0000000472271344,
+        1.0000000472271344,
+        1.0000000465309267,
+        1.0000000465309267,
+        1.0000000464738041,
+        1.000000044930923,
+        1.000000044930923,
+        1.0000000441369865
+      ]
+    },
+    {
+      "rate": 256,
+      "dt": 0.00390625,
+      "theta": 0.07423579507567751,
+      "a": 0.10533571208748423,
+      "a_continuum_limit": 0.10526315789473684,
+      "coefficients": [
+        299.3553357120875,
+        -299.1446642879125,
+        -0.05266785604374211,
+        0.0
+      ],
+      "rest_DEL_rms": 2.340083786918009e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1561.3554667697883,
+      "spectral_radius": 1.0000000498159871,
+      "growth_rate_per_unit_time": 1.2752892383324504e-05,
+      "reciprocal_pairing_defect": 7.578726535228952e-11,
+      "largest_moduli": [
+        1.0000000498159871,
+        1.0000000476867499,
+        1.0000000476867499,
+        1.000000047221449,
+        1.0000000442278578,
+        1.0000000442278578,
+        1.0000000415067196,
+        1.0000000415067196,
+        1.0000000390547827,
+        1.0000000390547827,
+        1.0000000381167922,
+        1.0000000380168914
+      ]
+    },
+    {
+      "rate": 512,
+      "dt": 0.001953125,
+      "theta": 0.0371115046437967,
+      "a": 0.10528128238675939,
+      "a_continuum_limit": 0.10526315789473684,
+      "coefficients": [
+        299.3552812823868,
+        -299.1447187176132,
+        -0.052640641193379696,
+        0.0
+      ],
+      "rest_DEL_rms": 4.4270937845663975e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1558.2532059650391,
+      "spectral_radius": 1.000000048419365,
+      "growth_rate_per_unit_time": 2.479071426032557e-05,
+      "reciprocal_pairing_defect": 8.296807685326257e-11,
+      "largest_moduli": [
+        1.000000048419365,
+        1.0000000441239818,
+        1.0000000441239818,
+        1.0000000436203362,
+        1.0000000436203362,
+        1.0000000425365014,
+        1.0000000425365014,
+        1.0000000422385449,
+        1.0000000404225093,
+        1.0000000404225093,
+        1.000000040360322,
+        1.000000040360322
+      ]
+    },
+    {
+      "rate": 1024,
+      "dt": 0.0009765625,
+      "theta": 0.018554953674540166,
+      "a": 0.1052676881401775,
+      "a_continuum_limit": 0.10526315789473684,
+      "coefficients": [
+        299.3552676881402,
+        -299.1447323118598,
+        -0.05263384407008875,
+        0.0
+      ],
+      "rest_DEL_rms": 5.298599124782547e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1557.4887305892212,
+      "spectral_radius": 1.0000000493360857,
+      "growth_rate_per_unit_time": 5.052015047090397e-05,
+      "reciprocal_pairing_defect": 9.165437298008783e-10,
+      "largest_moduli": [
+        1.0000000493360857,
+        1.0000000493360857,
+        1.0000000472832258,
+        1.0000000462776621,
+        1.0000000462776621,
+        1.0000000454706761,
+        1.0000000454706761,
+        1.0000000435815608,
+        1.0000000434311898,
+        1.0000000434311898,
+        1.0000000395121322,
+        1.0000000395121322
+      ]
+    }
+  ],
+  "growth_consistent_with_reciprocal_numerical_floor": false,
+  "verdict": "C27_BODY_GYRO_NATIVE_REFINEMENT_NOT_STABLE",
+  "claim_boundary": "Side-3 linear timestep refinement only. Stability still requires higher-precision/structured spectral confirmation, box refinement, and nonlinear perturbation evolution."
+}

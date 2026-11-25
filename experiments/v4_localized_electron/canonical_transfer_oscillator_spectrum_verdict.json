@@ -1,0 +1,96 @@
+{
+  "status": "V4_TRANSFER_OSCILLATOR_SPECTRUM_VERDICT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "label": "canonical",
+      "odd_strength": 0.0,
+      "even_strength": 0.0,
+      "parallel_strength": 0.0,
+      "dt": 0.00390625,
+      "spectral_radius": 1.0040551109853328,
+      "growth_rate": 1.036009262774485,
+      "ritz_count": 32
+    },
+    {
+      "label": "odd",
+      "odd_strength": 0.5,
+      "even_strength": 0.0,
+      "parallel_strength": 0.0,
+      "dt": 0.00390625,
+      "spectral_radius": 1.0010054664552157,
+      "growth_rate": 0.2572700959728246,
+      "ritz_count": 12
+    },
+    {
+      "label": "odd_even",
+      "odd_strength": 0.5,
+      "even_strength": 0.15,
+      "parallel_strength": 0.0,
+      "dt": 0.00390625,
+      "spectral_radius": 1.0009834292231747,
+      "growth_rate": 0.2516341692053036,
+      "ritz_count": 12
+    },
+    {
+      "label": "dt_half",
+      "odd_strength": 0.5,
+      "even_strength": 0.15,
+      "parallel_strength": 0.0,
+      "dt": 0.001953125,
+      "spectral_radius": 1.0004915901003615,
+      "growth_rate": 0.2516322864808237,
+      "ritz_count": 12
+    },
+    {
+      "label": "dt_quarter",
+      "odd_strength": 0.5,
+      "even_strength": 0.15,
+      "parallel_strength": 0.0,
+      "dt": 0.0009765625,
+      "spectral_radius": 1.0002457643894576,
+      "growth_rate": 0.2516318150012435,
+      "ritz_count": 8
+    },
+    {
+      "label": "parallel_stiffness",
+      "odd_strength": 0.5,
+      "even_strength": 0.15,
+      "parallel_strength": 0.1,
+      "dt": 0.00390625,
+      "spectral_radius": 1.0009834292235715,
+      "growth_rate": 0.251634169306783,
+      "ritz_count": 10
+    }
+  ],
+  "canonical_to_best_radius_reduction_fraction": 0.7574840178895828,
+  "refined_growth_rates": [
+    0.2516341692053036,
+    0.2516322864808237,
+    0.2516318150012435
+  ],
+  "growth_rate_relative_spread": 9.355713815569808e-06,
+  "leading_mode_classification": {
+    "eigenvalue_real": 1.0009834292226338,
+    "eigenvalue_imag": 1.040826386696343e-06,
+    "modulus": 1.0009834292231747,
+    "psi_power_fraction": 0.8179506418598163,
+    "chi_power_fraction": 0.18204935814018375,
+    "carrier_cube_power_fraction": 0.9669114607913628,
+    "exterior_power_fraction": 0.03308853920863722,
+    "carrier_psi_power_fraction": 0.7851685030479418,
+    "carrier_chi_power_fraction": 0.18174295774342097,
+    "exterior_psi_power_fraction": 0.03278213881187444,
+    "exterior_chi_power_fraction": 0.0003064003967627762,
+    "translation_subspace_power_fraction": 0.010315858267441995,
+    "psi_phase_power_fraction": 0.31530806221557134,
+    "chi_phase_power_fraction": 5.2812541899503334e-24,
+    "psi_amplitude_power_fraction": 0.06615036345778977,
+    "chi_contrast_amplitude_power_fraction": 0.027716203256022268
+  },
+  "parallel_stiffness_radius_change": 3.9679370900103095e-13,
+  "verdict": "TRANSFER_OSCILLATOR_SPECTRUM_GATE_FAIL",
+  "promotion_consequence": "Do not admit the action or claim finite localized Dirac motion; retain it as a rest-preserving rank-three response basis.",
+  "claim_boundary": "Leading Ritz spectrum of the side-five exact rest orbit. This is a scoped failure of the tested odd/even transfer-oscillator basis, not a universal two-field no-go."
+}

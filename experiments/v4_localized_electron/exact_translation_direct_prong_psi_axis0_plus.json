@@ -1,0 +1,95 @@
+{
+  "status": "V4_EXACT_TRANSLATION_DIRECT_PRONG_SPACETIME_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "mode": "psi",
+  "target_pattern": "same-assignment exact one-cell translation of the complete joint Psi-chi profile with unchanged eight-site core values",
+  "action_candidate": "positive reciprocal time-symmetric interval action linking each complex component only to the same component of every C19 neighbor; density-transfer activation vanishes at rest",
+  "component_routing": [
+    "Psi_x to neighboring Psi_x",
+    "Psi_y to neighboring Psi_y",
+    "Psi_z to neighboring Psi_z",
+    "chi_x to neighboring chi_x",
+    "chi_y to neighboring chi_y",
+    "chi_z to neighboring chi_z"
+  ],
+  "coefficient_provenance": "factor 6 from the six C19 face directions; kappa and chi0 are the locked native constants",
+  "rest_DEL_norm": 5.322609653629074e-06,
+  "first_shell_and_clock_case": {
+    "free_site_count": 48,
+    "free_real_coordinate_count": 576,
+    "lsmr_stop_code": 7,
+    "lsmr_iterations": 20,
+    "linear_relative_residual": 0.0011317614182896406,
+    "correction_norm_over_state_norm": 0.0002059719637353247,
+    "linear_bounded_dt_coordinate_change": 212.19769968712248,
+    "linear_psi_phase_change": 0.002484816470279,
+    "linear_chi_phase_change": -6.39720767593479e-10,
+    "best_nonlinear": {
+      "scale": 1.0,
+      "relative_residual": 0.995285867134216
+    },
+    "best_dt": 0.08,
+    "best_psi_phase": 3.1440761524550274,
+    "best_chi_phase": 5.779414154517184e-07,
+    "best_nonlinear_residual_diagnostics": {
+      "Psi_power_fraction": 7.012548235026369e-08,
+      "chi_power_fraction": 0.9999999298745177,
+      "core_power_fraction": 0.7250208350360557,
+      "first_shell_power_fraction": 0.2749791647282427,
+      "far_exterior_power_fraction": 2.3570157023114537e-10,
+      "complex_component_power_fractions": [
+        0.20371574147637816,
+        0.42093802310608647,
+        0.3753462354175355
+      ],
+      "maximum_residual_site": [
+        1,
+        1,
+        1
+      ],
+      "maximum_residual_site_power_fraction": 0.10322925989808672
+    },
+    "full_nonlinear_solve": {
+      "initial_relative_residual": 0.9952858671342159,
+      "final_relative_residual": 0.6584176279997441,
+      "minimum_trace_residual": 0.6584176279997443,
+      "optimizer_evaluations": 25,
+      "correction_norm_over_state_norm": 0.1824622599874783,
+      "dt": 0.08,
+      "dt_bounds": [
+        0.000244140625,
+        0.08
+      ],
+      "psi_phase": 3.1440813260028864,
+      "chi_phase": 0.00037516751351742686,
+      "residual_diagnostics": {
+        "Psi_power_fraction": 1.6044635614218187e-07,
+        "chi_power_fraction": 0.9999998395536436,
+        "core_power_fraction": 0.6752253096057178,
+        "first_shell_power_fraction": 0.13725297994640553,
+        "far_exterior_power_fraction": 0.18752171044787602,
+        "complex_component_power_fractions": [
+          0.21379585332611817,
+          0.479780116693768,
+          0.306424029980113
+        ],
+        "maximum_residual_site": [
+          1,
+          1,
+          1
+        ],
+        "maximum_residual_site_power_fraction": 0.09765311588348294
+      },
+      "state_update_defect": {
+        "lsmr_stop_code": 7,
+        "lsmr_iterations": 80,
+        "linearized_next_layer_correction_norm": 834.7455470064474,
+        "correction_over_exact_translation_step": 9.713199905989063,
+        "postsolve_DEL_relative_residual": 9.694512491586132e-05
+      }
+    }
+  },
+  "verdict": "DIRECT_PRONG_SPACETIME_EXACT_SHIFT_OPEN",
+  "claim_boundary": "One signed-axis exact-map research gate. A pass still requires all axes/signs, two unreset handoffs, conservation, rest spectrum, boundedness, and Dirac-current validation."
+}

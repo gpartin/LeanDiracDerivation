@@ -1,0 +1,41 @@
+{
+  "status": "V4_UNIT_GEOMETRIC_EXACT_REST_ORBIT_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "bare V40 plus nine independently normalized unit-weight positive geometric identities",
+  "integrator": "native synchronous centered Verlet",
+  "runtime_support": false,
+  "projection_or_reset": false,
+  "zero_chi_charge_100_cycle": {
+    "artifact": "personal_touch_unit_geometric_nonlinear_100cycle_zero_clock.json",
+    "updates": 8500,
+    "maximum_relative_shape_residual": 5.6489835245858705e-14,
+    "minimum_Psi_carrier_fidelity": 0.9999999999999997,
+    "maximum_Psi_exterior_fraction": 0.0,
+    "maximum_chi_density_relative_residual": 0.0,
+    "maximum_interval_energy_relative_drift": 2.0823712588111686e-15
+  },
+  "nonzero_chi_clock_control": {
+    "artifact": "personal_touch_unit_geometric_nonlinear_10cycle_projective.json",
+    "clock_fraction": 0.01,
+    "interpretation": "injected conserved chi charge on the zero-charge equilibrium; not a recovery-to-rest perturbation",
+    "maximum_relative_shape_residual": 0.09473808834066015,
+    "minimum_Psi_carrier_fidelity": 1.0,
+    "maximum_Psi_exterior_fraction": 0.0,
+    "maximum_chi_density_relative_residual": 0.19930819756602128
+  },
+  "mechanism": "The original wedge-area channel discards part of the local C3 frame and vanishes in Psi-free exterior sites. Positive square-face and density-selected bond identities supply full-frame consistency without prepared labels or Dirac data.",
+  "claim_boundary": "Passes only the exact zero-chi-charge nonlinear rest-orbit gate. V4-006 remains open pending minimal-action ablation, charged-sector branch stability, refinements, movement, and same-embedding Dirac transport/current.",
+  "reduction_result": {
+    "status": "TWO_TERM_FULL_BAND_REDUCTION",
+    "retained_terms": [
+      "carrier-carrier chi tight-frame bond",
+      "carrier-carrier Psi tight-frame bond"
+    ],
+    "ten_cycle_shape_residual": 1.9576643018968973e-14,
+    "seven_shift_screen": "PASS"
+  },
+  "charged_branch_result": "three global radial amplitudes insufficient; shell-resolved fixed-charge solve required",
+  "motion_result": "V4-006 NOT PASSED; see v4_006_motion_verdict.json",
+  "next_gate": "JOINT_PSI_CHI_INTERFACE_SYMPLECTIC_BASIS"
+}

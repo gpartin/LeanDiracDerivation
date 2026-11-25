@@ -1,0 +1,1456 @@
+{
+  "status": "V4_CARRIER_CONTRAST_INVERSE_LAUNCH_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "complete transfer-softened interval action plus half-weight transfer-activated chi bond and 1/(2 chi0) frame reflection",
+  "method": "solve the linearized native discrete Euler-Lagrange equation backward for the previous committed layer inside the exact two-copy carrier-minus-vacuum envelope",
+  "box": "side-five periodic response control",
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "previous_center_family": "source_plus_faces",
+      "axis": 0,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 112,
+      "inverse_solve_rank": 112,
+      "inverse_solve_condition": 679.2877999633765,
+      "DEL_relative_residual": 0.008485268770216476,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999920527146209,
+        "chi": 7.947285379228956e-06,
+        "chi_vacuum_normal": 5.77799841059066e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          1,
+          1,
+          2
+        ],
+        "component": 0,
+        "absolute_amplitude": 5118.8634279295375
+      },
+      "launch_norm": 50.27337911268374,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999982698336333,
+        "chi": 1.7301663666617944e-06,
+        "chi_vacuum_normal": 7.956773335025542e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.3493368810899075,
+      "distance_from_best_rigid_reverse_shift": 0.9427316082574525,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 1.9094334512069896e-12,
+          "signed_axis_current_response": -1.9094334512069896e-12,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.008867300493875518,
+          "signed_axis_current_response": 0.008867300493875518,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.008867300493875518,
+          "signed_axis_current_response": 0.008867300493875518,
+          "flows_into_receiver": false
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 1.3552527156068803e-15,
+          "regional_charge_change_response": -5.293955920339376e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.016228568711085245,
+          "regional_charge_change_response": -6.339284652767674e-05,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.016228568711085245,
+          "regional_charge_change_response": -6.339284652767674e-05,
+          "positive_charge_arrives": false
+        }
+      ],
+      "common_positive_charge_arrives": false
+    },
+    {
+      "previous_center_family": "source_plus_faces",
+      "axis": 0,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 112,
+      "inverse_solve_rank": 112,
+      "inverse_solve_condition": 679.2877999633765,
+      "DEL_relative_residual": 0.007871528309475401,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.999994015613167,
+        "chi": 5.984386833017698e-06,
+        "chi_vacuum_normal": 6.202671901800031e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          1,
+          2
+        ],
+        "component": 0,
+        "absolute_amplitude": 4266.285282378274
+      },
+      "launch_norm": 45.418681042852214,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999978635379475,
+        "chi": 2.136462052447404e-06,
+        "chi_vacuum_normal": 9.728707730176947e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.39463108485457665,
+      "distance_from_best_rigid_reverse_shift": 0.9088720064727251,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -3.4868771363852087e-12,
+          "signed_axis_current_response": -3.4868771363852087e-12,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0072981492849066845,
+          "signed_axis_current_response": 0.0072981492849066845,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0072981492849066845,
+          "signed_axis_current_response": 0.0072981492849066845,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 8.470329472543002e-16,
+          "regional_charge_change_response": -3.3087224502121103e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.016652211343171075,
+          "regional_charge_change_response": 6.504770055926201e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.016652256817906164,
+          "regional_charge_change_response": 6.504787819494595e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "source_plus_faces",
+      "axis": 1,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 112,
+      "inverse_solve_rank": 112,
+      "inverse_solve_condition": 679.2877999633765,
+      "DEL_relative_residual": 0.007035936030366166,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.999992451297601,
+        "chi": 7.54870239912464e-06,
+        "chi_vacuum_normal": 6.131895231655816e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          1,
+          1
+        ],
+        "component": 1,
+        "absolute_amplitude": 5755.2645175967655
+      },
+      "launch_norm": 60.69841204558421,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999989533319579,
+        "chi": 1.0466680421337492e-06,
+        "chi_vacuum_normal": 5.479510758574474e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.579157822520907,
+      "distance_from_best_rigid_reverse_shift": 0.8483305907976082,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -4.841601614452913e-12,
+          "signed_axis_current_response": 4.841601614452913e-12,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.000688942236592993,
+          "signed_axis_current_response": 0.000688942236592993,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.0006888967618579044,
+          "signed_axis_current_response": 0.0006888967618579044,
+          "flows_into_receiver": false
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -3.5575383784680614e-15,
+          "regional_charge_change_response": 1.3896634290890865e-17,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.010792609828058628,
+          "regional_charge_change_response": 4.215863214085402e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.010792609828058628,
+          "regional_charge_change_response": 4.215863214085402e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "source_plus_faces",
+      "axis": 1,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 112,
+      "inverse_solve_rank": 112,
+      "inverse_solve_condition": 679.2877999633765,
+      "DEL_relative_residual": 0.007007611180901841,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999929247747067,
+        "chi": 7.075225293362461e-06,
+        "chi_vacuum_normal": 6.635091887717786e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          1,
+          1
+        ],
+        "component": 0,
+        "absolute_amplitude": 4672.706913462474
+      },
+      "launch_norm": 59.96694749681048,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999989450060156,
+        "chi": 1.0549939844274779e-06,
+        "chi_vacuum_normal": 5.547567407855128e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.6118231112623196,
+      "distance_from_best_rigid_reverse_shift": 0.8243007592828826,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -6.1147017294712315e-12,
+          "signed_axis_current_response": -6.1147017294712315e-12,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0010214989742962644,
+          "signed_axis_current_response": 0.0010214989742962644,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0010214534995611757,
+          "signed_axis_current_response": 0.0010214534995611757,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 1.0164395367051604e-15,
+          "regional_charge_change_response": -3.970466940254533e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.007861444828449748,
+          "regional_charge_change_response": -3.070876886113183e-05,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.007861444828449748,
+          "regional_charge_change_response": -3.070876886113183e-05,
+          "positive_charge_arrives": false
+        }
+      ],
+      "common_positive_charge_arrives": false
+    },
+    {
+      "previous_center_family": "source_plus_faces",
+      "axis": 2,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 112,
+      "inverse_solve_rank": 112,
+      "inverse_solve_condition": 679.2877999633765,
+      "DEL_relative_residual": 0.008082868179415711,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999904872786218,
+        "chi": 9.512721378204086e-06,
+        "chi_vacuum_normal": 7.984695363447077e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          1,
+          1
+        ],
+        "component": 0,
+        "absolute_amplitude": 7093.9233655108355
+      },
+      "launch_norm": 62.53980444938714,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999989895681932,
+        "chi": 1.010431806800383e-06,
+        "chi_vacuum_normal": 5.231668232964391e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.5703924086301515,
+      "distance_from_best_rigid_reverse_shift": 0.8809791752769605,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -6.466146948943371e-13,
+          "signed_axis_current_response": 6.466146948943371e-13,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.01799722711970375,
+          "signed_axis_current_response": -0.01799722711970375,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.01799722711970375,
+          "signed_axis_current_response": -0.01799722711970375,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 5.251604272976661e-15,
+          "regional_charge_change_response": -2.0514079191315083e-17,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.004042021490820516,
+          "regional_charge_change_response": 1.578914644851764e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.004042021846091884,
+          "regional_charge_change_response": 1.578914783629642e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "source_plus_faces",
+      "axis": 2,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 112,
+      "inverse_solve_rank": 112,
+      "inverse_solve_condition": 679.2877999633765,
+      "DEL_relative_residual": 0.007125910131552918,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999939147897255,
+        "chi": 6.0852102745053005e-06,
+        "chi_vacuum_normal": 5.514340108583758e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          1,
+          1
+        ],
+        "component": 0,
+        "absolute_amplitude": 4676.334274804936
+      },
+      "launch_norm": 56.23748900315627,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999987896818244,
+        "chi": 1.2103181754760925e-06,
+        "chi_vacuum_normal": 6.395781970390027e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.6224705584964333,
+      "distance_from_best_rigid_reverse_shift": 0.8187002672517208,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -8.539448684527933e-14,
+          "signed_axis_current_response": -8.539448684527933e-14,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0026649900064512617,
+          "signed_axis_current_response": 0.0026649900064512617,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0026649914275367332,
+          "signed_axis_current_response": 0.0026649914275367332,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 6.776263578034402e-16,
+          "regional_charge_change_response": -2.646977960169688e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.0033822217915258075,
+          "regional_charge_change_response": 1.3211803873147686e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.0033822246336967505,
+          "regional_charge_change_response": 1.3211814975377932e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "three_by_three_by_three",
+      "axis": 0,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 384,
+      "inverse_solve_rank": 384,
+      "inverse_solve_condition": 914.5413814584552,
+      "DEL_relative_residual": 0.003052031173079558,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999938434835058,
+        "chi": 6.156516494265322e-06,
+        "chi_vacuum_normal": 1.2855473976565963e-06
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          0,
+          2,
+          1
+        ],
+        "component": 0,
+        "absolute_amplitude": 2527.421045828541
+      },
+      "launch_norm": 44.61810094922077,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999978966627447,
+        "chi": 2.1033372552388853e-06,
+        "chi_vacuum_normal": 1.01580170966434e-06
+      },
+      "best_rigid_reverse_shift_scale": -0.41520540233485914,
+      "distance_from_best_rigid_reverse_shift": 0.8946871441595223,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -1.1712231478779692e-10,
+          "signed_axis_current_response": 1.1712231478779692e-10,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.011972178981523028,
+          "signed_axis_current_response": 0.011972178981523028,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.011972269930993205,
+          "signed_axis_current_response": 0.011972269930993205,
+          "flows_into_receiver": false
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 1.3552527156068803e-15,
+          "regional_charge_change_response": -5.293955920339376e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.016228568711085245,
+          "regional_charge_change_response": -6.339284652767674e-05,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.016228568711085245,
+          "regional_charge_change_response": -6.339284652767674e-05,
+          "positive_charge_arrives": false
+        }
+      ],
+      "common_positive_charge_arrives": false
+    },
+    {
+      "previous_center_family": "three_by_three_by_three",
+      "axis": 0,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 384,
+      "inverse_solve_rank": 384,
+      "inverse_solve_condition": 914.5413814584552,
+      "DEL_relative_residual": 0.0029738430672602155,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999972998150461,
+        "chi": 2.7001849538471748e-06,
+        "chi_vacuum_normal": 5.25384248864981e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          3,
+          1,
+          1
+        ],
+        "component": 1,
+        "absolute_amplitude": 2536.5189848511445
+      },
+      "launch_norm": 44.6180456752402,
+      "launch_field_power_fractions": {
+        "Psi": 0.999997893188507,
+        "chi": 2.1068114930793682e-06,
+        "chi_vacuum_normal": 1.0140396929203057e-06
+      },
+      "best_rigid_reverse_shift_scale": -0.4151878520228122,
+      "distance_from_best_rigid_reverse_shift": 0.8946962945653774,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -2.4274141939787957e-10,
+          "signed_axis_current_response": -2.4274141939787957e-10,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0118461230158573,
+          "signed_axis_current_response": 0.0118461230158573,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0118461230158573,
+          "signed_axis_current_response": 0.0118461230158573,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 8.470329472543002e-16,
+          "regional_charge_change_response": -3.3087224502121103e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.016652211343171075,
+          "regional_charge_change_response": 6.504770055926201e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.016652256817906164,
+          "regional_charge_change_response": 6.504787819494595e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "three_by_three_by_three",
+      "axis": 1,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 384,
+      "inverse_solve_rank": 384,
+      "inverse_solve_condition": 914.5413814584552,
+      "DEL_relative_residual": 0.0026005069188531097,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999984497255598,
+        "chi": 1.5502744402077393e-06,
+        "chi_vacuum_normal": 1.9388260784918827e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          0,
+          2
+        ],
+        "component": 1,
+        "absolute_amplitude": 2621.4816151267855
+      },
+      "launch_norm": 52.74651359590499,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999986885147256,
+        "chi": 1.3114852743474724e-06,
+        "chi_vacuum_normal": 7.256218227225156e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.562300023332504,
+      "distance_from_best_rigid_reverse_shift": 0.8062662077166844,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 1.996416290264493e-10,
+          "signed_axis_current_response": -1.996416290264493e-10,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.00501349859405309,
+          "signed_axis_current_response": -0.00501349859405309,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.005013453119318001,
+          "signed_axis_current_response": -0.005013453119318001,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -3.5575383784680614e-15,
+          "regional_charge_change_response": 1.3896634290890865e-17,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.010792609828058628,
+          "regional_charge_change_response": 4.215863214085402e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.010792609828058628,
+          "regional_charge_change_response": 4.215863214085402e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "three_by_three_by_three",
+      "axis": 1,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 384,
+      "inverse_solve_rank": 384,
+      "inverse_solve_condition": 914.5413814584552,
+      "DEL_relative_residual": 0.002624348706437986,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.999998906352565,
+        "chi": 1.0936474348946524e-06,
+        "chi_vacuum_normal": 1.4147535473199944e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          1,
+          3,
+          1
+        ],
+        "component": 1,
+        "absolute_amplitude": 2569.0600548111993
+      },
+      "launch_norm": 52.74490875469672,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999986907019159,
+        "chi": 1.3092980840381653e-06,
+        "chi_vacuum_normal": 7.244790960820684e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.5622677054760707,
+      "distance_from_best_rigid_reverse_shift": 0.8062779475466652,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -1.9890148940375084e-10,
+          "signed_axis_current_response": -1.9890148940375084e-10,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.003370951162651181,
+          "signed_axis_current_response": -0.003370951162651181,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.003370951162651181,
+          "signed_axis_current_response": -0.003370951162651181,
+          "flows_into_receiver": false
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 1.0164395367051604e-15,
+          "regional_charge_change_response": -3.970466940254533e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.007861444828449748,
+          "regional_charge_change_response": -3.070876886113183e-05,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.007861444828449748,
+          "regional_charge_change_response": -3.070876886113183e-05,
+          "positive_charge_arrives": false
+        }
+      ],
+      "common_positive_charge_arrives": false
+    },
+    {
+      "previous_center_family": "three_by_three_by_three",
+      "axis": 2,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 384,
+      "inverse_solve_rank": 384,
+      "inverse_solve_condition": 914.5413814584552,
+      "DEL_relative_residual": 0.002814505678868833,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999982014932568,
+        "chi": 1.7985067433292165e-06,
+        "chi_vacuum_normal": 2.1710142400889814e-07
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          2,
+          0
+        ],
+        "component": 1,
+        "absolute_amplitude": 2630.444623227962
+      },
+      "launch_norm": 49.40818163922404,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999984953972277,
+        "chi": 1.504602772194821e-06,
+        "chi_vacuum_normal": 8.317313947568995e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.4881905580468722,
+      "distance_from_best_rigid_reverse_shift": 0.8586288319107932,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 1.6671922456271857e-10,
+          "signed_axis_current_response": -1.6671922456271857e-10,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.003708428431004051,
+          "signed_axis_current_response": -0.003708428431004051,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0037084298520895227,
+          "signed_axis_current_response": -0.0037084298520895227,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 5.251604272976661e-15,
+          "regional_charge_change_response": -2.0514079191315083e-17,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.004042021490820516,
+          "regional_charge_change_response": 1.578914644851764e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.004042021846091884,
+          "regional_charge_change_response": 1.578914783629642e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "three_by_three_by_three",
+      "axis": 2,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 384,
+      "inverse_solve_rank": 384,
+      "inverse_solve_condition": 914.5413814584552,
+      "DEL_relative_residual": 0.0026770622887682424,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9999989402173606,
+        "chi": 1.0597826394030642e-06,
+        "chi_vacuum_normal": 9.329787248317462e-08
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          1,
+          1,
+          3
+        ],
+        "component": 1,
+        "absolute_amplitude": 2630.25992870332
+      },
+      "launch_norm": 48.280556016622896,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999984437587881,
+        "chi": 1.5562412119480468e-06,
+        "chi_vacuum_normal": 8.623290852060185e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.5104283178382581,
+      "distance_from_best_rigid_reverse_shift": 0.8361736517986518,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -1.6572287674678396e-10,
+          "signed_axis_current_response": -1.6572287674678396e-10,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0036861152352685163,
+          "signed_axis_current_response": 0.0036861152352685163,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0036861123930975732,
+          "signed_axis_current_response": 0.0036861123930975732,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 6.776263578034402e-16,
+          "regional_charge_change_response": -2.646977960169688e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.0033822217915258075,
+          "regional_charge_change_response": 1.3211803873147686e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.0033822246336967505,
+          "regional_charge_change_response": 1.3211814975377932e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "full_native_first_shell",
+      "axis": 0,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 768,
+      "inverse_solve_rank": 768,
+      "inverse_solve_condition": 1075.3729319784297,
+      "DEL_relative_residual": 7.248247296082711e-05,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9897716389609014,
+        "chi": 0.010228361039098688,
+        "chi_vacuum_normal": 0.0003674388191037679
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          1,
+          2,
+          1
+        ],
+        "component": 1,
+        "absolute_amplitude": 18.26972970666614
+      },
+      "launch_norm": 48.23138214140237,
+      "launch_field_power_fractions": {
+        "Psi": 0.999998198841057,
+        "chi": 1.8011589429029347e-06,
+        "chi_vacuum_normal": 8.684269644694913e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.41514752878793987,
+      "distance_from_best_rigid_reverse_shift": 0.9106532644732669,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -2.151548389320648e-11,
+          "signed_axis_current_response": 2.151548389320648e-11,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.016376725398004055,
+          "signed_axis_current_response": 0.016376725398004055,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.016376725398004055,
+          "signed_axis_current_response": 0.016376725398004055,
+          "flows_into_receiver": false
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 1.3552527156068803e-15,
+          "regional_charge_change_response": -5.293955920339376e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.016228568711085245,
+          "regional_charge_change_response": -6.339284652767674e-05,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.016228568711085245,
+          "regional_charge_change_response": -6.339284652767674e-05,
+          "positive_charge_arrives": false
+        }
+      ],
+      "common_positive_charge_arrives": false
+    },
+    {
+      "previous_center_family": "full_native_first_shell",
+      "axis": 0,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 768,
+      "inverse_solve_rank": 768,
+      "inverse_solve_condition": 1075.3729319784297,
+      "DEL_relative_residual": 6.865034848795573e-05,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9892694878484698,
+        "chi": 0.010730512151530161,
+        "chi_vacuum_normal": 0.000369984756614915
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          1,
+          2
+        ],
+        "component": 1,
+        "absolute_amplitude": 17.316577389632563
+      },
+      "launch_norm": 48.23140057423324,
+      "launch_field_power_fractions": {
+        "Psi": 0.999998200735628,
+        "chi": 1.7992643720187154e-06,
+        "chi_vacuum_normal": 8.668867091082194e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.4151470950942354,
+      "distance_from_best_rigid_reverse_shift": 0.910653531949329,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 4.531541564515781e-11,
+          "signed_axis_current_response": 4.531541564515781e-11,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0167806774697965,
+          "signed_axis_current_response": 0.0167806774697965,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.016780631995061412,
+          "signed_axis_current_response": 0.016780631995061412,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 8.470329472543002e-16,
+          "regional_charge_change_response": -3.3087224502121103e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.016652211343171075,
+          "regional_charge_change_response": 6.504770055926201e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.016652256817906164,
+          "regional_charge_change_response": 6.504787819494595e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "full_native_first_shell",
+      "axis": 1,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 768,
+      "inverse_solve_rank": 768,
+      "inverse_solve_condition": 1075.3729319784297,
+      "DEL_relative_residual": 6.055725622105648e-05,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9900611361124327,
+        "chi": 0.00993886388756724,
+        "chi_vacuum_normal": 0.0006276361749699887
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          1,
+          1
+        ],
+        "component": 1,
+        "absolute_amplitude": 17.615037006355738
+      },
+      "launch_norm": 55.8328671129707,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999988313913095,
+        "chi": 1.1686086904855151e-06,
+        "chi_vacuum_normal": 6.470199148827314e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.56220026589994,
+      "distance_from_best_rigid_reverse_shift": 0.8293337100050118,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -2.676268359485742e-11,
+          "signed_axis_current_response": 2.676268359485742e-11,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.010716530596255323,
+          "signed_axis_current_response": -0.010716530596255323,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.010716485121520234,
+          "signed_axis_current_response": -0.010716485121520234,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -3.5575383784680614e-15,
+          "regional_charge_change_response": 1.3896634290890865e-17,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.010792609828058628,
+          "regional_charge_change_response": 4.215863214085402e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.010792609828058628,
+          "regional_charge_change_response": 4.215863214085402e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "full_native_first_shell",
+      "axis": 1,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 768,
+      "inverse_solve_rank": 768,
+      "inverse_solve_condition": 1075.3729319784297,
+      "DEL_relative_residual": 6.241738999667547e-05,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9903524736462187,
+        "chi": 0.00964752635378128,
+        "chi_vacuum_normal": 0.000483594924274545
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          1,
+          2,
+          2
+        ],
+        "component": 1,
+        "absolute_amplitude": 18.239842655035858
+      },
+      "launch_norm": 55.83270589426851,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999988326450343,
+        "chi": 1.1673549656088526e-06,
+        "chi_vacuum_normal": 6.460176056145803e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.5621994926330286,
+      "distance_from_best_rigid_reverse_shift": 0.8293331407697743,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 4.234182178052686e-11,
+          "signed_axis_current_response": 4.234182178052686e-11,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.007984090188983828,
+          "signed_axis_current_response": -0.007984090188983828,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -0.007984090188983828,
+          "signed_axis_current_response": -0.007984090188983828,
+          "flows_into_receiver": false
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 1.0164395367051604e-15,
+          "regional_charge_change_response": -3.970466940254533e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.007861444828449748,
+          "regional_charge_change_response": -3.070876886113183e-05,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 0.007861444828449748,
+          "regional_charge_change_response": -3.070876886113183e-05,
+          "positive_charge_arrives": false
+        }
+      ],
+      "common_positive_charge_arrives": false
+    },
+    {
+      "previous_center_family": "full_native_first_shell",
+      "axis": 2,
+      "sign": -1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 768,
+      "inverse_solve_rank": 768,
+      "inverse_solve_condition": 1075.3729319784297,
+      "DEL_relative_residual": 7.570527389071074e-05,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.992319928057742,
+        "chi": 0.0076800719422578725,
+        "chi_vacuum_normal": 0.0009237360967731859
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          2,
+          2,
+          1
+        ],
+        "component": 1,
+        "absolute_amplitude": 18.28021436763806
+      },
+      "launch_norm": 52.68659918460035,
+      "launch_field_power_fractions": {
+        "Psi": 0.9999986741163938,
+        "chi": 1.3258836062269042e-06,
+        "chi_vacuum_normal": 7.318584727977066e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.4879342736458979,
+      "distance_from_best_rigid_reverse_shift": 0.8770225954251842,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -3.7476125718319264e-12,
+          "signed_axis_current_response": 3.7476125718319264e-12,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.004130706641710183,
+          "signed_axis_current_response": -0.004130706641710183,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.004130706996981551,
+          "signed_axis_current_response": -0.004130706996981551,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 5.251604272976661e-15,
+          "regional_charge_change_response": -2.0514079191315083e-17,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.004042021490820516,
+          "regional_charge_change_response": 1.578914644851764e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.004042021846091884,
+          "regional_charge_change_response": 1.578914783629642e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    },
+    {
+      "previous_center_family": "full_native_first_shell",
+      "axis": 2,
+      "sign": 1,
+      "target_next_layer_kind": "literal one-edge carrier displacement",
+      "previous_envelope_real_rank": 768,
+      "inverse_solve_rank": 768,
+      "inverse_solve_condition": 1075.3729319784297,
+      "DEL_relative_residual": 4.7804008507016053e-05,
+      "DEL_residual_field_power_fractions": {
+        "Psi": 0.9909763686647063,
+        "chi": 0.009023631335293682,
+        "chi_vacuum_normal": 0.0005589958233562773
+      },
+      "DEL_first_maximum": {
+        "field": "Psi",
+        "site": [
+          1,
+          1,
+          2
+        ],
+        "component": 1,
+        "absolute_amplitude": 12.04224495748215
+      },
+      "launch_norm": 51.64189376652384,
+      "launch_field_power_fractions": {
+        "Psi": 0.99999864437059,
+        "chi": 1.3556294100520459e-06,
+        "chi_vacuum_normal": 7.530890578152302e-07
+      },
+      "best_rigid_reverse_shift_scale": -0.510473409032101,
+      "distance_from_best_rigid_reverse_shift": 0.8585016116005868,
+      "preceding_interval_phase_current_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": -1.0943665678525559e-13,
+          "signed_axis_current_response": -1.0943665678525559e-13,
+          "flows_into_receiver": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.003423946282055112,
+          "signed_axis_current_response": 0.003423946282055112,
+          "flows_into_receiver": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_cut_flux": -0.0,
+          "destination_inflow_response": 0.0034239420187986975,
+          "signed_axis_current_response": 0.0034239420187986975,
+          "flows_into_receiver": true
+        }
+      ],
+      "receiver_interval_charge_rows": [
+        {
+          "phase_mode": "Psi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": 6.776263578034402e-16,
+          "regional_charge_change_response": -2.646977960169688e-18,
+          "positive_charge_arrives": false
+        },
+        {
+          "phase_mode": "chi",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.0033822217915258075,
+          "regional_charge_change_response": 1.3211803873147686e-05,
+          "positive_charge_arrives": true
+        },
+        {
+          "phase_mode": "common",
+          "rest_outward_rate": -0.0,
+          "outward_rate_response": -0.0033822246336967505,
+          "regional_charge_change_response": 1.3211814975377932e-05,
+          "positive_charge_arrives": true
+        }
+      ],
+      "common_positive_charge_arrives": true
+    }
+  ],
+  "all_six_DEL_inverse_solves_close": false,
+  "expanded_shell_all_six_common_positive_charges_arrive": false,
+  "verdict": "NATIVE_INVERSE_LAUNCH_REMAINS_OPEN",
+  "claim_boundary": "This is a linear inverse launch and current test. It does not establish a finite nonlinear hop, repeated translation, rest stability, or equality with the Dirac current.",
+  "corrective_action": "If the DEL inverse closes but current fails, derive the exact phase-density continuity identity before changing the action. If the inverse itself fails, decompose its residual by field and site to identify the missing native response."
+}

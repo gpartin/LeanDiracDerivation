@@ -1,0 +1,141 @@
+{
+  "status": "V4_C19_BARGMANN_FIRST_SHELL_EMBEDDING",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 5,
+  "c19_center_count": 19,
+  "all_center_count": 125,
+  "bundle_ranks": {
+    "c19_previous_plus": 152,
+    "c19_previous_minus": 152,
+    "c19_previous_both": 272,
+    "c19_following_plus": 152,
+    "c19_following_minus": 152,
+    "c19_following_both": 272,
+    "all_centers_previous_plus": 1000,
+    "all_centers_previous_minus": 1000,
+    "all_centers_previous_both": 1250,
+    "all_centers_following_plus": 1000,
+    "all_centers_following_minus": 1000,
+    "all_centers_following_both": 1250
+  },
+  "rows": [
+    {
+      "axis": 0,
+      "image_norm": 2053.595175012075,
+      "support_power": {
+        "plus": {
+          "core": 1.0,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        },
+        "minus": {
+          "core": 1.0,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        },
+        "both": {
+          "core": 0.9999999999999998,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        }
+      },
+      "projection_residuals": {
+        "c19_plus_own": 0.7103567797500058,
+        "c19_plus_opposite": 0.699864330865744,
+        "c19_minus_own": 0.6846664376019694,
+        "c19_minus_opposite": 0.7455551289731994,
+        "c19_both": 5.347636936823952e-16,
+        "all_centers_plus_own": 0.47555700330376405,
+        "all_centers_plus_opposite": 0.49495522982187323,
+        "all_centers_minus_own": 0.46966005526734317,
+        "all_centers_minus_opposite": 0.5322642319508224,
+        "all_centers_both": 1.5046104641672898e-15
+      },
+      "following_target_residuals": {
+        "plus": 3.5981903280111065e-16,
+        "minus": 4.139507897769371e-16
+      }
+    },
+    {
+      "axis": 1,
+      "image_norm": 2053.5951750120744,
+      "support_power": {
+        "plus": {
+          "core": 1.0,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        },
+        "minus": {
+          "core": 0.9999999999999998,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        },
+        "both": {
+          "core": 1.0000000000000002,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        }
+      },
+      "projection_residuals": {
+        "c19_plus_own": 0.7306281479070775,
+        "c19_plus_opposite": 0.7037582743932049,
+        "c19_minus_own": 0.6950775311692716,
+        "c19_minus_opposite": 0.7087146850325537,
+        "c19_both": 5.446434134819073e-16,
+        "all_centers_plus_own": 0.511624013049858,
+        "all_centers_plus_opposite": 0.4726798782522374,
+        "all_centers_minus_own": 0.4910050908395315,
+        "all_centers_minus_opposite": 0.4738339653481225,
+        "all_centers_both": 1.4922069460114035e-15
+      },
+      "following_target_residuals": {
+        "plus": 3.2515837646386693e-16,
+        "minus": 3.074425495692752e-16
+      }
+    },
+    {
+      "axis": 2,
+      "image_norm": 2047.9142409119802,
+      "support_power": {
+        "plus": {
+          "core": 1.0,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        },
+        "minus": {
+          "core": 1.0000000000000002,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        },
+        "both": {
+          "core": 1.0,
+          "c19_first_shell": 0.0,
+          "outside_c19_first_shell": 0.0
+        }
+      },
+      "projection_residuals": {
+        "c19_plus_own": 0.7115320979631476,
+        "c19_plus_opposite": 0.6987988722542219,
+        "c19_minus_own": 0.6877724526655428,
+        "c19_minus_opposite": 0.6892613043070042,
+        "c19_both": 5.455063238525008e-16,
+        "all_centers_plus_own": 0.4782798675638128,
+        "all_centers_plus_opposite": 0.48488727826610095,
+        "all_centers_minus_own": 0.4689844065267994,
+        "all_centers_minus_opposite": 0.48258047040005103,
+        "all_centers_both": 1.4811639031843194e-15
+      },
+      "following_target_residuals": {
+        "plus": 3.6307654958895797e-16,
+        "minus": 3.519482126376971e-16
+      }
+    }
+  ],
+  "worst_c19_both_copy_residual": 5.455063238525008e-16,
+  "worst_c19_single_copy_residual": 0.7306281479070775,
+  "worst_all_center_both_copy_residual": 1.5046104641672898e-15,
+  "maximum_c19_first_shell_power": 0.0,
+  "verdict": "BARGMANN_LEAKAGE_IS_INTERNAL_CORE_NOT_FIRST_SHELL",
+  "claim_boundary": "One-Hessian-image diagnostic for the rest-preserving Bargmann connection. A small residual supports a translated carrier bundle but does not prove repeated invariance, nonlinear stability, coefficient provenance, or V4-006."
+}

@@ -1,0 +1,66 @@
+{
+  "status": "V4_CHI_TRANSFER_SOFTENING_REST_GATE_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687274,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.35916920181205,
+      "spectral_radius": 1.002940463119941,
+      "growth_rate_per_unit_time": 0.7516539940728126,
+      "reciprocal_pairing_defect": 1.7179591083049672e-12,
+      "name": "incumbent_zero",
+      "geometric_factor": 0.0
+    },
+    {
+      "coefficient": 6.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687083,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.35916920181512,
+      "spectral_radius": 1.0029404631199659,
+      "growth_rate_per_unit_time": 0.7516539940791603,
+      "reciprocal_pairing_defect": 8.010292429361243e-11,
+      "name": "face_transport_channels",
+      "geometric_factor": 6.0
+    },
+    {
+      "coefficient": 19.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687083,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.35916920181512,
+      "spectral_radius": 1.0029404631199659,
+      "growth_rate_per_unit_time": 0.7516539940791603,
+      "reciprocal_pairing_defect": 8.010292429361243e-11,
+      "name": "c19_count",
+      "geometric_factor": 19.0
+    },
+    {
+      "coefficient": 54.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687083,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.35916920181512,
+      "spectral_radius": 1.0029404631199659,
+      "growth_rate_per_unit_time": 0.7516539940791603,
+      "reciprocal_pairing_defect": 8.010292429361243e-11,
+      "name": "radial_balance",
+      "geometric_factor": 54.0
+    }
+  ],
+  "max_growth_rate_defect": 6.3477001432943325e-12,
+  "max_spectral_radius_defect": 2.4868995751603507e-14,
+  "analytic_reason": "transfer=0 on the rest orbit and scale=1+O(transfer^2), so the action change begins above quadratic order",
+  "verdict": "ADVANCE_TO_FREE_ORBIT_GATE",
+  "claim_boundary": "This verifies the side-three two-layer linear rest spectrum; it is not nonlinear stability or movement."
+}

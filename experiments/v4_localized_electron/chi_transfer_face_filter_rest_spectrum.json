@@ -1,0 +1,40 @@
+{
+  "status": "V4_CHI_FACE_FILTER_REST_GATE_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687083,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.35916920181512,
+      "spectral_radius": 1.0029404631199659,
+      "growth_rate_per_unit_time": 0.7516539940791603,
+      "reciprocal_pairing_defect": 8.010292429361243e-11,
+      "name": "unfiltered",
+      "filter_factor": 0.0
+    },
+    {
+      "coefficient": 0.16666666666666666,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687083,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.35916920181512,
+      "spectral_radius": 1.0029404631199659,
+      "growth_rate_per_unit_time": 0.7516539940791603,
+      "reciprocal_pairing_defect": 8.010292429361243e-11,
+      "name": "six_face_equal_share",
+      "filter_factor": 0.16666666666666666
+    }
+  ],
+  "growth_rate_defect": 0.0,
+  "spectral_radius_defect": 0.0,
+  "coefficient_provenance": "1/6 is the equal-share normalization of the six C19 face transport channels",
+  "verdict": "ADVANCE_TO_FREE_ORBIT_GATE",
+  "claim_boundary": "This verifies the side-three complete two-layer linear rest spectrum only; it is not nonlinear stability or movement."
+}

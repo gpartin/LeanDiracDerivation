@@ -1,0 +1,55 @@
+{
+  "status": "V4_TRANSLATION_INVERSE_ACTION_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": [
+    "face:diagonal_symmetric",
+    "face:diagonal_antisymmetric",
+    "face:diagonal_reversed",
+    "face:diagonal_conjugate",
+    "face:edge_commutator",
+    "bond:vacuum_vacuum_chi",
+    "bond:carrier_vacuum_chi",
+    "bond:carrier_carrier_chi",
+    "bond:carrier_carrier_Psi_tight_frame"
+  ],
+  "response_rank": 9,
+  "target_norm": 0.0015999471288649263,
+  "positive_solver_success": true,
+  "rows": [
+    {
+      "fit": "nonnegative",
+      "coefficients": {
+        "face:diagonal_symmetric": 1.775605392274665e-05,
+        "face:diagonal_antisymmetric": 0.03355185051053922,
+        "face:diagonal_reversed": 8.185228524364393e-06,
+        "face:diagonal_conjugate": 0.0015936696829857385,
+        "face:edge_commutator": 1.3173078165959695e-09,
+        "bond:vacuum_vacuum_chi": 26.726042983086376,
+        "bond:carrier_vacuum_chi": 13.160928072970316,
+        "bond:carrier_carrier_chi": 166.03485564688137,
+        "bond:carrier_carrier_Psi_tight_frame": 70.71224822429282
+      },
+      "relative_translation_response_residual": 0.16136849608712764,
+      "absolute_translation_response_residual": 0.00025818106200385096
+    },
+    {
+      "fit": "unconstrained",
+      "coefficients": {
+        "face:diagonal_symmetric": -0.05531110932622536,
+        "face:diagonal_antisymmetric": 0.057795561497859915,
+        "face:diagonal_reversed": 0.04732112943271708,
+        "face:diagonal_conjugate": 0.0073021908930263535,
+        "face:edge_commutator": -0.006737220189926697,
+        "bond:vacuum_vacuum_chi": 26.688704633739377,
+        "bond:carrier_vacuum_chi": 13.260564034509924,
+        "bond:carrier_carrier_chi": 166.03485564652254,
+        "bond:carrier_carrier_Psi_tight_frame": 70.71224822429276
+      },
+      "relative_translation_response_residual": 0.15839140490370313,
+      "absolute_translation_response_residual": 0.00025341787351256185
+    }
+  ],
+  "verdict": "POSITIVE_POSITION_ACTION_BASIS_DEFICIENT",
+  "claim_boundary": "Linear one-update inverse response on three centered-translation directions. Deficiency retires this nine-term positive position basis for neutral translation; it does not exclude higher-site or velocity-dependent reciprocal actions or finite branches."
+}

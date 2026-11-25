@@ -1,0 +1,40 @@
+{
+  "status": "V4_CHI_NATIVE_FRAME_REST_GATE_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "coefficient": 19.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687508,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.3591692018082,
+      "spectral_radius": 1.0029404631199448,
+      "growth_rate_per_unit_time": 0.7516539940737761,
+      "reciprocal_pairing_defect": 1.922240144835996e-12,
+      "name": "equal_transverse",
+      "normal_factor": 19.0
+    },
+    {
+      "coefficient": 6.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687508,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.3591692018082,
+      "spectral_radius": 1.0029404631199617,
+      "growth_rate_per_unit_time": 0.7516539940780835,
+      "reciprocal_pairing_defect": 4.5854431363068215e-12,
+      "name": "six_face_normal",
+      "normal_factor": 6.0
+    }
+  ],
+  "growth_rate_defect": 4.307443290940682e-12,
+  "spectral_radius_defect": 1.687538997430238e-14,
+  "coefficient_provenance": "normal factor 6 from the six C19 face transport directions",
+  "verdict": "ADVANCE_TO_FREE_ORBIT_GATE",
+  "claim_boundary": "Complete side-three two-layer rest-spectrum gate only; not nonlinear stability or movement."
+}

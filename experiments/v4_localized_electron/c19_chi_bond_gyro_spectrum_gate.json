@@ -1,0 +1,87 @@
+{
+  "status": "V4_C19_CHI_BOND_GYRO_SPECTRUM_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_delta": "(B chi0) times the C19-weight average of Im <chi_i, dot(chi_j)>",
+  "coefficient_rule": "magnitude B*chi0 from native chi inertia and substrate clock; both signs tested without fitting",
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "rest_DEL_rms": 2.340034110451259e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1561.355466769789,
+      "spectral_radius": 1.0000000526958808,
+      "growth_rate": 1.3490145121697692e-05,
+      "reciprocal_pairing_defect": 1.5067613823305237e-10,
+      "count_modulus_above_1_plus_1e_minus_7": 0,
+      "largest_moduli": [
+        1.0000000526958808,
+        1.0000000493712269,
+        1.0000000478489552,
+        1.0000000478489552,
+        1.0000000477447197,
+        1.0000000477447197,
+        1.000000044527595,
+        1.000000044527595,
+        1.0000000424734106,
+        1.0000000424734106,
+        1.0000000412416745,
+        1.0000000412416745
+      ]
+    },
+    {
+      "coefficient": 22743.0,
+      "rest_DEL_rms": 2.3814105200487573e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1563.6443873158223,
+      "spectral_radius": 1.0058030815392383,
+      "growth_rate": 1.4812949812249279,
+      "reciprocal_pairing_defect": 6.855827017204774e-11,
+      "count_modulus_above_1_plus_1e_minus_7": 12,
+      "largest_moduli": [
+        1.0058030815392383,
+        1.0053738852226803,
+        1.0026480948206402,
+        1.0026480948206402,
+        1.002566689648789,
+        1.002566689648789,
+        1.000020227847116,
+        1.0000188531737118,
+        1.0000188531737118,
+        1.0000165533126981,
+        1.0000107033640964,
+        1.0000019867027385
+      ]
+    },
+    {
+      "coefficient": -22743.0,
+      "rest_DEL_rms": 2.3871659139563164e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1563.6303376551166,
+      "spectral_radius": 1.005127147658609,
+      "growth_rate": 1.3091964395197206,
+      "reciprocal_pairing_defect": 9.963341263130587e-11,
+      "count_modulus_above_1_plus_1e_minus_7": 12,
+      "largest_moduli": [
+        1.005127147658609,
+        1.005127147658609,
+        1.0024644542242498,
+        1.0024644542242498,
+        1.0022805627636173,
+        1.0022805627636173,
+        1.000019236664721,
+        1.000018012240145,
+        1.000018012240145,
+        1.0000157035583765,
+        1.000010620337006,
+        1.0000018099538543
+      ]
+    }
+  ],
+  "verdict": "C19_CHI_BOND_GYRO_NO_IMPROVEMENT",
+  "surviving_coefficients": [],
+  "claim_boundary": "Full side-three spectrum response gate only. A survivor would still require nonlinear perturbation, box/timestep refinement, translation, and same-readout Dirac-current closure."
+}

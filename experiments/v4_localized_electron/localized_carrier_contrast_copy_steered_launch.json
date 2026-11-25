@@ -1,0 +1,277 @@
+{
+  "status": "V4_CARRIER_CONTRAST_COPY_STEERED_LAUNCH_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "coefficient_provenance": "four internal coefficients are solved from two native Noether charges and two transverse-center constraints; no longitudinal speed, Dirac current, or preferred magnitude is fitted",
+  "rows": [
+    {
+      "axis": 0,
+      "sign": -1,
+      "steering_coefficients": {
+        "Psi_common_phase": 0.06363772549202186,
+        "chi_contrast_common_phase": -0.00016608669845387622,
+        "Psi_relative_copy_phase": 1.1017038706250003e-18,
+        "chi_relative_copy_phase": 8.630539952572179e-24
+      },
+      "constraint_matrix_rank": 2,
+      "constraint_matrix_condition": null,
+      "constraint_matrix_singular_values": [
+        12787186337.033138,
+        342992.6754006374,
+        5.5511151231257833e-11,
+        0.0
+      ],
+      "uncorrected_native_constraints": [
+        -21827.273722919927,
+        -2123781.5612407513,
+        -2.762873263506549e-05,
+        -5.551115123125783e-11
+      ],
+      "corrected_native_constraints": [
+        9.094947017729282e-07,
+        -0.001001731816420437,
+        -2.7628566101611796e-05,
+        -1.6653345369377348e-10
+      ],
+      "DEL_relative_residual": 8.313512164666815e-16,
+      "Psi_center_displacement_response": [
+        -1.1102230246251565e-10,
+        -2.7628566101611796e-05,
+        -1.6653345369377348e-10
+      ],
+      "signed_requested_axis_response": 1.1102230246251565e-10,
+      "moves_requested_way": false,
+      "transverse_center_response_norm": 2.7628566102113693e-05,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.70872595553527,
+        "first_shell_including_core": 0.999999999735987,
+        "outside_first_shell": 2.640129775193365e-10
+      }
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "steering_coefficients": {
+        "Psi_common_phase": 0.06363772548671859,
+        "chi_contrast_common_phase": 0.00017757332282322566,
+        "Psi_relative_copy_phase": -1.177898163400602e-18,
+        "chi_relative_copy_phase": -9.227431645060067e-24
+      },
+      "constraint_matrix_rank": 2,
+      "constraint_matrix_condition": null,
+      "constraint_matrix_singular_values": [
+        12787186337.033138,
+        342992.6754006374,
+        5.5511151231257833e-11,
+        0.0
+      ],
+      "uncorrected_native_constraints": [
+        -21827.273721100937,
+        2270663.1674183235,
+        7.984723993104126e-07,
+        0.0
+      ],
+      "corrected_native_constraints": [
+        -1.3642420526593924e-06,
+        0.0008622044276457297,
+        7.986389327641064e-07,
+        0.0
+      ],
+      "DEL_relative_residual": 8.375413578867672e-16,
+      "Psi_center_displacement_response": [
+        -1.1102230246251565e-10,
+        7.986389327641064e-07,
+        0.0
+      ],
+      "signed_requested_axis_response": -1.1102230246251565e-10,
+      "moves_requested_way": false,
+      "transverse_center_response_norm": 7.986389327641064e-07,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.7087262397750949,
+        "first_shell_including_core": 0.9999999997092064,
+        "outside_first_shell": 2.9079370786166204e-10
+      }
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "steering_coefficients": {
+        "Psi_common_phase": 0.08510720722642015,
+        "chi_contrast_common_phase": 0.0001559099128536683,
+        "Psi_relative_copy_phase": -1.0341981390372196e-18,
+        "chi_relative_copy_phase": -8.101712806696032e-24
+      },
+      "constraint_matrix_rank": 2,
+      "constraint_matrix_condition": null,
+      "constraint_matrix_singular_values": [
+        12787186337.033138,
+        342992.6754006374,
+        1.755416734288351e-10,
+        1.0643344323228671e-36
+      ],
+      "uncorrected_native_constraints": [
+        -29191.148702466307,
+        1993649.1074392176,
+        -7.986389327641064e-07,
+        1.1102230246251565e-10
+      ],
+      "corrected_native_constraints": [
+        -1.3642420526593924e-06,
+        0.0009391782629375456,
+        -7.986389327641064e-07,
+        -1.1102230246251565e-10
+      ],
+      "DEL_relative_residual": 9.28488996413592e-16,
+      "Psi_center_displacement_response": [
+        -7.986389327641064e-07,
+        -1.1102230246251565e-10,
+        -1.1102230246251565e-10
+      ],
+      "signed_requested_axis_response": 1.1102230246251565e-10,
+      "moves_requested_way": false,
+      "transverse_center_response_norm": 7.98638940480955e-07,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.7823303638728969,
+        "first_shell_including_core": 0.9999999998245159,
+        "outside_first_shell": 1.7548398943305135e-10
+      }
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "steering_coefficients": {
+        "Psi_common_phase": 0.08510720722509432,
+        "chi_contrast_common_phase": -0.00018775009627124625,
+        "Psi_relative_copy_phase": 1.245403814381089e-18,
+        "chi_relative_copy_phase": 9.756258159459164e-24
+      },
+      "constraint_matrix_rank": 2,
+      "constraint_matrix_condition": null,
+      "constraint_matrix_singular_values": [
+        12787186337.033138,
+        342992.6754006374,
+        1.755416734288351e-10,
+        1.0643344323228671e-36
+      ],
+      "uncorrected_native_constraints": [
+        -29191.14870201156,
+        -2400795.4658275736,
+        2.762873263506549e-05,
+        1.1102230246251565e-10
+      ],
+      "corrected_native_constraints": [
+        -1.8189894035458565e-06,
+        -0.0009621942348783663,
+        2.7628677123914258e-05,
+        -5.551115123125783e-11
+      ],
+      "DEL_relative_residual": 9.080764963134976e-16,
+      "Psi_center_displacement_response": [
+        2.7628677123914258e-05,
+        0.0,
+        -5.551115123125783e-11
+      ],
+      "signed_requested_axis_response": 0.0,
+      "moves_requested_way": false,
+      "transverse_center_response_norm": 2.7628677123970023e-05,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.7823299699430961,
+        "first_shell_including_core": 0.9999999997611974,
+        "outside_first_shell": 2.3880260381784115e-10
+      }
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "steering_coefficients": {
+        "Psi_common_phase": 0.2187100336587844,
+        "chi_contrast_common_phase": 2.874689453149392e-05,
+        "Psi_relative_copy_phase": -1.906869440398056e-19,
+        "chi_relative_copy_phase": -1.493805488796184e-24
+      },
+      "constraint_matrix_rank": 2,
+      "constraint_matrix_condition": null,
+      "constraint_matrix_singular_values": [
+        12787186337.033138,
+        342992.6754006374,
+        1.665334536937735e-10,
+        3.1013559441516204e-51
+      ],
+      "uncorrected_native_constraints": [
+        -75015.93958158992,
+        367591.8969563743,
+        -1.341499133999946e-05,
+        1.3415102362301923e-05
+      ],
+      "corrected_native_constraints": [
+        1.3642420526593924e-06,
+        4.4821095402866606e-05,
+        -1.3415213384604385e-05,
+        1.3415046851150692e-05
+      ],
+      "DEL_relative_residual": 7.711337771810799e-16,
+      "Psi_center_displacement_response": [
+        -1.3415213384604385e-05,
+        1.3415046851150692e-05,
+        -1.1102230246251565e-10
+      ],
+      "signed_requested_axis_response": 1.1102230246251565e-10,
+      "moves_requested_way": false,
+      "transverse_center_response_norm": 1.8971858954067648e-05,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.7482682700969738,
+        "first_shell_including_core": 0.9999999999704354,
+        "outside_first_shell": 2.956477633133547e-11
+      }
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "steering_coefficients": {
+        "Psi_common_phase": -0.06996510093769075,
+        "chi_contrast_common_phase": -1.6366823794786505e-05,
+        "Psi_relative_copy_phase": 1.0856614823721705e-19,
+        "chi_relative_copy_phase": 8.504866914242479e-25
+      },
+      "constraint_matrix_rank": 2,
+      "constraint_matrix_condition": null,
+      "constraint_matrix_singular_values": [
+        12787186337.033138,
+        342992.6754006374,
+        1.665334536937735e-10,
+        3.1013559441516204e-51
+      ],
+      "uncorrected_native_constraints": [
+        23997.51715529419,
+        -209285.625600085,
+        1.3415046851150692e-05,
+        -1.3414935828848229e-05
+      ],
+      "corrected_native_constraints": [
+        9.094947017729282e-07,
+        -5.8966983693901215e-05,
+        1.3415102362301923e-05,
+        -1.3415157873453154e-05
+      ],
+      "DEL_relative_residual": 8.701067910469899e-16,
+      "Psi_center_displacement_response": [
+        1.3415102362301923e-05,
+        -1.3415157873453154e-05,
+        0.0
+      ],
+      "signed_requested_axis_response": 0.0,
+      "moves_requested_way": false,
+      "transverse_center_response_norm": 1.8971858953742797e-05,
+      "launch_support_power_fractions": {
+        "eight_site_core": 0.7482741628518124,
+        "first_shell_including_core": 0.9999999999737473,
+        "outside_first_shell": 2.625270056676406e-11
+      }
+    }
+  ],
+  "max_native_constraint_residual": 0.001001731816420437,
+  "all_six_longitudinal_responses_move_requested_way": false,
+  "verdict": "TWO_COPY_FIXED_CHARGE_EDGE_TANGENT_FAIL",
+  "claim_boundary": "This tests one linear interval. It does not prove a finite nonlinear hop, repeated transport, Dirac-current magnitude, or rest stability.",
+  "corrective_action": "On pass, continue the tangent to a nonlinear relative-periodic branch. On failure, the current action does not turn native copy phase into longitudinal charge motion at this order; decompose the missing response before admitting an action term."
+}

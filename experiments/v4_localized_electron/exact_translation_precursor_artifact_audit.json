@@ -1,0 +1,48 @@
+{
+  "status": "V4_EXACT_TRANSLATION_PRECURSOR_ARTIFACT_AUDIT_PASS",
+  "date": "2026-11-24",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "target_locked": true,
+  "v4_006": "OPEN",
+  "validation": [
+    "python -m py_compile on all three exact-translation precursor scripts",
+    "PowerShell ConvertFrom-Json on the derived-kappa dual-frame result",
+    "git diff --check"
+  ],
+  "artifacts": [
+    {
+      "path": "experiments/v4_localized_electron/EXACT_TRANSLATION_MAP_LOCK.md",
+      "sha256": "75E6D5FFA57B0713FF41A702E7EB2DF053DCDCC657EC666FDBD3AC6514982255"
+    },
+    {
+      "path": "experiments/v4_localized_electron/exact_translation_precursor_linear_gate.py",
+      "sha256": "9314976930916110A1A94720F40D7E269FB175DE2C0A7BCC774E8D65E82066B9"
+    },
+    {
+      "path": "experiments/v4_localized_electron/exact_translation_bond_frame_precursor_gate.py",
+      "sha256": "C2238244C2C8C872E45033B3E0841BFA8664A3D3ECAFFE73E78CD1FE741537CD"
+    },
+    {
+      "path": "experiments/v4_localized_electron/exact_translation_paired_frame_precursor_gate.py",
+      "sha256": "835EA647976A08D43ADCA68B038E57B31A0FC13ACD6D7923E4C76C819E9D76E7"
+    },
+    {
+      "path": "experiments/v4_localized_electron/exact_translation_chi_dual_frame_precursor_axis0_plus_reg1.587e-02.json",
+      "sha256": "A3FC1761EB6C332C6EB7C2FDD81B953C26359885D96FD83D91494AB9296A8571"
+    }
+  ],
+  "canonical_first_shell_nonlinear_residual_range": [
+    0.6748624176983551,
+    0.7063091846024052
+  ],
+  "derived_kappa_dual_frame": {
+    "regularizer": 0.015873015873015872,
+    "precursor_norm_over_carrier": 0.005903484737105739,
+    "bounded_profile_relative_action_residual": 0.22694178882124216,
+    "implicit_correction_over_exact_translation_step": 0.17964196765506968,
+    "implicit_solver_converged": false
+  },
+  "verdict": "PRECURSOR_AND_DUAL_FRAME_PARTIAL_IMPROVEMENT_EXACT_SHIFT_OPEN",
+  "next_gate": "CURRENT_ACTIVATED_RECIPROCAL_SPACETIME_BOND_CONNECTION"
+}

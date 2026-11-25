@@ -1,0 +1,94 @@
+{
+  "status": "V4_006_MOVEMENT_REPAIR_MATCHED_MATRIX",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "comparator": "centered-time exact-C19 discrete Dirac, negative-frequency branch",
+  "winner_count": 0,
+  "incumbent": {
+    "name": "face-only native oscillator at 6/19",
+    "four_update_maximum_raw_dirac_error": 0.00234926225015649,
+    "four_update_maximum_leakage": 0.000105722659540765,
+    "one_cycle_maximum_shape_error": 1.3597996177160159,
+    "one_cycle_maximum_cross_block": 0.019990115212325972,
+    "one_cycle_maximum_norm_drift": 0.8186346712316397
+  },
+  "candidates": [
+    {
+      "name": "canonical phase-space and Noether-current audit",
+      "global_common_charge_drift": 1.5162975639825488e-10,
+      "maximum_local_continuity_defect": 2.211465607154967e-10,
+      "verdict": "READOUT_CHARGE_ACCOUNTING_PASS_BUT_TRANSVERSE_DRIFT_REMAINS"
+    },
+    {
+      "name": "phase-shifted relative-periodic orbit",
+      "boundary_residual": 0.047596321325898035,
+      "unreset_second_cell_residual": 2.470696801149633,
+      "carrier_fidelity": 0.5669767634011829,
+      "containment": 0.6240865366810507,
+      "verdict": "NO_SAME_CARRIER_ORBIT_CONVERGED"
+    },
+    {
+      "name": "self-generated wake or tail",
+      "state_only_residual": 0.0005754373853316681,
+      "state_frequency_residual": 0.000801627854164516,
+      "verdict": "AUTONOMOUS_TRAVELING_WAKE_NOT_SOLVED"
+    },
+    {
+      "name": "complete square-face factorization loop",
+      "rest_energy": 6.05845175209737e-28,
+      "rest_first_variation_norm": 5.9355728557332e-13,
+      "fixed_charge_rank": 2,
+      "best_linear_scale": 2.0,
+      "one_cycle_shape_error": 1.3235356986181335,
+      "one_cycle_leakage": 0.027451757057856404,
+      "four_update_raw_dirac_error": 0.023014984202438974,
+      "four_update_leakage": 0.0006285077583235218,
+      "nonlinear_solvers_converged_at_strict_tolerance": 7,
+      "nonlinear_solver_count": 8,
+      "marginal_solver_residual": 1.0221614216090394e-10,
+      "marginal_solver_recheck_tolerance": 2e-10,
+      "marginal_solver_recheck_converged": true,
+      "verdict": "LINEAR_CLUE_NONLINEAR_FAIL"
+    },
+    {
+      "name": "local and bond symplectic overlap",
+      "verdict": "DOES_NOT_CLOSE_RANK_THREE_TRANSPORT"
+    },
+    {
+      "name": "Ablowitz-Ladik-like position action space",
+      "basis_size": 32,
+      "rest_preserving_nullity": 18,
+      "best_relative_residual": 0.24966104260848188,
+      "verdict": "TESTED_POSITION_ONLY_ACTION_CLASS_FAIL"
+    },
+    {
+      "name": "special sliding velocity",
+      "best_single_orientation_transport_scale": 8.0,
+      "best_single_orientation_shape_error": 0.468443,
+      "all_eight_shape_error": 1.96915059924004,
+      "all_eight_leakage": 0.0225309774705314,
+      "verdict": "DIRECTION_SPECIFIC_ONLY"
+    },
+    {
+      "name": "saturating local clock response",
+      "inverse_local_potential_coefficient": 1.77949897312938e-15,
+      "positive_action_relative_residual": 0.954720585318888,
+      "unconstrained_sextic_coefficient": -26.1416589741565,
+      "verdict": "LOCAL_ONLY_REPAIR_CANNOT_TRANSPORT_ORIENTATION"
+    },
+    {
+      "name": "two-copy relay",
+      "best_one_cycle_shape_error": 0.5740721807946656,
+      "verdict": "SIMPLE_TWO_COPY_RELAY_FAIL"
+    },
+    {
+      "name": "pinning-barrier flattening",
+      "canonical_positive_barrier": 1.4551915228366852e-10,
+      "canonical_intermediate_trough_depth": 37448.84039017037,
+      "verdict": "CONVENTIONAL_POSITIVE_BARRIER_NOT_THE_LEADING_OBSTRUCTION"
+    }
+  ],
+  "verdict": "NO_TESTED_CANDIDATE_IS_A_V4_006_WINNER",
+  "next_inverse_requirement": "rest-null complete-face orientation geometry with a reciprocal velocity/symplectic response and independently derived coefficient",
+  "claim_boundary": "Failures are scoped to the concrete tested action families. They are not universal no-go theorems for every local reciprocal two-field action."
+}

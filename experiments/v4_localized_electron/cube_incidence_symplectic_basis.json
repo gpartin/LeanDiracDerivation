@@ -1,0 +1,282 @@
+{
+  "status": "V4_CUBE_INCIDENCE_SYMPLECTIC_BASIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": [
+    "tensor_common_local",
+    "tensor_common_C19_gradient",
+    "tensor_relative_local",
+    "tensor_relative_C19_gradient",
+    "area_common_local",
+    "area_common_C19_gradient",
+    "area_relative_local",
+    "area_relative_C19_gradient"
+  ],
+  "action_definition": "carrier-density-activated local and C19-gradient Berry forms for native common/relative tensor and area composites",
+  "cube_geometry": {
+    "C19_face_weight": 2,
+    "C19_edge_weight": 1,
+    "target_character": "001",
+    "target_restricted_C19_eigenvalue": 8
+  },
+  "force_rank": 5,
+  "normalized_force_singular_values": [
+    2.7635437012364026,
+    0.5174115244043983,
+    0.2758693093599732,
+    0.1156659380611817,
+    0.07502693313602818,
+    1.6255063117790014e-15,
+    5.025505674775706e-16,
+    1.9498197308255465e-16
+  ],
+  "rest_preserving_kernel_dimension": 3,
+  "basis_rows": [
+    {
+      "name": "tensor_common_local",
+      "rest_DEL_norm": 1.7262560117566925,
+      "mass_on_mode_norm": 0.00011790506775115937,
+      "mass_on_mode_target_overlap": 0.8853953964555739,
+      "gyro_on_mode_norm": 0.5712361108935895,
+      "gyro_on_mode_target_overlap": 4.555183337227661e-18,
+      "stiffness_on_mode_norm": 11.969375290117858,
+      "stiffness_on_mode_target_overlap": 0.9252511177126822
+    },
+    {
+      "name": "tensor_common_C19_gradient",
+      "rest_DEL_norm": 17.331472807211547,
+      "mass_on_mode_norm": 0.0009197069457568232,
+      "mass_on_mode_target_overlap": 0.8824825133470839,
+      "gyro_on_mode_norm": 4.255763580925144,
+      "gyro_on_mode_target_overlap": 9.782818672082546e-18,
+      "stiffness_on_mode_norm": 111.21434654844046,
+      "stiffness_on_mode_target_overlap": 0.9389271517786136
+    },
+    {
+      "name": "tensor_relative_local",
+      "rest_DEL_norm": 1.7262560117566927,
+      "mass_on_mode_norm": 0.000123143994504675,
+      "mass_on_mode_target_overlap": 0.9261925889434927,
+      "gyro_on_mode_norm": 0.6440067512427633,
+      "gyro_on_mode_target_overlap": 1.2121387899787723e-17,
+      "stiffness_on_mode_norm": 11.969375290117858,
+      "stiffness_on_mode_target_overlap": 0.9252511177126822
+    },
+    {
+      "name": "tensor_relative_C19_gradient",
+      "rest_DEL_norm": 15.707981186035433,
+      "mass_on_mode_norm": 0.0008683303230176129,
+      "mass_on_mode_target_overlap": 0.9159241184446962,
+      "gyro_on_mode_norm": 4.380792312859003,
+      "gyro_on_mode_target_overlap": 9.503614974221984e-18,
+      "stiffness_on_mode_norm": 104.85088927032739,
+      "stiffness_on_mode_target_overlap": 0.9360439398600715
+    },
+    {
+      "name": "area_common_local",
+      "rest_DEL_norm": 1.7262560117566925,
+      "mass_on_mode_norm": 0.00011764197028458227,
+      "mass_on_mode_target_overlap": 0.8806415832399177,
+      "gyro_on_mode_norm": 0.5693779662936858,
+      "gyro_on_mode_target_overlap": 7.616748358163702e-18,
+      "stiffness_on_mode_norm": 11.966030294504707,
+      "stiffness_on_mode_target_overlap": 0.9254621825769936
+    },
+    {
+      "name": "area_common_C19_gradient",
+      "rest_DEL_norm": 20.715072141080313,
+      "mass_on_mode_norm": 0.0011629443168738563,
+      "mass_on_mode_target_overlap": 0.8925842313362667,
+      "gyro_on_mode_norm": 5.479043940068933,
+      "gyro_on_mode_target_overlap": 1.266442463284923e-17,
+      "stiffness_on_mode_norm": 137.17363818526894,
+      "stiffness_on_mode_target_overlap": 0.9574515280063545
+    },
+    {
+      "name": "area_relative_local",
+      "rest_DEL_norm": 1.312156454689753,
+      "mass_on_mode_norm": 9.55291102953522e-05,
+      "mass_on_mode_target_overlap": 0.7987537694027016,
+      "gyro_on_mode_norm": 0.49266156292281565,
+      "gyro_on_mode_target_overlap": 3.697182380069322e-17,
+      "stiffness_on_mode_norm": 9.36031807361121,
+      "stiffness_on_mode_target_overlap": 0.7961512377304238
+    },
+    {
+      "name": "area_relative_C19_gradient",
+      "rest_DEL_norm": 10.758944353507784,
+      "mass_on_mode_norm": 0.0006437236739667912,
+      "mass_on_mode_target_overlap": 0.7810464799940968,
+      "gyro_on_mode_norm": 3.2176863726035716,
+      "gyro_on_mode_target_overlap": 4.312970936500977e-18,
+      "stiffness_on_mode_norm": 80.72775266634869,
+      "stiffness_on_mode_target_overlap": 0.7937751901872381
+    }
+  ],
+  "rest_preserving_kernel_rows": [
+    {
+      "coefficients": {
+        "tensor_common_local": 0.44565990456146665,
+        "tensor_common_C19_gradient": 1.7509335569540523e-16,
+        "tensor_relative_local": 1.0,
+        "tensor_relative_C19_gradient": 2.1156753000340342e-16,
+        "area_common_local": 0.45002250200915195,
+        "area_common_C19_gradient": 0.008693132785781677,
+        "area_relative_local": 1.322075961000481e-15,
+        "area_relative_C19_gradient": -3.4828354777064355e-16
+      },
+      "direct_rest_DEL_norm": 3.3375581554336432e-15,
+      "mass_response_norm": 8.284054309061528e-05,
+      "gyro_response_norm": 0.13274657620510066,
+      "stiffness_response_norm": 0.19487176499976375
+    },
+    {
+      "coefficients": {
+        "tensor_common_local": -0.9448842220515675,
+        "tensor_common_C19_gradient": 1.1938869480029697e-16,
+        "tensor_relative_local": 0.6051102297591244,
+        "tensor_relative_C19_gradient": 2.0955834083674922e-16,
+        "area_common_local": -1.0,
+        "area_common_C19_gradient": 0.2124995376508911,
+        "area_relative_local": 1.939607494665675e-15,
+        "area_relative_C19_gradient": -2.320558586650761e-16
+      },
+      "direct_rest_DEL_norm": 3.0319816760355915e-15,
+      "mass_response_norm": 5.87666532956927e-05,
+      "gyro_response_norm": 0.3523166567848624,
+      "stiffness_response_norm": 4.680240914100963
+    },
+    {
+      "coefficients": {
+        "tensor_common_local": -1.0,
+        "tensor_common_C19_gradient": 4.483676942185544e-17,
+        "tensor_relative_local": 0.0007117457642890925,
+        "tensor_relative_C19_gradient": 3.175943651460403e-17,
+        "area_common_local": 0.9851069779761289,
+        "area_common_C19_gradient": 0.0013003973156800025,
+        "area_relative_local": 1.3995283666111757e-16,
+        "area_relative_C19_gradient": -4.673397682486466e-17
+      },
+      "direct_rest_DEL_norm": 4.838072573201027e-16,
+      "mass_response_norm": 3.877177652577191e-06,
+      "gyro_response_norm": 0.04621300144478391,
+      "stiffness_response_norm": 0.07188562398456501
+    }
+  ],
+  "single_gradient_minimum_local_completions": [
+    {
+      "selected_gradient": "tensor_common_C19_gradient",
+      "coefficients": {
+        "tensor_common_local": -0.06930087633072245,
+        "tensor_common_C19_gradient": 1.0,
+        "tensor_relative_local": 0.06930087633072235,
+        "tensor_relative_C19_gradient": 0.044834991453742166,
+        "area_common_local": -0.0693008763307225,
+        "area_common_C19_gradient": -0.8316105159686686,
+        "area_relative_local": -0.002103694613662578,
+        "area_relative_C19_gradient": -0.104001402463076
+      },
+      "rational_coefficients_denominator_at_most_48": {
+        "tensor_common_local": "-2/29",
+        "tensor_common_C19_gradient": "1",
+        "tensor_relative_local": "2/29",
+        "tensor_relative_C19_gradient": "2/45",
+        "area_common_local": "-2/29",
+        "area_common_C19_gradient": "-5/6",
+        "area_relative_local": "0",
+        "area_relative_C19_gradient": "-5/48"
+      },
+      "rest_DEL_norm": 1.475444540659027,
+      "rest_DEL_relative_to_selected": 0.08513093821115429,
+      "mass_response_norm": 0.000138837869949757,
+      "gyro_response_norm": 0.5919900306957021,
+      "stiffness_response_norm": 17.910064611009908
+    },
+    {
+      "selected_gradient": "tensor_relative_C19_gradient",
+      "coefficients": {
+        "tensor_common_local": 0.0528066974347976,
+        "tensor_common_C19_gradient": 0.08539944903581587,
+        "tensor_relative_local": -0.0528066974347993,
+        "tensor_relative_C19_gradient": 1.0,
+        "area_common_local": 0.05280669743479699,
+        "area_common_C19_gradient": 0.6336803692175568,
+        "area_relative_local": 1.9729526671675504,
+        "area_relative_C19_gradient": -0.29977460555973046
+      },
+      "rational_coefficients_denominator_at_most_48": {
+        "tensor_common_local": "1/19",
+        "tensor_common_C19_gradient": "4/47",
+        "tensor_relative_local": "-1/19",
+        "tensor_relative_C19_gradient": "1",
+        "area_common_local": "1/19",
+        "area_common_C19_gradient": "19/30",
+        "area_relative_local": "73/37",
+        "area_relative_C19_gradient": "-3/10"
+      },
+      "rest_DEL_norm": 2.036300549832295,
+      "rest_DEL_relative_to_selected": 0.12963477137613258,
+      "mass_response_norm": 0.0005654696712728943,
+      "gyro_response_norm": 1.0460061329299157,
+      "stiffness_response_norm": 18.502112646692286
+    },
+    {
+      "selected_gradient": "area_common_C19_gradient",
+      "coefficients": {
+        "tensor_common_local": -4.000000000000013,
+        "tensor_common_C19_gradient": 3.3306690738754696e-16,
+        "tensor_relative_local": 3.999999999999993,
+        "tensor_relative_C19_gradient": 9.724059007517413e-17,
+        "area_common_local": -4.0000000000000036,
+        "area_common_C19_gradient": 1.0,
+        "area_relative_local": 1.2136027925939378e-14,
+        "area_relative_C19_gradient": -1.630432347082842e-15
+      },
+      "rational_coefficients_denominator_at_most_48": {
+        "tensor_common_local": "-4",
+        "tensor_common_C19_gradient": "0",
+        "tensor_relative_local": "4",
+        "tensor_relative_C19_gradient": "0",
+        "area_common_local": "-4",
+        "area_common_C19_gradient": "1",
+        "area_relative_local": "0",
+        "area_relative_C19_gradient": "0"
+      },
+      "rest_DEL_norm": 1.649368955034427e-14,
+      "rest_DEL_relative_to_selected": 7.962168530243943e-16,
+      "mass_response_norm": 0.00033604135087554317,
+      "gyro_response_norm": 1.747957505142587,
+      "stiffness_response_norm": 22.02577505888116
+    },
+    {
+      "selected_gradient": "area_relative_C19_gradient",
+      "coefficients": {
+        "tensor_common_local": 0.006299796183062494,
+        "tensor_common_C19_gradient": -0.43968871595331427,
+        "tensor_relative_local": -0.006299796183063568,
+        "tensor_relative_C19_gradient": -0.6653696498054477,
+        "area_common_local": 0.006299796183061417,
+        "area_common_C19_gradient": 0.07559755419678146,
+        "area_relative_local": -4.723735408560324,
+        "area_relative_C19_gradient": 1.0
+      },
+      "rational_coefficients_denominator_at_most_48": {
+        "tensor_common_local": "0",
+        "tensor_common_C19_gradient": "-11/25",
+        "tensor_relative_local": "0",
+        "tensor_relative_C19_gradient": "-2/3",
+        "area_common_local": "0",
+        "area_common_C19_gradient": "3/40",
+        "area_relative_local": "-222/47",
+        "area_relative_C19_gradient": "1"
+      },
+      "rest_DEL_norm": 3.033723194168373,
+      "rest_DEL_relative_to_selected": 0.28197219861809913,
+      "mass_response_norm": 0.000352658188035218,
+      "gyro_response_norm": 1.3490118937068984,
+      "stiffness_response_norm": 30.77121211487027
+    }
+  ],
+  "verdict": "CUBE_INCIDENCE_SYMPLECTIC_RESPONSE_SURVIVES",
+  "claim_boundary": "Rest-force nullspace and one-mode differential response only. It does not admit an action, establish coefficient provenance, or close the full spectrum, nonlinear motion, or V4-006."
+}

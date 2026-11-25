@@ -1,0 +1,122 @@
+{
+  "status": "V4_ACTIVATED_BOND_EXACT_DISCRETE_NEAR_UNIT_SCAN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "face_coefficients": {
+    "diagonal_symmetric": 0.14705479982595762,
+    "diagonal_antisymmetric": 0.14705479982595762,
+    "diagonal_reversed": 0.075,
+    "diagonal_conjugate": 0.075,
+    "edge_commutator": 0.10294520017404238
+  },
+  "activated_coefficients": {
+    "vacuum_vacuum_chi": 0.000753123914826186,
+    "carrier_vacuum_chi": 0.0967079843896992,
+    "carrier_carrier_chi": 0.0,
+    "carrier_carrier_Psi_tight_frame": 6.94406813381766
+  },
+  "rows": [
+    {
+      "scale": 2.0,
+      "converged_all_requested": true,
+      "converged_count": 2,
+      "leading_modulus": 1.0000000146824273,
+      "growth_rate": 3.7587013545459773e-06,
+      "count_above_1_plus_1e_minus_7": 0,
+      "values": [
+        {
+          "real": 1.0000000146824273,
+          "imag": 0.0,
+          "modulus": 1.0000000146824273
+        },
+        {
+          "real": 1.00000000730591,
+          "imag": 0.0,
+          "modulus": 1.00000000730591
+        }
+      ]
+    },
+    {
+      "scale": 2.5,
+      "converged_all_requested": true,
+      "converged_count": 2,
+      "leading_modulus": 1.0000000154482864,
+      "growth_rate": 3.95476129498371e-06,
+      "count_above_1_plus_1e_minus_7": 0,
+      "values": [
+        {
+          "real": 1.0000000154482864,
+          "imag": 0.0,
+          "modulus": 1.0000000154482864
+        },
+        {
+          "real": 1.0000000093127108,
+          "imag": 0.0,
+          "modulus": 1.0000000093127108
+        }
+      ]
+    },
+    {
+      "scale": 3.0,
+      "converged_all_requested": true,
+      "converged_count": 2,
+      "leading_modulus": 1.0000000128911126,
+      "growth_rate": 3.3001248099136627e-06,
+      "count_above_1_plus_1e_minus_7": 0,
+      "values": [
+        {
+          "real": 1.0000000128911126,
+          "imag": 0.0,
+          "modulus": 1.0000000128911126
+        },
+        {
+          "real": 1.000000007258755,
+          "imag": 0.0,
+          "modulus": 1.000000007258755
+        }
+      ]
+    },
+    {
+      "scale": 4.0,
+      "converged_all_requested": true,
+      "converged_count": 2,
+      "leading_modulus": 1.0000000149474868,
+      "growth_rate": 3.826556593190066e-06,
+      "count_above_1_plus_1e_minus_7": 0,
+      "values": [
+        {
+          "real": 1.0000000149474868,
+          "imag": 0.0,
+          "modulus": 1.0000000149474868
+        },
+        {
+          "real": 1.0000000074395736,
+          "imag": 0.0,
+          "modulus": 1.0000000074395736
+        }
+      ]
+    }
+  ],
+  "best_complete_row": {
+    "scale": 3.0,
+    "converged_all_requested": true,
+    "converged_count": 2,
+    "leading_modulus": 1.0000000128911126,
+    "growth_rate": 3.3001248099136627e-06,
+    "count_above_1_plus_1e_minus_7": 0,
+    "values": [
+      {
+        "real": 1.0000000128911126,
+        "imag": 0.0,
+        "modulus": 1.0000000128911126
+      },
+      {
+        "real": 1.000000007258755,
+        "imag": 0.0,
+        "modulus": 1.000000007258755
+      }
+    ]
+  },
+  "verdict": "ACTIVATED_BOND_CANDIDATE_CLOSES_TARGETED_DISCRETE_MODES",
+  "claim_boundary": "Four multipliers nearest the formerly leading real shift. A targeted pass still requires complete contour count, coefficient provenance, refinements, conservation, nonlinear and movement gates."
+}

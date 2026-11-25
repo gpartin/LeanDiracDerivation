@@ -1,0 +1,111 @@
+{
+  "status": "V4_CURRENT_ACTION_LOCALIZED_ENVELOPE_CLOSURE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "bare V40 plus unit carrier-carrier chi and Psi tight-frame position energies",
+  "rows": [
+    {
+      "flavor": "plus",
+      "cases": [
+        {
+          "real_rank": 8,
+          "relative_cross_block": 0.7148480376246822,
+          "response_norm": 668.3251706258443,
+          "leakage_norm": 477.7509367170657,
+          "center_count": 1,
+          "chi_scale_real": 0.00262142868229203,
+          "chi_scale_imag": 2.3463303239484895e-09,
+          "optimizer_success": true,
+          "envelope": "one_center"
+        },
+        {
+          "real_rank": 56,
+          "relative_cross_block": 0.4388576609911678,
+          "response_norm": 878.7376780576236,
+          "leakage_norm": 385.64076201717853,
+          "center_count": 7,
+          "chi_scale_real": 0.00262142868229203,
+          "chi_scale_imag": 2.3463303239484895e-09,
+          "optimizer_success": null,
+          "envelope": "center_plus_faces"
+        },
+        {
+          "real_rank": 216,
+          "relative_cross_block": 0.08655361494842648,
+          "response_norm": 1196.140342640395,
+          "leakage_norm": 103.53027064117566,
+          "center_count": 27,
+          "chi_scale_real": 0.00104831247009457,
+          "chi_scale_imag": 0.0,
+          "optimizer_success": true,
+          "envelope": "nearest_27_centers"
+        },
+        {
+          "real_rank": 1000,
+          "relative_cross_block": 0.013923755609076665,
+          "response_norm": 1800.793533836279,
+          "leakage_norm": 25.07380906754188,
+          "center_count": 125,
+          "chi_scale_real": 0.00104831247009457,
+          "chi_scale_imag": 0.0,
+          "optimizer_success": null,
+          "envelope": "all_125_centers"
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "cases": [
+        {
+          "real_rank": 8,
+          "relative_cross_block": 0.7110121938176165,
+          "response_norm": 671.2930421435148,
+          "leakage_norm": 477.29753858896214,
+          "center_count": 1,
+          "chi_scale_real": 0.0017926629499271465,
+          "chi_scale_imag": -1.7673638731037688e-08,
+          "optimizer_success": true,
+          "envelope": "one_center"
+        },
+        {
+          "real_rank": 56,
+          "relative_cross_block": 0.43771649847896793,
+          "response_norm": 879.5333263091073,
+          "leakage_norm": 384.986247887582,
+          "center_count": 7,
+          "chi_scale_real": 0.0017926629499271465,
+          "chi_scale_imag": -1.7673638731037688e-08,
+          "optimizer_success": null,
+          "envelope": "center_plus_faces"
+        },
+        {
+          "real_rank": 216,
+          "relative_cross_block": 0.08425437060492824,
+          "response_norm": 1197.9929486524127,
+          "leakage_norm": 100.93614187785114,
+          "center_count": 27,
+          "chi_scale_real": 0.0010251705436500206,
+          "chi_scale_imag": 0.0,
+          "optimizer_success": true,
+          "envelope": "nearest_27_centers"
+        },
+        {
+          "real_rank": 1000,
+          "relative_cross_block": 0.013923755609076664,
+          "response_norm": 1800.793533836279,
+          "leakage_norm": 25.073809067541877,
+          "center_count": 125,
+          "chi_scale_real": 0.0010251705436500206,
+          "chi_scale_imag": 0.0,
+          "optimizer_success": null,
+          "envelope": "all_125_centers"
+        }
+      ]
+    }
+  ],
+  "worst_nearest_27_center_cross_block": 0.08655361494842648,
+  "worst_all_center_cross_block": 0.013923755609076665,
+  "verdict": "LOCALIZED_FOUR_COMPONENT_ENVELOPE_TANGENT_NOT_CLOSED",
+  "interpretation": "Increasing the center envelope distinguishes a missing spatial halo from an internal field mismatch. A nonzero 27-center cross block is the part of the current action tangent that the same four-component carrier readout cannot predict.",
+  "claim_boundary": "This is the configuration acceleration tangent. A pass would still require both committed layers, signed native current, and nonlinear free motion. A failure is scoped to this embedding and the tested action."
+}

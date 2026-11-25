@@ -1,0 +1,263 @@
+{
+  "status": "V4_CUBE_GEOMETRY_BIFURCATION_SOLVE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "features": [
+    "rho_Psi",
+    "rho_chi",
+    "area_density",
+    "sigma_Psi_anisotropy",
+    "sigma_chi_anisotropy",
+    "area_bilinear_anisotropy"
+  ],
+  "C19_cube_character_eigenvalues_used": [
+    8,
+    12
+  ],
+  "initial_growing_multiplier_count": 29,
+  "initial_maximum_growth_rate": 0.06310919835177897,
+  "initial_growing_configuration_rank": 99,
+  "restricted_response_singular_values": [
+    0.06170638810391113,
+    0.0514617070454317,
+    0.01571006966944695,
+    0.015622877728930019,
+    2.02802909804265e-05,
+    3.4500719559709007e-16
+  ],
+  "restricted_response_rank": 5,
+  "continuous_solution": {
+    "coefficients_in_B_chi0_units": [
+      1.79817923510448,
+      0.8285543658498128,
+      -1.8691034520959926,
+      -0.0011541866721310676,
+      0.08985627691855623,
+      -0.1832037060128663
+    ],
+    "projected_objective": 0.0625831429552872,
+    "optimizer_success": true
+  },
+  "projected_geometric_candidates": [
+    {
+      "label": "continuous_bifurcation_solution",
+      "coefficients": [
+        1.79817923510448,
+        0.8285543658498128,
+        -1.8691034520959926,
+        -0.0011541866721310676,
+        0.08985627691855623,
+        -0.1832037060128663
+      ],
+      "projected_objective": 0.0625831429552872
+    },
+    {
+      "label": "independent_rational_denominator_at_most_19",
+      "coefficients": [
+        1.8,
+        0.8333333333333334,
+        -1.8666666666666667,
+        0.0,
+        0.09090909090909091,
+        -0.18181818181818182
+      ],
+      "projected_objective": 0.06272440240526307
+    },
+    {
+      "label": "cube_rational_denominator_12",
+      "coefficients": [
+        1.8333333333333333,
+        0.8333333333333334,
+        -1.8333333333333333,
+        -0.0,
+        0.08333333333333333,
+        -0.16666666666666666
+      ],
+      "projected_objective": 0.06315161976580462
+    },
+    {
+      "label": "cube_rational_denominator_6",
+      "coefficients": [
+        1.8333333333333333,
+        0.8333333333333334,
+        -1.8333333333333333,
+        -0.0,
+        0.16666666666666666,
+        -0.16666666666666666
+      ],
+      "projected_objective": 0.06352735278690402
+    },
+    {
+      "label": "cube_rational_denominator_19",
+      "coefficients": [
+        1.7894736842105263,
+        0.8421052631578947,
+        -1.894736842105263,
+        -0.0,
+        0.10526315789473684,
+        -0.15789473684210525
+      ],
+      "projected_objective": 0.06396656101188229
+    },
+    {
+      "label": "cube_rational_denominator_1",
+      "coefficients": [
+        2.0,
+        1.0,
+        -2.0,
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "projected_objective": 0.06416393545331754
+    },
+    {
+      "label": "cube_rational_denominator_8",
+      "coefficients": [
+        1.75,
+        0.875,
+        -1.875,
+        -0.0,
+        0.125,
+        -0.125
+      ],
+      "projected_objective": 0.0678031279424291
+    },
+    {
+      "label": "cube_rational_denominator_4",
+      "coefficients": [
+        1.75,
+        0.75,
+        -1.75,
+        -0.0,
+        0.0,
+        -0.25
+      ],
+      "projected_objective": 0.12532714631240202
+    },
+    {
+      "label": "cube_rational_denominator_3",
+      "coefficients": [
+        1.6666666666666667,
+        0.6666666666666666,
+        -2.0,
+        -0.0,
+        0.0,
+        -0.3333333333333333
+      ],
+      "projected_objective": 0.24517192855519904
+    }
+  ],
+  "full_spectrum_candidates": [
+    {
+      "label": "continuous_bifurcation_solution",
+      "coefficients_in_B_chi0_units": [
+        1.79817923510448,
+        0.8285543658498128,
+        -1.8691034520959926,
+        -0.0011541866721310676,
+        0.08985627691855623,
+        -0.1832037060128663
+      ],
+      "minimum_full_mass_eigenvalue": 0.9737774602271934,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.949297256325261e-13,
+      "maximum_multiplier_modulus": 1.0002444661588872,
+      "maximum_growth_rate": 0.06257568816766318,
+      "growing_multiplier_count_at_1e_minus_7": 29
+    },
+    {
+      "label": "independent_rational_denominator_at_most_19",
+      "coefficients_in_B_chi0_units": [
+        1.8,
+        0.8333333333333334,
+        -1.8666666666666667,
+        0.0,
+        0.09090909090909091,
+        -0.18181818181818182
+      ],
+      "minimum_full_mass_eigenvalue": 0.973675382704046,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9536994128656018e-13,
+      "maximum_multiplier_modulus": 1.0002450180666131,
+      "maximum_growth_rate": 0.0627169419747551,
+      "growing_multiplier_count_at_1e_minus_7": 29
+    },
+    {
+      "label": "cube_rational_denominator_12",
+      "coefficients_in_B_chi0_units": [
+        1.8333333333333333,
+        0.8333333333333334,
+        -1.8333333333333333,
+        -0.0,
+        0.08333333333333333,
+        -0.16666666666666666
+      ],
+      "minimum_full_mass_eigenvalue": 0.9723089841515813,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.950978382302251e-13,
+      "maximum_multiplier_modulus": 1.0002466873299236,
+      "maximum_growth_rate": 0.06314416834747812,
+      "growing_multiplier_count_at_1e_minus_7": 29
+    },
+    {
+      "label": "cube_rational_denominator_6",
+      "coefficients_in_B_chi0_units": [
+        1.8333333333333333,
+        0.8333333333333334,
+        -1.8333333333333333,
+        -0.0,
+        0.16666666666666666,
+        -0.16666666666666666
+      ],
+      "minimum_full_mass_eigenvalue": 0.972308984123804,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9719867398510195e-13,
+      "maximum_multiplier_modulus": 1.000248155319325,
+      "maximum_growth_rate": 0.0635198806749875,
+      "growing_multiplier_count_at_1e_minus_7": 23
+    },
+    {
+      "label": "cube_rational_denominator_19",
+      "coefficients_in_B_chi0_units": [
+        1.7894736842105263,
+        0.8421052631578947,
+        -1.894736842105263,
+        -0.0,
+        0.10526315789473684,
+        -0.15789473684210525
+      ],
+      "minimum_full_mass_eigenvalue": 0.9741697863024326,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.944833865495158e-13,
+      "maximum_multiplier_modulus": 1.0002498711494934,
+      "maximum_growth_rate": 0.0639590238456346,
+      "growing_multiplier_count_at_1e_minus_7": 27
+    }
+  ],
+  "best_full_spectrum": {
+    "label": "continuous_bifurcation_solution",
+    "coefficients_in_B_chi0_units": [
+      1.79817923510448,
+      0.8285543658498128,
+      -1.8691034520959926,
+      -0.0011541866721310676,
+      0.08985627691855623,
+      -0.1832037060128663
+    ],
+    "minimum_full_mass_eigenvalue": 0.9737774602271934,
+    "configuration_hull_rank": 1032,
+    "phase_space_dimension": 2064,
+    "hull_relative_cross_block": 1.949297256325261e-13,
+    "maximum_multiplier_modulus": 1.0002444661588872,
+    "maximum_growth_rate": 0.06257568816766318,
+    "growing_multiplier_count_at_1e_minus_7": 29
+  },
+  "verdict": "CUBE_GEOMETRY_BIFURCATION_RETAINS_GROWTH",
+  "claim_boundary": "The continuous solve is an inverse diagnostic, not coefficient provenance. Only the separately reported cube/rational candidates could qualify for a native action, and only after full refinements."
+}

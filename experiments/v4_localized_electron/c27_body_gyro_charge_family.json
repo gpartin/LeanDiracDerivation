@@ -1,0 +1,101 @@
+{
+  "status": "V4_C27_BODY_GYRO_CHARGE_FAMILY",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 5,
+  "dt": 0.00390625,
+  "fraction": 0.01,
+  "fixed_action_coefficients": {
+    "local_common_area_velocity": 299.3553357120875,
+    "local_relative_area_velocity": -299.1446642879125,
+    "body_common_area_velocity": -0.05266785604374211,
+    "body_relative_area_velocity": 0.0
+  },
+  "rows": [
+    {
+      "name": "baseline",
+      "theta_psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "omega_psi": 19.004363539373443,
+      "omega_chi": 0.0,
+      "psi_amplitude_sq": 167.9394329896907,
+      "chi_amplitude_sq": 167.9394329896907,
+      "rest_DEL_rms": 1.838214389465743e-12,
+      "solver_success": true,
+      "solver_evaluations": 3,
+      "noether_charges": {
+        "psi": 25640.520665310774,
+        "chi_internal": 373554.3717229697
+      }
+    },
+    {
+      "name": "psi_clock_minus",
+      "theta_psi": 0.07349343712492074,
+      "theta_chi": 0.0,
+      "omega_psi": 18.814319903979708,
+      "omega_chi": 0.0,
+      "psi_amplitude_sq": 190.21868022146774,
+      "chi_amplitude_sq": 142.28547864795522,
+      "rest_DEL_rms": 2.3663050614969806e-05,
+      "solver_success": true,
+      "solver_evaluations": 14,
+      "noether_charges": {
+        "psi": 28730.93076136525,
+        "chi_internal": 358487.5800881353
+      }
+    },
+    {
+      "name": "psi_clock_plus",
+      "theta_psi": 0.07497815302643429,
+      "theta_chi": 0.0,
+      "omega_psi": 19.19440717476718,
+      "omega_chi": 0.0,
+      "psi_amplitude_sq": 145.365165560928,
+      "chi_amplitude_sq": 193.92261430473752,
+      "rest_DEL_rms": 2.4393260648844415e-05,
+      "solver_success": true,
+      "solver_evaluations": 14,
+      "noether_charges": {
+        "psi": 22431.913705491494,
+        "chi_internal": 373357.8014640092
+      }
+    },
+    {
+      "name": "chi_clock_minus",
+      "theta_psi": 0.07423579507567751,
+      "theta_chi": -0.0007423579507567752,
+      "omega_psi": 19.004363539373443,
+      "omega_chi": -0.19004363539373445,
+      "psi_amplitude_sq": 132.06551361654087,
+      "chi_amplitude_sq": 128.67288800709125,
+      "rest_DEL_rms": 0.012056793368316353,
+      "solver_success": true,
+      "solver_evaluations": 21,
+      "noether_charges": {
+        "psi": 20145.452526973568,
+        "chi_internal": 211130.44640045686
+      }
+    },
+    {
+      "name": "chi_clock_plus",
+      "theta_psi": 0.07423579507567751,
+      "theta_chi": 0.0007423579507567752,
+      "omega_psi": 19.004363539373443,
+      "omega_chi": 0.19004363539373445,
+      "psi_amplitude_sq": 235.67227805340417,
+      "chi_amplitude_sq": 240.91261370982463,
+      "rest_DEL_rms": 0.01649734947163531,
+      "solver_success": true,
+      "solver_evaluations": 20,
+      "noether_charges": {
+        "psi": 36041.119053673596,
+        "chi_internal": 778103.300145283
+      }
+    }
+  ],
+  "maximum_rest_DEL_rms": 0.01649734947163531,
+  "psi_chi_family_tangent_overlap": 0.10944786851236903,
+  "family_tangents_linearly_independent": true,
+  "verdict": "C27_BODY_GYRO_NATIVE_CHARGE_FAMILY_NOT_CLOSED",
+  "claim_boundary": "Nearby relative-equilibrium family only. It supplies lawful collective perturbation tangents but does not prove nonlinear stability, translation, or Dirac-current matching."
+}

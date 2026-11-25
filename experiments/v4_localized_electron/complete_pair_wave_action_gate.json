@@ -1,0 +1,58 @@
+{
+  "status": "V4_COMPLETE_PAIR_WAVE_ACTION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate": {
+    "field": "Z_i = chi_i tensor Psi_i",
+    "coefficients_screened": [
+      1.0,
+      19.0,
+      361.0
+    ],
+    "kinetic_potential_frequency": 19.0,
+    "C19_only": true,
+    "positive_Hamiltonian_contribution": true,
+    "contains_Dirac_or_prepared_track_data": false
+  },
+  "rest_DEL_norm": 1.0833320273971407e-13,
+  "old_unstable_mode_contributions": {
+    "added_mass": 0.021017220239998344,
+    "added_gyro_magnitude": 0.044544310363354996,
+    "added_stiffness": -2.5406547623486666e-13,
+    "old_stiffness": -1.0807423181893132
+  },
+  "two_layer_geometric_coefficient_scan": [
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.2030589517420708e-11,
+      "maximum_multiplier_modulus": 1.0038410477776607,
+      "maximum_growth_rate": 0.9814245860395624,
+      "growing_multiplier_count_at_1e_minus_7": 184,
+      "coefficient": 1.0,
+      "mass_minimum_eigenvalue": 1.0020060007410831
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 2.0544475603429125e-11,
+      "maximum_multiplier_modulus": 1.0016427861629982,
+      "maximum_growth_rate": 0.4202081960479127,
+      "growing_multiplier_count_at_1e_minus_7": 202,
+      "coefficient": 19.0,
+      "mass_minimum_eigenvalue": 1.0876680714825
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 5.221196815768817e-12,
+      "maximum_multiplier_modulus": 1.0010991138035055,
+      "maximum_growth_rate": 0.2812186163608697,
+      "growing_multiplier_count_at_1e_minus_7": 187,
+      "coefficient": 361.0,
+      "mass_minimum_eigenvalue": 2.7075228804391163
+    }
+  ],
+  "verdict": "PAIR_WAVE_GEOMETRIC_SCAN_RETAINS_LINEAR_GROWTH",
+  "claim_boundary": "Exact action variation and complete finite-hull linear spectrum at the three declared geometric coefficients. A pass would still require coefficient provenance, dt/box refinement, nonlinear conservation, motion, and same-state Dirac current. No action is installed here."
+}

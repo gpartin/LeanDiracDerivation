@@ -1,0 +1,198 @@
+{
+  "status": "V4_STABILIZED_MIXED_PRONG_GROWTH_MODE",
+  "leading_multipliers": [
+    {
+      "real": 0.984256357748633,
+      "imag": -0.17674677431681426,
+      "modulus": 1.0000000000000018
+    },
+    {
+      "real": 0.984256357748633,
+      "imag": 0.17674677431681426,
+      "modulus": 1.0000000000000018
+    },
+    {
+      "real": 0.9761340425811866,
+      "imag": -0.21716889950937185,
+      "modulus": 1.0000000000000007
+    },
+    {
+      "real": 0.9761340425811866,
+      "imag": 0.21716889950937185,
+      "modulus": 1.0000000000000007
+    },
+    {
+      "real": 0.9820753866984093,
+      "imag": 0.1884885536078274,
+      "modulus": 1.0000000000000004
+    },
+    {
+      "real": 0.9820753866984093,
+      "imag": -0.1884885536078274,
+      "modulus": 1.0000000000000004
+    },
+    {
+      "real": 0.983646378451002,
+      "imag": -0.18011052762187119,
+      "modulus": 1.0000000000000002
+    },
+    {
+      "real": 0.983646378451002,
+      "imag": 0.18011052762187119,
+      "modulus": 1.0000000000000002
+    },
+    {
+      "real": 0.9801651788135228,
+      "imag": 0.19818229547932836,
+      "modulus": 1.0000000000000004
+    },
+    {
+      "real": 0.9801651788135228,
+      "imag": -0.19818229547932836,
+      "modulus": 1.0000000000000004
+    },
+    {
+      "real": 0.9730826546797845,
+      "imag": -0.23045638884904626,
+      "modulus": 0.9999999999999997
+    },
+    {
+      "real": 0.9730826546797845,
+      "imag": 0.23045638884904626,
+      "modulus": 0.9999999999999997
+    }
+  ],
+  "leading_per_update_modulus": 1.0000000000000018,
+  "leading_per_cycle_amplification": 1.0000000000001503,
+  "leading_mode": {
+    "Psi_power_fraction": 0.9998715198765127,
+    "chi_power_fraction": 0.00012848012348731005,
+    "Psi_carrier_fraction": 0.9997918892367312,
+    "chi_carrier_fraction": 0.739954452889475,
+    "Psi_first_shell_fraction": 0.00020770410564931792,
+    "chi_first_shell_fraction": 0.26004554711052486,
+    "component_power_fractions": {
+      "Psi": [
+        0.00011863377756644552,
+        9.809055573962368e-05,
+        0.9996547955432069
+      ],
+      "chi": [
+        8.457624285914202e-06,
+        6.5658124493204745e-06,
+        0.00011345668675207535
+      ]
+    },
+    "outside_two_copy_lift_fraction": 0.9998718309896244,
+    "dominant_Psi_y_momentum_index": [
+      0,
+      0,
+      0
+    ],
+    "dominant_Psi_y_momentum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "top_Psi_sites": [
+      {
+        "site": [
+          2,
+          2,
+          1
+        ],
+        "power_fraction": 0.7388917976446754
+      },
+      {
+        "site": [
+          1,
+          2,
+          1
+        ],
+        "power_fraction": 0.09384958806153931
+      },
+      {
+        "site": [
+          2,
+          1,
+          2
+        ],
+        "power_fraction": 0.08779297166268173
+      },
+      {
+        "site": [
+          1,
+          2,
+          2
+        ],
+        "power_fraction": 0.04049625246356716
+      },
+      {
+        "site": [
+          1,
+          1,
+          2
+        ],
+        "power_fraction": 0.018269044798975488
+      },
+      {
+        "site": [
+          2,
+          2,
+          2
+        ],
+        "power_fraction": 0.017103048861002782
+      },
+      {
+        "site": [
+          2,
+          1,
+          1
+        ],
+        "power_fraction": 0.0023667200551767595
+      },
+      {
+        "site": [
+          1,
+          1,
+          1
+        ],
+        "power_fraction": 0.0010224656891125103
+      },
+      {
+        "site": [
+          2,
+          3,
+          1
+        ],
+        "power_fraction": 1.9708753404701054e-05
+      },
+      {
+        "site": [
+          3,
+          2,
+          1
+        ],
+        "power_fraction": 1.9118218306788674e-05
+      },
+      {
+        "site": [
+          2,
+          2,
+          0
+        ],
+        "power_fraction": 1.7543609077184753e-05
+      },
+      {
+        "site": [
+          3,
+          2,
+          0
+        ],
+        "power_fraction": 1.4963009743025875e-05
+      }
+    ]
+  },
+  "verdict": "PHYSICAL_GROWING_MODE_IDENTIFIED",
+  "claim_boundary": "Linear Floquet classification only. It identifies the response an action repair must change but does not itself admit one."
+}

@@ -1,0 +1,67 @@
+{
+  "status": "V4_C19_TRIANGLE_GYRO_FACTORIZATION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "identity": "each body common/relative W one-form equals the average over three C19 face+edge endpoint reconstructions",
+  "rows": [
+    {
+      "label": "exact_rest_previous_interval",
+      "channels": [
+        {
+          "channel": "common",
+          "direct_body_one_form": 0.0,
+          "triangle_path_one_form": 0.0,
+          "relative_value_error": 0.0,
+          "relative_first_variation_error": 1.9604442364311121e-16
+        },
+        {
+          "channel": "relative",
+          "direct_body_one_form": 0.0,
+          "triangle_path_one_form": 0.0,
+          "relative_value_error": 0.0,
+          "relative_first_variation_error": 1.9604442364311121e-16
+        }
+      ]
+    },
+    {
+      "label": "exact_rest_following_interval",
+      "channels": [
+        {
+          "channel": "common",
+          "direct_body_one_form": 0.0,
+          "triangle_path_one_form": 0.0,
+          "relative_value_error": 0.0,
+          "relative_first_variation_error": 1.9604442364311121e-16
+        },
+        {
+          "channel": "relative",
+          "direct_body_one_form": 0.0,
+          "triangle_path_one_form": 0.0,
+          "relative_value_error": 0.0,
+          "relative_first_variation_error": 1.9604442364311121e-16
+        }
+      ]
+    },
+    {
+      "label": "deterministic_random_interval",
+      "channels": [
+        {
+          "channel": "common",
+          "direct_body_one_form": 0.02331177947900042,
+          "triangle_path_one_form": 0.023311779479000417,
+          "relative_value_error": 3.469446951953614e-18,
+          "relative_first_variation_error": 7.655787923360985e-17
+        },
+        {
+          "channel": "relative",
+          "direct_body_one_form": 0.09964933034522203,
+          "triangle_path_one_form": 0.09964933034522205,
+          "relative_value_error": 2.7755575615628914e-17,
+          "relative_first_variation_error": 8.66065147276746e-17
+        }
+      ]
+    }
+  ],
+  "verdict": "C27_BODY_GYROS_EXACTLY_FACTOR_THROUGH_C19_TRIANGLES",
+  "claim_boundary": "Exact discrete one-form and first-variation identity only. It does not admit coefficients or prove stability, translation, one-hop execution, or Dirac-current closure."
+}

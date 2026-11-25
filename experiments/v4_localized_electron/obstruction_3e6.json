@@ -1,0 +1,57 @@
+{
+  "status": "V4_UNRESTRICTED_FIXED_CHARGE_BINDING_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "lambda_self": 0.25,
+  "density_coupling": 1.0,
+  "initial_amplitude_sq": 250.0,
+  "target_charges": [
+    37411.020936812536,
+    919012.8571347345
+  ],
+  "chi_stiffness_provenance": "positive reciprocal normalized C19 gradient; equal action normalization gives stiffness=1/B because chi inertia is B",
+  "rows": [
+    {
+      "chi_stiffness": 0.0,
+      "solver_success": true,
+      "solver_status": 1,
+      "solver_nfev": 1,
+      "cost": 1.0223869844360313e-26,
+      "optimality": 1.0681013171711391e-11,
+      "stationary_rms": 7.944199624961378e-15,
+      "largest_stationary_component": 5.0527483431829344e-14,
+      "charge_relative_residual": [
+        0.0,
+        0.0
+      ],
+      "omega_psi": 18.705510468406267,
+      "omega_chi": 0.38388172812645543,
+      "psi_carrier_overlap_sq": 0.9999999999999996,
+      "psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "chi_plane_charge_exterior_fraction": 0.0
+    },
+    {
+      "chi_stiffness": 3e-06,
+      "solver_success": true,
+      "solver_status": 1,
+      "solver_nfev": 74,
+      "cost": 1.205888015854153e-10,
+      "optimality": 1.7428269052211295e-11,
+      "stationary_rms": 8.627744432561211e-07,
+      "largest_stationary_component": 5.3702428674440185e-06,
+      "charge_relative_residual": [
+        3.478302935668305e-11,
+        -4.773037424074993e-11
+      ],
+      "omega_psi": 18.705459876988854,
+      "omega_chi": 0.3838844820442757,
+      "psi_carrier_overlap_sq": 0.999999987717401,
+      "psi_exterior_fraction": 2.8806582100314746e-09,
+      "chi_exterior_deviation_rms": 0.0012727322277185122,
+      "chi_plane_charge_exterior_fraction": 1.1830970700337403e-11
+    }
+  ],
+  "claim_boundary": "Existence/identity continuation only. A surviving branch still requires a constrained-index and full-spectrum calculation."
+}

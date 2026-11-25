@@ -1,0 +1,72 @@
+{
+  "status": "V4_LOCALIZED_CARRIER_CONTRAST_CURRENT_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "current": "J_ij=(2 w_ij/chi0^2) Im[(chi_i wedge Psi_i)^dagger (chi_j wedge Psi_j)] from the directed native area-bond action",
+  "rows": [
+    {
+      "axis": 0,
+      "sign": -1,
+      "two_copy_decomposition_relative_defect": 3.6685605346791e-15,
+      "native_flux_linear_response": -2.3817614510372373e-24,
+      "plus_copy_flux_contribution": 1.037679317900244e-23,
+      "minus_copy_flux_contribution": -9.095775922820961e-24,
+      "copy_sum_flux_defect": 1.5378444829660027,
+      "flux_has_requested_sign": true
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "two_copy_decomposition_relative_defect": 3.1754222475197162e-15,
+      "native_flux_linear_response": 4.183505025197954e-24,
+      "plus_copy_flux_contribution": 4.621422374099616e-24,
+      "minus_copy_flux_contribution": -1.4231147748908001e-24,
+      "copy_sum_flux_defect": 0.2354956956081392,
+      "flux_has_requested_sign": true
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "two_copy_decomposition_relative_defect": 3.630234483415618e-15,
+      "native_flux_linear_response": -2.3817614510372373e-24,
+      "plus_copy_flux_contribution": -8.799634101216043e-24,
+      "minus_copy_flux_contribution": -9.264791321768632e-24,
+      "copy_sum_flux_defect": 6.584481399309644,
+      "flux_has_requested_sign": true
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "two_copy_decomposition_relative_defect": 2.318033073428602e-15,
+      "native_flux_linear_response": 3.294303169874367e-25,
+      "plus_copy_flux_contribution": -1.3108469017544996e-23,
+      "minus_copy_flux_contribution": -1.80507573389106e-23,
+      "copy_sum_flux_defect": 95.58518159894767,
+      "flux_has_requested_sign": true
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "two_copy_decomposition_relative_defect": 2.9162550235921313e-15,
+      "native_flux_linear_response": -2.4074124304840448e-29,
+      "plus_copy_flux_contribution": 1.4464118391660023e-12,
+      "minus_copy_flux_contribution": -7.983926120287273e-13,
+      "copy_sum_flux_defect": 2.691766557868032e+16,
+      "flux_has_requested_sign": true
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "two_copy_decomposition_relative_defect": 3.1799505356698536e-15,
+      "native_flux_linear_response": 2.4074124304840448e-29,
+      "plus_copy_flux_contribution": -1.446411839065028e-12,
+      "minus_copy_flux_contribution": 7.983926119277531e-13,
+      "copy_sum_flux_defect": 2.691766557868032e+16,
+      "flux_has_requested_sign": true
+    }
+  ],
+  "verdict": "TWO_COPY_CONTRAST_CURRENT_SIGN_OR_RANK_FAIL",
+  "interpretation": "The derivative measures current into the newly occupied side of the receiving cube along the exact carrier handoff.  The copy columns are an oblique decomposition of the same physical tangent, so their currents must add to the total.",
+  "claim_boundary": "This is the linearized spatial current of the native area bond. It does not include a completed discrete-time density bridge, prove nonlinear motion, or establish current equality with the Dirac readout.",
+  "corrective_action": "On pass, derive the discrete phase density of the same interval action and verify continuity on the retained two-layer graph. On failure, decompose the missing flux by C19 bond orbit before changing the action."
+}

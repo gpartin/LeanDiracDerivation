@@ -1,0 +1,51 @@
+{
+  "status": "V4_C19_CHI_NEIGHBOR_ORIENTATION_OBSTRUCTION_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis_names": [
+    "rhochi_trace_covariance",
+    "chi_covariance_chi",
+    "rhochi_trace_covariance_squared",
+    "chi_covariance_squared_chi",
+    "covariance_variance",
+    "rhochi_coherent_norm",
+    "chi_coherent_overlap"
+  ],
+  "rest_force_rank": 6,
+  "rest_nullity": 1,
+  "rest_singular_values": [
+    4753.5668145530735,
+    396.7184366505191,
+    17.05419973981425,
+    13.15697449534043,
+    1.0626424488371917,
+    0.7759335872788732,
+    2.0480096611900622e-11
+  ],
+  "admissible_response_rank": 1,
+  "admissible_response_singular_values": [
+    0.024426151496431358
+  ],
+  "diagnostic_coefficients": {
+    "rhochi_trace_covariance": 7.833624432755568e-20,
+    "chi_covariance_chi": 1.2720822141980775e-17,
+    "rhochi_trace_covariance_squared": 3.628110956854206e-21,
+    "chi_covariance_squared_chi": -1.595971542745911e-19,
+    "covariance_variance": -5.616102693191576e-06,
+    "rhochi_coherent_norm": -3.4280142624220106e-18,
+    "chi_coherent_overlap": 2.486651527966317e-17
+  },
+  "combined_relative_remainder": 0.9948582279435558,
+  "branches": [
+    {
+      "branch": "minus",
+      "relative_remainder": 0.9948630486648566
+    },
+    {
+      "branch": "plus",
+      "relative_remainder": 0.9948533993215726
+    }
+  ],
+  "verdict": "C19_NEIGHBOR_ORIENTATION_BASIS_MISSES_NONLINEAR_OBSTRUCTION",
+  "claim_boundary": "Exact-rest-nullspace response-rank screen only. Diagnostic coefficients are not admitted or fitted into the action."
+}

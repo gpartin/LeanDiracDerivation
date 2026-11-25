@@ -1,0 +1,62 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_face_laplacian_plus_frame_oscillator",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "chi_lift": "zero",
+  "chi_scales": {
+    "plus": [
+      0.0,
+      0.0
+    ],
+    "minus": [
+      0.0,
+      0.0
+    ]
+  },
+  "requested_updates": 4,
+  "carrier_wave_number": 0.35,
+  "packet_width": 1.35,
+  "readout": "local",
+  "dirac_time_comparator": "centered",
+  "face_gradient_coefficient": null,
+  "solver_tolerance_RMS": 1e-10,
+  "rest_roundoff_subtracted": true,
+  "all_solvers_converged": false,
+  "maximum_native_vs_dirac_relative_error": null,
+  "maximum_outside_four_component_fraction": null,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 1.0661317667774319e-10,
+          "solver_residual_history_RMS": [
+            0.0052767195495621675,
+            0.002077510289120625,
+            0.0009948402822535958,
+            0.0009529821606047878,
+            3.6061583117361067e-06,
+            2.510569356747487e-09,
+            1.0727343574930875e-10,
+            1.0662424197797364e-10,
+            1.0661871468070798e-10,
+            1.0661317667774319e-10
+          ]
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_OPEN",
+  "claim_boundary": "4 unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

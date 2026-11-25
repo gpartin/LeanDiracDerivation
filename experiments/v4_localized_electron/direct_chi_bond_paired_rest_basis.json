@@ -1,0 +1,32 @@
+{
+  "status": "V4_DIRECT_CHI_BOND_PAIRED_REST_BASIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": [
+    "local_chi_vacuum",
+    "local_chi_psi",
+    "local_psi_quartic",
+    "direct_psi_bond",
+    "direct_chi_bond",
+    "area_bond",
+    "parallel_overlap_bond"
+  ],
+  "baseline_jacobian_rank": 149,
+  "baseline_cokernel_dimension": 175,
+  "projected_partner_rank": 2,
+  "direct_chi_obstruction_norm": 2.01745715904323,
+  "combined_obstruction_norm": 2.0100134931545077,
+  "relative_obstruction_after_pairing": 0.9963103722647313,
+  "squared_obstruction_removed": 0.007365642117712512,
+  "least_squares_coefficients": {
+    "direct_chi_bond": 1.0,
+    "local_chi_vacuum": 972443829239185.9,
+    "local_chi_psi": 1130471174602514.0,
+    "local_psi_quartic": -1116673340287213.9,
+    "direct_psi_bond": 36.312054410396506,
+    "area_bond": -2012783917575011.0,
+    "parallel_overlap_bond": -0.16304747114334542
+  },
+  "verdict": "GENERIC_PARTNER_BASIS_INSUFFICIENT",
+  "claim_boundary": "The coefficients solve only the first-order rest Fredholm condition. They are not yet derived, bounded, movement-tested, or admitted."
+}

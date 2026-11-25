@@ -1,0 +1,41 @@
+{
+  "status": "V4_CONSTRAINED_ENERGY_INDEX",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rest_del_rms_residual": 2.2205746647133055e-11,
+  "declared_symmetry_generators": [
+    "psi_phase",
+    "chi_phase",
+    "u3_diag_0",
+    "u3_diag_1",
+    "u3_diag_2",
+    "u3_real_01",
+    "u3_imag_01",
+    "u3_real_02",
+    "u3_imag_02",
+    "u3_real_12",
+    "u3_imag_12"
+  ],
+  "independent_group_orbit_rank": 10,
+  "independent_constraint_and_orbit_rank": 20,
+  "full_phase_space_dimension": 648,
+  "reduced_dimension": 628,
+  "full_hessian_index": {
+    "negative": 145,
+    "zero": 40,
+    "positive": 463,
+    "tolerance": 0.008162522507095867,
+    "minimum": -816252.2507095868,
+    "maximum": 721.9999981533042
+  },
+  "constrained_hessian_index": {
+    "negative": 140,
+    "zero": 33,
+    "positive": 455,
+    "tolerance": 0.00816252250709587,
+    "minimum": -816252.250709587,
+    "maximum": 721.9999981523908
+  },
+  "interpretation": "A constrained energy minimum requires no negative directions after all native momentum constraints and group-orbit directions are removed. Remaining negative directions prove that this relative equilibrium is a saddle for the tested action.",
+  "claim_boundary": "This is an energy--momentum index of the current scaffolded research orbit, not a no-go for every state or action."
+}

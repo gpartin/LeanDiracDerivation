@@ -1,0 +1,152 @@
+{
+  "status": "V4_INTERFACE_STIFFNESS_COMPLETE_TANGENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "B": 1197.0,
+  "amplitude_sq": 167.93943298969072,
+  "psi_rest_residual": 1.5749011598278658e-16,
+  "chi_rest_residual": 2.950326025185372e-17,
+  "interface_energy_at_orbit": 2.9055971443659665e-30,
+  "interface_gradient_norm_at_orbit": 4.32689053249046e-15,
+  "interface_hessian_symmetry_defect": 1.2705489397730087e-16,
+  "rows": [
+    {
+      "eta": 0.0,
+      "action_gradient_norm_at_orbit": 0.0,
+      "maximum_growth": 1.0349352441078885,
+      "growth_count_above_1e_2": 20,
+      "growth_count_above_1e_4": 20,
+      "constrained_hessian_index": {
+        "negative": 45,
+        "zero": 158,
+        "positive": 425,
+        "tolerance": 3.362495926229037e-06,
+        "minimum": -25.14212076583218,
+        "maximum": 336.2495926229037
+      }
+    },
+    {
+      "eta": 0.000835421888053467,
+      "action_gradient_norm_at_orbit": 3.6147790580538514e-18,
+      "maximum_growth": 1.0349417888891992,
+      "growth_count_above_1e_2": 20,
+      "growth_count_above_1e_4": 20,
+      "constrained_hessian_index": {
+        "negative": 45,
+        "zero": 146,
+        "positive": 437,
+        "tolerance": 3.362513849697382e-06,
+        "minimum": -25.142120765832214,
+        "maximum": 336.2513849697382
+      }
+    },
+    {
+      "eta": 0.05263157894736842,
+      "action_gradient_norm_at_orbit": 2.277310806573926e-16,
+      "maximum_growth": 1.035347335754651,
+      "growth_count_above_1e_2": 20,
+      "growth_count_above_1e_4": 20,
+      "constrained_hessian_index": {
+        "negative": 45,
+        "zero": 78,
+        "positive": 505,
+        "tolerance": 3.363625105146308e-06,
+        "minimum": -25.142120765832228,
+        "maximum": 336.3625105146308
+      }
+    },
+    {
+      "eta": 0.25,
+      "action_gradient_norm_at_orbit": 1.081722633122615e-15,
+      "maximum_growth": 1.0368885437430881,
+      "growth_count_above_1e_2": 20,
+      "growth_count_above_1e_4": 20,
+      "constrained_hessian_index": {
+        "negative": 45,
+        "zero": 78,
+        "positive": 505,
+        "tolerance": 3.3678595335229336e-06,
+        "minimum": -25.142120765832267,
+        "maximum": 336.78595335229335
+      }
+    },
+    {
+      "eta": 1.0,
+      "action_gradient_norm_at_orbit": 4.32689053249046e-15,
+      "maximum_growth": 1.0426866856809105,
+      "growth_count_above_1e_2": 16,
+      "growth_count_above_1e_4": 16,
+      "constrained_hessian_index": {
+        "negative": 41,
+        "zero": 78,
+        "positive": 509,
+        "tolerance": 3.383950467766864e-06,
+        "minimum": -25.14212076583216,
+        "maximum": 338.3950467766864
+      }
+    },
+    {
+      "eta": 4.0,
+      "action_gradient_norm_at_orbit": 1.730756212996184e-14,
+      "maximum_growth": 1.0650170770074092,
+      "growth_count_above_1e_2": 16,
+      "growth_count_above_1e_4": 16,
+      "constrained_hessian_index": {
+        "negative": 41,
+        "zero": 78,
+        "positive": 509,
+        "tolerance": 3.448315848285737e-06,
+        "minimum": -25.14212076583223,
+        "maximum": 344.8315848285737
+      }
+    },
+    {
+      "eta": 19.0,
+      "action_gradient_norm_at_orbit": 8.221092011731875e-14,
+      "maximum_growth": 1.161032756044838,
+      "growth_count_above_1e_2": 16,
+      "growth_count_above_1e_4": 16,
+      "constrained_hessian_index": {
+        "negative": 41,
+        "zero": 78,
+        "positive": 509,
+        "tolerance": 3.899903844189215e-06,
+        "minimum": -25.14212076583231,
+        "maximum": 389.99038441892145
+      }
+    },
+    {
+      "eta": 38.0,
+      "action_gradient_norm_at_orbit": 1.644218402346375e-13,
+      "maximum_growth": 1.2585113192863495,
+      "growth_count_above_1e_2": 8,
+      "growth_count_above_1e_4": 8,
+      "constrained_hessian_index": {
+        "negative": 37,
+        "zero": 78,
+        "positive": 513,
+        "tolerance": 4.5115650387701695e-06,
+        "minimum": -25.14212076583224,
+        "maximum": 451.156503877017
+      }
+    },
+    {
+      "eta": 1197.0,
+      "action_gradient_norm_at_orbit": 5.179287967391081e-12,
+      "maximum_growth": 2.3532781352941754,
+      "growth_count_above_1e_2": 6,
+      "growth_count_above_1e_4": 6,
+      "constrained_hessian_index": {
+        "negative": 34,
+        "zero": 78,
+        "positive": 516,
+        "tolerance": 4.1848541515160536e-05,
+        "minimum": -25.14212076583339,
+        "maximum": 4184.854151516053
+      }
+    }
+  ],
+  "verdict": "TRANSPORT_RESPONSE_REST_SPECTRUM_CLASSIFIED",
+  "claim_boundary": "The interface term is a positive response probe with an unselected coefficient.  A favorable tangent result would still require nonlinear rest, translation, conservation, Dirac, and coefficient-provenance gates."
+}

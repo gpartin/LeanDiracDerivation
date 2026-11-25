@@ -1,0 +1,178 @@
+{
+  "status": "V4_C19_HODGE_BRANCH_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "stiffness_dimension": 1500,
+  "stiffness_scale": 1307.5482649201826,
+  "fredholm_threshold": 1.3075482649201826e-07,
+  "stiffness_kernel_dimension": 271,
+  "rows": [
+    {
+      "hodge_term": "hodge_common",
+      "force_norm": 1.6243841733666238,
+      "kernel_projection_norm": 0.021367046068106608,
+      "kernel_projection_relative": 0.013153936376899223,
+      "linear_branch_equation_relative_residual": 0.013153936376899343,
+      "branch_tangent_norm": 67.36931681184478,
+      "branch_tangent_over_rest_norm": 0.31785041619911863,
+      "nonlinear_residual_convergence_order": 1.5467956694453553,
+      "trials": [
+        {
+          "epsilon": 0.001,
+          "unresolved_residual_norm": 0.001624384173367842,
+          "corrected_residual_norm": 0.00014696054382139318,
+          "corrected_over_unresolved": 0.09047154375845667,
+          "corrected_over_epsilon_squared": 146.96054382139317
+        },
+        {
+          "epsilon": 0.0003,
+          "unresolved_residual_norm": 0.0004873152520112053,
+          "corrected_residual_norm": 1.4571383516771724e-05,
+          "corrected_over_unresolved": 0.02990134919158383,
+          "corrected_over_epsilon_squared": 161.90426129746362
+        },
+        {
+          "epsilon": 0.0001,
+          "unresolved_residual_norm": 0.00016243841733788058,
+          "corrected_residual_norm": 2.5844576006741335e-06,
+          "corrected_over_unresolved": 0.015910384027556262,
+          "corrected_over_epsilon_squared": 258.44576006741335
+        },
+        {
+          "epsilon": 3e-05,
+          "unresolved_residual_norm": 4.8731525202216886e-05,
+          "corrected_residual_norm": 6.542289278626365e-07,
+          "corrected_over_unresolved": 0.013425168310407704,
+          "corrected_over_epsilon_squared": 726.921030958485
+        }
+      ]
+    },
+    {
+      "hodge_term": "hodge_common_activated",
+      "force_norm": 0.21040293768038718,
+      "kernel_projection_norm": 0.004617819634491545,
+      "kernel_projection_relative": 0.02194750551204874,
+      "linear_branch_equation_relative_residual": 0.021947505512049187,
+      "branch_tangent_norm": 10.560031784101017,
+      "branch_tangent_over_rest_norm": 0.049822540237817764,
+      "nonlinear_residual_convergence_order": 1.0941634616764444,
+      "trials": [
+        {
+          "epsilon": 0.001,
+          "unresolved_residual_norm": 0.00021040293768648631,
+          "corrected_residual_norm": 6.559020075363963e-06,
+          "corrected_over_unresolved": 0.031173614529742533,
+          "corrected_over_epsilon_squared": 6.559020075363963
+        },
+        {
+          "epsilon": 0.0003,
+          "unresolved_residual_norm": 6.31208813102153e-05,
+          "corrected_residual_norm": 1.4473844111655812e-06,
+          "corrected_over_unresolved": 0.02293035808629213,
+          "corrected_over_epsilon_squared": 16.082049012950904
+        },
+        {
+          "epsilon": 0.0001,
+          "unresolved_residual_norm": 2.104029377413791e-05,
+          "corrected_residual_norm": 4.641251035700195e-07,
+          "corrected_over_unresolved": 0.02205886992607052,
+          "corrected_over_epsilon_squared": 46.41251035700195
+        },
+        {
+          "epsilon": 3e-05,
+          "unresolved_residual_norm": 6.3120881365109e-06,
+          "corrected_residual_norm": 1.3859799500396368e-07,
+          "corrected_over_unresolved": 0.021957550656220046,
+          "corrected_over_epsilon_squared": 153.99777222662632
+        }
+      ]
+    },
+    {
+      "hodge_term": "hodge_relative",
+      "force_norm": 1.6564443530128097,
+      "kernel_projection_norm": 1.9905154171281362e-10,
+      "kernel_projection_relative": 1.2016796178559841e-10,
+      "linear_branch_equation_relative_residual": 1.201663640436428e-10,
+      "branch_tangent_norm": 82.26771336867021,
+      "branch_tangent_over_rest_norm": 0.3881414889067744,
+      "nonlinear_residual_convergence_order": 2.000001718761581,
+      "trials": [
+        {
+          "epsilon": 0.001,
+          "unresolved_residual_norm": 0.0016564443530124227,
+          "corrected_residual_norm": 0.00021061357091535455,
+          "corrected_over_unresolved": 0.12714799053305417,
+          "corrected_over_epsilon_squared": 210.61357091535456
+        },
+        {
+          "epsilon": 0.0003,
+          "unresolved_residual_norm": 0.0004969333059034557,
+          "corrected_residual_norm": 1.8955117438681823e-05,
+          "corrected_over_unresolved": 0.038144187989614095,
+          "corrected_over_epsilon_squared": 210.61241598535364
+        },
+        {
+          "epsilon": 0.0001,
+          "unresolved_residual_norm": 0.00016564443530089405,
+          "corrected_residual_norm": 2.1061228552673613e-06,
+          "corrected_over_unresolved": 0.012714721454068633,
+          "corrected_over_epsilon_squared": 210.61228552673612
+        },
+        {
+          "epsilon": 3e-05,
+          "unresolved_residual_norm": 4.969333058999731e-05,
+          "corrected_residual_norm": 1.895509960564757e-07,
+          "corrected_over_unresolved": 0.0038144152103709084,
+          "corrected_over_epsilon_squared": 210.61221784052856
+        }
+      ]
+    },
+    {
+      "hodge_term": "hodge_relative_activated",
+      "force_norm": 0.1896546450787223,
+      "kernel_projection_norm": 4.3035107542324044e-11,
+      "kernel_projection_relative": 2.269130161534453e-10,
+      "linear_branch_equation_relative_residual": 2.269111348940975e-10,
+      "branch_tangent_norm": 14.607726315815587,
+      "branch_tangent_over_rest_norm": 0.06891968196994486,
+      "nonlinear_residual_convergence_order": 1.9999964011712086,
+      "trials": [
+        {
+          "epsilon": 0.001,
+          "unresolved_residual_norm": 0.00018965464507799196,
+          "corrected_residual_norm": 7.56815741339752e-06,
+          "corrected_over_unresolved": 0.03990494095351715,
+          "corrected_over_epsilon_squared": 7.568157413397521
+        },
+        {
+          "epsilon": 0.0003,
+          "unresolved_residual_norm": 5.6896393522886185e-05,
+          "corrected_residual_norm": 6.811338263510892e-07,
+          "corrected_over_unresolved": 0.011971476295366733,
+          "corrected_over_epsilon_squared": 7.568153626123215
+        },
+        {
+          "epsilon": 0.0001,
+          "unresolved_residual_norm": 1.896546450714176e-05,
+          "corrected_residual_norm": 7.56816306251612e-08,
+          "corrected_over_unresolved": 0.003990497074124497,
+          "corrected_over_epsilon_squared": 7.56816306251612
+        },
+        {
+          "epsilon": 3e-05,
+          "unresolved_residual_norm": 5.689639351631298e-06,
+          "corrected_residual_norm": 6.811433404880081e-09,
+          "corrected_over_unresolved": 0.001197164351537879,
+          "corrected_over_epsilon_squared": 7.568259338755645
+        }
+      ]
+    }
+  ],
+  "compatible_branch_count": 2,
+  "compatible_branches": [
+    "hodge_relative",
+    "hodge_relative_activated"
+  ],
+  "verdict": "HODGE_DEFORMED_REST_BRANCH_EXISTS_TO_FIRST_ORDER",
+  "claim_boundary": "A compatible first-order tangent with quadratic residual proves a local implicit branch only when the quotient Hessian is invertible; it does not select a coefficient, prove a finite branch, motion, stability, or V4-006."
+}

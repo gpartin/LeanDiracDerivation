@@ -1,0 +1,59 @@
+{
+  "status": "V4_LOCALIZED_EMBEDDING_TWO_LAYER_CLOSURE_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "native_action": "transfer-softened incumbent plus transfer-activated chi bond and 1/(2 chi0) native frame reflection",
+  "dt": 0.00390625,
+  "update_diagnostics": {
+    "rest_del_rms": 2.3386083973253363e-12,
+    "following_block_condition": 1561.2319623760022
+  },
+  "rows": [
+    {
+      "cross_block_relative_residual": 0.0003855946271128031,
+      "previous_layer_map_condition": 1.0000221930971573,
+      "full_invariance_relative_residual": 3.3636714076171634e-05,
+      "retained_generator_spectral_radius": 0.9999801184285798,
+      "least_squares_rank": 8,
+      "least_squares_singular_values": [
+        0.06591698202888698,
+        0.06579633714477784,
+        0.0657568926476908,
+        0.06570187630838585,
+        0.06563200136716639,
+        0.06555136818794616,
+        0.06533349730147918,
+        0.0652692889164128
+      ],
+      "flavor": "plus",
+      "native_selected_chi_scale_real": -0.8396226481050193,
+      "native_selected_chi_scale_imag": -0.003880377325778035,
+      "optimizer_success": true
+    },
+    {
+      "cross_block_relative_residual": 0.00038437943392555273,
+      "previous_layer_map_condition": 1.0000171827933315,
+      "full_invariance_relative_residual": 3.375454470317296e-05,
+      "retained_generator_spectral_radius": 0.9999831872920414,
+      "least_squares_rank": 8,
+      "least_squares_singular_values": [
+        0.06570205270412874,
+        0.0655815037744924,
+        0.06551104824264566,
+        0.06550377652411651,
+        0.06541976069135197,
+        0.06533069509919938,
+        0.06512325625294407,
+        0.06505707511207907
+      ],
+      "flavor": "minus",
+      "native_selected_chi_scale_real": -0.8523803568398007,
+      "native_selected_chi_scale_imag": -0.0012860746595616912,
+      "optimizer_success": true
+    }
+  ],
+  "best_full_invariance_relative_residual": 3.3636714076171634e-05,
+  "verdict": "CORE_ONLY_TWO_LAYER_SECTOR_NOT_CLOSED",
+  "claim_boundary": "This derives the best same-core previous-layer graph from the complete implicit native update. It does not permit a halo graph or change the action, and it does not establish nonlinear motion.",
+  "corrective_action": "If the residual remains nonzero, solve the block invariant-graph problem with a first-shell response while retaining the same four-component coordinates. Only a residual left after that extension becomes an action-repair target."
+}

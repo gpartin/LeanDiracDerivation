@@ -1,0 +1,162 @@
+{
+  "status": "V4_CUBE_INCIDENCE_INTERFACE_BASIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": [
+    "tensor_common_C19_interface_mean",
+    "tensor_relative_C19_interface_mean",
+    "area_common_C19_interface_mean",
+    "area_relative_C19_interface_mean"
+  ],
+  "basis_rest_force_norms": [
+    46.10125902335041,
+    43.56032163696205,
+    51.23630691755366,
+    32.103240261882114
+  ],
+  "rest_force_rank": 4,
+  "rest_nullity": 0,
+  "rest_preserving_rows": [],
+  "best_rest_preserving_row": null,
+  "rest_completed_interface_rows": [
+    {
+      "interface_term": "tensor_common_C19_interface_mean",
+      "interface_coefficient": 1.0,
+      "old_basis_coefficients": {
+        "tensor_common_local": -0.0329471751237186,
+        "tensor_common_C19_gradient": -2.1525487747496093,
+        "tensor_relative_local": 0.032947175123718996,
+        "tensor_relative_C19_gradient": -2.220446049250313e-15,
+        "area_common_local": -0.03294717512371882,
+        "area_common_C19_gradient": -0.3953661014846239,
+        "area_relative_local": 3.6415315207705135e-14,
+        "area_relative_C19_gradient": -6.106226635438361e-15
+      },
+      "old_basis_rationalized": {
+        "tensor_common_local": "-2/61",
+        "tensor_common_C19_gradient": "-127/59",
+        "tensor_relative_local": "2/61",
+        "tensor_relative_C19_gradient": "0",
+        "area_common_local": "-2/61",
+        "area_common_C19_gradient": "-17/43",
+        "area_relative_local": "0",
+        "area_relative_C19_gradient": "0"
+      },
+      "rest_DEL_norm": 6.502737960269276,
+      "receiver_phase_response_norms": {
+        "axis_0_sign_-1": 0.0,
+        "axis_0_sign_1": 0.0,
+        "axis_1_sign_-1": 0.0,
+        "axis_1_sign_1": 0.0,
+        "axis_2_sign_-1": 0.0,
+        "axis_2_sign_1": 0.0
+      },
+      "minimum_receiver_phase_response": 0.0
+    },
+    {
+      "interface_term": "tensor_relative_C19_interface_mean",
+      "interface_coefficient": 1.0,
+      "old_basis_coefficients": {
+        "tensor_common_local": 0.05440745357524608,
+        "tensor_common_C19_gradient": 0.0704843369044636,
+        "tensor_relative_local": -0.054407453575245755,
+        "tensor_relative_C19_gradient": -1.74382226998115,
+        "area_common_local": 0.054407453575245804,
+        "area_common_C19_gradient": 0.6528894429029508,
+        "area_relative_local": 0.14494617028503232,
+        "area_relative_C19_gradient": -0.09907582131385972
+      },
+      "old_basis_rationalized": {
+        "tensor_common_local": "3/55",
+        "tensor_common_C19_gradient": "4/57",
+        "tensor_relative_local": "-3/55",
+        "tensor_relative_C19_gradient": "-68/39",
+        "area_common_local": "3/55",
+        "area_common_C19_gradient": "32/49",
+        "area_relative_local": "9/62",
+        "area_relative_C19_gradient": "-6/61"
+      },
+      "rest_DEL_norm": 6.176786895999575,
+      "receiver_phase_response_norms": {
+        "axis_0_sign_-1": 0.0,
+        "axis_0_sign_1": 0.0,
+        "axis_1_sign_-1": 0.0,
+        "axis_1_sign_1": 0.0,
+        "axis_2_sign_-1": 0.0,
+        "axis_2_sign_1": 0.0
+      },
+      "minimum_receiver_phase_response": 0.0
+    },
+    {
+      "interface_term": "area_common_C19_interface_mean",
+      "interface_coefficient": 1.0,
+      "old_basis_coefficients": {
+        "tensor_common_local": -0.19987952908389273,
+        "tensor_common_C19_gradient": 3.1086244689504383e-15,
+        "tensor_relative_local": 0.19987952908389264,
+        "tensor_relative_C19_gradient": 1.1102230246251565e-15,
+        "area_common_local": -0.1998795290838924,
+        "area_common_C19_gradient": -2.398554349006708,
+        "area_relative_local": -4.884981308350689e-15,
+        "area_relative_C19_gradient": -1.1102230246251565e-15
+      },
+      "old_basis_rationalized": {
+        "tensor_common_local": "-1/5",
+        "tensor_common_C19_gradient": "0",
+        "tensor_relative_local": "1/5",
+        "tensor_relative_C19_gradient": "0",
+        "area_common_local": "-1/5",
+        "area_common_C19_gradient": "-12/5",
+        "area_relative_local": "0",
+        "area_relative_C19_gradient": "0"
+      },
+      "rest_DEL_norm": 7.245908012871486,
+      "receiver_phase_response_norms": {
+        "axis_0_sign_-1": 0.0,
+        "axis_0_sign_1": 0.0,
+        "axis_1_sign_-1": 0.0,
+        "axis_1_sign_1": 0.0,
+        "axis_2_sign_-1": 0.0,
+        "axis_2_sign_1": 0.0
+      },
+      "minimum_receiver_phase_response": 0.0
+    },
+    {
+      "interface_term": "area_relative_C19_interface_mean",
+      "interface_coefficient": 1.0,
+      "old_basis_coefficients": {
+        "tensor_common_local": -0.005888392046588857,
+        "tensor_common_C19_gradient": -0.36095780520641946,
+        "tensor_relative_local": 0.005888392046600292,
+        "tensor_relative_C19_gradient": -0.06047602596621959,
+        "area_common_local": -0.005888392046586345,
+        "area_common_C19_gradient": -0.07066070455896856,
+        "area_relative_local": -11.116560264826923,
+        "area_relative_C19_gradient": -2.2221549630814286
+      },
+      "old_basis_rationalized": {
+        "tensor_common_local": "0",
+        "tensor_common_C19_gradient": "-13/36",
+        "tensor_relative_local": "0",
+        "tensor_relative_C19_gradient": "-2/33",
+        "area_common_local": "0",
+        "area_common_C19_gradient": "-4/57",
+        "area_relative_local": "-667/60",
+        "area_relative_C19_gradient": "-20/9"
+      },
+      "rest_DEL_norm": 4.351598343216852,
+      "receiver_phase_response_norms": {
+        "axis_0_sign_-1": 0.0,
+        "axis_0_sign_1": 0.0,
+        "axis_1_sign_-1": 0.0,
+        "axis_1_sign_1": 0.0,
+        "axis_2_sign_-1": 0.0,
+        "axis_2_sign_1": 0.0
+      },
+      "minimum_receiver_phase_response": 0.0
+    }
+  ],
+  "best_rest_completed_interface_row": null,
+  "verdict": "INTERFACE_RESPONSE_REST_CONFLICT",
+  "claim_boundary": "Rest-force nullspace and first receiver response only.  No coefficient is admitted; spectrum, nonlinear movement and Dirac-current closure remain separate gates."
+}

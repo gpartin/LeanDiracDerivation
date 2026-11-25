@@ -1,0 +1,94 @@
+{
+  "status": "V4_FLEXIBLE_EDGE_ORBIT_INCONCLUSIVE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "updates_per_translation": 2,
+  "axis": 0,
+  "sign": 1,
+  "initial_scaled_del_rms": 0.011328386427603697,
+  "final_scaled_del_rms": 0.0013556638313170913,
+  "relative_residual_reduction": 0.8803303683202608,
+  "optimizer_evaluations": 1035,
+  "solved_dt": 0.19999999999999538,
+  "solved_translation_time": 0.39999999999999075,
+  "solved_phase_psi": 3.3287798462704368,
+  "solved_phase_chi": -6.889772046440938e-05,
+  "intermediate_psi_density_sum": 819.5166089569384,
+  "discrete_noether_charge_controls": {
+    "psi": {
+      "incoming": 3533.640466474897,
+      "outgoing": 576.1564002268769,
+      "relative_defect": 0.8369510408053366
+    },
+    "chi": {
+      "incoming": -3822.189247829763,
+      "outgoing": -4379.465075459918,
+      "relative_defect": 0.1272474647081485
+    }
+  },
+  "endpoint_constraint_defect": 0.0,
+  "trace_tail": [
+    {
+      "residual": 0.0013556795570811196,
+      "dt": 0.19999999999999538,
+      "phase_psi": 3.328759120558628,
+      "phase_chi": -6.730945980642513e-05
+    },
+    {
+      "residual": 0.0013556780994343864,
+      "dt": 0.19999999999999538,
+      "phase_psi": 3.328685711361761,
+      "phase_chi": -6.934590473513805e-05
+    },
+    {
+      "residual": 0.0013556771364522683,
+      "dt": 0.19999999999999535,
+      "phase_psi": 3.328639134415989,
+      "phase_chi": -7.066924803702988e-05
+    },
+    {
+      "residual": 0.0013556763824478127,
+      "dt": 0.19999999999999535,
+      "phase_psi": 3.3286099957681405,
+      "phase_chi": -7.152915981978322e-05
+    },
+    {
+      "residual": 0.0013556725151478034,
+      "dt": 0.19999999999999515,
+      "phase_psi": 3.328347747937507,
+      "phase_chi": -7.926836586456328e-05
+    },
+    {
+      "residual": 0.001355670958766999,
+      "dt": 0.1999999999999952,
+      "phase_psi": 3.328431940283492,
+      "phase_chi": -7.711647692433523e-05
+    },
+    {
+      "residual": 0.0013556699543023785,
+      "dt": 0.19999999999999524,
+      "phase_psi": 3.328487793135021,
+      "phase_chi": -7.571774830761294e-05
+    },
+    {
+      "residual": 0.0013556691830050502,
+      "dt": 0.19999999999999524,
+      "phase_psi": 3.328525226813098,
+      "phase_chi": -7.480852189367829e-05
+    },
+    {
+      "residual": 0.0013556654979550301,
+      "dt": 0.19999999999999543,
+      "phase_psi": 3.328862129915788,
+      "phase_chi": -6.662548416826643e-05
+    },
+    {
+      "residual": 0.0013556638313170913,
+      "dt": 0.19999999999999538,
+      "phase_psi": 3.3287798462704368,
+      "phase_chi": -6.889772046440938e-05
+    }
+  ],
+  "verdict": "FREE_PERIOD_AND_PHASES_DO_NOT_YET_CLOSE_THE_ORBIT",
+  "claim_boundary": "Nonconvergence from one initial path is inconclusive. The solved parameters are not action coefficients and do not alter the native law."
+}

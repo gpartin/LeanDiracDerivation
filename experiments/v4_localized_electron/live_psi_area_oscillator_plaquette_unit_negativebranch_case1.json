@@ -1,0 +1,825 @@
+{
+  "status": "V4_LIVE_CLIFFORD_LONG_TANGENT",
+  "link_source": "joint_face_laplacian_plus_psi_area_oscillator",
+  "action_scale": 0.3157894736842105,
+  "chi_payload": 1.0,
+  "relative_grade_scale": null,
+  "chi_lift": "zero",
+  "frequency_branch": "negative",
+  "dirac_time_comparator": "centered",
+  "tangent_cache": "live_clifford_tangent_blocks_joint_face_laplacian_plus_psi_area_oscillator_0p315789473684_plaquette_1.npz",
+  "tangent_cache_rebuilt": true,
+  "dirac_transport_scale": 1.0,
+  "carrier_wave_number": 0.35,
+  "packet_width": 1.35,
+  "chi_scales": {
+    "plus": [
+      0.0,
+      0.0
+    ],
+    "minus": [
+      0.0,
+      0.0
+    ]
+  },
+  "cycles": 1.0,
+  "steps": 85,
+  "case_count": 1,
+  "maximum_phase_aligned_shape_error": 0.6866222834172441,
+  "maximum_psi_cross_block": 0.01596901600731722,
+  "maximum_norm_drift": 0.13025511223085995,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "samples": [
+        {
+          "step": 0,
+          "cycles": 0.0,
+          "native_vs_dirac_relative_error": 0.0,
+          "phase_aligned_shape_error": 8.292719913078722e-19,
+          "psi_outside_four_component_fraction": 1.096637463814666e-15,
+          "induced_chi_fraction": 0.0,
+          "norm_ratio": 1.0
+        },
+        {
+          "step": 1,
+          "cycles": 0.011812280932601607,
+          "native_vs_dirac_relative_error": 0.0015206636895480502,
+          "phase_aligned_shape_error": 0.0015183547119408242,
+          "psi_outside_four_component_fraction": 4.128984299590986e-05,
+          "induced_chi_fraction": 9.276387375449232e-06,
+          "norm_ratio": 0.9991352754182071
+        },
+        {
+          "step": 2,
+          "cycles": 0.023624561865203213,
+          "native_vs_dirac_relative_error": 0.0045497531173696185,
+          "phase_aligned_shape_error": 0.00453342070086741,
+          "psi_outside_four_component_fraction": 0.0001236616346385327,
+          "induced_chi_fraction": 2.7893383673847293e-05,
+          "norm_ratio": 0.9974304085206916
+        },
+        {
+          "step": 3,
+          "cycles": 0.035436842797804825,
+          "native_vs_dirac_relative_error": 0.009062337794290554,
+          "phase_aligned_shape_error": 0.009003227435026873,
+          "psi_outside_four_component_fraction": 0.00024664669589639,
+          "induced_chi_fraction": 5.610992975142254e-05,
+          "norm_ratio": 0.9949337691726242
+        },
+        {
+          "step": 4,
+          "cycles": 0.04724912373040643,
+          "native_vs_dirac_relative_error": 0.015021045742413945,
+          "phase_aligned_shape_error": 0.014866312468032376,
+          "psi_outside_four_component_fraction": 0.0004094932155309444,
+          "induced_chi_fraction": 9.436575153801515e-05,
+          "norm_ratio": 0.9917165694626948
+        },
+        {
+          "step": 5,
+          "cycles": 0.059061404663008035,
+          "native_vs_dirac_relative_error": 0.022376388232419202,
+          "phase_aligned_shape_error": 0.022042858122506222,
+          "psi_outside_four_component_fraction": 0.0006111329660179202,
+          "induced_chi_fraction": 0.00014325293043777754,
+          "norm_ratio": 0.9878715414097955
+        },
+        {
+          "step": 6,
+          "cycles": 0.07087368559560965,
+          "native_vs_dirac_relative_error": 0.031067157056513924,
+          "phase_aligned_shape_error": 0.030436140337340874,
+          "psi_outside_four_component_fraction": 0.0008501389764445405,
+          "induced_chi_fraction": 0.00020347416546099013,
+          "norm_ratio": 0.9835112073264205
+        },
+        {
+          "step": 7,
+          "cycles": 0.08268596652821125,
+          "native_vs_dirac_relative_error": 0.04102089579089435,
+          "phase_aligned_shape_error": 0.03993430707305202,
+          "psi_outside_four_component_fraction": 0.0011246770441102234,
+          "induced_chi_fraction": 0.00027578967212418245,
+          "norm_ratio": 0.9787656996649362
+        },
+        {
+          "step": 8,
+          "cycles": 0.09449824746081285,
+          "native_vs_dirac_relative_error": 0.052154448818888935,
+          "phase_aligned_shape_error": 0.05041250527304874,
+          "psi_outside_four_component_fraction": 0.0014324551661613271,
+          "induced_chi_fraction": 0.0003609552151522485,
+          "norm_ratio": 0.9737800812892374
+        },
+        {
+          "step": 9,
+          "cycles": 0.10631052839341447,
+          "native_vs_dirac_relative_error": 0.06437459375133914,
+          "phase_aligned_shape_error": 0.06173536996732491,
+          "psi_outside_four_component_fraction": 0.0017706763253198434,
+          "induced_chi_fraction": 0.00045965417852532044,
+          "norm_ratio": 0.9687111207364366
+        },
+        {
+          "step": 10,
+          "cycles": 0.11812280932601607,
+          "native_vs_dirac_relative_error": 0.07757876414765784,
+          "phase_aligned_shape_error": 0.0737598748950625,
+          "psi_outside_four_component_fraction": 0.00213600141828896,
+          "induced_chi_fraction": 0.0005724269546488873,
+          "norm_ratio": 0.9637234927594747
+        },
+        {
+          "step": 11,
+          "cycles": 0.12993509025861769,
+          "native_vs_dirac_relative_error": 0.09165586998273549,
+          "phase_aligned_shape_error": 0.08633851969318561,
+          "psi_outside_four_component_fraction": 0.0025245302128097825,
+          "induced_chi_fraction": 0.0006996013826622919,
+          "norm_ratio": 0.958985404321699
+        },
+        {
+          "step": 12,
+          "cycles": 0.1417473711912193,
+          "native_vs_dirac_relative_error": 0.10648722301951027,
+          "phase_aligned_shape_error": 0.09932279394245394,
+          "psi_outside_four_component_fraction": 0.002931808701904318,
+          "induced_chi_fraction": 0.0008412284957978984,
+          "norm_ratio": 0.9546636909968214
+        },
+        {
+          "step": 13,
+          "cycles": 0.1535596521238209,
+          "native_vs_dirac_relative_error": 0.12194757306535366,
+          "phase_aligned_shape_error": 0.11256681458798284,
+          "psi_outside_four_component_fraction": 0.0033528706833330685,
+          "induced_chi_fraction": 0.00099702834080268,
+          "norm_ratio": 0.9509184869506483
+        },
+        {
+          "step": 14,
+          "cycles": 0.1653719330564225,
+          "native_vs_dirac_relative_error": 0.13790625898548917,
+          "phase_aligned_shape_error": 0.1259309842861206,
+          "psi_outside_four_component_fraction": 0.0037823194677553793,
+          "induced_chi_fraction": 0.0011663508919165274,
+          "norm_ratio": 0.9478976388373238
+        },
+        {
+          "step": 15,
+          "cycles": 0.17718421398902412,
+          "native_vs_dirac_relative_error": 0.15422847534508627,
+          "phase_aligned_shape_error": 0.13928547079189815,
+          "psi_outside_four_component_fraction": 0.004214452137208289,
+          "induced_chi_fraction": 0.0013481568287820806,
+          "norm_ratio": 0.9457311020727537
+        },
+        {
+          "step": 16,
+          "cycles": 0.1889964949216257,
+          "native_vs_dirac_relative_error": 0.17077665174448323,
+          "phase_aligned_shape_error": 0.15251327106879525,
+          "psi_outside_four_component_fraction": 0.004643423899297009,
+          "induced_chi_fraction": 0.0015410219509691102,
+          "norm_ratio": 0.94452561607255
+        },
+        {
+          "step": 17,
+          "cycles": 0.20080877585422732,
+          "native_vs_dirac_relative_error": 0.18741193746312265,
+          "phase_aligned_shape_error": 0.1655126095372198,
+          "psi_outside_four_component_fraction": 0.005063444406309671,
+          "induced_chi_fraction": 0.0017431671709843138,
+          "norm_ratio": 0.9443599907293548
+        },
+        {
+          "step": 18,
+          "cycles": 0.21262105678682894,
+          "native_vs_dirac_relative_error": 0.20399577917758344,
+          "phase_aligned_shape_error": 0.17819843841499972,
+          "psi_outside_four_component_fraction": 0.005468992429378242,
+          "induced_chi_fraction": 0.0019525134931499626,
+          "norm_ratio": 0.9452813384201475
+        },
+        {
+          "step": 19,
+          "cycles": 0.22443333771943055,
+          "native_vs_dirac_relative_error": 0.2203915745802709,
+          "phase_aligned_shape_error": 0.19050286640556055,
+          "psi_outside_four_component_fraction": 0.005855031201159249,
+          "induced_chi_fraction": 0.0021667585189030334,
+          "norm_ratio": 0.9473025473258544
+        },
+        {
+          "step": 20,
+          "cycles": 0.23624561865203214,
+          "native_vs_dirac_relative_error": 0.23646638006923446,
+          "phase_aligned_shape_error": 0.20237443999990787,
+          "psi_outside_four_component_fraction": 0.006217205146341229,
+          "induced_chi_fraction": 0.002383468365379765,
+          "norm_ratio": 0.9504012130582531
+        },
+        {
+          "step": 21,
+          "cycles": 0.24805789958463376,
+          "native_vs_dirac_relative_error": 0.25209264671156967,
+          "phase_aligned_shape_error": 0.21377632994792553,
+          "psi_outside_four_component_fraction": 0.006552000196729628,
+          "induced_chi_fraction": 0.002600177017074637,
+          "norm_ratio": 0.954520134985225
+        },
+        {
+          "step": 22,
+          "cycles": 0.25987018051723537,
+          "native_vs_dirac_relative_error": 0.2671499558072131,
+          "phase_aligned_shape_error": 0.2246836151737011,
+          "psi_outside_four_component_fraction": 0.006856854289804058,
+          "induced_chi_fraction": 0.0028144844730282324,
+          "norm_ratio": 0.9595693567091135
+        },
+        {
+          "step": 23,
+          "cycles": 0.271682461449837,
+          "native_vs_dirac_relative_error": 0.2815267239560781,
+          "phase_aligned_shape_error": 0.2350799823424837,
+          "psi_outside_four_component_fraction": 0.007130211090779745,
+          "induced_chi_fraction": 0.0030241457378714864,
+          "norm_ratio": 0.9654296060057629
+        },
+        {
+          "step": 24,
+          "cycles": 0.2834947423824386,
+          "native_vs_dirac_relative_error": 0.2951218478258345,
+          "phase_aligned_shape_error": 0.24495424570549498,
+          "psi_outside_four_component_fraction": 0.0073715170922204745,
+          "induced_chi_fraction": 0.003227144537401989,
+          "norm_ratio": 0.9719568863987462
+        },
+        {
+          "step": 25,
+          "cycles": 0.29530702331504016,
+          "native_vs_dirac_relative_error": 0.30784626095562195,
+          "phase_aligned_shape_error": 0.2542971195701495,
+          "psi_outside_four_component_fraction": 0.007581168602410117,
+          "induced_chi_fraction": 0.003421748165434284,
+          "norm_ratio": 0.9789879036010126
+        },
+        {
+          "step": 26,
+          "cycles": 0.3071193042476418,
+          "native_vs_dirac_relative_error": 0.3196243788553278,
+          "phase_aligned_shape_error": 0.2630986379391274,
+          "psi_outside_four_component_fraction": 0.007760419644223081,
+          "induced_chi_fraction": 0.003606542532261112,
+          "norm_ratio": 0.986345980999429
+        },
+        {
+          "step": 27,
+          "cycles": 0.3189315851802434,
+          "native_vs_dirac_relative_error": 0.3303954141005647,
+          "phase_aligned_shape_error": 0.271346520338958,
+          "psi_outside_four_component_fraction": 0.007911263940728658,
+          "induced_chi_fraction": 0.003780448790786349,
+          "norm_ratio": 0.9938471272526038
+        },
+        {
+          "step": 28,
+          "cycles": 0.330743866112845,
+          "native_vs_dirac_relative_error": 0.34011454958119164,
+          "phase_aligned_shape_error": 0.2790256497955031,
+          "psi_outside_four_component_fraction": 0.008036304051458752,
+          "induced_chi_fraction": 0.0039427245441776395,
+          "norm_ratio": 1.001305958159713
+        },
+        {
+          "step": 29,
+          "cycles": 0.3425561470454466,
+          "native_vs_dirac_relative_error": 0.3487539648091651,
+          "phase_aligned_shape_error": 0.28611868486773917,
+          "psi_outside_four_component_fraction": 0.008138618870743977,
+          "induced_chi_fraction": 0.0040929534803025,
+          "norm_ratio": 1.008541233462036
+        },
+        {
+          "step": 30,
+          "cycles": 0.35436842797804824,
+          "native_vs_dirac_relative_error": 0.35630371628962454,
+          "phase_aligned_shape_error": 0.2926076981232566,
+          "psi_outside_four_component_fraction": 0.008221637830558919,
+          "induced_chi_fraction": 0.004231027403203547,
+          "norm_ratio": 1.0153808361394527
+        },
+        {
+          "step": 31,
+          "cycles": 0.36618070891064985,
+          "native_vs_dirac_relative_error": 0.362772477281972,
+          "phase_aligned_shape_error": 0.2984766366554289,
+          "psi_outside_four_component_fraction": 0.008289026966907087,
+          "induced_chi_fraction": 0.004357124217625456,
+          "norm_ratio": 1.021666087802013
+        },
+        {
+          "step": 32,
+          "cycles": 0.3779929898432514,
+          "native_vs_dirac_relative_error": 0.36818814355310026,
+          "phase_aligned_shape_error": 0.3037143440051118,
+          "psi_outside_four_component_fraction": 0.00834458905238397,
+          "induced_chi_fraction": 0.004471684678771117,
+          "norm_ratio": 1.0272553524332635
+        },
+        {
+          "step": 33,
+          "cycles": 0.38980527077585303,
+          "native_vs_dirac_relative_error": 0.372598308587952,
+          "phase_aligned_shape_error": 0.30831786484457485,
+          "psi_outside_four_component_fraction": 0.008392177601084575,
+          "induced_chi_fraction": 0.004575389832649976,
+          "norm_ratio": 1.032026928323681
+        },
+        {
+          "step": 34,
+          "cycles": 0.40161755170845465,
+          "native_vs_dirac_relative_error": 0.3760706027997412,
+          "phase_aligned_shape_error": 0.31229576444010826,
+          "psi_outside_four_component_fraction": 0.008435622859526778,
+          "induced_chi_fraction": 0.004669140177863477,
+          "norm_ratio": 1.035881263187565
+        },
+        {
+          "step": 35,
+          "cycles": 0.41342983264105626,
+          "native_vs_dirac_relative_error": 0.3786928753374423,
+          "phase_aligned_shape_error": 0.31567122133325254,
+          "psi_outside_four_component_fraction": 0.00847866691697939,
+          "induced_chi_fraction": 0.00475403675692943,
+          "norm_ratio": 1.0387425504646093
+        },
+        {
+          "step": 36,
+          "cycles": 0.4252421135736579,
+          "native_vs_dirac_relative_error": 0.3805731732827329,
+          "phase_aligned_shape_error": 0.31848468129940577,
+          "psi_outside_four_component_fraction": 0.008524904729613626,
+          "induced_chi_fraction": 0.00483136366902876,
+          "norm_ratio": 1.0405597768908093
+        },
+        {
+          "step": 37,
+          "cycles": 0.4370543945062595,
+          "native_vs_dirac_relative_error": 0.38183944136447556,
+          "phase_aligned_shape_error": 0.3207958839078025,
+          "psi_outside_four_component_fraction": 0.008577728047975776,
+          "induced_chi_fraction": 0.004902570894654276,
+          "norm_ratio": 1.041307294213984
+        },
+        {
+          "step": 38,
+          "cycles": 0.4488666754388611,
+          "native_vs_dirac_relative_error": 0.38263882733425947,
+          "phase_aligned_shape_error": 0.32268508504115573,
+          "psi_outside_four_component_fraction": 0.008640269846288674,
+          "induced_chi_fraction": 0.0049692558373343075,
+          "norm_ratio": 1.0409849831214104
+        },
+        {
+          "step": 39,
+          "cycles": 0.46067895637146267,
+          "native_vs_dirac_relative_error": 0.3831364378778297,
+          "phase_aligned_shape_error": 0.3242533002444484,
+          "psi_outside_four_component_fraction": 0.008715347749982267,
+          "induced_chi_fraction": 0.005033141629669103,
+          "norm_ratio": 1.0396180666217145
+        },
+        {
+          "step": 40,
+          "cycles": 0.4724912373040643,
+          "native_vs_dirac_relative_error": 0.38351335501378647,
+          "phase_aligned_shape_error": 0.3256213915353455,
+          "psi_outside_four_component_fraction": 0.008805406015655779,
+          "induced_chi_fraction": 0.0050960500538544465,
+          "norm_ratio": 1.0372566146987245
+        },
+        {
+          "step": 41,
+          "cycles": 0.4843035182366659,
+          "native_vs_dirac_relative_error": 0.38396370538149494,
+          "phase_aligned_shape_error": 0.3269278271820851,
+          "psi_outside_four_component_fraction": 0.008912456706064211,
+          "induced_chi_fraction": 0.00515986695152275,
+          "norm_ratio": 1.0339747633272485
+        },
+        {
+          "step": 42,
+          "cycles": 0.4961157991692675,
+          "native_vs_dirac_relative_error": 0.3846905907628245,
+          "phase_aligned_shape_error": 0.3283249778421557,
+          "psi_outside_four_component_fraction": 0.00903802170439868,
+          "induced_chi_fraction": 0.005226498327255543,
+          "norm_ratio": 1.0298696501813653
+        },
+        {
+          "step": 43,
+          "cycles": 0.5079280801018691,
+          "native_vs_dirac_relative_error": 0.3859007552186326,
+          "phase_aligned_shape_error": 0.3299738931028343,
+          "psi_outside_four_component_fraction": 0.009183078042467083,
+          "induced_chi_fraction": 0.005297816071573521,
+          "norm_ratio": 1.0250600479580525
+        },
+        {
+          "step": 44,
+          "cycles": 0.5197403610344707,
+          "native_vs_dirac_relative_error": 0.3877979954864798,
+          "phase_aligned_shape_error": 0.33203764498089217,
+          "psi_outside_four_component_fraction": 0.00934800964482968,
+          "induced_chi_fraction": 0.0053755934006206535,
+          "norm_ratio": 1.0196846558331523
+        },
+        {
+          "step": 45,
+          "cycles": 0.5315526419670723,
+          "native_vs_dirac_relative_error": 0.39057551633582643,
+          "phase_aligned_shape_error": 0.3346735300845311,
+          "psi_outside_four_component_fraction": 0.009532569043367196,
+          "induced_chi_fraction": 0.0054614317168894515,
+          "norm_ratio": 1.0138999922312362
+        },
+        {
+          "step": 46,
+          "cycles": 0.543364922899674,
+          "native_vs_dirac_relative_error": 0.3944076679022218,
+          "phase_aligned_shape_error": 0.33802466613971477,
+          "psi_outside_four_component_fraction": 0.009735852961599862,
+          "induced_chi_fraction": 0.0055566825105953285,
+          "norm_ratio": 1.0078778204180268
+        },
+        {
+          "step": 47,
+          "cycles": 0.5551772038322755,
+          "native_vs_dirac_relative_error": 0.399441727119744,
+          "phase_aligned_shape_error": 0.34221174857019415,
+          "psi_outside_four_component_fraction": 0.009956295964137189,
+          "induced_chi_fraction": 0.005662369884487855,
+          "norm_ratio": 1.0018020355298367
+        },
+        {
+          "step": 48,
+          "cycles": 0.5669894847648772,
+          "native_vs_dirac_relative_error": 0.40579053122674885,
+          "phase_aligned_shape_error": 0.34732587529933634,
+          "psi_outside_four_component_fraction": 0.010191686600494092,
+          "induced_chi_fraction": 0.005779120925210531,
+          "norm_ratio": 0.9958649509874796
+        },
+        {
+          "step": 49,
+          "cycles": 0.5788017656974788,
+          "native_vs_dirac_relative_error": 0.4135267737238715,
+          "phase_aligned_shape_error": 0.35342333323092306,
+          "psi_outside_four_component_fraction": 0.010439210505758287,
+          "induced_chi_fraction": 0.005907112050697613,
+          "norm_ratio": 0.9902629471127089
+        },
+        {
+          "step": 50,
+          "cycles": 0.5906140466300803,
+          "native_vs_dirac_relative_error": 0.42267960335573557,
+          "phase_aligned_shape_error": 0.3605230350568435,
+          "psi_outside_four_component_fraction": 0.010695524479083106,
+          "induced_chi_fraction": 0.006046039287012649,
+          "norm_ratio": 0.9851914875335717
+        },
+        {
+          "step": 51,
+          "cycles": 0.602426327562682,
+          "native_vs_dirac_relative_error": 0.4332338525723759,
+          "phase_aligned_shape_error": 0.36860692778107923,
+          "psi_outside_four_component_fraction": 0.010956864289738234,
+          "induced_chi_fraction": 0.006195118984003667,
+          "norm_ratio": 0.9808395699183783
+        },
+        {
+          "step": 52,
+          "cycles": 0.6142386084952836,
+          "native_vs_dirac_relative_error": 0.4451318439363261,
+          "phase_aligned_shape_error": 0.377623250077879,
+          "psi_outside_four_component_fraction": 0.011219186548909934,
+          "induced_chi_fraction": 0.006353122806473368,
+          "norm_ratio": 0.9773837536852995
+        },
+        {
+          "step": 53,
+          "cycles": 0.6260508894278852,
+          "native_vs_dirac_relative_error": 0.4582773828877437,
+          "phase_aligned_shape_error": 0.3874921056724137,
+          "psi_outside_four_component_fraction": 0.01147834133897889,
+          "induced_chi_fraction": 0.006518447207823789,
+          "norm_ratio": 0.9749819912705759
+        },
+        {
+          "step": 54,
+          "cycles": 0.6378631703604868,
+          "native_vs_dirac_relative_error": 0.4725413246953648,
+          "phase_aligned_shape_error": 0.3981125376962111,
+          "psi_outside_four_component_fraction": 0.0117302676942003,
+          "induced_chi_fraction": 0.0066892134745675964,
+          "norm_ratio": 0.9737675695288998
+        },
+        {
+          "step": 55,
+          "cycles": 0.6496754512930885,
+          "native_vs_dirac_relative_error": 0.48776803483743914,
+          "phase_aligned_shape_error": 0.4093701786405604,
+          "psi_outside_four_component_fraction": 0.01197119921363767,
+          "induced_chi_fraction": 0.006863390429295811,
+          "norm_ratio": 0.9738435288723605
+        },
+        {
+          "step": 56,
+          "cycles": 0.66148773222569,
+          "native_vs_dirac_relative_error": 0.5037821265439847,
+          "phase_aligned_shape_error": 0.42114460307340706,
+          "psi_outside_four_component_fraction": 0.012197863159716759,
+          "induced_chi_fraction": 0.007038928666361219,
+          "norm_ratio": 0.9752779543813398
+        },
+        {
+          "step": 57,
+          "cycles": 0.6733000131582916,
+          "native_vs_dirac_relative_error": 0.5203950058730351,
+          "phase_aligned_shape_error": 0.4333156817436341,
+          "psi_outside_four_component_fraction": 0.012407654544075143,
+          "induced_chi_fraction": 0.007213893396104181,
+          "norm_ratio": 0.9781005134583832
+        },
+        {
+          "step": 58,
+          "cycles": 0.6851122940908932,
+          "native_vs_dirac_relative_error": 0.5374109268030438,
+          "phase_aligned_shape_error": 0.4457684719787873,
+          "psi_outside_four_component_fraction": 0.012598767804886977,
+          "induced_chi_fraction": 0.007386583032188113,
+          "norm_ratio": 0.9823005443953994
+        },
+        {
+          "step": 59,
+          "cycles": 0.6969245750234948,
+          "native_vs_dirac_relative_error": 0.5546324131734495,
+          "phase_aligned_shape_error": 0.45839643349972203,
+          "psi_outside_four_component_fraction": 0.0127702729269043,
+          "induced_chi_fraction": 0.00755562267864065,
+          "norm_ratio": 0.9878268854426391
+        },
+        {
+          "step": 60,
+          "cycles": 0.7087368559560965,
+          "native_vs_dirac_relative_error": 0.5718650182202119,
+          "phase_aligned_shape_error": 0.4711029969040711,
+          "psi_outside_four_component_fraction": 0.012922129578512848,
+          "induced_chi_fraction": 0.007720025337406135,
+          "norm_ratio": 0.9945894905112792
+        },
+        {
+          "step": 61,
+          "cycles": 0.720549136888698,
+          "native_vs_dirac_relative_error": 0.588921461283895,
+          "phase_aligned_shape_error": 0.4838017108426869,
+          "psi_outside_four_component_fraction": 0.013055140657013064,
+          "induced_chi_fraction": 0.007879218252209877,
+          "norm_ratio": 1.002462727943006
+        },
+        {
+          "step": 62,
+          "cycles": 0.7323614178212997,
+          "native_vs_dirac_relative_error": 0.6056252116242095,
+          "phase_aligned_shape_error": 0.4964153371659284,
+          "psi_outside_four_component_fraction": 0.013170853873933651,
+          "induced_chi_fraction": 0.008033036408679937,
+          "norm_ratio": 1.011290126213774
+        },
+        {
+          "step": 63,
+          "cycles": 0.7441736987539013,
+          "native_vs_dirac_relative_error": 0.6218135923612057,
+          "phase_aligned_shape_error": 0.508874340679085,
+          "psi_outside_four_component_fraction": 0.013271425246281745,
+          "induced_chi_fraction": 0.008181688954473711,
+          "norm_ratio": 1.0208902335489343
+        },
+        {
+          "step": 64,
+          "cycles": 0.7559859796865028,
+          "native_vs_dirac_relative_error": 0.6373404646322771,
+          "phase_aligned_shape_error": 0.521115228351097,
+          "psi_outside_four_component_fraction": 0.01335946080272182,
+          "induced_chi_fraction": 0.00832570660649417,
+          "norm_ratio": 1.0310632069956245
+        },
+        {
+          "step": 65,
+          "cycles": 0.7677982606191045,
+          "native_vs_dirac_relative_error": 0.6520785321594726,
+          "phase_aligned_shape_error": 0.5330791375873338,
+          "psi_outside_four_component_fraction": 0.0134378524601885,
+          "induced_chi_fraction": 0.008465878803487913,
+          "norm_ratio": 1.041597740586326
+        },
+        {
+          "step": 66,
+          "cycles": 0.7796105415517061,
+          "native_vs_dirac_relative_error": 0.665921285811528,
+          "phase_aligned_shape_error": 0.544710969379092,
+          "psi_outside_four_component_fraction": 0.013509621503326274,
+          "induced_chi_fraction": 0.008603188649259944,
+          "norm_ratio": 1.0522779740184194
+        },
+        {
+          "step": 67,
+          "cycles": 0.7914228224843077,
+          "native_vs_dirac_relative_error": 0.6787845901304485,
+          "phase_aligned_shape_error": 0.5559592312575098,
+          "psi_outside_four_component_fraction": 0.013577779353534805,
+          "induced_chi_fraction": 0.008738752023768386,
+          "norm_ratio": 1.0628900805567723
+        },
+        {
+          "step": 68,
+          "cycles": 0.8032351034169093,
+          "native_vs_dirac_relative_error": 0.6906079009329725,
+          "phase_aligned_shape_error": 0.5667766204754533,
+          "psi_outside_four_component_fraction": 0.013645211288508962,
+          "induced_chi_fraction": 0.00887376513452853,
+          "norm_ratio": 1.0732283026863727
+        },
+        {
+          "step": 69,
+          "cycles": 0.815047384349511,
+          "native_vs_dirac_relative_error": 0.7013550954028722,
+          "phase_aligned_shape_error": 0.5771212601855321,
+          "psi_outside_four_component_fraction": 0.013714585179734113,
+          "induced_chi_fraction": 0.009009462685254824,
+          "norm_ratio": 1.0831002754255357
+        },
+        {
+          "step": 70,
+          "cycles": 0.8268596652821125,
+          "native_vs_dirac_relative_error": 0.711014893122483,
+          "phase_aligned_shape_error": 0.5869584143827578,
+          "psi_outside_four_component_fraction": 0.013788284551628142,
+          "induced_chi_fraction": 0.009147087051941737,
+          "norm_ratio": 1.0923315425076328
+        },
+        {
+          "step": 71,
+          "cycles": 0.8386719462147141,
+          "native_vs_dirac_relative_error": 0.7196008473481664,
+          "phase_aligned_shape_error": 0.5962624567867912,
+          "psi_outside_four_component_fraction": 0.013868363441320962,
+          "induced_chi_fraction": 0.009287867520595409,
+          "norm_ratio": 1.1007692256380812
+        },
+        {
+          "step": 72,
+          "cycles": 0.8504842271473158,
+          "native_vs_dirac_relative_error": 0.7271508894376539,
+          "phase_aligned_shape_error": 0.6050188531593588,
+          "psi_outside_four_component_fraction": 0.01395651956257731,
+          "induced_chi_fraction": 0.009433007771531296,
+          "norm_ratio": 1.1082848502910811
+        },
+        {
+          "step": 73,
+          "cycles": 0.8622965080799173,
+          "native_vs_dirac_relative_error": 0.7337264146607003,
+          "phase_aligned_shape_error": 0.6132259293108092,
+          "psi_outside_four_component_fraction": 0.014054081961461554,
+          "induced_chi_fraction": 0.009583679330307742,
+          "norm_ratio": 1.114776363398353
+        },
+        {
+          "step": 74,
+          "cycles": 0.874108789012519,
+          "native_vs_dirac_relative_error": 0.7394109038683409,
+          "phase_aligned_shape_error": 0.6208962294944168,
+          "psi_outside_four_component_fraction": 0.014162009485094839,
+          "induced_chi_fraction": 0.009741018549569986,
+          "norm_ratio": 1.1201694000930351
+        },
+        {
+          "step": 75,
+          "cycles": 0.8859210699451205,
+          "native_vs_dirac_relative_error": 0.7443080822185686,
+          "phase_aligned_shape_error": 0.6280573133493826,
+          "psi_outside_four_component_fraction": 0.014280896786728723,
+          "induced_chi_fraction": 0.00990612474359621,
+          "norm_ratio": 1.1244178699750926
+        },
+        {
+          "step": 76,
+          "cycles": 0.8977333508777222,
+          "native_vs_dirac_relative_error": 0.7485396233515549,
+          "phase_aligned_shape_error": 0.6347518870238007,
+          "psi_outside_four_component_fraction": 0.014410985127722615,
+          "induced_chi_fraction": 0.010080057290980382,
+          "norm_ratio": 1.1275039396379147
+        },
+        {
+          "step": 77,
+          "cycles": 0.9095456318103238,
+          "native_vs_dirac_relative_error": 0.7522424155113046,
+          "phase_aligned_shape_error": 0.6410372109529471,
+          "psi_outside_four_component_fraction": 0.014552175827092102,
+          "induced_chi_fraction": 0.010263829799524605,
+          "norm_ratio": 1.1294374886878358
+        },
+        {
+          "step": 78,
+          "cycles": 0.9213579127429253,
+          "native_vs_dirac_relative_error": 0.755565415913391,
+          "phase_aligned_shape_error": 0.6469837707300491,
+          "psi_outside_four_component_fraction": 0.014704044809643739,
+          "induced_chi_fraction": 0.010458399765826364,
+          "norm_ratio": 1.13025511223086
+        },
+        {
+          "step": 79,
+          "cycles": 0.933170193675527,
+          "native_vs_dirac_relative_error": 0.7586661321107719,
+          "phase_aligned_shape_error": 0.6526732382243439,
+          "psi_outside_four_component_fraction": 0.014865857298938768,
+          "induced_chi_fraction": 0.010664652556438645,
+          "norm_ratio": 1.1300187346969188
+        },
+        {
+          "step": 80,
+          "cycles": 0.9449824746081286,
+          "native_vs_dirac_relative_error": 0.7617067850189049,
+          "phase_aligned_shape_error": 0.658195788352144,
+          "psi_outside_four_component_fraction": 0.015036582290090996,
+          "induced_chi_fraction": 0.01088337899878461,
+          "norm_ratio": 1.128813888806286
+        },
+        {
+          "step": 81,
+          "cycles": 0.9567947555407302,
+          "native_vs_dirac_relative_error": 0.7648502279086009,
+          "phase_aligned_shape_error": 0.6636468737538963,
+          "psi_outside_four_component_fraction": 0.015214907021261288,
+          "induced_chi_fraction": 0.011115246416067833,
+          "norm_ratio": 1.1267477004224518
+        },
+        {
+          "step": 82,
+          "cycles": 0.9686070364733318,
+          "native_vs_dirac_relative_error": 0.7682557184210913,
+          "phase_aligned_shape_error": 0.6691235956051469,
+          "psi_outside_four_component_fraction": 0.015399252237090036,
+          "induced_chi_fraction": 0.011360763587422065,
+          "norm_ratio": 1.1239466061056886
+        },
+        {
+          "step": 83,
+          "cycles": 0.9804193174059335,
+          "native_vs_dirac_relative_error": 0.7720746646506917,
+          "phase_aligned_shape_error": 0.6747208432342575,
+          "psi_outside_four_component_fraction": 0.015587789584231558,
+          "induced_chi_fraction": 0.011620240867780527,
+          "norm_ratio": 1.1205538167071358
+        },
+        {
+          "step": 84,
+          "cycles": 0.992231598338535,
+          "native_vs_dirac_relative_error": 0.7764464884515845,
+          "phase_aligned_shape_error": 0.6805274059168972,
+          "psi_outside_four_component_fraction": 0.01577846296166442,
+          "induced_chi_fraction": 0.011893747546139566,
+          "norm_ratio": 1.1167265288553019
+        },
+        {
+          "step": 85,
+          "cycles": 1.0040438792711366,
+          "native_vs_dirac_relative_error": 0.7814947652649186,
+          "phase_aligned_shape_error": 0.6866222834172441,
+          "psi_outside_four_component_fraction": 0.01596901600731722,
+          "induced_chi_fraction": 0.012181069410878667,
+          "norm_ratio": 1.1126328783775805
+        }
+      ],
+      "maximum_phase_aligned_shape_error": 0.6866222834172441,
+      "maximum_psi_cross_block": 0.01596901600731722,
+      "maximum_induced_chi_fraction": 0.012181069410878667,
+      "maximum_norm_drift": 0.13025511223085995
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_LONG_TANGENT_OPEN",
+  "claim_boundary": "Full two-field linear recurrence about the localized rest orbit. Nonlinear translation, current, refinement, and 100 cycles remain."
+}

@@ -1,0 +1,139 @@
+{
+  "status": "V4_RECEIVER_ORIENTATION_TEN_MECHANISM_VERDICT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "winner_definition": "same carrier, freely evolving, frozen discrete-Dirac comparator, rest preserved, no preload/projection/reset/fitted runtime support",
+  "rows": [
+    {
+      "id": 1,
+      "mechanism": "native non-Abelian parallel transport",
+      "implementation": "derived cube-incidence reciprocal symplectic connection on the spin-diagonal extended packet",
+      "evidence": {
+        "best_one_cycle_error": 0.21734020943987312,
+        "held_direction_error": 0.5344435596731544
+      },
+      "verdict": "TESTED_IMPLEMENTATION_FAIL",
+      "winner": false
+    },
+    {
+      "id": 2,
+      "mechanism": "self-generated coin-and-shift",
+      "implementation": "geometry spin rotation followed by unchanged native C19 evolution",
+      "evidence": {
+        "first_step_error": 4.562154006125906e-06,
+        "one_cycle_error": 0.21734020943942156,
+        "native_action_derivation": false
+      },
+      "verdict": "DIAGNOSTIC_ROTATION_HELPS_BUT_NO_NATIVE_COIN_SHIFT",
+      "winner": false
+    },
+    {
+      "id": 3,
+      "mechanism": "Ablowitz-Ladik-like nonlinear coherent hopping",
+      "implementation": "32 reciprocal C19 position-action redistributions and coherent-hopping invariants",
+      "evidence": {
+        "basis_size": 32,
+        "rest_preserving_nullity": 18,
+        "best_rest_preserving_relative_residual": 0.24966104260848188
+      },
+      "verdict": "POSITION_ONLY_ACTION_CLASS_FAIL",
+      "winner": false
+    },
+    {
+      "id": 4,
+      "mechanism": "translation-zero-mode restoration",
+      "implementation": "native localized center-displacement tangent",
+      "evidence": {
+        "translation_curvatures": [
+          0.21820788098276284,
+          0.2203872312128102,
+          0.22028310630060033
+        ],
+        "existing_action_best_relative_residual": 0.9895921948049694
+      },
+      "verdict": "CURRENT_ACTION_PINNED",
+      "winner": false
+    },
+    {
+      "id": 5,
+      "mechanism": "self-consistent precursor or traveling tail",
+      "implementation": "32-update charge-constrained freely deformed relative-periodic shooting",
+      "evidence": {
+        "boundary_residual": 0.047596321325898035,
+        "second_cell_residual": 2.470696801149633,
+        "psi_fidelity": 0.5669767634011829,
+        "containment": 0.6240865366810507
+      },
+      "verdict": "TESTED_SOLVE_NO_SAME_CARRIER_ORBIT",
+      "winner": false
+    },
+    {
+      "id": 6,
+      "mechanism": "excitable or autocatalytic chi front",
+      "implementation": "positive reciprocal C19 bistable chi-orientation action",
+      "evidence": {
+        "rest_preserved": false,
+        "spectrum_improved": false,
+        "unit_strength_growth_rate": 1.084451899712685
+      },
+      "verdict": "TESTED_BISTABLE_ACTION_FAIL",
+      "winner": false
+    },
+    {
+      "id": 7,
+      "mechanism": "adiabatic make-before-break transfer",
+      "implementation": "native rest-rotation receiver wake plus transfer-wake continuation",
+      "evidence": {
+        "maximum_rest_wake_receiver_force": 2.5673302906523937e-15,
+        "maximum_rest_wake_phase_current": 2.420837282630292e-32,
+        "continued_wake_residual_rms": 0.0005754373853316681
+      },
+      "verdict": "NO_AUTONOMOUS_DARK_HANDOFF_FOUND",
+      "winner": false
+    },
+    {
+      "id": 8,
+      "mechanism": "complete-frame phase entrainment",
+      "implementation": "positive reciprocal joint Psi-chi phase-lock action at geometric scales",
+      "evidence": {
+        "rest_force_norm": 1776.248463373056,
+        "minimum_tested_growth_rate": 0.2860255636878454
+      },
+      "verdict": "TESTED_PHASE_LOCK_ACTION_FAIL",
+      "winner": false
+    },
+    {
+      "id": 9,
+      "mechanism": "autonomous topological pump",
+      "implementation": "one complete internal rest cycle and native action-derived launch-current control",
+      "evidence": {
+        "rest_step_center_shift": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_flux_controls": {
+          "Psi": -4.656612873077393e-10,
+          "chi": -7.275957614183426e-12,
+          "common": -5.820766091346741e-10
+        },
+        "directed_launch_mode": null
+      },
+      "verdict": "SIMPLE_INTERNAL_CYCLE_HAS_NO_AUTONOMOUS_PUMP",
+      "winner": false
+    },
+    {
+      "id": 10,
+      "mechanism": "two-copy relay or staggered handshake",
+      "implementation": "exact Hermitian copy-exchange involution separating face and edge transport",
+      "evidence": {
+        "best_one_cycle_error": 0.5740721807946656
+      },
+      "verdict": "SIMPLE_TWO_COPY_RELAY_FAIL",
+      "winner": false
+    }
+  ],
+  "winner_count": 0,
+  "verdict": "NO_TESTED_MECHANISM_IS_A_WINNER",
+  "claim_boundary": "Each verdict is scoped to the concrete tested implementation. Broad mechanism classes are not universal no-go theorems."
+}

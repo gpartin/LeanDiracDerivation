@@ -1,0 +1,45 @@
+{
+  "status": "V4_CHI_ORIENTATION_ACTION_PARTIAL_RESPONSE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "target_pattern": "same localized eight-site Psi carrier and its live complex-chi rest branch",
+  "candidate_action": "U_chi_dir = eta sum_(i,n in C19) w_n ||chi_i chi_i^dagger - chi_(i+n) chi_(i+n)^dagger||_F^2/(4 chi0^2)",
+  "derived_force": "F_chi_i = -(eta/chi0^2) sum_j w_ij (P_i-P_j) chi_i, P_i=chi_i chi_i^dagger, with the declared bidirectional C19 normalization",
+  "properties": {
+    "native_fields_only": true,
+    "positive": true,
+    "real_local_action": true,
+    "C19_cubic": true,
+    "reciprocal_chi_bonds": true,
+    "local_chi_phase_invariant": true,
+    "uniform_vacuum_energy": 0.0,
+    "contains_Dirac_or_corner_data": false
+  },
+  "first_departure": "the residual face-cone mode is an exterior transverse chi-orientation hinge",
+  "response_gate": {
+    "limiting_mode_chi_fraction": 0.9995268717349428,
+    "candidate_Hessian_curvature": 41.78016526583426,
+    "candidate_Hessian_image_norm_per_mode_norm": 43.690835088274234
+  },
+  "rest_branch_gate": {
+    "first_order_relative_Fredholm_obstruction": 6.78988402060798e-15,
+    "nearby_unrestricted_branch_exists": true,
+    "best_rows_preserve_Psi_carrier_fidelity": true,
+    "Psi_exterior_fraction": 0.0
+  },
+  "combined_face_and_chi_continuation": [
+    {"eta": 0.03, "growth_rate": 0.29066050432845475, "unstable_mode_count": 10},
+    {"eta": 0.1, "growth_rate": 0.2851507567788373, "unstable_mode_count": 12},
+    {"eta": 0.3, "growth_rate": 0.23986372458506103, "unstable_mode_count": 10},
+    {"eta": 1.0, "growth_rate": 0.10113804681864016, "unstable_mode_count": 4}
+  ],
+  "strong_coupling_control": {
+    "eta": 10.0,
+    "growth_rate": 0.3811237231640674,
+    "unstable_mode_count": 32,
+    "interpretation": "global stiffening eventually worsens the re-solved branch"
+  },
+  "verdict": "NECESSARY_CHI_ORIENTATION_CHANNEL_FOUND_BUT_V4_006_REMAINS_OPEN",
+  "next_requirement": "derive a localized or amplitude-sensitive chi-orientation coefficient/activation that transfers orientation at the carrier boundary without rigidifying the entire vacuum; re-solve and re-run side-five, timestep, conservation, nonlinear, and movement gates",
+  "claim_boundary": "The candidate is a research action direction only. Its coefficient has no native provenance, no stable finite window has been proved, and no nonlinear movement or Dirac-motion pass follows."
+}

@@ -1,0 +1,46 @@
+{
+  "status": "V4_CUBE_FLAVOR_COMMUTATOR_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_invariant": "one half the squared commutator of the native cube-corner covariance with the cubical orientation/flavor involution",
+  "geometry": {
+    "cube_corner_count": 8,
+    "orientation_reversal_invariant": true,
+    "selected_flavor_copy": false,
+    "Dirac_object_used": false
+  },
+  "rows": [
+    {
+      "channel": "psi",
+      "rest_energy": 20.77601232862153,
+      "rest_force_norm": 2.3370355580932567,
+      "rest_force_rms": 0.060341998639931595,
+      "phase_tangent_response": {
+        "curvature": 0.06185567010309279,
+        "image_norm_per_vector_norm": 0.063759365344603
+      }
+    },
+    {
+      "channel": "chi_contrast",
+      "rest_energy": 99.98194268524492,
+      "rest_force_norm": 6.6847533706340245,
+      "rest_force_rms": 0.17259958985312981,
+      "phase_tangent_response": {
+        "curvature": 0.0,
+        "image_norm_per_vector_norm": 0.0
+      }
+    },
+    {
+      "channel": "joint",
+      "rest_energy": 154.34722857430194,
+      "rest_force_norm": 8.99128982301932,
+      "rest_force_rms": 0.23215410496985373,
+      "phase_tangent_response": {
+        "curvature": 0.1118577347797334,
+        "image_norm_per_vector_norm": 0.12178134893389975
+      }
+    }
+  ],
+  "verdict": "CUBE_FLAVOR_INVARIANT_DEFORMS_REST",
+  "claim_boundary": "Rest force and one tangent response only. A rest-null channel would still require a full cross-block, spectrum, movement, and nonlinear test before action admission."
+}

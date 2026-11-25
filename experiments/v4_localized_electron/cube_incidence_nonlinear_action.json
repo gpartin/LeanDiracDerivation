@@ -1,0 +1,42 @@
+{
+  "status": "V4_CUBE_INCIDENCE_NONLINEAR_ACTION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_terms": [
+    "canonical V40 kinetic and potential action",
+    "four native density-activated positive bond energies at unit weight",
+    "area-bilinear phase square at 1/chi0^2",
+    "common density-oriented pair connection at B*chi0",
+    "unit cube-incidence symplectic completion"
+  ],
+  "rest_DEL_norm": 1.2977794189574362e-12,
+  "directional_matrix_checks": [
+    {
+      "sample": 0,
+      "mass_relative_error": 5.0803756996164785e-17,
+      "gyro_relative_error": 1.9949278197903176e-13,
+      "stiffness_relative_error": 3.161202191211077e-11
+    },
+    {
+      "sample": 1,
+      "mass_relative_error": 6.162911852751661e-17,
+      "gyro_relative_error": 2.288659883539349e-13,
+      "stiffness_relative_error": 3.931576054148327e-11
+    },
+    {
+      "sample": 2,
+      "mass_relative_error": 5.88415362101347e-17,
+      "gyro_relative_error": 2.5463857142371244e-13,
+      "stiffness_relative_error": 4.1828200873005954e-11
+    },
+    {
+      "sample": 3,
+      "mass_relative_error": 5.83704535920203e-17,
+      "gyro_relative_error": 2.238237403601994e-13,
+      "stiffness_relative_error": 3.376622092547241e-11
+    }
+  ],
+  "maximum_directional_relative_error": 4.1828200873005954e-11,
+  "verdict": "NONLINEAR_ACTION_REPRODUCES_LINEAR_CANDIDATE",
+  "claim_boundary": "Action reconstruction and tangent identity only. It does not admit the research action or prove nonlinear stability, motion, current matching, or V4-006."
+}

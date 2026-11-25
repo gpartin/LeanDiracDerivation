@@ -1,0 +1,49 @@
+{
+  "status": "V4_C27_BODY_GYRO_CHARGE_TANGENT_SOLVABILITY",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "finite_difference_step": 1e-06,
+  "jacobian_rank": 149,
+  "jacobian_dimension": 324,
+  "jacobian_nullity": 175,
+  "jacobian_condition_on_range": 193.0051545131921,
+  "rows": [
+    {
+      "name": "psi_clock",
+      "source_norm": 1399.0762481460813,
+      "tangent_norm": 5027.268318875903,
+      "relative_range_remainder": 0.0009052915273710863,
+      "psi_fraction": 0.43004173953833225,
+      "chi_fraction": 0.5699582604616679,
+      "carrier_fraction": 1.0,
+      "exterior_fraction": 0.0
+    },
+    {
+      "name": "chi_internal_clock",
+      "source_norm": 28825.542033427617,
+      "tangent_norm": 10220.690794206545,
+      "relative_range_remainder": 4.399986355256275e-05,
+      "psi_fraction": 0.4999999999925535,
+      "chi_fraction": 0.5000000000074466,
+      "carrier_fraction": 1.0,
+      "exterior_fraction": 0.0
+    }
+  ],
+  "tangent_overlap": 0.07013093724191183,
+  "full_field_family_tangents_independent": true,
+  "obstruction_singular_values": [
+    1.7924396003496492,
+    1.2514584457554804e-05
+  ],
+  "linked_clock_direction_dthetaPsi_dthetaChi": [
+    1.0,
+    -0.9986217651521451
+  ],
+  "linked_clock_relative_range_remainder": 6.359874643446312e-10,
+  "independent_clock_families_close": false,
+  "linked_clock_family_closes": true,
+  "verdict": "C27_BODY_GYRO_LINKED_CLOCK_FAMILY_TANGENT_PASS",
+  "claim_boundary": "First-order full-field Fredholm condition only. A passing tangent does not prove finite-amplitude continuation, nonlinear stability, or moving-carrier closure."
+}

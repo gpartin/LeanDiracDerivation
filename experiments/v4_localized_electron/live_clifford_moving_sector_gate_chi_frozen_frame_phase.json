@@ -1,0 +1,55 @@
+{
+  "status": "V4_LIVE_CLIFFORD_MOVING_SECTOR_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "link_source": "chi_frozen_frame_phase",
+  "joint_gauge": "Psi amplitudes use the live-Psi sector; chi amplitudes use the exact diagonal edge-link intertwiner into the live-chi sector",
+  "intertwiner_defect": 1.9710326105225497e-15,
+  "input": "fundamental periodic conditional edge wave derived only from the live-Psi link generators",
+  "rows": [
+    {
+      "sector": "live_plus",
+      "axis": 0,
+      "retained_real_rank": 996,
+      "response_norm": 3.1646459400907347,
+      "relative_cross_block": 0.12350199551094797
+    },
+    {
+      "sector": "live_plus",
+      "axis": 1,
+      "retained_real_rank": 996,
+      "response_norm": 3.1646459400906175,
+      "relative_cross_block": 0.09219449009961923
+    },
+    {
+      "sector": "live_plus",
+      "axis": 2,
+      "retained_real_rank": 996,
+      "response_norm": 3.1646459400907525,
+      "relative_cross_block": 0.083488870094179
+    },
+    {
+      "sector": "live_minus",
+      "axis": 0,
+      "retained_real_rank": 996,
+      "response_norm": 4.353624690097676,
+      "relative_cross_block": 0.0012744828197969631
+    },
+    {
+      "sector": "live_minus",
+      "axis": 1,
+      "retained_real_rank": 996,
+      "response_norm": 4.3536246900977815,
+      "relative_cross_block": 0.0012744828197963122
+    },
+    {
+      "sector": "live_minus",
+      "axis": 2,
+      "retained_real_rank": 996,
+      "response_norm": 4.353624690097697,
+      "relative_cross_block": 0.0012744828197938532
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_ACTION_MOVING_SECTOR_OPEN",
+  "claim_boundary": "Linear all-center phase-space action response. It is not a nonlinear carrier translation or V4-006 pass."
+}

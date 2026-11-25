@@ -1,0 +1,85 @@
+{
+  "status": "V4_CURRENT_ACTION_INVARIANT_GRAPH_COMPLETION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "flavor": "plus",
+      "undressed_real_rank": 1000,
+      "initial_relative_cross_block": 0.013923755609076664,
+      "generated_dressing_rank": 32,
+      "generated_dressing_channels": {
+        "Psi_fraction": 0.9999993059099485,
+        "chi_fraction": 6.940900514702776e-07,
+        "component_fractions": [
+          3.674411532010568e-25,
+          5.490046338431875e-25,
+          1.0
+        ]
+      },
+      "expanded_hull_rank": 1032,
+      "expanded_hull_relative_cross_block": 4.626747070751447e-12,
+      "same_rank_dressed_projection_min_singular": 0.923130344796914,
+      "same_rank_dressed_projection_condition": 1.0832706406374275,
+      "same_rank_dressed_tail_rms": 0.0083516981708841,
+      "same_rank_dressed_tail_operator_norm": 0.4165036384800839,
+      "same_rank_dressed_relative_cross_block": 3.967267877934112e-15,
+      "two_layer_same_rank_relative_cross_block": 0.002164159276578276,
+      "two_layer_generated_extra_rank": 32,
+      "two_layer_generated_channels": {
+        "Psi_fraction": 0.9471637516481375,
+        "chi_fraction": 0.05283624835186234,
+        "component_fractions": [
+          0.04403591509367419,
+          0.04403591509326551,
+          0.9119281698130601
+        ]
+      },
+      "two_layer_expanded_hull_rank": 1032,
+      "two_layer_expanded_hull_relative_cross_block": 1.690793108383701e-11,
+      "reduced_generalized_stiffness_min": -25.211500767376123,
+      "reduced_generalized_stiffness_max": 337.17722921341124
+    },
+    {
+      "flavor": "minus",
+      "undressed_real_rank": 1000,
+      "initial_relative_cross_block": 0.013923755609076665,
+      "generated_dressing_rank": 32,
+      "generated_dressing_channels": {
+        "Psi_fraction": 0.9999993059099485,
+        "chi_fraction": 6.940900514703588e-07,
+        "component_fractions": [
+          5.403120257024355e-25,
+          1.9772291152541097e-24,
+          1.0
+        ]
+      },
+      "expanded_hull_rank": 1032,
+      "expanded_hull_relative_cross_block": 4.570124628177842e-12,
+      "same_rank_dressed_projection_min_singular": 0.9231303447904919,
+      "same_rank_dressed_projection_condition": 1.0832706406449635,
+      "same_rank_dressed_tail_rms": 0.008351698170843122,
+      "same_rank_dressed_tail_operator_norm": 0.4165036384999642,
+      "same_rank_dressed_relative_cross_block": 6.859134375370009e-15,
+      "two_layer_same_rank_relative_cross_block": 0.0021641592765638887,
+      "two_layer_generated_extra_rank": 32,
+      "two_layer_generated_channels": {
+        "Psi_fraction": 0.9471637516493264,
+        "chi_fraction": 0.05283624835067336,
+        "component_fractions": [
+          0.044035915092920215,
+          0.04403591509320839,
+          0.9119281698138714
+        ]
+      },
+      "two_layer_expanded_hull_rank": 1032,
+      "two_layer_expanded_hull_relative_cross_block": 2.0144183152135303e-11,
+      "reduced_generalized_stiffness_min": -25.211500767376045,
+      "reduced_generalized_stiffness_max": 337.177229213411
+    }
+  ],
+  "configuration_verdict": "SAME_RANK_NATIVE_DRESSED_CONFIGURATION_SECTOR_PASS",
+  "two_layer_verdict": "SAME_RANK_NATIVE_TWO_LAYER_SECTOR_REQUIRES_PHASE_DRESSING",
+  "interpretation": "The action itself generates a finite out-of-plane Psi dressing of the carrier envelope. It can be reduced to a same-dimension, well-conditioned invariant configuration graph. The actual centered update adds a second finite response through its co-rotating gyro/time-layer structure; that phase dressing must be reduced before current can be compared.",
+  "claim_boundary": "This is a linear tangent result at the exact rest orbit. It does not prove nonlinear translation, current closure, or V4-006, and it changes no action."
+}

@@ -1,0 +1,47 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_face_wedge_laplacian_smooth",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 1e-06,
+  "chi_lift": "prior",
+  "chi_scales": {
+    "plus": [
+      0.0003479600832739469,
+      -5.499963616435744e-09
+    ],
+    "minus": [
+      0.0003044126836514495,
+      1.3588621367613447e-08
+    ]
+  },
+  "requested_updates": 1,
+  "all_solvers_converged": true,
+  "maximum_native_vs_dirac_relative_error": 0.0008694849157311939,
+  "maximum_outside_four_component_fraction": 2.2305233496052345e-05,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.0008694849157311939,
+          "outside_four_component_fraction": 2.2305233496052345e-05,
+          "native_norm_ratio": 0.9995013520461377,
+          "nonlinear_vs_local_tangent_relative_error": 0.005181102214448978
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "Four unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

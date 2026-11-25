@@ -1,0 +1,458 @@
+{
+  "status": "V4_C27_BODY_GYRO_LINEAR_100_CYCLE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "theta": 0.07423579507567751,
+  "steps_per_sampled_cycle": 85,
+  "cycles": [
+    0,
+    1,
+    10,
+    100
+  ],
+  "baseline": {
+    "psi_phase:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 2.868452359186005e-17
+      },
+      "1": {
+        "raw_state_amplification": 1.000000000050194,
+        "shape_residual": 5.196514700841645e-11
+      },
+      "10": {
+        "raw_state_amplification": 0.9999999998286495,
+        "shape_residual": 2.545976862139562e-09
+      },
+      "100": {
+        "raw_state_amplification": 4.701772899803747,
+        "shape_residual": 4.573435938585358
+      }
+    },
+    "psi_phase:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 2.868452359186005e-17
+      },
+      "1": {
+        "raw_state_amplification": 37.63797758603634,
+        "shape_residual": 32.21063294856577
+      },
+      "10": {
+        "raw_state_amplification": 144.27592352601891,
+        "shape_residual": 40.529933931098974
+      },
+      "100": {
+        "raw_state_amplification": 3074428084.510766,
+        "shape_residual": 3072753242.3706636
+      }
+    },
+    "chi_phase:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 1.2645124210555455e-16
+      },
+      "1": {
+        "raw_state_amplification": 1.0000000000013014,
+        "shape_residual": 2.206583937597227e-11
+      },
+      "10": {
+        "raw_state_amplification": 1.0000000007105514,
+        "shape_residual": 6.039974525255507e-09
+      },
+      "100": {
+        "raw_state_amplification": 22.085741032018937,
+        "shape_residual": 21.961175248551964
+      }
+    },
+    "chi_phase:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 1.2645124210555455e-16
+      },
+      "1": {
+        "raw_state_amplification": 170.00294115106067,
+        "shape_residual": 1.171674037383001e-09
+      },
+      "10": {
+        "raw_state_amplification": 1700.000294456406,
+        "shape_residual": 2.437434961805909e-06
+      },
+      "100": {
+        "raw_state_amplification": 20948.29366495213,
+        "shape_residual": 12204.591938913183
+      }
+    },
+    "translation_axis_0:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 5.97666591596727e-17
+      },
+      "1": {
+        "raw_state_amplification": 1.2137972871483325,
+        "shape_residual": 0.35316903803510746
+      },
+      "10": {
+        "raw_state_amplification": 3.7004260720082076,
+        "shape_residual": 3.2046023685906095
+      },
+      "100": {
+        "raw_state_amplification": 9655728553.849388,
+        "shape_residual": 9649130068.824787
+      }
+    },
+    "translation_axis_0:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 5.97666591596727e-17
+      },
+      "1": {
+        "raw_state_amplification": 213.56799017515903,
+        "shape_residual": 111.55579720924707
+      },
+      "10": {
+        "raw_state_amplification": 1343.0014385654993,
+        "shape_residual": 1233.4678055051954
+      },
+      "100": {
+        "raw_state_amplification": 3024430184464.4136,
+        "shape_residual": 3025806208307.6865
+      }
+    },
+    "translation_axis_1:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 4.068287820615827e-16
+      },
+      "1": {
+        "raw_state_amplification": 1.1571649474701546,
+        "shape_residual": 0.34975329521210197
+      },
+      "10": {
+        "raw_state_amplification": 4.382898200061518,
+        "shape_residual": 3.183070281291179
+      },
+      "100": {
+        "raw_state_amplification": 9713592807.22827,
+        "shape_residual": 9695527058.451523
+      }
+    },
+    "translation_axis_1:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 4.068287820615827e-16
+      },
+      "1": {
+        "raw_state_amplification": 253.70473648783369,
+        "shape_residual": 113.7961765913661
+      },
+      "10": {
+        "raw_state_amplification": 1261.3216074149561,
+        "shape_residual": 1169.934127023804
+      },
+      "100": {
+        "raw_state_amplification": 3065105776268.457,
+        "shape_residual": 3064798703380.294
+      }
+    },
+    "translation_axis_2:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 3.340018067950393e-16
+      },
+      "1": {
+        "raw_state_amplification": 0.915074895284234,
+        "shape_residual": 0.40823778922571924
+      },
+      "10": {
+        "raw_state_amplification": 4.178539638162002,
+        "shape_residual": 2.7720092020293188
+      },
+      "100": {
+        "raw_state_amplification": 7056076697.111025,
+        "shape_residual": 7012249896.694604
+      }
+    },
+    "translation_axis_2:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 3.340018067950393e-16
+      },
+      "1": {
+        "raw_state_amplification": 260.44605320585407,
+        "shape_residual": 113.66517885045394
+      },
+      "10": {
+        "raw_state_amplification": 1325.6567929355324,
+        "shape_residual": 1140.877202876466
+      },
+      "100": {
+        "raw_state_amplification": 3027787259081.723,
+        "shape_residual": 3022323333824.015
+      }
+    },
+    "random_carrier:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 0.9831062278420274
+      },
+      "1": {
+        "raw_state_amplification": 1.0857929928461854,
+        "shape_residual": 1.0329513263322816
+      },
+      "10": {
+        "raw_state_amplification": 4.139302916359934,
+        "shape_residual": 4.077819926196141
+      },
+      "100": {
+        "raw_state_amplification": 11751979471.373575,
+        "shape_residual": 11755104755.469473
+      }
+    },
+    "random_carrier:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 0.9831062278420274
+      },
+      "1": {
+        "raw_state_amplification": 242.28801066205617,
+        "shape_residual": 242.54278123751376
+      },
+      "10": {
+        "raw_state_amplification": 1935.3607220727424,
+        "shape_residual": 1930.4511141903815
+      },
+      "100": {
+        "raw_state_amplification": 2897564828218.4907,
+        "shape_residual": 2890267896040.992
+      }
+    }
+  },
+  "candidate": {
+    "psi_phase:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 2.868452359186005e-17
+      },
+      "1": {
+        "raw_state_amplification": 0.9999999999876963,
+        "shape_residual": 5.052566464580936e-11
+      },
+      "10": {
+        "raw_state_amplification": 0.9999999995054383,
+        "shape_residual": 3.359134209450855e-09
+      },
+      "100": {
+        "raw_state_amplification": 0.9999999908973088,
+        "shape_residual": 3.1665709927857843e-07
+      }
+    },
+    "psi_phase:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 2.868452359186005e-17
+      },
+      "1": {
+        "raw_state_amplification": 49.338643660043736,
+        "shape_residual": 32.79079889009281
+      },
+      "10": {
+        "raw_state_amplification": 174.1051956923763,
+        "shape_residual": 34.89594517606089
+      },
+      "100": {
+        "raw_state_amplification": 1225.5646274779212,
+        "shape_residual": 51.6022671970316
+      }
+    },
+    "chi_phase:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 1.2645124210555455e-16
+      },
+      "1": {
+        "raw_state_amplification": 0.9999999999964565,
+        "shape_residual": 4.7269469233182214e-11
+      },
+      "10": {
+        "raw_state_amplification": 0.9999999994750222,
+        "shape_residual": 2.784857260886012e-09
+      },
+      "100": {
+        "raw_state_amplification": 0.9999999458232816,
+        "shape_residual": 2.8757456505677446e-07
+      }
+    },
+    "chi_phase:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 1.2645124210555455e-16
+      },
+      "1": {
+        "raw_state_amplification": 182.11501920812003,
+        "shape_residual": 79.76047732498516
+      },
+      "10": {
+        "raw_state_amplification": 1581.1311973311008,
+        "shape_residual": 647.2227475546607
+      },
+      "100": {
+        "raw_state_amplification": 15753.136736862703,
+        "shape_residual": 6443.4796109374365
+      }
+    },
+    "translation_axis_0:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 5.97666591596727e-17
+      },
+      "1": {
+        "raw_state_amplification": 1.0103308840965586,
+        "shape_residual": 0.32144157304584997
+      },
+      "10": {
+        "raw_state_amplification": 2.123204271839734,
+        "shape_residual": 1.8932055348495
+      },
+      "100": {
+        "raw_state_amplification": 17.851198789891836,
+        "shape_residual": 16.183163227162897
+      }
+    },
+    "translation_axis_0:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 5.97666591596727e-17
+      },
+      "1": {
+        "raw_state_amplification": 233.368866468694,
+        "shape_residual": 153.19616163314836
+      },
+      "10": {
+        "raw_state_amplification": 678.5776933664952,
+        "shape_residual": 605.1798876862042
+      },
+      "100": {
+        "raw_state_amplification": 6200.094982326229,
+        "shape_residual": 5920.4331241527
+      }
+    },
+    "translation_axis_1:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 4.068287820615827e-16
+      },
+      "1": {
+        "raw_state_amplification": 0.9875434018532451,
+        "shape_residual": 0.32035121192277055
+      },
+      "10": {
+        "raw_state_amplification": 2.303767381713165,
+        "shape_residual": 1.9788727036844003
+      },
+      "100": {
+        "raw_state_amplification": 19.286085645205524,
+        "shape_residual": 16.527735175905818
+      }
+    },
+    "translation_axis_1:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 4.068287820615827e-16
+      },
+      "1": {
+        "raw_state_amplification": 185.05962162066757,
+        "shape_residual": 156.4982225694393
+      },
+      "10": {
+        "raw_state_amplification": 568.6973679570999,
+        "shape_residual": 523.5690100976441
+      },
+      "100": {
+        "raw_state_amplification": 5259.586101454179,
+        "shape_residual": 5092.674438217277
+      }
+    },
+    "translation_axis_2:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 3.340018067950393e-16
+      },
+      "1": {
+        "raw_state_amplification": 0.9576801215496146,
+        "shape_residual": 0.34777483983522
+      },
+      "10": {
+        "raw_state_amplification": 2.3184480845549307,
+        "shape_residual": 1.9047441863098862
+      },
+      "100": {
+        "raw_state_amplification": 18.086558707494696,
+        "shape_residual": 16.359880421531745
+      }
+    },
+    "translation_axis_2:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 3.340018067950393e-16
+      },
+      "1": {
+        "raw_state_amplification": 194.21065900285865,
+        "shape_residual": 167.6851734556748
+      },
+      "10": {
+        "raw_state_amplification": 568.4676038748984,
+        "shape_residual": 544.2105930059402
+      },
+      "100": {
+        "raw_state_amplification": 5521.688332697714,
+        "shape_residual": 5327.826995878769
+      }
+    },
+    "random_carrier:co_rotating_zero_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 0.9831062278420274
+      },
+      "1": {
+        "raw_state_amplification": 1.0747226058713109,
+        "shape_residual": 1.0417560443008138
+      },
+      "10": {
+        "raw_state_amplification": 2.374726682553098,
+        "shape_residual": 2.245791686263307
+      },
+      "100": {
+        "raw_state_amplification": 10.07241979302241,
+        "shape_residual": 7.7578383552243535
+      }
+    },
+    "random_carrier:co_rotating_velocity": {
+      "0": {
+        "raw_state_amplification": 1.0,
+        "shape_residual": 0.9831062278420274
+      },
+      "1": {
+        "raw_state_amplification": 232.438931420986,
+        "shape_residual": 229.46612964868942
+      },
+      "10": {
+        "raw_state_amplification": 417.80978150932077,
+        "shape_residual": 403.2180439703772
+      },
+      "100": {
+        "raw_state_amplification": 3727.1328843973624,
+        "shape_residual": 3710.864450205851
+      }
+    }
+  },
+  "baseline_maximum_100_cycle_amplification": 3065105776268.457,
+  "candidate_maximum_100_cycle_amplification": 15753.136736862703,
+  "baseline_maximum_100_cycle_shape_residual": 3064798703380.294,
+  "candidate_maximum_100_cycle_shape_residual": 6443.4796109374365,
+  "candidate_shape_bounded_after_phase_translation_alignment": false,
+  "verdict": "C27_BODY_GYRO_LINEAR_100_CYCLE_FAIL",
+  "claim_boundary": "Linearized carrier-supported controls only. It does not replace unrestricted nonlinear implicit-action evolution or box and perturbation refinement."
+}

@@ -1,0 +1,273 @@
+{
+  "status": "V4_PERSONAL_TOUCH_FULL_FRAME_DIAGNOSTIC",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "modes": [
+    {
+      "label": "canonical_V40",
+      "source_archive": "canonical_transfer_oscillator_spectrum_0_leading_mode.npz",
+      "eigenvalue": {
+        "real": 1.0040550541027622,
+        "imag": 0.00033797404192931196,
+        "modulus": 1.004055110985325
+      },
+      "configuration_observable_jvps": {
+        "rho_Psi": {
+          "coordinate_count": 8,
+          "rest_output_norm": 475.0044475825364,
+          "jvp_norm": 2.9534307082426565,
+          "jvp_rms": 1.044195440781485,
+          "dimensionless_relative_sensitivity": 1.8599722692087717
+        },
+        "rho_chi": {
+          "coordinate_count": 8,
+          "rest_output_norm": 475.0044475825364,
+          "jvp_norm": 0.6906774324189976,
+          "jvp_rms": 0.24419134803799328,
+          "dimensionless_relative_sensitivity": 0.434965637650607
+        },
+        "wedge_chi_cross_Psi": {
+          "coordinate_count": 48,
+          "rest_output_norm": 475.0044475825364,
+          "jvp_norm": 9.178179169183958,
+          "jvp_rms": 1.3247560534997436,
+          "dimensionless_relative_sensitivity": 5.780111478108591
+        },
+        "parallel_overlap_chi_dagger_Psi": {
+          "coordinate_count": 16,
+          "rest_output_norm": 0.0,
+          "jvp_norm": 2.033851144005425e-11,
+          "jvp_rms": 5.084627860013563e-12,
+          "dimensionless_relative_sensitivity": null
+        },
+        "unit_Psi_direction": {
+          "coordinate_count": 48,
+          "rest_output_norm": 2.8284271247461903,
+          "jvp_norm": 0.05392278457511709,
+          "jvp_rms": 0.007783083547474513,
+          "dimensionless_relative_sensitivity": 5.703017139268985
+        },
+        "unit_chi_direction": {
+          "coordinate_count": 48,
+          "rest_output_norm": 2.8284271247461903,
+          "jvp_norm": 0.0003129709463498124,
+          "jvp_rms": 4.517346503089903e-05,
+          "dimensionless_relative_sensitivity": 0.03310063983509217
+        },
+        "unit_joint_normal": {
+          "coordinate_count": 48,
+          "rest_output_norm": 2.8284271247461903,
+          "jvp_norm": 0.054234056297763206,
+          "jvp_rms": 0.007828011750689727,
+          "dimensionless_relative_sensitivity": 5.735938064684988
+        },
+        "complete_local_tripod": {
+          "coordinate_count": 144,
+          "rest_output_norm": 4.898979485566356,
+          "jvp_norm": 0.0764793927123947,
+          "jvp_rms": 0.006373282726032892,
+          "dimensionless_relative_sensitivity": 4.66999234921056
+        },
+        "C19_neighbor_tripod_transfer": {
+          "coordinate_count": 2592,
+          "rest_output_norm": 15.491933384829668,
+          "jvp_norm": 0.3366765474100516,
+          "jvp_rms": 0.0066129519372256015,
+          "dimensionless_relative_sensitivity": 6.501066420530246
+        }
+      },
+      "phase_space_observable_jvps": {
+        "Psi_layer_phase_step": {
+          "coordinate_count": 16,
+          "rest_output_norm": 2.82842712474619,
+          "jvp_norm": 0.00028666615377621565,
+          "jvp_rms": 7.166653844405391e-05,
+          "dimensionless_relative_sensitivity": 0.03037986101123186
+        },
+        "chi_layer_phase_step": {
+          "coordinate_count": 16,
+          "rest_output_norm": 2.82842712474619,
+          "jvp_norm": 1.2683711307617593e-06,
+          "jvp_rms": 3.170927826904398e-07,
+          "dimensionless_relative_sensitivity": 0.0001344174683882694
+        },
+        "relative_Psi_chi_clock_step": {
+          "coordinate_count": 16,
+          "rest_output_norm": 2.82842712474619,
+          "jvp_norm": 0.0002879237139978834,
+          "jvp_rms": 7.198092849947084e-05,
+          "dimensionless_relative_sensitivity": 0.030513132777864427
+        },
+        "relative_frame_velocity": {
+          "coordinate_count": 48,
+          "rest_output_norm": 9025.08450406819,
+          "jvp_norm": 3.273273386633733,
+          "jvp_rms": 0.47245631772605595,
+          "dimensionless_relative_sensitivity": 0.10871397088980601
+        },
+        "common_area_velocity": {
+          "coordinate_count": 48,
+          "rest_output_norm": 9025.08450406819,
+          "jvp_norm": 3.3045005500072198,
+          "jvp_rms": 0.4769635705209837,
+          "dimensionless_relative_sensitivity": 0.10975110666459924
+        },
+        "Psi_phase_rate": {
+          "coordinate_count": 8,
+          "rest_output_norm": 9018.868115459874,
+          "jvp_norm": 30.99652916765297,
+          "jvp_rms": 10.958927983847012,
+          "dimensionless_relative_sensitivity": 1.03018539103039
+        },
+        "chi_phase_rate": {
+          "coordinate_count": 8,
+          "rest_output_norm": 0.0,
+          "jvp_norm": 0.05453043930128069,
+          "jvp_rms": 0.019279421705508497,
+          "dimensionless_relative_sensitivity": null
+        },
+        "relative_phase_rate": {
+          "coordinate_count": 8,
+          "rest_output_norm": 9018.868115459874,
+          "jvp_norm": 30.942002342545436,
+          "jvp_rms": 10.939649839951958,
+          "dimensionless_relative_sensitivity": 1.0283731643019964
+        }
+      }
+    },
+    {
+      "label": "best_exact_rest_diagnostic",
+      "source_archive": "canonical_transfer_oscillator_spectrum_0_even_2_density_0p5_leading_mode.npz",
+      "eigenvalue": {
+        "real": 1.00029294441855,
+        "imag": 1.9963437914800706e-05,
+        "modulus": 1.000292944617761
+      },
+      "configuration_observable_jvps": {
+        "rho_Psi": {
+          "coordinate_count": 8,
+          "rest_output_norm": 475.0044475825364,
+          "jvp_norm": 0.6841748568452511,
+          "jvp_rms": 0.24189234039630622,
+          "dimensionless_relative_sensitivity": 0.4316782795028797
+        },
+        "rho_chi": {
+          "coordinate_count": 8,
+          "rest_output_norm": 475.0044475825364,
+          "jvp_norm": 0.0710552581649104,
+          "jvp_rms": 0.02512182744368447,
+          "dimensionless_relative_sensitivity": 0.04483212337807261
+        },
+        "wedge_chi_cross_Psi": {
+          "coordinate_count": 48,
+          "rest_output_norm": 475.0044475825364,
+          "jvp_norm": 8.718673842504604,
+          "jvp_rms": 1.2584321724866456,
+          "dimensionless_relative_sensitivity": 5.5010237313214
+        },
+        "parallel_overlap_chi_dagger_Psi": {
+          "coordinate_count": 16,
+          "rest_output_norm": 0.0,
+          "jvp_norm": 5.907764948722677e-10,
+          "jvp_rms": 1.4769412371806693e-10,
+          "dimensionless_relative_sensitivity": null
+        },
+        "unit_Psi_direction": {
+          "coordinate_count": 48,
+          "rest_output_norm": 2.8284271247461903,
+          "jvp_norm": 0.03411154032048947,
+          "jvp_rms": 0.004923576746626843,
+          "dimensionless_relative_sensitivity": 3.6144906048824974
+        },
+        "unit_chi_direction": {
+          "coordinate_count": 48,
+          "rest_output_norm": 2.8284271247461903,
+          "jvp_norm": 0.03870058366949601,
+          "jvp_rms": 0.00558594809984479,
+          "dimensionless_relative_sensitivity": 4.100749915208025
+        },
+        "unit_joint_normal": {
+          "coordinate_count": 48,
+          "rest_output_norm": 2.8284271247461903,
+          "jvp_norm": 0.05188000984133555,
+          "jvp_rms": 0.007488234411863879,
+          "dimensionless_relative_sensitivity": 5.497254195820732
+        },
+        "complete_local_tripod": {
+          "coordinate_count": 144,
+          "rest_output_norm": 4.898979485566356,
+          "jvp_norm": 0.07316329530941805,
+          "jvp_rms": 0.0060969412757848375,
+          "dimensionless_relative_sensitivity": 4.475879648863492
+        },
+        "C19_neighbor_tripod_transfer": {
+          "coordinate_count": 2592,
+          "rest_output_norm": 15.491933384829668,
+          "jvp_norm": 0.3085813941826725,
+          "jvp_rms": 0.006061111010404633,
+          "dimensionless_relative_sensitivity": 5.969732610525887
+        }
+      },
+      "phase_space_observable_jvps": {
+        "Psi_layer_phase_step": {
+          "coordinate_count": 16,
+          "rest_output_norm": 2.82842712474619,
+          "jvp_norm": 9.860558781094901e-05,
+          "jvp_rms": 2.4651396952737253e-05,
+          "dimensionless_relative_sensitivity": 0.010449870042788141
+        },
+        "chi_layer_phase_step": {
+          "coordinate_count": 16,
+          "rest_output_norm": 2.82842712474619,
+          "jvp_norm": 2.5661354421848295e-07,
+          "jvp_rms": 6.415338605462074e-08,
+          "dimensionless_relative_sensitivity": 2.7194992168635055e-05
+        },
+        "relative_Psi_chi_clock_step": {
+          "coordinate_count": 16,
+          "rest_output_norm": 2.82842712474619,
+          "jvp_norm": 9.886176266864012e-05,
+          "jvp_rms": 2.471544066716003e-05,
+          "dimensionless_relative_sensitivity": 0.010477018544516402
+        },
+        "relative_frame_velocity": {
+          "coordinate_count": 48,
+          "rest_output_norm": 9025.08450406819,
+          "jvp_norm": 123.47314111597605,
+          "jvp_rms": 17.821812815249356,
+          "dimensionless_relative_sensitivity": 4.100865978310293
+        },
+        "common_area_velocity": {
+          "coordinate_count": 48,
+          "rest_output_norm": 9025.08450406819,
+          "jvp_norm": 123.50706358940205,
+          "jvp_rms": 17.826709102540377,
+          "dimensionless_relative_sensitivity": 4.101992632381904
+        },
+        "Psi_phase_rate": {
+          "coordinate_count": 8,
+          "rest_output_norm": 9018.868115459874,
+          "jvp_norm": 4.674194129022213,
+          "jvp_rms": 1.6525771826069775,
+          "dimensionless_relative_sensitivity": 0.15534921605299173
+        },
+        "chi_phase_rate": {
+          "coordinate_count": 8,
+          "rest_output_norm": 0.0,
+          "jvp_norm": 0.011032456477062543,
+          "jvp_rms": 0.003900562394038186,
+          "dimensionless_relative_sensitivity": null
+        },
+        "relative_phase_rate": {
+          "coordinate_count": 8,
+          "rest_output_norm": 9018.868115459874,
+          "jvp_norm": 4.663173152416183,
+          "jvp_rms": 1.6486806789602664,
+          "dimensionless_relative_sensitivity": 0.1549829282975785
+        }
+      }
+    }
+  ],
+  "verdict": "FULL_FRAME_SOFT_MODE_MEASURED",
+  "claim_boundary": "Directional derivatives of declared observables at the exact rest orbit. This diagnoses action sensitivity; it is not an action repair, stability pass, or movement pass."
+}

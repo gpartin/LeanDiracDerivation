@@ -1,0 +1,147 @@
+{
+  "schema": "lfm.v4.carrier_hopf_geometry_probe.v1",
+  "scope": "kinematic geometry only; no action or transport claim",
+  "construction": {
+    "basis_free_object": "P(z)=z z^dagger for each normalized C2 ray",
+    "orientation_inner": "2 Tr(P_i P_j)-1",
+    "corner_order": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "c19_corner_adjacency": "Hamming distance 1 (faces) or 2 (edges)",
+    "excluded_corner_adjacency": "Hamming distance 3 (body diagonal)"
+  },
+  "by_hamming_distance": {
+    "1": {
+      "pair_count": 12,
+      "target": -0.3333333333333333,
+      "minimum": -0.3333333333333336,
+      "maximum": -0.33333333333333315,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    "2": {
+      "pair_count": 12,
+      "target": -0.3333333333333333,
+      "minimum": -0.3333333333333336,
+      "maximum": -0.33333333333333315,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    "3": {
+      "pair_count": 4,
+      "target": 1.0,
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "max_abs_error": 0.0
+    }
+  },
+  "sign_pair_projector_defects": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "orientation_rank": 3,
+  "orientation_sum": [
+    6.661338147750939e-16,
+    0.0,
+    6.661338147750939e-16
+  ],
+  "orientation_frame": [
+    [
+      2.6666666666666665,
+      5.999919964017257e-19,
+      -2.1094860504547555e-16
+    ],
+    [
+      5.999919964017257e-19,
+      2.6666666666666674,
+      1.3238966709832841e-17
+    ],
+    [
+      -2.1094860504547555e-16,
+      1.3238966709832841e-17,
+      2.6666666666666656
+    ]
+  ],
+  "orientation_frame_target": [
+    [
+      2.6666666666666665,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      2.6666666666666665,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      2.6666666666666665
+    ]
+  ],
+  "checks": {
+    "all_ray_norms_unity": true,
+    "sign_pairs_identical_as_projectors": true,
+    "orientation_span_is_three": true,
+    "orientation_sum_is_zero": true,
+    "orientation_frame_is_isotropic": true,
+    "all_c19_corner_pairs_are_tetrahedral": true,
+    "all_excluded_body_diagonals_identify_same_orientation": true
+  },
+  "verdict": "C19_TETRAHEDRAL_ORIENTATION_GEOMETRY_PASS",
+  "claim_boundary": {
+    "proved_by_this_probe": [
+      "the signed eight-ray preparation is a two-to-one lift of four orientations",
+      "those four orientations span three real dimensions as an isotropic tight frame",
+      "every C19 face/edge corner pair has orientation inner product -1/3",
+      "every excluded body-diagonal pair has identical orientation"
+    ],
+    "not_proved": [
+      "that the native action derives this orientation as a dynamical field",
+      "that the localized rest orbit is stable",
+      "that phase charge moves in all three directions",
+      "that either Clifford copy is a leading or trailing physical particle",
+      "that the carrier completes an unrestricted edge-to-edge handoff"
+    ],
+    "admissible_use": "screen basis-free reciprocal actions built from native projectors or frame connections; never install a Pauli map or conditional shift"
+  }
+}

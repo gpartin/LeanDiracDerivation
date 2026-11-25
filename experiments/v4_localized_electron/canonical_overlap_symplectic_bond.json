@@ -1,0 +1,160 @@
+{
+  "status": "V4_CANONICAL_OVERLAP_SYMPLECTIC_GATE",
+  "mode": "bond",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "screen_strength": 1.0,
+  "coefficient_provenance": "unit geometric normalization only; no coefficient selected",
+  "rows": [
+    {
+      "fraction_of_rest_norm": 0.0,
+      "rest_one_form_value": 1.0740745488482874e-28,
+      "rest_one_form_first_variation_norm": 2.8884226033807346e-12,
+      "rest_DEL_rms": 1.831009888180249e-14,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            1.0659926131089812e-06,
+            7.811490860300095e-07,
+            1.139345230908218e-17
+          ],
+          "relative_third_singular_value": 1.0688115629481737e-11
+        },
+        {
+          "axis": 1,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            1.0659926130984793e-06,
+            7.811490860270676e-07,
+            1.7566681943946244e-17
+          ],
+          "relative_third_singular_value": 1.6479177930591706e-11
+        },
+        {
+          "axis": 2,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            1.0659926131122023e-06,
+            1.0659926131000746e-06,
+            2.0679805640751373e-18
+          ],
+          "relative_third_singular_value": 1.9399576869839617e-12
+        }
+      ],
+      "axis_ranks": [
+        2,
+        2,
+        2
+      ],
+      "minimum_relative_third_singular_value": 1.9399576869839617e-12
+    },
+    {
+      "fraction_of_rest_norm": 0.003,
+      "rest_one_form_value": -9.975854958244124e-26,
+      "rest_one_form_first_variation_norm": 1.6217495845693793e-10,
+      "rest_DEL_rms": 1.9970931978233884e-14,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            1.0473397933195336e-06,
+            7.796943527661707e-07,
+            8.18751225426182e-18
+          ],
+          "relative_third_singular_value": 7.817436429405187e-12
+        },
+        {
+          "axis": 1,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            1.0473397933263802e-06,
+            7.796943527721564e-07,
+            1.1485517701507698e-17
+          ],
+          "relative_third_singular_value": 1.0966371921217065e-11
+        },
+        {
+          "axis": 2,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 2,
+          "singular_values": [
+            1.0653510154731838e-06,
+            1.0290133619994903e-06,
+            1.4040036018150087e-17
+          ],
+          "relative_third_singular_value": 1.317878878813862e-11
+        }
+      ],
+      "axis_ranks": [
+        2,
+        2,
+        2
+      ],
+      "minimum_relative_third_singular_value": 7.817436429405187e-12
+    }
+  ],
+  "verdict": "CANONICAL_OVERLAP_SYMPLECTIC_DOES_NOT_CLOSE_TRANSPORT",
+  "claim_boundary": "Unit-strength linear response screen on canonical rest states. No coefficient admission, nonlinear motion, stability, or Dirac-current claim."
+}

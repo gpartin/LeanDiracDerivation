@@ -1,0 +1,417 @@
+{
+  "status": "V4_006_NOT_PASSED",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rest_candidate": {
+    "action": "bare V40 plus unit carrier-carrier chi and Psi tight-frame bonds",
+    "seven_shift_resolved_band": "PASS",
+    "ten_cycle_zero_charge_rest": "PASS",
+    "maximum_ten_cycle_shape_residual": 1.9576643018968973e-14
+  },
+  "translation_tangent": {
+    "verdict": "NATIVE_NEUTRAL_TRANSLATION_MODE_ABSENT",
+    "axis_residuals": [
+      0.0006389740906723491,
+      0.0006397794635719512,
+      0.0006797239597814137
+    ],
+    "best_interface_augmented_improvement": "less than 0.1 percent"
+  },
+  "inverse_position_action": {
+    "basis_size": 9,
+    "nonnegative_relative_residual": 0.16136849608712764,
+    "unconstrained_relative_residual": 0.15839140490370313,
+    "verdict": "POSITIVE_POSITION_ACTION_BASIS_DEFICIENT"
+  },
+  "finite_relative_orbit": {
+    "updates_2_final_residual": 0.915463934340188,
+    "updates_4_final_residual": 0.6858655429159619,
+    "updates_8_final_residual": 0.19701036246457995,
+    "updates_8_unreset_second_cell_residual": 1.3107575895472678,
+    "verdict": "NO_ORBIT_CONVERGED_FROM_TESTED_SEEDS"
+  },
+  "joint_kinetic_connection": {
+    "action": "tight-frame potential plus native density-mold C19 kinetic square",
+    "implicit_rest_spectral_radius": 1.003105020103352,
+    "growth_rate_per_unit_time": 0.7936536278797369,
+    "verdict": "COMBINED_IMPLICIT_REST_SPECTRUM_FAIL"
+  },
+  "dirac_comparison": {
+    "conditional_discrete_transport_operator": "available",
+    "same_state_comparison": "BLOCKED_NO_NATIVE_MOVING_BRANCH",
+    "reason": "Dirac transport cannot validate a native trajectory that the action does not generate"
+  },
+  "movement_target_correction": {
+    "rigid_whole_carrier_snap": "REJECTED_AS_MASSIVE_DIRAC_TARGET",
+    "tested_action_snap_residual_range": [
+      0.9987528061075575,
+      0.9990472029000449
+    ],
+    "correct_dirac_target": "oppositely signed gamma channels inside each four-component copy plus local beta mixing",
+    "conditional_walk_smallest_dt_state_error": 2.4405493338887056e-06,
+    "rigid_shift_smallest_dt_state_error": 0.014154641307514194,
+    "physical_bridge": "translation-equivariant spatial lift survives; current-action nearest-27-center cross blocks are 0.08655361494842648 and 0.08425437060492824, so two-layer invariance and native current remain open"
+  },
+  "invariant_graph_completion": {
+    "all_center_undressed_cross_block": 0.013923755609076665,
+    "zero_momentum_cross_block": 0.056553134570954906,
+    "generated_configuration_dressing_rank": 32,
+    "generated_configuration_channel": "out-of-plane Psi",
+    "same_rank_dressed_configuration_cross_blocks": [
+      3.967267877934112e-15,
+      6.859134375370009e-15
+    ],
+    "same_rank_projection_min_singular": 0.9231303447904919,
+    "two_layer_same_rank_cross_block": 0.002164159276578276,
+    "two_layer_generated_phase_rank": 32,
+    "expanded_two_layer_hull_cross_block": 2.0144183152135303e-11,
+    "verdict": "CONFIGURATION_BRIDGE_CLOSED_TIME_LAYER_GRAPH_OPEN"
+  },
+  "two_layer_spectrum": {
+    "invariant_configuration_hull_rank": 1032,
+    "phase_space_dimension": 2064,
+    "maximum_growth_rate_dt": 1.036009262748103,
+    "maximum_growth_rate_dt_over_2": 1.0360115761769078,
+    "maximum_growth_rate_dt_over_4": 1.0360121550639956,
+    "growth_rate_refinement_relative_change": 5.587647644782572e-07,
+    "growing_multiplier_count": 184,
+    "growing_modes_with_target_overlap_above_0p99": 164,
+    "fastest_mode_target_overlap": 0.9999958773292262,
+    "fastest_mode_generalized_stiffness": -1.0807423181893132,
+    "tight_frame_stiffness_contribution": "below 4e-17 in magnitude",
+    "fastest_mode_channel": "charge-neutral in-plane Psi amplitude/phase",
+    "Psi_charge_normalized_tangent": 5.2932675516367055e-15,
+    "chi_charge_normalized_tangent": 8.32876705032703e-15,
+    "verdict": "CURRENT_ACTION_HAS_CONVERGED_NATIVE_GROWING_MODE"
+  },
+  "complete_pair_action_screen": {
+    "positive_static_pair_curvature_range": [
+      7.409556081825323,
+      8.564953790611595
+    ],
+    "positive_static_pair_rest_force_norm_range": [
+      1125.9265497030312,
+      1209.5870585536545
+    ],
+    "positive_rest_preserving_transport_residual": 0.9906149726571394,
+    "signed_unconstrained_oracle_residual": 0.0009709251670073685,
+    "verdict": "STATIC_PAIR_COMPLEMENT_NOT_ADMISSIBLE"
+  },
+  "complete_pair_wave_action": {
+    "rest_DEL_norm": 1.0833320273971407e-13,
+    "geometric_coefficients": [1.0, 19.0, 361.0],
+    "maximum_growth_rates": [
+      0.9814245860395624,
+      0.4202081960479127,
+      0.2812186163608697
+    ],
+    "verdict": "REST_PRESERVED_BUT_GROWTH_REMAINS"
+  },
+  "density_oriented_pair_connection": {
+    "action": "density-contrast-oriented common and relative joint Psi-chi pair one-forms on unoriented C19 bonds",
+    "maximum_rest_DEL_norm": 3.9642568859722505e-17,
+    "common_three_axis_response_norms": [
+      5.363873268242166e-06,
+      5.364531477467265e-06,
+      3.4756006217995638e-06
+    ],
+    "relative_three_axis_response_norms": [
+      3.6058719866723903e-06,
+      3.6053578572110367e-06,
+      6.659868208027824e-06
+    ],
+    "natural_coefficient": 22743.0,
+    "natural_coefficient_provenance": "B times chi0",
+    "baseline_maximum_growth_rate": 1.0360121550639956,
+    "natural_common_maximum_growth_rate": 0.07102133857684617,
+    "growth_reduction_percent": 93.144739,
+    "remaining_growing_multiplier_count": 184,
+    "verdict": "DERIVED_THREE_AXIS_TRANSPORT_CHANNEL_REDUCES_BUT_DOES_NOT_CLOSE_INSTABILITY"
+  },
+  "residual_inverse_calculation": {
+    "natural_common_residual": {
+      "Psi_power_fraction": 0.9980842627616478,
+      "carrier_power_fraction": 0.9999999999999998,
+      "in_plane_C3_power_fraction": 1.0,
+      "ray_projection_fraction": 0.9672584158955423,
+      "ray_phase_fraction": 0.9999999999893322,
+      "corner_character": "001",
+      "character_power_fraction": 0.9999999999999997,
+      "restricted_C19_graph_eigenvalue": 7.999999999999999
+    },
+    "common_connection_bifurcation": {
+      "best_screened_factor": 0.95,
+      "best_screened_growth_rate": 0.0675966291212436,
+      "verdict": "NONZERO_MODE_SWITCH_PLATEAU"
+    },
+    "plateau_mode": {
+      "chi_power_fraction": 0.9337113993860852,
+      "third_C3_component_power_fraction": 0.9315352061885827,
+      "carrier_power_fraction": 0.9315352061885865,
+      "first_C19_shell_power_fraction": 0.06245319900872407,
+      "verdict": "OUT_OF_PLANE_CHI_INTERFACE_MODE"
+    },
+    "native_scalar_connection_response_rank": 5,
+    "unit_chi_interface_growing_count": 30,
+    "best_complete_screen": {
+      "common_factor": 0.9,
+      "chi_interface_terms": "carrier-vacuum and vacuum-vacuum at unit coefficient",
+      "phase_term": "area-bilinear positive square at 1/chi0^2",
+      "maximum_growth_rate": 0.06310919770994765,
+      "growing_multiplier_count": 29
+    },
+    "verdict": "TWO_CHANNEL_MECHANISM_IDENTIFIED_JOINT_SPECTRAL_CLOSURE_OPEN"
+  },
+  "cube_geometry_bifurcation": {
+    "six_response_rank": 5,
+    "six_response_continuous_growth_rate": 0.06257568816766318,
+    "six_response_growing_multiplier_count": 29,
+    "residual_character": "001",
+    "restricted_C19_character_eigenvalue": 7.999999999999999,
+    "residual_carrier_power_fraction": 0.9999999999999998,
+    "residual_Psi_power_fraction": 0.9565723516897049,
+    "seventh_cube_phase_continuous_growth_rate": 0.0601105856115273,
+    "seventh_cube_phase_continuous_growing_count": 27,
+    "geometric_phase_factor": 1.5,
+    "geometric_phase_factor_provenance": "restricted C19 eigenvalue ratio 12/8",
+    "geometric_phase_growth_rate": 0.06088643286364899,
+    "geometric_phase_growing_count": 27,
+    "verdict": "TESTED_POSITION_ONLY_SCALAR_CONNECTION_SCREEN_RETAINS_GROWTH"
+  },
+  "cube_incidence_symplectic_candidate": {
+    "action_combination": "A_area_common_C19_gradient - 4 A_tensor_common_local + 4 A_tensor_relative_local - 4 A_area_common_local",
+    "internal_coefficients": [-4.0, 4.0, -4.0, 1.0],
+    "internal_coefficient_provenance": "exact rest-force nullspace of the native C19 incidence action",
+    "preferred_overall_coefficient": 1.0,
+    "rest_DEL_norm": 1.5010288547069622e-14,
+    "minimum_full_mass_eigenvalue": 0.9717878882633597,
+    "full_configuration_dimension": 1500,
+    "full_phase_space_dimension": 3000,
+    "maximum_multiplier_modulus": 1.0000000464893057,
+    "growing_multiplier_count_at_1e_minus_7": 0,
+    "fixed_pencil_refinement_divisors": [1, 2, 4],
+    "verdict": "LINEAR_REST_SPECTRUM_PASS_NONLINEAR_MOTION_OPEN"
+  },
+  "cube_incidence_nonlinear_gate": {
+    "rest_DEL_norm": 1.2978e-12,
+    "maximum_directional_matrix_relative_error": 4.18e-11,
+    "implicit_exact_rest_relative_error": 2e-17,
+    "one_percent_first_update_gain": 0.999933,
+    "one_cycle_updates_converged": "85 of 85",
+    "one_cycle_maximum_pattern_defect": 0.056555755,
+    "one_cycle_minimum_containment": 0.999999999999999,
+    "one_cycle_relative_energy_drift": 2.6994e-5,
+    "verdict": "ONE_CYCLE_PRELIMINARY_PASS_100_CYCLE_GATE_OPEN"
+  },
+  "quiet_receiver_handoff_gate": {
+    "corrected_cut_result": "instantaneous exterior current is zero",
+    "first_update_result": "all tested native phase launches leave exterior Psi exactly zero",
+    "eight_update_result": "exterior Psi remains exactly zero while density redistributes inside the original eight sites",
+    "common_launch_axes_and_signs": 6,
+    "solver_failures_before_eight_updates": 3,
+    "interface_mean_basis_rest_force_rank": 4,
+    "interface_mean_basis_rest_nullity": 0,
+    "verdict": "CURRENT_STABLE_ACTION_HAS_COMPACT_SUPPORT_HANDOFF_OBSTRUCTION"
+  },
+  "component_selective_dirac_envelope": {
+    "nearest_27_center_cross_blocks": {
+      "plus": 0.04799483213382168,
+      "minus": 0.047438608148131195
+    },
+    "all_125_center_cross_block_both_copies": 0.009251309124417375,
+    "complete_plus_minus_image_projector_defect": 1.930683833290929e-10,
+    "same_rank_exact_configuration_dressing_cross_block": 6.47e-15,
+    "same_rank_exact_dressing_projection_min_singular": 5.25e-9,
+    "same_rank_exact_dressing_two_layer_cross_block": 0.005512938704688291,
+    "better_conditioned_graph_projection_min_singular": 0.017892963782433907,
+    "better_conditioned_graph_configuration_cross_block": 0.00807833152210845,
+    "better_conditioned_graph_two_layer_cross_block": 0.00016309504664692944,
+    "better_conditioned_graph_two_layer_residual_rank": 55,
+    "verdict": "PROPER_DIRAC_TAIL_IMPROVES_BUT_DOES_NOT_CLOSE_NATIVE_SECTOR"
+  },
+  "same_image_two_layer_graph": {
+    "spatial_rank": 1000,
+    "resolved_memory_control_rank": 16,
+    "uncontrolled_current_layer_relative_leakage": 6.045406065643042e-06,
+    "fraction_of_original_leakage_remaining": 0.9999666650065456,
+    "bounded_previous_graph_operator_norm": 1.0127604094440767,
+    "relative_graph_reproduction_defect": 0.9921103010005241,
+    "aggressive_cutoff_previous_graph_norm_range": [
+      45907522.99238229,
+      2223653903.7343354
+    ],
+    "aggressive_cutoff_reproduction_defect_range": [
+      10028559371.640331,
+      18545218494297.98
+    ],
+    "action_ablation": "the density-oriented connection supplies the 16 resolved memory directions; the unit cube-incidence completion supplies none at this boundary",
+    "verdict": "SAME_SPATIAL_IMAGE_TWO_LAYER_GRAPH_FAIL"
+  },
+  "corrected_extended_packet_motion": {
+    "interpretation": "the eight-corner algebra is an internal fiber of a self-contained joint Psi-chi envelope, not the complete compact spatial support",
+    "comparison_frame": "carrier co-rotating frame with the positive-frequency rest phase removed",
+    "tested_directions": "both signs of x, y, z and one diagonal for both copies",
+    "maximum_native_vs_c19_dirac_errors": [
+      0.003625005306251965,
+      0.0009681636724165703,
+      0.00024656176986371587
+    ],
+    "maximum_outside_spatial_lift_fractions": [
+      6.753241209620744e-05,
+      1.6901689461229932e-05,
+      4.226083398679601e-06
+    ],
+    "observed_error_orders": [
+      1.904660239627938,
+      1.973301839272231
+    ],
+    "verdict": "EXTENDED_PACKET_CONTINUUM_TANGENT_SURVIVES"
+  },
+  "extended_packet_completion_gates": {
+    "width_and_momentum_screen": {
+      "widths": [0.95, 1.15, 1.35, 1.6],
+      "carrier_wave_numbers": [0.2, 0.35],
+      "maximum_dt_over_4_state_error": 0.00033731692153830876,
+      "verdict": "EXTENDED_PACKET_WIDTH_ROBUST"
+    },
+    "positive_frequency_current": {
+      "dt": 0.00048828125,
+      "maximum_density_relative_error": 0.00005461543179185468,
+      "maximum_current_relative_error": 0.003088754533076294,
+      "verdict": "EXTENDED_PACKET_DIRAC_CURRENT_PASS"
+    },
+    "raw_nonlinear_phase_charge_control": {
+      "maximum_relative_conservation_defect": 0.0060674443382176075,
+      "maximum_center_shift_mismatch": 0.014120583190038217,
+      "verdict": "RAW_PHASE_CHARGE_IS_NOT_THE_POSITIVE_FREQUENCY_DIRAC_CHARGE"
+    },
+    "nonlinear_short_run": {
+      "amplitude_fraction_of_rest_norm": 0.0001,
+      "updates": 4,
+      "cases": "both copies, both signs, x and diagonal",
+      "all_solvers_converged": true,
+      "maximum_native_state_vs_dirac_lift_error": 0.025443715667524094,
+      "maximum_outside_packet_lift_fraction": 0.000664284804307723,
+      "verdict": "EXTENDED_PACKET_NONLINEAR_SHORT_RUN_PASS"
+    },
+    "generic_box_action": {
+      "side_five_action_identity_absolute_difference": 0.0,
+      "maximum_rest_DEL_RMS_sides_5_6_7": 3.3508520511152586e-14,
+      "maximum_normalized_packet_DEL_residual_sides_5_7_9": [
+        0.0010886298283678201,
+        0.001082488881021705,
+        0.0010823265292671598
+      ],
+      "verdict": "GENERIC_ACTION_AND_BOX_REFINEMENT_PASS"
+    },
+    "long_tangent_gate": {
+      "maximum_100_cycle_phase_aligned_shape_error": 4.69113863680777,
+      "maximum_100_cycle_norm_drift": 3.721009711150394,
+      "ten_cycle_shape_error_dt_over_8": 2.3563717761328378,
+      "ten_cycle_shape_error_dt_over_16": 2.3566741022699946,
+      "native_first_step_history_ten_cycle_shape_error": 2.355785457286638,
+      "verdict": "CONTINUUM_PERSISTENT_NATIVE_SECTOR_FAILURE"
+    },
+    "long_tangent_RCA": {
+      "one_cycle_relative_defect": 0.5873664373821328,
+      "Psi_power_fraction": 0.9999996659619135,
+      "chi_power_fraction": 3.340380867169372e-7,
+      "carrier_site_power_fraction": 0.9822352494332539,
+      "phase_translation_symmetry_fraction": 0.03346393679839208,
+      "best_existing_term_span_shape_error": 0.17018344481441983,
+      "best_existing_term_span_density_factor": 20.0,
+      "best_existing_term_span_cube_factor": 0.25,
+      "verdict": "EXISTING_CONNECTION_SPAN_LONG_TRANSPORT_DEFICIENT"
+    },
+    "repository_action_basis_screen": {
+      "tested_reciprocal_invariants": 7,
+      "response_rank": 6,
+      "unrepaired_relative_endpoint_error": 0.5873664373821328,
+      "best_linearized_repository_basis_relative_error": 0.2810339939814242,
+      "verdict": "EXISTING_REPOSITORY_ACTION_BASIS_DEFICIENT"
+    },
+    "complete_frame_inverse_screen": {
+      "native_frame": "s = chi^dagger Psi together with W = chi wedge Psi",
+      "new_exact_rest_null_directions": 2,
+      "maximum_new_rest_DEL_norm": 3.807799791688928e-15,
+      "complete_frame_only_best_relative_error": 0.3258048514532355,
+      "complete_frame_plus_repository_response_rank": 8,
+      "complete_frame_plus_repository_best_relative_error": 0.19169856313719216,
+      "relative_improvement_over_baseline": 0.6736303763088942,
+      "coefficients_admitted": false,
+      "verdict": "COMPLETE_FRAME_RESPONSE_MATERIAL_BUT_INSUFFICIENT"
+    },
+    "c19_hodge_connection_screen": {
+      "operator": "D(tau,W)=(-div19 W, grad19 tau+curl19 W)",
+      "scalar_square_identity_relative_error": 1.9877659477122888e-16,
+      "vector_square_identity_relative_error": 1.9241558111716934e-16,
+      "exact_old_rest_orbit_preserved": false,
+      "activated_relative_branch_fredholm_residual": 2.269111348940975e-10,
+      "activated_relative_branch_tangent_over_rest": 0.06891968196994486,
+      "nonlinear_stationarity_convergence_order": 1.9999964011712086,
+      "single_direction_best_relative_error": 0.46856494286503675,
+      "full_action_response_rank": 10,
+      "full_span_best_relative_error": 0.17885943802061205,
+      "activated_configuration_rank": 32,
+      "activated_hodge_cross_block": 0.9354143466934887,
+      "unactivated_configuration_rank": 500,
+      "unactivated_configuration_condition_number": 1.0367218738732782,
+      "unactivated_phase_space_rank": 1000,
+      "unactivated_phase_space_hodge_cross_block": 0.782774018115645,
+      "unactivated_branch_full_span_best_relative_error": 0.1783271290732456,
+      "coefficient_admitted": false,
+      "verdict": "HODGE_BRANCH_AND_PHASE_SPACE_EXIST_BUT_FREQUENCY_GRADED_SECTOR_IS_OPEN"
+    },
+    "complete_cubical_cochain_screen": {
+      "reduced_tau_W_beta_anticommutant_dimension": 0,
+      "complete_cochain_complex_dimension": 8,
+      "complete_generator_square_defect": 0.0,
+      "complete_cross_axis_anticommutator_defect": 0.0,
+      "corner_parity_beta_anticommutator_defect": 0.0,
+      "four_component_copy_ranks": [4, 4],
+      "maximum_copy_transport_leakage": 0.0,
+      "fixed_center_zero_momentum_one_step_error_range": [
+        0.0242454236337108,
+        0.04778943128088416
+      ],
+      "fixed_center_fourier_transport_increment_worst_error": 13.801912679932249,
+      "verdict": "COMPLETE_CUBE_SUPPLIES_EXACT_CLIFFORD_GRADING_BUT_FIXED_CENTER_LINEARIZATION_IS_NOT_A_MOVING_CARRIER"
+    },
+    "finite_relative_orbit_screen": {
+      "rigid_one_update_best_DEL_norm_over_state_norm": 6259.622486056307,
+      "fractional_translation_endpoint_defect": 1.864775879948077e-16,
+      "fractional_best_updates_per_cell": 64,
+      "fractional_best_translation_time": 4.0,
+      "fractional_best_cell_speed": 0.25,
+      "fractional_best_maximum_DEL_norm_over_state_norm": 4.224216312702307,
+      "speed_0p25_odd_residual_range": [0.2846252023872384, 0.3385925733730758],
+      "speed_0p25_even_residual_range": [3.8503620360558517, 4.424751402627979],
+      "dominant_even_term": "canonical V40 kinetic response",
+      "dominant_even_field": "chi",
+      "verdict": "GRADUAL_HANDOFF_IS_MATERIAL_BUT_REQUIRES_A_DEFORMED_MOVING_CHI_PROFILE"
+    },
+    "moving_substrate_gate": {
+      "tested_channels": [
+        "Psi phase velocity",
+        "chi phase velocity",
+        "x translation velocity",
+        "y translation velocity",
+        "z translation velocity"
+      ],
+      "minimum_simple_translation_DEL_norm": 0.0018367898593854163,
+      "maximum_linear_background_effect_on_packet": 6.775254914970718e-10,
+      "verdict": "SIMPLE_MOVING_SUBSTRATE_DOES_NOT_REPAIR_V4_006"
+    },
+    "still_open": [
+      "full nonlinear Noether-current equality for the localized packet",
+      "two complete cell translations in both directions",
+      "100-cycle moving-carrier stability and perturbation gate",
+      "Lean proof for the same localized moving carrier"
+    ]
+  },
+  "root_cause": "The compact-hop interpretation and side-five implementation boundary are repaired. The attempted beta construction from the reduced tau/W configuration projector is mathematically impossible: that scalar-vector Hodge chart is one chiral Cl(3) representation and its beta anticommutant has dimension zero. Retaining all eight cube cochain degrees exactly restores corner-parity beta and two closed rank-four copies with zero Clifford defects. A literal one-update cell jump is strongly obstructed. Spreading the same translation over 64 updates improves its DEL residual by more than three orders of magnitude and reaches the exact shifted endpoint, but it is still not a free orbit. Reversal decomposition shows that the dominant remaining residual is even in direction, almost entirely chi, and almost perfectly aligned with the canonical V40 kinetic term. The existing orientation and symplectic connections contribute mainly to the much smaller odd response. The rest-shaped chi mold therefore cannot simply slide; a moving solution must develop a native velocity-dependent chi deformation or traveling tail whose spatial force balances its inertia.",
+  "scoped_obstruction": "The complete tested nine-term positive position basis, the tested finite shooting seeds, the prior C19 triangle/chi-only gyro completion bases, and the native density-mold kinetic connection do not close V4-006.",
+  "next_calculation": "solve the unrestricted finite relative-periodic boundary-value problem starting from the exact fractional-translation path, allowing the intermediate chi profile and surrounding tail to deform while fixing only charge, phase gauges and the exact one-cell endpoint; then test whether the deformation closes the canonical chi inertial residual before considering an action change",
+  "next_action_class_if_bridge_fails": "a rest-compatible C19 triangle or other joint Psi-chi connection whose chi variation is nonzero at Psi_receiver=0, constrained simultaneously by the stable cube-incidence spectrum, copy closure and all-axis Dirac transport",
+  "claim_boundary": "This is not a universal no-go for every reciprocal two-field action or every finite traveling branch. It is a direct obstruction to closing V4-006 with the current action and the tested two-term coefficient span. V4-006 remains open; no action is promoted."
+}

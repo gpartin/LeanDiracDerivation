@@ -1,0 +1,381 @@
+{
+  "status": "V4_TRANSFER_NEIGHBOR_CONNECTION_RESPONSE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "input_orbit": "transfer_activated_chi_bond_four_update_orbit",
+  "action_candidate": "replace Vchi by Vchi+c*chi0*a*Kchi inside the positive incumbent C19-average kinetic square; Kchi=chi-A19(chi)/24, with full, chi-radial, and chi-normal channels screened separately",
+  "real_positive_invertible_kinetic_square": true,
+  "reciprocal_by_single_discrete_action": true,
+  "cubic_C19_and_phase_covariant": true,
+  "contains_corner_copy_axis_shift_or_Dirac_label": false,
+  "rest_control": {
+    "analytic_reason": "rhoPsiDot=0 on the exact rest orbit, hence a=0",
+    "rows": [
+      {
+        "channel": "full",
+        "unit_coefficient_DEL_norm": 8.1549880258123e-10
+      },
+      {
+        "channel": "radial",
+        "unit_coefficient_DEL_norm": 2.248674550474832e-10
+      },
+      {
+        "channel": "normal",
+        "unit_coefficient_DEL_norm": 6.188696461745793e-10
+      },
+      {
+        "channel": "frame_reflection",
+        "unit_coefficient_DEL_norm": 7.969176026780384e-10
+      }
+    ]
+  },
+  "movement_scan": [
+    {
+      "channel": "full",
+      "coefficient": -1.0,
+      "column_norm": 80431.86213487759,
+      "relative_residual": 3.995828789223703,
+      "relative_improvement": -2.995828789223703
+    },
+    {
+      "channel": "full",
+      "coefficient": -0.5,
+      "column_norm": 39248.03294734424,
+      "relative_residual": 2.1066752996478066,
+      "relative_improvement": -1.1066752996478066
+    },
+    {
+      "channel": "full",
+      "coefficient": -0.16666666666666666,
+      "column_norm": 13398.51580049787,
+      "relative_residual": 1.1610934614251833,
+      "relative_improvement": -0.16109346142518333
+    },
+    {
+      "channel": "full",
+      "coefficient": -0.05263157894736842,
+      "column_norm": 4294.78230467912,
+      "relative_residual": 1.0092526859703717,
+      "relative_improvement": -0.009252685970371655
+    },
+    {
+      "channel": "full",
+      "coefficient": -0.02631578947368421,
+      "column_norm": 2155.7524786130384,
+      "relative_residual": 0.9991845489128108,
+      "relative_improvement": 0.0008154510871891674
+    },
+    {
+      "channel": "full",
+      "coefficient": 0.0,
+      "column_norm": 1.7363230534041877e-12,
+      "relative_residual": 1.0000000000000002,
+      "relative_improvement": -2.220446049250313e-16
+    },
+    {
+      "channel": "full",
+      "coefficient": 0.02631578947368421,
+      "column_norm": 2173.585158131019,
+      "relative_residual": 1.0119322534308852,
+      "relative_improvement": -0.01193225343088522
+    },
+    {
+      "channel": "full",
+      "coefficient": 0.05263157894736842,
+      "column_norm": 4366.094887813893,
+      "relative_residual": 1.0348745945442868,
+      "relative_improvement": -0.03487459454428676
+    },
+    {
+      "channel": "full",
+      "coefficient": 0.16666666666666666,
+      "column_norm": 14111.442961825265,
+      "relative_residual": 1.2473680052715972,
+      "relative_improvement": -0.2473680052715972
+    },
+    {
+      "channel": "full",
+      "coefficient": 0.5,
+      "column_norm": 45496.68344032951,
+      "relative_residual": 2.4858420106394687,
+      "relative_improvement": -1.4858420106394687
+    },
+    {
+      "channel": "full",
+      "coefficient": 1.0,
+      "column_norm": 103467.89529682057,
+      "relative_residual": 5.195724870358733,
+      "relative_improvement": -4.195724870358733
+    },
+    {
+      "channel": "radial",
+      "coefficient": -1.0,
+      "column_norm": 34748.92644089008,
+      "relative_residual": 2.028656224453882,
+      "relative_improvement": -1.028656224453882
+    },
+    {
+      "channel": "radial",
+      "coefficient": -0.5,
+      "column_norm": 17337.18386889895,
+      "relative_residual": 1.3454788596295522,
+      "relative_improvement": -0.34547885962955216
+    },
+    {
+      "channel": "radial",
+      "coefficient": -0.16666666666666666,
+      "column_norm": 5935.107665357315,
+      "relative_residual": 1.0534329365950208,
+      "relative_improvement": -0.0534329365950208
+    },
+    {
+      "channel": "radial",
+      "coefficient": -0.05263157894736842,
+      "column_norm": 1900.102280118468,
+      "relative_residual": 1.0080410073395059,
+      "relative_improvement": -0.008041007339505857
+    },
+    {
+      "channel": "radial",
+      "coefficient": -0.02631578947368421,
+      "column_norm": 953.34434291126,
+      "relative_residual": 1.00293004538895,
+      "relative_improvement": -0.002930045388950031
+    },
+    {
+      "channel": "radial",
+      "coefficient": 0.0,
+      "column_norm": 1.7363230534041877e-12,
+      "relative_residual": 1.0000000000000002,
+      "relative_improvement": -2.220446049250313e-16
+    },
+    {
+      "channel": "radial",
+      "coefficient": 0.02631578947368421,
+      "column_norm": 960.270486660022,
+      "relative_residual": 0.9993156033140284,
+      "relative_improvement": 0.0006843966859716444
+    },
+    {
+      "channel": "radial",
+      "coefficient": 0.05263157894736842,
+      "column_norm": 1927.8019727208439,
+      "relative_residual": 1.000930340895835,
+      "relative_improvement": -0.0009303408958349912
+    },
+    {
+      "channel": "radial",
+      "coefficient": 0.16666666666666666,
+      "column_norm": 6212.286424506936,
+      "relative_residual": 1.0352218063616925,
+      "relative_improvement": -0.035221806361692476
+    },
+    {
+      "channel": "radial",
+      "coefficient": 0.5,
+      "column_norm": 19786.02876435086,
+      "relative_residual": 1.3740923409834587,
+      "relative_improvement": -0.37409234098345867
+    },
+    {
+      "channel": "radial",
+      "coefficient": 1.0,
+      "column_norm": 43985.90463855514,
+      "relative_residual": 2.3593609383099645,
+      "relative_improvement": -1.3593609383099645
+    },
+    {
+      "channel": "normal",
+      "coefficient": -1.0,
+      "column_norm": 71255.15107090269,
+      "relative_residual": 3.5184504479749044,
+      "relative_improvement": -2.5184504479749044
+    },
+    {
+      "channel": "normal",
+      "coefficient": -0.5,
+      "column_norm": 35050.45841540191,
+      "relative_residual": 1.8954059722539187,
+      "relative_improvement": -0.8954059722539187
+    },
+    {
+      "channel": "normal",
+      "coefficient": -0.16666666666666666,
+      "column_norm": 11711.546872360543,
+      "relative_residual": 1.1047812332124207,
+      "relative_improvement": -0.10478123321242072
+    },
+    {
+      "channel": "normal",
+      "coefficient": -0.05263157894736842,
+      "column_norm": 3710.497977452713,
+      "relative_residual": 0.9999086695319103,
+      "relative_improvement": 9.133046808973422e-05
+    },
+    {
+      "channel": "normal",
+      "coefficient": -0.02631578947368421,
+      "column_norm": 1856.9723419046195,
+      "relative_residual": 0.9958860237018902,
+      "relative_improvement": 0.004113976298109834
+    },
+    {
+      "channel": "normal",
+      "coefficient": 0.0,
+      "column_norm": 1.7363230534041877e-12,
+      "relative_residual": 1.0000000000000002,
+      "relative_improvement": -2.220446049250313e-16
+    },
+    {
+      "channel": "normal",
+      "coefficient": 0.02631578947368421,
+      "column_norm": 1860.7828479842017,
+      "relative_residual": 1.012198032027765,
+      "relative_improvement": -0.012198032027765038
+    },
+    {
+      "channel": "normal",
+      "coefficient": 0.05263157894736842,
+      "column_norm": 3725.7385134639426,
+      "relative_residual": 1.0322456084789655,
+      "relative_improvement": -0.032245608478965515
+    },
+    {
+      "channel": "normal",
+      "coefficient": 0.16666666666666666,
+      "column_norm": 11864.196270002138,
+      "relative_residual": 1.1984698392180761,
+      "relative_improvement": -0.19846983921807615
+    },
+    {
+      "channel": "normal",
+      "coefficient": 0.5,
+      "column_norm": 36410.20263401394,
+      "relative_residual": 2.1083334887753193,
+      "relative_improvement": -1.1083334887753193
+    },
+    {
+      "channel": "normal",
+      "coefficient": 1.0,
+      "column_norm": 76515.63448013912,
+      "relative_residual": 3.9330915246421476,
+      "relative_improvement": -2.9330915246421476
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": -1.0,
+      "column_norm": 79239.83566020256,
+      "relative_residual": 4.0854654579683105,
+      "relative_improvement": -3.0854654579683105
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": -0.5,
+      "column_norm": 38131.718685592634,
+      "relative_residual": 2.1995205861596525,
+      "relative_improvement": -1.1995205861596525
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": -0.16666666666666666,
+      "column_norm": 12679.211339925812,
+      "relative_residual": 1.2283997553403727,
+      "relative_improvement": -0.2283997553403727
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": -0.05263157894736842,
+      "column_norm": 4018.325132639493,
+      "relative_residual": 1.0384562381768245,
+      "relative_improvement": -0.03845623817682453
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": -0.02631578947368421,
+      "column_norm": 2011.4570197260127,
+      "relative_residual": 1.0147006600659643,
+      "relative_improvement": -0.014700660065964266
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": 0.0,
+      "column_norm": 1.7363230534041877e-12,
+      "relative_residual": 1.0000000000000002,
+      "relative_improvement": -2.220446049250313e-16
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": 0.02631578947368421,
+      "column_norm": 2016.7570568147316,
+      "relative_residual": 0.9948253212162826,
+      "relative_improvement": 0.005174678783717357
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": 0.05263157894736842,
+      "column_norm": 4039.521548854271,
+      "relative_residual": 0.9994076166511362,
+      "relative_improvement": 0.0005923833488638008
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": 0.16666666666666666,
+      "column_norm": 12891.315319598336,
+      "relative_residual": 1.1263094637904338,
+      "relative_improvement": -0.12630946379043384
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": 0.5,
+      "column_norm": 40005.817733436925,
+      "relative_residual": 2.1037752199713142,
+      "relative_improvement": -1.1037752199713142
+    },
+    {
+      "channel": "frame_reflection",
+      "coefficient": 1.0,
+      "column_norm": 86315.99745288424,
+      "relative_residual": 4.237193024052022,
+      "relative_improvement": -3.237193024052022
+    }
+  ],
+  "linearized_response_diagnostic": [
+    {
+      "channel": "full",
+      "linearized_optimal_coefficient_diagnostic_only": -0.015049336547303858,
+      "correlation_with_required_response": -0.060324927066978125,
+      "relative_residual": 0.9981787931900599,
+      "explained_squared_fraction": 0.0036390968256356793
+    },
+    {
+      "channel": "radial",
+      "linearized_optimal_coefficient_diagnostic_only": 0.021994611993445285,
+      "correlation_with_required_response": 0.038970864950774044,
+      "relative_residual": 0.999240347306387,
+      "explained_squared_fraction": 0.0015187283150110975
+    },
+    {
+      "channel": "normal",
+      "linearized_optimal_coefficient_diagnostic_only": -0.026232777770006876,
+      "correlation_with_required_response": -0.0903036352259332,
+      "relative_residual": 0.9959142801792642,
+      "explained_squared_fraction": 0.00815474653501802
+    },
+    {
+      "channel": "frame_reflection",
+      "linearized_optimal_coefficient_diagnostic_only": 0.02730988649055223,
+      "correlation_with_required_response": 0.10185944269567083,
+      "relative_residual": 0.9947988007299403,
+      "explained_squared_fraction": 0.01037534606627255
+    }
+  ],
+  "best_fixed_native_coefficient": {
+    "channel": "frame_reflection",
+    "coefficient": 0.02631578947368421,
+    "column_norm": 2016.7570568147316,
+    "relative_residual": 0.9948253212162826,
+    "relative_improvement": 0.005174678783717357
+  },
+  "verdict": "ADVANCE_TRANSFER_NEIGHBOR_CONNECTION",
+  "claim_boundary": "This is a response screen on one freely optimized handoff. A favorable fixed coefficient must still pass the exact-rest spectrum, charge, free-orbit, held-out direction, and Dirac gates."
+}

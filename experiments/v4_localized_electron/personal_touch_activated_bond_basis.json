@@ -1,0 +1,82 @@
+{
+  "status": "V4_ACTIVATED_BOND_CLASS_BASIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": [
+    "vacuum_vacuum_chi",
+    "carrier_vacuum_chi",
+    "carrier_carrier_chi",
+    "carrier_carrier_Psi_tight_frame"
+  ],
+  "properties": {
+    "positive": true,
+    "native_Psi_chi_only": true,
+    "C19_cubic": true,
+    "reciprocal": true,
+    "phase_invariant": true,
+    "contains_site_labels_or_Dirac_data": false
+  },
+  "exact_rest_energies": {
+    "vacuum_vacuum_chi": 0.0,
+    "carrier_vacuum_chi": 0.0,
+    "carrier_carrier_chi": 4.348050567825785e-31,
+    "carrier_carrier_Psi_tight_frame": 9.28351970766577e-30
+  },
+  "exact_rest_force_norms": {
+    "vacuum_vacuum_chi": 0.0,
+    "carrier_vacuum_chi": 0.0,
+    "carrier_carrier_chi": 4.1229451009592935e-16,
+    "carrier_carrier_Psi_tight_frame": 8.802897183764591e-15
+  },
+  "positive_stiffness_cone_trace": [
+    {
+      "iteration": 0,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "minimum_generalized_stiffness": -25.211500767391705,
+      "negative_count_in_lowest_64": 64
+    },
+    {
+      "iteration": 1,
+      "coefficients": [
+        0.000753123914826186,
+        0.0967079843896992,
+        0.0,
+        6.94406813381766
+      ],
+      "minimum_generalized_stiffness": -25.211500767323084,
+      "negative_count_in_lowest_64": 28,
+      "linear_program_failure": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "final_coefficients": {
+    "vacuum_vacuum_chi": 0.000753123914826186,
+    "carrier_vacuum_chi": 0.0967079843896992,
+    "carrier_carrier_chi": 0.0,
+    "carrier_carrier_Psi_tight_frame": 6.94406813381766
+  },
+  "final_lowest_generalized_stiffness": [
+    -25.211500767323084,
+    -25.211500767249287,
+    -25.21150076719938,
+    -8.428226933858802,
+    -8.42822693383274,
+    -2.938179335195226,
+    -2.9381793351636594,
+    -2.9381793350966303,
+    -0.08287199186385605,
+    -0.08287199186054989,
+    -0.08287199186007435,
+    -0.08287199185973468,
+    -0.08287199185889679,
+    -0.0828719918575834,
+    -0.041860513572179625,
+    -0.04186051357213433
+  ],
+  "verdict": "ACTIVATED_BOND_BASIS_DOES_NOT_CLOSE_SUFFICIENT_STIFFNESS_GATE",
+  "claim_boundary": "Positive exact-rest Hessian cone only. Positive co-rotating stiffness is sufficient but not necessary for discrete gyroscopic stability. No coefficient or action is admitted."
+}

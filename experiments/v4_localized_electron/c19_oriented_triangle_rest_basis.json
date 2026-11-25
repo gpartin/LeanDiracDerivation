@@ -1,0 +1,134 @@
+{
+  "status": "V4_C19_ORIENTED_TRIANGLE_REST_BASIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis_names": [
+    "common_plus_real",
+    "common_plus_imag",
+    "common_minus_real",
+    "common_minus_imag",
+    "relative_plus_real",
+    "relative_plus_imag",
+    "relative_minus_real",
+    "relative_minus_imag"
+  ],
+  "construction": "(face cross edge) dot [conj(W_face) cross V_edge +/- conj(W_edge) cross V_face], with common/relative velocity and real/imaginary contractions, summed over all cubic images",
+  "incumbent_rest_DEL_rms": 1.897404223927844e-12,
+  "rest_force_rank": 0,
+  "rest_force_singular_values": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rest_preserving_null_dimension": 8,
+  "rest_preserving_null_basis": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "null_relative_residuals": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "random_interval_basis_values": [
+    1.1564823173178713e-18,
+    1.3877787807814457e-17,
+    1.1564823173178714e-17,
+    1.3877787807814457e-17,
+    0.0,
+    3.700743415417188e-17,
+    3.932039878880763e-17,
+    4.625929269271485e-18
+  ],
+  "random_interval_summed_gradient_norm": 6.00232035847751e-17,
+  "verdict": "PAIRWISE_ORIENTED_C19_TRIANGLE_BASIS_CANCELS_IDENTICALLY",
+  "claim_boundary": "Rest-force and random-field identity screen only. Exact cancellation retires this pairwise cubic sum; it is not a no-go for genuine three-field loop invariants."
+}

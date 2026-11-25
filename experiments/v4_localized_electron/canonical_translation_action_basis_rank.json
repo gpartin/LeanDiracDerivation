@@ -1,0 +1,114 @@
+{
+  "status": "V4_CANONICAL_TRANSLATION_ACTION_BASIS_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "dt": 0.0009765625,
+  "basis": [
+    "local_potential",
+    "C19_area_bond",
+    "density_balance_square",
+    "parallel_overlap_square",
+    "onsite_area_quartic",
+    "onsite_area_sextic",
+    "C19_area_curvature_square",
+    "plaquette_area_curvature_square",
+    "spectral_area_square",
+    "spectral_Psi_square"
+  ],
+  "axis_rows": [
+    {
+      "axis": 0,
+      "incumbent_pinning_norm": 0.8752077917859056,
+      "basis_correlations_with_required_repair": {
+        "local_potential": 0.028109069831273436,
+        "C19_area_bond": -0.9284235894327789,
+        "density_balance_square": 0.32161804300770397,
+        "parallel_overlap_square": 0.6432360860154075,
+        "onsite_area_quartic": -0.6510346797326042,
+        "onsite_area_sextic": -0.6510346797326042,
+        "C19_area_curvature_square": -0.9278272963473915,
+        "plaquette_area_curvature_square": -0.7929089840580417,
+        "spectral_area_square": -0.07500644787272241,
+        "spectral_Psi_square": -0.010642548843819547
+      }
+    },
+    {
+      "axis": 1,
+      "incumbent_pinning_norm": 1.0965844779832052,
+      "basis_correlations_with_required_repair": {
+        "local_potential": -0.24318308144288073,
+        "C19_area_bond": -0.9456662041623188,
+        "density_balance_square": 0.2751905163526703,
+        "parallel_overlap_square": 0.5503810327053407,
+        "onsite_area_quartic": -0.5570409318232313,
+        "onsite_area_sextic": -0.5570409318232312,
+        "C19_area_curvature_square": -0.9432552362591246,
+        "plaquette_area_curvature_square": -0.7972635416773505,
+        "spectral_area_square": -0.1360391725299553,
+        "spectral_Psi_square": -0.002124995726743355
+      }
+    },
+    {
+      "axis": 2,
+      "incumbent_pinning_norm": 3.191609075460239,
+      "basis_correlations_with_required_repair": {
+        "local_potential": -0.5912500867893504,
+        "C19_area_bond": -0.5766279826263804,
+        "density_balance_square": 0.06438754914933341,
+        "parallel_overlap_square": 0.13371940062820808,
+        "onsite_area_quartic": -0.9080665912017821,
+        "onsite_area_sextic": -0.9458960923498783,
+        "C19_area_curvature_square": -0.5731464081236773,
+        "plaquette_area_curvature_square": -0.48746084721196226,
+        "spectral_area_square": -0.10455783902083737,
+        "spectral_Psi_square": -0.08309894932058834
+      }
+    }
+  ],
+  "response_rank": 9,
+  "singular_values": [
+    13.402288649502477,
+    5.4804468729211475,
+    1.5382253584666326,
+    1.0941260366910275,
+    1.0655398728753798,
+    0.5078639565719396,
+    0.19425759523659886,
+    0.14908616585289194,
+    0.01793127685482861,
+    3.623228510905681e-17
+  ],
+  "unconstrained_coefficients": {
+    "local_potential": 1.7794989731293836e-15,
+    "C19_area_bond": -0.9944380971273302,
+    "density_balance_square": 0.34559352815605204,
+    "parallel_overlap_square": 0.14958448753462109,
+    "onsite_area_quartic": 6.348681109829772,
+    "onsite_area_sextic": -26.141658974156517,
+    "C19_area_curvature_square": -0.07436470137174546,
+    "plaquette_area_curvature_square": -9.50745402908706e-16,
+    "spectral_area_square": -0.0009269838121105689,
+    "spectral_Psi_square": -7.470261355549231e-16
+  },
+  "unconstrained_relative_residual": 3.7092701780130666e-14,
+  "positive_square_basis": [
+    "density_balance_square",
+    "parallel_overlap_square",
+    "C19_area_curvature_square",
+    "plaquette_area_curvature_square",
+    "spectral_area_square",
+    "spectral_Psi_square"
+  ],
+  "positive_square_coefficients": {
+    "density_balance_square": 0.3428976068389388,
+    "parallel_overlap_square": 0.14958448753462622,
+    "C19_area_curvature_square": 2.626829163936877e-17,
+    "plaquette_area_curvature_square": 3.435270227187184e-19,
+    "spectral_area_square": 3.946053945245949e-18,
+    "spectral_Psi_square": 3.8846539310385746e-19
+  },
+  "positive_square_relative_residual": 0.9547205853188884,
+  "positive_fit_success": true,
+  "verdict": "DECLARED_POSITIVE_ACTION_BASIS_CANNOT_CLOSE_TRANSLATION_ZERO_MODE",
+  "claim_boundary": "Linear inverse-Hessian screen at the exact rest orbit only. A small residual would still require exact action variation, rest re-solution, full-spectrum stability, nonlinear transport, Dirac compression, and Lean proof."
+}

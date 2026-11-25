@@ -1,0 +1,48 @@
+{
+  "status": "V4_C19_TRIANGLE_FIRST_ORDER_OBSTRUCTION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "triangle_symbol_parity": "even",
+  "dirac_spatial_symbol_parity": "odd",
+  "sample_even_parity_defects": [
+    0.0,
+    0.0
+  ],
+  "triangle_symbol_gradient_at_zero": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "copy_rows": [
+    {
+      "flavor": "plus",
+      "s19_at_zero": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dirac_first_derivative_frobenius_norms": [
+        3.999999999999999,
+        3.999999999999999,
+        3.999999999999999
+      ]
+    },
+    {
+      "flavor": "minus",
+      "s19_at_zero": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dirac_first_derivative_frobenius_norms": [
+        3.999999999999999,
+        3.999999999999999,
+        3.999999999999999
+      ]
+    }
+  ],
+  "verdict": "SYMMETRIC_TRIANGLE_SYMBOL_CANNOT_SELECT_DIRAC_FIRST_ORDER_ROOT",
+  "root_cause": "The symmetric endpoint/triangle action retains the second-order Dirac square but discards the sign and component routing carried by the odd alpha.k term.",
+  "corrective_action": "Derive a genuinely oriented C19 face-edge one-form whose full cubic sum is odd in momentum, reciprocal, and rest-preserving. It must obtain orientation from live Psi/chi/W geometry, not a Dirac matrix, corner label, or preferred axis.",
+  "claim_boundary": "Scoped obstruction for the present symmetric triangle/body candidate. It is not a no-go for oriented three-site actions."
+}

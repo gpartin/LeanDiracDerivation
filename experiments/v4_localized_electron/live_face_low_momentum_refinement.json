@@ -1,0 +1,70 @@
+{
+  "status": "V4_LIVE_FACE_GENERIC_BOX_GATE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "side5_identity": {
+    "DEL_absolute_difference": 0.0,
+    "DEL_relative_difference": 0.0
+  },
+  "rows": [
+    {
+      "side": 5,
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "packet_width": 0.625,
+      "wave_number": 2.5132741228718345,
+      "wavelengths_in_box": 2.0,
+      "normalized_DEL_residual": 0.00013404698552531204,
+      "absolute_DEL_RMS": 0.15740958637826902,
+      "rest_DEL_RMS": 1.3277739182557119e-12
+    },
+    {
+      "side": 9,
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "packet_width": 1.125,
+      "wave_number": 1.3962634015954636,
+      "wavelengths_in_box": 2.0,
+      "normalized_DEL_residual": 6.74953664485704e-05,
+      "absolute_DEL_RMS": 0.12496443249143392,
+      "rest_DEL_RMS": 5.498134703650037e-13
+    },
+    {
+      "side": 17,
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "packet_width": 2.125,
+      "wave_number": 0.7391982714328925,
+      "wavelengths_in_box": 2.0,
+      "normalized_DEL_residual": 5.215428802138214e-05,
+      "absolute_DEL_RMS": 0.06595459414211242,
+      "rest_DEL_RMS": 2.117901499756489e-13
+    }
+  ],
+  "per_side": [
+    {
+      "side": 5,
+      "maximum_normalized_DEL_residual": 0.00013404698552531204,
+      "maximum_absolute_DEL_RMS": 0.15740958637826902,
+      "maximum_rest_DEL_RMS": 1.3277739182557119e-12
+    },
+    {
+      "side": 9,
+      "maximum_normalized_DEL_residual": 6.74953664485704e-05,
+      "maximum_absolute_DEL_RMS": 0.12496443249143392,
+      "maximum_rest_DEL_RMS": 5.498134703650037e-13
+    },
+    {
+      "side": 17,
+      "maximum_normalized_DEL_residual": 5.215428802138214e-05,
+      "maximum_absolute_DEL_RMS": 0.06595459414211242,
+      "maximum_rest_DEL_RMS": 2.117901499756489e-13
+    }
+  ],
+  "verdict": "LIVE_FACE_GENERIC_BOX_RESIDUAL_CONVERGES",
+  "claim_boundary": "Exact action identity and tangent DEL residual only. This is not an unrestricted nonlinear cell handoff or V4-006 pass.",
+  "two_wavelength_scaling": true
+}

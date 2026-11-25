@@ -1,0 +1,60 @@
+{
+  "status": "V4_C27_CHI_BOND_GYRO_OBSTRUCTION_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis_names": [
+    "local_chi_phase_velocity",
+    "c19_chi_inner_common",
+    "c19_chi_inner_relative",
+    "body_chi_inner_common",
+    "body_chi_inner_relative",
+    "c19_chi_area_common",
+    "c19_chi_area_relative",
+    "body_chi_area_common",
+    "body_chi_area_relative"
+  ],
+  "rest_force_rank": 5,
+  "rest_nullity": 4,
+  "rest_singular_values": [
+    1.3924496908366955e-12,
+    6.733651918121434e-13,
+    5.194213919813362e-13,
+    4.258085857828648e-13,
+    4.959113970885944e-18,
+    7.986119312044628e-31,
+    9.581098823731582e-35,
+    9.798193252571236e-50,
+    0.0
+  ],
+  "admissible_response_rank": 4,
+  "admissible_response_singular_values": [
+    2.2593511411742022e-17,
+    1.426825672733178e-17,
+    1.2595850018872849e-17,
+    4.621628386051397e-18
+  ],
+  "diagnostic_coefficients": {
+    "local_chi_phase_velocity": 2.6121017980066253e-08,
+    "c19_chi_inner_common": -2.6748150821315555e-08,
+    "c19_chi_inner_relative": 1456902681.6348658,
+    "body_chi_inner_common": -2.5703563651867778e-08,
+    "body_chi_inner_relative": 254527681.44038877,
+    "c19_chi_area_common": 1.5561578536324097e-07,
+    "c19_chi_area_relative": -875553774.879688,
+    "body_chi_area_common": 8.619726829839076e-13,
+    "body_chi_area_relative": -706460033.9518939
+  },
+  "combined_relative_remainder": 0.9996608171551913,
+  "branches": [
+    {
+      "branch": "minus",
+      "relative_remainder": 0.9984211643439221
+    },
+    {
+      "branch": "plus",
+      "relative_remainder": 1.0009009564925246
+    }
+  ],
+  "verdict": "CHI_BOND_GYRO_BASIS_INCOMPLETE_FOR_NONLINEAR_OBSTRUCTION",
+  "claim_boundary": "Exact-rest-nullspace response-rank screen only. Diagnostic coefficients are not admitted or fitted into the action."
+}

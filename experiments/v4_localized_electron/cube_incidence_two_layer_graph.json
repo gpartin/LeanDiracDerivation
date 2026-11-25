@@ -1,0 +1,53 @@
+{
+  "status": "V4_CUBE_INCIDENCE_TWO_LAYER_GRAPH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "spatial_rank": 1000,
+  "exterior_cancellation_matrix_rank": 16,
+  "memory_control_relative_singular_cutoff": 0.0001,
+  "memory_control_min_retained_singular": 5.950748978648306e-07,
+  "uncontrolled_current_layer_relative_leakage": 6.045406065643042e-06,
+  "fraction_of_original_leakage_remaining": 0.9999666650065456,
+  "relative_exterior_residual": 6.079590605118053e-06,
+  "previous_graph_min_singular": 1.5704192065053767e-24,
+  "previous_graph_condition": 6.448981299061878e+23,
+  "effective_step_min_singular": 1.0123286228061021,
+  "effective_step_condition": 2.3657499941164177,
+  "relative_graph_reproduction_defect": 0.9921103010005241,
+  "singular_cutoff_sweep": [
+    {
+      "relative_singular_cutoff": 0.01,
+      "retained_rank": 16,
+      "fraction_of_original_leakage_remaining": 0.9999666650065456,
+      "previous_graph_operator_norm": 1.0127604094440767,
+      "relative_graph_reproduction_defect": 0.9921103010005241,
+      "relative_exterior_residual": 6.079590605118053e-06
+    },
+    {
+      "relative_singular_cutoff": 0.0001,
+      "retained_rank": 16,
+      "fraction_of_original_leakage_remaining": 0.9999666650065456,
+      "previous_graph_operator_norm": 1.0127604094440767,
+      "relative_graph_reproduction_defect": 0.9921103010005241,
+      "relative_exterior_residual": 6.079590605118053e-06
+    },
+    {
+      "relative_singular_cutoff": 1e-06,
+      "retained_rank": 27,
+      "fraction_of_original_leakage_remaining": 0.9758847194282882,
+      "previous_graph_operator_norm": 45907522.99238229,
+      "relative_graph_reproduction_defect": 10028559371.640331,
+      "relative_exterior_residual": 5.459545243248462e-12
+    },
+    {
+      "relative_singular_cutoff": 1e-08,
+      "retained_rank": 139,
+      "fraction_of_original_leakage_remaining": 0.4334269263593949,
+      "previous_graph_operator_norm": 2223653903.7343354,
+      "relative_graph_reproduction_defect": 18545218494297.98,
+      "relative_exterior_residual": 5.773006747607538e-14
+    }
+  ],
+  "verdict": "SAME_SPATIAL_IMAGE_TWO_LAYER_GRAPH_FAIL",
+  "claim_boundary": "Two-layer graph over the fixed spatial image only. Failure may require a phase-space tail; pass would still require Clifford compression, current, nonlinear motion and endurance."
+}

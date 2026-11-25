@@ -30,6 +30,12 @@ DIRECTIONS = [
     for offset in itertools.product((-1, 0, 1), repeat=3)
     if 1 <= sum(abs(x) for x in offset) <= 2
 ]
+PLAQUETTES = [
+    (tuple(sign_a if coordinate == axis_a else 0 for coordinate in AXES),
+     tuple(sign_b if coordinate == axis_b else 0 for coordinate in AXES))
+    for axis_a, axis_b in itertools.combinations(AXES, 2)
+    for sign_a in (-1, 1) for sign_b in (-1, 1)
+]
 
 
 def shift(field: np.ndarray, offset: tuple[int, int, int]) -> np.ndarray:
@@ -63,6 +69,20 @@ def c19_dirichlet(field: np.ndarray) -> np.ndarray:
                for offset, weight in DIRECTIONS)
 
 
+def plaquette_dirichlet(field: np.ndarray) -> np.ndarray:
+    """Sum P^dagger P over all 12 signed elementary cube plaquettes."""
+    result = np.zeros_like(field)
+    for a, b in PLAQUETTES:
+        ab = tuple(x + y for x, y in zip(a, b))
+        curvature = shift(field, ab) - shift(field, a) - shift(field, b) + field
+        minus_a = tuple(-x for x in a)
+        minus_b = tuple(-x for x in b)
+        minus_ab = tuple(-x for x in ab)
+        result += (shift(curvature, minus_ab) - shift(curvature, minus_a)
+                   - shift(curvature, minus_b) + curvature)
+    return result
+
+
 def repair_force(psi: np.ndarray, chi: np.ndarray, strength: float):
     """Force from U8 = strength/(4 R^4) rhoPsi^2 (rhoChi-rhoPsi)^2."""
     p, c = norm2(psi)[..., None], norm2(chi)[..., None]
@@ -91,6 +111,24 @@ def onsite_area_polynomial_force(psi: np.ndarray, chi: np.ndarray,
             -np.cross(psi.conj(), gradient) / B)
 
 
+def c19_curvature_force(psi: np.ndarray, chi: np.ndarray, strength: float):
+    """Force from strength ||D19 (chi wedge psi)||^2/(2 R^4)."""
+    area = np.cross(chi, psi)
+    gradient = strength * (2 / R**4) * c19_dirichlet(
+        c19_dirichlet(area))
+    return (-np.cross(gradient, chi.conj()),
+            -np.cross(psi.conj(), gradient) / B)
+
+
+def plaquette_curvature_force(psi: np.ndarray, chi: np.ndarray,
+                              strength: float):
+    """Force from a positive, cubic sum of shared-corner plaquette bends."""
+    area = np.cross(chi, psi)
+    gradient = strength * (2 / (R**2 * len(PLAQUETTES))) * plaquette_dirichlet(area)
+    return (-np.cross(gradient, chi.conj()),
+            -np.cross(psi.conj(), gradient) / B)
+
+
 def force(psi: np.ndarray, chi: np.ndarray, area_scale: float = 1.0,
           repair_strength: float = 0.0,
           bond_quartic: float = 0.0,
@@ -99,7 +137,9 @@ def force(psi: np.ndarray, chi: np.ndarray, area_scale: float = 1.0,
           local_cross_scale: float = 1.0,
           local_self_scale: float = 1.0,
           onsite_area_quartic: float = 0.0,
-          onsite_area_sextic: float = 0.0) -> tuple[np.ndarray, np.ndarray]:
+          onsite_area_sextic: float = 0.0,
+          c19_curvature_strength: float = 0.0,
+          plaquette_curvature_strength: float = 0.0) -> tuple[np.ndarray, np.ndarray]:
     area_force = nonlinear_bond_gradient(
         np.cross(chi, psi), bond_quartic, bond_sextic)
     p, c = norm2(psi)[..., None], norm2(chi)[..., None]
@@ -112,10 +152,13 @@ def force(psi: np.ndarray, chi: np.ndarray, area_scale: float = 1.0,
     parallel = parallel_force(psi, chi, parallel_strength)
     onsite = onsite_area_polynomial_force(
         psi, chi, onsite_area_quartic, onsite_area_sextic)
+    curvature = c19_curvature_force(psi, chi, c19_curvature_strength)
+    plaquette = plaquette_curvature_force(
+        psi, chi, plaquette_curvature_strength)
     return (local[0] + area_scale * area[0] + repair[0] + parallel[0]
-            + onsite[0],
+            + onsite[0] + curvature[0] + plaquette[0],
             local[1] + area_scale * area[1] + repair[1] + parallel[1]
-            + onsite[1])
+            + onsite[1] + curvature[1] + plaquette[1])
 
 
 def tangent_force(psi: np.ndarray, chi: np.ndarray,
@@ -223,6 +266,35 @@ def onsite_area_polynomial_tangent_force(psi: np.ndarray, chi: np.ndarray,
     )
 
 
+def c19_curvature_tangent_force(psi: np.ndarray, chi: np.ndarray,
+                                dpsi: np.ndarray, dchi: np.ndarray):
+    area = np.cross(chi, psi)
+    darea = np.cross(dchi, psi) + np.cross(chi, dpsi)
+    gradient = (2 / R**4) * c19_dirichlet(c19_dirichlet(area))
+    dgradient = (2 / R**4) * c19_dirichlet(c19_dirichlet(darea))
+    return (
+        -(np.cross(dgradient, chi.conj())
+          + np.cross(gradient, dchi.conj())),
+        -(np.cross(dpsi.conj(), gradient)
+          + np.cross(psi.conj(), dgradient)) / B,
+    )
+
+
+def plaquette_curvature_tangent_force(psi: np.ndarray, chi: np.ndarray,
+                                      dpsi: np.ndarray, dchi: np.ndarray):
+    area = np.cross(chi, psi)
+    darea = np.cross(dchi, psi) + np.cross(chi, dpsi)
+    scale = 2 / (R**2 * len(PLAQUETTES))
+    gradient = scale * plaquette_dirichlet(area)
+    dgradient = scale * plaquette_dirichlet(darea)
+    return (
+        -(np.cross(dgradient, chi.conj())
+          + np.cross(gradient, dchi.conj())),
+        -(np.cross(dpsi.conj(), gradient)
+          + np.cross(psi.conj(), dgradient)) / B,
+    )
+
+
 def spectral_geometry_tangent_force(psi: np.ndarray, chi: np.ndarray,
                                     dpsi: np.ndarray, dchi: np.ndarray):
     """Hessian of ||D19(D19-27)W||^2/(R^2 27^2) at its zero set."""
@@ -293,6 +365,20 @@ def onsite_area_stiffness(side: int, order: int) -> float:
                  / np.vdot(psi, psi).real)
 
 
+def c19_curvature_stiffness(side: int) -> float:
+    psi, chi = carrier_fields(side, 1.0)
+    force_psi, _ = c19_curvature_force(psi, chi, 1.0)
+    return float(-np.vdot(psi, force_psi).real
+                 / np.vdot(psi, psi).real)
+
+
+def plaquette_curvature_stiffness(side: int) -> float:
+    psi, chi = carrier_fields(side, 1.0)
+    force_psi, _ = plaquette_curvature_force(psi, chi, 1.0)
+    return float(-np.vdot(psi, force_psi).real
+                 / np.vdot(psi, psi).real)
+
+
 def positive_roots(function, upper: float) -> list[float]:
     """Return all detected positive roots on a deterministic mixed grid."""
     linear = np.linspace(0.0, upper, 2001)
@@ -313,7 +399,8 @@ def positive_roots(function, upper: float) -> list[float]:
 def rest_state(side: int, dt: float, area_scale: float, bond_quartic: float,
                bond_sextic: float, local_cross_scale: float,
                local_self_scale: float, onsite_area_quartic: float,
-               onsite_area_sextic: float):
+               onsite_area_sextic: float, c19_curvature_strength: float,
+               plaquette_curvature_strength: float):
     _, psi_frequency_sq, chi_frequency_sq = balanced_values(
         dt, local_self_scale)
     h1 = 54 / R**2
@@ -321,11 +408,15 @@ def rest_state(side: int, dt: float, area_scale: float, bond_quartic: float,
     h6 = nonlinear_area_stiffness(side, 3)
     hlocal4 = onsite_area_stiffness(side, 2)
     hlocal6 = onsite_area_stiffness(side, 3)
+    hcurvature = c19_curvature_stiffness(side)
+    hplaquette = plaquette_curvature_stiffness(side)
     equation = lambda x: ((local_self_scale + local_cross_scale) * x
         + area_scale * (
         h1 * x + bond_quartic * h4 * x**3 + bond_sextic * h6 * x**5)
         + onsite_area_quartic * hlocal4 * x**3
         + onsite_area_sextic * hlocal6 * x**5
+        + c19_curvature_strength * hcurvature * x
+        + plaquette_curvature_strength * hplaquette * x
         - psi_frequency_sq)
     roots = positive_roots(equation, max(4 * psi_frequency_sq, R**2 * 4))
     if not roots:
@@ -362,6 +453,8 @@ def tangent_matrices(psi: np.ndarray, chi: np.ndarray, bond_quartic: float,
     parallel_matrix = np.empty_like(matrix)
     onsite_area_quartic_matrix = np.empty_like(matrix)
     onsite_area_sextic_matrix = np.empty_like(matrix)
+    curvature_matrix = np.empty_like(matrix)
+    plaquette_matrix = np.empty_like(matrix)
     spectral_matrix = np.empty_like(matrix)
     basis = np.zeros(dimension)
     for column in range(dimension):
@@ -376,6 +469,9 @@ def tangent_matrices(psi: np.ndarray, chi: np.ndarray, bond_quartic: float,
             psi, chi, dpsi, dchi, 2)
         onsite6 = onsite_area_polynomial_tangent_force(
             psi, chi, dpsi, dchi, 3)
+        curvature = c19_curvature_tangent_force(psi, chi, dpsi, dchi)
+        plaquette = plaquette_curvature_tangent_force(
+            psi, chi, dpsi, dchi)
         spectral = spectral_geometry_tangent_force(psi, chi, dpsi, dchi)
         ap, ac = local[0] + area[0], local[1] + area[1]
         matrix[:, column] = pack(ap, ac)
@@ -385,11 +481,13 @@ def tangent_matrices(psi: np.ndarray, chi: np.ndarray, bond_quartic: float,
         parallel_matrix[:, column] = pack(*parallel)
         onsite_area_quartic_matrix[:, column] = pack(*onsite4)
         onsite_area_sextic_matrix[:, column] = pack(*onsite6)
+        curvature_matrix[:, column] = pack(*curvature)
+        plaquette_matrix[:, column] = pack(*plaquette)
         spectral_matrix[:, column] = pack(*spectral)
         basis[column] = 0
     return (matrix, local_matrix, area_matrix, repair_matrix, parallel_matrix,
             onsite_area_quartic_matrix, onsite_area_sextic_matrix,
-            spectral_matrix)
+            curvature_matrix, plaquette_matrix, spectral_matrix)
 
 
 def rotation_matrix(side: int, qp: complex, qc: complex, exponent: int) -> np.ndarray:
@@ -451,16 +549,20 @@ def classify(side: int, dt: float, area_scale: float,
              local_cross_scale: float = 1.0,
              local_self_scale: float = 1.0,
              onsite_area_quartic: float = 0.0,
-             onsite_area_sextic: float = 0.0) -> dict:
+             onsite_area_sextic: float = 0.0,
+             c19_curvature_strength: float = 0.0,
+             plaquette_curvature_strength: float = 0.0) -> dict:
     global B
     B = inertia
     psi, chi, qp, qc, roots = rest_state(
         side, dt, area_scale, bond_quartic, bond_sextic, local_cross_scale,
-        local_self_scale, onsite_area_quartic, onsite_area_sextic)
+        local_self_scale, onsite_area_quartic, onsite_area_sextic,
+        c19_curvature_strength, plaquette_curvature_strength)
     ap, ac = force(psi, chi, area_scale, repair_strength, bond_quartic,
                    bond_sextic, parallel_strength, local_cross_scale,
                    local_self_scale, onsite_area_quartic,
-                   onsite_area_sextic)
+                   onsite_area_sextic, c19_curvature_strength,
+                   plaquette_curvature_strength)
     previous = (psi / qp, chi.copy())
     previous[1][..., :2] /= qc
     next_psi = 2 * psi - previous[0] + dt**2 * ap
@@ -470,18 +572,22 @@ def classify(side: int, dt: float, area_scale: float,
     orbit_defect = max(np.max(abs(next_psi - qp * psi)),
                        np.max(abs(next_chi - target_chi)))
 
-    (Kbase, Klocal, Karea, Krepair, Kparallel, Konsite4, Konsite6,
-     Kspectral) = tangent_matrices(
+    (Kbase, Klocal, Karea, Krepair, Kparallel, Konsite4, Konsite6, Kcurvature,
+     Kplaquette, Kspectral) = tangent_matrices(
         psi, chi, bond_quartic, bond_sextic, local_cross_scale,
         local_self_scale)
     K = (Klocal + area_scale * Karea + repair_strength * Krepair
          + parallel_strength * Kparallel + onsite_area_quartic * Konsite4
          + onsite_area_sextic * Konsite6
+         + c19_curvature_strength * Kcurvature
+         + plaquette_curvature_strength * Kplaquette
          + spectral_strength * Kspectral)
     split_defect = np.linalg.norm(
         K - Klocal - area_scale * Karea - repair_strength * Krepair
         - parallel_strength * Kparallel
         - onsite_area_quartic * Konsite4 - onsite_area_sextic * Konsite6
+        - c19_curvature_strength * Kcurvature
+        - plaquette_curvature_strength * Kplaquette
         - spectral_strength * Kspectral) / np.linalg.norm(K)
     reciprocity = np.linalg.norm(K - K.T) / np.linalg.norm(K)
     rm1 = rotation_matrix(side, qp, qc, -1)
@@ -517,6 +623,9 @@ def classify(side: int, dt: float, area_scale: float,
                        ("local_parallel_overlap", parallel_strength * Kparallel),
                        ("onsite_area_quartic", onsite_area_quartic * Konsite4),
                        ("onsite_area_sextic", onsite_area_sextic * Konsite6),
+                       ("c19_curvature", c19_curvature_strength * Kcurvature),
+                       ("plaquette_curvature",
+                        plaquette_curvature_strength * Kplaquette),
                        ("spectral_geometry", spectral_strength * Kspectral)):
         derivative = np.block([
             [dt**2 * rm1 @ part, zero_block],
@@ -549,6 +658,8 @@ def classify(side: int, dt: float, area_scale: float,
         "local_self_potential_scale": local_self_scale,
         "onsite_area_quartic_strength": onsite_area_quartic,
         "onsite_area_sextic_strength": onsite_area_sextic,
+        "c19_curvature_strength": c19_curvature_strength,
+        "plaquette_curvature_strength": plaquette_curvature_strength,
         "spectral_geometry_strength": spectral_strength,
         "bond_quartic_coefficient": bond_quartic,
         "bond_sextic_coefficient": bond_sextic,
@@ -594,13 +705,16 @@ def safe_classify(side: int, dt: float, area_scale: float,
                   bond_quartic: float, bond_sextic: float,
                   inertia: float, parallel_strength: float,
                   local_cross_scale: float, local_self_scale: float,
-                  onsite_area_quartic: float, onsite_area_sextic: float) -> dict:
+                  onsite_area_quartic: float, onsite_area_sextic: float,
+                  c19_curvature_strength: float,
+                  plaquette_curvature_strength: float) -> dict:
     try:
         return classify(side, dt, area_scale, repair_strength,
                         spectral_strength, bond_quartic, bond_sextic, inertia,
                         parallel_strength, local_cross_scale,
                         local_self_scale, onsite_area_quartic,
-                        onsite_area_sextic)
+                        onsite_area_sextic, c19_curvature_strength,
+                        plaquette_curvature_strength)
     except ValueError as error:
         return {
             "side": side,
@@ -613,6 +727,8 @@ def safe_classify(side: int, dt: float, area_scale: float,
             "local_self_potential_scale": local_self_scale,
             "onsite_area_quartic_strength": onsite_area_quartic,
             "onsite_area_sextic_strength": onsite_area_sextic,
+            "c19_curvature_strength": c19_curvature_strength,
+            "plaquette_curvature_strength": plaquette_curvature_strength,
             "spectral_geometry_strength": spectral_strength,
             "bond_quartic_coefficient": bond_quartic,
             "bond_sextic_coefficient": bond_sextic,
@@ -640,13 +756,18 @@ def main() -> None:
                         default=(0.0,))
     parser.add_argument("--onsite-area-sextics", nargs="+", type=float,
                         default=(0.0,))
+    parser.add_argument("--c19-curvature-strengths", nargs="+", type=float,
+                        default=(0.0,))
+    parser.add_argument("--plaquette-curvature-strengths", nargs="+", type=float,
+                        default=(0.0,))
     parser.add_argument("--output", default="localized_stability.json")
     args = parser.parse_args()
     rows = [safe_classify(side, 1 / rate, area_scale, strength, spectral_strength,
                           bond_quartic, bond_sextic, inertia,
                           parallel_strength, local_cross_scale,
                           local_self_scale, onsite_area_quartic,
-                          onsite_area_sextic)
+                          onsite_area_sextic, c19_curvature_strength,
+                          plaquette_curvature_strength)
             for side in args.sides for rate in args.rates
             for area_scale in args.area_scales for strength in args.strengths
             for spectral_strength in args.spectral_strengths
@@ -657,7 +778,9 @@ def main() -> None:
             for local_cross_scale in args.local_cross_scales
             for local_self_scale in args.local_self_scales
             for onsite_area_quartic in args.onsite_area_quartics
-            for onsite_area_sextic in args.onsite_area_sextics]
+            for onsite_area_sextic in args.onsite_area_sextics
+            for c19_curvature_strength in args.c19_curvature_strengths
+            for plaquette_curvature_strength in args.plaquette_curvature_strengths]
     result = {
         "status": "NUMERICAL_FULL_TANGENT_CLASSIFICATION",
         "action_changed": any(
@@ -671,7 +794,9 @@ def main() -> None:
                 value != 1.0 for value in args.local_cross_scales) or any(
                 value != 1.0 for value in args.local_self_scales) or any(
                 value != 0.0 for value in args.onsite_area_quartics) or any(
-                value != 0.0 for value in args.onsite_area_sextics),
+                value != 0.0 for value in args.onsite_area_sextics) or any(
+                value != 0.0 for value in args.c19_curvature_strengths) or any(
+                value != 0.0 for value in args.plaquette_curvature_strengths),
         "rows": rows,
     }
     (HERE / args.output).write_text(

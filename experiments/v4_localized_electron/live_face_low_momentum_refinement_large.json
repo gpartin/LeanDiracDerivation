@@ -1,0 +1,67 @@
+{
+  "status": "V4_LIVE_FACE_GENERIC_BOX_GATE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "side5_identity": null,
+  "rows": [
+    {
+      "side": 17,
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "packet_width": 2.125,
+      "wave_number": 0.7391982714328925,
+      "wavelengths_in_box": 2.0,
+      "normalized_DEL_residual": 5.215428802138214e-05,
+      "absolute_DEL_RMS": 0.06595459414211242,
+      "rest_DEL_RMS": 2.117901499756489e-13
+    },
+    {
+      "side": 25,
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "packet_width": 3.125,
+      "wave_number": 0.5026548245743669,
+      "wavelengths_in_box": 2.0000000000000004,
+      "normalized_DEL_residual": 6.172609536508189e-05,
+      "absolute_DEL_RMS": 0.046516392060523264,
+      "rest_DEL_RMS": 1.1875970959884083e-13
+    },
+    {
+      "side": 33,
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "packet_width": 4.125,
+      "wave_number": 0.3807991095260355,
+      "wavelengths_in_box": 2.0,
+      "normalized_DEL_residual": 6.991010552178096e-05,
+      "absolute_DEL_RMS": 0.034874221637019746,
+      "rest_DEL_RMS": 7.83083782914606e-14
+    }
+  ],
+  "per_side": [
+    {
+      "side": 17,
+      "maximum_normalized_DEL_residual": 5.215428802138214e-05,
+      "maximum_absolute_DEL_RMS": 0.06595459414211242,
+      "maximum_rest_DEL_RMS": 2.117901499756489e-13
+    },
+    {
+      "side": 25,
+      "maximum_normalized_DEL_residual": 6.172609536508189e-05,
+      "maximum_absolute_DEL_RMS": 0.046516392060523264,
+      "maximum_rest_DEL_RMS": 1.1875970959884083e-13
+    },
+    {
+      "side": 33,
+      "maximum_normalized_DEL_residual": 6.991010552178096e-05,
+      "maximum_absolute_DEL_RMS": 0.034874221637019746,
+      "maximum_rest_DEL_RMS": 7.83083782914606e-14
+    }
+  ],
+  "verdict": "LIVE_FACE_GENERIC_BOX_OPEN",
+  "claim_boundary": "Exact action identity and tangent DEL residual only. This is not an unrestricted nonlinear cell handoff or V4-006 pass.",
+  "two_wavelength_scaling": true
+}

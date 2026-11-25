@@ -1,0 +1,88 @@
+{
+  "status": "V4_MIXED_PRONG_DIRAC_AMPLITUDE_CONTINUATION",
+  "case_index": 1,
+  "flavor": "plus",
+  "direction": "x",
+  "sign": 1,
+  "momentum": [
+    0.35,
+    0.0,
+    0.0
+  ],
+  "rows": [
+    {
+      "amplitude_fraction": 1e-08,
+      "converged": true,
+      "iterations": 6,
+      "final_DEL_RMS": 4.071266956856935e-11,
+      "native_vs_dirac_relative_error": 0.011241764502994222,
+      "outside_packet_lift_fraction": 9.474109254912291e-05
+    },
+    {
+      "amplitude_fraction": 3e-08,
+      "converged": true,
+      "iterations": 14,
+      "final_DEL_RMS": 5.4187791789320886e-11,
+      "native_vs_dirac_relative_error": 0.0015635653873524132,
+      "outside_packet_lift_fraction": 7.644210985151173e-05
+    },
+    {
+      "amplitude_fraction": 1e-07,
+      "converged": true,
+      "iterations": 17,
+      "final_DEL_RMS": 3.352164950358229e-11,
+      "native_vs_dirac_relative_error": 0.001476014862850132,
+      "outside_packet_lift_fraction": 7.649492532479806e-05
+    },
+    {
+      "amplitude_fraction": 3e-07,
+      "converged": true,
+      "iterations": 3,
+      "final_DEL_RMS": 7.15920239063539e-11,
+      "native_vs_dirac_relative_error": 0.0014760148248806314,
+      "outside_packet_lift_fraction": 7.64949169135364e-05
+    },
+    {
+      "amplitude_fraction": 1e-06,
+      "converged": true,
+      "iterations": 11,
+      "final_DEL_RMS": 9.728900125970939e-11,
+      "native_vs_dirac_relative_error": 0.0014760151589440396,
+      "outside_packet_lift_fraction": 7.649487818781282e-05
+    },
+    {
+      "amplitude_fraction": 3e-06,
+      "converged": true,
+      "iterations": 22,
+      "final_DEL_RMS": 9.057892334375302e-11,
+      "native_vs_dirac_relative_error": 0.0014760160271108322,
+      "outside_packet_lift_fraction": 7.649473323611041e-05
+    },
+    {
+      "amplitude_fraction": 1e-05,
+      "converged": true,
+      "iterations": 22,
+      "final_DEL_RMS": 7.546426466367024e-11,
+      "native_vs_dirac_relative_error": 0.0014760192748779599,
+      "outside_packet_lift_fraction": 7.649424005232844e-05
+    },
+    {
+      "amplitude_fraction": 3e-05,
+      "converged": true,
+      "iterations": 26,
+      "final_DEL_RMS": 8.060883544711251e-11,
+      "native_vs_dirac_relative_error": 0.0014760296510454018,
+      "outside_packet_lift_fraction": 7.649282673599008e-05
+    },
+    {
+      "amplitude_fraction": 0.0001,
+      "converged": true,
+      "iterations": 30,
+      "final_DEL_RMS": 8.264121953250651e-11,
+      "native_vs_dirac_relative_error": 0.0014760794970443917,
+      "outside_packet_lift_fraction": 7.6487873051492e-05
+    }
+  ],
+  "verdict": "MIXED_PRONG_CONTINUATION_PASS",
+  "claim_boundary": "One native nonlinear update continued from the exact rest branch. Repeated motion and current/endurance remain."
+}

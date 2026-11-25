@@ -1,0 +1,185 @@
+{
+  "status": "V4_DIRECT_PRONG_RESPONSE_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "target_pattern": "exact same-assignment one-cell translation in both signs of all three cubic axes",
+  "candidate_basis": "positive position and velocity C19 bond squares with each Psi/chi component connected only to the same component",
+  "rows": [
+    {
+      "axis": 0,
+      "sign": -1,
+      "canonical_DEL_norm": 1864889.7049854803,
+      "basis_rank": 20
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "canonical_DEL_norm": 1864889.7049819112,
+      "basis_rank": 20
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "canonical_DEL_norm": 1666311.8195932254,
+      "basis_rank": 20
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "canonical_DEL_norm": 1666311.8195932226,
+      "basis_rank": 20
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "canonical_DEL_norm": 1666311.8195931648,
+      "basis_rank": 20
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "canonical_DEL_norm": 1666311.8195931087,
+      "basis_rank": 20
+    }
+  ],
+  "fully_component_resolved": {
+    "active_columns": 20,
+    "rank": 20,
+    "relative_residual": 0.16885719182582284,
+    "explained_squared_fraction": 0.9714872487686973,
+    "coefficients": {
+      "position:Psi:0:face": -56.26995788615251,
+      "position:Psi:0:edge": -113.71541850445935,
+      "position:Psi:1:face": -56.789246980055765,
+      "position:Psi:1:edge": -115.95734895374692,
+      "position:chi:0:face": -25911.500601393975,
+      "position:chi:0:edge": 25873.226847747446,
+      "position:chi:1:face": -12792.872756995548,
+      "position:chi:1:edge": 14691.189790488264,
+      "position:chi:2:face": -40733.04129995155,
+      "position:chi:2:edge": 48069.180813423096,
+      "kinetic:Psi:0:face": -0.15100983158495726,
+      "kinetic:Psi:0:edge": -0.3130570926260103,
+      "kinetic:Psi:1:face": -0.16323424810014872,
+      "kinetic:Psi:1:edge": -0.315135717427969,
+      "kinetic:chi:0:face": -0.25396373397542826,
+      "kinetic:chi:0:edge": -0.20447134959767224,
+      "kinetic:chi:1:face": -0.18621111802235604,
+      "kinetic:chi:1:edge": -0.26828337419171583,
+      "kinetic:chi:2:face": -0.06808930553846435,
+      "kinetic:chi:2:edge": -0.3789317873446421
+    },
+    "nonnegative_relative_residual": 0.5351966123122395,
+    "nonnegative_explained_squared_fraction": 0.7135645861695024,
+    "nonnegative_coefficients": {
+      "position:Psi:0:edge": 47.419787965107865,
+      "position:chi:0:face": 186845.96974608905,
+      "position:chi:0:edge": 5230.286907560103,
+      "position:chi:1:face": 180335.82448515669,
+      "position:chi:2:face": 188806.61281609832,
+      "position:chi:2:edge": 3.019025731934072e-07
+    }
+  },
+  "cubic_tied_components": {
+    "groups": [
+      [
+        "position",
+        "Psi",
+        "face"
+      ],
+      [
+        "position",
+        "Psi",
+        "edge"
+      ],
+      [
+        "position",
+        "chi",
+        "face"
+      ],
+      [
+        "position",
+        "chi",
+        "edge"
+      ],
+      [
+        "kinetic",
+        "Psi",
+        "face"
+      ],
+      [
+        "kinetic",
+        "Psi",
+        "edge"
+      ],
+      [
+        "kinetic",
+        "chi",
+        "face"
+      ],
+      [
+        "kinetic",
+        "chi",
+        "edge"
+      ]
+    ],
+    "active_columns": 8,
+    "rank": 8,
+    "relative_residual": 0.18759603212199744,
+    "explained_squared_fraction": 0.9648077287320825,
+    "coefficients": {
+      "('position', 'Psi', 'face')": -56.548868110180074,
+      "('position', 'Psi', 'edge')": -115.11714396615618,
+      "('position', 'chi', 'face')": -51670.35550400383,
+      "('position', 'chi', 'edge')": 52253.90806438966,
+      "('kinetic', 'Psi', 'face')": -0.15816298172226392,
+      "('kinetic', 'Psi', 'edge')": -0.31203393164454263,
+      "('kinetic', 'chi', 'face')": -0.2604271373380632,
+      "('kinetic', 'chi', 'edge')": -0.21755329717298297
+    },
+    "nonnegative_relative_residual": 0.535551700481989,
+    "nonnegative_explained_squared_fraction": 0.7131843761108501,
+    "nonnegative_coefficients": {
+      "('position', 'Psi', 'edge')": 3.7736442693435612,
+      "('position', 'chi', 'face')": 187574.6616757521
+    }
+  },
+  "face_edge_tied": {
+    "groups": [
+      [
+        "position",
+        "Psi"
+      ],
+      [
+        "position",
+        "chi"
+      ],
+      [
+        "kinetic",
+        "Psi"
+      ],
+      [
+        "kinetic",
+        "chi"
+      ]
+    ],
+    "active_columns": 4,
+    "rank": 4,
+    "relative_residual": 0.20130800896712284,
+    "explained_squared_fraction": 0.9594750855256928,
+    "coefficients": {
+      "('position', 'Psi')": -85.26845722314478,
+      "('position', 'chi')": 11901.289590341155,
+      "('kinetic', 'Psi')": -0.23427534769949288,
+      "('kinetic', 'chi')": -0.21873692849945764
+    },
+    "nonnegative_relative_residual": 0.5713849765859386,
+    "nonnegative_explained_squared_fraction": 0.6735192085318864,
+    "nonnegative_coefficients": {
+      "('position', 'Psi')": 1.355837662209661,
+      "('position', 'chi')": 84719.24994963549
+    }
+  },
+  "verdict": "DIRECT_PRONG_RESPONSE_SPAN_DIAGNOSED",
+  "claim_boundary": "An unconstrained response projection is not an admitted action. It diagnoses whether this action family can supply the missing DEL response before any coefficient or nonlinear activation is proposed."
+}

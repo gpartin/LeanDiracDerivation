@@ -1,0 +1,28 @@
+{
+  "status": "V4_CUBE_INCIDENCE_DIRAC_GRAPH_SOLVE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "plus_minus_complete_image_projector_defect": 1.930683833290929e-10,
+  "Riccati_history": [
+    {
+      "iteration": -1,
+      "damping": 0.0,
+      "relative_Riccati_residual": 1.0,
+      "graph_operator_norm": 0.0
+    },
+    {
+      "iteration": 0,
+      "damping": 0.03125,
+      "relative_Riccati_residual": 0.9641031129212951,
+      "graph_operator_norm": 55.87894326877311
+    }
+  ],
+  "configuration_relative_cross_block": 0.00807833152210845,
+  "projection_min_singular": 0.017892963782433907,
+  "projection_condition": 55.88789046685119,
+  "two_layer_relative_cross_block": 0.00016309504664692944,
+  "two_layer_residual_rank": 55,
+  "configuration_verdict": "INVARIANT_GRAPH_SOLVE_FAIL",
+  "two_layer_verdict": "TWO_LAYER_GRAPH_OPEN",
+  "claim_boundary": "Configuration Riccati graph and two-layer test only. It does not prove Dirac generator/current equality or nonlinear motion."
+}

@@ -1,0 +1,190 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_face_laplacian_plus_triangle_holonomy",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "chi_lift": "zero",
+  "chi_scales": {
+    "plus": [
+      0.0,
+      0.0
+    ],
+    "minus": [
+      0.0,
+      0.0
+    ]
+  },
+  "requested_updates": 9,
+  "carrier_wave_number": 0.35,
+  "packet_width": 1.35,
+  "readout": "local",
+  "dirac_time_comparator": "centered",
+  "frequency_branch": "negative",
+  "face_gradient_coefficient": null,
+  "solver_tolerance_RMS": 2e-10,
+  "rest_roundoff_subtracted": true,
+  "all_solvers_converged": true,
+  "maximum_native_vs_dirac_relative_error": 0.022458130029977822,
+  "maximum_outside_four_component_fraction": 0.0008229423883950811,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "solver_residual_RMS": 7.979036752822423e-11,
+          "native_vs_dirac_relative_error": 0.0005334199314936244,
+          "outside_four_component_fraction": 2.0758426953640306e-05,
+          "within_four_component_relative_error": 0.0005330160687800524,
+          "phase_amplitude_aligned_shape_error": 0.00046766171734652747,
+          "phase_plane_coefficients": [
+            0.9997462644395166,
+            3.804742815266226e-05
+          ],
+          "native_norm_ratio": 0.9997463745449919,
+          "nonlinear_vs_local_tangent_relative_error": 0.0027907606074393377
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "solver_residual_RMS": 8.225139119006926e-11,
+          "native_vs_dirac_relative_error": 0.0015958363710083428,
+          "outside_four_component_fraction": 6.189255952146323e-05,
+          "within_four_component_relative_error": 0.0015946375147089017,
+          "phase_amplitude_aligned_shape_error": 0.0013981377377462489,
+          "phase_plane_coefficients": [
+            0.999245701733443,
+            0.00015145532143727173
+          ],
+          "native_norm_ratio": 0.9992466913433381,
+          "nonlinear_vs_local_tangent_relative_error": 0.0027878486473374205
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "solver_residual_RMS": 8.471456345939669e-11,
+          "native_vs_dirac_relative_error": 0.0031777693634334175,
+          "outside_four_component_fraction": 0.00012268905004595248,
+          "within_four_component_relative_error": 0.003175407090678448,
+          "phase_amplitude_aligned_shape_error": 0.0027821750555146615,
+          "phase_plane_coefficients": [
+            0.9985112421392541,
+            0.0003759256837678439
+          ],
+          "native_norm_ratio": 0.9985151889163412,
+          "nonlinear_vs_local_tangent_relative_error": 0.0027851110155665804
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 8.351564587705372e-11,
+          "native_vs_dirac_relative_error": 0.005264826909261069,
+          "outside_four_component_fraction": 0.00020211670981021894,
+          "within_four_component_relative_error": 0.005260964675333316,
+          "phase_amplitude_aligned_shape_error": 0.0046062690706169425,
+          "phase_plane_coefficients": [
+            0.9975615463722262,
+            0.0007447358852349398
+          ],
+          "native_norm_ratio": 0.9975724590959987,
+          "nonlinear_vs_local_tangent_relative_error": 0.0027825520100767847
+        },
+        {
+          "step": 5,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 7.023331161683615e-11,
+          "native_vs_dirac_relative_error": 0.007837902092289567,
+          "outside_four_component_fraction": 0.0002988437144662668,
+          "within_four_component_relative_error": 0.007832243324254255,
+          "phase_amplitude_aligned_shape_error": 0.0068528668914003285,
+          "phase_plane_coefficients": [
+            0.9964206050854202,
+            0.0012879660797377682
+          ],
+          "native_norm_ratio": 0.9964450024361861,
+          "nonlinear_vs_local_tangent_relative_error": 0.0027801341246261055
+        },
+        {
+          "step": 6,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 7.518668476787078e-11,
+          "native_vs_dirac_relative_error": 0.010873417666950682,
+          "outside_four_component_fraction": 0.0004112593783040377,
+          "within_four_component_relative_error": 0.010865712547831178,
+          "phase_amplitude_aligned_shape_error": 0.009500616387113914,
+          "phase_plane_coefficients": [
+            0.9951172365152905,
+            0.0020317777381507842
+          ],
+          "native_norm_ratio": 0.995164661873773,
+          "nonlinear_vs_local_tangent_relative_error": 0.002777777893557178
+        },
+        {
+          "step": 7,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 8.496884915254143e-11,
+          "native_vs_dirac_relative_error": 0.014343614436430258,
+          "outside_four_component_fraction": 0.0005375007302429229,
+          "within_four_component_relative_error": 0.014333665191352464,
+          "phase_amplitude_aligned_shape_error": 0.012524658151024546,
+          "phase_plane_coefficients": [
+            0.9936844885839552,
+            0.0029977539683487355
+          ],
+          "native_norm_ratio": 0.9937679389289086,
+          "nonlinear_vs_local_tangent_relative_error": 0.0027753625681374784
+        },
+        {
+          "step": 8,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 8.41571708261389e-11,
+          "native_vs_dirac_relative_error": 0.018216881696207186,
+          "outside_four_component_fraction": 0.0006754841609630526,
+          "within_four_component_relative_error": 0.01820454624189962,
+          "phase_amplitude_aligned_shape_error": 0.01589695842308848,
+          "phase_plane_coefficients": [
+            0.9921589507627067,
+            0.004202313468384228
+          ],
+          "native_norm_ratio": 0.9922951961508981,
+          "nonlinear_vs_local_tangent_relative_error": 0.002772727690056092
+        },
+        {
+          "step": 9,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 7.792094347559293e-11,
+          "native_vs_dirac_relative_error": 0.022458130029977822,
+          "outside_four_component_fraction": 0.0008229423883950811,
+          "within_four_component_relative_error": 0.022443323902939388,
+          "phase_amplitude_aligned_shape_error": 0.01958668183603807,
+          "phase_plane_coefficients": [
+            0.9905799803538964,
+            0.005656211538142578
+          ],
+          "native_norm_ratio": 0.9907897498017605,
+          "nonlinear_vs_local_tangent_relative_error": 0.002769675753341886
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "9 unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "V4_CHI_ORIENTATION_LIMITING_HINGE_RESPONSE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "sum_C19 w ||chi_i chi_i^dagger-chi_j chi_j^dagger||_F^2/(4 chi0^2)",
+  "properties": {
+    "positive": true,
+    "reciprocal": true,
+    "cubic_C19": true,
+    "local_chi_phase_invariant": true,
+    "uniform_vacuum_energy": 0.0
+  },
+  "reference_face_uniform_addition": 10.0,
+  "limiting_eigenvalue": {
+    "real": 1.000002045632102,
+    "imag": -1.2835733606213979e-08,
+    "modulus": 1.0000020456321022
+  },
+  "energy_at_exact_rest": 28222.62289430333,
+  "rest_force_norm": 1049.7863708143489,
+  "limiting_mode_curvature": 41.78016526583426,
+  "limiting_mode_image_norm_per_mode_norm": 43.690835088274234,
+  "limiting_mode_field_power": {
+    "Psi_fraction": 0.0004731282650572314,
+    "chi_fraction": 0.9995268717349428
+  },
+  "verdict": "CHI_ORIENTATION_ACTION_SEES_LIMITING_HINGE_AND_REQUIRES_RESOLVED_REST",
+  "claim_boundary": "Hessian response at the exact retained rest orbit. Nonzero rest force requires a freely re-solved branch before spectral use."
+}

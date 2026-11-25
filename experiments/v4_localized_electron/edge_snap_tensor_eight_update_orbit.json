@@ -1,0 +1,72 @@
+{
+  "status": "V4_8_UPDATE_EDGE_ORBIT_INCONCLUSIVE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_variant": "local_plus_traceless_density_mold",
+  "updates_per_translation": 8,
+  "dt": 0.05,
+  "translation_time": 0.4,
+  "phase_psi": 3.3287798462704368,
+  "phase_chi": -6.889772046440938e-05,
+  "noether_charge_penalty_weight": 0.0001,
+  "initial_scaled_del_rms": 0.0022454414785703087,
+  "initial_combined_del_and_charge_residual": 0.009162779768057341,
+  "final_scaled_del_rms": 0.0016899275812182048,
+  "final_combined_del_and_charge_residual": 0.001768073833894999,
+  "relative_del_residual_reduction": 0.24739629273518382,
+  "maximum_normalized_noether_charge_defects": {
+    "psi": 0.0005084948952202142,
+    "chi": 0.0001079944159534745
+  },
+  "optimizer_evaluations": 417,
+  "minimum_trace_residual": 0.0016899466898220182,
+  "intermediate_psi_density_sums": [
+    1258.5603119655586,
+    1245.4113007894812,
+    813.7340241350851,
+    555.75535114269,
+    815.7123689775011,
+    1254.4037046202225,
+    1262.2464395720774
+  ],
+  "intermediate_centers_of_density": [
+    [
+      1.5306650771271448,
+      1.5070159779908114,
+      1.4956777635179963
+    ],
+    [
+      1.6039740668609699,
+      1.5127254096364935,
+      1.491190374702068
+    ],
+    [
+      1.7515712321549297,
+      1.5135568112739601,
+      1.4819603421825431
+    ],
+    [
+      1.9922830602649888,
+      1.5148967796751693,
+      1.4737329419857952
+    ],
+    [
+      2.239982845171088,
+      1.5155742670710874,
+      1.4807256260190433
+    ],
+    [
+      2.3921470480979092,
+      1.51138970615436,
+      1.4874287855150221
+    ],
+    [
+      2.4673536614811664,
+      1.5054800708450362,
+      1.4933922604772736
+    ]
+  ],
+  "endpoint_constraint_defect": 0.0,
+  "verdict": "8_UPDATE_PATH_DOES_NOT_YET_CLOSE",
+  "claim_boundary": "This is one nonlinear boundary-value search. Nonconvergence is not a no-go theorem and does not admit the research action."
+}

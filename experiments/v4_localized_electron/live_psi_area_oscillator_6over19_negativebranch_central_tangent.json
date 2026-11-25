@@ -1,0 +1,44 @@
+{
+  "status": "V4_LIVE_FACE_CENTRAL_TANGENT_GATE",
+  "frequency_branch": "negative",
+  "momentum": [
+    -0.35,
+    0.0,
+    0.0
+  ],
+  "rows": [
+    {
+      "step": 0,
+      "native_vs_dirac_relative_error": 5.6617546378371816e-14,
+      "outside_four_component_fraction": 1.171662010151707e-15,
+      "native_norm_ratio": 1.0000000000000002
+    },
+    {
+      "step": 1,
+      "native_vs_dirac_relative_error": 0.00023105937427915317,
+      "outside_four_component_fraction": 8.583223893688803e-06,
+      "native_norm_ratio": 0.9998531414028032
+    },
+    {
+      "step": 2,
+      "native_vs_dirac_relative_error": 0.0006915278113453082,
+      "outside_four_component_fraction": 2.56404929974149e-05,
+      "native_norm_ratio": 0.9995626010208037
+    },
+    {
+      "step": 3,
+      "native_vs_dirac_relative_error": 0.0013780940207455497,
+      "outside_four_component_fraction": 5.097435220909375e-05,
+      "native_norm_ratio": 0.9991347449836449
+    },
+    {
+      "step": 4,
+      "native_vs_dirac_relative_error": 0.002285820448424861,
+      "outside_four_component_fraction": 8.430282163155605e-05,
+      "native_norm_ratio": 0.9985789883781372
+    }
+  ],
+  "maximum_native_vs_dirac_relative_error": 0.002285820448424861,
+  "maximum_outside_four_component_fraction": 8.430282163155605e-05,
+  "claim_boundary": "Odd finite-amplitude response for one copy and one direction; it is a tangent validation, not a V4-006 pass."
+}

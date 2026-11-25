@@ -1,0 +1,139 @@
+{
+  "status": "V4_UNIT_GEOMETRIC_ACTION_MULTISHIFT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "coefficient_rule": "unit weight for every independently normalized positive face and activated bond identity; no fitted coefficient",
+  "face_coefficients": {
+    "diagonal_symmetric": 1.0,
+    "diagonal_antisymmetric": 1.0,
+    "diagonal_reversed": 1.0,
+    "diagonal_conjugate": 1.0,
+    "edge_commutator": 1.0
+  },
+  "activated_coefficients": {
+    "vacuum_vacuum_chi": 1.0,
+    "carrier_vacuum_chi": 1.0,
+    "carrier_carrier_chi": 1.0,
+    "carrier_carrier_Psi_tight_frame": 1.0
+  },
+  "rows": [
+    {
+      "shift": {
+        "real": 1.00000005,
+        "imag": 0.0
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 1.000000017831169,
+          "imag": -4.569153357635823e-14,
+          "modulus": 1.000000017831169
+        },
+        {
+          "real": 1.0000000126689765,
+          "imag": 2.197306024891514e-12,
+          "modulus": 1.0000000126689765
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-06
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 1.000000018828176,
+          "imag": -5.296643767639252e-15,
+          "modulus": 1.000000018828176
+        },
+        {
+          "real": 0.9999999999993077,
+          "imag": 1.1774095416209983e-06,
+          "modulus": 1.0000000000000007
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 5e-06
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999950837,
+          "imag": 3.1357241583091214e-06,
+          "modulus": 1.0
+        },
+        {
+          "real": 0.9999999999993071,
+          "imag": 1.1774239534830594e-06,
+          "modulus": 1.0000000000000002
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-05
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999950839,
+          "imag": 3.135702163767106e-06,
+          "modulus": 1.0000000000000002
+        },
+        {
+          "real": 0.999999999999306,
+          "imag": 1.1773636608387225e-06,
+          "modulus": 0.9999999999999991
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000005,
+        "imag": 5e-05
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999950814,
+          "imag": 3.135690889015048e-06,
+          "modulus": 0.9999999999999977
+        },
+        {
+          "real": 0.9999999999993001,
+          "imag": 1.1773339378790842e-06,
+          "modulus": 0.9999999999999931
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.00001,
+        "imag": 0.0001
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999923471692,
+          "imag": 0.00012371605288453178,
+          "modulus": 1.0
+        },
+        {
+          "real": 0.9999999915744938,
+          "imag": 0.00012981144855914905,
+          "modulus": 0.9999999999999999
+        }
+      ]
+    }
+  ],
+  "maximum_resolved_modulus": 1.000000017831169,
+  "count_resolved_above_1_plus_1e_minus_7": 0,
+  "verdict": "UNIT_GEOMETRIC_ACTION_RESOLVED_BAND_PASS",
+  "claim_boundary": "Exact modes nearest six complex shifts across the prior unstable band. Still requires contour count, refinements, conservation, nonlinear stability, motion, and downstream Dirac regressions."
+}

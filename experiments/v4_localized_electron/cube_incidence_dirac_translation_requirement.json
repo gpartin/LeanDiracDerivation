@@ -1,0 +1,139 @@
+{
+  "status": "V4_DIRAC_LOW_MOMENTUM_TRANSLATION_REQUIREMENT",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "requirement": "the co-rotating positive-energy Dirac rest branch must admit a neutral native center-displacement tangent before alpha dot p can generate continuous low-momentum motion",
+  "dt_rows": [
+    {
+      "dt": 0.00390625,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "neutral_update_relative_residual": 0.0010217279443036932,
+          "residual_over_dt_squared": 66.95996255788684
+        },
+        {
+          "axis": 1,
+          "neutral_update_relative_residual": 0.0010253088266232047,
+          "residual_over_dt_squared": 67.19463926157835
+        },
+        {
+          "axis": 2,
+          "neutral_update_relative_residual": 0.0011242782104572506,
+          "residual_over_dt_squared": 73.68069680052638
+        }
+      ],
+      "phase_symmetry_control_residuals": {
+        "Psi_phase": 4.258384006213432e-16,
+        "chi_phase": 1.0467659764359727e-16
+      }
+    },
+    {
+      "dt": 0.001953125,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "neutral_update_relative_residual": 0.00027276699205240997,
+          "residual_over_dt_squared": 71.50423036458696
+        },
+        {
+          "axis": 1,
+          "neutral_update_relative_residual": 0.0002736219197925702,
+          "residual_over_dt_squared": 71.72834454210353
+        },
+        {
+          "axis": 2,
+          "neutral_update_relative_residual": 0.0002998730293019138,
+          "residual_over_dt_squared": 78.60991539332089
+        }
+      ],
+      "phase_symmetry_control_residuals": {
+        "Psi_phase": 4.163227927735542e-16,
+        "chi_phase": 1.1195634162366425e-16
+      }
+    },
+    {
+      "dt": 0.0009765625,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "neutral_update_relative_residual": 6.949738774110108e-05,
+          "residual_over_dt_squared": 72.87329284801281
+        },
+        {
+          "axis": 1,
+          "neutral_update_relative_residual": 6.970831396986385e-05,
+          "residual_over_dt_squared": 73.09446502926396
+        },
+        {
+          "axis": 2,
+          "neutral_update_relative_residual": 7.638304861046735e-05,
+          "residual_over_dt_squared": 80.09343157976942
+        }
+      ],
+      "phase_symmetry_control_residuals": {
+        "Psi_phase": 3.8528243565751436e-16,
+        "chi_phase": 7.183131397542845e-17
+      }
+    },
+    {
+      "dt": 0.00048828125,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "neutral_update_relative_residual": 1.7460386672298983e-05,
+          "residual_over_dt_squared": 73.23416966117031
+        },
+        {
+          "axis": 1,
+          "neutral_update_relative_residual": 1.7512961498884842e-05,
+          "residual_over_dt_squared": 73.45468446661869
+        },
+        {
+          "axis": 2,
+          "neutral_update_relative_residual": 1.918900755112023e-05,
+          "residual_over_dt_squared": 80.48453112769378
+        }
+      ],
+      "phase_symmetry_control_residuals": {
+        "Psi_phase": 3.142929871006738e-16,
+        "chi_phase": 9.869938178554498e-17
+      }
+    }
+  ],
+  "continuous_curvature_rows": [
+    {
+      "axis": 0,
+      "generalized_translation_curvature": 0.21820788098276284,
+      "stiffness_image_over_mass_norm": 0.3608024838724933
+    },
+    {
+      "axis": 1,
+      "generalized_translation_curvature": 0.2203872312128102,
+      "stiffness_image_over_mass_norm": 0.3608943178033274
+    },
+    {
+      "axis": 2,
+      "generalized_translation_curvature": 0.22028310630060033,
+      "stiffness_image_over_mass_norm": 0.36245073780355297
+    }
+  ],
+  "existing_action_inverse_screen": {
+    "candidate_count": 7,
+    "response_rank": 4,
+    "unrepaired_target_norm": 748.2067349720938,
+    "best_relative_residual": 0.9895921948049694,
+    "diagnostic_coefficients": {
+      "density_connection": 9.723399011416582e-15,
+      "cube_incidence_connection": -2.212842489582158,
+      "joint_phase_lock": -0.2379756737265458,
+      "relative_bilinear_phase": 0.23978822324107973,
+      "area_bilinear_phase": 0.048977404999001786,
+      "density_oriented_common_pair": 4.298799233986596e-19,
+      "density_oriented_relative_pair": -5.06736167056136e-19
+    },
+    "coefficients_admitted": false
+  },
+  "verdict": "CURRENT_ACTION_HAS_LOCALIZED_PINNING_OBSTRUCTION",
+  "claim_boundary": "Necessary low-momentum tangent condition at the exact localized rest orbit. Failure does not exclude isolated finite-speed traveling waves. Fitted inverse coefficients are diagnostic and are not an admitted action."
+}

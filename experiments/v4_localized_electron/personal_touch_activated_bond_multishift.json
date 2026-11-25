@@ -1,0 +1,184 @@
+{
+  "status": "V4_ACTIVATED_BOND_SCALE3_MULTISHIFT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "scale": 3.0,
+  "rows": [
+    {
+      "shift": {
+        "real": 1.00000005,
+        "imag": 0.0
+      },
+      "converged": true,
+      "count": 2,
+      "values": [
+        {
+          "real": 1.0000000128911006,
+          "imag": -3.721641179282547e-15,
+          "modulus": 1.0000000128911006
+        },
+        {
+          "real": 1.000000007259534,
+          "imag": -8.627901362746811e-14,
+          "modulus": 1.000000007259534
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-06
+      },
+      "converged": true,
+      "count": 2,
+      "values": [
+        {
+          "real": 1.0000000000084213,
+          "imag": 2.0372697172852325e-08,
+          "modulus": 1.0000000000084215
+        },
+        {
+          "real": 0.9999999999993553,
+          "imag": 1.1361159754390458e-06,
+          "modulus": 1.0000000000000007
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 5e-06
+      },
+      "converged": true,
+      "count": 2,
+      "values": [
+        {
+          "real": 0.9999999999965832,
+          "imag": 2.6140901359513823e-06,
+          "modulus": 0.9999999999999999
+        },
+        {
+          "real": 0.9999999999993351,
+          "imag": 1.1361302989846695e-06,
+          "modulus": 0.9999999999999805
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-05
+      },
+      "converged": true,
+      "count": 2,
+      "values": [
+        {
+          "real": 0.9999999999483299,
+          "imag": 1.0165633942550122e-05,
+          "modulus": 0.9999999999999999
+        },
+        {
+          "real": 0.9999999999203694,
+          "imag": 1.2619878369687104e-05,
+          "modulus": 1.0
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000005,
+        "imag": 5e-05
+      },
+      "converged": true,
+      "count": 2,
+      "values": [
+        {
+          "real": 0.9999999991507338,
+          "imag": 4.121325416631157e-05,
+          "modulus": 0.9999999999999999
+        },
+        {
+          "real": 0.9999999988158651,
+          "imag": 4.8664870442178236e-05,
+          "modulus": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.00001,
+        "imag": 0.0001
+      },
+      "converged": true,
+      "count": 2,
+      "values": [
+        {
+          "real": 0.9999999928534834,
+          "imag": 0.00011955347613937519,
+          "modulus": 1.0000000000000002
+        },
+        {
+          "real": 0.9999999980238563,
+          "imag": 6.286721954162813e-05,
+          "modulus": 0.9999999999999999
+        }
+      ]
+    }
+  ],
+  "unique_resolved_values": [
+    {
+      "real": 1.0000000128911006,
+      "imag": -3.721641179282547e-15,
+      "modulus": 1.0000000128911006
+    },
+    {
+      "real": 1.0000000000084213,
+      "imag": 2.0372697172852325e-08,
+      "modulus": 1.0000000000084215
+    },
+    {
+      "real": 0.9999999999993553,
+      "imag": 1.1361159754390458e-06,
+      "modulus": 1.0000000000000007
+    },
+    {
+      "real": 0.9999999999965832,
+      "imag": 2.6140901359513823e-06,
+      "modulus": 0.9999999999999999
+    },
+    {
+      "real": 0.9999999999483299,
+      "imag": 1.0165633942550122e-05,
+      "modulus": 0.9999999999999999
+    },
+    {
+      "real": 0.9999999999203694,
+      "imag": 1.2619878369687104e-05,
+      "modulus": 1.0
+    },
+    {
+      "real": 0.9999999991507338,
+      "imag": 4.121325416631157e-05,
+      "modulus": 0.9999999999999999
+    },
+    {
+      "real": 0.9999999988158651,
+      "imag": 4.8664870442178236e-05,
+      "modulus": 0.9999999999999999
+    },
+    {
+      "real": 0.9999999928534834,
+      "imag": 0.00011955347613937519,
+      "modulus": 1.0000000000000002
+    },
+    {
+      "real": 0.9999999980238563,
+      "imag": 6.286721954162813e-05,
+      "modulus": 0.9999999999999999
+    }
+  ],
+  "maximum_resolved_modulus": 1.0000000128911006,
+  "count_resolved_above_1_plus_1e_minus_7": 0,
+  "verdict": "MULTISHIFT_RESOLVED_BAND_PASS",
+  "claim_boundary": "Exact modes nearest seven real shifts across the prior unstable band. This is stronger than one targeted shift but is not yet a closed complex-contour eigenvalue count."
+}

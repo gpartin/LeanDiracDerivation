@@ -1,0 +1,86 @@
+{
+  "status": "V4_DISCRETE_SITE_TRANSFER_ARTIFACT_AUDIT",
+  "generated_date": "2026-11-24",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "artifacts": [
+    {
+      "path": "discrete_site_transfer_observable_gate.py",
+      "sha256": "c83916144de365ea811b83761d2cde58d7432e79d340a15ed6519717bce685e3"
+    },
+    {
+      "path": "discrete_site_transfer_observable_gate.json",
+      "sha256": "5f1ef3f43d446f60fbae048d8340f659e9d07197878001d0d4cc08157fe82dee"
+    },
+    {
+      "path": "discrete_site_transfer_action_ablation.py",
+      "sha256": "b245bdd0845453e9a58d61f6368ca9ada7388cc6db193217c93d420e90a7a998"
+    },
+    {
+      "path": "discrete_site_transfer_action_ablation.json",
+      "sha256": "658ee8d3c229521c85bd589a78eb69b5c30cd667b3c991558e59b6c194c53f28"
+    },
+    {
+      "path": "discrete_site_transfer_pair_channel_screen.py",
+      "sha256": "451f9dfa062b7bf3fba8a0876092deb3ddb9561300ec313eab2a9532b439d0ef"
+    },
+    {
+      "path": "discrete_site_transfer_pair_channel_screen.json",
+      "sha256": "68889d1628300e49cd3487971bf36a9f7e56c1786dfbcdf45f1b6b1cbb91fe6c"
+    },
+    {
+      "path": "discrete_site_transfer_information_basis_screen.py",
+      "sha256": "744d20fad435b46c076ddb095ea60ce2dd1dd03e2cfd473e68caa53fac7e6300"
+    },
+    {
+      "path": "discrete_site_transfer_information_basis_screen.json",
+      "sha256": "d41ca097457270e1629bfc72314567a6d4644a46bc896050b29710519c320fcc"
+    },
+    {
+      "path": "bond_direction_native_frame_rank.py",
+      "sha256": "4835e98e4ec3d2a6b3cfae0ba02bb43c49c2299548f3b5b7abab0610b576d16e"
+    },
+    {
+      "path": "bond_direction_native_frame_rank.json",
+      "sha256": "7d5f5dc6c05479ce7606a83229b8792b4ff88bb1633a4f42e783fafc5ed5cd53"
+    },
+    {
+      "path": "tetrahedral_frame_connection_probe.py",
+      "sha256": "540ecc5447747e18d048324b7354252afe9756db9c8cc6f5ac2309b62b240002"
+    },
+    {
+      "path": "tetrahedral_frame_connection_probe_unit_area_1.json",
+      "sha256": "e0c004f6e638220e6a6fa4e7e65a712b54d17e6b08a0bccf517061fc70d3d732"
+    },
+    {
+      "path": "c19_triangle_gyro_candidate_equivalence.py",
+      "sha256": "2cb9f7621a4374706b512dc26a75a01bfe6e1658353225f920916de3b352b3a6"
+    },
+    {
+      "path": "c19_triangle_gyro_candidate_equivalence.json",
+      "sha256": "b1e205556d9bd9c25b8ca5a4dfecf3a918c5e79102ff02a4170b270410b4b925"
+    },
+    {
+      "path": "c27_body_gyro_native_transport.py",
+      "sha256": "8b376317b4c497e2992df15a4da4de528fe9d368b0bac6fb6ed3bf2218c54e67"
+    },
+    {
+      "path": "c27_body_gyro_native_transport.json",
+      "sha256": "63fcff4e889e940b56093e3f2afa6a2bb4c93167cd7488a37cfe08d95fd8cf97"
+    },
+    {
+      "path": "c19_triangle_continuum_symbol_audit.py",
+      "sha256": "163d83a76d8878c1fa7a68335c1344672b934c285beefbb1e3a6724184e46510"
+    },
+    {
+      "path": "c19_triangle_continuum_symbol_audit.json",
+      "sha256": "aac47ef4c42a9398d7545dd54d3a0683172a7432be63f5c65abe883e11109bc3"
+    },
+    {
+      "path": "c27_body_gyro_native_refinement.json",
+      "sha256": "b61b4e38c2a2997fe37723e1881d62e640bc961b03b50cfa0e3a3c56351cf180"
+    }
+  ],
+  "verdict": "ARTIFACTS_HASHED_AND_REPLAYED",
+  "claim_boundary": "Hashes cover the no-intravoxel, native-information, covariant-frame, and C19-triangle rank calculations only; V4-006 remains open."
+}

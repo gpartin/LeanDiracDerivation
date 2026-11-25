@@ -1,0 +1,59 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "chi_wedge_metric_sq",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "requested_updates": 4,
+  "all_solvers_converged": true,
+  "maximum_native_vs_dirac_relative_error": 0.006802690719583774,
+  "maximum_outside_four_component_fraction": 0.00023511185013030454,
+  "rows": [
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.0006875834418654821,
+          "outside_four_component_fraction": 2.4419081246082884e-05,
+          "native_norm_ratio": 1.0000473380445905
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.0020612508770774295,
+          "outside_four_component_fraction": 7.26306204347886e-05,
+          "native_norm_ratio": 1.000138865429039
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 30,
+          "native_vs_dirac_relative_error": 0.004107845475710311,
+          "outside_four_component_fraction": 0.00014343356024448047,
+          "native_norm_ratio": 1.0002711764422292
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 14,
+          "native_vs_dirac_relative_error": 0.006802690719583774,
+          "outside_four_component_fraction": 0.00023511185013030454,
+          "native_norm_ratio": 1.000440653980446
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "Four unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

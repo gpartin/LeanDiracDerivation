@@ -1,0 +1,55 @@
+{
+  "status": "V4_LIVE_LINK_REFLECTION_COVARIANCE_GATE",
+  "link_source": "joint_face_laplacian_plus_psi_area_oscillator_frame_phase",
+  "scale": 0.3157894736842105,
+  "maximum_interval_relative_defect": 2.2646819695625984e-07,
+  "rows": [
+    {
+      "sample": 0,
+      "axis": 0,
+      "interval_relative_defect": 1.0135411926278368e-07
+    },
+    {
+      "sample": 0,
+      "axis": 1,
+      "interval_relative_defect": 8.583633309364655e-08
+    },
+    {
+      "sample": 0,
+      "axis": 2,
+      "interval_relative_defect": 1.462834873897041e-07
+    },
+    {
+      "sample": 1,
+      "axis": 0,
+      "interval_relative_defect": 2.2646819695625984e-07
+    },
+    {
+      "sample": 1,
+      "axis": 1,
+      "interval_relative_defect": 1.889230446214997e-07
+    },
+    {
+      "sample": 1,
+      "axis": 2,
+      "interval_relative_defect": 2.9975179971994186e-08
+    },
+    {
+      "sample": 2,
+      "axis": 0,
+      "interval_relative_defect": 4.107252503044649e-08
+    },
+    {
+      "sample": 2,
+      "axis": 1,
+      "interval_relative_defect": 8.457163191049187e-08
+    },
+    {
+      "sample": 2,
+      "axis": 2,
+      "interval_relative_defect": 2.5146410383338476e-08
+    }
+  ],
+  "verdict": "LIVE_LINK_REFLECTION_COVARIANCE_FAIL",
+  "claim_boundary": "Random-state action covariance under the three coordinate and native-vector reflections. It does not prove carrier motion."
+}

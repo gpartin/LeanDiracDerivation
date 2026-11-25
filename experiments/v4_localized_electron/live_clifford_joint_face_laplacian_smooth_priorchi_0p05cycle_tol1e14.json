@@ -1,0 +1,98 @@
+{
+  "status": "V4_LIVE_CLIFFORD_LONG_TANGENT",
+  "link_source": "joint_face_wedge_laplacian_smooth",
+  "action_scale": 0.05263157894736842,
+  "chi_payload": 1.0,
+  "relative_grade_scale": null,
+  "chi_lift": "prior",
+  "chi_scales": {
+    "plus": [
+      0.0003479600832739469,
+      -5.499963616435744e-09
+    ],
+    "minus": [
+      0.0003044126836514495,
+      1.3588621367613447e-08
+    ]
+  },
+  "cycles": 0.05,
+  "steps": 5,
+  "case_count": 1,
+  "maximum_phase_aligned_shape_error": 0.07431829173174702,
+  "maximum_psi_cross_block": 0.0003043139061457164,
+  "maximum_norm_drift": 0.0069615106166551755,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "samples": [
+        {
+          "step": 0,
+          "cycles": 0.0,
+          "native_vs_dirac_relative_error": 2.9173969696891156e-16,
+          "phase_aligned_shape_error": 2.932803984923811e-16,
+          "psi_outside_four_component_fraction": 1.8100224121844384e-15,
+          "induced_chi_fraction": 0.0002555667193340953,
+          "norm_ratio": 0.9999999999999997
+        },
+        {
+          "step": 1,
+          "cycles": 0.011812280932601607,
+          "native_vs_dirac_relative_error": 0.005188138151531748,
+          "phase_aligned_shape_error": 0.005113060772782604,
+          "psi_outside_four_component_fraction": 2.162696089718719e-05,
+          "induced_chi_fraction": 0.00025586593408262964,
+          "norm_ratio": 1.000391271219204
+        },
+        {
+          "step": 2,
+          "cycles": 0.023624561865203213,
+          "native_vs_dirac_relative_error": 0.015491996839645783,
+          "phase_aligned_shape_error": 0.015259853938618773,
+          "psi_outside_four_component_fraction": 6.421985415756468e-05,
+          "induced_chi_fraction": 0.00027666942255648807,
+          "norm_ratio": 1.0011782508439433
+        },
+        {
+          "step": 3,
+          "cycles": 0.035436842797804825,
+          "native_vs_dirac_relative_error": 0.030782889896427273,
+          "phase_aligned_shape_error": 0.030306947039404706,
+          "psi_outside_four_component_fraction": 0.00012664938285093528,
+          "induced_chi_fraction": 0.000346993326854767,
+          "norm_ratio": 1.0024356686949945
+        },
+        {
+          "step": 4,
+          "cycles": 0.04724912373040643,
+          "native_vs_dirac_relative_error": 0.05087903582188705,
+          "phase_aligned_shape_error": 0.05007007330713215,
+          "psi_outside_four_component_fraction": 0.00020734247254938223,
+          "induced_chi_fraction": 0.00048127844482052977,
+          "norm_ratio": 1.004300748192671
+        },
+        {
+          "step": 5,
+          "cycles": 0.059061404663008035,
+          "native_vs_dirac_relative_error": 0.07554972780137899,
+          "phase_aligned_shape_error": 0.07431829173174702,
+          "psi_outside_four_component_fraction": 0.0003043139061457164,
+          "induced_chi_fraction": 0.0006778290369902787,
+          "norm_ratio": 1.0069615106166552
+        }
+      ],
+      "maximum_phase_aligned_shape_error": 0.07431829173174702,
+      "maximum_psi_cross_block": 0.0003043139061457164,
+      "maximum_induced_chi_fraction": 0.0006778290369902787,
+      "maximum_norm_drift": 0.0069615106166551755
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_LONG_TANGENT_OPEN",
+  "claim_boundary": "Full two-field linear recurrence about the localized rest orbit. Nonlinear translation, current, refinement, and 100 cycles remain."
+}

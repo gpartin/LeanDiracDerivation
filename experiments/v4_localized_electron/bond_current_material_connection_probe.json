@@ -1,0 +1,202 @@
+{
+  "status": "V4_BOND_CURRENT_MATERIAL_CONNECTION_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "target_pattern": "same-assignment eight-site carrier translated by one C19 face edge in both signs of all three axes",
+  "candidate_action": "Tchi=(B/2)[kappa|chiDot|^2+|A19 D_t chi/24|^2], where D_t contains the density-mold connection and the C19 material derivative built from jPsi",
+  "bond_current": "jPsi=sum_C19 w n Im(Psi_i^dagger Psi_(i+n))/12",
+  "coefficient_provenance": "sum_C19 w n_a n_b=12 delta_ab; unit material-derivative coefficient from the continuum normalization",
+  "real_action": true,
+  "positive_kinetic_square": true,
+  "phase_invariant": true,
+  "cubic_covariant": true,
+  "locality": "one C19 hop inside the connection; two after variation",
+  "modes": [
+    {
+      "mode": "density_tensor",
+      "combined_relative_residual": 0.08635782816410094,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08050219385254338
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.08050224296453834
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08522901252156215
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08522901265083113
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09420820738070632
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09420820736912336
+        }
+      ]
+    },
+    {
+      "mode": "density_tensor_plus_advection",
+      "combined_relative_residual": 0.08641151037893352,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08040290092212725
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.08065312482236893
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08545482653167057
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08516370976058311
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09473101549943669
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09380234283087165
+        }
+      ]
+    },
+    {
+      "mode": "density_tensor_plus_vector_lie",
+      "combined_relative_residual": 0.08645487688422566,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08046523338299072
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.08063214060023317
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08545602943738836
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08525912962877118
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09518503324695762
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09346995563883545
+        }
+      ]
+    },
+    {
+      "mode": "density_tensor_plus_covector_lie",
+      "combined_relative_residual": 0.0864541898242464,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08036795123060714
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.0807018149671668
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08551347123727679
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08512773261635576
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09445025616658727
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.0943042147295768
+        }
+      ]
+    },
+    {
+      "mode": "advection_only",
+      "combined_relative_residual": 0.10695130889703972,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.1015059028368274
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.10180275042411832
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.11032268788403078
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.10999956730534076
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.11064234881251529
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.10958842535243346
+        }
+      ]
+    }
+  ],
+  "incumbent_relative_residual": 0.08635782816410094,
+  "best_mode": "density_tensor",
+  "best_relative_residual": 0.08635782816410094,
+  "relative_improvement": 0.0,
+  "verdict": "MATERIAL_CURRENT_CHANNEL_RETIRED_AT_CHEAP_GATE",
+  "claim_boundary": "This is a six-direction discrete-action response screen, not a solved orbit, rest-spectrum pass, action admission, or Dirac movement proof."
+}

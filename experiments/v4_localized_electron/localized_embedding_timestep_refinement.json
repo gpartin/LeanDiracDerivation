@@ -1,0 +1,46 @@
+{
+  "status": "V4_LOCALIZED_EMBEDDING_TIMESTEP_REFINEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "updates_per_unit": 128,
+      "dt": 0.0078125,
+      "flavor": "plus",
+      "full_invariance_relative_residual": 0.00013440432761096336,
+      "cross_block_relative_residual": 0.0007656827397714059,
+      "native_selected_chi_scale_real": -0.8411950454076814,
+      "native_selected_chi_scale_imag": -0.006248394396924883
+    },
+    {
+      "updates_per_unit": 256,
+      "dt": 0.00390625,
+      "flavor": "plus",
+      "full_invariance_relative_residual": 3.3636714076171634e-05,
+      "cross_block_relative_residual": 0.0003855946271128031,
+      "native_selected_chi_scale_real": -0.8396226481050193,
+      "native_selected_chi_scale_imag": -0.003880377325778035
+    },
+    {
+      "updates_per_unit": 512,
+      "dt": 0.001953125,
+      "flavor": "plus",
+      "full_invariance_relative_residual": 8.411398821915195e-06,
+      "cross_block_relative_residual": 0.0001931393933322055,
+      "native_selected_chi_scale_real": -0.8392341080014909,
+      "native_selected_chi_scale_imag": -0.0026888975909940896
+    }
+  ],
+  "observed_full_invariance_orders": [
+    1.9984709086915005,
+    1.9996191307947648
+  ],
+  "observed_cross_block_orders": [
+    0.9896617869003828,
+    0.9974424981269006
+  ],
+  "full_invariance_is_second_order": true,
+  "verdict": "CONTINUUM_TWO_LAYER_CLOSURE_SUPPORTED",
+  "interpretation": "The complete graph-invariance defect falls quadratically with the native timestep, while the separately normalized off-sector cross block falls linearly because the one-step coupling itself is proportional to dt. This is the expected discrete-time remainder pattern for a continuum-invariant first-order sector.",
+  "claim_boundary": "This supports continuum tangent closure of the localized joint Psi/chi readout. It does not prove exact finite-step closure, a nonlinear translating orbit, long-time stability, or current."
+}

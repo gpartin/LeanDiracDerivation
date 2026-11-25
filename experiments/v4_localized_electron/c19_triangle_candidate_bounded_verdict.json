@@ -1,0 +1,100 @@
+{
+  "status": "V4_C19_TRIANGLE_CANDIDATE_BOUNDED_VERDICT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "incumbent_positive_result": {
+    "exact_C19_triangle_factorization": true,
+    "exact_rest_DEL_RMS": 2.34e-12,
+    "fixed_charge_transport_ranks": [
+      3,
+      3,
+      3
+    ],
+    "nonlinear_0p1_percent_three_cycle_shape_residual": 0.002463679609827518
+  },
+  "failed_acceptance_gates": [
+    "one-percent perturbation update does not remain on a solved branch",
+    "complete physical 100-cycle stability is not established",
+    "no freely translating localized carrier has been found",
+    "no two-handoff both-sign all-axis movement pass exists",
+    "same-state native-current/Dirac-current closure is absent"
+  ],
+  "ten_consecutive_zero_improvement_bases": [
+    {
+      "basis": "direct chi bond gyros",
+      "evidence": "c27_chi_bond_gyro_obstruction_rank.json",
+      "verdict": "CHI_BOND_GYRO_BASIS_INCOMPLETE_FOR_NONLINEAR_OBSTRUCTION",
+      "expected_verdict": "CHI_BOND_GYRO_BASIS_INCOMPLETE_FOR_NONLINEAR_OBSTRUCTION",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "cross-field bond gyros",
+      "evidence": "c27_cross_bond_gyro_obstruction_rank.json",
+      "verdict": "CROSS_BOND_GYRO_BASIS_MISSES_NONLINEAR_OBSTRUCTION",
+      "expected_verdict": "CROSS_BOND_GYRO_BASIS_MISSES_NONLINEAR_OBSTRUCTION",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "shared-neighbor chi orientation response",
+      "evidence": "c19_chi_neighbor_orientation_obstruction_rank.json",
+      "verdict": "C19_NEIGHBOR_ORIENTATION_BASIS_MISSES_NONLINEAR_OBSTRUCTION",
+      "expected_verdict": "C19_NEIGHBOR_ORIENTATION_BASIS_MISSES_NONLINEAR_OBSTRUCTION",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "vacuum-mold alignment potential",
+      "evidence": "c19_vacuum_mold_alignment_obstruction.json",
+      "verdict": "VACUUM_MOLD_ALIGNMENT_MISSES_NONLINEAR_OBSTRUCTION",
+      "expected_verdict": "VACUUM_MOLD_ALIGNMENT_MISSES_NONLINEAR_OBSTRUCTION",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "parallel-or-orthogonal chi bond potential",
+      "evidence": "c19_bistable_chi_orientation_gate.json",
+      "verdict": "C19_BISTABLE_CHI_ORIENTATION_NO_IMPROVEMENT",
+      "expected_verdict": "C19_BISTABLE_CHI_ORIENTATION_NO_IMPROVEMENT",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "cube-overlap geometric chi bond potential",
+      "evidence": "c19_geometric_chi_orientation_gate.json",
+      "verdict": "C19_GEOMETRIC_CHI_ORIENTATION_NO_IMPROVEMENT",
+      "expected_verdict": "C19_GEOMETRIC_CHI_ORIENTATION_NO_IMPROVEMENT",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "C19 chi neighbor Berry one-form",
+      "evidence": "c19_chi_bond_gyro_spectrum_gate.json",
+      "verdict": "C19_CHI_BOND_GYRO_NO_IMPROVEMENT",
+      "expected_verdict": "C19_CHI_BOND_GYRO_NO_IMPROVEMENT",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "local chi Berry one-form",
+      "evidence": "c19_chi_phase_space_basis_gate.json",
+      "verdict": "C19_CHI_PHASE_SPACE_BASIS_NO_IMPROVEMENT",
+      "expected_verdict": "C19_CHI_PHASE_SPACE_BASIS_NO_IMPROVEMENT",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "C19-gradient chi Berry one-form",
+      "evidence": "c19_chi_phase_space_basis_gate.json",
+      "verdict": "C19_CHI_PHASE_SPACE_BASIS_NO_IMPROVEMENT",
+      "expected_verdict": "C19_CHI_PHASE_SPACE_BASIS_NO_IMPROVEMENT",
+      "zero_improvement_confirmed": true
+    },
+    {
+      "basis": "positive C19-gradient chi kinetic metric",
+      "evidence": "c19_chi_phase_space_basis_gate.json",
+      "verdict": "C19_CHI_PHASE_SPACE_BASIS_NO_IMPROVEMENT",
+      "expected_verdict": "C19_CHI_PHASE_SPACE_BASIS_NO_IMPROVEMENT",
+      "zero_improvement_confirmed": true
+    }
+  ],
+  "failure_rule_satisfied": true,
+  "exact_unresolved_mode": "exterior and interface chi orientation/clock response coupled to the carrier translation tangent; potential stiffness and the complete reduced chi-only Berry/kinetic basis split unit-circle modes instead of producing a stable translating branch",
+  "scoped_obstruction": "The C19 triangle/gyro incumbent cannot be completed by the ten tested position, bond-gyro, shared-neighbor, chi-only potential, or reduced chi-only phase-space action bases.",
+  "smallest_untested_action_class": "a genuinely joint, field-dependent Psi--chi kinetic connection whose symplectic curvature acts on the carrier--vacuum interface; alternatively a freely solved noncoplanar rest branch before any new action term",
+  "verdict": "ACTION_BASIS_NO_GO",
+  "claim_boundary": "Scoped no-go for the enumerated completion bases only. It is not a no-go for every local reciprocal two-field action and does not alter canonical V40."
+}

@@ -1,0 +1,171 @@
+{
+  "status": "V4_DENSITY_MOLD_CONNECTION_PARTIAL_IMPROVEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "T_chi=(B/2)[kappa|chiDot|^2+|A19 Vchi/24|^2], Vchi=chiDot+s rhoPsiDot chi/[2(rhoChi+kappa chi0^2)]",
+  "B": 1197.0,
+  "kappa": 0.015873015873015872,
+  "chi0": 19.0,
+  "native_coefficient": 1.149584487534626,
+  "native_coefficient_provenance": "s=1+54/chi0^2 is the differentiated carrier radial-balance factor rhoChi+s rhoPsi=chi0^2; 54/chi0^2 is the exact C19 area-stiffness correction of the localized rest orbit",
+  "positive_kinetic_square": true,
+  "rest_orbit_action_delta_zero": true,
+  "controls": [
+    {
+      "coefficient": 0.0,
+      "combined_relative_residual": 0.10687149993296219,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.10161600857758853
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.10161600857650424
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.11003511996114915
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.11003511996115864
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.11003511996114339
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.1100351199611416
+        }
+      ]
+    },
+    {
+      "coefficient": 1.0,
+      "combined_relative_residual": 0.0894001402497706,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.0862044458808915
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.08620444587649292
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.0913446009887674
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.09134460098881135
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09134460098874048
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09134460098873243
+        }
+      ]
+    },
+    {
+      "coefficient": 1.149584487534626,
+      "combined_relative_residual": 0.08707278250194268,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08410231728250343
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.0841023172773271
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08888256485628146
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08888256485633386
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.08888256485624928
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.08888256485623973
+        }
+      ]
+    },
+    {
+      "coefficient": 2.0,
+      "combined_relative_residual": 0.07330939148910448,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.07238412899717736
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.07238412898654518
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.07388295790936263
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.07388295790948016
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.07388295790929046
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.0738829579092691
+        }
+      ]
+    }
+  ],
+  "natural_coefficient_relative_improvement": 0.18525722426875962,
+  "diagnostic_optimum": {
+    "coefficient": 2.4219441908279498,
+    "relative_residual": 0.06993765775414684,
+    "admitted": false,
+    "reason": "movement-fitted coefficients are diagnostic only"
+  },
+  "autodiff_directional_derivative_relative_defect": 1.4669639281891108e-07,
+  "verdict": "PARTIAL_IMPROVEMENT_REQUIRES_REST_SPECTRUM",
+  "root_cause_update": "The dominant handoff mismatch is chi radial mold motion rather than an internal Psi-frame rotation.  Psi density departure and arrival must respectively heal and open the neighboring chi mold inside the kinetic geometry.",
+  "next_action": "Derive the complete implicit discrete Euler-Lagrange tangent operator of this field-dependent metric.  Retain it only if the native coefficient improves the full rest spectrum as well as the edge-snap response; then solve a multi-update relative-periodic one-edge orbit rather than equating one integrator step with one physical hop.",
+  "claim_boundary": "This is an inverse edge-snap response test. It is not a freely moving orbit, rest-stability pass, Dirac pass, or admitted action."
+}

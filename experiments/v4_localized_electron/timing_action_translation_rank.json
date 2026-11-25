@@ -1,0 +1,37 @@
+{
+  "status": "V4_TIMING_ACTION_TRANSLATION_RESPONSE_RANK",
+  "candidate_directions": [
+    "spacetime_face",
+    "parallel_material",
+    "parallel_clock_potential",
+    "face_symplectic",
+    "triangle",
+    "transverse_material_area",
+    "hodge_branch"
+  ],
+  "response_rank": 4,
+  "singular_values": [
+    52.84750368202678,
+    1.2398252977137831,
+    0.9704829501395961,
+    0.8310574513072411,
+    1.2839804201810385e-07,
+    4.228210474434054e-08,
+    2.9652013233625944e-10
+  ],
+  "baseline_translation_residual_norm": 13.963764271873584,
+  "best_combined_translation_residual_norm": 12.60507167967776,
+  "best_combined_relative_residual": 0.9026986874210874,
+  "diagnostic_coefficients": {
+    "spacetime_face": 38219703.87700583,
+    "parallel_material": -4929633.021338144,
+    "parallel_clock_potential": -0.24411496447061992,
+    "face_symplectic": 0.10625253705855522,
+    "triangle": 292461.945227263,
+    "transverse_material_area": -4945026.0918639405,
+    "hodge_branch": -0.2760294323666355
+  },
+  "coefficients_admitted": false,
+  "verdict": "TESTED_ACTION_VOCABULARY_DOES_NOT_SPAN_TRANSLATION_REPAIR",
+  "claim_boundary": "Linear co-rotating translation response only. Diagnostic least-squares coefficients are not admitted action constants."
+}

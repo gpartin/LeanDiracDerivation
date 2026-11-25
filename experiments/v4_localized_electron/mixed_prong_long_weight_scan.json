@@ -1,0 +1,72 @@
+{
+  "status": "V4_MIXED_PRONG_LONG_WEIGHT_SCAN",
+  "cycles": 10.0,
+  "case": {
+    "flavor": "plus",
+    "direction": "x",
+    "sign": -1,
+    "momentum": [
+      -0.35,
+      0.0,
+      0.0
+    ]
+  },
+  "rows": [
+    {
+      "relative_prong_weight": 0.0,
+      "common_weight": 1.0,
+      "completed_steps": 847,
+      "maximum_norm_ratio": 7.933961755733771,
+      "maximum_outside_packet_lift_fraction": 0.1940303538042971,
+      "final_native_vs_dirac_relative_error": 7.745624004820509,
+      "stable_control": false
+    },
+    {
+      "relative_prong_weight": 0.25,
+      "common_weight": 0.75,
+      "completed_steps": 847,
+      "maximum_norm_ratio": 8393.947592306422,
+      "maximum_outside_packet_lift_fraction": 0.07384706689101166,
+      "final_native_vs_dirac_relative_error": 8387.759810923371,
+      "stable_control": false
+    },
+    {
+      "relative_prong_weight": 0.3333333333333333,
+      "common_weight": 0.6666666666666667,
+      "completed_steps": 847,
+      "maximum_norm_ratio": 12599.904090524538,
+      "maximum_outside_packet_lift_fraction": 0.0715189786309222,
+      "final_native_vs_dirac_relative_error": 12590.578035865215,
+      "stable_control": false
+    },
+    {
+      "relative_prong_weight": 0.5,
+      "common_weight": 0.5,
+      "completed_steps": 847,
+      "maximum_norm_ratio": 21609.373907976893,
+      "maximum_outside_packet_lift_fraction": 0.06948513151299879,
+      "final_native_vs_dirac_relative_error": 21593.328937953098,
+      "stable_control": false
+    },
+    {
+      "relative_prong_weight": 0.75,
+      "common_weight": 0.25,
+      "completed_steps": 847,
+      "maximum_norm_ratio": 33284.21411886268,
+      "maximum_outside_packet_lift_fraction": 0.07006882617192213,
+      "final_native_vs_dirac_relative_error": 33259.47505367546,
+      "stable_control": false
+    },
+    {
+      "relative_prong_weight": 1.0,
+      "common_weight": 0.0,
+      "completed_steps": 847,
+      "maximum_norm_ratio": 1951.9237883492597,
+      "maximum_outside_packet_lift_fraction": 0.0326663009580704,
+      "final_native_vs_dirac_relative_error": 1950.5072640848005,
+      "stable_control": false
+    }
+  ],
+  "verdict": "MIXED_PRONG_WEIGHT_FAMILY_LONG_NO_PASS",
+  "claim_boundary": "One tangent packet stability scan. A stable weight would still need independent provenance, Dirac accuracy, all cases, current and nonlinear endurance."
+}

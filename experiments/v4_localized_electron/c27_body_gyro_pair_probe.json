@@ -1,0 +1,93 @@
+{
+  "status": "V4_C27_BODY_GYRO_PAIRED_ACTION_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_delta": "unit positive joint-W body-diagonal Dirichlet potential plus a symmetric joint-W body-diagonal gyroscopic one-form",
+  "coefficient_rule": "gyro coefficient is the least-squares cancellation of the unit C27 rest force; no transport or Dirac target is used",
+  "gyro_coefficient": -0.052667856043751446,
+  "native_discrete_clock_rate": 19.004363539373443,
+  "coefficient_times_clock": -1.0009190830948391,
+  "rest_force_correlation": 0.12403473458923084,
+  "rest_force_relative_remainder": 0.9922778767136587,
+  "paired_rest_DEL_rms": 0.019457462648151715,
+  "axis_rows": [
+    {
+      "phase_ramp_axis": 0,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        4.705771201236586e-05,
+        4.65932743709065e-05,
+        2.156639623951107e-06
+      ],
+      "relative_third_singular_value": 0.0458296744938297,
+      "missing_physical_direction": [
+        -0.0022562165998778806,
+        0.022708459110111934,
+        0.9997395837774448
+      ]
+    },
+    {
+      "phase_ramp_axis": 1,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        4.7079024236405784e-05,
+        4.616614548826632e-05,
+        2.1473820783065704e-06
+      ],
+      "relative_third_singular_value": 0.045612289403526324,
+      "missing_physical_direction": [
+        0.0370730483224166,
+        -0.0007396744844779516,
+        0.9993122845085719
+      ]
+    },
+    {
+      "phase_ramp_axis": 2,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        5.321363417159895e-05,
+        3.927989736732175e-05,
+        4.733344893846842e-06
+      ],
+      "relative_third_singular_value": 0.08894985218606083,
+      "missing_physical_direction": [
+        -0.0008988747888574465,
+        0.0026824050009667043,
+        0.9999959983557558
+      ]
+    }
+  ],
+  "all_axes_robust_rank_three": true,
+  "verdict": "C27_GYRO_PAIR_INCOMPLETE",
+  "claim_boundary": "Rest-force and linear fixed-charge rank screen only. It does not prove symplectic nondegeneracy, bounded dynamics, full spectral stability, nonlinear handoff, or Dirac current matching."
+}

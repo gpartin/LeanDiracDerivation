@@ -1,0 +1,65 @@
+{
+  "status": "V4_CUBE_INCIDENCE_DIRAC_ENVELOPE_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "construction": "translation-equivariant overlapping-cube lift of each native four-component flavor copy, with a freely optimized complex chi/Psi tangent ratio",
+  "rows": [
+    {
+      "flavor": "plus",
+      "cases": [
+        {
+          "real_rank": 216,
+          "relative_cross_block": 0.04799483213382168,
+          "response_norm": 2232.2221033662877,
+          "leakage_norm": 107.13512513647132,
+          "chi_scale_real": 0.0003479600832739469,
+          "chi_scale_imag": -5.499963616435744e-09,
+          "optimizer_success": true,
+          "optimizer_evaluations": 105,
+          "envelope": "nearest_27_centers"
+        },
+        {
+          "real_rank": 1000,
+          "relative_cross_block": 0.009251309124417375,
+          "response_norm": 2709.9936117266857,
+          "leakage_norm": 25.070988627279885,
+          "chi_scale_real": 0.0003479600832739469,
+          "chi_scale_imag": -5.499963616435744e-09,
+          "optimizer_success": null,
+          "optimizer_evaluations": 1,
+          "envelope": "all_125_centers"
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "cases": [
+        {
+          "real_rank": 216,
+          "relative_cross_block": 0.047438608148131195,
+          "response_norm": 2231.3152600382737,
+          "leakage_norm": 105.85049027590112,
+          "chi_scale_real": 0.0003044126836514495,
+          "chi_scale_imag": 1.3588621367613447e-08,
+          "optimizer_success": true,
+          "optimizer_evaluations": 104,
+          "envelope": "nearest_27_centers"
+        },
+        {
+          "real_rank": 1000,
+          "relative_cross_block": 0.009251309124417375,
+          "response_norm": 2709.993611726686,
+          "leakage_norm": 25.07098862727989,
+          "chi_scale_real": 0.0003044126836514495,
+          "chi_scale_imag": 1.3588621367613447e-08,
+          "optimizer_success": null,
+          "optimizer_evaluations": 1,
+          "envelope": "all_125_centers"
+        }
+      ]
+    }
+  ],
+  "worst_all_center_cross_block": 0.009251309124417375,
+  "verdict": "FOUR_COMPONENT_CONFIGURATION_ENVELOPE_FAIL",
+  "claim_boundary": "Configuration-tangent closure only. A pass still requires the two committed layers, native current pullback, nonlinear moving branch and endurance gates before V4-006."
+}

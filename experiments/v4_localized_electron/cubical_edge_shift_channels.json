@@ -1,0 +1,131 @@
+{
+  "status": "V4_CUBICAL_EDGE_SHIFT_CHANNEL_CLASSIFICATION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "source": "LeanDirac/V2/CubicalClifford.lean",
+  "axes": [
+    {
+      "axis": 0,
+      "gamma_square_defect": 0.0,
+      "forward_projector_rank": 4,
+      "backward_projector_rank": 4,
+      "whole_conditional_walk_index": 0,
+      "one_way_rigid_shift_index_control": 8,
+      "forward_backward_overlap_norm": 0.0,
+      "conditional_shift_unitarity_defect": 6.280369834735101e-16,
+      "small_momentum_generator_defect": 1.4130832128153984e-07,
+      "scalar_whole_carrier_shift_difference_norm": 1.4501903133899168,
+      "flavor_commutator_norm": 0.0,
+      "beta_anticommutator_norm": 0.0,
+      "mass_grading_flips_forward_to_backward_defect": 0.0,
+      "flavor_sectors": {
+        "minus": {
+          "copy_rank": 4,
+          "forward_rank_inside_copy": 2,
+          "backward_rank_inside_copy": 2,
+          "one_axis_walk_index": 0,
+          "conditional_shift_copy_leakage_norm": 0.0
+        },
+        "plus": {
+          "copy_rank": 4,
+          "forward_rank_inside_copy": 2,
+          "backward_rank_inside_copy": 2,
+          "one_axis_walk_index": 0,
+          "conditional_shift_copy_leakage_norm": 0.0
+        }
+      }
+    },
+    {
+      "axis": 1,
+      "gamma_square_defect": 0.0,
+      "forward_projector_rank": 4,
+      "backward_projector_rank": 4,
+      "whole_conditional_walk_index": 0,
+      "one_way_rigid_shift_index_control": 8,
+      "forward_backward_overlap_norm": 0.0,
+      "conditional_shift_unitarity_defect": 6.280369834735101e-16,
+      "small_momentum_generator_defect": 1.4130832128153984e-07,
+      "scalar_whole_carrier_shift_difference_norm": 1.4501903133899168,
+      "flavor_commutator_norm": 0.0,
+      "beta_anticommutator_norm": 0.0,
+      "mass_grading_flips_forward_to_backward_defect": 0.0,
+      "flavor_sectors": {
+        "minus": {
+          "copy_rank": 4,
+          "forward_rank_inside_copy": 2,
+          "backward_rank_inside_copy": 2,
+          "one_axis_walk_index": 0,
+          "conditional_shift_copy_leakage_norm": 0.0
+        },
+        "plus": {
+          "copy_rank": 4,
+          "forward_rank_inside_copy": 2,
+          "backward_rank_inside_copy": 2,
+          "one_axis_walk_index": 0,
+          "conditional_shift_copy_leakage_norm": 0.0
+        }
+      }
+    },
+    {
+      "axis": 2,
+      "gamma_square_defect": 0.0,
+      "forward_projector_rank": 4,
+      "backward_projector_rank": 4,
+      "whole_conditional_walk_index": 0,
+      "one_way_rigid_shift_index_control": 8,
+      "forward_backward_overlap_norm": 0.0,
+      "conditional_shift_unitarity_defect": 6.280369834735101e-16,
+      "small_momentum_generator_defect": 1.4130832128153984e-07,
+      "scalar_whole_carrier_shift_difference_norm": 1.4501903133899168,
+      "flavor_commutator_norm": 0.0,
+      "beta_anticommutator_norm": 0.0,
+      "mass_grading_flips_forward_to_backward_defect": 0.0,
+      "flavor_sectors": {
+        "minus": {
+          "copy_rank": 4,
+          "forward_rank_inside_copy": 2,
+          "backward_rank_inside_copy": 2,
+          "one_axis_walk_index": 0,
+          "conditional_shift_copy_leakage_norm": 0.0
+        },
+        "plus": {
+          "copy_rank": 4,
+          "forward_rank_inside_copy": 2,
+          "backward_rank_inside_copy": 2,
+          "one_axis_walk_index": 0,
+          "conditional_shift_copy_leakage_norm": 0.0
+        }
+      }
+    }
+  ],
+  "cross_axis_anticommutators": [
+    {
+      "axes": [
+        0,
+        1
+      ],
+      "defect": 0.0
+    },
+    {
+      "axes": [
+        0,
+        2
+      ],
+      "defect": 0.0
+    },
+    {
+      "axes": [
+        1,
+        2
+      ],
+      "defect": 0.0
+    }
+  ],
+  "flavor_involution_defect": 0.0,
+  "flavor_beta_commutator_norm": 0.0,
+  "index_reference": "Gross-Nesme-Vogts-Werner, Index Theory of One Dimensional Quantum Walks and Cellular Automata, arXiv:0910.3675",
+  "index_interpretation": "Along every chosen axis each four-component copy has two right-moving and two left-moving channels, hence zero net walk index. The conditional shift is therefore in the balanced class compatible with partitioned local unitaries. A rigid one-way eight-channel translation has nonzero index and is a different target. This classification does not prove that the native LFM action supplies the needed local exchange.",
+  "interpretation": "A nearest-neighbor Dirac walk conditionally shifts the +gamma and -gamma channels in opposite edge directions. Each of the two four-component flavor copies contains two forward and two backward channels and is preserved by transport. The two copies therefore are not a leading/trailing pair.",
+  "action_implication": "The failed whole-carrier shift used exp(-ik) times the identity. The geometry-derived Dirac transport instead uses exp(-ik gamma). A native repair must generate the conditional incidence response from Psi-chi geometry; ordinary scalar advection cannot do so.",
+  "claim_boundary": "This proves an algebraic edge-shift decomposition of the derived cubical readout. It does not prove that the current two-field action dynamically executes that shift or that either copy is a separate physical electron."
+}

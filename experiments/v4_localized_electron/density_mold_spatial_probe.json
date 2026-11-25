@@ -1,0 +1,158 @@
+{
+  "status": "V4_DENSITY_MOLD_SPATIAL_RESPONSE_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "common_action": "T_chi=(B/2)[kappa|chiDot|^2+|A19 Vchi/24|^2], Vchi=chiDot+alpha response(rhoPsiDot) chi/[2(rhoChi+kappa chi0^2)]",
+  "alpha": 1.149584487534626,
+  "modes": [
+    {
+      "mode": "local",
+      "combined_relative_residual": 0.08707278250194268,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08410231728250343
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.0841023172773271
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08888256485628146
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08888256485633386
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.08888256485624928
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.08888256485623973
+        }
+      ]
+    },
+    {
+      "mode": "neighbor_average",
+      "combined_relative_residual": 0.0953048022043716,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.09126544912459117
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.09126544912263333
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.09774957396241583
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.0977495739624343
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09774957396240455
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09774957396240115
+        }
+      ]
+    },
+    {
+      "mode": "dirichlet",
+      "combined_relative_residual": 0.09678148797231097,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.09290021797320087
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.0929002179698259
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.09913486961767701
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.09913486961770991
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09913486961765682
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09913486961765085
+        }
+      ]
+    },
+    {
+      "mode": "symmetric_average",
+      "combined_relative_residual": 0.0911273068031208,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08770513499853447
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.08770513499523895
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.09320655697782926
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.09320655697786147
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09320655697780954
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09320655697780364
+        }
+      ]
+    }
+  ],
+  "best_mode": "local",
+  "best_relative_residual": 0.08707278250194268,
+  "relative_improvement_over_local": 0.0,
+  "verdict": "LOCAL_DENSITY_RESPONSE_REMAINS_BEST",
+  "claim_boundary": "This is a fixed-endpoint inverse response screen, not an action admission, freely moving orbit, or Dirac pass."
+}

@@ -1,0 +1,1458 @@
+{
+  "status": "V4_UNIT_GEOMETRIC_LEAVE_ONE_OUT_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "threshold": 1.0000001,
+  "shifts": [
+    {
+      "real": 1.00000005,
+      "imag": 0.0
+    },
+    {
+      "real": 1.000001,
+      "imag": 1e-06
+    },
+    {
+      "real": 1.000001,
+      "imag": 5e-06
+    },
+    {
+      "real": 1.000001,
+      "imag": 1e-05
+    },
+    {
+      "real": 1.000005,
+      "imag": 5e-05
+    },
+    {
+      "real": 1.00001,
+      "imag": 0.0001
+    },
+    {
+      "real": 1.0001,
+      "imag": 0.001
+    }
+  ],
+  "rows": [
+    {
+      "omitted": "face:diagonal_symmetric",
+      "maximum_resolved_modulus": 1.0000000218316913,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": true,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000218316913,
+              "imag": -1.3955132383594473e-19,
+              "modulus": 1.0000000218316913
+            },
+            {
+              "real": 1.0000000211395654,
+              "imag": -3.9528212331127535e-16,
+              "modulus": 1.0000000211395654
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.9288657664613983e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.99999999999814,
+              "imag": 1.928818902052865e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.9288736166588835e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.9999999999981396,
+              "imag": 1.92882675163665e-06,
+              "modulus": 0.9999999999999998
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981404,
+              "imag": 1.9287900877206025e-06,
+              "modulus": 1.0000000000000004
+            },
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.928836952330555e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000001736928,
+              "imag": 1.9287301848039233e-06,
+              "modulus": 1.0000000001755527
+            },
+            {
+              "real": 0.9999999998225741,
+              "imag": 1.9288632041804157e-06,
+              "modulus": 0.9999999998244343
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999915744939,
+              "imag": 0.00012981144844012704,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999887578455,
+              "imag": 0.00014994768721261152,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999994049958167,
+              "imag": 0.0010908748839167492,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.999999404976557,
+              "imag": 0.0010908925390593837,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "face:diagonal_antisymmetric",
+      "maximum_resolved_modulus": 1.000000020281964,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": true,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.000000020281964,
+              "imag": 4.6962023309136225e-24,
+              "modulus": 1.000000020281964
+            },
+            {
+              "real": 1.0000000182865272,
+              "imag": -5.244082457004416e-22,
+              "modulus": 1.0000000182865272
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981402,
+              "imag": 1.9288035606328393e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.99999999999814,
+              "imag": 1.928854390434161e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981404,
+              "imag": 1.9288622404940744e-06,
+              "modulus": 1.0000000000000007
+            },
+            {
+              "real": 0.9999999999981404,
+              "imag": 1.928811410487918e-06,
+              "modulus": 1.0000000000000004
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981409,
+              "imag": 1.9287747463649413e-06,
+              "modulus": 1.0000000000000009
+            },
+            {
+              "real": 0.9999999999981405,
+              "imag": 1.9288255763481217e-06,
+              "modulus": 1.0000000000000007
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000001734832,
+              "imag": 1.928713905779781e-06,
+              "modulus": 1.000000000175343
+            },
+            {
+              "real": 0.9999999998228435,
+              "imag": 1.9288527432815314e-06,
+              "modulus": 0.9999999998247037
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999915744938,
+              "imag": 0.00012981144863111828,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999999887745799,
+              "imag": 0.00014983604478406077,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.999999404462322,
+              "imag": 0.0010913638262579962,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999994044814825,
+              "imag": 0.0010913462696438116,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "face:diagonal_reversed",
+      "maximum_resolved_modulus": 1.0000000218052554,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": true,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000218052554,
+              "imag": 1.9889257307083708e-17,
+              "modulus": 1.0000000218052554
+            },
+            {
+              "real": 1.000000021150363,
+              "imag": -9.078784222899465e-14,
+              "modulus": 1.000000021150363
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981403,
+              "imag": 1.928758871884479e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.9999999999981403,
+              "imag": 1.9288184675190663e-06,
+              "modulus": 1.0000000000000004
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.99999999999814,
+              "imag": 1.9288263177559046e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.99999999999814,
+              "imag": 1.9287667217365895e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981404,
+              "imag": 1.928789653284585e-06,
+              "modulus": 1.0000000000000004
+            },
+            {
+              "real": 0.9999999999981402,
+              "imag": 1.9287300572642005e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000001830744,
+              "imag": 1.9286730482504663e-06,
+              "modulus": 1.0000000001849343
+            },
+            {
+              "real": 0.9999999998131859,
+              "imag": 1.9288104895231304e-06,
+              "modulus": 0.9999999998150461
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999915744939,
+              "imag": 0.00012981144844012447,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999888157218,
+              "imag": 0.00014956121209918426,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999994212521034,
+              "imag": 0.0010758696288085798,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999994212148363,
+              "imag": 0.0010759042672478876,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "face:diagonal_conjugate",
+      "maximum_resolved_modulus": 1.0000000218108245,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": true,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000218108245,
+              "imag": 2.1355216193423167e-25,
+              "modulus": 1.0000000218108245
+            },
+            {
+              "real": 1.000000021143937,
+              "imag": -6.169925107135541e-25,
+              "modulus": 1.000000021143937
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981402,
+              "imag": 1.9287487452762403e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.9288156446670796e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981404,
+              "imag": 1.9288234945126306e-06,
+              "modulus": 1.0000000000000004
+            },
+            {
+              "real": 0.9999999999981402,
+              "imag": 1.92875659526266e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.9287868303103172e-06,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.99999999999814,
+              "imag": 1.928719930498972e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000000298006,
+              "imag": 1.92897389334646e-06,
+              "modulus": 1.0000000000316611
+            },
+            {
+              "real": 0.9999999999663084,
+              "imag": 1.928496121050884e-06,
+              "modulus": 0.9999999999681679
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999888222965,
+              "imag": 0.0001495172467103717,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999915744939,
+              "imag": 0.00012981144844012737,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999994224057376,
+              "imag": 0.0010747968138740964,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999994223740536,
+              "imag": 0.001074826292486355,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "face:edge_commutator",
+      "maximum_resolved_modulus": 1.000000020300044,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": true,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.000000020300044,
+              "imag": -2.386320929335765e-24,
+              "modulus": 1.000000020300044
+            },
+            {
+              "real": 1.0000000182362492,
+              "imag": 1.1251347179547515e-21,
+              "modulus": 1.0000000182362492
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981402,
+              "imag": 1.92869720931548e-06,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999999981403,
+              "imag": 1.9287169822215692e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981403,
+              "imag": 1.928724832207405e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.9999999999981397,
+              "imag": 1.9287050593083976e-06,
+              "modulus": 0.9999999999999997
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981405,
+              "imag": 1.9286881686574815e-06,
+              "modulus": 1.0000000000000004
+            },
+            {
+              "real": 0.9999999999981404,
+              "imag": 1.9286683949755136e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999972238,
+              "imag": 1.928606300087846e-06,
+              "modulus": 0.9999999999990835
+            },
+            {
+              "real": 0.9999999999836663,
+              "imag": 1.9287176911234828e-06,
+              "modulus": 0.9999999999855262
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999915744938,
+              "imag": 0.00012981144863111256,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999999888424822,
+              "imag": 0.00014938217828368855,
+              "modulus": 0.9999999999999998
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.999999401037961,
+              "imag": 0.0010944970164796417,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.999999401037961,
+              "imag": 0.0010944970164796443,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "bond:vacuum_vacuum_chi",
+      "maximum_resolved_modulus": 1.0000000110037377,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": false,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000110037377,
+              "imag": -1.9363693098651253e-14,
+              "modulus": 1.0000000110037377
+            },
+            {
+              "real": 1.000000010767137,
+              "imag": -1.6721400808976418e-13,
+              "modulus": 1.000000010767137
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": false,
+          "values": [
+            {
+              "real": 1.0000000000000824,
+              "imag": 1.4454327937867966e-08,
+              "modulus": 1.0000000000000824
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999868447,
+              "imag": 5.129414320493773e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.9999999999870748,
+              "imag": 5.084349852639201e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999868447,
+              "imag": 5.129399630360923e-06,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999999870748,
+              "imag": 5.084335056310954e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999988015951,
+              "imag": 4.895722368997888e-05,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999999988023338,
+              "imag": 4.894213140781974e-05,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999915744939,
+              "imag": 0.0001298114486896301,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999981927575,
+              "imag": 6.01205855549978e-05,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999993923477818,
+              "imag": 0.0011024083032737865,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999993923362827,
+              "imag": 0.0011024187341279125,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "bond:carrier_vacuum_chi",
+      "maximum_resolved_modulus": 1.0000015957969326,
+      "reopens_resolved_growth": true,
+      "all_shifts_converged": false,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000161447422,
+              "imag": -1.8553373839449712e-16,
+              "modulus": 1.0000000161447422
+            },
+            {
+              "real": 1.0000000154104016,
+              "imag": -4.839557531669629e-14,
+              "modulus": 1.0000000154104016
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": false,
+          "values": [
+            {
+              "real": 1.0000000000000608,
+              "imag": 1.4454272535639243e-08,
+              "modulus": 1.0000000000000608
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000015957920285,
+              "imag": 3.131809586384936e-06,
+              "modulus": 1.0000015957969326
+            },
+            {
+              "real": 1.0000015932879567,
+              "imag": 3.1354458888449396e-06,
+              "modulus": 1.0000015932928723
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000015957777144,
+              "imag": 3.131791573470256e-06,
+              "modulus": 1.0000015957826185
+            },
+            {
+              "real": 1.0000015932735757,
+              "imag": 3.135427876727178e-06,
+              "modulus": 1.0000015932784911
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.000001595778896,
+              "imag": 3.131788225195083e-06,
+              "modulus": 1.0000015957838
+            },
+            {
+              "real": 1.0000015932745547,
+              "imag": 3.1354245399862105e-06,
+              "modulus": 1.0000015932794701
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999931416186,
+              "imag": 0.00011711858622219268,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.999999993107802,
+              "imag": 0.00011740696909014225,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999993923482869,
+              "imag": 0.001102407845056595,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999993923362349,
+              "imag": 0.0011024187774790173,
+              "modulus": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "bond:carrier_carrier_chi",
+      "maximum_resolved_modulus": 1.0000000193832221,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": true,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000193832221,
+              "imag": 2.608825944394276e-21,
+              "modulus": 1.0000000193832221
+            },
+            {
+              "real": 1.0000000166274559,
+              "imag": -2.170777523138552e-15,
+              "modulus": 1.0000000166274559
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.9288559929566897e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.99999999999814,
+              "imag": 1.9288940872935326e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981403,
+              "imag": 1.9288638433208956e-06,
+              "modulus": 1.0000000000000004
+            },
+            {
+              "real": 0.9999999999981396,
+              "imag": 1.9289019372359016e-06,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.928865272562306e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.9999999999981402,
+              "imag": 1.9288271783464765e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000001821774,
+              "imag": 1.9287569752747592e-06,
+              "modulus": 1.0000000001840375
+            },
+            {
+              "real": 0.9999999998140503,
+              "imag": 1.9289019706411265e-06,
+              "modulus": 0.9999999998159106
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999920448363,
+              "imag": 0.00012613614622648665,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999887233725,
+              "imag": 0.0001501774118211947,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999993923356342,
+              "imag": 0.0011024193223604854,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999993923471344,
+              "imag": 0.0011024088905318852,
+              "modulus": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "omitted": "bond:carrier_carrier_Psi_tight_frame",
+      "maximum_resolved_modulus": 1.0000000184615245,
+      "reopens_resolved_growth": false,
+      "all_shifts_converged": true,
+      "shifts": [
+        {
+          "shift": {
+            "real": 1.00000005,
+            "imag": 0.0
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 1.0000000184615245,
+              "imag": -7.346601131575639e-23,
+              "modulus": 1.0000000184615245
+            },
+            {
+              "real": 1.000000018236071,
+              "imag": 1.6553079310602719e-12,
+              "modulus": 1.000000018236071
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981405,
+              "imag": 1.9288559926316756e-06,
+              "modulus": 1.0000000000000007
+            },
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.928894087059009e-06,
+              "modulus": 1.0000000000000002
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 5e-06
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999981399,
+              "imag": 1.9289019371216085e-06,
+              "modulus": 1.0000000000000002
+            },
+            {
+              "real": 0.9999999999981398,
+              "imag": 1.9288638427351723e-06,
+              "modulus": 1.0
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000001,
+            "imag": 1e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999999421945,
+              "imag": 1.0752255324791235e-05,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999999998590283,
+              "imag": 1.679116682103127e-05,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.000005,
+            "imag": 5e-05
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999995903979,
+              "imag": 2.862174414753898e-05,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999998590282,
+              "imag": 1.6791168711461287e-05,
+              "modulus": 0.9999999999999999
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.00001,
+            "imag": 0.0001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999999900353668,
+              "imag": 0.0001411710541337732,
+              "modulus": 1.0
+            },
+            {
+              "real": 0.9999999899775431,
+              "imag": 0.00014158005885314576,
+              "modulus": 0.9999999999999997
+            }
+          ]
+        },
+        {
+          "shift": {
+            "real": 1.0001,
+            "imag": 0.001
+          },
+          "converged": true,
+          "values": [
+            {
+              "real": 0.9999993923356342,
+              "imag": 0.0011024193223604854,
+              "modulus": 0.9999999999999999
+            },
+            {
+              "real": 0.9999993923471344,
+              "imag": 0.0011024088905318852,
+              "modulus": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "terms_required_by_this_screen": [
+    "bond:carrier_vacuum_chi"
+  ],
+  "terms_not_resolved_as_required": [
+    "face:diagonal_symmetric",
+    "face:diagonal_antisymmetric",
+    "face:diagonal_reversed",
+    "face:diagonal_conjugate",
+    "face:edge_commutator",
+    "bond:vacuum_vacuum_chi",
+    "bond:carrier_carrier_chi",
+    "bond:carrier_carrier_Psi_tight_frame"
+  ],
+  "greedy_reduction": {
+    "removed": [
+      "face:diagonal_symmetric",
+      "face:diagonal_antisymmetric",
+      "face:diagonal_reversed",
+      "face:diagonal_conjugate",
+      "face:edge_commutator",
+      "bond:carrier_vacuum_chi",
+      "bond:vacuum_vacuum_chi"
+    ],
+    "retained": [
+      "bond:carrier_carrier_chi",
+      "bond:carrier_carrier_Psi_tight_frame"
+    ],
+    "steps": [
+      {
+        "omitted": "face:diagonal_symmetric",
+        "retained_before": [
+          "face:diagonal_symmetric",
+          "face:diagonal_antisymmetric",
+          "face:diagonal_reversed",
+          "face:diagonal_conjugate",
+          "face:edge_commutator",
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.000000021800737,
+        "all_shifts_converged": true,
+        "removal_accepted": true
+      },
+      {
+        "omitted": "face:diagonal_antisymmetric",
+        "retained_before": [
+          "face:diagonal_antisymmetric",
+          "face:diagonal_reversed",
+          "face:diagonal_conjugate",
+          "face:edge_commutator",
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.000000021786541,
+        "all_shifts_converged": true,
+        "removal_accepted": true
+      },
+      {
+        "omitted": "face:diagonal_reversed",
+        "retained_before": [
+          "face:diagonal_reversed",
+          "face:diagonal_conjugate",
+          "face:edge_commutator",
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.0000000207935518,
+        "all_shifts_converged": true,
+        "removal_accepted": true
+      },
+      {
+        "omitted": "face:diagonal_conjugate",
+        "retained_before": [
+          "face:diagonal_conjugate",
+          "face:edge_commutator",
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.000000019012686,
+        "all_shifts_converged": true,
+        "removal_accepted": true
+      },
+      {
+        "omitted": "face:edge_commutator",
+        "retained_before": [
+          "face:edge_commutator",
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.0000000190140064,
+        "all_shifts_converged": true,
+        "removal_accepted": true
+      },
+      {
+        "omitted": "bond:vacuum_vacuum_chi",
+        "retained_before": [
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.0000037520613976,
+        "all_shifts_converged": false,
+        "removal_accepted": false
+      },
+      {
+        "omitted": "bond:carrier_vacuum_chi",
+        "retained_before": [
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.0000000213492524,
+        "all_shifts_converged": true,
+        "removal_accepted": true
+      },
+      {
+        "omitted": "bond:vacuum_vacuum_chi",
+        "retained_before": [
+          "bond:vacuum_vacuum_chi",
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.0000000159517641,
+        "all_shifts_converged": true,
+        "removal_accepted": true
+      },
+      {
+        "omitted": "bond:carrier_carrier_chi",
+        "retained_before": [
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.0000000199619279,
+        "all_shifts_converged": false,
+        "removal_accepted": false
+      },
+      {
+        "omitted": "bond:carrier_carrier_Psi_tight_frame",
+        "retained_before": [
+          "bond:carrier_carrier_chi",
+          "bond:carrier_carrier_Psi_tight_frame"
+        ],
+        "maximum_resolved_modulus": 1.000000015122746,
+        "all_shifts_converged": false,
+        "removal_accepted": false
+      }
+    ]
+  },
+  "claim_boundary": "Two-shift leave-one-out screen of the previously unstable band. A reopened multiplier establishes necessity for this local screen; a clean omission is inconclusive until the reduced combination passes the complete multishift and nonlinear gates."
+}

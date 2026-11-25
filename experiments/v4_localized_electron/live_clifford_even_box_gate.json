@@ -1,0 +1,61 @@
+{
+  "status": "V4_LIVE_CLIFFORD_EVEN_BOX_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 4,
+  "periodic_parity_compatible": true,
+  "link_source": "psi_frame_phase",
+  "intertwiner_defect": 1.9710326105225497e-15,
+  "rows": [
+    {
+      "sector": "plus",
+      "axis": 0,
+      "retained_real_rank": 240,
+      "expected_real_rank": 512,
+      "response_norm": 10.047933096606519,
+      "psi_sector_cross_block_with_independent_chi": 0.24353082950175647
+    },
+    {
+      "sector": "plus",
+      "axis": 1,
+      "retained_real_rank": 240,
+      "expected_real_rank": 512,
+      "response_norm": 8.283345242381813,
+      "psi_sector_cross_block_with_independent_chi": 0.2110190872111087
+    },
+    {
+      "sector": "plus",
+      "axis": 2,
+      "retained_real_rank": 240,
+      "expected_real_rank": 512,
+      "response_norm": 9.16970540760675,
+      "psi_sector_cross_block_with_independent_chi": 0.2083949713953736
+    },
+    {
+      "sector": "minus",
+      "axis": 0,
+      "retained_real_rank": 240,
+      "expected_real_rank": 512,
+      "response_norm": 9.216902186038501,
+      "psi_sector_cross_block_with_independent_chi": 0.20932982017059648
+    },
+    {
+      "sector": "minus",
+      "axis": 1,
+      "retained_real_rank": 240,
+      "expected_real_rank": 512,
+      "response_norm": 9.382359817815294,
+      "psi_sector_cross_block_with_independent_chi": 0.2056369160945144
+    },
+    {
+      "sector": "minus",
+      "axis": 2,
+      "retained_real_rank": 240,
+      "expected_real_rank": 512,
+      "response_norm": 8.700739468392552,
+      "psi_sector_cross_block_with_independent_chi": 0.20321380423483665
+    }
+  ],
+  "verdict": "EVEN_BOX_LIVE_CLIFFORD_GATE_OPEN",
+  "claim_boundary": "Linear periodic even-box action increment only. It does not admit the action or prove nonlinear localized motion."
+}

@@ -1,0 +1,148 @@
+{
+  "status": "V4_REDUCED_INTERFACE_ACTION_MULTISHIFT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "retained_unit_terms": [
+    "bond:carrier_carrier_chi",
+    "bond:carrier_carrier_Psi_tight_frame"
+  ],
+  "rows": [
+    {
+      "shift": {
+        "real": 1.00000005,
+        "imag": 0.0
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 1.0000000155051771,
+          "imag": -1.6891248475458607e-14,
+          "modulus": 1.0000000155051771
+        },
+        {
+          "real": 1.0000000152589623,
+          "imag": 7.139514153207908e-15,
+          "modulus": 1.0000000152589623
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-06
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 1.0000000159517641,
+          "imag": -2.742843497425683e-14,
+          "modulus": 1.0000000159517641
+        },
+        {
+          "real": 1.0000000144146375,
+          "imag": 1.1587122864498451e-10,
+          "modulus": 1.0000000144146375
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 5e-06
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999891531,
+          "imag": 4.657769421860775e-06,
+          "modulus": 1.0000000000000004
+        },
+        {
+          "real": 0.9999999999891531,
+          "imag": 4.657769421867384e-06,
+          "modulus": 1.0000000000000004
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-05
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999891532,
+          "imag": 4.657751261387423e-06,
+          "modulus": 1.0000000000000004
+        },
+        {
+          "real": 0.9999999999891532,
+          "imag": 4.65775126133172e-06,
+          "modulus": 1.0000000000000004
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000005,
+        "imag": 5e-05
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.99999999892252,
+          "imag": 4.642154672515648e-05,
+          "modulus": 1.0
+        },
+        {
+          "real": 0.99999999892252,
+          "imag": 4.642154672515568e-05,
+          "modulus": 1.0
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.00001,
+        "imag": 0.0001
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999915744939,
+          "imag": 0.00012981144836499522,
+          "modulus": 1.0
+        },
+        {
+          "real": 0.9999999989225199,
+          "imag": 4.642154678163042e-05,
+          "modulus": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.0001,
+        "imag": 0.001
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.999999759057968,
+          "imag": 0.0006941786556367239,
+          "modulus": 1.0
+        },
+        {
+          "real": 0.9999997590579679,
+          "imag": 0.0006941786556367039,
+          "modulus": 0.9999999999999999
+        }
+      ]
+    }
+  ],
+  "maximum_resolved_modulus": 1.0000000159517641,
+  "count_resolved_above_1_plus_1e_minus_7": 0,
+  "verdict": "REDUCED_TIGHT_FRAME_RESOLVED_BAND_PASS",
+  "claim_boundary": "Six-shift screen of the previously unstable band for the greedy one-term reduction. Complete contour, nonlinear, refinement, movement, and Dirac gates remain open."
+}

@@ -1,0 +1,66 @@
+{
+  "status": "V4_C19_GEOMETRIC_CHI_ORIENTATION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_delta": "C19 average of s(3s-p)^2(p-s)/chi0^12, s=|chi_i^dagger chi_j|^2, p=rho_i rho_j",
+  "coefficient_rule": "zeros {0,1/3,1} from the exact cube chi-overlap audit; unit strength after C19-weight averaging; no fitted parameter",
+  "random_positive_control": 2.1836100732177485e-09,
+  "exact_rest_potential": 5.813504648092997e-30,
+  "rows": [
+    {
+      "strength": 0.0,
+      "rest_DEL_rms": 2.340034110451259e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1561.355466769789,
+      "spectral_radius": 1.0000000526958808,
+      "growth_rate": 1.3490145121697692e-05,
+      "reciprocal_pairing_defect": 1.5067613823305237e-10,
+      "count_modulus_above_1_plus_1e_minus_7": 0,
+      "largest_moduli": [
+        1.0000000526958808,
+        1.0000000493712269,
+        1.0000000478489552,
+        1.0000000478489552,
+        1.0000000477447197,
+        1.0000000477447197,
+        1.000000044527595,
+        1.000000044527595,
+        1.0000000424734106,
+        1.0000000424734106,
+        1.0000000412416745,
+        1.0000000412416745
+      ]
+    },
+    {
+      "strength": 1.0,
+      "rest_DEL_rms": 2.340034112688124e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1561.355466769789,
+      "spectral_radius": 1.0000283574119513,
+      "growth_rate": 0.007259394531194869,
+      "reciprocal_pairing_defect": 1.470501498346266e-10,
+      "count_modulus_above_1_plus_1e_minus_7": 4,
+      "largest_moduli": [
+        1.0000283574119513,
+        1.0000283574119513,
+        1.0000282289701161,
+        1.0000282289701161,
+        1.0000000472886459,
+        1.0000000472886459,
+        1.0000000340001107,
+        1.0000000336388275,
+        1.000000028881528,
+        1.000000028881528,
+        1.0000000270575609,
+        1.0000000270575609
+      ]
+    }
+  ],
+  "rest_preserved": true,
+  "positive_control_pass": true,
+  "spectrum_improved": false,
+  "verdict": "C19_GEOMETRIC_CHI_ORIENTATION_NO_IMPROVEMENT",
+  "claim_boundary": "Final chi-only stiffness response gate. Failure retires this specific geometry-derived chi-only polynomial, not all joint Psi--chi kinetic or symplectic action classes."
+}

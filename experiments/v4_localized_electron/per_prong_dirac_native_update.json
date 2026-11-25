@@ -1,0 +1,218 @@
+{
+  "status": "V4_PER_PRONG_DIRAC_NATIVE_UPDATE",
+  "following_jacobian_condition_number": 5733602.204296939,
+  "maximum_native_next_vs_dirac_relative_error": 0.4377812606106884,
+  "maximum_native_outside_frozen_lift_fraction": 0.0012075635253295542,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.12477107873729242,
+      "native_outside_frozen_lift_fraction": 0.0008952197556434467,
+      "target_DEL_relative_residual": 0.0002824699334462367
+    },
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.19810755474656827,
+      "native_outside_frozen_lift_fraction": 0.0004256620407943741,
+      "target_DEL_relative_residual": 0.00042631732471767235
+    },
+    {
+      "flavor": "plus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.026858714673321855,
+      "native_outside_frozen_lift_fraction": 0.0006072429960400825,
+      "target_DEL_relative_residual": 0.000698338248039649
+    },
+    {
+      "flavor": "plus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.06201724223644426,
+      "native_outside_frozen_lift_fraction": 0.0012075635253295542,
+      "target_DEL_relative_residual": 0.0005829580691880513
+    },
+    {
+      "flavor": "plus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.07726867942581943,
+      "native_outside_frozen_lift_fraction": 0.000826022848036556,
+      "target_DEL_relative_residual": 0.0007533383279744953
+    },
+    {
+      "flavor": "plus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.0257705937236088,
+      "native_outside_frozen_lift_fraction": 0.000945155757150531,
+      "target_DEL_relative_residual": 0.0005863434075082681
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.06693165901880607,
+      "native_outside_frozen_lift_fraction": 0.0003861344843654592,
+      "target_DEL_relative_residual": 0.0005079017650216386
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.02104612147177503,
+      "native_outside_frozen_lift_fraction": 0.0002541551458155133,
+      "target_DEL_relative_residual": 0.0003238347890412792
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.18244604543283532,
+      "native_outside_frozen_lift_fraction": 0.00017847290948568964,
+      "target_DEL_relative_residual": 0.0003886027542365659
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.23630061392666685,
+      "native_outside_frozen_lift_fraction": 0.00045989774113534756,
+      "target_DEL_relative_residual": 0.0003760240028793656
+    },
+    {
+      "flavor": "minus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.34361539253062473,
+      "native_outside_frozen_lift_fraction": 8.1242677909408e-05,
+      "target_DEL_relative_residual": 0.0010067704887458786
+    },
+    {
+      "flavor": "minus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.3439275795273293,
+      "native_outside_frozen_lift_fraction": 0.0002821627741322643,
+      "target_DEL_relative_residual": 0.0006894867282803137
+    },
+    {
+      "flavor": "minus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.4377812606106884,
+      "native_outside_frozen_lift_fraction": 0.00016936628913995162,
+      "target_DEL_relative_residual": 0.0010082382452075733
+    },
+    {
+      "flavor": "minus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.24858761965641837,
+      "native_outside_frozen_lift_fraction": 6.564547965861418e-05,
+      "target_DEL_relative_residual": 0.0006557075276338974
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.256519620671828,
+      "native_outside_frozen_lift_fraction": 0.0005581258701181855,
+      "target_DEL_relative_residual": 0.0006278452073705369
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.23768311060322606,
+      "native_outside_frozen_lift_fraction": 0.0009217881116290579,
+      "target_DEL_relative_residual": 0.0002449629679119645
+    }
+  ],
+  "verdict": "PER_PRONG_NATIVE_DIRAC_UPDATE_OPEN",
+  "claim_boundary": "Action-derived one-step tangent update. The thresholds match the pre-existing unrestricted nonlinear short-run gate; repeated nonlinear motion, current and endurance remain separate."
+}

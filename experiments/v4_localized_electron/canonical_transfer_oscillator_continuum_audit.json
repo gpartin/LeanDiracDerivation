@@ -1,0 +1,122 @@
+{
+  "status": "V4_CANONICAL_TRANSFER_WAKE_CONTINUUM_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate_mode": "transfer_odd",
+  "completion": "oscillator",
+  "perturbation_epsilons": [
+    1e-05,
+    3e-05,
+    0.0001,
+    0.0003,
+    0.001
+  ],
+  "candidate_interval_values": [
+    3.240697009318274e-13,
+    2.624963578315018e-11,
+    3.240691462793406e-09,
+    2.6249501366763755e-07,
+    3.240636671929678e-05
+  ],
+  "candidate_perturbation_power": 3.999996303435554,
+  "candidate_uniform_vacuum_hessian_vector_norm": 0.0,
+  "c19_symbol_normalization": "lambda19(k)/(6 |k|^2)",
+  "symbol_rows": [
+    {
+      "direction": "axis",
+      "rows": [
+        {
+          "momentum_norm": 0.4,
+          "c19_symbol": 0.9472680719653788,
+          "relative_continuum_remainder": -0.013262425036064007
+        },
+        {
+          "momentum_norm": 0.2,
+          "c19_symbol": 0.23920106590510049,
+          "relative_continuum_remainder": -0.0033288920620815343
+        },
+        {
+          "momentum_norm": 0.1,
+          "c19_symbol": 0.05995001666369015,
+          "relative_continuum_remainder": -0.0008330556051643345
+        },
+        {
+          "momentum_norm": 0.05,
+          "c19_symbol": 0.014996875260404607,
+          "relative_continuum_remainder": -0.00020831597302639615
+        },
+        {
+          "momentum_norm": 0.025,
+          "c19_symbol": 0.0037498046915684924,
+          "relative_continuum_remainder": -5.208224840225206e-05
+        }
+      ],
+      "remainder_power": 1.9982871022093558
+    },
+    {
+      "direction": "face_diagonal",
+      "rows": [
+        {
+          "momentum_norm": 0.4,
+          "c19_symbol": 0.9473018654783512,
+          "relative_continuum_remainder": -0.013227223460051118
+        },
+        {
+          "momentum_norm": 0.2,
+          "c19_symbol": 0.23920159790658135,
+          "relative_continuum_remainder": -0.003326675389244582
+        },
+        {
+          "momentum_norm": 0.1,
+          "c19_symbol": 0.05995002499181723,
+          "relative_continuum_remainder": -0.000832916803046313
+        },
+        {
+          "momentum_norm": 0.05,
+          "c19_symbol": 0.014996875390593578,
+          "relative_continuum_remainder": -0.0002083072937616448
+        },
+        {
+          "momentum_norm": 0.025,
+          "c19_symbol": 0.003749804693602643,
+          "relative_continuum_remainder": -5.20817059620482e-05
+        }
+      ],
+      "remainder_power": 1.9974331507096075
+    },
+    {
+      "direction": "body_diagonal",
+      "rows": [
+        {
+          "momentum_norm": 0.4,
+          "c19_symbol": 0.9472831271364945,
+          "relative_continuum_remainder": -0.013246742566151659
+        },
+        {
+          "momentum_norm": 0.2,
+          "c19_symbol": 0.23920130249101468,
+          "relative_continuum_remainder": -0.003327906287439064
+        },
+        {
+          "momentum_norm": 0.1,
+          "c19_symbol": 0.05995002036563091,
+          "relative_continuum_remainder": -0.0008329939061517688
+        },
+        {
+          "momentum_norm": 0.05,
+          "c19_symbol": 0.014996875318267655,
+          "relative_continuum_remainder": -0.0002083121154898837
+        },
+        {
+          "momentum_norm": 0.025,
+          "c19_symbol": 0.003749804692473102,
+          "relative_continuum_remainder": -5.208200717299327e-05
+        }
+      ],
+      "remainder_power": 1.9979069900943691
+    }
+  ],
+  "verdict": "CANDIDATE_PRESERVES_QUADRATIC_CONTINUUM_DIRAC_SYMBOL",
+  "interpretation": "The wake metric begins at fourth perturbative order about the uniform vacuum, so it contributes no quadratic mass or transport symbol. The C19 symbol retains its isotropic |k|^2 limit with quadratic remainder. Therefore the existing continuum free-Dirac factorization is unchanged by this candidate at linear order.",
+  "claim_boundary": "Uniform-vacuum quadratic and C19 low-momentum audit only. It does not prove that the nonlinear localized carrier moves according to Dirac or that the candidate action is admissible."
+}

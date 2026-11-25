@@ -1,0 +1,129 @@
+{
+  "status": "V4_PERSONAL_TOUCH_COMPLETE_FRAME_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate": "cross_bond_berry",
+  "base_even_strength": 0.0,
+  "base_density_strength": 0.0,
+  "action_delta": "C19 reciprocal Berry one-form of neighbor differences of the complete native cross-covariance chi Psi^dagger",
+  "coefficient_rule": "unit relative weights are fixed by the Hilbert--Schmidt norm; overall strength is continuation only and is not admitted",
+  "rows": [
+    {
+      "strength": -1e-05,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 9.580137900034734e-05,
+          "augmented_norm": 0.0017244248220062521,
+          "accepted_scale": 0.0625,
+          "accepted_damping": 0.007749549667546049
+        },
+        {
+          "iteration": 1,
+          "DEL_rms": 9.576767267038241e-05,
+          "augmented_norm": 0.0017238181080668838,
+          "accepted_scale": 0.00390625,
+          "accepted_damping": 7.749555659528682e-07
+        },
+        {
+          "iteration": 2,
+          "DEL_rms": 9.570908706788227e-05,
+          "augmented_norm": 0.001722763567221881,
+          "accepted_scale": 0.0078125,
+          "accepted_damping": 7.749563871851357e-07
+        },
+        {
+          "iteration": 3,
+          "DEL_rms": 9.551124630462123e-05,
+          "augmented_norm": 0.0017192024334831823,
+          "accepted_scale": 0.015625,
+          "accepted_damping": 7.749577102420112e-07
+        },
+        {
+          "iteration": 4,
+          "DEL_rms": 9.490320012122883e-05,
+          "augmented_norm": 0.0017082576021821194,
+          "accepted_scale": 0.0625,
+          "accepted_damping": 7.749597917835432e-07
+        },
+        {
+          "iteration": 5,
+          "DEL_rms": 9.475177901922288e-05,
+          "augmented_norm": 0.001705532022346012,
+          "accepted_scale": 0.001953125,
+          "accepted_damping": 7.749662442461708e-08
+        },
+        {
+          "iteration": 6,
+          "DEL_rms": 9.467283874886302e-05,
+          "augmented_norm": 0.0017041110974795348,
+          "accepted_scale": 0.00390625,
+          "accepted_damping": 7.74967386454394e-08
+        },
+        {
+          "iteration": 7,
+          "DEL_rms": 9.464611293435652e-05,
+          "augmented_norm": 0.0017036300328184175,
+          "accepted_scale": 0.00390625,
+          "accepted_damping": 7.749695363657231e-08
+        },
+        {
+          "iteration": 8,
+          "DEL_rms": 9.451507646537418e-05,
+          "augmented_norm": 0.0017012713763767354,
+          "accepted_scale": 0.0078125,
+          "accepted_damping": 7.749714689384505e-08
+        },
+        {
+          "iteration": 9,
+          "DEL_rms": 9.448846579286651e-05,
+          "augmented_norm": 0.0017007923842715974,
+          "accepted_scale": 0.0078125,
+          "accepted_damping": 7.74975014161088e-08
+        },
+        {
+          "iteration": 10,
+          "DEL_rms": 9.418786362131994e-05,
+          "augmented_norm": 0.001695381545183759,
+          "accepted_scale": 0.015625,
+          "accepted_damping": 7.749780792511823e-08
+        },
+        {
+          "iteration": 11,
+          "DEL_rms": 9.392623852690166e-05,
+          "augmented_norm": 0.00169067229348423,
+          "accepted_scale": 0.03125,
+          "accepted_damping": 7.749835642596173e-08
+        },
+        {
+          "iteration": 12,
+          "DEL_rms": 9.367499710024948e-05,
+          "augmented_norm": 0.0016861499478044906,
+          "accepted_scale": 0.0625,
+          "accepted_damping": 7.749927077738843e-08
+        },
+        {
+          "iteration": 13,
+          "DEL_rms": 9.232466690915838e-05,
+          "augmented_norm": 0.0016618440043648511,
+          "accepted_scale": 0.001953125,
+          "accepted_damping": 7.750066877780671e-09
+        },
+        {
+          "iteration": 14,
+          "DEL_rms": 9.227135676972068e-05,
+          "augmented_norm": 0.0016608844218549725,
+          "accepted_scale": 0.001953125,
+          "accepted_damping": 7.750094909621454e-09
+        }
+      ],
+      "theta_Psi": 0.0742368225049569,
+      "theta_chi": 1.2249939373320176e-05,
+      "Psi_carrier_fidelity": 0.9999999723209634,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0001627602649193745
+    }
+  ],
+  "verdict": "COMPLETE_FRAME_BRANCH_SOLVE_INCONCLUSIVE",
+  "claim_boundary": "Unrestricted side-three rest-branch continuation and full dense spectrum. A favorable row still requires coefficient provenance, side-five/timestep refinement, nonlinear stability, and motion."
+}

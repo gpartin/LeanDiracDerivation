@@ -1,0 +1,106 @@
+{
+  "status": "V4_REDUCED_TIGHT_FRAME_TRANSLATION_TANGENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidates": [
+    {
+      "candidate": "tight_frames",
+      "terms": [
+        "carrier_carrier_chi",
+        "carrier_carrier_Psi_tight_frame"
+      ],
+      "rows": [
+        {
+          "axis": 0,
+          "neutral_update_relative_residual": 0.0006389740906723491,
+          "best_real_multiplier": 1.0000041466812424,
+          "best_scalar_relative_residual": 0.0006389606353956635,
+          "generalized_stiffness_rayleigh": 0.20904440863458595
+        },
+        {
+          "axis": 1,
+          "neutral_update_relative_residual": 0.0006397794635719512,
+          "best_real_multiplier": 1.0000040713987677,
+          "best_scalar_relative_residual": 0.0006397665087518164,
+          "generalized_stiffness_rayleigh": 0.20845074687140538
+        },
+        {
+          "axis": 2,
+          "neutral_update_relative_residual": 0.0006797239597814137,
+          "best_real_multiplier": 0.9999975638135417,
+          "best_scalar_relative_residual": 0.0006797195940212885,
+          "generalized_stiffness_rayleigh": 0.21033859432777519
+        }
+      ],
+      "translation_subspace_cross_block": 0.0006530878670309898
+    },
+    {
+      "candidate": "tight_frames_plus_interface",
+      "terms": [
+        "carrier_carrier_chi",
+        "carrier_carrier_Psi_tight_frame",
+        "carrier_vacuum_chi"
+      ],
+      "rows": [
+        {
+          "axis": 0,
+          "neutral_update_relative_residual": 0.0006384916076877754,
+          "best_real_multiplier": 1.0000041367364203,
+          "best_scalar_relative_residual": 0.0006384782067537691,
+          "generalized_stiffness_rayleigh": 0.2098640953731011
+        },
+        {
+          "axis": 1,
+          "neutral_update_relative_residual": 0.0006392975881264409,
+          "best_real_multiplier": 1.0000040612014398,
+          "best_scalar_relative_residual": 0.0006392846884034918,
+          "generalized_stiffness_rayleigh": 0.20930357589274382
+        },
+        {
+          "axis": 2,
+          "neutral_update_relative_residual": 0.0006792732450940625,
+          "best_real_multiplier": 0.9999975570924609,
+          "best_scalar_relative_residual": 0.0006792688522988329,
+          "generalized_stiffness_rayleigh": 0.2111906595278526
+        }
+      ],
+      "translation_subspace_cross_block": 0.000652616848947765
+    },
+    {
+      "candidate": "all_activated_bonds",
+      "terms": [
+        "vacuum_vacuum_chi",
+        "carrier_vacuum_chi",
+        "carrier_carrier_chi",
+        "carrier_carrier_Psi_tight_frame"
+      ],
+      "rows": [
+        {
+          "axis": 0,
+          "neutral_update_relative_residual": 0.00535009832967175,
+          "best_real_multiplier": 0.9999965369836332,
+          "best_scalar_relative_residual": 0.005350097208899487,
+          "generalized_stiffness_rayleigh": 0.45226529965256046
+        },
+        {
+          "axis": 1,
+          "neutral_update_relative_residual": 0.004237493711328534,
+          "best_real_multiplier": 0.9999933692148547,
+          "best_scalar_relative_residual": 0.00423748852343428,
+          "generalized_stiffness_rayleigh": 0.5199468507197158
+        },
+        {
+          "axis": 2,
+          "neutral_update_relative_residual": 0.00487852241323337,
+          "best_real_multiplier": 0.9999759995428913,
+          "best_scalar_relative_residual": 0.004878463376359293,
+          "generalized_stiffness_rayleigh": 0.5316073789570146
+        }
+      ],
+      "translation_subspace_cross_block": 0.004843513392437717
+    }
+  ],
+  "best_candidate": "tight_frames_plus_interface",
+  "verdict": "NATIVE_NEUTRAL_TRANSLATION_MODE_ABSENT",
+  "claim_boundary": "Linear co-rotating translation tangent of the exact localized rest orbit. Absence establishes lattice pinning of this orbit, not a no-go for every finite relative-periodic branch."
+}

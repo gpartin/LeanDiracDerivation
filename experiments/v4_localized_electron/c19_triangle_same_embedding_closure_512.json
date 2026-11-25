@@ -1,0 +1,375 @@
+{
+  "status": "V4_C19_TRIANGLE_SAME_EMBEDDING_CLOSURE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 5,
+  "dt": 0.001953125,
+  "a": 0.10528128238675939,
+  "coefficients": {
+    "local_common_area_velocity": 299.3552812823868,
+    "local_relative_area_velocity": -299.1447187176132,
+    "body_common_area_velocity": -0.052640641193379696,
+    "body_relative_area_velocity": 0.0
+  },
+  "coefficient_rule": "native inertia/rest-clock normalization; no Dirac fit",
+  "rest_DEL_rms": 3.6245766304870864e-12,
+  "envelope_real_ranks": {
+    "plus_previous": 1000,
+    "plus_following": 1000,
+    "minus_previous": 1000,
+    "minus_following": 1000
+  },
+  "combined_previous_real_rank": 1250,
+  "corrected_physical_coordinate_axis_rows": [
+    {
+      "axis": 0,
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        6.0842888360469074e-05,
+        5.572189896484457e-05,
+        3.546060381360776e-06
+      ],
+      "relative_third_singular_value": 0.05828224919816146
+    },
+    {
+      "axis": 1,
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        6.075381962842495e-05,
+        4.6091689654220616e-05,
+        3.5603557099080536e-06
+      ],
+      "relative_third_singular_value": 0.05860299371600772
+    },
+    {
+      "axis": 2,
+      "fixed_charge_center_rank": 3,
+      "fixed_charge_center_singular_values": [
+        6.075033338627589e-05,
+        5.782715342064991e-05,
+        3.52353814949807e-05
+      ],
+      "relative_third_singular_value": 0.5800030967886133
+    }
+  ],
+  "rows": [
+    {
+      "axis": 0,
+      "component": "plus_0",
+      "own_copy_previous_layer_leakage": 0.08325832094643987,
+      "both_copy_previous_layer_leakage": 1.9656555000599348e-05,
+      "own_copy_following_layer_target_leakage": 3.953076808987278e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6633667717133196,
+        "chi_fraction": 0.3366332282866804,
+        "carrier_fraction": 0.42343808345173567,
+        "exterior_fraction": 0.576561916548264
+      }
+    },
+    {
+      "axis": 0,
+      "component": "plus_1",
+      "own_copy_previous_layer_leakage": 0.08372905072425499,
+      "both_copy_previous_layer_leakage": 1.9652732106080577e-05,
+      "own_copy_following_layer_target_leakage": 1.0308171099962135e-15,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6929118769441631,
+        "chi_fraction": 0.30708812305583677,
+        "carrier_fraction": 0.3762467783296227,
+        "exterior_fraction": 0.6237532216703772
+      }
+    },
+    {
+      "axis": 0,
+      "component": "plus_2",
+      "own_copy_previous_layer_leakage": 0.09955202775824051,
+      "both_copy_previous_layer_leakage": 1.9655055116175984e-05,
+      "own_copy_following_layer_target_leakage": 6.109598386239662e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6617008049576988,
+        "chi_fraction": 0.3382991950423012,
+        "carrier_fraction": 0.5042595025061934,
+        "exterior_fraction": 0.49574049749380633
+      }
+    },
+    {
+      "axis": 0,
+      "component": "plus_3",
+      "own_copy_previous_layer_leakage": 0.08393482905670616,
+      "both_copy_previous_layer_leakage": 1.9650343380995343e-05,
+      "own_copy_following_layer_target_leakage": 8.077928240691369e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6541179180370299,
+        "chi_fraction": 0.3458820819629701,
+        "carrier_fraction": 0.39331210595042476,
+        "exterior_fraction": 0.6066878940495751
+      }
+    },
+    {
+      "axis": 0,
+      "component": "minus_0",
+      "own_copy_previous_layer_leakage": 0.08382564587932495,
+      "both_copy_previous_layer_leakage": 1.965153832552352e-05,
+      "own_copy_following_layer_target_leakage": 3.7697064919370273e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6420596574548774,
+        "chi_fraction": 0.3579403425451227,
+        "carrier_fraction": 0.3929625359222573,
+        "exterior_fraction": 0.6070374640777428
+      }
+    },
+    {
+      "axis": 0,
+      "component": "minus_1",
+      "own_copy_previous_layer_leakage": 0.08328248053216929,
+      "both_copy_previous_layer_leakage": 1.965267015885512e-05,
+      "own_copy_following_layer_target_leakage": 1.0449038868425625e-15,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6303074687899008,
+        "chi_fraction": 0.3696925312100992,
+        "carrier_fraction": 0.4146964775125494,
+        "exterior_fraction": 0.5853035224874507
+      }
+    },
+    {
+      "axis": 0,
+      "component": "minus_2",
+      "own_copy_previous_layer_leakage": 0.09864817336339816,
+      "both_copy_previous_layer_leakage": 1.965360518386455e-05,
+      "own_copy_following_layer_target_leakage": 4.085751576770985e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6398937504159581,
+        "chi_fraction": 0.36010624958404197,
+        "carrier_fraction": 0.5189303549780061,
+        "exterior_fraction": 0.4810696450219936
+      }
+    },
+    {
+      "axis": 0,
+      "component": "minus_3",
+      "own_copy_previous_layer_leakage": 0.08578138399748382,
+      "both_copy_previous_layer_leakage": 1.9656657310384778e-05,
+      "own_copy_following_layer_target_leakage": 6.975985944115403e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6103050960712766,
+        "chi_fraction": 0.3896949039287233,
+        "carrier_fraction": 0.4126056987666342,
+        "exterior_fraction": 0.5873943012333656
+      }
+    },
+    {
+      "axis": 1,
+      "component": "plus_0",
+      "own_copy_previous_layer_leakage": 0.07594653712637947,
+      "both_copy_previous_layer_leakage": 1.9655504438814803e-05,
+      "own_copy_following_layer_target_leakage": 5.821329320347012e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.647875972743429,
+        "chi_fraction": 0.3521240272565711,
+        "carrier_fraction": 0.3286242711193523,
+        "exterior_fraction": 0.6713757288806481
+      }
+    },
+    {
+      "axis": 1,
+      "component": "plus_1",
+      "own_copy_previous_layer_leakage": 0.08071105174086986,
+      "both_copy_previous_layer_leakage": 1.965391719220698e-05,
+      "own_copy_following_layer_target_leakage": 8.857512740413263e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6691088491587871,
+        "chi_fraction": 0.33089115084121296,
+        "carrier_fraction": 0.39972136248222195,
+        "exterior_fraction": 0.6002786375177782
+      }
+    },
+    {
+      "axis": 1,
+      "component": "plus_2",
+      "own_copy_previous_layer_leakage": 0.06909771243193408,
+      "both_copy_previous_layer_leakage": 1.9649228860185368e-05,
+      "own_copy_following_layer_target_leakage": 4.454757332892412e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6128370430516549,
+        "chi_fraction": 0.38716295694834507,
+        "carrier_fraction": 0.3766972744352396,
+        "exterior_fraction": 0.6233027255647603
+      }
+    },
+    {
+      "axis": 1,
+      "component": "plus_3",
+      "own_copy_previous_layer_leakage": 0.08776029451907097,
+      "both_copy_previous_layer_leakage": 1.9656051671937585e-05,
+      "own_copy_following_layer_target_leakage": 1.0659825267498658e-15,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6542714192630128,
+        "chi_fraction": 0.34572858073698715,
+        "carrier_fraction": 0.4676894776728855,
+        "exterior_fraction": 0.5323105223271146
+      }
+    },
+    {
+      "axis": 1,
+      "component": "minus_0",
+      "own_copy_previous_layer_leakage": 0.07112235675851368,
+      "both_copy_previous_layer_leakage": 1.964871831251501e-05,
+      "own_copy_following_layer_target_leakage": 4.824118212907813e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6171565461422546,
+        "chi_fraction": 0.38284345385774543,
+        "carrier_fraction": 0.34610607457165626,
+        "exterior_fraction": 0.653893925428344
+      }
+    },
+    {
+      "axis": 1,
+      "component": "minus_1",
+      "own_copy_previous_layer_leakage": 0.07566460914478372,
+      "both_copy_previous_layer_leakage": 1.9654107009617474e-05,
+      "own_copy_following_layer_target_leakage": 9.192924063002218e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6482789143029922,
+        "chi_fraction": 0.3517210856970077,
+        "carrier_fraction": 0.3674929857335721,
+        "exterior_fraction": 0.6325070142664275
+      }
+    },
+    {
+      "axis": 1,
+      "component": "minus_2",
+      "own_copy_previous_layer_leakage": 0.07159103418825034,
+      "both_copy_previous_layer_leakage": 1.965555440749125e-05,
+      "own_copy_following_layer_target_leakage": 5.133792963050966e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.5881709616231791,
+        "chi_fraction": 0.41182903837682094,
+        "carrier_fraction": 0.37980366405641747,
+        "exterior_fraction": 0.6201963359435825
+      }
+    },
+    {
+      "axis": 1,
+      "component": "minus_3",
+      "own_copy_previous_layer_leakage": 0.086910543320936,
+      "both_copy_previous_layer_leakage": 1.9655435847857297e-05,
+      "own_copy_following_layer_target_leakage": 1.061549526141788e-15,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6215796332391471,
+        "chi_fraction": 0.37842036676085294,
+        "carrier_fraction": 0.5270696039920753,
+        "exterior_fraction": 0.472930396007925
+      }
+    },
+    {
+      "axis": 2,
+      "component": "plus_0",
+      "own_copy_previous_layer_leakage": 0.09091718893362415,
+      "both_copy_previous_layer_leakage": 1.8892280011121753e-05,
+      "own_copy_following_layer_target_leakage": 6.686994452125837e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6229289943834829,
+        "chi_fraction": 0.377071005616517,
+        "carrier_fraction": 0.5108396329059078,
+        "exterior_fraction": 0.48916036709409216
+      }
+    },
+    {
+      "axis": 2,
+      "component": "plus_1",
+      "own_copy_previous_layer_leakage": 0.07681569203103962,
+      "both_copy_previous_layer_leakage": 1.889105971407313e-05,
+      "own_copy_following_layer_target_leakage": 1.0973914080216451e-15,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6768685416685291,
+        "chi_fraction": 0.32313145833147094,
+        "carrier_fraction": 0.404869451731781,
+        "exterior_fraction": 0.595130548268219
+      }
+    },
+    {
+      "axis": 2,
+      "component": "plus_2",
+      "own_copy_previous_layer_leakage": 0.06978415553700504,
+      "both_copy_previous_layer_leakage": 1.8883789001209712e-05,
+      "own_copy_following_layer_target_leakage": 5.907268869156408e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6175437108961356,
+        "chi_fraction": 0.3824562891038645,
+        "carrier_fraction": 0.39995590130084435,
+        "exterior_fraction": 0.6000440986991555
+      }
+    },
+    {
+      "axis": 2,
+      "component": "plus_3",
+      "own_copy_previous_layer_leakage": 0.07836178048291052,
+      "both_copy_previous_layer_leakage": 1.8888348310680624e-05,
+      "own_copy_following_layer_target_leakage": 9.85839180533387e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6376021335466691,
+        "chi_fraction": 0.36239786645333105,
+        "carrier_fraction": 0.4463139472181071,
+        "exterior_fraction": 0.5536860527818929
+      }
+    },
+    {
+      "axis": 2,
+      "component": "minus_0",
+      "own_copy_previous_layer_leakage": 0.09070797505917041,
+      "both_copy_previous_layer_leakage": 1.8890171043304425e-05,
+      "own_copy_following_layer_target_leakage": 7.183647864360868e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6135075199320843,
+        "chi_fraction": 0.38649248006791576,
+        "carrier_fraction": 0.5156837287925026,
+        "exterior_fraction": 0.48431627120749743
+      }
+    },
+    {
+      "axis": 2,
+      "component": "minus_1",
+      "own_copy_previous_layer_leakage": 0.07251538175626548,
+      "both_copy_previous_layer_leakage": 1.8891260575135914e-05,
+      "own_copy_following_layer_target_leakage": 9.939669471431913e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6457597508925861,
+        "chi_fraction": 0.35424024910741375,
+        "carrier_fraction": 0.3768266034289018,
+        "exterior_fraction": 0.6231733965710983
+      }
+    },
+    {
+      "axis": 2,
+      "component": "minus_2",
+      "own_copy_previous_layer_leakage": 0.07064065006162129,
+      "both_copy_previous_layer_leakage": 1.8893209039004856e-05,
+      "own_copy_following_layer_target_leakage": 4.871323318370496e-16,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.600535069630683,
+        "chi_fraction": 0.39946493036931685,
+        "carrier_fraction": 0.3931118733061265,
+        "exterior_fraction": 0.6068881266938736
+      }
+    },
+    {
+      "axis": 2,
+      "component": "minus_3",
+      "own_copy_previous_layer_leakage": 0.07651557797085776,
+      "both_copy_previous_layer_leakage": 1.888769654118839e-05,
+      "own_copy_following_layer_target_leakage": 1.0180014062687316e-15,
+      "own_copy_launch_leakage_decomposition": {
+        "psi_fraction": 0.6254173326003184,
+        "chi_fraction": 0.3745826673996815,
+        "carrier_fraction": 0.43468562506556757,
+        "exterior_fraction": 0.5653143749344323
+      }
+    }
+  ],
+  "worst_own_copy_previous_layer_leakage": 0.09955202775824051,
+  "worst_both_copy_previous_layer_leakage": 1.9656657310384778e-05,
+  "worst_following_target_embedding_leakage": 1.0973914080216451e-15,
+  "all_axes_rank_three": true,
+  "verdict": "TRIANGLE_FULL_TANGENT_FOUR_COMPONENT_SECTOR_NOT_CLOSED",
+  "claim_boundary": "Linear full-field two-layer closure for the frozen cubical embedding and directional component ramps. It is not Noether-current equality, nonlinear endurance, or a V4-006 pass."
+}

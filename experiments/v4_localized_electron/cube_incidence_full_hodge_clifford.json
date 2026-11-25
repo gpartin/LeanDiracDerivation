@@ -1,0 +1,107 @@
+{
+  "status": "V4_COMPLETE_CUBICAL_HODGE_CLIFFORD_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": {
+    "complete": "eight cube masks = exterior degrees 0,1,2,3",
+    "reduced": "relative tau plus W = scalar/vector chiral chart"
+  },
+  "complete_cubical_space": {
+    "dimension_complex": 8,
+    "generators": [
+      {
+        "axis": 0,
+        "exterior_equals_corner_defect": 0.0,
+        "square_defect": 0.0,
+        "hermiticity_defect": 0.0,
+        "beta_anticommutator_defect": 0.0,
+        "flavor_commutator_defect": 0.0
+      },
+      {
+        "axis": 1,
+        "exterior_equals_corner_defect": 0.0,
+        "square_defect": 0.0,
+        "hermiticity_defect": 0.0,
+        "beta_anticommutator_defect": 0.0,
+        "flavor_commutator_defect": 0.0
+      },
+      {
+        "axis": 2,
+        "exterior_equals_corner_defect": 0.0,
+        "square_defect": 0.0,
+        "hermiticity_defect": 0.0,
+        "beta_anticommutator_defect": 0.0,
+        "flavor_commutator_defect": 0.0
+      }
+    ],
+    "cross_axis_checks": [
+      {
+        "axes": [
+          0,
+          1
+        ],
+        "anticommutator_defect": 0.0
+      },
+      {
+        "axes": [
+          0,
+          2
+        ],
+        "anticommutator_defect": 0.0
+      },
+      {
+        "axes": [
+          1,
+          2
+        ],
+        "anticommutator_defect": 0.0
+      }
+    ],
+    "degree_beta_matches_corner_parity_defect": 0.0,
+    "beta_square_defect": 0.0,
+    "beta_flavor_commutator_defect": 0.0,
+    "beta_anticommutant_dimension": 8,
+    "flavor_square_defect": 0.0,
+    "four_component_copies": {
+      "minus": {
+        "rank": 4,
+        "projector_defect": 0.0,
+        "beta_leakage": 0.0,
+        "transport_leakage_by_axis": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "plus": {
+        "rank": 4,
+        "projector_defect": 0.0,
+        "beta_leakage": 0.0,
+        "transport_leakage_by_axis": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "reduced_scalar_vector_space": {
+    "dimension_complex": 4,
+    "generator_square_defects": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cross_axis_anticommutator_defects": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "oriented_volume_minus_i_identity_defect": 0.0,
+    "beta_anticommutant_dimension": 0
+  },
+  "verdict": "COMPLETE_CUBICAL_COCHAINS_SUPPLY_BETA_AND_TWO_DIRAC_COPIES",
+  "root_cause": "The tau/W readout identifies two-form and three-form information with a scalar/vector chart.  That selects one spatial chirality. A single complex chiral Cl(3) representation has no nonzero complex-linear matrix that anticommutes with all three transport generators, so it cannot carry the Dirac mass grading.  Keeping all cube degrees restores corner parity beta and leaves two closed rank-four flavor copies.",
+  "action_implication": "The relative tau/W Hodge response may remain a diagnostic or one chiral block, but it cannot by itself close V4-006.  The next native response calculation must retain the full eight-corner cochain information (or an exactly equivalent native channel) and test whether the current action transports both parity grades.",
+  "claim_boundary": "This is an exact cube-geometry identity.  It derives no new action coefficient and does not prove that the current nonlinear Psi/chi action dynamically realizes the complete cochain transport on the localized carrier."
+}

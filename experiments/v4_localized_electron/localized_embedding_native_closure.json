@@ -1,0 +1,74 @@
+{
+  "status": "V4_LOCALIZED_EMBEDDING_NATIVE_FORCE_CLOSURE_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "native_tangent": "complete canonical position-force tangent",
+  "rows": [
+    {
+      "embedding_real_rank": 8,
+      "native_response_norm": 1559.9528772904337,
+      "cross_block_norm": 475.39177783487673,
+      "relative_cross_block": 0.30474752459228793,
+      "flavor": "plus",
+      "native_selected_chi_scale_real": 0.008305467684459727,
+      "native_selected_chi_scale_imag": 5.0613584453970665e-09,
+      "optimizer_success": true,
+      "leakage_decomposition": {
+        "psi_fraction": 0.9988533569504167,
+        "chi_fraction": 0.0011466430495834128,
+        "core_fraction": 1.0,
+        "halo_exterior_fraction": 1.696424988146209e-37,
+        "core_native_frame_fractions": {
+          "psi_ray": 0.9988533569504167,
+          "psi_companion": 5.643568797185105e-32,
+          "psi_normal": 1.1741928617723904e-34,
+          "chi_ray": 9.760519178750606e-34,
+          "chi_companion": 0.0011466430495834122,
+          "chi_normal": 3.139544885372391e-41
+        }
+      },
+      "controls": {
+        "psi_only": 0.30485013856517273,
+        "equal_joint": 0.7340174904584725,
+        "opposite_joint": 0.7442069278117869,
+        "quadrature_joint": 0.7391353100267508
+      }
+    },
+    {
+      "embedding_real_rank": 8,
+      "native_response_norm": 1564.9248924266515,
+      "cross_block_norm": 475.39259694541556,
+      "relative_cross_block": 0.3037798166838843,
+      "flavor": "minus",
+      "native_selected_chi_scale_real": 0.00838891677437946,
+      "native_selected_chi_scale_imag": -1.200406309785864e-08,
+      "optimizer_success": true,
+      "leakage_decomposition": {
+        "psi_fraction": 0.9988540611012825,
+        "chi_fraction": 0.0011459388987174748,
+        "core_fraction": 0.9999999999999999,
+        "halo_exterior_fraction": 2.1543973024962206e-38,
+        "core_native_frame_fractions": {
+          "psi_ray": 0.9988540611012825,
+          "psi_companion": 5.131443681136525e-32,
+          "psi_normal": 1.5736565364795327e-35,
+          "chi_ray": 3.827265779203934e-33,
+          "chi_companion": 0.0011459388987174748,
+          "chi_normal": 3.987106461750102e-42
+        }
+      },
+      "controls": {
+        "psi_only": 0.30388490394739065,
+        "equal_joint": 0.7337614445735271,
+        "opposite_joint": 0.7440627075526668,
+        "quadrature_joint": 0.7389354480023816
+      }
+    }
+  ],
+  "best_relative_cross_block": 0.3037798166838843,
+  "verdict": "CORE_ONLY_EMBEDDING_REQUIRES_HALO_OR_ACTION_REPAIR",
+  "root_cause_if_failed": "The joint Psi/chi spatial map has the required rank and exact translation equivariance, but a core-only carrier-derived graph is not an invariant subspace of the full native force. The leakage decomposition distinguishes missing halo response from an internal Psi/chi mismatch.",
+  "claim_boundary": "This is a complete real configuration-force cross-block on the side-three box. It does not include the implicit velocity metric or prove a two-layer positive-frequency sector.",
+  "corrective_action": "If leakage is halo dominated, solve the native invariant-graph equation for the first shell before changing the action. If it is core dominated, use the residual as the next action-response target. Then repeat with both committed layers."
+}

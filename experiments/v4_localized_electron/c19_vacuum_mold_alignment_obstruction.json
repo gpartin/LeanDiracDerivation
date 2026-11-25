@@ -1,0 +1,40 @@
+{
+  "status": "V4_C19_VACUUM_MOLD_ALIGNMENT_OBSTRUCTION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis_names": [
+    "c19_vacuum_mold_alignment",
+    "body_vacuum_mold_alignment"
+  ],
+  "rest_potential_values": [
+    0.0,
+    0.0
+  ],
+  "rest_force_column_norms": [
+    0.0,
+    0.0
+  ],
+  "response_rank": 2,
+  "response_singular_values": [
+    0.000209381435969987,
+    2.1720805069665072e-08
+  ],
+  "diagnostic_coefficients": {
+    "c19_vacuum_mold_alignment": 0.5318400942091229,
+    "body_vacuum_mold_alignment": -4.786561584665976
+  },
+  "coefficients_nonnegative": false,
+  "combined_relative_remainder": 0.9970132988372091,
+  "branches": [
+    {
+      "branch": "minus",
+      "relative_remainder": 0.9969931944220911
+    },
+    {
+      "branch": "plus",
+      "relative_remainder": 0.997033435697422
+    }
+  ],
+  "verdict": "VACUUM_MOLD_ALIGNMENT_MISSES_NONLINEAR_OBSTRUCTION",
+  "claim_boundary": "Positive-potential response screen only. Diagnostic coefficients are not admitted or fitted into the action."
+}

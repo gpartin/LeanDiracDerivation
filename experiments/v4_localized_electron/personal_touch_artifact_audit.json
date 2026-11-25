@@ -1,0 +1,39 @@
+{
+  "status": "V4_PERSONAL_TOUCH_ARTIFACT_AUDIT_HISTORICAL_SNAPSHOT",
+  "verdict": "V4_006_PERSONAL_TOUCH_10_ROUND_STOP",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "checks": {
+    "python_compile": "PASS",
+    "json_parse": "PASS",
+    "git_diff_check": "PASS",
+    "candidate_ledger_round_count": 10,
+    "movement_matrix_present": true,
+    "conservation_boundary_explicit": true,
+    "rca_six_field_format": true,
+    "canonical_v40_unchanged": true
+  },
+  "sha256": {
+    "personal_touch_summary.json": "21e508da6ae09830229ce8beb6f1adf34261834895721f23504d741c87eb0bae",
+    "personal_touch_candidate_ledger.json": "c480a229a9334b8c01b0545780804643113a49f8d1f2e53dc173ec3b3a52ced1",
+    "personal_touch_movement_validation_matrix.csv": "61aeeda8806efcae5d3a5f5d79c394b956218f57c93f7e5888f09653236c8df0",
+    "personal_touch_conservation_evidence.json": "33c22354941b3db8aac34ea63f21263b990a015668f47505e2e6eeee531a5b6e",
+    "personal_touch_full_frame_diagnostic.json": "dba289459615c34d83f5a6b39767b3c4d3a9ce6e1b8ace42bf16d67f3e2e5b0d",
+    "personal_touch_action_basis_screen.json": "a76ac80b339f8a0d0f906bee70c7f755a0791b1e4a5e831861eea1f038d2fb14",
+    "personal_touch_complete_frame_fredholm.json": "df262ddead1d6bfb6ea816a43da1669a5493aaa678bf188a67f843026eef6173",
+    "personal_touch_position_fredholm_cone.json": "41cdd9423b33b04df06f6e2b87a25325416f867c56c51eb786bad97bc7da9bb7",
+    "personal_touch_local_area_frame_branch.json": "d4efe229cb6abd96ca04bb17279177496d20afba55539143f34569b146c1bfd4",
+    "personal_touch_ordered_frame_branch.json": "5bb252a2ffafc97ee83b2fd71a047591f6a612d76116114db5e919576b801cba",
+    "personal_touch_plane_frame_branch.json": "3a48050f1991d593bb2e125a169301bc5caadfdd3cecba2f267ef8de085286f5",
+    "personal_touch_plane_kinetic_frame_branch.json": "62fb315505a700de6bd215c96e8d850c76515e66e9c683f1b9d679f38b37240b",
+    "c19_bargmann_connection_copy_gate.json": "f595cd73f109324ef10da75a60fe8a0745d0e5ce20216152aa24c2bb52a92d9e",
+    "personal_touch_area_berry_frame_branch.json": "ba2d59d81b2271e06e76e869c1f26f9b5922b12cad0eb81c6ec700c37df2108e",
+    "personal_touch_cross_berry_frame_branch.json": "c6069453e83ee3f69d49c7aa42539e0ff3bf6f7b1ec2d00a5a5b73fe3b33d082",
+    "personal_touch_cross_oscillator_frame_branch.json": "f7c8b1bcd8e75b060f644b38c5928147a79a11421b8058408e8f9568712b5738",
+    "personal_touch_cross_bond_oscillator_frame_branch.json": "77791a5e74b907141b1f3f4a94b06eb84262e886b1c1b2f4ad2a2b5f4b59ca8c",
+    "personal_touch_cross_bond_berry_fredholm.json": "aa215584a40d154f2b40852bdb3704a4f4673681d9c3e35073bb70a334eb8ed4",
+    "RCA.md": "3e4170a4262b253cc7289af6c548c5a8288643245cca8b416d506a4e7edec146",
+    "REPORT.md": "48e87c4a7543c99cad70dd2d7fbc2f95c3a314144426d4e18d915268babff363"
+  },
+  "claim_boundary": "The hashes certify the stopped personal-touch snapshot before the later loop-resolved extension appended RCA.md and REPORT.md. Current loop artifacts are certified separately. This does not certify V4-002, V4-006, a moving electron, or canonical promotion."
+}

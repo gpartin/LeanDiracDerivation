@@ -1,0 +1,45 @@
+{
+  "status": "V4_AREA_BILINEAR_PHASE_ACTION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "sum_C19 w Im[conj(omega_i) omega_j]^2/(2 chi0^12), omega_i=(chi_i wedge Psi_i) dot (chi_i wedge Psi_i)",
+  "positive_square": true,
+  "preserves_global_U1xU1": true,
+  "normalized_rest_value": 0.0,
+  "normalized_rest_force_norm": 0.0,
+  "normalized_curvature_on_residual": 30.763965491615934,
+  "coefficient_scan": [
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9462220197371862e-13,
+      "maximum_multiplier_modulus": 1.0003871235481354,
+      "maximum_growth_rate": 0.09908445059782456,
+      "growing_multiplier_count_at_1e_minus_7": 183,
+      "coefficient": 0.002770083102493075,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.936048243717435e-13,
+      "maximum_multiplier_modulus": 1.0014163421079552,
+      "maximum_growth_rate": 0.3623270506340926,
+      "growing_multiplier_count_at_1e_minus_7": 191,
+      "coefficient": 0.05263157894736842,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    },
+    {
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.941701469629446e-13,
+      "maximum_multiplier_modulus": 1.0020369604068242,
+      "maximum_growth_rate": 0.5209314856793653,
+      "growing_multiplier_count_at_1e_minus_7": 191,
+      "coefficient": 1.0,
+      "minimum_mass_eigenvalue": 0.9709117454768242
+    }
+  ],
+  "verdict": "AREA_PHASE_ACTION_RETAINS_GROWTH",
+  "claim_boundary": "The phase square is a research action screen, not an installed term. A linear pass would still require coefficient provenance, refinements, nonlinear conservation, motion, and current."
+}

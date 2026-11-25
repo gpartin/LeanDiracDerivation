@@ -1,0 +1,164 @@
+{
+  "status": "V4_CANONICAL_TRANSFER_OSCILLATOR_GATE",
+  "mode": "transfer_odd",
+  "strength": 1.0,
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "positive reciprocal discrete harmonic action for Z_ij=chi_i^dagger(chi_j wedge Psi_j) +/- reverse bond",
+  "coefficient_provenance": "relative kinetic/potential coefficient fixed by the native rest identity 2(1-cos theta)=dt^2 chi0^2; overall strength remains unselected",
+  "frequency_identity_error": 0.0,
+  "rows": [
+    {
+      "fraction_of_rest_norm": 0.0,
+      "added_rest_DEL_rms": 1.8342099322256486e-13,
+      "candidate_rest_DEL_rms": 1.8388873197993755e-13,
+      "previous_block_condition_number": 1204.7510498254946,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 3,
+          "singular_values": [
+            0.0009920345441389669,
+            0.00034839362134532964,
+            0.00019240424580012623
+          ],
+          "relative_third_singular_value": 0.19394913910696815
+        },
+        {
+          "axis": 1,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 3,
+          "singular_values": [
+            0.0010874290122835904,
+            0.0003351505567585267,
+            0.00020828801218380767
+          ],
+          "relative_third_singular_value": 0.1915417096941389
+        },
+        {
+          "axis": 2,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 3,
+          "singular_values": [
+            0.0004885809693903471,
+            0.00032278672155482493,
+            0.0002481989738141353
+          ],
+          "relative_third_singular_value": 0.5079996753124436
+        }
+      ],
+      "axis_ranks": [
+        3,
+        3,
+        3
+      ],
+      "minimum_relative_third_singular_value": 0.1915417096941389
+    },
+    {
+      "fraction_of_rest_norm": 0.003,
+      "added_rest_DEL_rms": 3.661890215419326e-13,
+      "candidate_rest_DEL_rms": 3.6842140999336665e-13,
+      "previous_block_condition_number": 1204.7510165852564,
+      "axis_rows": [
+        {
+          "axis": 0,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 3,
+          "singular_values": [
+            0.0009708565066804103,
+            0.00035168817729406963,
+            0.00018783245927040635
+          ],
+          "relative_third_singular_value": 0.19347087646623523
+        },
+        {
+          "axis": 1,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 3,
+          "singular_values": [
+            0.0010735894872813982,
+            0.0003321843151802461,
+            0.00020872597379072082
+          ],
+          "relative_third_singular_value": 0.19441879439344
+        },
+        {
+          "axis": 2,
+          "component_labels": [
+            "plus_0",
+            "plus_1",
+            "plus_2",
+            "plus_3",
+            "minus_0",
+            "minus_1",
+            "minus_2",
+            "minus_3"
+          ],
+          "fixed_charge_center_rank": 3,
+          "singular_values": [
+            0.0004783205158023254,
+            0.00032332570106644276,
+            0.0002418236586715666
+          ],
+          "relative_third_singular_value": 0.5055682344419962
+        }
+      ],
+      "axis_ranks": [
+        3,
+        3,
+        3
+      ],
+      "minimum_relative_third_singular_value": 0.19347087646623523
+    }
+  ],
+  "rest_gate_pass": true,
+  "transport_gate_pass": true,
+  "verdict": "TRANSFER_OSCILLATOR_REST_AND_RANK_PASS",
+  "claim_boundary": "Exact rest DEL and linear fixed-charge rank only. A pass still requires positive Hamiltonian/time-update proof, coefficient selection, spectrum, Noether-current equality, continuum audit, and unrestricted finite translation."
+}

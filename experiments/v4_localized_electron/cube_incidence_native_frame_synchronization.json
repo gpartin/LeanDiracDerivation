@@ -1,0 +1,132 @@
+{
+  "status": "V4_NATIVE_FRAME_SYNCHRONIZATION_GATE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "frame_derivation": "top four modes of the native kinetic-overlap C19 connection adjacency, blockwise polar synchronized",
+  "frame_diagnostics": {
+    "plus": {
+      "leading_connection_eigenvalues": [
+        2.8019524931753907,
+        2.8019524931753907,
+        2.801952493175391,
+        2.801952493175391
+      ],
+      "minimum_local_block_singular": 3.6308185007395113e-19,
+      "maximum_local_block_singular": 0.1414268665168836,
+      "maximum_local_frame_unitarity_defect": 2.5362352077549066e-15
+    },
+    "minus": {
+      "leading_connection_eigenvalues": [
+        2.6749527344720314,
+        2.6749527344720314,
+        2.6749527344720314,
+        2.6749527344720314
+      ],
+      "minimum_local_block_singular": 9.54730151106082e-16,
+      "maximum_local_block_singular": 0.14142451289319935,
+      "maximum_local_frame_unitarity_defect": 3.4069765917680923e-15
+    }
+  },
+  "rows": [
+    {
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_dirac_relative_error": 1.175842900164563e-05,
+      "one_cycle_native_vs_dirac_relative_error": 0.5442940126953622,
+      "one_cycle_phase_aligned_shape_error": 0.5026047546131948,
+      "one_cycle_norm_ratio": 1.1344373296566896,
+      "flavor": "plus"
+    },
+    {
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_dirac_relative_error": 1.3028924510516602e-05,
+      "one_cycle_native_vs_dirac_relative_error": 0.5683447063512317,
+      "one_cycle_phase_aligned_shape_error": 0.521824484869012,
+      "one_cycle_norm_ratio": 1.0894064989988872,
+      "flavor": "plus"
+    },
+    {
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "one_step_native_vs_dirac_relative_error": 1.6899987732276333e-05,
+      "one_cycle_native_vs_dirac_relative_error": 0.7565526549577551,
+      "one_cycle_phase_aligned_shape_error": 0.6912442703659717,
+      "one_cycle_norm_ratio": 1.2324681740292551,
+      "flavor": "plus"
+    },
+    {
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_dirac_relative_error": 1.2325294259810427e-05,
+      "one_cycle_native_vs_dirac_relative_error": 0.6369013036995071,
+      "one_cycle_phase_aligned_shape_error": 0.5314700603421925,
+      "one_cycle_norm_ratio": 1.167763083289964,
+      "flavor": "minus"
+    },
+    {
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_dirac_relative_error": 1.2970805072997289e-05,
+      "one_cycle_native_vs_dirac_relative_error": 0.7080874158510579,
+      "one_cycle_phase_aligned_shape_error": 0.6087348165629286,
+      "one_cycle_norm_ratio": 1.1851295251231246,
+      "flavor": "minus"
+    },
+    {
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "one_step_native_vs_dirac_relative_error": 1.245314803490254e-05,
+      "one_cycle_native_vs_dirac_relative_error": 0.7038482741222762,
+      "one_cycle_phase_aligned_shape_error": 0.5887352286337942,
+      "one_cycle_norm_ratio": 1.1332653493288931,
+      "flavor": "minus"
+    }
+  ],
+  "best_case": {
+    "direction": "x",
+    "sign": -1,
+    "momentum": [
+      -0.35,
+      0.0,
+      0.0
+    ],
+    "one_step_native_vs_dirac_relative_error": 1.175842900164563e-05,
+    "one_cycle_native_vs_dirac_relative_error": 0.5442940126953622,
+    "one_cycle_phase_aligned_shape_error": 0.5026047546131948,
+    "one_cycle_norm_ratio": 1.1344373296566896,
+    "flavor": "plus"
+  },
+  "verdict": "NATIVE_SYNCHRONIZED_FRAME_DOES_NOT_CLOSE_LONG_PACKET",
+  "claim_boundary": "Native-overlap preparation/readout test only. No action or coefficient is changed; a favorable result would still require nonlinear motion, current, refinement, and Lean proof."
+}

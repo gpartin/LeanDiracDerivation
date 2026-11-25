@@ -1,0 +1,36 @@
+{
+  "status": "V4_C19_TRIANGLE_GYRO_CANDIDATE_EQUIVALENCE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "coefficients": [
+    299.3553357120875,
+    -299.1446642879125,
+    -0.05266785604374211,
+    0.0
+  ],
+  "rows": [
+    {
+      "label": "exact_rest_previous_interval",
+      "direct_interval_action": -70.84944829252682,
+      "triangle_interval_action": -70.84944829252682,
+      "relative_action_error": 0.0,
+      "relative_first_variation_error": 4.824508909247464e-18
+    },
+    {
+      "label": "exact_rest_following_interval",
+      "direct_interval_action": -70.84944829252511,
+      "triangle_interval_action": -70.84944829252511,
+      "relative_action_error": 0.0,
+      "relative_first_variation_error": 4.631009227509153e-18
+    },
+    {
+      "label": "deterministic_random_interval",
+      "direct_interval_action": 983319.6514081621,
+      "triangle_interval_action": 983319.6514081621,
+      "relative_action_error": 0.0,
+      "relative_first_variation_error": 8.546728412439562e-17
+    }
+  ],
+  "verdict": "FULL_C27_GYRO_ORACLE_HAS_EXACT_C19_TRIANGLE_ACTION",
+  "claim_boundary": "Exact interval-action and first-variation identity. The C19 triangle action remains an unadmitted research candidate and has not passed 100-cycle stability or translation gates."
+}

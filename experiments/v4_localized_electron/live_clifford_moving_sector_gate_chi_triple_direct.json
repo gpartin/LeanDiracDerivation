@@ -1,0 +1,67 @@
+{
+  "status": "V4_LIVE_CLIFFORD_MOVING_SECTOR_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "link_source": "chi_triple_direct",
+  "joint_gauge": "Psi amplitudes use the live-Psi sector; chi amplitudes use the exact diagonal edge-link intertwiner into the live-chi sector; the chi coefficient is conjugated as required by the native companion map",
+  "chi_amplitude_map": "antilinear_conjugate",
+  "input_chi_amplitude_scale": 0.0,
+  "envelope": "all125",
+  "transport_time_sign": 1.0,
+  "amplitude_basis": "canonical",
+  "closure_rule": "Psi must stay in the live rank-four carrier lift; independent chi response is retained rather than counted as spinor leakage",
+  "intertwiner_defect": 1.9710326105225497e-15,
+  "input": "fundamental periodic conditional edge wave derived only from the live-Psi link generators",
+  "rows": [
+    {
+      "sector": "plus",
+      "axis": 0,
+      "retained_real_rank": 500,
+      "response_norm": 0.9835393155675634,
+      "relative_cross_block": 0.017643174505258152,
+      "psi_sector_cross_block_with_independent_chi": 1.056603531559349e-15
+    },
+    {
+      "sector": "plus",
+      "axis": 1,
+      "retained_real_rank": 500,
+      "response_norm": 0.807272447635215,
+      "relative_cross_block": 0.009594419851355026,
+      "psi_sector_cross_block_with_independent_chi": 1.0473618216737974e-15
+    },
+    {
+      "sector": "plus",
+      "axis": 2,
+      "retained_real_rank": 500,
+      "response_norm": 0.9248634757744141,
+      "relative_cross_block": 0.02053650972891756,
+      "psi_sector_cross_block_with_independent_chi": 9.895954058934358e-16
+    },
+    {
+      "sector": "minus",
+      "axis": 0,
+      "retained_real_rank": 500,
+      "response_norm": 0.5489578787357682,
+      "relative_cross_block": 0.016962790977264157,
+      "psi_sector_cross_block_with_independent_chi": 1.1480939900118435e-15
+    },
+    {
+      "sector": "minus",
+      "axis": 1,
+      "retained_real_rank": 500,
+      "response_norm": 0.6762078829780963,
+      "relative_cross_block": 0.027439538760596884,
+      "psi_sector_cross_block_with_independent_chi": 1.1128416257999565e-15
+    },
+    {
+      "sector": "minus",
+      "axis": 2,
+      "retained_real_rank": 500,
+      "response_norm": 0.7679499385220544,
+      "relative_cross_block": 0.011385909912658,
+      "psi_sector_cross_block_with_independent_chi": 1.0180075499400669e-15
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_ACTION_MOVING_SECTOR_CLOSED",
+  "claim_boundary": "Linear all-center phase-space action response. It is not a nonlinear carrier translation or V4-006 pass."
+}

@@ -1,0 +1,32 @@
+{
+  "status": "V4_COMPLETE_FACE_CALCULATION_ARTIFACT_AUDIT_PASS",
+  "verdict": "W_FACE_ACTION_CLASS_ASYMPTOTICALLY_SUPPRESSES_BUT_CANNOT_CLOSE_EXTERIOR_CHI_HINGE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "checks": {
+    "python_compile": "PASS",
+    "json_parse": "PASS",
+    "exact_shift_invert_reproduces_baseline": true,
+    "resolved_outer_mode_count": 32,
+    "five_term_positive_face_scan": "PASS",
+    "limiting_mode_extracted": true,
+    "limiting_mode_is_exterior_transverse_chi": true,
+    "growth_remains": true,
+    "stability_gate": "OPEN",
+    "rca_six_field_format": true
+  },
+  "sha256": {
+    "personal_touch_face_psd_cone.py": "974565d98bf7aa10feccd238879969a8aef9bb19b4d493fd4caa94da2b58081c",
+    "personal_touch_face_psd_cone.json": "a8eb68cb2ba63219de753a551d50f695e47b5c14db9c7513cabb67c24ca3bbe3",
+    "personal_touch_face_shift_invert_scan.py": "ad5bd8124a6fe108f4e7dd71b3c639bcba5e49470d3a3fa0d7a53f08fa27b511",
+    "personal_touch_face_shift_invert_scan.json": "f4615d765cc35858611cc63ccfcb7861bc6dffbe1a1977c052699d88d73e2880",
+    "personal_touch_face_cone_refinement.json": "552d9a0d47d01d72724a7609b27a807ea89533b27a6e78775175b8689c092db3",
+    "personal_touch_face_cone_plateau.json": "8dca223d58cb435eafd8859513d8c9c6421151de563b6cd479109d7c3d2a97e2",
+    "personal_touch_face_cone_limiting_hinge.json": "7c958e1d32960b02fa8ed9fc5796a32178ebe762a1ae871b14350d2175bf7cb6",
+    "personal_touch_face_limiting_symmetry.json": "f733bf04d8ae2c28bf8f777c8dd143d1d62a3bf6569360ed452d216889194a7f",
+    "face_complete_calculation_summary.json": "b5f38739ad92c5a2df82effe768acf14e7a79342b1f925dc1f986eb12f741fb5",
+    "RCA.md": "44c50a679731926d256d4c8903e6da9f14e2eaf7c8b5a0e3fda2998b208d3e29",
+    "REPORT.md": "62c67b8d374605c5bb23e12680e5602dbe9378336cc508d6e85d68a9faf81288"
+  },
+  "claim_boundary": "This audit certifies the complete tested W-face calculation and limiting-channel diagnosis. It does not certify a universal face no-go, stability, movement, V4-006, Dirac closure, coefficient provenance, action admission, or canonical promotion."
+}

@@ -1,0 +1,114 @@
+{
+  "status": "V4_C27_BODY_GYRO_NONLINEAR_PERTURBATION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "theta": 0.07423579507567751,
+  "steps_per_cycle": 85,
+  "cycles_requested": 1,
+  "rest_DEL_rms": 2.0116107416097747e-12,
+  "solver_tolerance": 1e-08,
+  "rows": [
+    {
+      "sign": -1.0,
+      "chi_clock_fraction": 0.01,
+      "converged_all_steps": false,
+      "completed_steps": 33,
+      "maximum_phase_space_amplification": 54.831232613766325,
+      "maximum_DEL_rms": 1.4558572355873246e-05,
+      "full_jacobian_fallbacks": 7,
+      "samples": [
+        {
+          "step": 1,
+          "cycle": 0.011764705882352941,
+          "phase_space_amplification": 0.9999987745832497,
+          "solver_final_DEL_rms": 4.31519869334416e-11,
+          "solver_iterations": 4,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.92742962534578,
+            167.93142248371572
+          ],
+          "exterior_psi_density_rms": 6.684403912289995e-18,
+          "carrier_chi_density_minmax": [
+            167.93387803004518,
+            167.935535221587
+          ],
+          "exterior_chi_density_rms_change": 0.0017985337283711901
+        },
+        {
+          "step": 33,
+          "solver_trace": [
+            0.8832059034586531,
+            0.04806781508249797,
+            0.006390575958828494,
+            0.0021154487048759825,
+            0.00031338230960811867,
+            0.00031096464665720624,
+            5.568281890507081e-05,
+            1.4564276152355135e-05,
+            1.4561263021164187e-05,
+            1.4559958739596967e-05,
+            1.4559573588298622e-05,
+            1.4559141124254902e-05,
+            1.4558817479820012e-05,
+            1.4558572355873246e-05
+          ],
+          "solver_converged": false
+        }
+      ]
+    },
+    {
+      "sign": 1.0,
+      "chi_clock_fraction": 0.01,
+      "converged_all_steps": false,
+      "completed_steps": 41,
+      "maximum_phase_space_amplification": 75.75587669955338,
+      "maximum_DEL_rms": 9.757129726518437e-05,
+      "full_jacobian_fallbacks": 12,
+      "samples": [
+        {
+          "step": 1,
+          "cycle": 0.011764705882352941,
+          "phase_space_amplification": 0.9999176558717108,
+          "solver_final_DEL_rms": 3.7593970912726423e-11,
+          "solver_iterations": 4,
+          "solver_converged": true,
+          "carrier_psi_density_minmax": [
+            167.9466188972758,
+            167.9507451252169
+          ],
+          "exterior_psi_density_rms": 5.8959182548502484e-18,
+          "carrier_chi_density_minmax": [
+            167.94425620212755,
+            167.94591981145618
+          ],
+          "exterior_chi_density_rms_change": 0.001652748976913108
+        },
+        {
+          "step": 41,
+          "solver_trace": [
+            1.084382709383762,
+            0.050745661994331025,
+            0.020193441940793998,
+            0.020188740785056423,
+            0.02018220048579016,
+            0.020175774923901144,
+            0.02014933510241868,
+            0.019925592727389564,
+            0.010634051215029092,
+            0.0018269242384908084,
+            0.0011116003270273942,
+            0.00041251168995948793,
+            0.0002272514027566994,
+            9.757129726518437e-05
+          ],
+          "solver_converged": false
+        }
+      ]
+    }
+  ],
+  "verdict": "C27_BODY_GYRO_NONLINEAR_UPDATE_FAILED",
+  "claim_boundary": "Unrestricted nonlinear implicit evolution and solver closure only. A numerical pass is not yet the 100-cycle stability, translation, containment, conservation, or Dirac-current gate."
+}

@@ -1,0 +1,44 @@
+{
+  "status": "V4_UNIT_GEOMETRIC_NONLINEAR_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "device": "cuda",
+  "compiled_force": false,
+  "cycles_requested": 1,
+  "steps_per_cycle": 339,
+  "steps_completed": 339,
+  "dt": 0.0009765625,
+  "clock_fraction": 0.01,
+  "finite": true,
+  "maximum_relative_shape_residual": 0.0019429983112324266,
+  "minimum_Psi_carrier_fidelity": 1.0,
+  "maximum_Psi_exterior_fraction": 0.0,
+  "samples": [
+    {
+      "step": 1,
+      "cycle": 0.0029498525073746312,
+      "relative_shape_residual": 3.390990397653087e-08,
+      "Psi_carrier_fidelity": 1.0000000000000002,
+      "Psi_exterior_fraction": 0.0,
+      "removed_Psi_phase": 0.01855495367454018,
+      "removed_chi_phase": 0.00018554953035718536,
+      "Psi_charge_relative_drift": 1.425222220400933e-16,
+      "chi_charge_relative_drift": 1.8792466471719818e-16,
+      "interval_energy_relative_drift": 6.285021127034318e-15
+    },
+    {
+      "step": 339,
+      "cycle": 1.0,
+      "relative_shape_residual": 0.0019429983112324266,
+      "Psi_carrier_fidelity": 1.0000000000000004,
+      "Psi_exterior_fraction": 0.0,
+      "removed_Psi_phase": 0.008625044825678356,
+      "removed_chi_phase": 0.06281843502413177,
+      "Psi_charge_relative_drift": 1.7102666644811194e-14,
+      "chi_charge_relative_drift": 2.6722887322785583e-13,
+      "interval_energy_relative_drift": 2.4225126603284854e-08
+    }
+  ],
+  "verdict": "UNIT_GEOMETRIC_NONLINEAR_PRELIMINARY_PASS",
+  "claim_boundary": "Unrestricted nonlinear centered-Verlet evolution under one percent chi-clock perturbation. A one-cycle pass is preliminary; the acceptance gate requires 100 cycles and refinements."
+}

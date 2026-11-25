@@ -1,0 +1,33 @@
+{
+  "status": "V4_REDUCED_INTERFACE_CHARGED_RELATIVE_ORBIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "chi_clock_fraction": 0.01,
+  "theta_Psi": 0.07423579507567751,
+  "theta_chi": 0.0007423579507567752,
+  "lambda_Psi": 361.0,
+  "lambda_chi": 0.03611658169502668,
+  "solver_success": true,
+  "solver_message": "`ftol` termination condition is satisfied.",
+  "solver_cost": 2.8991567090875785e-05,
+  "scales": {
+    "Psi_carrier": 1.057490139751633,
+    "chi_carrier": 1.0,
+    "chi_vacuum": 1.0
+  },
+  "normalized_projected_equations": [
+    0.003065960689123681,
+    -0.002975995548496774,
+    -0.0063028937584118615
+  ],
+  "full_DEL_residual_norm": 8949.496966252,
+  "orthogonal_DEL_residual_norm": 0.0,
+  "relative_orthogonal_fraction": 0.0,
+  "densities": {
+    "Psi_carrier": 187.80421526979558,
+    "chi_carrier": 167.93943298969072,
+    "chi_vacuum": 361.0
+  },
+  "verdict": "SYMMETRY_REDUCED_CHARGED_BRANCH_INSUFFICIENT",
+  "claim_boundary": "Three-amplitude symmetry solve for a one-percent chi phase advance. A pass establishes the nearby relative orbit; it does not establish perturbative stability or movement."
+}

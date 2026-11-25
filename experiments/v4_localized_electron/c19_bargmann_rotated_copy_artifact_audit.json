@@ -1,0 +1,27 @@
+{
+  "status": "V4_C19_BARGMANN_ROTATED_COPY_ARTIFACT_AUDIT_PASS",
+  "date": "2026-11-24",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "command": "python experiments/v4_localized_electron/c19_bargmann_rotated_copy_audit.py",
+  "validation": [
+    "python -m py_compile experiments/v4_localized_electron/c19_bargmann_rotated_copy_audit.py",
+    "PowerShell ConvertFrom-Json on the result",
+    "git diff --check"
+  ],
+  "artifacts": [
+    {
+      "path": "experiments/v4_localized_electron/c19_bargmann_rotated_copy_audit.py",
+      "sha256": "28C1D40731273217D754AFB003C15BB4795404E18AB48E70CF26D4030B3858BD"
+    },
+    {
+      "path": "experiments/v4_localized_electron/c19_bargmann_rotated_copy_audit.json",
+      "sha256": "A855FE84CE5F399C98C5B490B9E214E654E4C4F966D328A7BF4B45FD00823D67"
+    }
+  ],
+  "joint_three_axis_response_rank": 24,
+  "common_commutant_dimension": 1,
+  "traceless_symmetric_commutant_rank": 0,
+  "verdict": "NO_FIXED_ROTATION_SEPARATES_BARGMANN_COPIES",
+  "v4_006": "OPEN"
+}

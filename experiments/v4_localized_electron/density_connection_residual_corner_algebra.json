@@ -1,0 +1,158 @@
+{
+  "status": "V4_DENSITY_CONNECTION_RESIDUAL_CORNER_ALGEBRA",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "selected_real_section_phase": 3.3574272633784052,
+  "ray_projection_fraction": 0.9672584158955423,
+  "phase_fraction_within_ray_projection": 0.9999999999893322,
+  "sites": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      2,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      2
+    ],
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ]
+  ],
+  "cube_bits": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "normalized_radial_coefficients": [
+    0.35355779596755055,
+    -0.3535578370778286,
+    0.35354930951554286,
+    -0.353553004650081,
+    0.35354842108178475,
+    -0.3535486239980947,
+    0.3535597220249705,
+    -0.3535524102260575
+  ],
+  "normalized_phase_coefficients": [
+    0.35355339110133804,
+    -0.3535533905194104,
+    0.3535533910526321,
+    -0.3535533898453154,
+    0.3535533904270778,
+    -0.3535533905739312,
+    0.35355339122123103,
+    -0.3535533900052539
+  ],
+  "corner_character_decomposition": {
+    "001": {
+      "coefficient": 0.0519955005606832,
+      "power_fraction": 0.9999999999999997,
+      "restricted_C19_graph_laplacian_eigenvalue": 7.999999999999999
+    },
+    "000": {
+      "coefficient": 5.2545908757960244e-11,
+      "power_fraction": 1.0212834347704904e-18,
+      "restricted_C19_graph_laplacian_eigenvalue": 7.850462293418875e-17
+    },
+    "010": {
+      "coefficient": -3.654980934762882e-11,
+      "power_fraction": 4.941271361061604e-19,
+      "restricted_C19_graph_laplacian_eigenvalue": 7.999999999999999
+    },
+    "111": {
+      "coefficient": 1.7432348805647405e-11,
+      "power_fraction": 1.124036172132518e-19,
+      "restricted_C19_graph_laplacian_eigenvalue": 11.999999999999996
+    },
+    "110": {
+      "coefficient": 1.3556521518341712e-11,
+      "power_fraction": 6.797747181732011e-20,
+      "restricted_C19_graph_laplacian_eigenvalue": 12.0
+    },
+    "100": {
+      "coefficient": 1.3238108364578539e-11,
+      "power_fraction": 6.482168806590463e-20,
+      "restricted_C19_graph_laplacian_eigenvalue": 8.0
+    },
+    "011": {
+      "coefficient": 9.142417887118858e-12,
+      "power_fraction": 3.0916520460653846e-20,
+      "restricted_C19_graph_laplacian_eigenvalue": 11.999999999999998
+    },
+    "101": {
+      "coefficient": 5.3532232346262465e-12,
+      "power_fraction": 1.0599836867868191e-20,
+      "restricted_C19_graph_laplacian_eigenvalue": 11.999999999999998
+    }
+  },
+  "dominant_character": "001",
+  "dominant_character_power_fraction": 0.9999999999999997,
+  "verdict": "RESIDUAL_CORNER_CHARACTER_IDENTIFIED",
+  "claim_boundary": "This is an observational decomposition of the fastest residual, not a runtime parity selector or an admissible action term."
+}

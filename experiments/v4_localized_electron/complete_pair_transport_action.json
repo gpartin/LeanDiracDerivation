@@ -1,0 +1,61 @@
+{
+  "status": "V4_COMPLETE_PAIR_TRANSPORT_ACTION_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "derivation": {
+    "native_existing_channel": "antisymmetric bilinear chi wedge Psi",
+    "tested_complement": "complete bilinear tensor, its Hermitian phase channel, the parallel scalar, and the symmetric tensor complement",
+    "all_terms": "real positive reciprocal C19 bond sums using only native complex Psi and chi"
+  },
+  "candidates": {
+    "bilinear_pair_tensor": {
+      "rest_energy": 15625.292605484115,
+      "rest_force_norm": 1209.5870585536545,
+      "fastest_mode_generalized_curvature": 7.409556081825323
+    },
+    "hermitian_pair_tensor": {
+      "rest_energy": 15000.28090126475,
+      "rest_force_norm": 1162.5185060257345,
+      "fastest_mode_generalized_curvature": 7.987254936198535
+    },
+    "parallel_scalar": {
+      "rest_energy": 0.0,
+      "rest_force_norm": 0.0,
+      "fastest_mode_generalized_curvature": 1.7325301868664973e-21
+    },
+    "symmetric_bilinear_tensor": {
+      "rest_energy": 14375.269197045383,
+      "rest_force_norm": 1125.9265497030312,
+      "fastest_mode_generalized_curvature": 8.564953790611595
+    },
+    "total_density_mold": {
+      "rest_energy": 1262.1427489637579,
+      "rest_force_norm": 1302.1936495407217,
+      "fastest_mode_generalized_curvature": -7.334900691228944
+    }
+  },
+  "rest_force_matrix_rank": 3,
+  "rest_preserving_coefficient_kernel_dimension": 2,
+  "rest_preserving_unconstrained_coefficients": {
+    "bilinear_pair_tensor": -1.999996188851042,
+    "hermitian_pair_tensor": -5.142356012162165e-15,
+    "parallel_scalar": -0.005809427118542002,
+    "symmetric_bilinear_tensor": 0.9999980944255203,
+    "total_density_mold": -0.9999980944255269
+  },
+  "rest_preserving_translation_relative_residual": 0.0009709251670073685,
+  "positive_joint_fit": {
+    "coefficients": {
+      "bilinear_pair_tensor": 4.6497539293304116e-08,
+      "hermitian_pair_tensor": 4.9940785268589645e-24,
+      "parallel_scalar": 0.9898815796677031,
+      "symmetric_bilinear_tensor": 1.5338376094470135e-07,
+      "total_density_mold": 1.151533905663912e-09
+    },
+    "translation_relative_residual": 0.9906149726571394,
+    "rest_force_norm": 0.00022727808859799716
+  },
+  "existing_fastest_mode_stiffness": -1.0807423181893132,
+  "verdict": "PAIR_COMPLEMENT_ALONE_DOES_NOT_CLOSE_TRANSPORT",
+  "claim_boundary": "This screens the mathematically complete two-site pair channels at the exact rest orbit. It neither installs an action nor proves nonlinear motion. A failed screen is scoped to these two-site position terms and does not exclude triangle or symplectic terms."
+}

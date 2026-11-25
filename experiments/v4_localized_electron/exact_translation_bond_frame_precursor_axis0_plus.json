@@ -1,0 +1,133 @@
+{
+  "status": "V4_EXACT_TRANSLATION_BOND_FRAME_PRECURSOR_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "axis": 0,
+  "sign": 1,
+  "target_pattern": "same eight-site Psi-chi carrier values and entire native profile translated exactly one cell",
+  "action_candidate": "positive reciprocal chi kinetic metric with density mold, chi0=19 transverse scaling, and six-face C19 live-frame transport of chi, Psi, and chi wedge Psi",
+  "coefficient_provenance": {
+    "transverse_factor": "chi0=19",
+    "bond_frame_factor": "six C19 face directions"
+  },
+  "core_values_held_exact_during_inverse_gate": true,
+  "dt": 0.07962298862411822,
+  "psi_phase": 3.1415913359847485,
+  "chi_phase": 5.785811362193119e-07,
+  "compact_profile_del_norm": 92037.98949299852,
+  "first_shell_case": {
+    "support": "C19_first_shell",
+    "free_site_count": 48,
+    "free_real_coordinate_count": 576,
+    "lsmr_stop_code": 7,
+    "lsmr_iterations": 120,
+    "linear_relative_residual": 0.5431935910362382,
+    "correction_norm_over_state_norm": 0.5126605240168758,
+    "nonlinear_scale_rows": [
+      {
+        "scale": 0.0,
+        "relative_residual": 1.0
+      },
+      {
+        "scale": 0.01,
+        "relative_residual": 0.9929333571845949
+      },
+      {
+        "scale": 0.02,
+        "relative_residual": 0.9856890185895935
+      },
+      {
+        "scale": 0.03,
+        "relative_residual": 0.9780655489941953
+      },
+      {
+        "scale": 0.04,
+        "relative_residual": 0.9699223616294005
+      },
+      {
+        "scale": 0.05,
+        "relative_residual": 0.9613352910574506
+      },
+      {
+        "scale": 0.06,
+        "relative_residual": 0.9526729415544797
+      },
+      {
+        "scale": 0.07,
+        "relative_residual": 0.9444938198868573
+      },
+      {
+        "scale": 0.08,
+        "relative_residual": 0.9373155305543603
+      },
+      {
+        "scale": 0.09,
+        "relative_residual": 0.9314333019725844
+      },
+      {
+        "scale": 0.1,
+        "relative_residual": 0.9269371677672567
+      },
+      {
+        "scale": 0.2,
+        "relative_residual": 0.8212362005296086
+      },
+      {
+        "scale": 0.30000000000000004,
+        "relative_residual": 0.7732319318814564
+      },
+      {
+        "scale": 0.4,
+        "relative_residual": 0.994391293331973
+      },
+      {
+        "scale": 0.5,
+        "relative_residual": 1.0347008836071052
+      },
+      {
+        "scale": 0.6000000000000001,
+        "relative_residual": 1.1478544630563323
+      },
+      {
+        "scale": 0.7,
+        "relative_residual": 1.4477441359047178
+      },
+      {
+        "scale": 0.8,
+        "relative_residual": 1.9892509730298669
+      },
+      {
+        "scale": 0.9000000000000001,
+        "relative_residual": 2.7099884534023784
+      },
+      {
+        "scale": 1.0,
+        "relative_residual": 3.6106609908325584
+      }
+    ],
+    "best_nonlinear": {
+      "scale": 0.30000000000000004,
+      "relative_residual": 0.7732319318814564
+    },
+    "best_nonlinear_residual_diagnostics": {
+      "Psi_power_fraction": 0.2793307255068993,
+      "chi_power_fraction": 0.7206692744931007,
+      "core_power_fraction": 0.5952344935335827,
+      "first_shell_power_fraction": 0.3661907047398929,
+      "far_exterior_power_fraction": 0.038574801726524444,
+      "complex_component_power_fractions": [
+        0.23764452585504792,
+        0.5042324465061354,
+        0.25812302763881656
+      ],
+      "maximum_residual_site": [
+        1,
+        1,
+        1
+      ],
+      "maximum_residual_site_power_fraction": 0.123363118006439
+    }
+  },
+  "verdict": "FULL_FRAME_PRECURSOR_DOES_NOT_CLOSE_EXACT_SHIFT",
+  "claim_boundary": "One signed-axis linearized inverse-profile gate using the previously derived reciprocal action candidate. A favorable result is not an admitted action or a moving-electron pass; it requires a nonlinear exact-profile solve and all-axis tests."
+}

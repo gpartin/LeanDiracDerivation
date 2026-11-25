@@ -1,0 +1,131 @@
+{
+  "status": "V4_FACE_CONE_COORDINATE_REFINEMENT",
+  "step": 0.025,
+  "rows": [
+    {
+      "label": "start",
+      "growth": 0.012956640397689163,
+      "coefficients": [
+        0.12205479982595763,
+        0.12205479982595763,
+        0.05,
+        0.05,
+        0.07794520017404237
+      ]
+    },
+    {
+      "coordinate": "diagonal_symmetric",
+      "trials": [
+        {
+          "sign": -1,
+          "growth": 0.013029869336135189
+        },
+        {
+          "sign": 1,
+          "growth": 0.012881072653825992
+        }
+      ],
+      "retained_growth": 0.012881072653825992,
+      "coefficients": [
+        0.14705479982595762,
+        0.12205479982595763,
+        0.05,
+        0.05,
+        0.07794520017404237
+      ]
+    },
+    {
+      "coordinate": "diagonal_antisymmetric",
+      "trials": [
+        {
+          "sign": -1,
+          "growth": 0.013014243842851856
+        },
+        {
+          "sign": 1,
+          "growth": 0.012746817263612839
+        }
+      ],
+      "retained_growth": 0.012746817263612839,
+      "coefficients": [
+        0.14705479982595762,
+        0.14705479982595762,
+        0.05,
+        0.05,
+        0.07794520017404237
+      ]
+    },
+    {
+      "coordinate": "diagonal_reversed",
+      "trials": [
+        {
+          "sign": -1,
+          "growth": 0.012974973578502752
+        },
+        {
+          "sign": 1,
+          "growth": 0.012523170195977268
+        }
+      ],
+      "retained_growth": 0.012523170195977268,
+      "coefficients": [
+        0.14705479982595762,
+        0.14705479982595762,
+        0.07500000000000001,
+        0.05,
+        0.07794520017404237
+      ]
+    },
+    {
+      "coordinate": "diagonal_conjugate",
+      "trials": [
+        {
+          "sign": -1,
+          "growth": 0.012726341793454249
+        },
+        {
+          "sign": 1,
+          "growth": 0.012307991728253332
+        }
+      ],
+      "retained_growth": 0.012307991728253332,
+      "coefficients": [
+        0.14705479982595762,
+        0.14705479982595762,
+        0.07500000000000001,
+        0.07500000000000001,
+        0.07794520017404237
+      ]
+    },
+    {
+      "coordinate": "edge_commutator",
+      "trials": [
+        {
+          "sign": -1,
+          "growth": 0.012622023000707873
+        },
+        {
+          "sign": 1,
+          "growth": 0.012026685187940667
+        }
+      ],
+      "retained_growth": 0.012026685187940667,
+      "coefficients": [
+        0.14705479982595762,
+        0.14705479982595762,
+        0.07500000000000001,
+        0.07500000000000001,
+        0.10294520017404238
+      ]
+    }
+  ],
+  "best_growth_rate": 0.012026685187940667,
+  "best_coefficients": {
+    "diagonal_symmetric": 0.14705479982595762,
+    "diagonal_antisymmetric": 0.14705479982595762,
+    "diagonal_reversed": 0.07500000000000001,
+    "diagonal_conjugate": 0.07500000000000001,
+    "edge_commutator": 0.10294520017404238
+  },
+  "verdict": "REFINED_CONE_STILL_UNSTABLE"
+}

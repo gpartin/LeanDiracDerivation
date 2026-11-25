@@ -1,0 +1,58 @@
+{
+  "status": "V40_CHI_VACUUM_ORIENTATION_DEGENERACY_PROVED",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "c19_weight_sum": 24.0,
+  "analytic_result": "Canonical kernel dimension is 5*N_sites. A positive normalized C19 chi-gradient leaves exactly five global orientation modes and makes all nonuniform orientation modes positive.",
+  "rows": [
+    {
+      "side": 3,
+      "sites": 27,
+      "canonical_orientation_hessian": {
+        "negative": 0,
+        "zero": 135,
+        "positive": 0
+      },
+      "equal_speed_chi_stiffness_hessian": {
+        "negative": 0,
+        "zero": 5,
+        "positive": 130
+      },
+      "smallest_positive_normalized_c19_eigenvalue": 0.749999999999999,
+      "largest_normalized_c19_eigenvalue": 1.1250000000000027
+    },
+    {
+      "side": 4,
+      "sites": 64,
+      "canonical_orientation_hessian": {
+        "negative": 0,
+        "zero": 320,
+        "positive": 0
+      },
+      "equal_speed_chi_stiffness_hessian": {
+        "negative": 0,
+        "zero": 5,
+        "positive": 315
+      },
+      "smallest_positive_normalized_c19_eigenvalue": 0.4999999999999995,
+      "largest_normalized_c19_eigenvalue": 1.3333333333333337
+    },
+    {
+      "side": 5,
+      "sites": 125,
+      "canonical_orientation_hessian": {
+        "negative": 0,
+        "zero": 625,
+        "positive": 0
+      },
+      "equal_speed_chi_stiffness_hessian": {
+        "negative": 0,
+        "zero": 5,
+        "positive": 620
+      },
+      "smallest_positive_normalized_c19_eigenvalue": 0.3454915028125259,
+      "largest_normalized_c19_eigenvalue": 1.263593246718721
+    }
+  ],
+  "claim_boundary": "Necessary vacuum-sector result only; it does not prove that the same term admits or stabilizes the localized carrier."
+}

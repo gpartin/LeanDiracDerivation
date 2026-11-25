@@ -1,0 +1,73 @@
+{
+  "status": "V4_CROSS_COVARIANCE_TANGENT_RESEARCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rest_del_rms_residual": 2.2205746647133055e-11,
+  "unit_action_rest_gradient_norm": 7145.603332287059,
+  "dmass_minimum_eigenvalue": -1.0362534513373007e-15,
+  "dmass_maximum_eigenvalue": 1.125000000000002,
+  "symmetry_checks": {
+    "mass_asymmetry": 0.0,
+    "gyro_symmetric_part": 2.8103355200037534e-14,
+    "stiffness_asymmetry": 0.0
+  },
+  "rows": [
+    {
+      "eta": 0.0,
+      "maximum_growth": 0.03270684353360799,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084581802625,
+      "mass_negative_count": 0
+    },
+    {
+      "eta": 1e-08,
+      "maximum_growth": 0.03270692529971608,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106084694302859,
+      "mass_negative_count": 0
+    },
+    {
+      "eta": 1e-07,
+      "maximum_growth": 0.03270766121301826,
+      "growth_count_above_1e_2": 11,
+      "growth_count_above_1e_4": 28,
+      "mass_minimum_eigenvalue": 0.6106085706802697,
+      "mass_negative_count": 0
+    },
+    {
+      "eta": 1e-06,
+      "maximum_growth": 0.037276324886087946,
+      "growth_count_above_1e_2": 13,
+      "growth_count_above_1e_4": 29,
+      "mass_minimum_eigenvalue": 0.6106095831803933,
+      "mass_negative_count": 0
+    },
+    {
+      "eta": 1e-05,
+      "maximum_growth": 0.0593334861892269,
+      "growth_count_above_1e_2": 15,
+      "growth_count_above_1e_4": 26,
+      "mass_minimum_eigenvalue": 0.610619708180267,
+      "mass_negative_count": 0
+    },
+    {
+      "eta": 0.0001,
+      "maximum_growth": 0.10236163839877639,
+      "growth_count_above_1e_2": 15,
+      "growth_count_above_1e_4": 22,
+      "mass_minimum_eigenvalue": 0.6107209581804413,
+      "mass_negative_count": 0
+    },
+    {
+      "eta": 0.001,
+      "maximum_growth": 0.17321404416887914,
+      "growth_count_above_1e_2": 18,
+      "growth_count_above_1e_4": 24,
+      "mass_minimum_eigenvalue": 0.6117334581803068,
+      "mass_negative_count": 0
+    }
+  ],
+  "claim_boundary": "Fixed-orbit quadratic screen only. A favorable row requires analytic variation and a freely re-solved nonlinear orbit."
+}

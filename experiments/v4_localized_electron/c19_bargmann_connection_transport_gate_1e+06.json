@@ -1,0 +1,74 @@
+{
+  "status": "V4_C19_BARGMANN_CONNECTION_TRANSPORT_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "strength": 1000000.0,
+  "coefficient_provenance": "response screen only; no Dirac speed or target was fitted",
+  "candidate_rest_DEL_rms": 9.1466367425199e-09,
+  "rest_preserved": false,
+  "axis_rows": [
+    {
+      "axis": 0,
+      "fixed_charge_center_rank": 3,
+      "singular_values": [
+        8.529018894479666e-06,
+        6.946466696876814e-06,
+        5.2761762004755464e-11
+      ],
+      "relative_third_singular_value": 6.186146690201972e-06,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ]
+    },
+    {
+      "axis": 1,
+      "fixed_charge_center_rank": 3,
+      "singular_values": [
+        9.161869215552812e-06,
+        6.945211985872875e-06,
+        1.0080116593683687e-10
+      ],
+      "relative_third_singular_value": 1.100224894781525e-05,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ]
+    },
+    {
+      "axis": 2,
+      "fixed_charge_center_rank": 3,
+      "singular_values": [
+        9.772295804149781e-06,
+        8.753080053820322e-06,
+        8.406530229720141e-11
+      ],
+      "relative_third_singular_value": 8.602410731519535e-06,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ]
+    }
+  ],
+  "all_axes_robust_rank_three": true,
+  "verdict": "BARGMANN_CONNECTION_DOES_NOT_CLOSE_LINEAR_TRANSPORT_GATE",
+  "claim_boundary": "Rest and linear fixed-charge tangent screen only. A pass does not establish coefficient provenance, symplectic nondegeneracy, nonlinear translation, stability, or same-state Dirac current."
+}

@@ -1,0 +1,64 @@
+{
+  "status": "V4_006_FACE_TRANSPORT_PARTIAL_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "matter_transport_hypothesis": "C19 remains the native field geometry; the added matter-current metric uses only the six incident face bonds.",
+  "derived_omega_m": 0.3157894736842105,
+  "action_gates": {
+    "globally_smooth": true,
+    "strictly_positive": true,
+    "exact_rest_DEL_RMS": 1.3277739182557119e-12,
+    "reflection_defect": 9.355825896411574e-12
+  },
+  "receiver_gates": {
+    "Psi_target_overlap": 1.0000000000000002,
+    "Psi_minimum_orthogonal_defect": 7.606155390549022e-16,
+    "best_common_launch_chi_target_overlap": 0.9636954151447303
+  },
+  "short_nonlinear_gates": {
+    "cases": 8,
+    "updates": 4,
+    "all_converged": true,
+    "maximum_Dirac_error": 0.009962548184956519,
+    "maximum_four_component_leakage": 0.00021562803874006486
+  },
+  "first_accumulated_departure": {
+    "first_update_above_one_percent": 5,
+    "nine_update_Dirac_error": 0.03357168121927671,
+    "nine_update_leakage": 0.00085372450947177,
+    "nine_update_norm_ratio": 0.9822785959734457
+  },
+  "localization_controls": {
+    "uniform_zero_momentum_nine_update_error": 0.009494189606054308,
+    "compact_zero_momentum_nine_update_error": 0.030726612779632328,
+    "compact_moving_nine_update_error": 0.03357168121927671,
+    "interpretation": "The uniform rest/time control passes. Most accumulated error enters when the four-component envelope is localized; momentum adds a smaller further defect."
+  },
+  "action_class_limit_control": {
+    "largest_diagnostic_scale": 1048576.0,
+    "limiting_maximum_shape_error": 0.022353287122815986,
+    "limiting_maximum_cross_block": 7.695475022264386e-05,
+    "interpretation": "The face Laplacian removes almost all sector leakage, but a finite within-sector time/mass/current mismatch remains even in the diagnostic infinite-stiffness limit."
+  },
+  "passed": [
+    "six-face 6/19 coordination identity",
+    "global smoothness and kinetic positivity",
+    "exact retained rest orbit",
+    "cubic reflections",
+    "exact first Psi receiver face",
+    "substantially aligned first chi receiver response",
+    "both copies, both signs, axis and diagonal for four updates"
+  ],
+  "open": [
+    "derive the lossless compact-gradient/readout bridge",
+    "remove the smaller residual within-sector transport/current defect",
+    "complete one full Dirac-time cell handoff",
+    "repeat two handoffs in both signs of all three axes",
+    "derive Noether charge/current and verify energy conservation",
+    "100-cycle stability and perturbation gates",
+    "dt and box refinement",
+    "Lean action, variation, update, and same-carrier proof"
+  ],
+  "verdict": "V4_006_REMAINS_OPEN",
+  "next_falsifiable_target": "Compress the face-Laplacian DEL map through the frozen native four-component readout and isolate the residual beta/time/current block. A new action term is admissible only if it is a native, reciprocal invariant that removes that block while leaving the six-face transfer and rest nullspace unchanged."
+}

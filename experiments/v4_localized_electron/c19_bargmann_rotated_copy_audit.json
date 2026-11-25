@@ -1,0 +1,77 @@
+{
+  "status": "V4_C19_BARGMANN_ROTATED_COPY_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "axis_target_gram_defects_from_identity": [
+    3.277993321933058e-16,
+    6.571094496950978e-17,
+    5.564398543452605e-16
+  ],
+  "full_response_norms": [
+    2053.595175012075,
+    2053.5951750120744,
+    2047.9142409119802
+  ],
+  "per_axis_response_ranks": [
+    8,
+    8,
+    8
+  ],
+  "joint_three_axis_response_rank": 24,
+  "joint_three_axis_singular_values": [
+    1569.601267841861,
+    1324.6344980796766,
+    1290.274686340044,
+    1138.2085980410047,
+    1095.1840138305981,
+    953.1271030909114,
+    796.3800749113318,
+    733.3669189870003,
+    610.9082446774713,
+    578.339785242009,
+    569.9713629200039,
+    496.1187288213495,
+    476.2138223613358,
+    378.25640702713514,
+    369.0916624046411,
+    324.0569660363938,
+    294.21599967933554,
+    240.01085703951065,
+    216.44274298650564,
+    193.41862600555726,
+    139.74222681706476,
+    114.075558458673,
+    106.16865132889946,
+    88.73425988744404
+  ],
+  "common_commutant_dimension": 1,
+  "commutant_equation_smallest_singular_values": [
+    0.8466777122873496,
+    0.813736496127583,
+    0.80385280820441,
+    0.7889822438262856,
+    0.7757375611231158,
+    0.7552682283293581,
+    0.6833244879366233,
+    4.768496258752143e-16
+  ],
+  "symmetric_common_commutant_dimension": 1,
+  "symmetric_equation_singular_values": [
+    9.594052936857329e-16
+  ],
+  "identity_relative_residual": 1.0117809386585425e-15,
+  "traceless_symmetric_commutant_rank": 0,
+  "original_copy_grading_commutator_defects": {
+    "Y0^T_Y0": 1.0086699153950014,
+    "Y0^T_Y1": 1.4629493379691514,
+    "Y0^T_Y2": 1.3414413136748542,
+    "Y1^T_Y0": 1.4629493379691514,
+    "Y1^T_Y1": 0.7579566880568686,
+    "Y1^T_Y2": 1.4229568379637019,
+    "Y2^T_Y0": 1.341441313674854,
+    "Y2^T_Y1": 1.4229568379637016,
+    "Y2^T_Y2": 0.732410467622231
+  },
+  "verdict": "NO_FIXED_ROTATION_SEPARATES_BARGMANN_COPIES",
+  "claim_boundary": "Necessary simultaneous-response condition for a fixed real rotation of the two existing copies. Failure rules out relabeling inside the same eight abstract components for this Bargmann connection; it does not rule out a different native embedding with additional internal modes or a different action."
+}

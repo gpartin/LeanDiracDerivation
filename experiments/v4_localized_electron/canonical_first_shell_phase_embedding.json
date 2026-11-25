@@ -1,0 +1,153 @@
+{
+  "status": "V4_CANONICAL_FIRST_SHELL_PHASE_EMBEDDING",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "native_action": "canonical V40 position action and centered update",
+  "metadata": {
+    "side": 3,
+    "dt": 0.00390625,
+    "theta": 0.07423579507567751,
+    "rest_frequency": 19.004363539373443,
+    "configuration_dimension": 324,
+    "phase_space_dimension": 648
+  },
+  "selection_rule": "four native modes inside one-half rest-phase of the exact carrier clock, ranked by overlap with the pre-existing joint localized spatial seed; no Dirac comparator",
+  "rows": [
+    {
+      "flavor": "plus",
+      "chi_scale_selector": {
+        "real": 0.008305467684459727,
+        "imag": 5.0613584453970665e-09
+      },
+      "selected_native_modes": [],
+      "rest_band_candidate_count": 0,
+      "nearest_positive_phase_modes": [
+        {
+          "phase": 0.005361578561872904,
+          "frequency": 1.3725641118394634,
+          "modulus": 1.000000000000003,
+          "distance_from_rest_phase": 0.06887421651380461
+        },
+        {
+          "phase": 0.005361578561870863,
+          "frequency": 1.372564111838941,
+          "modulus": 1.0000000000000002,
+          "distance_from_rest_phase": 0.06887421651380665
+        },
+        {
+          "phase": 0.00536157856186998,
+          "frequency": 1.3725641118387149,
+          "modulus": 1.0000000000000098,
+          "distance_from_rest_phase": 0.06887421651380754
+        },
+        {
+          "phase": 0.0053615785618699304,
+          "frequency": 1.3725641118387022,
+          "modulus": 1.0000000000000033,
+          "distance_from_rest_phase": 0.06887421651380758
+        },
+        {
+          "phase": 0.005361578561869803,
+          "frequency": 1.3725641118386696,
+          "modulus": 1.0000000000000062,
+          "distance_from_rest_phase": 0.0688742165138077
+        },
+        {
+          "phase": 0.00536157856186876,
+          "frequency": 1.3725641118384027,
+          "modulus": 0.999999999999999,
+          "distance_from_rest_phase": 0.06887421651380875
+        },
+        {
+          "phase": 0.005361578561868588,
+          "frequency": 1.3725641118383585,
+          "modulus": 1.0000000000000078,
+          "distance_from_rest_phase": 0.06887421651380893
+        },
+        {
+          "phase": 0.005361578561867504,
+          "frequency": 1.372564111838081,
+          "modulus": 1.0000000000000004,
+          "distance_from_rest_phase": 0.06887421651381001
+        }
+      ],
+      "phase_sector_real_rank": 0,
+      "current_layer_real_rank": 0,
+      "invariance_relative_residual": null,
+      "seed_capture_fraction": 0.0,
+      "seed_current_principal_values": [],
+      "core_power_fraction": null,
+      "first_shell_power_fraction": null,
+      "passes_localized_phase_embedding_gate": false
+    },
+    {
+      "flavor": "minus",
+      "chi_scale_selector": {
+        "real": 0.00838891677437946,
+        "imag": -1.200406309785864e-08
+      },
+      "selected_native_modes": [],
+      "rest_band_candidate_count": 0,
+      "nearest_positive_phase_modes": [
+        {
+          "phase": 0.005361578561872904,
+          "frequency": 1.3725641118394634,
+          "modulus": 1.000000000000003,
+          "distance_from_rest_phase": 0.06887421651380461
+        },
+        {
+          "phase": 0.005361578561870863,
+          "frequency": 1.372564111838941,
+          "modulus": 1.0000000000000002,
+          "distance_from_rest_phase": 0.06887421651380665
+        },
+        {
+          "phase": 0.00536157856186998,
+          "frequency": 1.3725641118387149,
+          "modulus": 1.0000000000000098,
+          "distance_from_rest_phase": 0.06887421651380754
+        },
+        {
+          "phase": 0.0053615785618699304,
+          "frequency": 1.3725641118387022,
+          "modulus": 1.0000000000000033,
+          "distance_from_rest_phase": 0.06887421651380758
+        },
+        {
+          "phase": 0.005361578561869803,
+          "frequency": 1.3725641118386696,
+          "modulus": 1.0000000000000062,
+          "distance_from_rest_phase": 0.0688742165138077
+        },
+        {
+          "phase": 0.00536157856186876,
+          "frequency": 1.3725641118384027,
+          "modulus": 0.999999999999999,
+          "distance_from_rest_phase": 0.06887421651380875
+        },
+        {
+          "phase": 0.005361578561868588,
+          "frequency": 1.3725641118383585,
+          "modulus": 1.0000000000000078,
+          "distance_from_rest_phase": 0.06887421651380893
+        },
+        {
+          "phase": 0.005361578561867504,
+          "frequency": 1.372564111838081,
+          "modulus": 1.0000000000000004,
+          "distance_from_rest_phase": 0.06887421651381001
+        }
+      ],
+      "phase_sector_real_rank": 0,
+      "current_layer_real_rank": 0,
+      "invariance_relative_residual": null,
+      "seed_capture_fraction": 0.0,
+      "seed_current_principal_values": [],
+      "core_power_fraction": null,
+      "first_shell_power_fraction": null,
+      "passes_localized_phase_embedding_gate": false
+    }
+  ],
+  "verdict": "CANONICAL_FULL_SHELL_PHASE_EMBEDDING_FAIL",
+  "claim_boundary": "Linear tangent invariant-sector and localization gate only. It does not prove a nonlinear translating branch or Dirac current."
+}

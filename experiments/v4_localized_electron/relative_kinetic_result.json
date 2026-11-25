@@ -1,0 +1,30 @@
+{
+  "status": "SYMMETRIC_RELATIVE_KINETIC_COUPLING_FAIL",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "research_term": "eta |chi x Psi_dot - chi_dot x Psi|^2 / (2 chi0^2)",
+  "integrator": "implicit self-adjoint midpoint-kinetic trapezoidal-potential discrete Euler-Lagrange update",
+  "validation": {
+    "eta_zero_reproduces_verlet_growth": true,
+    "eta_zero_growth_rate": 0.07555568829835883,
+    "previous_analytic_verlet_growth_rate": 0.0755557825959246,
+    "absolute_difference": 9.42975657718792e-8
+  },
+  "positive_probe": {
+    "eta": 0.01,
+    "exact_rest_orbit_rms_residual": 3.946815634937167e-12,
+    "amplitude_sq": 178.26033811507233,
+    "psi_phase_step": 0.07424142629326232,
+    "chi_phase_step": 6.0396786443073406e-5,
+    "leading_growth_rate": 0.30791416333802407,
+    "growth_ratio_to_baseline": 4.075330232737655,
+    "verdict": "WORSE"
+  },
+  "negative_diagnostic": [
+    {"eta": -0.001, "leading_growth_rate": 0.14073187825650796},
+    {"eta": -0.003, "leading_growth_rate": 0.24208744851044467},
+    {"eta": -0.01, "leading_growth_rate": 0.33959504269618007}
+  ],
+  "negative_sign_admissible": false,
+  "conclusion": "The relative-motion channel is dynamically active, but a symmetric positive inertial square supplies the wrong phase response. Both signs worsen the full two-layer spectrum. The next basis should be antisymmetric/gyroscopic and action-derived, not another scalar stiffness or inertia term."
+}

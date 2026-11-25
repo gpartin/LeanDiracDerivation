@@ -1,0 +1,160 @@
+{
+  "status": "V4_VACUUM_CHI_TARGETED_EXACT_SCAN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "shift": 1.00005,
+  "rows": [
+    {
+      "strength": 0.0,
+      "converged_all_requested": true,
+      "converged_count": 4,
+      "leading_modulus": 1.0000469803428642,
+      "growth_rate": 0.012026685266551422,
+      "count_above_1_plus_1e_minus_7": 4,
+      "values": [
+        {
+          "real": 1.0000469799677012,
+          "imag": -2.7392727684614563e-05,
+          "modulus": 1.0000469803428644
+        },
+        {
+          "real": 1.0000469799677012,
+          "imag": 2.7392727684614563e-05,
+          "modulus": 1.0000469803428644
+        },
+        {
+          "real": 1.000018254093175,
+          "imag": -1.278853986971165e-07,
+          "modulus": 1.0000182540931832
+        },
+        {
+          "real": 1.000018254093175,
+          "imag": 1.278853986971165e-07,
+          "modulus": 1.0000182540931832
+        }
+      ]
+    },
+    {
+      "strength": 0.001,
+      "converged_all_requested": true,
+      "converged_count": 4,
+      "leading_modulus": 1.0000470576383722,
+      "growth_rate": 0.012046471986246345,
+      "count_above_1_plus_1e_minus_7": 4,
+      "values": [
+        {
+          "real": 1.0000470572584506,
+          "imag": 2.75659050831773e-05,
+          "modulus": 1.0000470576383722
+        },
+        {
+          "real": 1.0000470572584506,
+          "imag": -2.75659050831773e-05,
+          "modulus": 1.0000470576383722
+        },
+        {
+          "real": 1.000008932721319,
+          "imag": 1.8778583984835775e-05,
+          "modulus": 1.0000089328976351
+        },
+        {
+          "real": 1.000008932721319,
+          "imag": -1.8778583984835775e-05,
+          "modulus": 1.0000089328976351
+        }
+      ]
+    },
+    {
+      "strength": 0.01,
+      "converged_all_requested": false,
+      "converged_count": 2,
+      "leading_modulus": 1.000046928215189,
+      "growth_rate": 0.012013341208238486,
+      "count_above_1_plus_1e_minus_7": 2,
+      "values": [
+        {
+          "real": 1.0000469278150286,
+          "imag": 2.829060334433922e-05,
+          "modulus": 1.000046928215189
+        },
+        {
+          "real": 1.0000469278150286,
+          "imag": -2.829060334433922e-05,
+          "modulus": 1.000046928215189
+        }
+      ]
+    },
+    {
+      "strength": 0.1,
+      "converged_all_requested": false,
+      "converged_count": 2,
+      "leading_modulus": 1.0000464491331567,
+      "growth_rate": 0.011890701933843116,
+      "count_above_1_plus_1e_minus_7": 2,
+      "values": [
+        {
+          "real": 1.0000464487239773,
+          "imag": 2.86076358743212e-05,
+          "modulus": 1.0000464491331567
+        },
+        {
+          "real": 1.0000464487239773,
+          "imag": -2.86076358743212e-05,
+          "modulus": 1.0000464491331567
+        }
+      ]
+    },
+    {
+      "strength": 1.0,
+      "converged_all_requested": false,
+      "converged_count": 2,
+      "leading_modulus": 1.0000463514385394,
+      "growth_rate": 0.011865693272227251,
+      "count_above_1_plus_1e_minus_7": 2,
+      "values": [
+        {
+          "real": 1.000046351029079,
+          "imag": 2.8617463113599035e-05,
+          "modulus": 1.0000463514385396
+        },
+        {
+          "real": 1.000046351029079,
+          "imag": -2.8617463113599035e-05,
+          "modulus": 1.0000463514385396
+        }
+      ]
+    }
+  ],
+  "best_complete_row": {
+    "strength": 0.0,
+    "converged_all_requested": true,
+    "converged_count": 4,
+    "leading_modulus": 1.0000469803428642,
+    "growth_rate": 0.012026685266551422,
+    "count_above_1_plus_1e_minus_7": 4,
+    "values": [
+      {
+        "real": 1.0000469799677012,
+        "imag": -2.7392727684614563e-05,
+        "modulus": 1.0000469803428644
+      },
+      {
+        "real": 1.0000469799677012,
+        "imag": 2.7392727684614563e-05,
+        "modulus": 1.0000469803428644
+      },
+      {
+        "real": 1.000018254093175,
+        "imag": -1.278853986971165e-07,
+        "modulus": 1.0000182540931832
+      },
+      {
+        "real": 1.000018254093175,
+        "imag": 1.278853986971165e-07,
+        "modulus": 1.0000182540931832
+      }
+    ]
+  },
+  "verdict": "TARGETED_EXACT_SCAN_RETAINS_GROWTH",
+  "claim_boundary": "Four exact discrete multipliers nearest the declared real shift. This is not a complete contour count or nonlinear gate."
+}

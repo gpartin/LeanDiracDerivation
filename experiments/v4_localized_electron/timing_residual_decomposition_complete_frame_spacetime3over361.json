@@ -1,0 +1,188 @@
+{
+  "status": "V4_006_TIMING_RESIDUAL_DECOMPOSITION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "link_source": "joint_face_laplacian_plus_frame_oscillator",
+  "action_scale": 0.3157894736842105,
+  "plaquette_scale": 0.0,
+  "spacetime_plaquette_scale": 0.008310249307479225,
+  "symplectic_plaquette_scale": 0.0,
+  "frequency_branch": "negative",
+  "dirac_time": "centered",
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "even_residual_norm": 9.938380414190442,
+      "odd_residual_norm": 2.7383315231440353,
+      "total_residual_norm": 9.01916227255225,
+      "even_to_total_norm_ratio": 1.1019183504919987,
+      "odd_to_total_norm_ratio": 0.3036126239215718,
+      "even_odd_cosine": -0.45792689697473793,
+      "even_first_step_state_error": 0.0011104942159167492,
+      "odd_first_step_state_error": 0.00032159575690851946,
+      "total_first_step_state_error": 0.0009302609806915717,
+      "even_outside_retained_fraction": 0.6966778998193862,
+      "odd_outside_retained_fraction": 0.7356110525769813
+    },
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "even_residual_norm": 10.753095877541636,
+      "odd_residual_norm": 4.051285320863892,
+      "total_residual_norm": 8.422874318300059,
+      "even_to_total_norm_ratio": 1.2766539629089317,
+      "odd_to_total_norm_ratio": 0.48098608239491575,
+      "even_odd_cosine": -0.7012369042425828,
+      "even_first_step_state_error": 0.0011623832813189162,
+      "odd_first_step_state_error": 0.0002797312898131062,
+      "total_first_step_state_error": 0.0010904671293283604,
+      "even_outside_retained_fraction": 0.7151724020026765,
+      "odd_outside_retained_fraction": 0.9375607168333886
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "even_residual_norm": 12.100002633853412,
+      "odd_residual_norm": 4.391801785227766,
+      "total_residual_norm": 9.871785560771958,
+      "even_to_total_norm_ratio": 1.2257157086085662,
+      "odd_to_total_norm_ratio": 0.4448842368172688,
+      "even_odd_cosine": -0.6421226213228678,
+      "even_first_step_state_error": 0.0012348494084873812,
+      "odd_first_step_state_error": 0.0003029583957017737,
+      "total_first_step_state_error": 0.001115891138428058,
+      "even_outside_retained_fraction": 0.747796784004615,
+      "odd_outside_retained_fraction": 0.9287808705174522
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "even_residual_norm": 8.435577177984953,
+      "odd_residual_norm": 2.7326477211968094,
+      "total_residual_norm": 7.43362030774698,
+      "even_to_total_norm_ratio": 1.1347872004161659,
+      "odd_to_total_norm_ratio": 0.36760657769256366,
+      "even_odd_cosine": -0.5068575754298147,
+      "even_first_step_state_error": 0.0010933138215060752,
+      "odd_first_step_state_error": 0.00029204555829024563,
+      "total_first_step_state_error": 0.0009622541970271829,
+      "even_outside_retained_fraction": 0.5881244541281789,
+      "odd_outside_retained_fraction": 0.8236361084853417
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "even_residual_norm": 8.827727231961559,
+      "odd_residual_norm": 3.520740591991665,
+      "total_residual_norm": 7.899147451261582,
+      "even_to_total_norm_ratio": 1.117554430579932,
+      "odd_to_total_norm_ratio": 0.4457114661696008,
+      "even_odd_cosine": -0.4492877782610664,
+      "even_first_step_state_error": 0.00149315490684082,
+      "odd_first_step_state_error": 0.0004958303829070276,
+      "total_first_step_state_error": 0.0017169664284729794,
+      "even_outside_retained_fraction": 0.7264995964786418,
+      "odd_outside_retained_fraction": 0.8456249718734846
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "even_residual_norm": 12.791347960583948,
+      "odd_residual_norm": 4.8470008351063445,
+      "total_residual_norm": 9.668169128681425,
+      "even_to_total_norm_ratio": 1.3230372566236304,
+      "odd_to_total_norm_ratio": 0.5013359582971417,
+      "even_odd_cosine": -0.7551532050821134,
+      "even_first_step_state_error": 0.0019481320030243763,
+      "odd_first_step_state_error": 0.00038830000217381257,
+      "total_first_step_state_error": 0.001946446051275328,
+      "even_outside_retained_fraction": 0.8114577404500584,
+      "odd_outside_retained_fraction": 0.9439654830971221
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "even_residual_norm": 16.49535387402224,
+      "odd_residual_norm": 6.905032926003651,
+      "total_residual_norm": 11.384851945722886,
+      "even_to_total_norm_ratio": 1.4488861122361183,
+      "odd_to_total_norm_ratio": 0.6065105597264939,
+      "even_odd_cosine": -0.8347661099493033,
+      "even_first_step_state_error": 0.0018249865245005053,
+      "odd_first_step_state_error": 0.00040754338369929804,
+      "total_first_step_state_error": 0.0019106364778799895,
+      "even_outside_retained_fraction": 0.8870119753437943,
+      "odd_outside_retained_fraction": 0.9643324554414687
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "even_residual_norm": 8.911240188594059,
+      "odd_residual_norm": 2.7222288108700985,
+      "total_residual_norm": 8.151164862183771,
+      "even_to_total_norm_ratio": 1.0932474485869565,
+      "odd_to_total_norm_ratio": 0.3339680716678314,
+      "even_odd_cosine": -0.42004447051524,
+      "even_first_step_state_error": 0.001600831357300321,
+      "odd_first_step_state_error": 0.0004556293866248274,
+      "total_first_step_state_error": 0.0016648292044859148,
+      "even_outside_retained_fraction": 0.6903123124895091,
+      "odd_outside_retained_fraction": 0.7863361918989556
+    }
+  ],
+  "maximum_even_first_step_state_error": 0.0019481320030243763,
+  "maximum_odd_first_step_state_error": 0.0004958303829070276,
+  "mean_even_first_step_state_error": 0.001433518189861893,
+  "mean_odd_first_step_state_error": 0.00036795426951482634,
+  "dominant_channel": "TIME_EVEN_STIFFNESS",
+  "claim_boundary": "Exact algebraic split of the first centered-Dirac DEL residual at the localized rest tangent. It is not an action repair or nonlinear movement pass."
+}

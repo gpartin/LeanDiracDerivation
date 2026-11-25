@@ -1,0 +1,482 @@
+{
+  "status": "V4_C19_TRIANGLE_CONTINUUM_SYMBOL_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "symbol_identity": "lambda_triangle(k)=8[1-cos(kx)cos(ky)cos(kz)] =4|k|^2+O(|k|^4)",
+  "dirac_square_identity": "[2 alpha.s19(k)]^2=4|s19(k)|^2 I4 exactly, and lambda_triangle(k)=4|s19(k)|^2+O(|k|^4)",
+  "clifford_rows": [
+    {
+      "flavor": "plus",
+      "alpha_square_defects": [
+        8.881784197001252e-16,
+        8.881784197001252e-16,
+        8.881784197001252e-16
+      ],
+      "alpha_cross_anticommutator_defects": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "beta_alpha_anticommutator_defects": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sample_spatial_square_defect": 1.1113442249042758e-16
+    },
+    {
+      "flavor": "minus",
+      "alpha_square_defects": [
+        8.881784197001252e-16,
+        8.881784197001252e-16,
+        8.881784197001252e-16
+      ],
+      "alpha_cross_anticommutator_defects": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "beta_alpha_anticommutator_defects": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sample_spatial_square_defect": 1.1113442249042758e-16
+    }
+  ],
+  "direction_rows": [
+    {
+      "direction": "axis",
+      "rows": [
+        {
+          "momentum_norm": 0.4,
+          "C_body": 7.368487952023081,
+          "lambda_body": 0.6315120479769192,
+          "lambda_over_4_k2": 0.986737574963936,
+          "relative_quadratic_remainder": -0.013262425036064007,
+          "four_times_C19_first_symbol_squared": 0.6065865813056692,
+          "triangle_vs_dirac_square_relative_error": 0.04109135849592693,
+          "massive_triangle_energy": 19.01661147649541,
+          "massive_dirac_energy": 19.015956104842736,
+          "massive_dispersion_relative_error": 3.4464301929437724e-05,
+          "triangle_group_velocity": [
+            0.08191119491292606,
+            0.0,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.07544780677284335,
+            0.0,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.0856670116275552
+        },
+        {
+          "momentum_norm": 0.2,
+          "C_body": 7.840532622729933,
+          "lambda_body": 0.159467377270067,
+          "lambda_over_4_k2": 0.9966711079379185,
+          "relative_quadratic_remainder": -0.0033288920620815343,
+          "four_times_C19_first_symbol_squared": 0.15787801199422982,
+          "triangle_vs_dirac_square_relative_error": 0.01006704642249523,
+          "massive_triangle_energy": 19.004196046591133,
+          "massive_dirac_energy": 19.004154230378006,
+          "massive_dispersion_relative_error": 2.2003722248697954e-06,
+          "triangle_group_velocity": [
+            0.041815887461484576,
+            0.0,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.04098244390020452,
+            0.0,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.02033659982087828
+        },
+        {
+          "momentum_norm": 0.1,
+          "C_body": 7.960033322224207,
+          "lambda_body": 0.039966677775793436,
+          "lambda_over_4_k2": 0.9991669443948357,
+          "relative_quadratic_remainder": -0.0008330556051643345,
+          "four_times_C19_first_symbol_squared": 0.03986684431751674,
+          "triangle_vs_dirac_square_relative_error": 0.002504172577131536,
+          "massive_triangle_energy": 19.001051725569713,
+          "massive_dirac_energy": 19.00104909851868,
+          "massive_dispersion_relative_error": 1.3825820976975933e-07,
+          "triangle_group_velocity": [
+            0.021016398058110085,
+            0.0,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.020911406498133778,
+            0.0,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.005020779448081457
+        },
+        {
+          "momentum_norm": 0.05,
+          "C_body": 7.99000208315973,
+          "lambda_body": 0.009997916840269738,
+          "lambda_over_4_k2": 0.9997916840269736,
+          "relative_quadratic_remainder": -0.00020831597302639615,
+          "four_times_C19_first_symbol_squared": 0.009991669443948468,
+          "triangle_vs_dirac_square_relative_error": 0.0006252605088985508,
+          "massive_triangle_energy": 19.000263101253108,
+          "massive_dirac_energy": 19.000262936850213,
+          "massive_dispersion_relative_error": 8.652664140740285e-09,
+          "triangle_group_velocity": [
+            0.010521784673051628,
+            0.0,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.010508635272957768,
+            0.0,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.0012512947449701086
+        },
+        {
+          "momentum_norm": 0.025,
+          "C_body": 7.997500130205621,
+          "lambda_body": 0.002499869794378995,
+          "lambda_over_4_k2": 0.9999479177515977,
+          "relative_quadratic_remainder": -5.208224840225206e-05,
+          "four_times_C19_first_symbol_squared": 0.002499479210067508,
+          "triangle_vs_dirac_square_relative_error": 0.00015626627735643162,
+          "massive_triangle_energy": 19.000065785933334,
+          "massive_dirac_energy": 19.000065775654832,
+          "massive_dispersion_relative_error": 5.409719339155572e-10,
+          "triangle_group_velocity": [
+            0.005262591444966282,
+            0.0,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.005260946973638129,
+            0.0,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.0003125808597564728
+        }
+      ],
+      "relative_remainder_power": 1.9982871022093558,
+      "square_match_error_power": 2.0086408746203195,
+      "group_velocity_error_power": 2.0219317947879403
+    },
+    {
+      "direction": "face_diagonal",
+      "rows": [
+        {
+          "momentum_norm": 0.4,
+          "C_body": 7.376885658786461,
+          "lambda_body": 0.6231143412135394,
+          "lambda_over_4_k2": 0.9736161581461551,
+          "relative_quadratic_remainder": -0.026383841853844903,
+          "four_times_C19_first_symbol_squared": 0.6067177473847092,
+          "triangle_vs_dirac_square_relative_error": 0.02702507698103207,
+          "massive_triangle_energy": 19.01639067597249,
+          "massive_dirac_energy": 19.015959553685022,
+          "massive_dispersion_relative_error": 2.2671603094881476e-05,
+          "triangle_group_velocity": [
+            0.056371853252943895,
+            0.056371853252943895,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.053385736314523695,
+            0.053385736314523695,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.05593473359302194
+        },
+        {
+          "momentum_norm": 0.2,
+          "C_body": 7.841063826282104,
+          "lambda_body": 0.1589361737178958,
+          "lambda_over_4_k2": 0.9933510857368486,
+          "relative_quadratic_remainder": -0.006648914263151395,
+          "four_times_C19_first_symbol_squared": 0.15788012408682667,
+          "triangle_vs_dirac_square_relative_error": 0.006688933373832251,
+          "massive_triangle_energy": 19.00418207063166,
+          "massive_dirac_energy": 19.00415428594724,
+          "massive_dispersion_relative_error": 1.4620321431291217e-06,
+          "triangle_group_velocity": [
+            0.029371064907120673,
+            0.029371064907120673,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.028980138773717346,
+            0.02898013877371736,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.013489450014568525
+        },
+        {
+          "momentum_norm": 0.1,
+          "C_body": 7.960066622238092,
+          "lambda_body": 0.03993337776190842,
+          "lambda_over_4_k2": 0.9983344440477102,
+          "relative_quadratic_remainder": -0.0016655559522897878,
+          "four_times_C19_first_symbol_squared": 0.03986687756760735,
+          "triangle_vs_dirac_square_relative_error": 0.0016680562501614205,
+          "massive_triangle_energy": 19.001050849302043,
+          "massive_dirac_energy": 19.001049099393633,
+          "massive_dispersion_relative_error": 9.209535756227183e-08,
+          "triangle_group_velocity": [
+            0.014836066069661693,
+            0.014836066069661693,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.014786634428511112,
+            0.014786634428511112,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.0033429947422835356
+        },
+        {
+          "momentum_norm": 0.05,
+          "C_body": 7.990004165972284,
+          "lambda_body": 0.0099958340277162,
+          "lambda_over_4_k2": 0.9995834027716197,
+          "relative_quadratic_remainder": -0.0004165972283802777,
+          "four_times_C19_first_symbol_squared": 0.00999166996445637,
+          "triangle_vs_dirac_square_relative_error": 0.0004167534831156505,
+          "massive_triangle_energy": 19.000263046443006,
+          "massive_dirac_energy": 19.000262936863912,
+          "massive_dispersion_relative_error": 5.767240907061932e-09,
+          "triangle_group_velocity": [
+            0.00743692517419332,
+            0.00743692517419332,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.007430728424538879,
+            0.007430728424538879,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.0008339356924924192
+        },
+        {
+          "momentum_norm": 0.025,
+          "C_body": 7.997500260405817,
+          "lambda_body": 0.002499739594182593,
+          "lambda_over_4_k2": 0.9998958376730369,
+          "relative_quadratic_remainder": -0.00010416232696308647,
+          "four_times_C19_first_symbol_squared": 0.0024994792182042556,
+          "triangle_vs_dirac_square_relative_error": 0.00010417209170654473,
+          "massive_triangle_energy": 19.000065782507022,
+          "massive_dirac_energy": 19.000065775655045,
+          "massive_dispersion_relative_error": 3.6062908215228617e-10,
+          "triangle_group_velocity": [
+            0.003720826467514282,
+            0.003720826467514282,
+            0.0
+          ],
+          "dirac_group_velocity": [
+            0.003720051316858519,
+            0.0037200513168585197,
+            0.0
+          ],
+          "group_velocity_relative_error": 0.00020837095774726196
+        }
+      ],
+      "relative_remainder_power": 1.9965748153435736,
+      "square_match_error_power": 2.0042882201218624,
+      "group_velocity_error_power": 2.015264438962488
+    },
+    {
+      "direction": "body_diagonal",
+      "rows": [
+        {
+          "momentum_norm": 0.4,
+          "C_body": 7.379605267267226,
+          "lambda_body": 0.6203947327327741,
+          "lambda_over_4_k2": 0.9693667698949594,
+          "relative_quadratic_remainder": -0.0306332301050406,
+          "four_times_C19_first_symbol_squared": 0.6066450612753468,
+          "triangle_vs_dirac_square_relative_error": 0.022665100789778903,
+          "massive_triangle_energy": 19.01631916888052,
+          "massive_dirac_energy": 19.015957642497927,
+          "massive_dispersion_relative_error": 1.901173684704105e-05,
+          "triangle_group_velocity": [
+            0.04562410721341305,
+            0.04562410721341305,
+            0.04562410721341305
+          ],
+          "dirac_group_velocity": [
+            0.043572959901243075,
+            0.043572959901243075,
+            0.043572959901243075
+          ],
+          "group_velocity_relative_error": 0.0470738576589436
+        },
+        {
+          "momentum_norm": 0.2,
+          "C_body": 7.841239634968073,
+          "lambda_body": 0.15876036503192736,
+          "lambda_over_4_k2": 0.9922522814495458,
+          "relative_quadratic_remainder": -0.007747718550454197,
+          "four_times_C19_first_symbol_squared": 0.157878951445934,
+          "triangle_vs_dirac_square_relative_error": 0.005582844184870428,
+          "massive_triangle_energy": 19.00417744510485,
+          "massive_dirac_energy": 19.004154255095013,
+          "massive_dispersion_relative_error": 1.2202600299104915e-06,
+          "triangle_group_velocity": [
+            0.023928267086312835,
+            0.023928267086312835,
+            0.023928267086312835
+          ],
+          "dirac_group_velocity": [
+            0.023661651782145035,
+            0.023661651782145035,
+            0.023661651782145035
+          ],
+          "group_velocity_relative_error": 0.011267822999955839
+        },
+        {
+          "momentum_norm": 0.1,
+          "C_body": 7.96007770250932,
+          "lambda_body": 0.03992229749067988,
+          "lambda_over_4_k2": 0.9980574372669968,
+          "relative_quadratic_remainder": -0.0019425627330031947,
+          "four_times_C19_first_symbol_squared": 0.039866859098265796,
+          "triangle_vs_dirac_square_relative_error": 0.0013905884152407566,
+          "massive_triangle_energy": 19.001050557732082,
+          "massive_dirac_energy": 19.001049098907625,
+          "massive_dispersion_relative_error": 7.677599533906232e-08,
+          "triangle_group_velocity": [
+            0.012106873249675082,
+            0.012106873249675082,
+            0.012106873249675082
+          ],
+          "dirac_group_velocity": [
+            0.012073219633713779,
+            0.012073219633713779,
+            0.012073219633713779
+          ],
+          "group_velocity_relative_error": 0.0027874599305165292
+        },
+        {
+          "momentum_norm": 0.05,
+          "C_body": 7.990004859934572,
+          "lambda_body": 0.009995140065427677,
+          "lambda_over_4_k2": 0.9995140065427675,
+          "relative_quadratic_remainder": -0.0004859934572325475,
+          "four_times_C19_first_symbol_squared": 0.009991669675296796,
+          "triangle_vs_dirac_square_relative_error": 0.0003473283488806267,
+          "massive_triangle_energy": 19.000263028181095,
+          "massive_dirac_energy": 19.000262936856302,
+          "massive_dispersion_relative_error": 4.806501641141381e-09,
+          "triangle_group_velocity": [
+            0.0060713807945306396,
+            0.0060713807945306396,
+            0.0060713807945306396
+          ],
+          "dirac_group_velocity": [
+            0.006067163825365964,
+            0.006067163825365964,
+            0.006067163825365964
+          ],
+          "group_velocity_relative_error": 0.0006950478487237532
+        },
+        {
+          "momentum_norm": 0.025,
+          "C_body": 7.997500303801059,
+          "lambda_body": 0.0024996961989414146,
+          "lambda_over_4_k2": 0.9998784795765656,
+          "relative_quadratic_remainder": -0.00012152042343438474,
+          "four_times_C19_first_symbol_squared": 0.0024994792136838855,
+          "triangle_vs_dirac_square_relative_error": 8.681218725126172e-05,
+          "massive_triangle_energy": 19.000065781365045,
+          "massive_dirac_energy": 19.000065775654928,
+          "massive_dispersion_relative_error": 3.005313775616969e-10,
+          "triangle_group_velocity": [
+            0.0030379366070557175,
+            0.0030379366070557175,
+            0.0030379366070557175
+          ],
+          "dirac_group_velocity": [
+            0.0030374091646084697,
+            0.0030374091646084697,
+            0.0030374091646084692
+          ],
+          "group_velocity_relative_error": 0.00017364879693973522
+        }
+      ],
+      "relative_remainder_power": 1.9950272523840022,
+      "square_match_error_power": 2.006334675798657,
+      "group_velocity_error_power": 2.018417241567028
+    }
+  ],
+  "isotropy_rows": [
+    {
+      "momentum_norm": 0.4,
+      "relative_directional_spread": 0.0177875040139418
+    },
+    {
+      "momentum_norm": 0.2,
+      "relative_directional_spread": 0.004445090341513721
+    },
+    {
+      "momentum_norm": 0.1,
+      "relative_directional_spread": 0.001111152067837683
+    },
+    {
+      "momentum_norm": 0.05,
+      "relative_directional_spread": 0.0002777803468851492
+    },
+    {
+      "momentum_norm": 0.025,
+      "relative_directional_spread": 6.944460479232159e-05
+    }
+  ],
+  "coefficient_rows": [
+    {
+      "rate": 128,
+      "dt": 0.0078125,
+      "a": 0.10565070987793339,
+      "continuum_limit": 0.10526315789473684,
+      "relative_error": 0.0036817438403673464
+    },
+    {
+      "rate": 256,
+      "dt": 0.00390625,
+      "a": 0.10535985903321204,
+      "continuum_limit": 0.10526315789473684,
+      "relative_error": 0.0009186608155145048
+    },
+    {
+      "rate": 512,
+      "dt": 0.001953125,
+      "a": 0.1052873215262112,
+      "continuum_limit": 0.10526315789473684,
+      "relative_error": 0.00022955449900652347
+    },
+    {
+      "rate": 1024,
+      "dt": 0.0009765625,
+      "a": 0.10526919807468049,
+      "continuum_limit": 0.10526315789473684,
+      "relative_error": 5.738170946467669e-05
+    },
+    {
+      "rate": 2048,
+      "dt": 0.00048828125,
+      "a": 0.10526466789423364,
+      "continuum_limit": 0.10526315789473684,
+      "relative_error": 1.434499521968391e-05
+    }
+  ],
+  "coefficient_relative_error_power": 2.0008265352453334,
+  "continuum_quadratic_symbol_compatible": true,
+  "verdict": "TRIANGLE_TRANSPORT_HAS_ISOTROPIC_QUADRATIC_CONTINUUM_SYMBOL",
+  "dirac_answer": "The spatial continuum gate passes more strongly than a generic wave check: the unchanged cubical alpha matrices square the exact C19 first-order symbol, while the triangle action tends to that square with O(k^4) absolute error; massive dispersion and group velocity therefore converge to the same Dirac values. A full Dirac result is not yet proved because invariance of this same four-component sector and equality of its action-derived Noether current remain open for the full live-Psi/live-chi triangle tangent.",
+  "claim_boundary": "Analytic Clifford-square, low-momentum dispersion/group-velocity, and timestep-coefficient audit. The alpha/beta matrices are the pre-existing cubical readout and are not inserted into the action. This is not full-tangent sector invariance, Noether-current equality, nonlinear movement, or a V4-006 pass."
+}

@@ -1,0 +1,38 @@
+{
+  "status": "V4_SPECTRAL_PSI_TRANSLATION_REPAIR",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate_energy": "eta/2 * ||(D19-27) Psi||^2",
+  "geometry_provenance": "27 is the proved C19 Dirichlet eigenvalue of the localized eight-corner twist and equals the full 3^3 cube count",
+  "exact_rest_first_variation": "zero because (D19-27) Psi_rest = 0",
+  "force_reaches": "two successive C19 hops",
+  "rows": [
+    {
+      "axis": 0,
+      "incumbent_pinning_norm": 0.8752077917859056,
+      "unit_repair_response_norm": 0.4417630551883421,
+      "repair_correlation": -0.010642548843819547,
+      "fitted_axis_relative_residual": 1.0018439410776625
+    },
+    {
+      "axis": 1,
+      "incumbent_pinning_norm": 1.0965844779832052,
+      "unit_repair_response_norm": 0.7052505713499521,
+      "repair_correlation": -0.002124995726743355,
+      "fitted_axis_relative_residual": 1.004041968196245
+    },
+    {
+      "axis": 2,
+      "incumbent_pinning_norm": 3.191609075460239,
+      "unit_repair_response_norm": 0.4736166124649025,
+      "repair_correlation": -0.08309894932058834,
+      "fitted_axis_relative_residual": 0.9984579531541152
+    }
+  ],
+  "least_squares_eta": -0.14328526408146838,
+  "eta_nonnegative": false,
+  "combined_relative_residual": 0.9992253816819878,
+  "explained_squared_fraction": 0.00154863660248572,
+  "verdict": "POSITIVE_SPECTRAL_SQUARE_DOES_NOT_CLOSE_TRANSLATION_PINNING",
+  "claim_boundary": "Linear zero-mode inverse screen only. Even a pass would require a one-hop reduction or an explicit framework/stencil change, the complete spectrum, nonlinear movement, and Lean proofs."
+}

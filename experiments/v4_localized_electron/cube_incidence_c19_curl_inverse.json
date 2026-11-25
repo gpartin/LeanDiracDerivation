@@ -1,0 +1,110 @@
+{
+  "status": "V4_CUBE_INCIDENCE_C19_CURL_INVERSE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "candidate": "Im sum X_i^dagger curl19 dX_i, X_i=(rho_Psi,i/chi0^2) chi_i",
+  "coefficient_provenance": "unit C19 first-derivative normalization only; no fitted coefficient admitted",
+  "rest_DEL_norm": 9.468589244848097e-16,
+  "block_checks": {
+    "mass_symmetry_defect": 2.925665399881452e-19,
+    "gyro_antisymmetry_defect": 2.1274307184465833e-16,
+    "stiffness_symmetry_defect": 3.2219197304886965e-14
+  },
+  "one_percent_matrix_scale": 10.55582451069414,
+  "response_norm": 0.0044709626738867626,
+  "response_correlation_with_defect": -0.3430853965363764,
+  "baseline_relative_endpoint_error": 0.5873664373821328,
+  "single_direction_best_fitted_relative_error": 0.5236866090582217,
+  "diagnostic_fitted_coefficient": -160.40017142547802,
+  "unit_coefficient_phase_aligned_shape_error": 0.5591796251398121,
+  "union_with_complete_frame_and_repository": {
+    "rows": [
+      {
+        "action_direction": "c19_activated_chi_curl",
+        "coefficient_scale": 10.55582451069414,
+        "response_norm": 0.0044709626738867626
+      },
+      {
+        "action_direction": "complete_frame_common_relative",
+        "coefficient_scale": 2.6138720032689378,
+        "response_norm": 0.0001246016983435541
+      },
+      {
+        "action_direction": "complete_frame_overlap",
+        "coefficient_scale": 2.771297941915117,
+        "response_norm": 0.18923291518268645
+      },
+      {
+        "action_direction": "installed_cube_incidence",
+        "coefficient_scale": 0.06265720842487062,
+        "response_norm": 0.06010180035453465
+      },
+      {
+        "action_direction": "existing_density_connection",
+        "coefficient_scale": 0.014676971786384593,
+        "response_norm": 0.04191919778277177
+      },
+      {
+        "action_direction": "existing_cube_incidence_connection",
+        "coefficient_scale": 0.06265720842487063,
+        "response_norm": 0.06010180035515115
+      },
+      {
+        "action_direction": "joint_phase_lock",
+        "coefficient_scale": 0.08097587882561755,
+        "response_norm": 0.33451230703610724
+      },
+      {
+        "action_direction": "relative_bilinear_phase",
+        "coefficient_scale": 0.3190925241569338,
+        "response_norm": 0.5947729539186554
+      },
+      {
+        "action_direction": "area_bilinear_phase",
+        "coefficient_scale": 0.11198784349711279,
+        "response_norm": 0.6784303973378483
+      },
+      {
+        "action_direction": "density_oriented_common_pair",
+        "coefficient_scale": 333.7983693377448,
+        "response_norm": 0.041919197785231496
+      },
+      {
+        "action_direction": "density_oriented_relative_pair",
+        "coefficient_scale": 339.323559760177,
+        "response_norm": 0.04106835453120653
+      }
+    ],
+    "response_rank": 9,
+    "singular_values": [
+      0.8898966830042973,
+      0.3348562193773009,
+      0.2103804028454027,
+      0.13582905705160606,
+      0.07448416345368333,
+      0.03671426127072851,
+      0.022548931285808215,
+      0.0041498315446462,
+      0.00011250696860468335,
+      4.687477011228632e-12,
+      2.7629156211700043e-12
+    ],
+    "best_linearized_relative_error": 0.1792865285829206,
+    "diagnostic_coefficients": {
+      "c19_activated_chi_curl": -60.889670061675695,
+      "complete_frame_common_relative": 573.2520285208994,
+      "complete_frame_overlap": 5.507051012445284,
+      "installed_cube_incidence": -13.196800768340415,
+      "existing_density_connection": -3.49858572857534,
+      "existing_cube_incidence_connection": -13.196800012623248,
+      "joint_phase_lock": 0.7020103256829299,
+      "relative_bilinear_phase": 1.2026096483604667,
+      "area_bilinear_phase": 0.6235363217586838,
+      "density_oriented_common_pair": -3.4985861078875877,
+      "density_oriented_relative_pair": 3.0385264089803763
+    }
+  },
+  "parity_status": "curl helicity is pseudoscalar under a polar-vector assignment; parity completion remains mandatory before admission",
+  "verdict": "C19_CURL_RESPONSE_MATERIAL",
+  "claim_boundary": "Exact rest and one-cycle inverse tangent screen only. The term is not admitted; parity, both copies, all axes, coefficient provenance, current, nonlinear motion and Lean remain open."
+}

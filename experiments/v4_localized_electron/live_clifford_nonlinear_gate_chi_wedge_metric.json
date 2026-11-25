@@ -1,0 +1,45 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "chi_wedge_metric",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "requested_updates": 4,
+  "all_solvers_converged": false,
+  "maximum_native_vs_dirac_relative_error": null,
+  "maximum_outside_four_component_fraction": null,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": false,
+          "solver_residual_RMS": 3.922485057960619e-05,
+          "solver_residual_history_RMS": [
+            0.006459031967313292,
+            0.0029923891170627825,
+            0.0020715299161944657,
+            0.0019359668087185029,
+            0.0010336413305215954,
+            0.0005993438398058156,
+            0.0005528717624208565,
+            0.00020091399912311304,
+            0.00016015366762864257,
+            0.00015750171924016753,
+            3.922485057960619e-05
+          ]
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_OPEN",
+  "claim_boundary": "Four unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

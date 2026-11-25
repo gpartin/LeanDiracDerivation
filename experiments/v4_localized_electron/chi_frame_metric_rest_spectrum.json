@@ -1,0 +1,66 @@
+{
+  "status": "V4_CHI_FRAME_METRIC_REST_GATE_FAIL",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "action": "T_chi=(B/2)[kappa|chiDot|^2+|A19(Pchi Vchi+s(I-Pchi)Vchi)/24|^2]",
+  "coefficient_provenance_tested": "s=1/sqrt(54)",
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "rest_del_rms_residual": 1.647296143202783e-12,
+      "following_block_condition_number": 853.1879112980293,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.34863635305962,
+      "spectral_radius": 1.0043465542693721,
+      "growth_rate_per_unit_time": 1.1103066331944542,
+      "reciprocal_pairing_defect": 2.1878054923263335e-12,
+      "name": "zero",
+      "transverse_scale": 0.0
+    },
+    {
+      "coefficient": 0.12598815766974242,
+      "rest_del_rms_residual": 1.6669526155863589e-12,
+      "following_block_condition_number": 861.5855340470125,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.34923981264657,
+      "spectral_radius": 1.0043098112342494,
+      "growth_rate_per_unit_time": 1.1009409525792944,
+      "reciprocal_pairing_defect": 8.486877867142084e-12,
+      "name": "inverse_sqrt_63",
+      "transverse_scale": 0.12598815766974242
+    },
+    {
+      "coefficient": 0.13608276348795434,
+      "rest_del_rms_residual": 1.668857353952152e-12,
+      "following_block_condition_number": 862.6976040311721,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.3494267290348,
+      "spectral_radius": 1.0043037673410165,
+      "growth_rate_per_unit_time": 1.0994003509582004,
+      "reciprocal_pairing_defect": 6.017408793468348e-13,
+      "name": "inverse_sqrt_54",
+      "transverse_scale": 0.13608276348795434
+    },
+    {
+      "coefficient": 1.0,
+      "rest_del_rms_residual": 2.1947984447357323e-12,
+      "following_block_condition_number": 1548.1157103687274,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.35916920181205,
+      "spectral_radius": 1.002940463119941,
+      "growth_rate_per_unit_time": 0.7516539940728126,
+      "reciprocal_pairing_defect": 1.7179591083049672e-12,
+      "name": "unit_tensor_incumbent",
+      "transverse_scale": 1.0
+    }
+  ],
+  "relative_growth_improvement_over_s1": -0.46264153404033087,
+  "verdict": "RETIRE_OR_REPAIR_FRAME_METRIC",
+  "claim_boundary": "This is the complete side-three two-layer linear spectrum. It does not establish nonlinear stability, movement, or Dirac."
+}

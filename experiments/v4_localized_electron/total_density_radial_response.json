@@ -1,0 +1,51 @@
+{
+  "status": "V4_TOTAL_DENSITY_RADIAL_RESPONSE_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "input_stem": "edge_snap_transfer_charge_four_update_orbit",
+  "local_potential_identity": "Ulocal=(rhoChi+rhoPsi-chi0^2)^2/4+chi0^2 rhoPsi/2",
+  "candidate": "DeltaT=c/8 sum dot(rhoChi+rhoPsi)^2/(rhoChi+rhoPsi+kappa chi0^2)",
+  "real_positive_local_action": true,
+  "response_correlation_with_needed_repair": -0.2792496629225997,
+  "diagnostic_optimum_coefficient": -23.949131840852534,
+  "diagnostic_coefficient_admitted": false,
+  "controls": [
+    {
+      "name": "zero",
+      "coefficient": 0.0,
+      "relative_residual": 1.0
+    },
+    {
+      "name": "unit",
+      "coefficient": 1.0,
+      "relative_residual": 1.0033185562990687
+    },
+    {
+      "name": "chi0",
+      "coefficient": 19.0,
+      "relative_residual": 1.0829645080702444
+    },
+    {
+      "name": "inverse_kappa",
+      "coefficient": 63.0,
+      "relative_residual": 1.3963828521169497
+    },
+    {
+      "name": "B",
+      "coefficient": 1197.0,
+      "relative_residual": 14.268754598305604
+    },
+    {
+      "name": "diagnostic",
+      "coefficient": 0.0,
+      "relative_residual": 1.0
+    }
+  ],
+  "best_native_control": {
+    "name": "unit",
+    "coefficient": 1.0,
+    "relative_residual": 1.0033185562990687
+  },
+  "verdict": "RETIRE_RADIAL_INERTIA",
+  "claim_boundary": "Response projection on one freely optimized handoff. It is not an admitted coefficient, rest pass, or moving orbit."
+}

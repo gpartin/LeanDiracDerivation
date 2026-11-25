@@ -1,0 +1,203 @@
+{
+  "status": "V4_C19_KINETIC_METRIC_PARTIAL_IMPROVEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action": "T_chi=(B/2)[kappa ||chiDot||^2+||A19 chiDot/24||^2]",
+  "B": 1197.0,
+  "kappa": 0.015873015873015872,
+  "B_times_kappa": 19.0,
+  "chi0": 19.0,
+  "coefficient_provenance": "24 is the weighted C19 degree; B*kappa=chi0=19; no movement or Dirac target fixes a coefficient",
+  "kinetic_symbol": "B[kappa+(A19(k)/24)^2]",
+  "symbol_bounds": [
+    19.0,
+    1216.0
+  ],
+  "positive_and_invertible": true,
+  "rest_orbit_unchanged": true,
+  "movement_controls": [
+    {
+      "power": 1,
+      "combined_relative_residual": 0.10687149993296216,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.10161600857758853
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.10161600857650419
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.11003511996114915
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.11003511996115864
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.1100351199611433
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.1100351199611416
+        }
+      ]
+    },
+    {
+      "power": 2,
+      "combined_relative_residual": 0.043151496558179514,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.041294876847271136
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.041294876846849654
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.044274617544131804
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.04427461754413552
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.044274617544129515
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.04427461754412885
+        }
+      ]
+    },
+    {
+      "power": 3,
+      "combined_relative_residual": 0.024221156135369563,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.023542982464445555
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.023542982464290287
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.024636373140274524
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.024636373140275922
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.02463637314027366
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.02463637314027341
+        }
+      ]
+    },
+    {
+      "power": 4,
+      "combined_relative_residual": 0.018314956531411457,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.01809357211577428
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.018093572115723832
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.018452251077006463
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.018452251077006928
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.01845225107700618
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.018452251077006092
+        }
+      ]
+    }
+  ],
+  "rest_spectrum_controls": [
+    {
+      "power": 0,
+      "orbit_force_defect_psi": 2.0839238232528637e-12,
+      "orbit_force_defect_chi": 1.081412399819283e-15,
+      "spectral_radius": 1.0040551109853235,
+      "growth_rate_per_unit_time": 1.0360092627721074,
+      "reciprocal_pairing_defect": 1.0051959264956167e-11
+    },
+    {
+      "power": 1,
+      "orbit_force_defect_psi": 2.0839238232528637e-12,
+      "orbit_force_defect_chi": 1.081412399819283e-15,
+      "spectral_radius": 1.0029405186318956,
+      "growth_rate_per_unit_time": 0.7516681634682094,
+      "reciprocal_pairing_defect": 2.048805569643264e-12
+    },
+    {
+      "power": 2,
+      "orbit_force_defect_psi": 2.0839238232528637e-12,
+      "orbit_force_defect_chi": 1.081412399819283e-15,
+      "spectral_radius": 1.0043103790273251,
+      "growth_rate_per_unit_time": 1.10108568380133,
+      "reciprocal_pairing_defect": 6.661338147750939e-13
+    },
+    {
+      "power": 3,
+      "orbit_force_defect_psi": 2.0839238232528637e-12,
+      "orbit_force_defect_chi": 1.081412399819283e-15,
+      "spectral_radius": 1.0043459828104395,
+      "growth_rate_per_unit_time": 1.1101609727869506,
+      "reciprocal_pairing_defect": 1.1195488980320079e-12
+    }
+  ],
+  "power_one_growth_relative_improvement": 0.27445806666155736,
+  "verdict": "PARTIAL_IMPROVEMENT_NOT_MOVEMENT_PASS",
+  "root_cause": "The canonical local B inertia over-penalizes the nonuniform chi motion required by a one-edge handoff.  The C19-average metric reduces that resistance with native coefficients and improves the rest spectrum, but it supplies no field-dependent connection force, so the exact translated recurrence remains nonzero.",
+  "next_action": "Keep only power one as the locality-minimal incumbent.  Derive a positive phase-covariant field-dependent connection inside the same square, and reject it unless it improves both the 0.10687 movement residual and the 0.75167 rest growth.",
+  "claim_boundary": "The calculation is a side-5 fixed-phase movement response and a side-3 linear rest spectrum.  It is not a freely translated orbit, long-time stability result, Dirac pass, or admitted action."
+}

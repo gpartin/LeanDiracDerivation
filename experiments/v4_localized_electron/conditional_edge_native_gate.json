@@ -1,0 +1,89 @@
+{
+  "status": "V4_CONDITIONAL_EDGE_NATIVE_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "readout_only_projectors": true,
+  "rows": [
+    {
+      "axis": 0,
+      "direction": -1,
+      "best_phase_psi": 3.141592421048726,
+      "best_phase_chi": -9.282295709208089e-07,
+      "best_dt": 0.07962298862412244,
+      "combined_relative_residual": 0.9998090556496162,
+      "zero_phase_conditional_vs_rigid_acceleration_defect": 3.745449372716564e-17,
+      "conditional_vs_rigid_velocity_relative_difference": 0.9048650921513927,
+      "optimizer_success": true
+    },
+    {
+      "axis": 0,
+      "direction": 1,
+      "best_phase_psi": 3.1415946584440997,
+      "best_phase_chi": 8.419740925175481e-08,
+      "best_dt": 0.07962298862411249,
+      "combined_relative_residual": 0.9998090556496164,
+      "zero_phase_conditional_vs_rigid_acceleration_defect": 3.745449372716564e-17,
+      "conditional_vs_rigid_velocity_relative_difference": 0.9048650921511138,
+      "optimizer_success": true
+    },
+    {
+      "axis": 1,
+      "direction": -1,
+      "best_phase_psi": -2.7423057507281165e-07,
+      "best_phase_chi": 1.6553326362715622e-07,
+      "best_dt": 0.07962298862412238,
+      "combined_relative_residual": 0.9997608591087945,
+      "zero_phase_conditional_vs_rigid_acceleration_defect": 1.3097417560737337e-18,
+      "conditional_vs_rigid_velocity_relative_difference": 1.414213562373095,
+      "optimizer_success": true
+    },
+    {
+      "axis": 1,
+      "direction": 1,
+      "best_phase_psi": -8.900989474164712e-07,
+      "best_phase_chi": -2.7348095981608574e-06,
+      "best_dt": 0.0796229886241206,
+      "combined_relative_residual": 0.9997608591087955,
+      "zero_phase_conditional_vs_rigid_acceleration_defect": 1.3097417560737337e-18,
+      "conditional_vs_rigid_velocity_relative_difference": 1.4142135623730947,
+      "optimizer_success": true
+    },
+    {
+      "axis": 2,
+      "direction": -1,
+      "best_phase_psi": 3.981415124607116,
+      "best_phase_chi": 5.421010862427522e-20,
+      "best_dt": 0.07443229275647868,
+      "combined_relative_residual": 0.9998173670865685,
+      "zero_phase_conditional_vs_rigid_acceleration_defect": 2.3154402461788657e-19,
+      "conditional_vs_rigid_velocity_relative_difference": 1.3478644701293192,
+      "optimizer_success": true
+    },
+    {
+      "axis": 2,
+      "direction": 1,
+      "best_phase_psi": -1.787327074964387,
+      "best_phase_chi": 2.301683029296451e-06,
+      "best_dt": 0.07443229275647868,
+      "combined_relative_residual": 0.999817367086569,
+      "zero_phase_conditional_vs_rigid_acceleration_defect": 2.3154402461788657e-19,
+      "conditional_vs_rigid_velocity_relative_difference": 1.3478644701294993,
+      "optimizer_success": true
+    }
+  ],
+  "carrier_flavor_weights": {
+    "psi": {
+      "plus": 0.35566243270259357,
+      "minus": 0.6443375672974065,
+      "reconstruction_defect": 0.0
+    },
+    "chi_core": {
+      "plus": 0.5,
+      "minus": 0.5,
+      "reconstruction_defect": 2.5121479338940403e-15
+    }
+  },
+  "acceleration_identity": "At zero mass phase, C+C^-1-2 equals S+ + S^-1 -2 because P+ + P-=I and gamma^2=I.",
+  "interpretation": "The native second-order equation tests the squared spatial response and cannot by itself distinguish rigid from conditional current. The distinction lives in the two committed layers, their centered velocity, and the frozen four-component readout.",
+  "claim_boundary": "A small acceleration residual would not prove Dirac motion. A pass additionally requires persistence of the signed channel velocity and beta mixing under unrestricted evolution."
+}

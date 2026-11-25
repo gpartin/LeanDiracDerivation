@@ -1,0 +1,47 @@
+{
+  "status": "V4_FOUR_UPDATE_EDGE_ORBIT_INCONCLUSIVE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "updates_per_translation": 4,
+  "dt": 0.1,
+  "translation_time": 0.4,
+  "phase_psi": 3.3287798462704368,
+  "phase_chi": -6.889772046440938e-05,
+  "noether_charge_penalty_weight": 0.0001,
+  "initial_scaled_del_rms": 0.19493096508648064,
+  "initial_combined_del_and_charge_residual": 0.19493520880195922,
+  "final_scaled_del_rms": 0.008260991026202768,
+  "final_combined_del_and_charge_residual": 0.013131529762626902,
+  "relative_del_residual_reduction": 0.9576209402003535,
+  "maximum_normalized_noether_charge_defects": {
+    "psi": 0.009826861713617898,
+    "chi": 0.0027615014092308935
+  },
+  "optimizer_evaluations": 310,
+  "minimum_trace_residual": 0.008261896974657757,
+  "intermediate_psi_density_sums": [
+    1357.2605879076,
+    596.9162684038173,
+    1357.5819394764294
+  ],
+  "intermediate_centers_of_density": [
+    [
+      1.5681903312598093,
+      1.5119913133100031,
+      1.4920584233611482
+    ],
+    [
+      2.0004649784803186,
+      1.5244058907336757,
+      1.4756450268688603
+    ],
+    [
+      2.431716666603776,
+      1.5087746074888515,
+      1.4871266458171564
+    ]
+  ],
+  "endpoint_constraint_defect": 0.0,
+  "verdict": "FOUR_UPDATE_PATH_DOES_NOT_YET_CLOSE",
+  "claim_boundary": "This is one nonlinear boundary-value search. Nonconvergence is not a no-go theorem and does not admit the research action."
+}

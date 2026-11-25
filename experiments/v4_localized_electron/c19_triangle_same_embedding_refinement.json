@@ -1,0 +1,83 @@
+{
+  "status": "V4_C19_TRIANGLE_SAME_EMBEDDING_REFINEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rates": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "own_copy_previous_layer_leakage": [
+    0.3367762132381098,
+    0.19163492026927767,
+    0.09955202775824051,
+    0.050279490035482495
+  ],
+  "own_copy_leakage_orders": [
+    0.8134297662556426,
+    0.9448378697248982,
+    0.9854806850930627
+  ],
+  "combined_copy_previous_layer_leakage": [
+    6.895180390168537e-05,
+    3.811872438802917e-05,
+    1.9656657310384778e-05,
+    9.908950957041728e-06
+  ],
+  "combined_copy_leakage_orders": [
+    0.8550884542535556,
+    0.955481834707635,
+    0.9882137716782319
+  ],
+  "following_target_embedding_leakage": [
+    1.2850773221014762e-15,
+    1.1853433727459655e-15,
+    1.0973914080216451e-15,
+    1.207770235206187e-15
+  ],
+  "smallest_fixed_charge_singular_values_by_rate": [
+    [
+      1.5732872000396526e-05,
+      1.5757530715385726e-05,
+      4.3983732456047964e-05
+    ],
+    [
+      7.350079947436717e-06,
+      7.3772024102063105e-06,
+      3.788548597422097e-05
+    ],
+    [
+      3.546060381360776e-06,
+      3.5603557099080536e-06,
+      3.52353814949807e-05
+    ],
+    [
+      1.7409628326707933e-06,
+      1.748109704214792e-06,
+      3.413027707529164e-05
+    ]
+  ],
+  "smallest_singular_value_orders_by_axis": [
+    [
+      1.097950208067139,
+      1.0515428400812257,
+      1.0263316986438713
+    ],
+    [
+      1.0948957500029275,
+      1.0510524338599914,
+      1.026225660615079
+    ],
+    [
+      0.2153247822645341,
+      0.10462041983329985,
+      0.045972707752965754
+    ]
+  ],
+  "all_finite_steps_rank_three": true,
+  "continuum_sector_closure_supported": true,
+  "verdict": "FROZEN_CUBICAL_SECTOR_LEAKAGE_VANISHES_IN_CONTINUUM",
+  "interpretation": "Each copy and the combined doublet approach invariant continuum phase-space sectors with approximately first-order layer-graph error. The smallest fixed-charge singular response in axes zero and one also scales toward zero, so finite-step rank three is not by itself a continuum alpha-generator proof.",
+  "claim_boundary": "Linear timestep-refinement result. It does not establish the full compressed alpha matrices, nonlinear endurance, or V4-006."
+}

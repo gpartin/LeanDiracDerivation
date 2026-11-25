@@ -1,0 +1,55 @@
+{
+  "status": "V4_UNRESTRICTED_FIXED_CHARGE_BINDING_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "lambda_self": 0.25,
+  "density_coupling": 1.0,
+  "initial_amplitude_sq": 250.0,
+  "target_charges": [
+    37411.020936812536,
+    919012.8571347345
+  ],
+  "chi_stiffness_provenance": "positive reciprocal normalized C19 gradient; stiffness=1 gives unit native chi wave speed with kinetic inertia B",
+  "rows": [
+    {
+      "chi_stiffness": 0.0,
+      "solver_success": true,
+      "solver_status": 1,
+      "solver_nfev": 1,
+      "cost": 1.0223869844360313e-26,
+      "optimality": 1.0681013171711391e-11,
+      "stationary_rms": 7.944199624961378e-15,
+      "charge_relative_residual": [
+        0.0,
+        0.0
+      ],
+      "omega_psi": 18.705510468406267,
+      "omega_chi": 0.38388172812645543,
+      "psi_carrier_overlap_sq": 0.9999999999999996,
+      "psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "chi_plane_charge_exterior_fraction": 0.0
+    },
+    {
+      "chi_stiffness": 0.001,
+      "solver_success": false,
+      "solver_status": 0,
+      "solver_nfev": 50,
+      "cost": 2.2482171122979996e-05,
+      "optimality": 8.23123633754812e-05,
+      "stationary_rms": 0.00035559829724087665,
+      "charge_relative_residual": [
+        -0.0010658219190199667,
+        0.001690715070237495
+      ],
+      "omega_psi": 18.700703263311468,
+      "omega_chi": 0.38470779642050307,
+      "psi_carrier_overlap_sq": 0.9988051734907286,
+      "psi_exterior_fraction": 0.0002824957767817801,
+      "chi_exterior_deviation_rms": 0.06995092652282218,
+      "chi_plane_charge_exterior_fraction": 1.3170811978681507e-06
+    }
+  ],
+  "claim_boundary": "Existence/identity continuation only. A surviving branch still requires a constrained-index and full-spectrum calculation."
+}

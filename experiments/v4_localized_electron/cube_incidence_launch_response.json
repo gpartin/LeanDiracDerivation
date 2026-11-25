@@ -1,0 +1,506 @@
+{
+  "status": "V4_CUBE_INCIDENCE_FIRST_RECEIVER_RESPONSE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "momentum": 0.1,
+  "initial_instantaneous_exterior_current": "zero within numerical precision",
+  "per_launch_mode": {
+    "Psi": {
+      "all_updates_converged": true,
+      "minimum_directed_exterior_contrast": 0.0,
+      "maximum_directed_exterior_contrast": 0.0,
+      "minimum_signed_center_shift": 0.001938852437375349,
+      "maximum_signed_center_shift": 0.016546987078652764,
+      "minimum_signed_common_flux": 0.0,
+      "maximum_signed_common_flux": 0.0
+    },
+    "chi": {
+      "all_updates_converged": true,
+      "minimum_directed_exterior_contrast": 0.0,
+      "maximum_directed_exterior_contrast": 0.0,
+      "minimum_signed_center_shift": 0.0005713561867279893,
+      "maximum_signed_center_shift": 0.006807736345618265,
+      "minimum_signed_common_flux": -2.384185791015625e-05,
+      "maximum_signed_common_flux": 3.2901763916015625e-05
+    },
+    "common": {
+      "all_updates_converged": true,
+      "minimum_directed_exterior_contrast": 0.0,
+      "maximum_directed_exterior_contrast": 0.0,
+      "minimum_signed_center_shift": 0.0025146874910084716,
+      "maximum_signed_center_shift": 0.023111136276289246,
+      "minimum_signed_common_flux": -2.193450927734375e-05,
+      "maximum_signed_common_flux": 3.0994415283203125e-05
+    },
+    "relative": {
+      "all_updates_converged": true,
+      "minimum_directed_exterior_contrast": 0.0,
+      "maximum_directed_exterior_contrast": 0.0,
+      "minimum_signed_center_shift": 0.0013606323725317004,
+      "maximum_signed_center_shift": 0.010196218183305295,
+      "minimum_signed_common_flux": -3.3855438232421875e-05,
+      "maximum_signed_common_flux": 2.384185791015625e-05
+    }
+  },
+  "selected_native_launch_mode": null,
+  "rows": [
+    {
+      "axis": 0,
+      "sign": -1,
+      "launch_mode": "Psi",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.3571556424793086e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.016546987078652764,
+      "signed_common_flux": 0.0,
+      "full_center_shift": [
+        -0.016546987078652764,
+        0.0,
+        7.043223238589746e-05
+      ],
+      "corotating_relative_defect": 0.012203195407157853
+    },
+    {
+      "axis": 0,
+      "sign": -1,
+      "launch_mode": "chi",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 1.3566702001231394e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.006706500030975171,
+      "signed_common_flux": -2.384185791015625e-05,
+      "full_center_shift": [
+        -0.006706500030975171,
+        0.0,
+        1.2950282774371047e-05
+      ],
+      "corotating_relative_defect": 0.1409340987582479
+    },
+    {
+      "axis": 0,
+      "sign": -1,
+      "launch_mode": "common",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 2.5030018635968896e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.023081250150525756,
+      "signed_common_flux": -2.193450927734375e-05,
+      "full_center_shift": [
+        -0.023081250150525756,
+        2.220446049250313e-16,
+        0.0001426792871526139
+      ],
+      "corotating_relative_defect": 0.14147586459142117
+    },
+    {
+      "axis": 0,
+      "sign": -1,
+      "launch_mode": "relative",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.0471038551504833e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.009890492814604857,
+      "signed_common_flux": 2.384185791015625e-05,
+      "full_center_shift": [
+        -0.009890492814604857,
+        0.0,
+        4.273642660113097e-05
+      ],
+      "corotating_relative_defect": 0.14144735095193234
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "launch_mode": "Psi",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 5.820731216651378e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.008189750468173163,
+      "signed_common_flux": -0.0,
+      "full_center_shift": [
+        0.008189750468173163,
+        0.0,
+        2.68061442147971e-05
+      ],
+      "corotating_relative_defect": 0.01222428401195145
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "launch_mode": "chi",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 1.0614113282480742e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.006807736345618265,
+      "signed_common_flux": 3.0040740966796875e-05,
+      "full_center_shift": [
+        0.006807736345618265,
+        0.0,
+        -2.194117354470393e-07
+      ],
+      "corotating_relative_defect": 0.14093411034481348
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "launch_mode": "common",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 9.694454105083236e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.015039765081812151,
+      "signed_common_flux": 2.9087066650390625e-05,
+      "full_center_shift": [
+        0.015039765081812151,
+        0.0,
+        5.491533499224488e-05
+      ],
+      "corotating_relative_defect": 0.14146995201930687
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "launch_mode": "relative",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.5961343214197156e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.0014307437984628635,
+      "signed_common_flux": -3.1948089599609375e-05,
+      "full_center_shift": [
+        0.0014307437984628635,
+        0.0,
+        5.548974392421968e-06
+      ],
+      "corotating_relative_defect": 0.14145636646685225
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "launch_mode": "Psi",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.9488779521545538e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.01654670232824773,
+      "signed_common_flux": 0.0,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        -0.01654670232824773,
+        8.018306705293021e-05
+      ],
+      "corotating_relative_defect": 0.012204281587750715
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "launch_mode": "chi",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 1.0282310088391066e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.006734407623004701,
+      "signed_common_flux": -2.002716064453125e-05,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        -0.006734407623004701,
+        1.6021679763777996e-05
+      ],
+      "corotating_relative_defect": 0.14093414363729195
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "launch_mode": "common",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 3.7312679709194885e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.023111136276289246,
+      "signed_common_flux": -1.621246337890625e-05,
+      "full_center_shift": [
+        -2.220446049250313e-16,
+        -0.023111136276289246,
+        0.0001710231373548421
+      ],
+      "corotating_relative_defect": 0.14147614108680365
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "launch_mode": "relative",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 6.821591390102445e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.009918888772678436,
+      "signed_common_flux": 2.002716064453125e-05,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        -0.009918888772678436,
+        5.0161245544799726e-05
+      ],
+      "corotating_relative_defect": 0.1414474497644859
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "launch_mode": "Psi",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 6.013930364388568e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.008189652865505437,
+      "signed_common_flux": -0.0,
+      "full_center_shift": [
+        -2.220446049250313e-16,
+        0.008189652865505437,
+        2.8220080227958633e-05
+      ],
+      "corotating_relative_defect": 0.012224200981907728
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "launch_mode": "chi",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 1.1453752812438448e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.006778966303385481,
+      "signed_common_flux": 3.2901763916015625e-05,
+      "full_center_shift": [
+        -2.220446049250313e-16,
+        0.006778966303385481,
+        5.693713018839475e-07
+      ],
+      "corotating_relative_defect": 0.14093406471721717
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "launch_mode": "common",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.4203487220120908e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.015012457864723494,
+      "signed_common_flux": 3.0994415283203125e-05,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        0.015012457864723494,
+        5.749728105564067e-05
+      ],
+      "corotating_relative_defect": 0.14146987296051847
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "launch_mode": "relative",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 6.744393532694088e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.0014020641828274005,
+      "signed_common_flux": -3.3855438232421875e-05,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        0.0014020641828274005,
+        4.185068506412648e-06
+      ],
+      "corotating_relative_defect": 0.14145638734119415
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "launch_mode": "Psi",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.1243054958285849e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.010751499257284136,
+      "signed_common_flux": 0.0,
+      "full_center_shift": [
+        -6.661338147750939e-16,
+        -2.220446049250313e-16,
+        -0.010751499257284136
+      ],
+      "corotating_relative_defect": 0.012212303920745696
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "launch_mode": "chi",
+      "solver_converged": true,
+      "solver_iterations": 3,
+      "solver_residual_RMS": 3.645849412068033e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.0005713561867279893,
+      "signed_common_flux": -2.002716064453125e-05,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        -2.220446049250313e-16,
+        -0.0005713561867279893
+      ],
+      "corotating_relative_defect": 0.1409287184534714
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "launch_mode": "common",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.2817789504601732e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.01129616419376811,
+      "signed_common_flux": -1.239776611328125e-05,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        -2.220446049250313e-16,
+        -0.01129616419376811
+      ],
+      "corotating_relative_defect": 0.14145881737866942
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "launch_mode": "relative",
+      "solver_converged": true,
+      "solver_iterations": 5,
+      "solver_residual_RMS": 1.149833642583973e-10,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.010196218183305295,
+      "signed_common_flux": 2.002716064453125e-05,
+      "full_center_shift": [
+        -2.220446049250313e-16,
+        0.0,
+        -0.010196218183305295
+      ],
+      "corotating_relative_defect": 0.14145489934563593
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "launch_mode": "Psi",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 2.325880544337782e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.001938852437375349,
+      "signed_common_flux": -0.0,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        -2.220446049250313e-16,
+        0.001938852437375349
+      ],
+      "corotating_relative_defect": 0.012223504194766486
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "launch_mode": "chi",
+      "solver_converged": true,
+      "solver_iterations": 3,
+      "solver_residual_RMS": 7.530784013958531e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.0005717634363544555,
+      "signed_common_flux": 3.0040740966796875e-05,
+      "full_center_shift": [
+        -4.440892098500626e-16,
+        -2.220446049250313e-16,
+        0.0005717634363544555
+      ],
+      "corotating_relative_defect": 0.1409287177478847
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "launch_mode": "common",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 3.0662948886056136e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.0025146874910084716,
+      "signed_common_flux": 3.0040740966796875e-05,
+      "full_center_shift": [
+        -2.220446049250313e-16,
+        -2.220446049250313e-16,
+        0.0025146874910084716
+      ],
+      "corotating_relative_defect": 0.1414582044286619
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "launch_mode": "relative",
+      "solver_converged": true,
+      "solver_iterations": 4,
+      "solver_residual_RMS": 1.5610239097148364e-09,
+      "target_exterior_Psi_fraction": 0.0,
+      "opposite_exterior_Psi_fraction": 0.0,
+      "directed_exterior_contrast": 0.0,
+      "signed_center_shift": 0.0013606323725317004,
+      "signed_common_flux": -3.3855438232421875e-05,
+      "full_center_shift": [
+        0.0,
+        2.220446049250313e-16,
+        0.0013606323725317004
+      ],
+      "corotating_relative_defect": 0.14145745480980093
+    }
+  ],
+  "verdict": "DIRECTED_FIRST_RECEIVER_RESPONSE_FAIL",
+  "claim_boundary": "One freely solved next layer from a quiet receiver.  It does not prove a complete handoff, persistent translation, same-state Dirac current, or V4-006."
+}

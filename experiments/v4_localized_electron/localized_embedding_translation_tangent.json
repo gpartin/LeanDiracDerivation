@@ -1,0 +1,149 @@
+{
+  "status": "V4_LOCALIZED_EMBEDDING_TRANSLATION_TANGENT_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "flavor": "plus",
+      "native_geometry_selected_chi_scale_real": 0.9967831653777534,
+      "native_geometry_selected_chi_scale_imag": 0.0009945087980210096,
+      "cases": [
+        {
+          "center_count": 1,
+          "span_real_rank": 8,
+          "axis_relative_defects": [
+            0.9899079088489899,
+            0.9899079088489899,
+            0.9899079088489897
+          ],
+          "worst_axis_relative_defect": 0.9899079088489899,
+          "mean_axis_squared_defect": 0.97991766800178,
+          "center_set": "source_only"
+        },
+        {
+          "center_count": 7,
+          "span_real_rank": 56,
+          "axis_relative_defects": [
+            0.8447987934657405,
+            0.8489427979929873,
+            0.8489427985462454
+          ],
+          "worst_axis_relative_defect": 0.8489427985462454,
+          "mean_axis_squared_defect": 0.7183642503029546,
+          "center_set": "source_plus_faces"
+        },
+        {
+          "center_count": 27,
+          "span_real_rank": 216,
+          "axis_relative_defects": [
+            0.7993292403050842,
+            0.7803091784538002,
+            0.7803388223875148
+          ],
+          "worst_axis_relative_defect": 0.7993292403050842,
+          "mean_axis_squared_defect": 0.6189127753703604,
+          "center_set": "three_by_three_by_three"
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "native_geometry_selected_chi_scale_real": 1.0032277288611624,
+      "native_geometry_selected_chi_scale_imag": 0.0010053479421656204,
+      "cases": [
+        {
+          "center_count": 1,
+          "span_real_rank": 8,
+          "axis_relative_defects": [
+            0.9899079088489899,
+            0.9899079088489898,
+            0.9899079088489897
+          ],
+          "worst_axis_relative_defect": 0.9899079088489899,
+          "mean_axis_squared_defect": 0.9799176680017799,
+          "center_set": "source_only"
+        },
+        {
+          "center_count": 7,
+          "span_real_rank": 56,
+          "axis_relative_defects": [
+            0.8447987924458619,
+            0.8489427984998191,
+            0.8489427982391713
+          ],
+          "worst_axis_relative_defect": 0.8489427984998191,
+          "mean_axis_squared_defect": 0.7183642498416151,
+          "center_set": "source_plus_faces"
+        },
+        {
+          "center_count": 27,
+          "span_real_rank": 216,
+          "axis_relative_defects": [
+            0.7993292390333351,
+            0.7803091837478879,
+            0.7803340091168594
+          ],
+          "worst_axis_relative_defect": 0.7993292390333351,
+          "mean_axis_squared_defect": 0.6189102734664321,
+          "center_set": "three_by_three_by_three"
+        }
+      ]
+    }
+  ],
+  "two_copy_joint_envelope": {
+    "scales": {
+      "plus": {
+        "real": 1.0000000063164436,
+        "imag": -1.9126404454059828e-08
+      },
+      "minus": {
+        "real": 0.9999999746360455,
+        "imag": -6.274230778849045e-08
+      }
+    },
+    "cases": [
+      {
+        "center_count": 1,
+        "span_real_rank": 16,
+        "axis_relative_defects": [
+          0.9797118637658525,
+          0.9797118637658525,
+          0.9797118637658524
+        ],
+        "worst_axis_relative_defect": 0.9797118637658525,
+        "mean_axis_squared_defect": 0.9598353360035602,
+        "center_set": "source_only"
+      },
+      {
+        "center_count": 7,
+        "span_real_rank": 112,
+        "axis_relative_defects": [
+          0.7197388637851395,
+          0.7197388637851395,
+          0.7197388637851394
+        ],
+        "worst_axis_relative_defect": 0.7197388637851395,
+        "mean_axis_squared_defect": 0.5180240320427235,
+        "center_set": "source_plus_faces"
+      },
+      {
+        "center_count": 27,
+        "span_real_rank": 400,
+        "axis_relative_defects": [
+          0.7197388637851394,
+          0.7197388637851395,
+          0.7197388637851394
+        ],
+        "worst_axis_relative_defect": 0.7197388637851395,
+        "mean_axis_squared_defect": 0.5180240320427235,
+        "center_set": "three_by_three_by_three"
+      }
+    ]
+  },
+  "best_face_neighbor_worst_axis_defect": 0.8489427984998191,
+  "two_copy_face_neighbor_worst_axis_defect": 0.7197388637851395,
+  "verdict": "LOCALIZED_EMBEDDING_TRANSLATION_TANGENT_MISMATCH",
+  "interpretation": "A pass means the carrier's infinitesimal physical center motion can be represented by redistributing the retained joint Psi/chi envelope among adjacent cube centers. The two-copy row directly tests whether distinct native chi responses make the algebraic copies complementary for motion. A pass does not mean the nonlinear action executes that redistribution.",
+  "claim_boundary": "This is a geometric tangent-span test. It contains no native time evolution, current, stability, or finite translation.",
+  "corrective_action": "On pass, compress the native two-layer update and bond current on the neighboring-center envelope. On failure, enlarge the carrier-derived spatial basis before changing the action."
+}

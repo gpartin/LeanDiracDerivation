@@ -1,0 +1,24 @@
+{
+  "status": "V4_C19_BARGMANN_FIRST_SHELL_ARTIFACT_AUDIT_PASS",
+  "date": "2026-11-24",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "command": "python experiments/v4_localized_electron/c19_bargmann_first_shell_embedding.py",
+  "validation": [
+    "python -m py_compile experiments/v4_localized_electron/c19_bargmann_first_shell_embedding.py",
+    "PowerShell ConvertFrom-Json on the result",
+    "git diff --check"
+  ],
+  "artifacts": [
+    {
+      "path": "experiments/v4_localized_electron/c19_bargmann_first_shell_embedding.py",
+      "sha256": "FE837620BC2396456F5AFA3E9D46BFDB6030CEE71BCF3F178E4570CF5D8580C7"
+    },
+    {
+      "path": "experiments/v4_localized_electron/c19_bargmann_first_shell_embedding.json",
+      "sha256": "644D4F6E4D0BC2F9C196473FD2D3E2F0BC6267D352DBBF04255DC35502F34533"
+    }
+  ],
+  "verdict": "BARGMANN_LEAKAGE_IS_INTERNAL_CORE_NOT_FIRST_SHELL",
+  "v4_006": "OPEN"
+}

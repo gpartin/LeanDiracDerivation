@@ -1,0 +1,946 @@
+{
+  "status": "V4_MULTICHANNEL_PRONG_DIRAC_PACKET_GATE",
+  "action": "positive component-preserving material kinetic action with local phase removed and canonical position potential",
+  "dirac_role": "independent discrete-C19 three-layer comparator and frozen four-component readout only",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rest_DEL_norms": {
+    "psi": 7.407382566101005e-09,
+    "both": 1.6503440980075868e-12,
+    "chi": 8.664685914369032e-13
+  },
+  "source_summaries": {
+    "psi": {
+      "maximum_relative_DEL_residual": 0.0013938384106974417,
+      "mean_relative_DEL_residual": 0.0009560597827540533,
+      "maximum_complement_residual_fraction": 0.03262556713926609
+    },
+    "both": {
+      "maximum_relative_DEL_residual": 0.00026226869403457207,
+      "mean_relative_DEL_residual": 0.00019946566443019258,
+      "maximum_complement_residual_fraction": 0.24968229012807328
+    },
+    "chi": {
+      "maximum_relative_DEL_residual": 0.0005145646763728088,
+      "mean_relative_DEL_residual": 0.0004402136775388601,
+      "maximum_complement_residual_fraction": 0.0947125561271847
+    }
+  },
+  "best_source": "both",
+  "rows": [
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.001082294494946939,
+      "retained_residual_fraction": 0.9998656369472169,
+      "complement_residual_fraction": 0.016392316862976566,
+      "layer_image_norms": [
+        9012537.376460735,
+        17998839.03923571,
+        8998376.154227609
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0012266988484130113,
+      "retained_residual_fraction": 0.9998749933750807,
+      "complement_residual_fraction": 0.015811313139119654,
+      "layer_image_norms": [
+        8958564.817255715,
+        17979675.075866714,
+        9032550.421301166
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0009603589316243877,
+      "retained_residual_fraction": 0.9996843956556467,
+      "complement_residual_fraction": 0.02512188453530175,
+      "layer_image_norms": [
+        10544464.546951447,
+        20956060.774275452,
+        10433728.509543886
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0007463278735938339,
+      "retained_residual_fraction": 0.9998161400048778,
+      "complement_residual_fraction": 0.019175144999367733,
+      "layer_image_norms": [
+        12597154.068665477,
+        25713432.651700374,
+        13125402.686242769
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.0009148476612601611,
+      "retained_residual_fraction": 0.9997841258980514,
+      "complement_residual_fraction": 0.020777430117061877,
+      "layer_image_norms": [
+        10638424.631365221,
+        21169569.422800247,
+        10554547.496945908
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.0008151111776448182,
+      "retained_residual_fraction": 0.9997512287302637,
+      "complement_residual_fraction": 0.0223042743062488,
+      "layer_image_norms": [
+        11946629.551584676,
+        24401039.42908562,
+        12462174.413541108
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0012175870448131207,
+      "retained_residual_fraction": 0.9998846512541031,
+      "complement_residual_fraction": 0.015188291097414285,
+      "layer_image_norms": [
+        8330874.33404577,
+        16704942.674804036,
+        8390667.657154825
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.000886248997884185,
+      "retained_residual_fraction": 0.9999144943963256,
+      "complement_residual_fraction": 0.013076845802415537,
+      "layer_image_norms": [
+        11766990.479998985,
+        23959879.22060059,
+        12202932.66053759
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0006751050288314504,
+      "retained_residual_fraction": 0.9999220883465929,
+      "complement_residual_fraction": 0.012482677460726153,
+      "layer_image_norms": [
+        16686527.698084729,
+        33385614.190558176,
+        16705923.090227805
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0006267495233427383,
+      "retained_residual_fraction": 0.9998050925614161,
+      "complement_residual_fraction": 0.019742767998901917,
+      "layer_image_norms": [
+        15279614.461304285,
+        30797759.763827555,
+        15530584.309053618
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0013938384106974417,
+      "retained_residual_fraction": 0.9994676444832227,
+      "complement_residual_fraction": 0.03262556713926609,
+      "layer_image_norms": [
+        5232963.685683558,
+        10524805.41782346,
+        5306291.071243081
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0009676436146536402,
+      "retained_residual_fraction": 0.999771849055728,
+      "complement_residual_fraction": 0.021360005517097998,
+      "layer_image_norms": [
+        7811577.784239876,
+        15323736.114433518,
+        7520681.298427872
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.0013321786700250067,
+      "retained_residual_fraction": 0.9997234487103287,
+      "complement_residual_fraction": 0.023516506941440734,
+      "layer_image_norms": [
+        5264067.4193495475,
+        10461307.446024613,
+        5212059.941864034
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.0010046508642518055,
+      "retained_residual_fraction": 0.9996035100295944,
+      "complement_residual_fraction": 0.028157108099288033,
+      "layer_image_norms": [
+        7447749.3104671845,
+        14684129.4767778,
+        7247587.364756181
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0008937043035046379,
+      "retained_residual_fraction": 0.999734473256203,
+      "complement_residual_fraction": 0.02304306800629098,
+      "layer_image_norms": [
+        8821290.882029139,
+        17517946.524797678,
+        8707514.535840707
+      ]
+    },
+    {
+      "source": "psi",
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0005536110785776763,
+      "retained_residual_fraction": 0.9997373385192334,
+      "complement_residual_fraction": 0.02291841989493335,
+      "layer_image_norms": [
+        12407754.53052292,
+        24714021.892734256,
+        12316041.009087566
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00021202317091278516,
+      "retained_residual_fraction": 0.9884229210376809,
+      "complement_residual_fraction": 0.15172385826671647,
+      "layer_image_norms": [
+        2713.354325585829,
+        5376.816102733741,
+        2667.582553013788
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00026226869403457207,
+      "retained_residual_fraction": 0.9683278132927922,
+      "complement_residual_fraction": 0.24968229012807328,
+      "layer_image_norms": [
+        2269.1135358125202,
+        4567.5498458287575,
+        2304.090560211792
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0001857814504673561,
+      "retained_residual_fraction": 0.9878927792544355,
+      "complement_residual_fraction": 0.15513818581170788,
+      "layer_image_norms": [
+        3755.5285239720815,
+        7454.328768609645,
+        3701.928549557896
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0001854894304094996,
+      "retained_residual_fraction": 0.9919409712240999,
+      "complement_residual_fraction": 0.12670086663866711,
+      "layer_image_norms": [
+        3594.1634381093486,
+        7166.251474834486,
+        3576.2078472257735
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.00019526341818634448,
+      "retained_residual_fraction": 0.9928493949852264,
+      "complement_residual_fraction": 0.1193736942440406,
+      "layer_image_norms": [
+        3525.254353464025,
+        6971.351993486267,
+        3449.993462346785
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.0001810355070658842,
+      "retained_residual_fraction": 0.9912272222656783,
+      "complement_residual_fraction": 0.1321688081185113,
+      "layer_image_norms": [
+        3731.6235244037807,
+        7471.752481858059,
+        3743.646045710745
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.00019304725260530723,
+      "retained_residual_fraction": 0.9835546041269976,
+      "complement_residual_fraction": 0.18061102042949936,
+      "layer_image_norms": [
+        3153.9195642145814,
+        6252.744319640203,
+        3104.7964835109174
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0001868235720492863,
+      "retained_residual_fraction": 0.9893669673384959,
+      "complement_residual_fraction": 0.14544072311229514,
+      "layer_image_norms": [
+        4109.94486780145,
+        8281.617605465282,
+        4174.176974802748
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00020428571266233034,
+      "retained_residual_fraction": 0.9904042701181056,
+      "complement_residual_fraction": 0.13820051277698892,
+      "layer_image_norms": [
+        2449.5452848347973,
+        4882.029790067966,
+        2436.6354272501085
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00019556092566159718,
+      "retained_residual_fraction": 0.9877696593707217,
+      "complement_residual_fraction": 0.15592017196837665,
+      "layer_image_norms": [
+        2736.941798202382,
+        5484.54730034268,
+        2750.7333358072747
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0001847458694781695,
+      "retained_residual_fraction": 0.9845265969911785,
+      "complement_residual_fraction": 0.17523521283398008,
+      "layer_image_norms": [
+        2402.255425299222,
+        4857.72501177037,
+        2456.8357893942757
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00020265915379563367,
+      "retained_residual_fraction": 0.9770860679429484,
+      "complement_residual_fraction": 0.21284458140105036,
+      "layer_image_norms": [
+        2091.8403185457287,
+        4231.241860616852,
+        2141.7124456169163
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.00018112848915115284,
+      "retained_residual_fraction": 0.9890879790712651,
+      "complement_residual_fraction": 0.1473260657749373,
+      "layer_image_norms": [
+        2432.9604652784474,
+        4931.791845194863,
+        2500.142701065213
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.0001951601684330946,
+      "retained_residual_fraction": 0.9903392423608819,
+      "complement_residual_fraction": 0.13866573131121723,
+      "layer_image_norms": [
+        2220.5266300036064,
+        4473.702457500093,
+        2255.1222837061177
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.00020823931795343353,
+      "retained_residual_fraction": 0.9758098263484073,
+      "complement_residual_fraction": 0.2186210941375311,
+      "layer_image_norms": [
+        1950.9200123731894,
+        3884.533410596793,
+        1936.2035285303239
+      ]
+    },
+    {
+      "source": "both",
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0002179384980166344,
+      "retained_residual_fraction": 0.9898955197319671,
+      "complement_residual_fraction": 0.14179866012970224,
+      "layer_image_norms": [
+        2095.110475287643,
+        4170.100684543959,
+        2077.0509419996533
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0005145646763728088,
+      "retained_residual_fraction": 0.9973781312392258,
+      "complement_residual_fraction": 0.07236617528756659,
+      "layer_image_norms": [
+        1067.0132377996586,
+        2128.51076990864,
+        1066.8503330781255
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0004659830044669233,
+      "retained_residual_fraction": 0.995504661823266,
+      "complement_residual_fraction": 0.0947125561271847,
+      "layer_image_norms": [
+        1065.8548219828403,
+        2129.9509797849514,
+        1069.3091987970258
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0004543671254432439,
+      "retained_residual_fraction": 0.9973556763330717,
+      "complement_residual_fraction": 0.07267499491710513,
+      "layer_image_norms": [
+        1436.039478551417,
+        2858.884311145137,
+        1428.5633423000213
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0004922672182869067,
+      "retained_residual_fraction": 0.9975431685172874,
+      "complement_residual_fraction": 0.07005445699233438,
+      "layer_image_norms": [
+        1336.2972784479837,
+        2664.7313194929247,
+        1334.6445599428544
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.0004759604206997784,
+      "retained_residual_fraction": 0.9979998953783968,
+      "complement_residual_fraction": 0.06321557422589201,
+      "layer_image_norms": [
+        1407.2093076274139,
+        2800.873498593953,
+        1399.5579080559244
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.0004827091642245149,
+      "retained_residual_fraction": 0.9972671024187544,
+      "complement_residual_fraction": 0.07388048750043733,
+      "layer_image_norms": [
+        1381.2898810744907,
+        2756.2776050765615,
+        1380.9863855449494
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0004281886156411171,
+      "retained_residual_fraction": 0.9982299385099698,
+      "complement_residual_fraction": 0.05947259757553908,
+      "layer_image_norms": [
+        1374.462344549012,
+        2741.5998307487803,
+        1372.8378260538457
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0004935748599282728,
+      "retained_residual_fraction": 0.9988255650514154,
+      "complement_residual_fraction": 0.048450909173312746,
+      "layer_image_norms": [
+        1486.6614990560897,
+        2972.6263514916636,
+        1491.9439014982931
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0003924139097499779,
+      "retained_residual_fraction": 0.9977012558349854,
+      "complement_residual_fraction": 0.0677658033619668,
+      "layer_image_norms": [
+        1241.3753898897578,
+        2480.4841511785958,
+        1243.745518724492
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00045539727909294745,
+      "retained_residual_fraction": 0.9984671804767343,
+      "complement_residual_fraction": 0.05534699188610129,
+      "layer_image_norms": [
+        1220.1027121564016,
+        2439.883006143929,
+        1224.5390122197603
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.000394951223372423,
+      "retained_residual_fraction": 0.9973851112503237,
+      "complement_residual_fraction": 0.07226990975627033,
+      "layer_image_norms": [
+        1017.2122019802656,
+        2032.785398068738,
+        1018.9281591128564
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00038918134592147533,
+      "retained_residual_fraction": 0.997594005248189,
+      "complement_residual_fraction": 0.06932676750633665,
+      "layer_image_norms": [
+        1055.6340092336786,
+        2107.677490740253,
+        1055.2286483659618
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.0003954900163856502,
+      "retained_residual_fraction": 0.9979242904234095,
+      "complement_residual_fraction": 0.06439806350298867,
+      "layer_image_norms": [
+        1059.934372601917,
+        2117.673234820214,
+        1061.0578397592233
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.00042046283105708624,
+      "retained_residual_fraction": 0.9974442129284083,
+      "complement_residual_fraction": 0.0714495772949559,
+      "layer_image_norms": [
+        1027.6034492133444,
+        2051.4866499894147,
+        1027.0946995064544
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.0003641625631504959,
+      "retained_residual_fraction": 0.9972234990200998,
+      "complement_residual_fraction": 0.07446672412634006,
+      "layer_image_norms": [
+        1026.299874233101,
+        2055.727427842356,
+        1032.3967200486857
+      ]
+    },
+    {
+      "source": "chi",
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.00042374458682813935,
+      "retained_residual_fraction": 0.9981771810748449,
+      "complement_residual_fraction": 0.060351596345718884,
+      "layer_image_norms": [
+        1040.611544152639,
+        2085.232567667894,
+        1047.778006280073
+      ]
+    }
+  ],
+  "verdict": "MULTICHANNEL_PRONG_DIRAC_TANGENT_PASS",
+  "claim_boundary": "Linearized same-carrier three-layer equation test. A pass would still require native next-layer evolution, current, two translations, nonlinear endurance, and refinement before V4-006 could close."
+}

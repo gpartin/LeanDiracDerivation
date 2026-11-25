@@ -1,0 +1,198 @@
+{
+  "status": "V4_DENSITY_MOLD_TENSOR_RESPONSE_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_family": "T_chi=(B/2)[kappa|chiDot|^2+|A19 Vchi/24|^2], Vchi=chiDot+alpha [rhoPsiDot I + H19(rhoPsiDot)]chi/[2(rhoChi+kappa chi0^2)]",
+  "second_moment_normalization": 12.0,
+  "coefficient_provenance": "sum_C19 w n_a n_b=12 delta_ab; alpha=1+54/chi0^2",
+  "phase_covariant": true,
+  "cubic_covariant": true,
+  "positive_kinetic_square": true,
+  "modes": [
+    {
+      "mode": "local",
+      "combined_relative_residual": 0.08707278250194267,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08410231728250343
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.0841023172773271
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08888256485628143
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08888256485633386
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.08888256485624926
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.08888256485623973
+        }
+      ]
+    },
+    {
+      "mode": "local_plus_full",
+      "combined_relative_residual": 0.09591389545890368,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08863968646169106
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.08863972919908022
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.0950275682372955
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.09502756825135178
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.10512006038652895
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.10512006037136638
+        }
+      ]
+    },
+    {
+      "mode": "local_plus_traceless",
+      "combined_relative_residual": 0.08635782816410094,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.08050219385254338
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.08050224296453834
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.08522901252156215
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.08522901265083113
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09420820738070632
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09420820736912336
+        }
+      ]
+    },
+    {
+      "mode": "local_plus_trace",
+      "combined_relative_residual": 0.09613829229982089,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.09199325752951625
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.09199325752768686
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.09864555949878437
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.09864555949880147
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.09864555949877385
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.09864555949877067
+        }
+      ]
+    },
+    {
+      "mode": "tensor_only",
+      "combined_relative_residual": 0.13210199485379406,
+      "rows": [
+        {
+          "axis": 0,
+          "sign": -1,
+          "relative_residual": 0.11841027659875906
+        },
+        {
+          "axis": 0,
+          "sign": 1,
+          "relative_residual": 0.11841024978455227
+        },
+        {
+          "axis": 1,
+          "sign": -1,
+          "relative_residual": 0.12900181324929194
+        },
+        {
+          "axis": 1,
+          "sign": 1,
+          "relative_residual": 0.12900181388607893
+        },
+        {
+          "axis": 2,
+          "sign": -1,
+          "relative_residual": 0.1501884575440023
+        },
+        {
+          "axis": 2,
+          "sign": 1,
+          "relative_residual": 0.15018845753541946
+        }
+      ]
+    }
+  ],
+  "best_mode": "local_plus_traceless",
+  "best_relative_residual": 0.08635782816410094,
+  "relative_improvement_over_local": 0.00821099679254857,
+  "verdict": "TENSOR_COMPLETION_IMPROVES_HANDOFF",
+  "claim_boundary": "This is a six-direction inverse response test, not a rest spectrum, free orbit, action admission, or Dirac pass."
+}

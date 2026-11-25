@@ -1,0 +1,68 @@
+{
+  "scope": "latest componentwise Psi/chi material connection only",
+  "field_rows": [
+    {
+      "epsilon": 0.0001,
+      "phase_wave_velocity_rms": 5.084668150368721e-22,
+      "envelope_velocity_rms": 1.8292182152401483e-07,
+      "envelope_material_kinetic_delta": -1.394292311282854e-14
+    },
+    {
+      "epsilon": 0.0003,
+      "phase_wave_velocity_rms": 2.8443068030094152e-21,
+      "envelope_velocity_rms": 1.6462920734122987e-06,
+      "envelope_material_kinetic_delta": -1.1293729618606602e-12
+    },
+    {
+      "epsilon": 0.001,
+      "phase_wave_velocity_rms": 8.471376846008293e-20,
+      "envelope_velocity_rms": 1.829158812968641e-05,
+      "envelope_material_kinetic_delta": -1.3942341025932072e-10
+    },
+    {
+      "epsilon": 0.003,
+      "phase_wave_velocity_rms": 6.636224939261444e-19,
+      "envelope_velocity_rms": 0.0001645811052065081,
+      "envelope_material_kinetic_delta": -1.1289487614520586e-08
+    },
+    {
+      "epsilon": 0.01,
+      "phase_wave_velocity_rms": 3.0687649803474657e-18,
+      "envelope_velocity_rms": 0.0018232394562349308,
+      "envelope_material_kinetic_delta": -1.3884370319000973e-06
+    },
+    {
+      "epsilon": 0.03,
+      "phase_wave_velocity_rms": 2.492307293499291e-17,
+      "envelope_velocity_rms": 0.015991876660599688,
+      "envelope_material_kinetic_delta": -0.00010880407176869309
+    },
+    {
+      "epsilon": 0.1,
+      "phase_wave_velocity_rms": 0.0,
+      "envelope_velocity_rms": 0.13849417354073815,
+      "envelope_material_kinetic_delta": -0.009779780457274692
+    }
+  ],
+  "small_amplitude_velocity_power": 1.999920201864256,
+  "small_amplitude_kinetic_correction_power": 3.9998974141762518,
+  "carrier_local_metric": {
+    "active_sites": 56,
+    "minimum_eigenvalue": 0.0,
+    "maximum_eigenvalue": 13.415199290108951,
+    "median_smallest_to_largest_ratio": 0.015721675242830028,
+    "minimum_smallest_to_largest_ratio": 0.0,
+    "interpretation": "These eigenvalues measure local translation observability.  They are not frequencies of propagating normal modes."
+  },
+  "analytic_order": {
+    "gram": "O(epsilon^2)",
+    "rhs": "O(epsilon^2)",
+    "velocity_with_fixed_vacuum_floor": "O(epsilon^2)",
+    "advective_derivative": "O(epsilon^3)",
+    "action_correction": "O(epsilon^4)"
+  },
+  "verdict": "LATEST_PRONG_CONNECTION_IS_NOT_YET_A_LIGHT_SECTOR",
+  "reason": "The candidate removes a pure local phase rate, has no linear vacuum contribution, and contains no plaquette-curvature dynamics.  Its near-null directions are under-observed local translations, not demonstrated transverse photon modes.",
+  "next_falsifiable_gate": "Derive a bond connection from relative Psi/chi prong phase and orientation, form its cube-plaquette holonomy without adding a third field, and test for exactly two gapless transverse modes plus a nonpropagating gradient null direction.",
+  "claim_boundary": "This does not show that the full two-field framework cannot support light.  It shows only that the newest best-matching material connection does not by itself supply linear light."
+}

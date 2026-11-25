@@ -1,0 +1,69 @@
+{
+  "status": "V4_DIRECT_FIELD_BOND_FREE_RESPONSE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "input_orbit": "edge_snap_transfer_charge_four_update_orbit",
+  "chi_inertia": 1197.0,
+  "candidate": {
+    "description": "Separate positive reciprocal direct-field C19 Dirichlet energies for native complex Psi and complex chi, split into the cubic face and edge bond orbits.",
+    "normalization": "Each class is divided by its directed C19 weight sum; the Euler-Lagrange force is therefore -2 D_class/W_class.",
+    "contains_corner_or_dirac_labels": false
+  },
+  "single_columns": {
+    "psi_faces": {
+      "correlation_with_required_DEL_response": -0.17739359069409324,
+      "unconstrained_optimal_coefficient": -247.0690742698775,
+      "positive_optimal_coefficient": 0.0,
+      "positive_relative_residual": 1.0,
+      "positive_explained_squared_fraction": 0.0
+    },
+    "psi_edges": {
+      "correlation_with_required_DEL_response": -0.19082908051285322,
+      "unconstrained_optimal_coefficient": -287.4706629264763,
+      "positive_optimal_coefficient": 0.0,
+      "positive_relative_residual": 1.0,
+      "positive_explained_squared_fraction": 0.0
+    },
+    "chi_faces": {
+      "correlation_with_required_DEL_response": 0.3621163777057237,
+      "unconstrained_optimal_coefficient": 414.6086665138144,
+      "positive_optimal_coefficient": 414.6086665138144,
+      "positive_relative_residual": 0.9321328923481275,
+      "positive_explained_squared_fraction": 0.13112827100271418
+    },
+    "chi_edges": {
+      "correlation_with_required_DEL_response": 0.3607887584177071,
+      "unconstrained_optimal_coefficient": 323.9793670239499,
+      "positive_optimal_coefficient": 323.9793670239499,
+      "positive_relative_residual": 0.932647560335312,
+      "positive_explained_squared_fraction": 0.13016852820059044
+    }
+  },
+  "positive_four_column_fit": {
+    "coefficients": {
+      "chi_faces": 225.3976097919643,
+      "chi_edges": 159.18077146731878
+    },
+    "relative_residual": 0.929923548407247,
+    "explained_squared_fraction": 0.13524219411767457,
+    "rank": 4
+  },
+  "equal_coefficient_controls": {
+    "all_fields": {
+      "correlation_with_required_DEL_response": 0.19577100308644815,
+      "unconstrained_optimal_coefficient": 82.59855151762757,
+      "positive_optimal_coefficient": 82.59855151762757,
+      "positive_relative_residual": 0.980649638938661,
+      "positive_explained_squared_fraction": 0.038326285649473824
+    },
+    "equal_native_wave_speed_chi_weighted_by_B": {
+      "correlation_with_required_DEL_response": 0.36745068775920253,
+      "unconstrained_optimal_coefficient": 0.15713665700364265,
+      "positive_optimal_coefficient": 0.15713665700364265,
+      "positive_relative_residual": 0.9300430054923747,
+      "positive_explained_squared_fraction": 0.13502000793471058
+    }
+  },
+  "verdict": "RESPONSE_DIAGNOSTIC_ONLY",
+  "claim_boundary": "A favorable response would only justify a freely re-solved action test. It would not establish an exact rest orbit, stability, translation, Dirac motion, or coefficient provenance."
+}

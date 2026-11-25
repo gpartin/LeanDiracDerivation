@@ -1,0 +1,92 @@
+{
+  "status": "V4_DENSITY_FLOW_VELOCITY_DIAGNOSTIC",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "axis": 0,
+      "sign": -1,
+      "expected_cell_velocity": 12.559186954420017,
+      "weighted_mean_velocity": [
+        -46.04931501533507,
+        1.7763568394002505e-15,
+        -1.7763568394002505e-15
+      ],
+      "mean_forward_fraction": 3.666584085614611,
+      "mean_transverse_fraction": 2.0002472636255547e-16,
+      "weighted_rms_forward_fraction": 3.6996576620972803,
+      "weighted_rms_transverse_fraction": 3.9591778239718507
+    },
+    {
+      "axis": 0,
+      "sign": 1,
+      "expected_cell_velocity": 12.559186954420532,
+      "weighted_mean_velocity": [
+        46.04931501532994,
+        1.7763568394002505e-15,
+        -5.329070518200751e-15
+      ],
+      "mean_forward_fraction": 3.666584085614052,
+      "mean_transverse_fraction": 4.472688853274499e-16,
+      "weighted_rms_forward_fraction": 3.6996576620966444,
+      "weighted_rms_transverse_fraction": 3.9591778239713937
+    },
+    {
+      "axis": 1,
+      "sign": -1,
+      "expected_cell_velocity": 12.559186954420456,
+      "weighted_mean_velocity": [
+        0.0,
+        -46.04931501533068,
+        3.552713678800501e-15
+      ],
+      "mean_forward_fraction": 3.666584085614133,
+      "mean_transverse_fraction": 2.828776808318832e-16,
+      "weighted_rms_forward_fraction": 3.699657662096738,
+      "weighted_rms_transverse_fraction": 3.9591778239714612
+    },
+    {
+      "axis": 1,
+      "sign": 1,
+      "expected_cell_velocity": 12.55918695442007,
+      "weighted_mean_velocity": [
+        3.552713678800501e-15,
+        46.04931501533453,
+        0.0
+      ],
+      "mean_forward_fraction": 3.666584085614552,
+      "mean_transverse_fraction": 2.828776808318919e-16,
+      "weighted_rms_forward_fraction": 3.699657662097214,
+      "weighted_rms_transverse_fraction": 3.959177823971804
+    },
+    {
+      "axis": 2,
+      "sign": -1,
+      "expected_cell_velocity": 12.559186954420221,
+      "weighted_mean_velocity": [
+        8.881784197001252e-16,
+        -8.881784197001252e-16,
+        -46.04931501533301
+      ],
+      "mean_forward_fraction": 3.666584085614387,
+      "mean_transverse_fraction": 1.0001236318127611e-16,
+      "weighted_rms_forward_fraction": 3.699657662097026,
+      "weighted_rms_transverse_fraction": 3.959177823971668
+    },
+    {
+      "axis": 2,
+      "sign": 1,
+      "expected_cell_velocity": 12.559186954419864,
+      "weighted_mean_velocity": [
+        3.552713678800501e-15,
+        -3.552713678800501e-15,
+        46.04931501533655
+      ],
+      "mean_forward_fraction": 3.666584085614774,
+      "mean_transverse_fraction": 4.0004945272511577e-16,
+      "weighted_rms_forward_fraction": 3.699657662097466,
+      "weighted_rms_transverse_fraction": 3.959177823971985
+    }
+  ],
+  "claim_boundary": "Velocity diagnostic on prescribed exact-shift intervals only; not a freely solved trajectory or action pass."
+}

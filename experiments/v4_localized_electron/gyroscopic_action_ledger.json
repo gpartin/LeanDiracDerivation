@@ -1,0 +1,64 @@
+{
+  "status": "GYROSCOPIC_ACTION_BASIS_PARTIAL_IMPROVEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "baseline": {
+    "description": "best bounded position-action diagnostic before gyroscopic terms",
+    "growth_rate": 0.07555568837990508,
+    "exact_rest_orbit": true
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "basis": "local relative gyro Im[W^dagger (chi x PsiDot - chiDot x Psi)] / chi0^2",
+      "coefficient": -0.00425,
+      "growth_rate": 0.07417033553118041,
+      "relative_improvement": 0.018335520176309017,
+      "outcome": "IMPROVEMENT_MODE_CROSSING"
+    },
+    {
+      "cycle": 2,
+      "basis": "C19 bond relative gyro Im[W^dagger D19 R] / (chi0^2 sum_w)",
+      "coefficient": 0.007,
+      "growth_rate": 0.07317623712678566,
+      "relative_improvement": 0.03149268181047057,
+      "outcome": "IMPROVEMENT_MODE_CROSSING"
+    },
+    {
+      "cycle": 3,
+      "basis": "elementary-plaquette relative gyro with freely re-solved eight-ray deformation",
+      "tested_coefficients": [-0.001, -0.0003, 0.0003, 0.001],
+      "best_growth_rate": 0.08205427737825266,
+      "outcome": "NO_IMPROVEMENT_RETIRED"
+    },
+    {
+      "cycle": 4,
+      "basis": "local common gyro Im[W^dagger WDot] / chi0^2",
+      "coefficient": -0.0075,
+      "growth_rate": 0.07058738360055156,
+      "relative_improvement": 0.06575685942231317,
+      "outcome": "IMPROVEMENT_MODE_CROSSING"
+    },
+    {
+      "cycle": 5,
+      "basis": "independent chi and Psi Berry one-forms",
+      "chi_coefficient": 0.1,
+      "psi_coefficient": -0.1,
+      "growth_rate": 0.07043478376002132,
+      "relative_improvement": 0.06777655964346578,
+      "outcome": "SMALL_IMPROVEMENT_MODE_CROSSING"
+    }
+  ],
+  "calculus_checks": {
+    "first_variations": true,
+    "local_one_form_not_total_derivative": true,
+    "antiunitary_time_reversal": true,
+    "velocity_linear_terms_cancel_from_hamiltonian_energy": true,
+    "verification_marker": "V4_GYROSCOPIC_ACTION_CALCULUS_PASS"
+  },
+  "current_leading_defect": "in-plane chi corner phase/radial shear; complete spectrum still has finite positive growth",
+  "coefficient_provenance": "diagnostic continuation only; no coefficient is admitted or derived",
+  "consecutive_no_improvement_bases": 0,
+  "next_basis": "amplitude-resolved local Berry basis, followed by the lowest-degree C19 common-neighbor triangle basis if response rank is insufficient",
+  "claim_boundary": "The action-space search is converging but V4-002 remains FAIL. No movement, localized Dirac, spin, or promotion follows."
+}

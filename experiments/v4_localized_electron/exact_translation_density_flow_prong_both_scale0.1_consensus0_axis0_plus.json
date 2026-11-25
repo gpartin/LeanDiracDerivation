@@ -1,0 +1,89 @@
+{
+  "status": "V4_EXACT_TRANSLATION_DENSITY_FLOW_PRONG_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "mode": "both",
+  "velocity_scale": 0.1,
+  "consensus_passes": 0,
+  "target_pattern": "same-assignment exact one-cell translation of the complete joint Psi-chi carrier with unchanged eight-site core values",
+  "action_candidate": "positive material kinetic action with local velocity derived from Psi-density continuity and C19 gradient; every Psi/chi component advects only into its matching component",
+  "coefficient_provenance": "C19 second moment 12, locked kappa regularization, and unit material derivative from the continuity equation",
+  "rest_DEL_norm": 5.3225784001911195e-06,
+  "first_shell_and_clock_case": {
+    "free_site_count": 48,
+    "free_real_coordinate_count": 576,
+    "lsmr_stop_code": 7,
+    "lsmr_iterations": 12,
+    "linear_relative_residual": 0.1130951447245959,
+    "correction_norm_over_state_norm": 0.1525274022599418,
+    "linear_bounded_dt_coordinate_change": 184.92145738103034,
+    "linear_psi_phase_change": -0.0002654592550358514,
+    "linear_chi_phase_change": 7.888641381557536e-08,
+    "best_nonlinear": {
+      "scale": 0.6000000000000001,
+      "relative_residual": 0.9536487005074721
+    },
+    "best_dt": 0.08,
+    "best_psi_phase": 3.141432060431727,
+    "best_chi_phase": 6.259129845086572e-07,
+    "best_nonlinear_residual_diagnostics": {
+      "Psi_power_fraction": 0.01965032065688728,
+      "chi_power_fraction": 0.9803496793431126,
+      "core_power_fraction": 0.7070567780886962,
+      "first_shell_power_fraction": 0.2918636584464754,
+      "far_exterior_power_fraction": 0.0010795634648284095,
+      "complex_component_power_fractions": [
+        0.23269466570555403,
+        0.4411113931056251,
+        0.3261939411888204
+      ],
+      "maximum_residual_site": [
+        2,
+        1,
+        1
+      ],
+      "maximum_residual_site_power_fraction": 0.10209975675642172
+    },
+    "full_nonlinear_solve": {
+      "initial_relative_residual": 0.9536487005074722,
+      "final_relative_residual": 0.6126253496689849,
+      "minimum_trace_residual": 0.6126253496689851,
+      "optimizer_evaluations": 18,
+      "correction_norm_over_state_norm": 0.188567729244487,
+      "dt": 0.08,
+      "dt_bounds": [
+        0.000244140625,
+        0.08
+      ],
+      "psi_phase": 3.139739458025495,
+      "chi_phase": -0.029981701759112443,
+      "residual_diagnostics": {
+        "Psi_power_fraction": 0.0542461200983506,
+        "chi_power_fraction": 0.9457538799016489,
+        "core_power_fraction": 0.688999012354371,
+        "first_shell_power_fraction": 0.1370294196217242,
+        "far_exterior_power_fraction": 0.17397156802390448,
+        "complex_component_power_fractions": [
+          0.29559167416240617,
+          0.4856812738744477,
+          0.218727051963145
+        ],
+        "maximum_residual_site": [
+          2,
+          1,
+          1
+        ],
+        "maximum_residual_site_power_fraction": 0.10379688437669807
+      },
+      "state_update_defect": {
+        "lsmr_stop_code": 7,
+        "lsmr_iterations": 60,
+        "linearized_next_layer_correction_norm": 111.27930341478542,
+        "correction_over_exact_translation_step": 1.212505723641508,
+        "postsolve_DEL_relative_residual": 0.0001916191141696655
+      }
+    }
+  },
+  "verdict": "DENSITY_FLOW_PRONG_EXACT_SHIFT_OPEN",
+  "claim_boundary": "Research gate only. No action admission without exact update, all axes/signs, two free handoffs, boundedness, conservation, rest spectrum, and Dirac-current validation."
+}

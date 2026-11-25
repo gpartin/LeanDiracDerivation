@@ -1,0 +1,66 @@
+{
+  "status": "V4_C19_BISTABLE_CHI_ORIENTATION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "action_delta": "sum_C19 w |chi_i^dagger chi_j|^2 (rho_chi_i rho_chi_j-|chi_i^dagger chi_j|^2) / chi0^4",
+  "coefficient_rule": "unit native normalization response screen; no coefficient is admitted or fit to a Dirac or stability target",
+  "random_positive_control": 0.8321922655518614,
+  "exact_rest_potential": 48829.95380139929,
+  "rows": [
+    {
+      "strength": 0.0,
+      "rest_DEL_rms": 2.340034110451259e-12,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1561.355466769789,
+      "spectral_radius": 1.0000000526958808,
+      "growth_rate": 1.3490145121697692e-05,
+      "reciprocal_pairing_defect": 1.5067613823305237e-10,
+      "count_modulus_above_1_plus_1e_minus_7": 0,
+      "largest_moduli": [
+        1.0000000526958808,
+        1.0000000493712269,
+        1.0000000478489552,
+        1.0000000478489552,
+        1.0000000477447197,
+        1.0000000477447197,
+        1.000000044527595,
+        1.000000044527595,
+        1.0000000424734106,
+        1.0000000424734106,
+        1.0000000412416745,
+        1.0000000412416745
+      ]
+    },
+    {
+      "strength": 1.0,
+      "rest_DEL_rms": 2.3128235200177425,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "following_block_condition_number": 1561.355466769789,
+      "spectral_radius": 1.004245125358227,
+      "growth_rate": 1.084451899712685,
+      "reciprocal_pairing_defect": 7.517531042111614e-11,
+      "count_modulus_above_1_plus_1e_minus_7": 13,
+      "largest_moduli": [
+        1.004245125358227,
+        1.004245125358227,
+        1.0023370661305273,
+        1.0023234409697093,
+        1.0018900743418504,
+        1.0018900743418504,
+        1.0011005264950952,
+        1.0011005264950952,
+        1.0010438559770305,
+        1.0008415890231075,
+        1.0008415890231075,
+        1.0000204132502195
+      ]
+    }
+  ],
+  "rest_preserved": false,
+  "positive_control_pass": true,
+  "spectrum_improved": false,
+  "verdict": "C19_BISTABLE_CHI_ORIENTATION_NO_IMPROVEMENT",
+  "claim_boundary": "Targeted full-spectrum response gate only. A positive result would still require coefficient provenance, nonlinear 100-cycle stability, translation, and same-readout Dirac-current closure."
+}

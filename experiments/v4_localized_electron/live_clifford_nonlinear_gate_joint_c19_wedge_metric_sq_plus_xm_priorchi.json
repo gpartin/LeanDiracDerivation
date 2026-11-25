@@ -1,0 +1,70 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_c19_wedge_metric_sq",
+  "action_scale": 0.05263157894736842,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "chi_lift": "prior",
+  "chi_scales": {
+    "plus": [
+      0.0003479600832739469,
+      -5.499963616435744e-09
+    ],
+    "minus": [
+      0.0003044126836514495,
+      1.3588621367613447e-08
+    ]
+  },
+  "requested_updates": 4,
+  "all_solvers_converged": true,
+  "maximum_native_vs_dirac_relative_error": 0.008562978836275596,
+  "maximum_outside_four_component_fraction": 0.00025451411317787333,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.0008874892223637153,
+          "outside_four_component_fraction": 2.6306509297653847e-05,
+          "native_norm_ratio": 0.999501610254052
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "native_vs_dirac_relative_error": 0.0026386368262800376,
+          "outside_four_component_fraction": 7.840184536887685e-05,
+          "native_norm_ratio": 0.9985264335103397
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 5,
+          "native_vs_dirac_relative_error": 0.005214660552133937,
+          "outside_four_component_fraction": 0.00015508358807449948,
+          "native_norm_ratio": 0.9971076741838312
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_vs_dirac_relative_error": 0.008562978836275596,
+          "outside_four_component_fraction": 0.00025451411317787333,
+          "native_norm_ratio": 0.9952892984921026
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "Four unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

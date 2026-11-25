@@ -1,0 +1,65 @@
+{
+  "status": "V4_CUBE_INCIDENCE_REPOSITORY_ACTION_BASIS_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "rows": [
+    {
+      "action_invariant": "existing_density_connection",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.014676971786384593,
+      "endpoint_response_norm": 0.04191919778277177
+    },
+    {
+      "action_invariant": "existing_cube_incidence_connection",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.06265720842487063,
+      "endpoint_response_norm": 0.06010180035515115
+    },
+    {
+      "action_invariant": "joint_phase_lock",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.08097587882561755,
+      "endpoint_response_norm": 0.33451230703610724
+    },
+    {
+      "action_invariant": "relative_bilinear_phase",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.3190925241569338,
+      "endpoint_response_norm": 0.5947729539186554
+    },
+    {
+      "action_invariant": "area_bilinear_phase",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.11198784349711279,
+      "endpoint_response_norm": 0.6784303973378483
+    },
+    {
+      "action_invariant": "density_oriented_common_pair",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 333.7983693377448,
+      "endpoint_response_norm": 0.041919197785231496
+    },
+    {
+      "action_invariant": "density_oriented_relative_pair",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 339.323559760177,
+      "endpoint_response_norm": 0.04106835453120653
+    }
+  ],
+  "action_response_rank": 6,
+  "action_response_singular_values": [
+    0.8885716141931947,
+    0.332815482057747,
+    0.1688800174548943,
+    0.06393834783945916,
+    0.03592263390312683,
+    0.02257790613629565,
+    4.461568417803781e-12
+  ],
+  "unrepaired_relative_endpoint_error": 0.5873664373821328,
+  "best_linearized_repository_basis_relative_error": 0.2810339939814242,
+  "diagnostic_coefficients": {
+    "existing_density_connection": 0.17728291908355018,
+    "existing_cube_incidence_connection": -19.463810299094973,
+    "joint_phase_lock": 2.822751793084528,
+    "relative_bilinear_phase": 1.2441212120568261,
+    "area_bilinear_phase": -0.0775930008628852,
+    "density_oriented_common_pair": 0.17728291816084932,
+    "density_oriented_relative_pair": 5.068290409663898
+  },
+  "verdict": "EXISTING_REPOSITORY_ACTION_BASIS_DEFICIENT",
+  "claim_boundary": "Endpoint linear-response span only. Coefficients are fitted to the Dirac comparator and are not admissible action constants."
+}

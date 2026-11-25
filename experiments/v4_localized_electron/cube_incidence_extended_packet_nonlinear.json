@@ -1,0 +1,414 @@
+{
+  "status": "V4_CUBE_INCIDENCE_EXTENDED_PACKET_NONLINEAR",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "requested_updates": 4,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.003155921473253479,
+          "ill_conditioned_coordinate_readout_error": 0.008138693612739122,
+          "outside_packet_lift_fraction": 6.418037506198947e-05,
+          "native_packet_norm_ratio": 0.9992661772957722
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.00876452128057174,
+          "ill_conditioned_coordinate_readout_error": 0.027826704102310203,
+          "outside_packet_lift_fraction": 0.00019218728695083413,
+          "native_packet_norm_ratio": 0.998757960466603
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.0156283707026848,
+          "ill_conditioned_coordinate_readout_error": 0.06147721885656302,
+          "outside_packet_lift_fraction": 0.00038303490714499224,
+          "native_packet_norm_ratio": 0.9998140808170557
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.022434248318450905,
+          "ill_conditioned_coordinate_readout_error": 0.10747774925555353,
+          "outside_packet_lift_fraction": 0.0006350171477436848,
+          "native_packet_norm_ratio": 1.0037019075419638
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.002700946165136338,
+          "ill_conditioned_coordinate_readout_error": 0.007397008470833321,
+          "outside_packet_lift_fraction": 6.444261048703932e-05,
+          "native_packet_norm_ratio": 0.9995169261453963
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.007573493961787827,
+          "ill_conditioned_coordinate_readout_error": 0.025330217957529596,
+          "outside_packet_lift_fraction": 0.0001929393240324793,
+          "native_packet_norm_ratio": 0.9992099863232549
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.013724586390440576,
+          "ill_conditioned_coordinate_readout_error": 0.05640137235417699,
+          "outside_packet_lift_fraction": 0.00038454166068821206,
+          "native_packet_norm_ratio": 1.0000846217014498
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.020172513922233504,
+          "ill_conditioned_coordinate_readout_error": 0.09987281795899769,
+          "outside_packet_lift_fraction": 0.0006375788185474272,
+          "native_packet_norm_ratio": 1.0032602826643822
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.0030122532712886932,
+          "ill_conditioned_coordinate_readout_error": 0.009474274933917356,
+          "outside_packet_lift_fraction": 6.68561331503258e-05,
+          "native_packet_norm_ratio": 0.9988978982878507
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.008343258746749833,
+          "ill_conditioned_coordinate_readout_error": 0.030217126286325807,
+          "outside_packet_lift_fraction": 0.0002003022300423075,
+          "native_packet_norm_ratio": 0.9972216090945698
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.014796759842087987,
+          "ill_conditioned_coordinate_readout_error": 0.061061219263857665,
+          "outside_packet_lift_fraction": 0.0003994371893227346,
+          "native_packet_norm_ratio": 0.9961517209980147
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.021053279794682026,
+          "ill_conditioned_coordinate_readout_error": 0.09877442289544369,
+          "outside_packet_lift_fraction": 0.0006625707087591299,
+          "native_packet_norm_ratio": 0.9966810661106972
+        }
+      ]
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.0036243937756595345,
+          "ill_conditioned_coordinate_readout_error": 0.012644089651901077,
+          "outside_packet_lift_fraction": 6.700271055858392e-05,
+          "native_packet_norm_ratio": 0.9990296638382785
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.010030803228226335,
+          "ill_conditioned_coordinate_readout_error": 0.041531902896702076,
+          "outside_packet_lift_fraction": 0.00020078702707165223,
+          "native_packet_norm_ratio": 0.9977402143256483
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.017809501766802644,
+          "ill_conditioned_coordinate_readout_error": 0.08602865231231815,
+          "outside_packet_lift_fraction": 0.0004004835168315525,
+          "native_packet_norm_ratio": 0.9980092897196792
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.025443715667524094,
+          "ill_conditioned_coordinate_readout_error": 0.14126971822181036,
+          "outside_packet_lift_fraction": 0.000664284804307723,
+          "native_packet_norm_ratio": 1.001571073886064
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.0027464735311888413,
+          "ill_conditioned_coordinate_readout_error": 0.012322860634973508,
+          "outside_packet_lift_fraction": 6.45039404456082e-05,
+          "native_packet_norm_ratio": 0.9994829564116812
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.007714706582679603,
+          "ill_conditioned_coordinate_readout_error": 0.03883065855815036,
+          "outside_packet_lift_fraction": 0.0001933046517077781,
+          "native_packet_norm_ratio": 0.9994707263427843
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.014054235921287477,
+          "ill_conditioned_coordinate_readout_error": 0.08000287372203639,
+          "outside_packet_lift_fraction": 0.0003857038554638351,
+          "native_packet_norm_ratio": 1.0017718725348288
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.02091832209014867,
+          "ill_conditioned_coordinate_readout_error": 0.13339742524065537,
+          "outside_packet_lift_fraction": 0.0006402903814757037,
+          "native_packet_norm_ratio": 1.0081857109464656
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.003226989643799075,
+          "ill_conditioned_coordinate_readout_error": 0.014467472522289571,
+          "outside_packet_lift_fraction": 6.425175047111103e-05,
+          "native_packet_norm_ratio": 0.9995979068309678
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.009108580453983007,
+          "ill_conditioned_coordinate_readout_error": 0.043917327451560614,
+          "outside_packet_lift_fraction": 0.00019267623814382448,
+          "native_packet_norm_ratio": 0.9999286885049284
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.016681090603192655,
+          "ill_conditioned_coordinate_readout_error": 0.08823511705310531,
+          "outside_packet_lift_fraction": 0.0003847437822499692,
+          "native_packet_norm_ratio": 1.0026127869598147
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.024942575269103314,
+          "ill_conditioned_coordinate_readout_error": 0.1449334217013319,
+          "outside_packet_lift_fraction": 0.0006391953646439156,
+          "native_packet_norm_ratio": 1.009271612336625
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.0025489520415311827,
+          "ill_conditioned_coordinate_readout_error": 0.009613103623027617,
+          "outside_packet_lift_fraction": 5.668417793172117e-05,
+          "native_packet_norm_ratio": 0.9982680524795183
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.007190489616089899,
+          "ill_conditioned_coordinate_readout_error": 0.030901199620269302,
+          "outside_packet_lift_fraction": 0.00016989564069370145,
+          "native_packet_norm_ratio": 0.9950255678344582
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.013139495171704875,
+          "ill_conditioned_coordinate_readout_error": 0.0635939107591864,
+          "outside_packet_lift_fraction": 0.0003389956047099708,
+          "native_packet_norm_ratio": 0.9918346880016466
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.01958351462002067,
+          "ill_conditioned_coordinate_readout_error": 0.10382452764304484,
+          "outside_packet_lift_fraction": 0.000562755353892626,
+          "native_packet_norm_ratio": 0.9905885106745758
+        }
+      ]
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "completed_updates": 4,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "native_state_vs_dirac_lift_relative_error": 0.0031246445640644442,
+          "ill_conditioned_coordinate_readout_error": 0.012459622122575075,
+          "outside_packet_lift_fraction": 5.650417131381278e-05,
+          "native_packet_norm_ratio": 0.9981839235087124
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 6,
+          "native_state_vs_dirac_lift_relative_error": 0.008755973593009989,
+          "ill_conditioned_coordinate_readout_error": 0.041143002225888445,
+          "outside_packet_lift_fraction": 0.0001693351841152069,
+          "native_packet_norm_ratio": 0.9952430972351978
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "native_state_vs_dirac_lift_relative_error": 0.01585391587738243,
+          "ill_conditioned_coordinate_readout_error": 0.08659259767310998,
+          "outside_packet_lift_fraction": 0.0003378465433984164,
+          "native_packet_norm_ratio": 0.9933858158856931
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 8,
+          "native_state_vs_dirac_lift_relative_error": 0.023352829112421137,
+          "ill_conditioned_coordinate_readout_error": 0.1429933455397738,
+          "outside_packet_lift_fraction": 0.0005607520405120207,
+          "native_packet_norm_ratio": 0.9948616716159691
+        }
+      ]
+    }
+  ],
+  "all_solvers_converged": true,
+  "maximum_relative_packet_error": 0.025443715667524094,
+  "maximum_outside_packet_lift_fraction": 0.000664284804307723,
+  "verdict": "EXTENDED_PACKET_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "Four unrestricted nonlinear updates at 0.01% tangent amplitude for both copies, both signs, one axis and a diagonal. This is a short-run validation, not two cell translations, 100 cycles, box refinement, or a final V4-006 pass."
+}

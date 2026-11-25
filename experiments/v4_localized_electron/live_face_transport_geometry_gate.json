@@ -1,0 +1,24 @@
+{
+  "status": "V4_FACE_TRANSPORT_GEOMETRY_GATE",
+  "native_mode_count": 19,
+  "matter_transport_bonds_per_site": 6,
+  "edge_bonds_in_matter_transport_term": 0,
+  "per_undirected_face_bond_coefficient": 0.05263157894736842,
+  "aggregate_incident_face_strength": 0.3157894736842105,
+  "omega_m_geometric_ratio": 0.3157894736842105,
+  "native_kappa": 0.015873015873015872,
+  "smooth_wedge_gate_global_upper_bound": 1.0319979843789366,
+  "adjacency_metric_eigenvalue_bounds": [
+    0.6741058996698095,
+    1.3258941003301905
+  ],
+  "laplacian_metric_eigenvalue_bounds": [
+    1.0,
+    1.651788200660381
+  ],
+  "common_covariant_velocity_eigenvalue": 1.0,
+  "strictly_positive": true,
+  "derivation": "Each site is incident on the +/- face bond in three axes. Variation of the undirected bond sum therefore exposes six neighbors. At coefficient 1/chi0 per bond, the aggregate coordination is 6/chi0.",
+  "verdict": "SIX_FACE_RATIO_DERIVED_AND_METRIC_POSITIVE",
+  "claim_boundary": "This derives the geometric ratio and a global positivity bound. It does not by itself prove a moving localized carrier."
+}

@@ -1,0 +1,118 @@
+{
+  "status": "V4_006_PERSONAL_TOUCH_10_ROUND_STOP",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "baseline": {
+    "rest_DEL_rms": 1.8309874303524006e-14,
+    "spectral_radius": 1.004055110985325,
+    "growth_rate": 1.0360092627725035,
+    "leading_mode_Psi_fraction": 0.998553,
+    "leading_mode_chi_fraction": 0.001447,
+    "carrier_fraction": 1.0,
+    "translation_overlap_fraction": 0.0053837
+  },
+  "preserved_best": {
+    "action_basis": "even transfer oscillator plus density-balance square",
+    "strengths": {"even_transfer": 2.0, "density_balance": 0.5},
+    "rest_DEL_rms": 1.8e-14,
+    "spectral_radius": 1.000292944617761,
+    "growth_rate": 0.07498283977332108,
+    "relative_growth_reduction_from_canonical": 0.927624,
+    "admitted": false,
+    "reason_not_admitted": "finite positive internal growth and no free translating branch"
+  },
+  "consecutive_no_improvement_rounds": 10,
+  "rounds": [
+    {
+      "round": 1,
+      "basis": "local parallel-overlap Gram invariant |chi^dagger Psi|^2",
+      "result": "NO_IMPROVEMENT",
+      "evidence": "first-order response and curvature are numerically zero on both the canonical and preserved-best leading modes",
+      "artifact": "personal_touch_action_basis_screen.json"
+    },
+    {
+      "round": 2,
+      "basis": "positive local Gram-area energy |chi wedge Psi|^2",
+      "result": "NO_IMPROVEMENT_OVER_PRESERVED_BEST",
+      "best_growth_rate": 0.7010710465453941,
+      "artifact": "personal_touch_local_area_frame_branch.json"
+    },
+    {
+      "round": 3,
+      "basis": "C19 differences of separate Psi and chi direction dyads",
+      "result": "NO_IMPROVEMENT",
+      "best_growth_rate": 1.0360679844022735,
+      "artifact": "personal_touch_ordered_frame_branch.json"
+    },
+    {
+      "round": 4,
+      "basis": "complete ordered frame including cross dyad",
+      "result": "FREDHOLM_OBSTRUCTED",
+      "relative_range_obstruction": 0.03947945,
+      "artifact": "personal_touch_complete_frame_fredholm.json"
+    },
+    {
+      "round": 5,
+      "basis": "C19 differences of the joint local plane projector",
+      "result": "NO_IMPROVEMENT",
+      "best_growth_rate": 1.0360164436390162,
+      "artifact": "personal_touch_plane_frame_branch.json"
+    },
+    {
+      "round": 6,
+      "basis": "positive local kinetic metric for the joint Psi-chi plane",
+      "result": "NO_IMPROVEMENT",
+      "best_growth_rate": 1.0360118465547072,
+      "artifact": "personal_touch_plane_kinetic_frame_branch.json"
+    },
+    {
+      "round": 7,
+      "basis": "C19 Bargmann neighbor phase/frame connection",
+      "result": "TANGENT_AND_COPY_CLOSURE_FAIL",
+      "minimum_relative_outside_eight_component_tangent": 0.9944583446710401,
+      "artifact": "c19_bargmann_connection_copy_gate.json"
+    },
+    {
+      "round": 8,
+      "basis": "local Berry one-form of W=chi wedge Psi",
+      "result": "NO_IMPROVEMENT_OVER_PRESERVED_BEST",
+      "best_growth_rate": 0.5984120955349854,
+      "artifact": "personal_touch_area_berry_frame_branch.json"
+    },
+    {
+      "round": 9,
+      "basis": "local Berry one-form of the full cross-covariance chi Psi^dagger",
+      "result": "NO_IMPROVEMENT_ON_EXACT_SMALL_BRANCH",
+      "best_exact_branch_growth_rate": 1.0360100423598462,
+      "first_order_solvable": true,
+      "artifact": "personal_touch_cross_berry_frame_branch.json"
+    },
+    {
+      "round": 10,
+      "basis": "positive local harmonic memory of the full cross-covariance",
+      "result": "NO_FINITE_STABILIZATION",
+      "best_growth_rate": 0.975339705041744,
+      "artifact": "personal_touch_cross_oscillator_frame_branch.json"
+    }
+  ],
+  "supplemental_controls": [
+    {
+      "basis": "C19 bond harmonic memory of cross-covariance differences",
+      "best_growth_rate": 0.3947585159398906,
+      "result": "slows rather than stabilizes; unstable-mode count increases",
+      "artifact": "personal_touch_cross_bond_oscillator_frame_branch.json"
+    },
+    {
+      "basis": "C19 Berry connection of cross-covariance differences",
+      "relative_range_obstruction": 0.08297398136450206,
+      "result": "FREDHOLM_OBSTRUCTED",
+      "artifact": "personal_touch_cross_bond_berry_fredholm.json"
+    }
+  ],
+  "unresolved_soft_mode": "corner-asymmetric coupled Psi-chi internal twist/shear with a Psi-dominated exterior tail; not a translation mode",
+  "position_only_full_frame_status": "tested local Gram, separate dyad, joint plane and complete cross-dyad families do not beat the preserved best; the complete cross-dyad direction is Fredholm obstructed",
+  "next_justified_route": "a changed native action class or a noncompact carrier structure; do not continue coefficient tuning within the tested two-field compact full-frame basis",
+  "v4_002": "FAIL",
+  "v4_006": "OPEN",
+  "verdict": "V4_006_PERSONAL_TOUCH_10_ROUND_STOP"
+}

@@ -1,0 +1,52 @@
+{
+  "status": "V4_C27_CROSS_BOND_GYRO_OBSTRUCTION_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis_names": [
+    "local_cross_common",
+    "local_cross_relative",
+    "c19_cross_common",
+    "c19_cross_relative",
+    "body_cross_common",
+    "body_cross_relative"
+  ],
+  "rest_force_rank": 1,
+  "rest_nullity": 5,
+  "rest_singular_values": [
+    15.176179558574383,
+    8.501390055358224e-13,
+    3.9968846343968995e-16,
+    5.488840827489179e-17,
+    1.5719461521458423e-32,
+    3.395499062721473e-33
+  ],
+  "admissible_response_rank": 5,
+  "admissible_response_singular_values": [
+    0.0005185038554055408,
+    1.0779762583382405e-06,
+    1.11114741626534e-07,
+    1.5663023442371003e-11,
+    2.7759092604969785e-12
+  ],
+  "diagnostic_coefficients": {
+    "local_cross_common": -7693.032096723418,
+    "local_cross_relative": 7692.937426254304,
+    "c19_cross_common": 1.7400026715920438e-07,
+    "c19_cross_relative": -1.7399886807130286e-07,
+    "body_cross_common": 600.9399089843688,
+    "body_cross_relative": -600.849570861286
+  },
+  "combined_relative_remainder": 0.9984548411854273,
+  "branches": [
+    {
+      "branch": "minus",
+      "relative_remainder": 0.9988410418230015
+    },
+    {
+      "branch": "plus",
+      "relative_remainder": 0.9980678596732625
+    }
+  ],
+  "verdict": "CROSS_BOND_GYRO_BASIS_MISSES_NONLINEAR_OBSTRUCTION",
+  "claim_boundary": "Exact-rest-nullspace response-rank screen only. Diagnostic coefficients are not admitted or fitted into the action."
+}

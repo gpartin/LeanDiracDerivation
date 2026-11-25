@@ -1,0 +1,203 @@
+{
+  "status": "V4_PER_PRONG_DIRAC_PACKET_GATE",
+  "rest_DEL_norm": 6.343895047597236e-11,
+  "maximum_relative_DEL_residual": 0.0002589018728260226,
+  "mean_relative_DEL_residual": 0.00014489588450697068,
+  "maximum_complement_residual_fraction": 0.007076604976770703,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 7.128535995780619e-05,
+      "complement_residual_fraction": 0.004875750548445023
+    },
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00010808306304897968,
+      "complement_residual_fraction": 0.004661656195196399
+    },
+    {
+      "flavor": "plus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00017599416600014138,
+      "complement_residual_fraction": 0.003429693315905875
+    },
+    {
+      "flavor": "plus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00014800284912035302,
+      "complement_residual_fraction": 0.0038437761717573316
+    },
+    {
+      "flavor": "plus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.0001893236205978147,
+      "complement_residual_fraction": 0.0034103829181473993
+    },
+    {
+      "flavor": "plus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.00014920644529892394,
+      "complement_residual_fraction": 0.0037434003055698364
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.000125171345666369,
+      "complement_residual_fraction": 0.004461300966617151
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 7.999357568141452e-05,
+      "complement_residual_fraction": 0.007076604976770703
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 9.605162150877808e-05,
+      "complement_residual_fraction": 0.003205248175612552
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "relative_DEL_residual": 9.378596140247092e-05,
+      "complement_residual_fraction": 0.0027978407179558534
+    },
+    {
+      "flavor": "minus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.0002589018728260226,
+      "complement_residual_fraction": 0.0017269615348220906
+    },
+    {
+      "flavor": "minus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "relative_DEL_residual": 0.00017818963361872136,
+      "complement_residual_fraction": 0.0022683100329765524
+    },
+    {
+      "flavor": "minus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "relative_DEL_residual": 0.0002588207801040973,
+      "complement_residual_fraction": 0.001870792433543861
+    },
+    {
+      "flavor": "minus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "relative_DEL_residual": 0.00016987435883820493,
+      "complement_residual_fraction": 0.0023348897235028207
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "relative_DEL_residual": 0.00015519972619917424,
+      "complement_residual_fraction": 0.0019336247827218605
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "relative_DEL_residual": 6.044977224225885e-05,
+      "complement_residual_fraction": 0.0041967938977023845
+    }
+  ],
+  "verdict": "PER_PRONG_DIRAC_TANGENT_PASS",
+  "claim_boundary": "Linear tangent gate only; no coefficient was fitted to Dirac."
+}

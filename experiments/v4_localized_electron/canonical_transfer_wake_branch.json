@@ -1,0 +1,88 @@
+{
+  "status": "V4_CANONICAL_TRANSFER_WAKE_BRANCH",
+  "mode": "transfer_odd",
+  "strength": 0.0001,
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "trace": [
+    {
+      "iteration": 0,
+      "residual_rms": 0.0005847262063488713,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 3.4945110503756923e-09,
+      "accepted_scale": 0.25,
+      "trial_residual_rms": 0.0005833419805802271
+    },
+    {
+      "iteration": 1,
+      "residual_rms": 0.0005833419805802271,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 1.110308061485436e-08,
+      "accepted_scale": 0.0078125,
+      "trial_residual_rms": 0.0005815878275986701
+    },
+    {
+      "iteration": 2,
+      "residual_rms": 0.0005815878275986701,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 2.1723875377879794e-08,
+      "accepted_scale": 0.0078125,
+      "trial_residual_rms": 0.000579852882736886
+    },
+    {
+      "iteration": 3,
+      "residual_rms": 0.000579852882736886,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 2.1831820336342627e-08,
+      "accepted_scale": 0.0078125,
+      "trial_residual_rms": 0.0005782322229173279
+    },
+    {
+      "iteration": 4,
+      "residual_rms": 0.0005782322229173279,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 2.1763563314800415e-08,
+      "accepted_scale": 0.0078125,
+      "trial_residual_rms": 0.0005774220875228449
+    },
+    {
+      "iteration": 5,
+      "residual_rms": 0.0005774220875228449,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 2.1683195852684046e-08,
+      "accepted_scale": 0.0078125,
+      "trial_residual_rms": 0.0005773069777210556
+    },
+    {
+      "iteration": 6,
+      "residual_rms": 0.0005773069777210556,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 2.161836170128419e-08,
+      "accepted_scale": 0.00390625,
+      "trial_residual_rms": 0.0005762105537235716
+    },
+    {
+      "iteration": 7,
+      "residual_rms": 0.0005762105537235716,
+      "left_null_norm": 0.0,
+      "jacobian_nullity": 0,
+      "smallest_retained_singular_value": 2.1569696358230264e-08,
+      "accepted_scale": 0.00390625,
+      "trial_residual_rms": 0.0005754373853316681
+    }
+  ],
+  "final_residual_rms": 0.0005754373853316681,
+  "state_displacement_over_rest": 0.014310582763590108,
+  "final_left_null_norm": 0.0,
+  "halo_psi_power_fraction": 0.00046572400068368026,
+  "halo_chi_deviation_norm": 2.7456399669433353,
+  "verdict": "TRANSFER_WAKE_DEFORMED_REST_ORBIT_NOT_YET_SOLVED",
+  "claim_boundary": "Fixed-frequency pseudoinverse continuation using the canonical DEL Jacobian. A solved orbit would still require coefficient provenance, updated transport/current, stability, and finite translation gates."
+}

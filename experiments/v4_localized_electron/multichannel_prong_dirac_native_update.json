@@ -1,0 +1,219 @@
+{
+  "status": "V4_MULTICHANNEL_PRONG_DIRAC_NATIVE_UPDATE",
+  "source": "both",
+  "following_jacobian_condition_number": 455777.9894227001,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.019006151369417735,
+      "native_outside_frozen_lift_fraction": 0.013932537096248292,
+      "target_DEL_relative_residual": 0.0008550064834178271
+    },
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.01764864854362122,
+      "native_outside_frozen_lift_fraction": 0.012921862057530148,
+      "target_DEL_relative_residual": 0.0010401377207893553
+    },
+    {
+      "flavor": "plus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.009060294970395814,
+      "native_outside_frozen_lift_fraction": 0.006819892308643706,
+      "target_DEL_relative_residual": 0.0007482159988159673
+    },
+    {
+      "flavor": "plus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.010984397567366393,
+      "native_outside_frozen_lift_fraction": 0.00835057588660963,
+      "target_DEL_relative_residual": 0.000743629519188392
+    },
+    {
+      "flavor": "plus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.009324060430367107,
+      "native_outside_frozen_lift_fraction": 0.007029518397259399,
+      "target_DEL_relative_residual": 0.0007893244649114987
+    },
+    {
+      "flavor": "plus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.011321462306520157,
+      "native_outside_frozen_lift_fraction": 0.008553368560755005,
+      "target_DEL_relative_residual": 0.0007227650466419804
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.0023576739280330512,
+      "native_outside_frozen_lift_fraction": 0.0014576669947696699,
+      "target_DEL_relative_residual": 0.000778040312098732
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.0064583464399820215,
+      "native_outside_frozen_lift_fraction": 0.004824358079822498,
+      "target_DEL_relative_residual": 0.0007413402403903677
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.013278969330444512,
+      "native_outside_frozen_lift_fraction": 0.009707628136559183,
+      "target_DEL_relative_residual": 0.0008188176104166671
+    },
+    {
+      "flavor": "minus",
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.013332076296755258,
+      "native_outside_frozen_lift_fraction": 0.009760088392703821,
+      "target_DEL_relative_residual": 0.0007800679542864429
+    },
+    {
+      "flavor": "minus",
+      "direction": "y",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.013049536397319995,
+      "native_outside_frozen_lift_fraction": 0.009500885856096855,
+      "target_DEL_relative_residual": 0.0007305151269109933
+    },
+    {
+      "flavor": "minus",
+      "direction": "y",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "native_next_vs_dirac_relative_error": 0.014818074185200023,
+      "native_outside_frozen_lift_fraction": 0.010825148307527836,
+      "target_DEL_relative_residual": 0.0008010867852597298
+    },
+    {
+      "flavor": "minus",
+      "direction": "z",
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.007209284412945661,
+      "native_outside_frozen_lift_fraction": 0.005179283443470594,
+      "target_DEL_relative_residual": 0.0007145672124495122
+    },
+    {
+      "flavor": "minus",
+      "direction": "z",
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "native_next_vs_dirac_relative_error": 0.021568653506602333,
+      "native_outside_frozen_lift_fraction": 0.015758877903317262,
+      "target_DEL_relative_residual": 0.000774531548830963
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.00822141933090463,
+      "native_outside_frozen_lift_fraction": 0.006051256942507473,
+      "target_DEL_relative_residual": 0.0008357926567925195
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "native_next_vs_dirac_relative_error": 0.012225501891682129,
+      "native_outside_frozen_lift_fraction": 0.009053524087943347,
+      "target_DEL_relative_residual": 0.0008752370415336754
+    }
+  ],
+  "maximum_native_next_vs_dirac_relative_error": 0.021568653506602333,
+  "maximum_native_outside_frozen_lift_fraction": 0.015758877903317262,
+  "verdict": "MULTICHANNEL_PRONG_NATIVE_DIRAC_UPDATE_OPEN",
+  "claim_boundary": "Action-derived one-step linearized update for both copies, both signs, all axes and a diagonal. Nonlinear repeated motion, Noether-current matching, endurance and refinement remain."
+}

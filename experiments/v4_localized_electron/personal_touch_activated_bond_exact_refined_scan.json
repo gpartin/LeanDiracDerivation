@@ -1,0 +1,136 @@
+{
+  "status": "V4_ACTIVATED_BOND_EXACT_DISCRETE_REFINED_SCAN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "face_coefficients": {
+    "diagonal_symmetric": 0.14705479982595762,
+    "diagonal_antisymmetric": 0.14705479982595762,
+    "diagonal_reversed": 0.075,
+    "diagonal_conjugate": 0.075,
+    "edge_commutator": 0.10294520017404238
+  },
+  "activated_coefficients": {
+    "vacuum_vacuum_chi": 0.000753123914826186,
+    "carrier_vacuum_chi": 0.0967079843896992,
+    "carrier_carrier_chi": 0.0,
+    "carrier_carrier_Psi_tight_frame": 6.94406813381766
+  },
+  "rows": [
+    {
+      "scale": 1.25,
+      "converged_all_requested": true,
+      "converged_count": 4,
+      "leading_modulus": 1.0000117268533548,
+      "growth_rate": 0.003002056856528302,
+      "count_above_1_plus_1e_minus_7": 4,
+      "values": [
+        {
+          "real": 1.000011726838745,
+          "imag": 5.405580511507225e-06,
+          "modulus": 1.000011726853355
+        },
+        {
+          "real": 1.000011726838745,
+          "imag": -5.405580511507225e-06,
+          "modulus": 1.000011726853355
+        },
+        {
+          "real": 1.0000070670205266,
+          "imag": 3.7719912265485497e-06,
+          "modulus": 1.0000070670276404
+        },
+        {
+          "real": 1.0000070670205266,
+          "imag": -3.7719912265485497e-06,
+          "modulus": 1.0000070670276404
+        }
+      ]
+    },
+    {
+      "scale": 1.5,
+      "converged_all_requested": true,
+      "converged_count": 4,
+      "leading_modulus": 1.0000086409815312,
+      "growth_rate": 0.0022120817147207707,
+      "count_above_1_plus_1e_minus_7": 4,
+      "values": [
+        {
+          "real": 1.00000864097401,
+          "imag": -3.878498132019773e-06,
+          "modulus": 1.0000086409815314
+        },
+        {
+          "real": 1.00000864097401,
+          "imag": 3.878498132019773e-06,
+          "modulus": 1.0000086409815314
+        },
+        {
+          "real": 1.0000046623485144,
+          "imag": 2.786837893207742e-06,
+          "modulus": 1.0000046623523975
+        },
+        {
+          "real": 1.0000046623485144,
+          "imag": -2.786837893207742e-06,
+          "modulus": 1.0000046623523975
+        }
+      ]
+    },
+    {
+      "scale": 2.0,
+      "converged_all_requested": false,
+      "converged_count": 0,
+      "leading_modulus": null,
+      "growth_rate": null,
+      "count_above_1_plus_1e_minus_7": 0,
+      "values": []
+    },
+    {
+      "scale": 3.0,
+      "converged_all_requested": false,
+      "converged_count": 1,
+      "leading_modulus": 1.0000000102275293,
+      "growth_rate": 2.6182474792026617e-06,
+      "count_above_1_plus_1e_minus_7": 0,
+      "values": [
+        {
+          "real": 1.0000000102275293,
+          "imag": 0.0,
+          "modulus": 1.0000000102275293
+        }
+      ]
+    }
+  ],
+  "best_complete_row": {
+    "scale": 1.5,
+    "converged_all_requested": true,
+    "converged_count": 4,
+    "leading_modulus": 1.0000086409815312,
+    "growth_rate": 0.0022120817147207707,
+    "count_above_1_plus_1e_minus_7": 4,
+    "values": [
+      {
+        "real": 1.00000864097401,
+        "imag": -3.878498132019773e-06,
+        "modulus": 1.0000086409815314
+      },
+      {
+        "real": 1.00000864097401,
+        "imag": 3.878498132019773e-06,
+        "modulus": 1.0000086409815314
+      },
+      {
+        "real": 1.0000046623485144,
+        "imag": 2.786837893207742e-06,
+        "modulus": 1.0000046623523975
+      },
+      {
+        "real": 1.0000046623485144,
+        "imag": -2.786837893207742e-06,
+        "modulus": 1.0000046623523975
+      }
+    ]
+  },
+  "verdict": "ACTIVATED_BOND_CANDIDATE_RETAINS_TARGETED_GROWTH",
+  "claim_boundary": "Four multipliers nearest the formerly leading real shift. A targeted pass still requires complete contour count, coefficient provenance, refinements, conservation, nonlinear and movement gates."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "V4_DENSITY_MOLD_REST_GATE_FAIL",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "action": "T_chi=(B/2)[kappa|chiDot|^2+|A19 Vchi/24|^2], Vchi=chiDot+s rhoPsiDot chi/[2(rhoChi+kappa chi0^2)]",
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "rest_del_rms_residual": 3.939657680483311e-14,
+      "following_block_condition_number": 1216.0000000004147,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.9999999999128,
+      "spectral_radius": 1.002940518631953,
+      "growth_rate_per_unit_time": 0.7516681634828887,
+      "reciprocal_pairing_defect": 8.737233159195057e-12
+    },
+    {
+      "coefficient": 1.149584487534626,
+      "rest_del_rms_residual": 1.826759444415815e-12,
+      "following_block_condition_number": 1441.5440703264799,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.3756276011992,
+      "spectral_radius": 1.0029405186319478,
+      "growth_rate_per_unit_time": 0.7516681634815284,
+      "reciprocal_pairing_defect": 1.2590373188459125e-11
+    }
+  ],
+  "candidate_improves_incumbent_rest_growth": false,
+  "candidate_preserves_incumbent_rest_growth": true,
+  "relative_growth_improvement": 1.8096353096398062e-12,
+  "verdict": "ADVANCE_TO_RELATIVE_PERIODIC_ORBIT_SEARCH",
+  "claim_boundary": "This is the complete side-3 two-layer linear rest spectrum of the implicit discrete action. It is not a nonlinear long-time stability or moving-electron pass."
+}

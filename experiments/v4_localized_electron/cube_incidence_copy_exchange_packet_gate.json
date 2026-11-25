@@ -1,0 +1,189 @@
+{
+  "status": "V4_C19_COPY_EXCHANGE_PACKET_GATE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "copy_exchange_algebra": {
+    "square_defect": 0.0,
+    "hermiticity_defect": 0.0,
+    "flavor_anticommutator_defect": 0.0,
+    "beta_commutator_defect": 0.0,
+    "gamma_commutator_defects": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "comparator": "face orbit uses gamma_a; edge orbit uses X gamma_a; X is a cube-derived flavor-exchange involution",
+  "rows": [
+    {
+      "exchange_eigenvalue": -1,
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "face_symbol": [
+        -0.11429926915181711,
+        0.0,
+        0.0
+      ],
+      "edge_symbol": [
+        -0.22859853830363422,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_comparator_relative_error": 1.1635728776143184e-05,
+      "one_cycle_native_vs_comparator_relative_error": 0.6547889627805443,
+      "one_cycle_phase_aligned_shape_error": 0.6229755853537293,
+      "one_cycle_norm_ratio": 1.19448517751466
+    },
+    {
+      "exchange_eigenvalue": -1,
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "face_symbol": [
+        0.11429926915181711,
+        0.0,
+        0.0
+      ],
+      "edge_symbol": [
+        0.22859853830363422,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_comparator_relative_error": 1.3347002418358722e-05,
+      "one_cycle_native_vs_comparator_relative_error": 0.6727095230157631,
+      "one_cycle_phase_aligned_shape_error": 0.6443105897383771,
+      "one_cycle_norm_ratio": 1.1767220628100135
+    },
+    {
+      "exchange_eigenvalue": -1,
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "face_symbol": [
+        0.06690006098506379,
+        0.06690006098506379,
+        0.06690006098506379
+      ],
+      "edge_symbol": [
+        0.13107765238352184,
+        0.13107765238352184,
+        0.13107765238352184
+      ],
+      "one_step_native_vs_comparator_relative_error": 1.4060248186136943e-05,
+      "one_cycle_native_vs_comparator_relative_error": 0.8048911478397616,
+      "one_cycle_phase_aligned_shape_error": 0.7736767358190231,
+      "one_cycle_norm_ratio": 1.3084691472235939
+    },
+    {
+      "exchange_eigenvalue": 1,
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "face_symbol": [
+        -0.11429926915181711,
+        0.0,
+        0.0
+      ],
+      "edge_symbol": [
+        -0.22859853830363422,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_comparator_relative_error": 1.3668373183791825e-05,
+      "one_cycle_native_vs_comparator_relative_error": 0.6541167583394285,
+      "one_cycle_phase_aligned_shape_error": 0.6315397632083515,
+      "one_cycle_norm_ratio": 1.2259497012556333
+    },
+    {
+      "exchange_eigenvalue": 1,
+      "direction": "x",
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "face_symbol": [
+        0.11429926915181711,
+        0.0,
+        0.0
+      ],
+      "edge_symbol": [
+        0.22859853830363422,
+        0.0,
+        0.0
+      ],
+      "one_step_native_vs_comparator_relative_error": 1.3347002418358722e-05,
+      "one_cycle_native_vs_comparator_relative_error": 0.6727095230157631,
+      "one_cycle_phase_aligned_shape_error": 0.6443105897383771,
+      "one_cycle_norm_ratio": 1.1767220628100135
+    },
+    {
+      "exchange_eigenvalue": 1,
+      "direction": "diagonal",
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ],
+      "face_symbol": [
+        0.06690006098506379,
+        0.06690006098506379,
+        0.06690006098506379
+      ],
+      "edge_symbol": [
+        0.13107765238352184,
+        0.13107765238352184,
+        0.13107765238352184
+      ],
+      "one_step_native_vs_comparator_relative_error": 1.1488984580446064e-05,
+      "one_cycle_native_vs_comparator_relative_error": 0.6070358628175123,
+      "one_cycle_phase_aligned_shape_error": 0.5740721807946656,
+      "one_cycle_norm_ratio": 1.1283903019929622
+    }
+  ],
+  "best_case": {
+    "exchange_eigenvalue": 1,
+    "direction": "diagonal",
+    "sign": 1,
+    "momentum": [
+      0.20207259421636903,
+      0.20207259421636903,
+      0.20207259421636903
+    ],
+    "face_symbol": [
+      0.06690006098506379,
+      0.06690006098506379,
+      0.06690006098506379
+    ],
+    "edge_symbol": [
+      0.13107765238352184,
+      0.13107765238352184,
+      0.13107765238352184
+    ],
+    "one_step_native_vs_comparator_relative_error": 1.1488984580446064e-05,
+    "one_cycle_native_vs_comparator_relative_error": 0.6070358628175123,
+    "one_cycle_phase_aligned_shape_error": 0.5740721807946656,
+    "one_cycle_norm_ratio": 1.1283903019929622
+  },
+  "verdict": "COPY_EXCHANGE_DOES_NOT_REPAIR_LONG_PACKET",
+  "claim_boundary": "Diagnostic one-cycle linear tangent comparison. The modified comparator has not been derived from the native action and is not a Dirac or movement pass. No coefficient or equation is changed."
+}

@@ -1,0 +1,68 @@
+{
+  "status": "V4_LIVE_PSI_CLIFFORD_LINK_GEOMETRY",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "construction": "normalized Hermitian overlap phases of native complex Psi rays on the twelve cube edges",
+  "fixed_Dirac_or_copy_matrix_used_in_construction": false,
+  "generator_rows": [
+    {
+      "axis": 0,
+      "square_defect": 0.0,
+      "hermiticity_defect": 0.0,
+      "minimum_edge_overlap_magnitude": 0.5773502691896256
+    },
+    {
+      "axis": 1,
+      "square_defect": 0.0,
+      "hermiticity_defect": 0.0,
+      "minimum_edge_overlap_magnitude": 0.5773502691896256
+    },
+    {
+      "axis": 2,
+      "square_defect": 0.0,
+      "hermiticity_defect": 0.0,
+      "minimum_edge_overlap_magnitude": 0.5773502691896257
+    }
+  ],
+  "cross_axis_anticommutator_defects": [
+    7.928653230136499e-16,
+    1.4842246259152398e-15,
+    1.4842246259152398e-15
+  ],
+  "orientation_involution": {
+    "square_defect": 2.243764894275692e-15,
+    "hermiticity_defect": 2.243764894275692e-15,
+    "generator_commutator_defects": [
+      1.682723435568297e-15,
+      1.682723435568297e-15,
+      2.0990105955774656e-15
+    ],
+    "eigenspace_ranks": [
+      4,
+      4
+    ],
+    "projector_defects": [
+      5.60941223568923e-16,
+      5.60941223568923e-16
+    ]
+  },
+  "live_chi_link_intertwiner_defects": [
+    1.7111905598786793e-15,
+    1.9710326105225497e-15,
+    0.0
+  ],
+  "native_beta_grading": {
+    "construction": "i times live-Psi normal link times live-chi normal link",
+    "carrier_plane_normal_axis": 2,
+    "square_defect": 3.0767402982137025e-15,
+    "hermiticity_defect": 3.0767402982137025e-15,
+    "transport_anticommutator_defects": [
+      2.1755839288168296e-15,
+      2.1755839288168296e-15,
+      3.0767402982137025e-15
+    ],
+    "historical_beta_validation_defect": 1.5383701491068513e-15
+  },
+  "verdict": "LIVE_PSI_CHI_LINKS_DERIVE_CLIFFORD_SECTORS_AND_BETA",
+  "claim_boundary": "Exact algebra at the retained rest carrier. It does not yet prove that a reciprocal action transports or preserves these live sectors away from rest."
+}

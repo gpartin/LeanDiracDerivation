@@ -1,0 +1,91 @@
+{
+  "status": "V4_C27_BODY_DIAGONAL_TRANSPORT_ABLATION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "mode": "chi",
+  "action_delta": "positive Dirichlet energy on all eight body-diagonal offsets for chi",
+  "interpretation": "chi receives body-diagonal direct bonds; Psi area remains C19",
+  "rest_body_energy": 16153.819587628866,
+  "rest_body_first_variation_norm": 529.1099704454097,
+  "candidate_rest_DEL_rms": 0.05336547145453929,
+  "axis_rows": [
+    {
+      "phase_ramp_axis": 0,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 2,
+      "fixed_charge_center_singular_values": [
+        9.65102935363068e-06,
+        6.922905974539188e-06,
+        9.864548897510584e-15
+      ],
+      "relative_third_singular_value": 1.0221240176623834e-09,
+      "missing_physical_direction": [
+        -5.576140584043518e-11,
+        3.287306372785959e-10,
+        1.0
+      ]
+    },
+    {
+      "phase_ramp_axis": 1,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 2,
+      "fixed_charge_center_singular_values": [
+        9.731027738189416e-06,
+        6.9405716131362e-06,
+        5.18968418234214e-15
+      ],
+      "relative_third_singular_value": 5.333130602408239e-10,
+      "missing_physical_direction": [
+        9.107780330622941e-11,
+        -2.564766740656506e-10,
+        1.0
+      ]
+    },
+    {
+      "phase_ramp_axis": 2,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ],
+      "fixed_charge_center_rank": 2,
+      "fixed_charge_center_singular_values": [
+        9.772301835583189e-06,
+        6.898759655420983e-06,
+        2.1121502652660084e-15
+      ],
+      "relative_third_singular_value": 2.1613641297643772e-10,
+      "missing_physical_direction": [
+        -4.347082970781977e-11,
+        -8.087010174708252e-11,
+        1.0
+      ]
+    }
+  ],
+  "all_axes_robust_rank_three": false,
+  "verdict": "C27_BODY_DIAGONALS_DO_NOT_CLOSE_TRANSPORT",
+  "claim_boundary": "Unit linear response ablation only. It does not promote C27, define separate fundamental stencils, prove an exact rest orbit, or establish nonlinear carrier movement."
+}

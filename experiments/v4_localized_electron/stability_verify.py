@@ -35,12 +35,39 @@ def main() -> None:
         require(actual == expected, f"artifact hash mismatch: {name}")
     canonical = load("canonical_stability.json")
     candidate = load("research_candidate_stability.json")
+    multisite = load("multisite_response.json")
+    kinetic = load("relative_kinetic_result.json")
+    gyroscopic = load("gyroscopic_action_ledger.json")
     require(canonical["action_changed"] is False,
             "canonical artifact must use the unchanged action")
     require(candidate["action_changed"] is True,
             "research artifact must identify its changed action")
     require(len(canonical["rows"]) == len(candidate["rows"]) == 6,
             "matched artifacts require two boxes and three timesteps")
+    require(multisite["status"] == "SCALAR_MULTISITE_STIFFNESS_NO_IMPROVEMENT",
+            "multi-site response classification changed")
+    require(multisite["positive_c19_curvature"]["best_growth_rate"]
+            > multisite["baseline"]["leading_growth_rate"],
+            "positive C19 curvature unexpectedly improved the spectrum")
+    require(multisite["positive_cube_plaquette_curvature"]["best_growth_rate"]
+            > multisite["baseline"]["leading_growth_rate"],
+            "positive plaquette curvature unexpectedly improved the spectrum")
+    require(multisite["inadmissible_inverse_sign_probe"]["relative_improvement"]
+            < 0.01,
+            "inverse-sign probe no longer supports the recorded conclusion")
+    require(kinetic["validation"]["absolute_difference"] < 1e-6,
+            "derived update no longer reproduces Verlet at zero coupling")
+    require(kinetic["positive_probe"]["exact_rest_orbit_rms_residual"] < 1e-9,
+            "relative-kinetic rest branch was not reproduced")
+    require(kinetic["positive_probe"]["growth_ratio_to_baseline"] > 4.0,
+            "relative-kinetic failure classification changed")
+    require(gyroscopic["status"]
+            == "GYROSCOPIC_ACTION_BASIS_PARTIAL_IMPROVEMENT",
+            "gyroscopic action classification changed")
+    require(gyroscopic["cycles"][-1]["relative_improvement"] > 0.06,
+            "gyroscopic basis no longer reproduces the recorded improvement")
+    require(gyroscopic["cycles"][-1]["growth_rate"] > 0.07,
+            "gyroscopic diagnostic was incorrectly promoted to stable")
 
     for artifact in (canonical, candidate):
         for row in artifact["rows"]:

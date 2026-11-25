@@ -1,0 +1,61 @@
+{
+  "status": "V4_CUBE_INCIDENCE_EXTENDED_PACKET_REFINEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "dt": 0.00390625,
+      "divisor": 1,
+      "maximum_relative_error": 0.003625005306251965,
+      "maximum_outside_spatial_lift_fraction": 6.753241209620744e-05,
+      "flavors": [
+        {
+          "flavor": "plus",
+          "maximum_relative_error": 0.003625005306251965
+        },
+        {
+          "flavor": "minus",
+          "maximum_relative_error": 0.003379405309470321
+        }
+      ]
+    },
+    {
+      "dt": 0.001953125,
+      "divisor": 2,
+      "maximum_relative_error": 0.0009681636724165703,
+      "maximum_outside_spatial_lift_fraction": 1.6901689461229932e-05,
+      "flavors": [
+        {
+          "flavor": "plus",
+          "maximum_relative_error": 0.0009681636724165703
+        },
+        {
+          "flavor": "minus",
+          "maximum_relative_error": 0.0009024659762354203
+        }
+      ]
+    },
+    {
+      "dt": 0.0009765625,
+      "divisor": 4,
+      "maximum_relative_error": 0.00024656176986371587,
+      "maximum_outside_spatial_lift_fraction": 4.226083398679601e-06,
+      "flavors": [
+        {
+          "flavor": "plus",
+          "maximum_relative_error": 0.00024656176986371587
+        },
+        {
+          "flavor": "minus",
+          "maximum_relative_error": 0.0002298753780821168
+        }
+      ]
+    }
+  ],
+  "observed_error_orders": [
+    1.904660239627938,
+    1.973301839272231
+  ],
+  "verdict": "EXTENDED_PACKET_CONTINUUM_TANGENT_SURVIVES",
+  "claim_boundary": "Fixed side-five tangent refinement with the carrier co-rotating Dirac comparator. It does not prove nonlinear transport, box convergence, native current equality, or V4-006."
+}

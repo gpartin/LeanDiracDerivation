@@ -1,0 +1,201 @@
+{
+  "status": "V4_CONDITIONAL_EDGE_ACTION_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "comparator": "zero-phase cubical conditional edge shift; projectors appear only in comparator preparation",
+  "gyroscopic": {
+    "direction_rows": [
+      {
+        "axis": 0,
+        "sign": -1,
+        "canonical_del_residual_norm": 1864889.723920897,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.0770705125399551
+      },
+      {
+        "axis": 0,
+        "sign": 1,
+        "canonical_del_residual_norm": 1864889.7239211304,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.07707051253995513
+      },
+      {
+        "axis": 1,
+        "sign": -1,
+        "canonical_del_residual_norm": 1666311.8195931104,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.1976815531548027
+      },
+      {
+        "axis": 1,
+        "sign": 1,
+        "canonical_del_residual_norm": 1666311.8195931476,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.1976815531548027
+      },
+      {
+        "axis": 2,
+        "sign": -1,
+        "canonical_del_residual_norm": 1782515.6603963529,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.11980033473189657
+      },
+      {
+        "axis": 2,
+        "sign": 1,
+        "canonical_del_residual_norm": 1782515.6603963529,
+        "basis_rank": 29,
+        "maximum_absolute_single_column_correlation": 0.11980033473189657
+      }
+    ],
+    "direction_reversal_parity": {
+      "basis_even_norm": 6.771583732877957e-16,
+      "basis_odd_norm": 0.016839837618776745,
+      "basis_odd_over_even": 24868388671049.824,
+      "target_even_norm": 3.4641016151377544,
+      "target_odd_norm": 2.319785038698625e-16,
+      "target_odd_over_even": 6.696642582773588e-17
+    },
+    "unconstrained_fit": {
+      "active_columns": 30,
+      "response_rank": 28,
+      "relative_residual": 0.9916041297307772,
+      "explained_squared_fraction": 0.016721249900868096,
+      "coefficients": {
+        "relative_local": -996792616280544.9,
+        "relative_bond": 5559.085661789465,
+        "common_gamma": 1114526022037593.9,
+        "psi_berry": -2036.140340022701,
+        "chi_berry": 196.1640689313604,
+        "psi_density_common": 11305.356084754936,
+        "chi_density_common": -3390.511435676494,
+        "psi_berry_rho_psi": 2862.55539979291,
+        "psi_berry_rho_chi": -117733405781370.0,
+        "chi_berry_rho_psi": -2111318638357110.8,
+        "chi_berry_rho_chi": -1380.0399606523654,
+        "psi_density_relative": 12828.869542156179,
+        "chi_density_relative": 2168.328489633673,
+        "triangle_common": -12688424.938565837,
+        "triangle_psi": 296830.9761657357,
+        "triangle_chi": -1953798.1511009529,
+        "chi_berry_density_difference_sq": 679.3002526798275,
+        "psi_bond_berry": 748.1045050629574,
+        "chi_bond_berry": 99.41423908681833,
+        "overlap_common_berry": -2761198383064.7837,
+        "overlap_relative_berry": 3087329701052.64,
+        "overlap_bond_common_berry": 4.927830773425963,
+        "overlap_bond_relative_berry": -18.73188898494468,
+        "area_plaquette_relative_berry": -50.18302006605586,
+        "chi_berry_area_weight": 16764.388022286344,
+        "psi_berry_area_weight": -24915.895192225573,
+        "normalized_area_common": 33011.640898830454,
+        "normalized_area_relative": -3603.9385862515205,
+        "normalized_area_bond_common": 430.4606946715571,
+        "normalized_area_bond_relative": -7233.051881067674
+      }
+    },
+    "nonnegative_fit": {
+      "active_columns": 30,
+      "response_rank": 28,
+      "relative_residual": 1.0000000000000004,
+      "explained_squared_fraction": -8.881784197001252e-16,
+      "coefficients": {
+        "common_gamma": 2.5533030969660366e-08,
+        "triangle_psi": 1.2128000422360672e-05,
+        "overlap_common_berry": 1.021796406202641e-12,
+        "overlap_bond_common_berry": 2.1675754387561603e-12
+      }
+    },
+    "best_single": {
+      "basis": "relative_local",
+      "coefficient": -2.1892870507209613e-08,
+      "relative_residual": 1.0
+    }
+  },
+  "symmetric_kinetic": {
+    "direction_rows": [
+      {
+        "axis": 0,
+        "sign": -1,
+        "canonical_del_residual_norm": 1864889.723920897,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9793843617862825
+      },
+      {
+        "axis": 0,
+        "sign": 1,
+        "canonical_del_residual_norm": 1864889.7239211304,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9793843617862823
+      },
+      {
+        "axis": 1,
+        "sign": -1,
+        "canonical_del_residual_norm": 1666311.8195931104,
+        "basis_rank": 11,
+        "maximum_absolute_single_column_correlation": 0.9758795294689875
+      },
+      {
+        "axis": 1,
+        "sign": 1,
+        "canonical_del_residual_norm": 1666311.8195931476,
+        "basis_rank": 10,
+        "maximum_absolute_single_column_correlation": 0.9758795294689875
+      },
+      {
+        "axis": 2,
+        "sign": -1,
+        "canonical_del_residual_norm": 1782515.6603963529,
+        "basis_rank": 11,
+        "maximum_absolute_single_column_correlation": 0.9758795263655846
+      },
+      {
+        "axis": 2,
+        "sign": 1,
+        "canonical_del_residual_norm": 1782515.6603963529,
+        "basis_rank": 11,
+        "maximum_absolute_single_column_correlation": 0.9758795263655846
+      }
+    ],
+    "direction_reversal_parity": {
+      "basis_even_norm": 3.5045981491868754,
+      "basis_odd_norm": 5.549906479255384e-16,
+      "basis_odd_over_even": 1.583607090742502e-16,
+      "target_even_norm": 3.4641016151377544,
+      "target_odd_norm": 2.319785038698625e-16,
+      "target_odd_over_even": 6.696642582773588e-17
+    },
+    "unconstrained_fit": {
+      "active_columns": 10,
+      "response_rank": 9,
+      "relative_residual": 0.20319604061525517,
+      "explained_squared_fraction": 0.9587113690782836,
+      "coefficients": {
+        "relative_kinetic": 203.6846740009313,
+        "parallel_kinetic": 60.194917886607534,
+        "psi_gradient_kinetic": -75.06628755128129,
+        "chi_gradient_kinetic": -0.966696971116066,
+        "area_gradient_kinetic": 899.2900979016504,
+        "area_local_kinetic": -558.2453615306682,
+        "area_relative_gradient_kinetic": -82.16611781310326,
+        "psi_orientation_kinetic": -138.05726342132635,
+        "chi_orientation_kinetic": -558.0720822483639,
+        "normalized_area_wave": -161.76334962842586
+      }
+    },
+    "nonnegative_fit": {
+      "active_columns": 10,
+      "response_rank": 9,
+      "relative_residual": 1.0000000000000004,
+      "explained_squared_fraction": -8.881784197001252e-16,
+      "coefficients": {}
+    },
+    "best_single": {
+      "basis": "chi_gradient_kinetic",
+      "coefficient": -0.9657593860407067,
+      "relative_residual": 0.21301609717352538
+    }
+  },
+  "verdict": "RESPONSE_RANK_CLASSIFICATION_ONLY",
+  "claim_boundary": "This is a necessary massless signed-channel response test. It does not prove a lossless physical-corner spinor embedding, a massive beta step, rest stability, or free carrier motion."
+}

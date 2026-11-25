@@ -1,0 +1,39 @@
+{
+  "status": "V4_MIXED_PRONG_DIRAC_NONLINEAR",
+  "action_weights": {
+    "common": 0.25,
+    "relative_prongs": 0.75,
+    "provenance": "one common and three direct prong channels"
+  },
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "requested_updates": 1,
+  "all_solvers_converged": true,
+  "maximum_relative_packet_error": 0.0016437911123657167,
+  "maximum_outside_packet_lift_fraction": 7.918693728321747e-05,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "completed_updates": 1,
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 18,
+          "native_vs_dirac_lift_relative_error": 0.0016437911123657167,
+          "outside_packet_lift_fraction": 7.918693728321747e-05,
+          "norm_ratio": 0.9993233691590774
+        }
+      ]
+    }
+  ],
+  "verdict": "MIXED_PRONG_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "Four unrestricted nonlinear updates at 0.01% tangent amplitude for both copies, both signs, one axis and a diagonal. Current, two translations, 100 cycles and refinement remain."
+}

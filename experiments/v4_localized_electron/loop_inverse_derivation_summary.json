@@ -1,0 +1,29 @@
+{
+  "status": "V4_LOOP_INVERSE_DERIVATION_PARTIAL_IMPROVEMENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "baseline_growth_rate": 0.07498283977332108,
+  "full_frame_commutator": {
+    "formula": "sum_(i,a<b) ||[P_(i+a)-P_i,P_(i+b)-P_i]||_F^2/(2 chi0^4), P=Psi Psi^dagger+chi chi^dagger",
+    "rest_energy": 0.0,
+    "rest_force_norm": 0.0,
+    "original_mode_alignment": 0.6272000322708583,
+    "best_measured_growth_rate": 0.06580454442187854,
+    "residual_mode_growth_rate": 0.06635860865962026
+  },
+  "face_factorization": {
+    "formula": "1/2 sum_(i,a<b) ||w_i tensor w_(i+a+b)-w_(i+a) tensor w_(i+b)||_F^2, w=(chi wedge Psi)/chi0",
+    "rest_energy": 6.058451752097371e-28,
+    "rest_force_norm": 5.935572855733198e-13,
+    "original_mode_alignment": 0.669697673818729,
+    "post_loop_mode_alignment": 0.5787481415565077,
+    "diagnostic_strength": 0.1,
+    "measured_growth_rate": 0.036751669398873546,
+    "relative_growth_reduction": 0.5098710128179806,
+    "converged_outer_eigenvalues": 2,
+    "full_spectrum_converged": false
+  },
+  "verdict": "NEW_ACTION_CLASS_VALIDATED_BUT_STABILITY_NOT_CLOSED",
+  "next_falsifiable_step": "derive the second independent zero-on-rest face identity and solve the positive-semidefinite loop-Hessian stability cone before nonlinear motion tests",
+  "claim_boundary": "No canonical promotion, stability pass, movement pass, or Dirac closure."
+}

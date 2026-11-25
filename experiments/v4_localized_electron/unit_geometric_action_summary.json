@@ -1,0 +1,58 @@
+{
+  "status": "V4_UNIT_GEOMETRIC_BARE_CANONICAL_RESOLVED_BAND_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "baseline": "bare canonical V40 two-field action U_local+U_area on C19",
+  "removed_scaffolding": [
+    "transfer_odd oscillator",
+    "transfer_even oscillator",
+    "density_balance term",
+    "fitted face coefficients",
+    "fitted activated-bond coefficients"
+  ],
+  "research_action_delta": {
+    "coefficient_rule": "unit weight after the declared native normalization",
+    "face_positive_squares": [
+      "diagonal_symmetric",
+      "diagonal_antisymmetric",
+      "diagonal_reversed",
+      "diagonal_conjugate",
+      "edge_commutator"
+    ],
+    "activated_C19_bond_positive_squares": [
+      "vacuum_vacuum_chi_orientation",
+      "carrier_vacuum_chi_orthogonality",
+      "carrier_carrier_chi_C3_tight_frame",
+      "carrier_carrier_Psi_C3_tight_frame"
+    ]
+  },
+  "properties": {
+    "native_complex_Psi_and_chi_only": true,
+    "C19_cubic": true,
+    "positive": true,
+    "reciprocal": true,
+    "phase_invariant": true,
+    "exact_rest_energy_zero": true,
+    "exact_rest_force_zero": true,
+    "prepared_site_labels": false,
+    "Dirac_or_spinor_objects": false,
+    "fitted_coefficients": false
+  },
+  "resolved_band": {
+    "real_and_complex_shifts": 7,
+    "all_requested_modes_converged": true,
+    "maximum_resolved_modulus": 1.0000000202809898,
+    "instability_threshold": 1.0000001,
+    "count_above_threshold": 0
+  },
+  "verdict": "LINEAR_RESOLVED_BAND_CLOSED_WITH_UNIT_GEOMETRIC_ACTION",
+  "remaining_before_V4_006": [
+    "complete complex-contour eigenvalue count",
+    "derive and implement full nonlinear reciprocal forces",
+    "Hamiltonian and Noether conservation",
+    "box and timestep refinement",
+    "100-cycle nonlinear perturbation stability",
+    "same-carrier movement and discrete Dirac transport"
+  ],
+  "claim_boundary": "This is a side-five exact-rest linear resolved-band pass, not yet nonlinear stability, movement, Dirac transport, action admission, or canonical promotion."
+}

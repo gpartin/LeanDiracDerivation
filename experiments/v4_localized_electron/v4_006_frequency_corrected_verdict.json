@@ -1,0 +1,50 @@
+{
+  "status": "V4_006_FREQUENCY_CORRECTED_VERDICT",
+  "date": "2026-11-24",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "frequency_sector_correction": {
+    "rest_orbit_phase_advance": "positive complex phase",
+    "matching_dirac_sector": "negative-frequency negative-energy",
+    "native_force_changed": false
+  },
+  "research_candidate": {
+    "link_source": "joint_face_laplacian_plus_psi_area_oscillator",
+    "action_scale": 0.3157894736842105,
+    "scale_interpretation": "diagnostic six-over-nineteen per face; not admitted"
+  },
+  "short_nonlinear_gate": {
+    "case_count": 8,
+    "updates": 4,
+    "maximum_native_vs_dirac_relative_error": 0.002349262250156486,
+    "maximum_outside_four_component_fraction": 0.0001057226595407648,
+    "verdict": "PASS"
+  },
+  "selected_nine_update_gate": {
+    "maximum_native_vs_dirac_relative_error": 0.009865201499054866,
+    "maximum_outside_four_component_fraction": 0.0003557095630080087,
+    "verdict": "PASS"
+  },
+  "selected_thirty_two_update_gate": {
+    "maximum_native_vs_dirac_relative_error": 0.0627057552156852,
+    "maximum_outside_four_component_fraction": 0.0018938631124438795,
+    "verdict": "FAIL"
+  },
+  "one_cycle_tangent_gate": {
+    "maximum_phase_aligned_shape_error": 1.3597996177160159,
+    "maximum_psi_cross_block": 0.019990115212325972,
+    "maximum_norm_drift": 0.8186346712316397,
+    "verdict": "FAIL"
+  },
+  "native_noether_center": {
+    "longitudinal_direction_matches_corrected_dirac": true,
+    "transverse_drift_remains": true
+  },
+  "action_basis_controls": {
+    "asymptotic_face_oscillator_shape_floor": 0.014871491608925534,
+    "triangle_nine_update_error": 0.022458130029977822,
+    "signed_face_reflection_covariance": "FAIL"
+  },
+  "verdict": "V4_006_OPEN_ORIENTED_WITHIN_SECTOR_RESPONSE_REQUIRED",
+  "claim_boundary": "The frequency branch and backward-current diagnosis are repaired. Full translation, 100-cycle endurance, refinement, and Lean formalization have not passed."
+}

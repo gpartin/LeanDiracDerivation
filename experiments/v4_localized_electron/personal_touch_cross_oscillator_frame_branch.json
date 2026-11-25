@@ -1,0 +1,122 @@
+{
+  "status": "V4_PERSONAL_TOUCH_COMPLETE_FRAME_BRANCH",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate": "cross_oscillator",
+  "base_even_strength": 0.0,
+  "base_density_strength": 0.0,
+  "action_delta": "positive local harmonic action of the complete native cross-covariance tensor chi Psi^dagger, with relative kinetic/restoring weights fixed by the native chi0 clock",
+  "coefficient_rule": "unit relative weights are fixed by the Hilbert--Schmidt norm; overall strength is continuation only and is not admitted",
+  "rows": [
+    {
+      "strength": 0.001,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 3.5462528646557382e-15,
+          "augmented_norm": 6.383255156380329e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0040551084686935,
+      "growth_rate": 1.036008621116806,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 0.01,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 2.617128979696387e-15,
+          "augmented_norm": 4.710832163453497e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0040550858191435,
+      "growth_rate": 1.0360028462496498,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 0.1,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 2.6245668516313475e-15,
+          "augmented_norm": 4.7242203329364256e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.004054859336426,
+      "growth_rate": 1.0359451008300706,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 1.0,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 3.440289253431075e-15,
+          "augmented_norm": 6.192520656175935e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0040525958070687,
+      "growth_rate": 1.0353679768181256,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 10.0,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 2.5524682269524258e-15,
+          "augmented_norm": 4.5944428085143666e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0040300894482674,
+      "growth_rate": 1.0296295399542656,
+      "count_above_1_plus_1e_minus_7": 20
+    },
+    {
+      "strength": 100.0,
+      "trace": [
+        {
+          "iteration": 0,
+          "DEL_rms": 5.019847538128451e-15,
+          "augmented_norm": 9.035725568631212e-14
+        }
+      ],
+      "theta_Psi": 0.07423579507567751,
+      "theta_chi": 0.0,
+      "Psi_carrier_fidelity": 1.0,
+      "Psi_exterior_fraction": 0.0,
+      "chi_exterior_deviation_rms": 0.0,
+      "spectral_radius": 1.0038171876967104,
+      "growth_rate": 0.975339705041744,
+      "count_above_1_plus_1e_minus_7": 20
+    }
+  ],
+  "verdict": "COMPLETE_FRAME_BRANCH_IMPROVES_SPECTRUM",
+  "claim_boundary": "Unrestricted side-three rest-branch continuation and full dense spectrum. A favorable row still requires coefficient provenance, side-five/timestep refinement, nonlinear stability, and motion."
+}

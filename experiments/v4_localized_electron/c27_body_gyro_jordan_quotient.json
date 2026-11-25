@@ -1,0 +1,1711 @@
+{
+  "status": "V4_C27_BODY_GYRO_JORDAN_QUOTIENT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "side": 3,
+  "dt": 0.00390625,
+  "steps_per_cycle": 85,
+  "checkpoint_cycles": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "tolerances": [
+    1e-10,
+    1e-09,
+    1e-08,
+    1e-07,
+    1e-06
+  ],
+  "rows": [
+    {
+      "relative_tolerance": 1e-10,
+      "defect_threshold": 2.7422498483153483e-10,
+      "defect2_threshold": 2.1576511840434223e-10,
+      "eigenspace_dimension": 175,
+      "generalized_eigenspace_dimension": 284,
+      "smallest_defect_singular_values": [
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.4773659488244772e-16,
+        2.4691056256332896e-16,
+        2.1789031615590447e-16,
+        2.1135031309750947e-16,
+        1.8677432672894286e-16,
+        1.5879373816828983e-16,
+        1.5872559409289858e-16,
+        1.5763423623109794e-16,
+        1.3550062593157767e-16,
+        1.1842536325414556e-16,
+        1.0073813697576791e-16,
+        8.413928008715204e-17,
+        7.492905830304941e-17,
+        7.447771783191569e-17,
+        5.807996353176807e-17,
+        4.5857156295558204e-17,
+        1.6608558309850372e-17
+      ],
+      "smallest_defect2_singular_values": [
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.0650962895008527e-16,
+        1.8882070525754238e-16,
+        1.7075697743135647e-16,
+        1.507420106306615e-16,
+        1.3793716101133666e-16,
+        1.2812212509899922e-16,
+        1.201272845692676e-16,
+        1.0477967465719165e-16,
+        9.593298260685072e-17,
+        9.158316943151175e-17,
+        9.03486429138115e-17,
+        7.364957008354716e-17,
+        5.909717386853097e-17,
+        4.079832520839587e-17,
+        2.4738161716110977e-17,
+        8.906076437104367e-18
+      ],
+      "controls": {
+        "psi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999876963,
+            "generalized_quotient_amplification": 7.404938071182318e-09,
+            "native_observable_amplification": 1.046715478665594e-08
+          },
+          "10": {
+            "raw_amplification": 1.0000000000237037,
+            "generalized_quotient_amplification": 7.100588411909081e-09,
+            "native_observable_amplification": 9.643898020909754e-09
+          },
+          "100": {
+            "raw_amplification": 1.0000000186768772,
+            "generalized_quotient_amplification": 7.490398444607714e-09,
+            "native_observable_amplification": 1.0750535842820577e-08
+          },
+          "1000": {
+            "raw_amplification": 1.0000106406941225,
+            "generalized_quotient_amplification": 5.56567564382936e-08,
+            "native_observable_amplification": 1.0500571996367626e-07
+          }
+        },
+        "psi_phase:velocity": {
+          "1": {
+            "raw_amplification": 34.36600366940254,
+            "generalized_quotient_amplification": 2.8348733557956454,
+            "native_observable_amplification": 8.007408687470313
+          },
+          "10": {
+            "raw_amplification": 123.80314219657636,
+            "generalized_quotient_amplification": 3.860983770098964,
+            "native_observable_amplification": 7.6580552803593465
+          },
+          "100": {
+            "raw_amplification": 867.3114868448541,
+            "generalized_quotient_amplification": 5.206585158991737,
+            "native_observable_amplification": 11.855742699620125
+          },
+          "1000": {
+            "raw_amplification": 8926.398718546563,
+            "generalized_quotient_amplification": 5.501998051877521,
+            "native_observable_amplification": 11.443451890009735
+          }
+        },
+        "chi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999964565,
+            "generalized_quotient_amplification": 2.9684169613493935e-09,
+            "native_observable_amplification": 1.0897841443125582e-08
+          },
+          "10": {
+            "raw_amplification": 1.000000000171475,
+            "generalized_quotient_amplification": 3.007418365374531e-09,
+            "native_observable_amplification": 1.1208697166774822e-08
+          },
+          "100": {
+            "raw_amplification": 0.9999994103105673,
+            "generalized_quotient_amplification": 3.4208407986631994e-09,
+            "native_observable_amplification": 1.3163037024161579e-08
+          },
+          "1000": {
+            "raw_amplification": 1.0002393341442208,
+            "generalized_quotient_amplification": 5.747455322703482e-08,
+            "native_observable_amplification": 2.431806887248032e-07
+          }
+        },
+        "chi_phase:velocity": {
+          "1": {
+            "raw_amplification": 128.2301463154853,
+            "generalized_quotient_amplification": 6.738374482938131,
+            "native_observable_amplification": 30.563400566333897
+          },
+          "10": {
+            "raw_amplification": 1117.3866453279452,
+            "generalized_quotient_amplification": 13.561160913717364,
+            "native_observable_amplification": 56.65033121828648
+          },
+          "100": {
+            "raw_amplification": 11138.504463751706,
+            "generalized_quotient_amplification": 13.306608753750835,
+            "native_observable_amplification": 55.26780411580064
+          },
+          "1000": {
+            "raw_amplification": 111417.09597387043,
+            "generalized_quotient_amplification": 16.55734448154691,
+            "native_observable_amplification": 77.82855523090652
+          }
+        },
+        "translation_axis_0:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0103308840965586,
+            "generalized_quotient_amplification": 0.5730746495338545,
+            "native_observable_amplification": 0.4539255736501664
+          },
+          "10": {
+            "raw_amplification": 2.1232042721380164,
+            "generalized_quotient_amplification": 0.6964816803692991,
+            "native_observable_amplification": 0.6380204541076743
+          },
+          "100": {
+            "raw_amplification": 17.85120071082375,
+            "generalized_quotient_amplification": 0.6880667700794804,
+            "native_observable_amplification": 0.5962260803924286
+          },
+          "1000": {
+            "raw_amplification": 185.020259100853,
+            "generalized_quotient_amplification": 0.6702588365961739,
+            "native_observable_amplification": 0.5938244081829313
+          }
+        },
+        "translation_axis_0:velocity": {
+          "1": {
+            "raw_amplification": 164.78618851112677,
+            "generalized_quotient_amplification": 58.98736122326053,
+            "native_observable_amplification": 64.25276263160144
+          },
+          "10": {
+            "raw_amplification": 479.6657158327412,
+            "generalized_quotient_amplification": 48.60441741535125,
+            "native_observable_amplification": 48.44035610124325
+          },
+          "100": {
+            "raw_amplification": 4384.015472785003,
+            "generalized_quotient_amplification": 61.33381926309063,
+            "native_observable_amplification": 65.74021075451063
+          },
+          "1000": {
+            "raw_amplification": 43819.471568612375,
+            "generalized_quotient_amplification": 56.85611195369057,
+            "native_observable_amplification": 57.30767480697164
+          }
+        },
+        "translation_axis_1:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9875434018532451,
+            "generalized_quotient_amplification": 0.5910088652106957,
+            "native_observable_amplification": 0.4650385460346378
+          },
+          "10": {
+            "raw_amplification": 2.3037673825048115,
+            "generalized_quotient_amplification": 0.7423021944975983,
+            "native_observable_amplification": 0.6752065127965574
+          },
+          "100": {
+            "raw_amplification": 19.28608717137881,
+            "generalized_quotient_amplification": 0.8167871413289024,
+            "native_observable_amplification": 0.7068240163158872
+          },
+          "1000": {
+            "raw_amplification": 197.660113091017,
+            "generalized_quotient_amplification": 0.7753667934900585,
+            "native_observable_amplification": 0.7001740021369212
+          }
+        },
+        "translation_axis_1:velocity": {
+          "1": {
+            "raw_amplification": 130.72419944036884,
+            "generalized_quotient_amplification": 62.632499810464886,
+            "native_observable_amplification": 67.5130699513174
+          },
+          "10": {
+            "raw_amplification": 402.2391731868369,
+            "generalized_quotient_amplification": 55.38556267371906,
+            "native_observable_amplification": 55.56948136549737
+          },
+          "100": {
+            "raw_amplification": 3719.186296622132,
+            "generalized_quotient_amplification": 56.175493990538236,
+            "native_observable_amplification": 62.6366326781006
+          },
+          "1000": {
+            "raw_amplification": 37155.08043247626,
+            "generalized_quotient_amplification": 55.61947026697153,
+            "native_observable_amplification": 59.17425043256729
+          }
+        },
+        "translation_axis_2:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9576801215496146,
+            "generalized_quotient_amplification": 0.5082277764727192,
+            "native_observable_amplification": 0.4426900044658449
+          },
+          "10": {
+            "raw_amplification": 2.3184480843877933,
+            "generalized_quotient_amplification": 0.5770189402860119,
+            "native_observable_amplification": 0.5898971504823911
+          },
+          "100": {
+            "raw_amplification": 18.086559919610618,
+            "generalized_quotient_amplification": 0.7854791572607738,
+            "native_observable_amplification": 0.76408798434732
+          },
+          "1000": {
+            "raw_amplification": 179.80661692773137,
+            "generalized_quotient_amplification": 0.686469992629054,
+            "native_observable_amplification": 0.6825231682035999
+          }
+        },
+        "translation_axis_2:velocity": {
+          "1": {
+            "raw_amplification": 137.26277772417617,
+            "generalized_quotient_amplification": 76.02079523553101,
+            "native_observable_amplification": 87.0659406151907
+          },
+          "10": {
+            "raw_amplification": 401.8995034108646,
+            "generalized_quotient_amplification": 50.992358029202116,
+            "native_observable_amplification": 53.39682878181853
+          },
+          "100": {
+            "raw_amplification": 3904.325356675585,
+            "generalized_quotient_amplification": 56.70597282285731,
+            "native_observable_amplification": 54.02149391997466
+          },
+          "1000": {
+            "raw_amplification": 39014.907913511364,
+            "generalized_quotient_amplification": 57.885825881992496,
+            "native_observable_amplification": 67.00451414069852
+          }
+        },
+        "random_carrier:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0747226058713109,
+            "generalized_quotient_amplification": 0.7054977346582445,
+            "native_observable_amplification": 0.8848617186917938
+          },
+          "10": {
+            "raw_amplification": 2.3747266824658553,
+            "generalized_quotient_amplification": 1.0912352315347305,
+            "native_observable_amplification": 1.5528266971588218
+          },
+          "100": {
+            "raw_amplification": 10.072419603878913,
+            "generalized_quotient_amplification": 0.8319509174272947,
+            "native_observable_amplification": 1.0747874060867424
+          },
+          "1000": {
+            "raw_amplification": 97.26128968772875,
+            "generalized_quotient_amplification": 0.9229980436054295,
+            "native_observable_amplification": 1.257830841138222
+          }
+        },
+        "random_carrier:velocity": {
+          "1": {
+            "raw_amplification": 164.15943738668156,
+            "generalized_quotient_amplification": 91.06889753438507,
+            "native_observable_amplification": 130.7259890187578
+          },
+          "10": {
+            "raw_amplification": 294.9527440972544,
+            "generalized_quotient_amplification": 52.38578005677448,
+            "native_observable_amplification": 76.86139832171443
+          },
+          "100": {
+            "raw_amplification": 2635.45813088784,
+            "generalized_quotient_amplification": 52.610686240942925,
+            "native_observable_amplification": 71.55363153868387
+          },
+          "1000": {
+            "raw_amplification": 26389.885938455627,
+            "generalized_quotient_amplification": 97.11449567117496,
+            "native_observable_amplification": 134.29075140474484
+          }
+        }
+      },
+      "maximum_generalized_quotient_amplification": 61.33381926309063,
+      "maximum_quotient_amplification_by_cycle": {
+        "1": 91.06889753438507,
+        "10": 55.38556267371906,
+        "100": 61.33381926309063,
+        "1000": 97.11449567117496
+      },
+      "maximum_native_observable_amplification_by_cycle": {
+        "1": 130.7259890187578,
+        "10": 76.86139832171443,
+        "100": 71.55363153868387,
+        "1000": 134.29075140474484
+      },
+      "worst_100_cycle_control": "translation_axis_0:velocity",
+      "worst_100_cycle_field_fractions": {
+        "psi_carrier": 0.45079597515677644,
+        "psi_exterior": 0.011789439417426382,
+        "chi_carrier": 0.24851868219104806,
+        "chi_exterior": 0.2888959032347491
+      }
+    },
+    {
+      "relative_tolerance": 1e-09,
+      "defect_threshold": 2.7422498483153483e-09,
+      "defect2_threshold": 2.1576511840434224e-09,
+      "eigenspace_dimension": 175,
+      "generalized_eigenspace_dimension": 284,
+      "smallest_defect_singular_values": [
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.4773659488244772e-16,
+        2.4691056256332896e-16,
+        2.1789031615590447e-16,
+        2.1135031309750947e-16,
+        1.8677432672894286e-16,
+        1.5879373816828983e-16,
+        1.5872559409289858e-16,
+        1.5763423623109794e-16,
+        1.3550062593157767e-16,
+        1.1842536325414556e-16,
+        1.0073813697576791e-16,
+        8.413928008715204e-17,
+        7.492905830304941e-17,
+        7.447771783191569e-17,
+        5.807996353176807e-17,
+        4.5857156295558204e-17,
+        1.6608558309850372e-17
+      ],
+      "smallest_defect2_singular_values": [
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.0650962895008527e-16,
+        1.8882070525754238e-16,
+        1.7075697743135647e-16,
+        1.507420106306615e-16,
+        1.3793716101133666e-16,
+        1.2812212509899922e-16,
+        1.201272845692676e-16,
+        1.0477967465719165e-16,
+        9.593298260685072e-17,
+        9.158316943151175e-17,
+        9.03486429138115e-17,
+        7.364957008354716e-17,
+        5.909717386853097e-17,
+        4.079832520839587e-17,
+        2.4738161716110977e-17,
+        8.906076437104367e-18
+      ],
+      "controls": {
+        "psi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999876963,
+            "generalized_quotient_amplification": 7.404938071182318e-09,
+            "native_observable_amplification": 1.046715478665594e-08
+          },
+          "10": {
+            "raw_amplification": 1.0000000000237037,
+            "generalized_quotient_amplification": 7.100588411909081e-09,
+            "native_observable_amplification": 9.643898020909754e-09
+          },
+          "100": {
+            "raw_amplification": 1.0000000186768772,
+            "generalized_quotient_amplification": 7.490398444607714e-09,
+            "native_observable_amplification": 1.0750535842820577e-08
+          },
+          "1000": {
+            "raw_amplification": 1.0000106406941225,
+            "generalized_quotient_amplification": 5.56567564382936e-08,
+            "native_observable_amplification": 1.0500571996367626e-07
+          }
+        },
+        "psi_phase:velocity": {
+          "1": {
+            "raw_amplification": 34.36600366940254,
+            "generalized_quotient_amplification": 2.8348733557956454,
+            "native_observable_amplification": 8.007408687470313
+          },
+          "10": {
+            "raw_amplification": 123.80314219657636,
+            "generalized_quotient_amplification": 3.860983770098964,
+            "native_observable_amplification": 7.6580552803593465
+          },
+          "100": {
+            "raw_amplification": 867.3114868448541,
+            "generalized_quotient_amplification": 5.206585158991737,
+            "native_observable_amplification": 11.855742699620125
+          },
+          "1000": {
+            "raw_amplification": 8926.398718546563,
+            "generalized_quotient_amplification": 5.501998051877521,
+            "native_observable_amplification": 11.443451890009735
+          }
+        },
+        "chi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999964565,
+            "generalized_quotient_amplification": 2.9684169613493935e-09,
+            "native_observable_amplification": 1.0897841443125582e-08
+          },
+          "10": {
+            "raw_amplification": 1.000000000171475,
+            "generalized_quotient_amplification": 3.007418365374531e-09,
+            "native_observable_amplification": 1.1208697166774822e-08
+          },
+          "100": {
+            "raw_amplification": 0.9999994103105673,
+            "generalized_quotient_amplification": 3.4208407986631994e-09,
+            "native_observable_amplification": 1.3163037024161579e-08
+          },
+          "1000": {
+            "raw_amplification": 1.0002393341442208,
+            "generalized_quotient_amplification": 5.747455322703482e-08,
+            "native_observable_amplification": 2.431806887248032e-07
+          }
+        },
+        "chi_phase:velocity": {
+          "1": {
+            "raw_amplification": 128.2301463154853,
+            "generalized_quotient_amplification": 6.738374482938131,
+            "native_observable_amplification": 30.563400566333897
+          },
+          "10": {
+            "raw_amplification": 1117.3866453279452,
+            "generalized_quotient_amplification": 13.561160913717364,
+            "native_observable_amplification": 56.65033121828648
+          },
+          "100": {
+            "raw_amplification": 11138.504463751706,
+            "generalized_quotient_amplification": 13.306608753750835,
+            "native_observable_amplification": 55.26780411580064
+          },
+          "1000": {
+            "raw_amplification": 111417.09597387043,
+            "generalized_quotient_amplification": 16.55734448154691,
+            "native_observable_amplification": 77.82855523090652
+          }
+        },
+        "translation_axis_0:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0103308840965586,
+            "generalized_quotient_amplification": 0.5730746495338545,
+            "native_observable_amplification": 0.4539255736501664
+          },
+          "10": {
+            "raw_amplification": 2.1232042721380164,
+            "generalized_quotient_amplification": 0.6964816803692991,
+            "native_observable_amplification": 0.6380204541076743
+          },
+          "100": {
+            "raw_amplification": 17.85120071082375,
+            "generalized_quotient_amplification": 0.6880667700794804,
+            "native_observable_amplification": 0.5962260803924286
+          },
+          "1000": {
+            "raw_amplification": 185.020259100853,
+            "generalized_quotient_amplification": 0.6702588365961739,
+            "native_observable_amplification": 0.5938244081829313
+          }
+        },
+        "translation_axis_0:velocity": {
+          "1": {
+            "raw_amplification": 164.78618851112677,
+            "generalized_quotient_amplification": 58.98736122326053,
+            "native_observable_amplification": 64.25276263160144
+          },
+          "10": {
+            "raw_amplification": 479.6657158327412,
+            "generalized_quotient_amplification": 48.60441741535125,
+            "native_observable_amplification": 48.44035610124325
+          },
+          "100": {
+            "raw_amplification": 4384.015472785003,
+            "generalized_quotient_amplification": 61.33381926309063,
+            "native_observable_amplification": 65.74021075451063
+          },
+          "1000": {
+            "raw_amplification": 43819.471568612375,
+            "generalized_quotient_amplification": 56.85611195369057,
+            "native_observable_amplification": 57.30767480697164
+          }
+        },
+        "translation_axis_1:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9875434018532451,
+            "generalized_quotient_amplification": 0.5910088652106957,
+            "native_observable_amplification": 0.4650385460346378
+          },
+          "10": {
+            "raw_amplification": 2.3037673825048115,
+            "generalized_quotient_amplification": 0.7423021944975983,
+            "native_observable_amplification": 0.6752065127965574
+          },
+          "100": {
+            "raw_amplification": 19.28608717137881,
+            "generalized_quotient_amplification": 0.8167871413289024,
+            "native_observable_amplification": 0.7068240163158872
+          },
+          "1000": {
+            "raw_amplification": 197.660113091017,
+            "generalized_quotient_amplification": 0.7753667934900585,
+            "native_observable_amplification": 0.7001740021369212
+          }
+        },
+        "translation_axis_1:velocity": {
+          "1": {
+            "raw_amplification": 130.72419944036884,
+            "generalized_quotient_amplification": 62.632499810464886,
+            "native_observable_amplification": 67.5130699513174
+          },
+          "10": {
+            "raw_amplification": 402.2391731868369,
+            "generalized_quotient_amplification": 55.38556267371906,
+            "native_observable_amplification": 55.56948136549737
+          },
+          "100": {
+            "raw_amplification": 3719.186296622132,
+            "generalized_quotient_amplification": 56.175493990538236,
+            "native_observable_amplification": 62.6366326781006
+          },
+          "1000": {
+            "raw_amplification": 37155.08043247626,
+            "generalized_quotient_amplification": 55.61947026697153,
+            "native_observable_amplification": 59.17425043256729
+          }
+        },
+        "translation_axis_2:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9576801215496146,
+            "generalized_quotient_amplification": 0.5082277764727192,
+            "native_observable_amplification": 0.4426900044658449
+          },
+          "10": {
+            "raw_amplification": 2.3184480843877933,
+            "generalized_quotient_amplification": 0.5770189402860119,
+            "native_observable_amplification": 0.5898971504823911
+          },
+          "100": {
+            "raw_amplification": 18.086559919610618,
+            "generalized_quotient_amplification": 0.7854791572607738,
+            "native_observable_amplification": 0.76408798434732
+          },
+          "1000": {
+            "raw_amplification": 179.80661692773137,
+            "generalized_quotient_amplification": 0.686469992629054,
+            "native_observable_amplification": 0.6825231682035999
+          }
+        },
+        "translation_axis_2:velocity": {
+          "1": {
+            "raw_amplification": 137.26277772417617,
+            "generalized_quotient_amplification": 76.02079523553101,
+            "native_observable_amplification": 87.0659406151907
+          },
+          "10": {
+            "raw_amplification": 401.8995034108646,
+            "generalized_quotient_amplification": 50.992358029202116,
+            "native_observable_amplification": 53.39682878181853
+          },
+          "100": {
+            "raw_amplification": 3904.325356675585,
+            "generalized_quotient_amplification": 56.70597282285731,
+            "native_observable_amplification": 54.02149391997466
+          },
+          "1000": {
+            "raw_amplification": 39014.907913511364,
+            "generalized_quotient_amplification": 57.885825881992496,
+            "native_observable_amplification": 67.00451414069852
+          }
+        },
+        "random_carrier:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0747226058713109,
+            "generalized_quotient_amplification": 0.7054977346582445,
+            "native_observable_amplification": 0.8848617186917938
+          },
+          "10": {
+            "raw_amplification": 2.3747266824658553,
+            "generalized_quotient_amplification": 1.0912352315347305,
+            "native_observable_amplification": 1.5528266971588218
+          },
+          "100": {
+            "raw_amplification": 10.072419603878913,
+            "generalized_quotient_amplification": 0.8319509174272947,
+            "native_observable_amplification": 1.0747874060867424
+          },
+          "1000": {
+            "raw_amplification": 97.26128968772875,
+            "generalized_quotient_amplification": 0.9229980436054295,
+            "native_observable_amplification": 1.257830841138222
+          }
+        },
+        "random_carrier:velocity": {
+          "1": {
+            "raw_amplification": 164.15943738668156,
+            "generalized_quotient_amplification": 91.06889753438507,
+            "native_observable_amplification": 130.7259890187578
+          },
+          "10": {
+            "raw_amplification": 294.9527440972544,
+            "generalized_quotient_amplification": 52.38578005677448,
+            "native_observable_amplification": 76.86139832171443
+          },
+          "100": {
+            "raw_amplification": 2635.45813088784,
+            "generalized_quotient_amplification": 52.610686240942925,
+            "native_observable_amplification": 71.55363153868387
+          },
+          "1000": {
+            "raw_amplification": 26389.885938455627,
+            "generalized_quotient_amplification": 97.11449567117496,
+            "native_observable_amplification": 134.29075140474484
+          }
+        }
+      },
+      "maximum_generalized_quotient_amplification": 61.33381926309063,
+      "maximum_quotient_amplification_by_cycle": {
+        "1": 91.06889753438507,
+        "10": 55.38556267371906,
+        "100": 61.33381926309063,
+        "1000": 97.11449567117496
+      },
+      "maximum_native_observable_amplification_by_cycle": {
+        "1": 130.7259890187578,
+        "10": 76.86139832171443,
+        "100": 71.55363153868387,
+        "1000": 134.29075140474484
+      },
+      "worst_100_cycle_control": "translation_axis_0:velocity",
+      "worst_100_cycle_field_fractions": {
+        "psi_carrier": 0.45079597515677644,
+        "psi_exterior": 0.011789439417426382,
+        "chi_carrier": 0.24851868219104806,
+        "chi_exterior": 0.2888959032347491
+      }
+    },
+    {
+      "relative_tolerance": 1e-08,
+      "defect_threshold": 2.7422498483153485e-08,
+      "defect2_threshold": 2.1576511840434225e-08,
+      "eigenspace_dimension": 175,
+      "generalized_eigenspace_dimension": 296,
+      "smallest_defect_singular_values": [
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.4773659488244772e-16,
+        2.4691056256332896e-16,
+        2.1789031615590447e-16,
+        2.1135031309750947e-16,
+        1.8677432672894286e-16,
+        1.5879373816828983e-16,
+        1.5872559409289858e-16,
+        1.5763423623109794e-16,
+        1.3550062593157767e-16,
+        1.1842536325414556e-16,
+        1.0073813697576791e-16,
+        8.413928008715204e-17,
+        7.492905830304941e-17,
+        7.447771783191569e-17,
+        5.807996353176807e-17,
+        4.5857156295558204e-17,
+        1.6608558309850372e-17
+      ],
+      "smallest_defect2_singular_values": [
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.0650962895008527e-16,
+        1.8882070525754238e-16,
+        1.7075697743135647e-16,
+        1.507420106306615e-16,
+        1.3793716101133666e-16,
+        1.2812212509899922e-16,
+        1.201272845692676e-16,
+        1.0477967465719165e-16,
+        9.593298260685072e-17,
+        9.158316943151175e-17,
+        9.03486429138115e-17,
+        7.364957008354716e-17,
+        5.909717386853097e-17,
+        4.079832520839587e-17,
+        2.4738161716110977e-17,
+        8.906076437104367e-18
+      ],
+      "controls": {
+        "psi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999876963,
+            "generalized_quotient_amplification": 1.8860991170216756e-09,
+            "native_observable_amplification": 2.444369998939641e-09
+          },
+          "10": {
+            "raw_amplification": 1.0000000000237037,
+            "generalized_quotient_amplification": 2.046973517822334e-09,
+            "native_observable_amplification": 2.7790205529004525e-09
+          },
+          "100": {
+            "raw_amplification": 1.0000000186768772,
+            "generalized_quotient_amplification": 1.9206398911855924e-09,
+            "native_observable_amplification": 2.7735301270159013e-09
+          },
+          "1000": {
+            "raw_amplification": 1.0000106406941225,
+            "generalized_quotient_amplification": 2.7831265418975214e-08,
+            "native_observable_amplification": 5.3058533262355815e-08
+          }
+        },
+        "psi_phase:velocity": {
+          "1": {
+            "raw_amplification": 34.36600366940254,
+            "generalized_quotient_amplification": 2.8114087289827165,
+            "native_observable_amplification": 7.981026721488869
+          },
+          "10": {
+            "raw_amplification": 123.80314219657636,
+            "generalized_quotient_amplification": 2.1203609976650895,
+            "native_observable_amplification": 4.866674725165031
+          },
+          "100": {
+            "raw_amplification": 867.3114868448541,
+            "generalized_quotient_amplification": 4.840369882387969,
+            "native_observable_amplification": 11.105336325991832
+          },
+          "1000": {
+            "raw_amplification": 8926.398718546563,
+            "generalized_quotient_amplification": 4.053362440559071,
+            "native_observable_amplification": 9.116233889592833
+          }
+        },
+        "chi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999964565,
+            "generalized_quotient_amplification": 9.869243091500898e-10,
+            "native_observable_amplification": 2.6109951819945746e-09
+          },
+          "10": {
+            "raw_amplification": 1.000000000171475,
+            "generalized_quotient_amplification": 1.0210431254057246e-09,
+            "native_observable_amplification": 2.9694224219053277e-09
+          },
+          "100": {
+            "raw_amplification": 0.9999994103105673,
+            "generalized_quotient_amplification": 1.7166217291409256e-09,
+            "native_observable_amplification": 6.371385301234747e-09
+          },
+          "1000": {
+            "raw_amplification": 1.0002393341442208,
+            "generalized_quotient_amplification": 4.680649579851524e-08,
+            "native_observable_amplification": 1.846129394019394e-07
+          }
+        },
+        "chi_phase:velocity": {
+          "1": {
+            "raw_amplification": 128.2301463154853,
+            "generalized_quotient_amplification": 3.9629327572634416,
+            "native_observable_amplification": 16.5492146072142
+          },
+          "10": {
+            "raw_amplification": 1117.3866453279452,
+            "generalized_quotient_amplification": 10.753825437746636,
+            "native_observable_amplification": 41.371706130153676
+          },
+          "100": {
+            "raw_amplification": 11138.504463751706,
+            "generalized_quotient_amplification": 11.811990034880035,
+            "native_observable_amplification": 47.03262685675129
+          },
+          "1000": {
+            "raw_amplification": 111417.09597387043,
+            "generalized_quotient_amplification": 7.260761518124541,
+            "native_observable_amplification": 32.333153862965965
+          }
+        },
+        "translation_axis_0:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0103308840965586,
+            "generalized_quotient_amplification": 0.5450879181045315,
+            "native_observable_amplification": 0.43868558244589273
+          },
+          "10": {
+            "raw_amplification": 2.1232042721380164,
+            "generalized_quotient_amplification": 0.5987258099461904,
+            "native_observable_amplification": 0.5566645009442115
+          },
+          "100": {
+            "raw_amplification": 17.85120071082375,
+            "generalized_quotient_amplification": 0.643089451246238,
+            "native_observable_amplification": 0.5667244455217106
+          },
+          "1000": {
+            "raw_amplification": 185.020259100853,
+            "generalized_quotient_amplification": 0.5987625837374492,
+            "native_observable_amplification": 0.5345287639706165
+          }
+        },
+        "translation_axis_0:velocity": {
+          "1": {
+            "raw_amplification": 164.78618851112677,
+            "generalized_quotient_amplification": 43.760672952630436,
+            "native_observable_amplification": 53.20655374993969
+          },
+          "10": {
+            "raw_amplification": 479.6657158327412,
+            "generalized_quotient_amplification": 37.03284248850976,
+            "native_observable_amplification": 38.65452189646154
+          },
+          "100": {
+            "raw_amplification": 4384.015472785003,
+            "generalized_quotient_amplification": 46.01537456543153,
+            "native_observable_amplification": 55.07387525605643
+          },
+          "1000": {
+            "raw_amplification": 43819.471568612375,
+            "generalized_quotient_amplification": 52.658412932770624,
+            "native_observable_amplification": 53.824204791263426
+          }
+        },
+        "translation_axis_1:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9875434018532451,
+            "generalized_quotient_amplification": 0.554041820428651,
+            "native_observable_amplification": 0.44376503835203485
+          },
+          "10": {
+            "raw_amplification": 2.3037673825048115,
+            "generalized_quotient_amplification": 0.6325223227013294,
+            "native_observable_amplification": 0.5834244791629052
+          },
+          "100": {
+            "raw_amplification": 19.28608717137881,
+            "generalized_quotient_amplification": 0.7790329212778714,
+            "native_observable_amplification": 0.6870293005592913
+          },
+          "1000": {
+            "raw_amplification": 197.660113091017,
+            "generalized_quotient_amplification": 0.6871831156655451,
+            "native_observable_amplification": 0.6301312011881715
+          }
+        },
+        "translation_axis_1:velocity": {
+          "1": {
+            "raw_amplification": 130.72419944036884,
+            "generalized_quotient_amplification": 45.112078944743985,
+            "native_observable_amplification": 53.954445781752185
+          },
+          "10": {
+            "raw_amplification": 402.2391731868369,
+            "generalized_quotient_amplification": 31.700141426414547,
+            "native_observable_amplification": 35.47160554024451
+          },
+          "100": {
+            "raw_amplification": 3719.186296622132,
+            "generalized_quotient_amplification": 49.23262520886547,
+            "native_observable_amplification": 57.48450078736826
+          },
+          "1000": {
+            "raw_amplification": 37155.08043247626,
+            "generalized_quotient_amplification": 42.956241048155526,
+            "native_observable_amplification": 48.57240442479836
+          }
+        },
+        "translation_axis_2:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9576801215496146,
+            "generalized_quotient_amplification": 0.476546015085992,
+            "native_observable_amplification": 0.4240102959816076
+          },
+          "10": {
+            "raw_amplification": 2.3184480843877933,
+            "generalized_quotient_amplification": 0.5511761218337738,
+            "native_observable_amplification": 0.579201348336133
+          },
+          "100": {
+            "raw_amplification": 18.086559919610618,
+            "generalized_quotient_amplification": 0.7467468910334475,
+            "native_observable_amplification": 0.7405939847464286
+          },
+          "1000": {
+            "raw_amplification": 179.80661692773137,
+            "generalized_quotient_amplification": 0.6406169750179722,
+            "native_observable_amplification": 0.6477740804248762
+          }
+        },
+        "translation_axis_2:velocity": {
+          "1": {
+            "raw_amplification": 137.26277772417617,
+            "generalized_quotient_amplification": 65.70768929489232,
+            "native_observable_amplification": 79.7559982521004
+          },
+          "10": {
+            "raw_amplification": 401.8995034108646,
+            "generalized_quotient_amplification": 38.09815065312191,
+            "native_observable_amplification": 42.06547817806642
+          },
+          "100": {
+            "raw_amplification": 3904.325356675585,
+            "generalized_quotient_amplification": 46.78870841214666,
+            "native_observable_amplification": 45.90219996092462
+          },
+          "1000": {
+            "raw_amplification": 39014.907913511364,
+            "generalized_quotient_amplification": 50.113143462919815,
+            "native_observable_amplification": 60.864619071148944
+          }
+        },
+        "random_carrier:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0747226058713109,
+            "generalized_quotient_amplification": 0.6099848266023691,
+            "native_observable_amplification": 0.7773864091888735
+          },
+          "10": {
+            "raw_amplification": 2.3747266824658553,
+            "generalized_quotient_amplification": 0.497471205062873,
+            "native_observable_amplification": 0.5289882291791018
+          },
+          "100": {
+            "raw_amplification": 10.072419603878913,
+            "generalized_quotient_amplification": 0.6521906691969933,
+            "native_observable_amplification": 0.7968336871201412
+          },
+          "1000": {
+            "raw_amplification": 97.26128968772875,
+            "generalized_quotient_amplification": 0.6011479008212596,
+            "native_observable_amplification": 0.7539434062454503
+          }
+        },
+        "random_carrier:velocity": {
+          "1": {
+            "raw_amplification": 164.15943738668156,
+            "generalized_quotient_amplification": 62.67635827125924,
+            "native_observable_amplification": 81.47411347014173
+          },
+          "10": {
+            "raw_amplification": 294.9527440972544,
+            "generalized_quotient_amplification": 26.151603786090252,
+            "native_observable_amplification": 30.927368689677667
+          },
+          "100": {
+            "raw_amplification": 2635.45813088784,
+            "generalized_quotient_amplification": 41.895397678608504,
+            "native_observable_amplification": 54.52512799908019
+          },
+          "1000": {
+            "raw_amplification": 26389.885938455627,
+            "generalized_quotient_amplification": 76.60767456609446,
+            "native_observable_amplification": 100.95135709173454
+          }
+        }
+      },
+      "maximum_generalized_quotient_amplification": 49.23262520886547,
+      "maximum_quotient_amplification_by_cycle": {
+        "1": 65.70768929489232,
+        "10": 38.09815065312191,
+        "100": 49.23262520886547,
+        "1000": 76.60767456609446
+      },
+      "maximum_native_observable_amplification_by_cycle": {
+        "1": 81.47411347014173,
+        "10": 42.06547817806642,
+        "100": 57.48450078736826,
+        "1000": 100.95135709173454
+      },
+      "worst_100_cycle_control": "translation_axis_1:velocity",
+      "worst_100_cycle_field_fractions": {
+        "psi_carrier": 0.18133169115020945,
+        "psi_exterior": 0.022094981251335077,
+        "chi_carrier": 0.36327419992094234,
+        "chi_exterior": 0.4332991276775131
+      }
+    },
+    {
+      "relative_tolerance": 1e-07,
+      "defect_threshold": 2.7422498483153484e-07,
+      "defect2_threshold": 2.1576511840434222e-07,
+      "eigenspace_dimension": 175,
+      "generalized_eigenspace_dimension": 326,
+      "smallest_defect_singular_values": [
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.4773659488244772e-16,
+        2.4691056256332896e-16,
+        2.1789031615590447e-16,
+        2.1135031309750947e-16,
+        1.8677432672894286e-16,
+        1.5879373816828983e-16,
+        1.5872559409289858e-16,
+        1.5763423623109794e-16,
+        1.3550062593157767e-16,
+        1.1842536325414556e-16,
+        1.0073813697576791e-16,
+        8.413928008715204e-17,
+        7.492905830304941e-17,
+        7.447771783191569e-17,
+        5.807996353176807e-17,
+        4.5857156295558204e-17,
+        1.6608558309850372e-17
+      ],
+      "smallest_defect2_singular_values": [
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.0650962895008527e-16,
+        1.8882070525754238e-16,
+        1.7075697743135647e-16,
+        1.507420106306615e-16,
+        1.3793716101133666e-16,
+        1.2812212509899922e-16,
+        1.201272845692676e-16,
+        1.0477967465719165e-16,
+        9.593298260685072e-17,
+        9.158316943151175e-17,
+        9.03486429138115e-17,
+        7.364957008354716e-17,
+        5.909717386853097e-17,
+        4.079832520839587e-17,
+        2.4738161716110977e-17,
+        8.906076437104367e-18
+      ],
+      "controls": {
+        "psi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999876963,
+            "generalized_quotient_amplification": 1.9283597545423686e-10,
+            "native_observable_amplification": 4.0267969754550723e-10
+          },
+          "10": {
+            "raw_amplification": 1.0000000000237037,
+            "generalized_quotient_amplification": 4.703873646607417e-10,
+            "native_observable_amplification": 9.87088834032078e-10
+          },
+          "100": {
+            "raw_amplification": 1.0000000186768772,
+            "generalized_quotient_amplification": 1.7272247010625666e-10,
+            "native_observable_amplification": 3.701200533800068e-10
+          },
+          "1000": {
+            "raw_amplification": 1.0000106406941225,
+            "generalized_quotient_amplification": 1.3246311592304717e-08,
+            "native_observable_amplification": 2.8622653726936887e-08
+          }
+        },
+        "psi_phase:velocity": {
+          "1": {
+            "raw_amplification": 34.36600366940254,
+            "generalized_quotient_amplification": 2.744330642249669,
+            "native_observable_amplification": 7.97091788969458
+          },
+          "10": {
+            "raw_amplification": 123.80314219657636,
+            "generalized_quotient_amplification": 1.573302367595065,
+            "native_observable_amplification": 4.339781162784789
+          },
+          "100": {
+            "raw_amplification": 867.3114868448541,
+            "generalized_quotient_amplification": 3.123966861152961,
+            "native_observable_amplification": 8.879423046998491
+          },
+          "1000": {
+            "raw_amplification": 8926.398718546563,
+            "generalized_quotient_amplification": 2.777978741524535,
+            "native_observable_amplification": 6.96220799565179
+          }
+        },
+        "chi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999964565,
+            "generalized_quotient_amplification": 5.3159581359879606e-11,
+            "native_observable_amplification": 2.6014746223725507e-10
+          },
+          "10": {
+            "raw_amplification": 1.000000000171475,
+            "generalized_quotient_amplification": 1.0463038587474328e-10,
+            "native_observable_amplification": 5.990565602418416e-10
+          },
+          "100": {
+            "raw_amplification": 0.9999994103105673,
+            "generalized_quotient_amplification": 5.303823291204112e-10,
+            "native_observable_amplification": 2.9382368597179778e-09
+          },
+          "1000": {
+            "raw_amplification": 1.0002393341442208,
+            "generalized_quotient_amplification": 1.0768083178519482e-08,
+            "native_observable_amplification": 5.762922865696969e-08
+          }
+        },
+        "chi_phase:velocity": {
+          "1": {
+            "raw_amplification": 128.2301463154853,
+            "generalized_quotient_amplification": 1.9525125171071802,
+            "native_observable_amplification": 12.926495994627981
+          },
+          "10": {
+            "raw_amplification": 1117.3866453279452,
+            "generalized_quotient_amplification": 2.2830252278211405,
+            "native_observable_amplification": 14.66826519555208
+          },
+          "100": {
+            "raw_amplification": 11138.504463751706,
+            "generalized_quotient_amplification": 1.7565162389022508,
+            "native_observable_amplification": 11.390293811044382
+          },
+          "1000": {
+            "raw_amplification": 111417.09597387043,
+            "generalized_quotient_amplification": 3.807349023085201,
+            "native_observable_amplification": 24.313454971702022
+          }
+        },
+        "translation_axis_0:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0103308840965586,
+            "generalized_quotient_amplification": 0.3719986442680551,
+            "native_observable_amplification": 0.4064415680674486
+          },
+          "10": {
+            "raw_amplification": 2.1232042721380164,
+            "generalized_quotient_amplification": 0.4325305257679465,
+            "native_observable_amplification": 0.5306280939517082
+          },
+          "100": {
+            "raw_amplification": 17.85120071082375,
+            "generalized_quotient_amplification": 0.41182816621745266,
+            "native_observable_amplification": 0.4944310138939918
+          },
+          "1000": {
+            "raw_amplification": 185.020259100853,
+            "generalized_quotient_amplification": 0.42537161008779745,
+            "native_observable_amplification": 0.49824701661328996
+          }
+        },
+        "translation_axis_0:velocity": {
+          "1": {
+            "raw_amplification": 164.78618851112677,
+            "generalized_quotient_amplification": 34.210657859983144,
+            "native_observable_amplification": 50.08188317213518
+          },
+          "10": {
+            "raw_amplification": 479.6657158327412,
+            "generalized_quotient_amplification": 23.73061676654752,
+            "native_observable_amplification": 33.09495066555559
+          },
+          "100": {
+            "raw_amplification": 4384.015472785003,
+            "generalized_quotient_amplification": 34.68089547646134,
+            "native_observable_amplification": 49.69765622778242
+          },
+          "1000": {
+            "raw_amplification": 43819.471568612375,
+            "generalized_quotient_amplification": 28.76301535454516,
+            "native_observable_amplification": 41.544267957181816
+          }
+        },
+        "translation_axis_1:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9875434018532451,
+            "generalized_quotient_amplification": 0.37362311865718445,
+            "native_observable_amplification": 0.40753056023758427
+          },
+          "10": {
+            "raw_amplification": 2.3037673825048115,
+            "generalized_quotient_amplification": 0.4344582074040232,
+            "native_observable_amplification": 0.5321572531831065
+          },
+          "100": {
+            "raw_amplification": 19.28608717137881,
+            "generalized_quotient_amplification": 0.4691429015696363,
+            "native_observable_amplification": 0.5478838595691917
+          },
+          "1000": {
+            "raw_amplification": 197.660113091017,
+            "generalized_quotient_amplification": 0.5151502064608977,
+            "native_observable_amplification": 0.589295252619523
+          }
+        },
+        "translation_axis_1:velocity": {
+          "1": {
+            "raw_amplification": 130.72419944036884,
+            "generalized_quotient_amplification": 34.54048318925537,
+            "native_observable_amplification": 50.258122583070325
+          },
+          "10": {
+            "raw_amplification": 402.2391731868369,
+            "generalized_quotient_amplification": 23.650694813960662,
+            "native_observable_amplification": 33.15898930343621
+          },
+          "100": {
+            "raw_amplification": 3719.186296622132,
+            "generalized_quotient_amplification": 33.88236053228181,
+            "native_observable_amplification": 48.71807826028406
+          },
+          "1000": {
+            "raw_amplification": 37155.08043247626,
+            "generalized_quotient_amplification": 30.683613579652917,
+            "native_observable_amplification": 42.97660726309601
+          }
+        },
+        "translation_axis_2:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9576801215496146,
+            "generalized_quotient_amplification": 0.37207885369723004,
+            "native_observable_amplification": 0.40472871268044347
+          },
+          "10": {
+            "raw_amplification": 2.3184480843877933,
+            "generalized_quotient_amplification": 0.45247824009769727,
+            "native_observable_amplification": 0.5597693303271383
+          },
+          "100": {
+            "raw_amplification": 18.086559919610618,
+            "generalized_quotient_amplification": 0.5022113625062975,
+            "native_observable_amplification": 0.621762861242632
+          },
+          "1000": {
+            "raw_amplification": 179.80661692773137,
+            "generalized_quotient_amplification": 0.5172654970153169,
+            "native_observable_amplification": 0.6133811925087609
+          }
+        },
+        "translation_axis_2:velocity": {
+          "1": {
+            "raw_amplification": 137.26277772417617,
+            "generalized_quotient_amplification": 49.245009133181014,
+            "native_observable_amplification": 73.25550991413715
+          },
+          "10": {
+            "raw_amplification": 401.8995034108646,
+            "generalized_quotient_amplification": 26.079471050686152,
+            "native_observable_amplification": 36.352407438934
+          },
+          "100": {
+            "raw_amplification": 3904.325356675585,
+            "generalized_quotient_amplification": 25.999929177068008,
+            "native_observable_amplification": 34.730479042699415
+          },
+          "1000": {
+            "raw_amplification": 39014.907913511364,
+            "generalized_quotient_amplification": 37.47824869229125,
+            "native_observable_amplification": 55.34400395947589
+          }
+        },
+        "random_carrier:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0747226058713109,
+            "generalized_quotient_amplification": 0.2306471490631096,
+            "native_observable_amplification": 0.38828113152714017
+          },
+          "10": {
+            "raw_amplification": 2.3747266824658553,
+            "generalized_quotient_amplification": 0.22127853606985326,
+            "native_observable_amplification": 0.37256454602559075
+          },
+          "100": {
+            "raw_amplification": 10.072419603878913,
+            "generalized_quotient_amplification": 0.14527067415351966,
+            "native_observable_amplification": 0.24248816361259376
+          },
+          "1000": {
+            "raw_amplification": 97.26128968772875,
+            "generalized_quotient_amplification": 0.2571823746283934,
+            "native_observable_amplification": 0.4346154869277797
+          }
+        },
+        "random_carrier:velocity": {
+          "1": {
+            "raw_amplification": 164.15943738668156,
+            "generalized_quotient_amplification": 12.938960590723882,
+            "native_observable_amplification": 23.76618252386504
+          },
+          "10": {
+            "raw_amplification": 294.9527440972544,
+            "generalized_quotient_amplification": 7.549029718755993,
+            "native_observable_amplification": 16.395818977214983
+          },
+          "100": {
+            "raw_amplification": 2635.45813088784,
+            "generalized_quotient_amplification": 9.861565826193024,
+            "native_observable_amplification": 19.22309888206618
+          },
+          "1000": {
+            "raw_amplification": 26389.885938455627,
+            "generalized_quotient_amplification": 11.74647130050096,
+            "native_observable_amplification": 21.12753336203568
+          }
+        }
+      },
+      "maximum_generalized_quotient_amplification": 34.68089547646134,
+      "maximum_quotient_amplification_by_cycle": {
+        "1": 49.245009133181014,
+        "10": 26.079471050686152,
+        "100": 34.68089547646134,
+        "1000": 37.47824869229125
+      },
+      "maximum_native_observable_amplification_by_cycle": {
+        "1": 73.25550991413715,
+        "10": 36.352407438934,
+        "100": 49.69765622778242,
+        "1000": 55.34400395947589
+      },
+      "worst_100_cycle_control": "translation_axis_0:velocity",
+      "worst_100_cycle_field_fractions": {
+        "psi_carrier": 0.013187040634609654,
+        "psi_exterior": 0.013369229659030984,
+        "chi_carrier": 0.06988653935237434,
+        "chi_exterior": 0.903557190353985
+      }
+    },
+    {
+      "relative_tolerance": 1e-06,
+      "defect_threshold": 2.7422498483153484e-06,
+      "defect2_threshold": 2.1576511840434224e-06,
+      "eigenspace_dimension": 179,
+      "generalized_eigenspace_dimension": 352,
+      "smallest_defect_singular_values": [
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.7030532623421075e-16,
+        2.4773659488244772e-16,
+        2.4691056256332896e-16,
+        2.1789031615590447e-16,
+        2.1135031309750947e-16,
+        1.8677432672894286e-16,
+        1.5879373816828983e-16,
+        1.5872559409289858e-16,
+        1.5763423623109794e-16,
+        1.3550062593157767e-16,
+        1.1842536325414556e-16,
+        1.0073813697576791e-16,
+        8.413928008715204e-17,
+        7.492905830304941e-17,
+        7.447771783191569e-17,
+        5.807996353176807e-17,
+        4.5857156295558204e-17,
+        1.6608558309850372e-17
+      ],
+      "smallest_defect2_singular_values": [
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.1006517529746025e-16,
+        2.0650962895008527e-16,
+        1.8882070525754238e-16,
+        1.7075697743135647e-16,
+        1.507420106306615e-16,
+        1.3793716101133666e-16,
+        1.2812212509899922e-16,
+        1.201272845692676e-16,
+        1.0477967465719165e-16,
+        9.593298260685072e-17,
+        9.158316943151175e-17,
+        9.03486429138115e-17,
+        7.364957008354716e-17,
+        5.909717386853097e-17,
+        4.079832520839587e-17,
+        2.4738161716110977e-17,
+        8.906076437104367e-18
+      ],
+      "controls": {
+        "psi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999876963,
+            "generalized_quotient_amplification": 1.75351947840533e-11,
+            "native_observable_amplification": 2.6843111280135087e-11
+          },
+          "10": {
+            "raw_amplification": 1.0000000000237037,
+            "generalized_quotient_amplification": 3.5390416381042566e-11,
+            "native_observable_amplification": 9.080829947895023e-11
+          },
+          "100": {
+            "raw_amplification": 1.0000000186768772,
+            "generalized_quotient_amplification": 7.934416674670038e-11,
+            "native_observable_amplification": 1.88508863642127e-10
+          },
+          "1000": {
+            "raw_amplification": 1.0000106406941225,
+            "generalized_quotient_amplification": 7.087137758890847e-09,
+            "native_observable_amplification": 1.6412247478149352e-08
+          }
+        },
+        "psi_phase:velocity": {
+          "1": {
+            "raw_amplification": 34.36600366940254,
+            "generalized_quotient_amplification": 2.741750667440542,
+            "native_observable_amplification": 7.967296788500738
+          },
+          "10": {
+            "raw_amplification": 123.80314219657636,
+            "generalized_quotient_amplification": 1.4950636472326329,
+            "native_observable_amplification": 4.2205635791931595
+          },
+          "100": {
+            "raw_amplification": 867.3114868448541,
+            "generalized_quotient_amplification": 2.9579022530080255,
+            "native_observable_amplification": 8.628082098045784
+          },
+          "1000": {
+            "raw_amplification": 8926.398718546563,
+            "generalized_quotient_amplification": 1.9992933863190747,
+            "native_observable_amplification": 5.675563733334521
+          }
+        },
+        "chi_phase:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9999999999964565,
+            "generalized_quotient_amplification": 1.5947203186936345e-11,
+            "native_observable_amplification": 5.880812302732018e-11
+          },
+          "10": {
+            "raw_amplification": 1.000000000171475,
+            "generalized_quotient_amplification": 5.741928413586363e-11,
+            "native_observable_amplification": 3.9758509928649283e-10
+          },
+          "100": {
+            "raw_amplification": 0.9999994103105673,
+            "generalized_quotient_amplification": 2.139293648255929e-10,
+            "native_observable_amplification": 1.5242967355844933e-09
+          },
+          "1000": {
+            "raw_amplification": 1.0002393341442208,
+            "generalized_quotient_amplification": 5.247800589357387e-09,
+            "native_observable_amplification": 3.082037325203738e-08
+          }
+        },
+        "chi_phase:velocity": {
+          "1": {
+            "raw_amplification": 128.2301463154853,
+            "generalized_quotient_amplification": 1.7500491217928233,
+            "native_observable_amplification": 12.128611222493948
+          },
+          "10": {
+            "raw_amplification": 1117.3866453279452,
+            "generalized_quotient_amplification": 1.9508394327565564,
+            "native_observable_amplification": 13.350418565927251
+          },
+          "100": {
+            "raw_amplification": 11138.504463751706,
+            "generalized_quotient_amplification": 1.532846170518129,
+            "native_observable_amplification": 10.544297888006227
+          },
+          "1000": {
+            "raw_amplification": 111417.09597387043,
+            "generalized_quotient_amplification": 3.0116817133374902,
+            "native_observable_amplification": 21.127427005724016
+          }
+        },
+        "translation_axis_0:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0103308840965586,
+            "generalized_quotient_amplification": 0.3303973645001627,
+            "native_observable_amplification": 0.3810651156317077
+          },
+          "10": {
+            "raw_amplification": 2.1232042721380164,
+            "generalized_quotient_amplification": 0.4040054380923242,
+            "native_observable_amplification": 0.5158688963476974
+          },
+          "100": {
+            "raw_amplification": 17.85120071082375,
+            "generalized_quotient_amplification": 0.3811170450172507,
+            "native_observable_amplification": 0.47619044179318926
+          },
+          "1000": {
+            "raw_amplification": 185.020259100853,
+            "generalized_quotient_amplification": 0.3728140054796821,
+            "native_observable_amplification": 0.46215037926758173
+          }
+        },
+        "translation_axis_0:velocity": {
+          "1": {
+            "raw_amplification": 164.78618851112677,
+            "generalized_quotient_amplification": 34.11638004345254,
+            "native_observable_amplification": 50.04245107558855
+          },
+          "10": {
+            "raw_amplification": 479.6657158327412,
+            "generalized_quotient_amplification": 21.768291184121896,
+            "native_observable_amplification": 31.67443365042292
+          },
+          "100": {
+            "raw_amplification": 4384.015472785003,
+            "generalized_quotient_amplification": 33.21614186025264,
+            "native_observable_amplification": 48.61310424589871
+          },
+          "1000": {
+            "raw_amplification": 43819.471568612375,
+            "generalized_quotient_amplification": 28.05020539967669,
+            "native_observable_amplification": 41.03872179613516
+          }
+        },
+        "translation_axis_1:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9875434018532451,
+            "generalized_quotient_amplification": 0.303844972397608,
+            "native_observable_amplification": 0.3698529629884809
+          },
+          "10": {
+            "raw_amplification": 2.3037673825048115,
+            "generalized_quotient_amplification": 0.38286832358412104,
+            "native_observable_amplification": 0.5073955359946598
+          },
+          "100": {
+            "raw_amplification": 19.28608717137881,
+            "generalized_quotient_amplification": 0.36585244369425485,
+            "native_observable_amplification": 0.47608559920660504
+          },
+          "1000": {
+            "raw_amplification": 197.660113091017,
+            "generalized_quotient_amplification": 0.3588695855604833,
+            "native_observable_amplification": 0.4651447315477911
+          }
+        },
+        "translation_axis_1:velocity": {
+          "1": {
+            "raw_amplification": 130.72419944036884,
+            "generalized_quotient_amplification": 33.96337730833462,
+            "native_observable_amplification": 49.863490947322525
+          },
+          "10": {
+            "raw_amplification": 402.2391731868369,
+            "generalized_quotient_amplification": 21.92744995560098,
+            "native_observable_amplification": 31.992868986027595
+          },
+          "100": {
+            "raw_amplification": 3719.186296622132,
+            "generalized_quotient_amplification": 32.55764827760818,
+            "native_observable_amplification": 47.75169073840935
+          },
+          "1000": {
+            "raw_amplification": 37155.08043247626,
+            "generalized_quotient_amplification": 27.86373471542653,
+            "native_observable_amplification": 40.85595626692424
+          }
+        },
+        "translation_axis_2:zero_velocity": {
+          "1": {
+            "raw_amplification": 0.9576801215496146,
+            "generalized_quotient_amplification": 0.3168444950388597,
+            "native_observable_amplification": 0.37406243448173443
+          },
+          "10": {
+            "raw_amplification": 2.3184480843877933,
+            "generalized_quotient_amplification": 0.40573521420630027,
+            "native_observable_amplification": 0.5352188312237419
+          },
+          "100": {
+            "raw_amplification": 18.086559919610618,
+            "generalized_quotient_amplification": 0.4305352355841811,
+            "native_observable_amplification": 0.5750255831768958
+          },
+          "1000": {
+            "raw_amplification": 179.80661692773137,
+            "generalized_quotient_amplification": 0.3925212393483319,
+            "native_observable_amplification": 0.5114230824724081
+          }
+        },
+        "translation_axis_2:velocity": {
+          "1": {
+            "raw_amplification": 137.26277772417617,
+            "generalized_quotient_amplification": 49.146366843695255,
+            "native_observable_amplification": 73.20641794696151
+          },
+          "10": {
+            "raw_amplification": 401.8995034108646,
+            "generalized_quotient_amplification": 23.187588173485153,
+            "native_observable_amplification": 34.25139729539031
+          },
+          "100": {
+            "raw_amplification": 3904.325356675585,
+            "generalized_quotient_amplification": 20.674254215484968,
+            "native_observable_amplification": 30.43689020741718
+          },
+          "1000": {
+            "raw_amplification": 39014.907913511364,
+            "generalized_quotient_amplification": 36.971127328480804,
+            "native_observable_amplification": 54.981062997756474
+          }
+        },
+        "random_carrier:zero_velocity": {
+          "1": {
+            "raw_amplification": 1.0747226058713109,
+            "generalized_quotient_amplification": 0.0023969940731321977,
+            "native_observable_amplification": 0.004501433849695291
+          },
+          "10": {
+            "raw_amplification": 2.3747266824658553,
+            "generalized_quotient_amplification": 0.005267852481175978,
+            "native_observable_amplification": 0.01183864992296045
+          },
+          "100": {
+            "raw_amplification": 10.072419603878913,
+            "generalized_quotient_amplification": 0.011548564473970168,
+            "native_observable_amplification": 0.027175401206384092
+          },
+          "1000": {
+            "raw_amplification": 97.26128968772875,
+            "generalized_quotient_amplification": 0.016891962598495295,
+            "native_observable_amplification": 0.03985873630763903
+          }
+        },
+        "random_carrier:velocity": {
+          "1": {
+            "raw_amplification": 164.15943738668156,
+            "generalized_quotient_amplification": 6.060249253233194,
+            "native_observable_amplification": 13.809171548024818
+          },
+          "10": {
+            "raw_amplification": 294.9527440972544,
+            "generalized_quotient_amplification": 6.653974491911231,
+            "native_observable_amplification": 15.352229874241823
+          },
+          "100": {
+            "raw_amplification": 2635.45813088784,
+            "generalized_quotient_amplification": 6.221834886328066,
+            "native_observable_amplification": 14.241278512418663
+          },
+          "1000": {
+            "raw_amplification": 26389.885938455627,
+            "generalized_quotient_amplification": 4.862788171999718,
+            "native_observable_amplification": 10.879537144413238
+          }
+        }
+      },
+      "maximum_generalized_quotient_amplification": 33.21614186025264,
+      "maximum_quotient_amplification_by_cycle": {
+        "1": 49.146366843695255,
+        "10": 23.187588173485153,
+        "100": 33.21614186025264,
+        "1000": 36.971127328480804
+      },
+      "maximum_native_observable_amplification_by_cycle": {
+        "1": 73.20641794696151,
+        "10": 34.25139729539031,
+        "100": 48.61310424589871,
+        "1000": 54.981062997756474
+      },
+      "worst_100_cycle_control": "translation_axis_0:velocity",
+      "worst_100_cycle_field_fractions": {
+        "psi_carrier": 0.0056993233839969576,
+        "psi_exterior": 0.009062776181974543,
+        "chi_carrier": 0.00021405867213857227,
+        "chi_exterior": 0.98502384176189
+      }
+    }
+  ],
+  "bounded_after_generalized_unit_quotient": false,
+  "verdict": "C27_BODY_GYRO_HAS_NONJORDAN_SHAPE_GROWTH",
+  "claim_boundary": "Numerical invariant-subspace diagnosis only. The generalized kernel cannot be projected out in evolution and must be matched to independently derived phase, charge, frequency, vacuum-gauge, and translation tangents before a stability claim."
+}

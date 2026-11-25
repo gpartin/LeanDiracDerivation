@@ -1,0 +1,19 @@
+{
+  "status": "V4_COMPLETE_FACE_CONE_LIMITING_CHANNEL_IDENTIFIED",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "exact_shift_invert_baseline_growth": 0.07498283988998644,
+  "refined_five_term_growth": 0.012026685187940667,
+  "strong_face_growth_at_uniform_addition_10": 0.0005511400361250775,
+  "limiting_mode": {
+    "Psi_fraction": 0.0003078057577307177,
+    "chi_fraction": 0.9996921942422693,
+    "exterior_chi_fraction": 0.9996852827607399,
+    "exterior_chi_transverse_fraction": 0.9995362222263802,
+    "exterior_chi_parallel_fraction": 0.00014906053435975318
+  },
+  "root_cause": "all tested face terms depend on W=chi wedge Psi and therefore cannot see relative chi orientation in Psi=0 vacuum; the local potential fixes chi magnitude only",
+  "verdict": "W_FACE_ACTION_CLASS_ASYMPTOTICALLY_SUPPRESSES_BUT_CANNOT_CLOSE_EXTERIOR_CHI_HINGE",
+  "next_falsifiable_step": "derive a native phase-invariant chi-only C19 orientation action, re-solve the localized rest branch, and rerun exact discrete spectrum plus continuum/conservation gates",
+  "claim_boundary": "This identifies the limiting channel of the tested positive W-face cone. It is not a universal no-go, action admission, stability pass, movement pass, V4-006 closure, Dirac closure, or canonical promotion."
+}

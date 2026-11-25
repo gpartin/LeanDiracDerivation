@@ -1,0 +1,33 @@
+{
+  "status": "V4_TIGHT_FRAME_DENSITY_MOLD_REST_SPECTRUM",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "position_action": "unit chi and Psi carrier tight-frame bonds",
+  "kinetic_action": "B/2[kappa|chiDot|^2+|A19(chiDot+s rhoPsiDot chi/(2(rhoChi+kappa chi0^2)))/24|^2]",
+  "rows": [
+    {
+      "coefficient": 0.0,
+      "rest_del_rms_residual": 3.9396576803293714e-14,
+      "following_block_condition_number": 1216.0000000004147,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.9999999999128,
+      "spectral_radius": 1.0031050203196632,
+      "growth_rate_per_unit_time": 0.7936536830839915,
+      "reciprocal_pairing_defect": 2.9265478929119126e-12
+    },
+    {
+      "coefficient": 1.149584487534626,
+      "rest_del_rms_residual": 1.8267594513199107e-12,
+      "following_block_condition_number": 1441.5440703264799,
+      "following_block_rank": 324,
+      "following_block_dimension": 324,
+      "smallest_singular_value": 255.3756276011992,
+      "spectral_radius": 1.003105020103352,
+      "growth_rate_per_unit_time": 0.7936536278797369,
+      "reciprocal_pairing_defect": 1.3360423878339134e-12
+    }
+  ],
+  "verdict": "COMBINED_IMPLICIT_REST_SPECTRUM_FAIL",
+  "claim_boundary": "Complete side-three implicit two-layer rest spectrum. A pass still requires side-five/multishift, nonlinear conservation, free relative-periodic motion, and Dirac-current closure."
+}

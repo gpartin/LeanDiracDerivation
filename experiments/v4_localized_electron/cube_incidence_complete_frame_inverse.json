@@ -1,0 +1,130 @@
+{
+  "status": "V4_CUBE_INCIDENCE_COMPLETE_FRAME_INVERSE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "native_complete_frame": {
+    "parallel_coordinate": "s_i = chi_i^dagger Psi_i",
+    "oriented_area_coordinate": "W_i = chi_i wedge Psi_i",
+    "identity": "rho_chi rho_Psi = |s|^2 + ||W||^2"
+  },
+  "exact_rest_null_vectors": {
+    "common_relative": {
+      "tensor_common_local": 1.0,
+      "tensor_common_C19_gradient": 0.0,
+      "tensor_relative_local": 1.0,
+      "tensor_relative_C19_gradient": 0.0,
+      "area_common_local": 0.0,
+      "area_common_C19_gradient": 0.0,
+      "area_relative_local": 0.0,
+      "area_relative_C19_gradient": 0.0
+    },
+    "overlap": {
+      "tensor_common_local": -1.0,
+      "tensor_common_C19_gradient": 0.0,
+      "tensor_relative_local": 0.0,
+      "tensor_relative_C19_gradient": 0.0,
+      "area_common_local": 1.0,
+      "area_common_C19_gradient": 0.0,
+      "area_relative_local": 0.0,
+      "area_relative_C19_gradient": 0.0
+    }
+  },
+  "rest_and_reciprocity_checks": [
+    {
+      "action_direction": "common_relative",
+      "rest_DEL_norm": 3.807799791688928e-15,
+      "mass_symmetry_defect": 4.298596209640457e-18,
+      "gyro_antisymmetry_defect": 7.114927046890665e-16,
+      "stiffness_symmetry_defect": 6.095141679916042e-13
+    },
+    {
+      "action_direction": "overlap",
+      "rest_DEL_norm": 6.998828106346314e-16,
+      "mass_symmetry_defect": 1.0741824284816441e-18,
+      "gyro_antisymmetry_defect": 5.665612516215363e-16,
+      "stiffness_symmetry_defect": 1.8246615115194175e-13
+    }
+  ],
+  "response_rows": [
+    {
+      "action_direction": "complete_frame_common_relative",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 2.6138720032689378,
+      "endpoint_response_norm": 0.0001246016983435541
+    },
+    {
+      "action_direction": "complete_frame_overlap",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 2.771297941915117,
+      "endpoint_response_norm": 0.18923291518268645
+    },
+    {
+      "action_direction": "installed_cube_incidence",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.06265720842487062,
+      "endpoint_response_norm": 0.06010180035453465
+    },
+    {
+      "action_direction": "existing_density_connection",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.014676971786384593,
+      "endpoint_response_norm": 0.04191919778277177
+    },
+    {
+      "action_direction": "existing_cube_incidence_connection",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.06265720842487063,
+      "endpoint_response_norm": 0.06010180035515115
+    },
+    {
+      "action_direction": "joint_phase_lock",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.08097587882561755,
+      "endpoint_response_norm": 0.33451230703610724
+    },
+    {
+      "action_direction": "relative_bilinear_phase",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.3190925241569338,
+      "endpoint_response_norm": 0.5947729539186554
+    },
+    {
+      "action_direction": "area_bilinear_phase",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 0.11198784349711279,
+      "endpoint_response_norm": 0.6784303973378483
+    },
+    {
+      "action_direction": "density_oriented_common_pair",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 333.7983693377448,
+      "endpoint_response_norm": 0.041919197785231496
+    },
+    {
+      "action_direction": "density_oriented_relative_pair",
+      "coefficient_scale_for_one_percent_matrix_perturbation": 339.323559760177,
+      "endpoint_response_norm": 0.04106835453120653
+    }
+  ],
+  "action_response_rank": 8,
+  "action_response_singular_values": [
+    0.889896118444937,
+    0.3348561551466565,
+    0.21038010972475546,
+    0.13582604640275675,
+    0.07448229253310622,
+    0.03670757682015877,
+    0.02254871153590475,
+    0.00011250845987263494,
+    4.7426064916218625e-12,
+    2.7953780664201336e-12
+  ],
+  "baseline_relative_endpoint_error": 0.5873664373821328,
+  "best_complete_frame_plus_repository_linearized_relative_error": 0.19169856313719216,
+  "relative_improvement": 0.6736303763088942,
+  "diagnostic_coefficients": {
+    "complete_frame_common_relative": 558.2615051654171,
+    "complete_frame_overlap": 5.354964439054907,
+    "installed_cube_incidence": -13.452022642195658,
+    "existing_density_connection": -3.2216280524344163,
+    "existing_cube_incidence_connection": -13.452021969423164,
+    "joint_phase_lock": 0.7140925216611125,
+    "relative_bilinear_phase": 1.2717706991240831,
+    "area_bilinear_phase": 0.6265624719810249,
+    "density_oriented_common_pair": -3.221628419341152,
+    "density_oriented_relative_pair": 1.9893751168342415
+  },
+  "verdict": "COMPLETE_FRAME_SPAN_DOES_NOT_CLOSE_LINEARIZED_ENDPOINT",
+  "claim_boundary": "Exact action-derived tangent response on the one-cycle packet. Fitted inverse coefficients are diagnostic only and are not an admitted action or a V4-006 movement pass."
+}

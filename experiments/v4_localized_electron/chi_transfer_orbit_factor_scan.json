@@ -1,0 +1,120 @@
+{
+  "status": "V4_CHI_TRANSFER_ORBIT_FACTOR_SCAN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "source_orbit": "edge_snap_transfer_charge_four_update_orbit",
+  "rows": [
+    {
+      "geometric_factor": 0.0,
+      "scaled_del_rms": 0.004661679510273014,
+      "normalized_charge_defects": {
+        "psi": 0.9168315088615335,
+        "chi": 0.8066339278176267
+      },
+      "combined": 1.221171585160605
+    },
+    {
+      "geometric_factor": 1.0,
+      "scaled_del_rms": 0.004214628125096958,
+      "normalized_charge_defects": {
+        "psi": 1.2623537008304313,
+        "chi": 0.6521865867328728
+      },
+      "combined": 1.4208807032980615
+    },
+    {
+      "geometric_factor": 3.0,
+      "scaled_del_rms": 0.003620272527028944,
+      "normalized_charge_defects": {
+        "psi": 1.0410470944376264,
+        "chi": 0.4347649382766076
+      },
+      "combined": 1.12819001536304
+    },
+    {
+      "geometric_factor": 6.0,
+      "scaled_del_rms": 0.003084606729085046,
+      "normalized_charge_defects": {
+        "psi": 1.0029791489457234,
+        "chi": 0.22288677643776084
+      },
+      "combined": 1.0274508275968135
+    },
+    {
+      "geometric_factor": 12.0,
+      "scaled_del_rms": 0.002580847987758555,
+      "normalized_charge_defects": {
+        "psi": 0.8525426843972617,
+        "chi": 0.0967863357336283
+      },
+      "combined": 0.8580228926318735
+    },
+    {
+      "geometric_factor": 19.0,
+      "scaled_del_rms": 0.0023913733829781067,
+      "normalized_charge_defects": {
+        "psi": 1.0371400821568081e-05,
+        "chi": 1.9438431614317696e-06
+      },
+      "combined": 0.0023913966633115034
+    },
+    {
+      "geometric_factor": 24.0,
+      "scaled_del_rms": 0.0023591757568464304,
+      "normalized_charge_defects": {
+        "psi": 1.0833797974437511,
+        "chi": 0.09160564949344437
+      },
+      "combined": 1.0872483369675168
+    },
+    {
+      "geometric_factor": 27.0,
+      "scaled_del_rms": 0.002358954272018496,
+      "normalized_charge_defects": {
+        "psi": 1.4162415469601146,
+        "chi": 0.1483475145881676
+      },
+      "combined": 1.4239918079419287
+    },
+    {
+      "geometric_factor": 54.0,
+      "scaled_del_rms": 0.0025204125471661024,
+      "normalized_charge_defects": {
+        "psi": 1.6447345205564474,
+        "chi": 0.5981620535780005
+      },
+      "combined": 1.7501302345625898
+    },
+    {
+      "geometric_factor": 63.0,
+      "scaled_del_rms": 0.0025806859774336484,
+      "normalized_charge_defects": {
+        "psi": 1.6221438049181325,
+        "chi": 0.7198318669787237
+      },
+      "combined": 1.7746873247117265
+    },
+    {
+      "geometric_factor": 361.0,
+      "scaled_del_rms": 0.003413693312866358,
+      "normalized_charge_defects": {
+        "psi": 1.3269251421137924,
+        "chi": 1.969281032920468
+      },
+      "combined": 2.3746178161329556
+    }
+  ],
+  "diagnostic_optimum": {
+    "geometric_factor": 25.51103342513691,
+    "scaled_del_rms": 0.002357788632612185,
+    "normalized_charge_defects": {
+      "psi": 1.2686035731713732,
+      "chi": 0.1200574666443051
+    },
+    "combined": 1.2742740601328506,
+    "coefficient_admitted": false
+  },
+  "relative_improvement_over_g19_at_fixed_state": 0.01404412652786867,
+  "verdict": "COEFFICIENT_ONLY_DIAGNOSTIC",
+  "claim_boundary": "The orbit is not re-solved at each factor. This scan determines local coefficient sensitivity only and cannot admit an action."
+}

@@ -1,0 +1,623 @@
+{
+  "status": "V4_DIRAC_INVERSE_SCHUR_MOVEMENT_DIAGNOSTIC",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "method": "frequency-resolved Schur elimination of every native coordinate orthogonal to the fixed four-component spatial lift",
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "rest",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Dirac_relative_frequency": -4.218847493575595e-15,
+      "normal_solve_rank": 241,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21166158874750035,
+      "undressed_pencil_residual_over_state": 115.44569823474062,
+      "dressed_pencil_residual_over_state": 112.88130522446605,
+      "residual_reduction_fraction": 0.0005502120388565235,
+      "retained_residual_fraction": 1.0000000000000002,
+      "normal_residual_fraction": 1.0440807306165032e-12,
+      "residual_channels": {
+        "Psi": 0.7177049281002252,
+        "chi": 0.28229507189977476,
+        "C3_components": [
+          0.5531006277166399,
+          0.44689937228335996,
+          1.4589061102127472e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "x-",
+      "momentum": [
+        -0.2,
+        0.0,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        -0.19866933079506122,
+        0.0,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.0010386427426265414,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21720231720868627,
+      "undressed_pencil_residual_over_state": 115.45218277631072,
+      "dressed_pencil_residual_over_state": 112.75370344784676,
+      "residual_reduction_fraction": 0.0006015241503710689,
+      "retained_residual_fraction": 0.9999999999999991,
+      "normal_residual_fraction": 5.640989473079673e-16,
+      "residual_channels": {
+        "Psi": 0.7183880186504435,
+        "chi": 0.28161198134955623,
+        "C3_components": [
+          0.5518681165172676,
+          0.4481318834827322,
+          2.5390371926765744e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "x+",
+      "momentum": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.19866933079506122,
+        0.0,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.0010386427426212215,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21728056925676195,
+      "undressed_pencil_residual_over_state": 109.71099503689041,
+      "dressed_pencil_residual_over_state": 107.13803557967582,
+      "residual_reduction_fraction": 0.0006661670505573314,
+      "retained_residual_fraction": 1.0000000000000002,
+      "normal_residual_fraction": 5.52563134736318e-16,
+      "residual_channels": {
+        "Psi": 0.7054507695557172,
+        "chi": 0.29454923044428305,
+        "C3_components": [
+          0.5195385341079116,
+          0.4804614658920886,
+          2.943810687227993e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "y-",
+      "momentum": [
+        0.0,
+        -0.2,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        -0.19866933079506122,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.001038642742622377,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21959772474772984,
+      "undressed_pencil_residual_over_state": 110.38492340380509,
+      "dressed_pencil_residual_over_state": 107.7445817884393,
+      "residual_reduction_fraction": 0.0006616480452394935,
+      "retained_residual_fraction": 1.0000000000000002,
+      "normal_residual_fraction": 5.759923412487063e-16,
+      "residual_channels": {
+        "Psi": 0.7034423069366316,
+        "chi": 0.2965576930633685,
+        "C3_components": [
+          0.5198822516887456,
+          0.48011774831125437,
+          3.0952543227702475e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "y+",
+      "momentum": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.19866933079506122,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.001038642742622377,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21965790687949205,
+      "undressed_pencil_residual_over_state": 110.28790871268988,
+      "dressed_pencil_residual_over_state": 107.64834694489328,
+      "residual_reduction_fraction": 0.0006633495910518539,
+      "retained_residual_fraction": 1.0,
+      "normal_residual_fraction": 5.678056046716011e-16,
+      "residual_channels": {
+        "Psi": 0.7038956780493795,
+        "chi": 0.29610432195062053,
+        "C3_components": [
+          0.5177752914632588,
+          0.48222470853674115,
+          2.847264492142858e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "z-",
+      "momentum": [
+        0.0,
+        0.0,
+        -0.2
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.0,
+        -0.19866933079506124
+      ],
+      "Dirac_relative_frequency": 0.0010386427426223774,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21950107905252678,
+      "undressed_pencil_residual_over_state": 109.297108791311,
+      "dressed_pencil_residual_over_state": 106.68367621740681,
+      "residual_reduction_fraction": 0.0006735482421589278,
+      "retained_residual_fraction": 0.9999999999999998,
+      "normal_residual_fraction": 5.50769687344705e-16,
+      "residual_channels": {
+        "Psi": 0.7006569929417517,
+        "chi": 0.2993430070582485,
+        "C3_components": [
+          0.5183187541338874,
+          0.48168124586611283,
+          3.0677173284639344e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "z+",
+      "momentum": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.0,
+        0.19866933079506124
+      ],
+      "Dirac_relative_frequency": 0.0010386427426223774,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21958436096654968,
+      "undressed_pencil_residual_over_state": 111.4592106149378,
+      "dressed_pencil_residual_over_state": 108.79489517233951,
+      "residual_reduction_fraction": 0.0006486236414309232,
+      "retained_residual_fraction": 1.0,
+      "normal_residual_fraction": 5.317803729619371e-16,
+      "residual_channels": {
+        "Psi": 0.7069771605917662,
+        "chi": 0.293022839408234,
+        "C3_components": [
+          0.5167374952757108,
+          0.4832625047242891,
+          2.8679283154873095e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal+",
+      "momentum": [
+        0.11547005383792516,
+        0.11547005383792516,
+        0.11547005383792516
+      ],
+      "C19_transport_symbol": [
+        0.11470213287973839,
+        0.11470213287973839,
+        0.11470213287973839
+      ],
+      "Dirac_relative_frequency": 0.0010386489228974096,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.37231303402026766,
+      "undressed_pencil_residual_over_state": 118.4544613799677,
+      "dressed_pencil_residual_over_state": 110.94664103927938,
+      "residual_reduction_fraction": 0.0005718746487796134,
+      "retained_residual_fraction": 0.9999999999999998,
+      "normal_residual_fraction": 8.647943729385276e-16,
+      "residual_channels": {
+        "Psi": 0.7171450077963107,
+        "chi": 0.2828549922036894,
+        "C3_components": [
+          0.5733718999270662,
+          0.42662810007293395,
+          2.5557605969789546e-24
+        ]
+      }
+    },
+    {
+      "flavor": "plus",
+      "direction": "diagonal-",
+      "momentum": [
+        -0.11547005383792516,
+        -0.11547005383792516,
+        -0.11547005383792516
+      ],
+      "C19_transport_symbol": [
+        -0.11470213287973839,
+        -0.11470213287973839,
+        -0.11470213287973839
+      ],
+      "Dirac_relative_frequency": 0.0010386489228974096,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.3668909969685054,
+      "undressed_pencil_residual_over_state": 110.50699655834545,
+      "dressed_pencil_residual_over_state": 103.69241790895832,
+      "residual_reduction_fraction": 0.0005056606973167233,
+      "retained_residual_fraction": 1.0000000000000002,
+      "normal_residual_fraction": 9.041680692593764e-16,
+      "residual_channels": {
+        "Psi": 0.7124768762918097,
+        "chi": 0.2875231237081901,
+        "C3_components": [
+          0.5728762541731348,
+          0.4271237458268648,
+          2.627604233878011e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "rest",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Dirac_relative_frequency": -4.218847493575595e-15,
+      "normal_solve_rank": 241,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21166158427325327,
+      "undressed_pencil_residual_over_state": 112.28831483113535,
+      "dressed_pencil_residual_over_state": 109.79060887591781,
+      "residual_reduction_fraction": 0.0005815984592661971,
+      "retained_residual_fraction": 1.0000000000000002,
+      "normal_residual_fraction": 1.6009530588067088e-12,
+      "residual_channels": {
+        "Psi": 0.7119679465902056,
+        "chi": 0.28803205340979443,
+        "C3_components": [
+          0.4334862103119054,
+          0.5665137896880945,
+          3.41026067802243e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "x-",
+      "momentum": [
+        -0.2,
+        0.0,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        -0.19866933079506122,
+        0.0,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.0010386427426265414,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.2173039732765137,
+      "undressed_pencil_residual_over_state": 112.3089985694945,
+      "dressed_pencil_residual_over_state": 109.67797823619676,
+      "residual_reduction_fraction": 0.0006351822023912268,
+      "retained_residual_fraction": 1.0000000000000002,
+      "normal_residual_fraction": 5.737806686695355e-16,
+      "residual_channels": {
+        "Psi": 0.7127846960450318,
+        "chi": 0.28721530395496797,
+        "C3_components": [
+          0.43249172724644,
+          0.5675082727535599,
+          5.946526604419109e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "x+",
+      "momentum": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.19866933079506122,
+        0.0,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.0010386427426212215,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.21799081236496162,
+      "undressed_pencil_residual_over_state": 115.95570848753832,
+      "dressed_pencil_residual_over_state": 113.22646398561923,
+      "residual_reduction_fraction": 0.0006054620825469703,
+      "retained_residual_fraction": 1.0000000000000004,
+      "normal_residual_fraction": 5.351042167294268e-16,
+      "residual_channels": {
+        "Psi": 0.719236466114067,
+        "chi": 0.2807635338859331,
+        "C3_components": [
+          0.48836950783578187,
+          0.5116304921642182,
+          5.209733421449195e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "y-",
+      "momentum": [
+        0.0,
+        -0.2,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        -0.19866933079506122,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.001038642742622377,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.20961681873070054,
+      "undressed_pencil_residual_over_state": 112.22922016398358,
+      "dressed_pencil_residual_over_state": 109.77319945212815,
+      "residual_reduction_fraction": 0.0006261479622722277,
+      "retained_residual_fraction": 1.0000000000000004,
+      "normal_residual_fraction": 5.180183328316324e-16,
+      "residual_channels": {
+        "Psi": 0.7223305629641386,
+        "chi": 0.27766943703586155,
+        "C3_components": [
+          0.49678074780915754,
+          0.5032192521908427,
+          5.051356967159182e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "y+",
+      "momentum": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.19866933079506122,
+        0.0
+      ],
+      "Dirac_relative_frequency": 0.001038642742622377,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.20977356859648852,
+      "undressed_pencil_residual_over_state": 110.78690857345842,
+      "dressed_pencil_residual_over_state": 108.3569275276071,
+      "residual_reduction_fraction": 0.0006456271921678747,
+      "retained_residual_fraction": 0.9999999999999998,
+      "normal_residual_fraction": 5.65533724336253e-16,
+      "residual_channels": {
+        "Psi": 0.7185121369959718,
+        "chi": 0.2814878630040282,
+        "C3_components": [
+          0.4884702169737877,
+          0.5115297830262122,
+          5.517027323626441e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "z-",
+      "momentum": [
+        0.0,
+        0.0,
+        -0.2
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.0,
+        -0.19866933079506124
+      ],
+      "Dirac_relative_frequency": 0.0010386427426223774,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.20976970697917907,
+      "undressed_pencil_residual_over_state": 112.0004105164183,
+      "dressed_pencil_residual_over_state": 109.54565978422522,
+      "residual_reduction_fraction": 0.0006295521497562406,
+      "retained_residual_fraction": 1.0000000000000007,
+      "normal_residual_fraction": 5.142113189185053e-16,
+      "residual_channels": {
+        "Psi": 0.7211059149480075,
+        "chi": 0.27889408505199237,
+        "C3_components": [
+          0.4938346709894078,
+          0.5061653290105921,
+          5.039372993035585e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "z+",
+      "momentum": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "C19_transport_symbol": [
+        0.0,
+        0.0,
+        0.19866933079506124
+      ],
+      "Dirac_relative_frequency": 0.0010386427426223774,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 0.20911521221280369,
+      "undressed_pencil_residual_over_state": 110.92604184480693,
+      "dressed_pencil_residual_over_state": 108.50834688402593,
+      "residual_reduction_fraction": 0.0006363661644112062,
+      "retained_residual_fraction": 0.9999999999999998,
+      "normal_residual_fraction": 5.21217055493139e-16,
+      "residual_channels": {
+        "Psi": 0.7201884566809071,
+        "chi": 0.27981154331909297,
+        "C3_components": [
+          0.4930819370715074,
+          0.5069180629284927,
+          5.431551202524307e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal+",
+      "momentum": [
+        0.11547005383792516,
+        0.11547005383792516,
+        0.11547005383792516
+      ],
+      "C19_transport_symbol": [
+        0.11470213287973839,
+        0.11470213287973839,
+        0.11470213287973839
+      ],
+      "Dirac_relative_frequency": 0.0010386489228974096,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 1.0522137142211605,
+      "undressed_pencil_residual_over_state": 107.58106022983421,
+      "dressed_pencil_residual_over_state": 74.12688154133258,
+      "residual_reduction_fraction": -0.0002026886594956867,
+      "retained_residual_fraction": 0.9999999999999998,
+      "normal_residual_fraction": 2.6023220100760246e-15,
+      "residual_channels": {
+        "Psi": 0.7096629526847019,
+        "chi": 0.2903370473152982,
+        "C3_components": [
+          0.4239600062967908,
+          0.5760399937032092,
+          7.166893858742414e-24
+        ]
+      }
+    },
+    {
+      "flavor": "minus",
+      "direction": "diagonal-",
+      "momentum": [
+        -0.11547005383792516,
+        -0.11547005383792516,
+        -0.11547005383792516
+      ],
+      "C19_transport_symbol": [
+        -0.11470213287973839,
+        -0.11470213287973839,
+        -0.11470213287973839
+      ],
+      "Dirac_relative_frequency": 0.0010386489228974096,
+      "normal_solve_rank": 500,
+      "normal_dimension": 500,
+      "normal_solve_min_reported_singular": null,
+      "tail_over_undressed_norm": 1.0513132995775885,
+      "undressed_pencil_residual_over_state": 109.36819108538133,
+      "dressed_pencil_residual_over_state": 75.39160094368158,
+      "residual_reduction_fraction": -0.00019521000088129625,
+      "retained_residual_fraction": 0.9999999999999998,
+      "normal_residual_fraction": 2.5154214266907497e-15,
+      "residual_channels": {
+        "Psi": 0.7134941400531479,
+        "chi": 0.28650585994685196,
+        "C3_components": [
+          0.43790191909507153,
+          0.5620980809049285,
+          6.288606996827724e-24
+        ]
+      }
+    }
+  ],
+  "maximum_tail_over_undressed_norm": 1.0522137142211605,
+  "maximum_dressed_pencil_residual_over_state": 113.22646398561923,
+  "minimum_residual_reduction_fraction": -0.0002026886594956867,
+  "action_inverse_screen": {
+    "candidate_count": 7,
+    "response_rank": 6,
+    "unrepaired_norm": 7512.920763899853,
+    "best_common_coefficient_relative_residual": 0.38916524401395103,
+    "diagnostic_coefficients": {
+      "density_connection": -18.424348900509806,
+      "cube_incidence_connection": -1.824063129539393,
+      "joint_phase_lock": -0.30490017481348536,
+      "relative_bilinear_phase": 0.13026713119583086,
+      "area_bilinear_phase": 0.20829173438280948,
+      "density_oriented_common_pair": -0.0008101093410236059,
+      "density_oriented_relative_pair": 596024.2098432832
+    },
+    "coefficients_admitted": false
+  },
+  "verdict": "DIRAC_FREQUENCY_DRESSED_RESIDUAL_MEASURED",
+  "claim_boundary": "Linear tangent inverse diagnostic. Dirac fixes the comparison frequency but supplies no native force. Schur tails are solved state readouts, not runtime support. Fitted action coefficients are diagnostic only."
+}

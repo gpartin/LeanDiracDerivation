@@ -1,0 +1,54 @@
+{
+  "status": "V4_CUBE_INCIDENCE_DIRAC_DRESSING_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "flavor": "plus",
+      "undressed_rank": 1000,
+      "selected_native_mode_count": 1000,
+      "projection_min_singular": 5.254965101400591e-09,
+      "projection_condition": 190296220.94606763,
+      "configuration_relative_cross_block": 6.349933665245393e-15,
+      "tail_relative_norm": 0.09391669540754478,
+      "tail_channels": {
+        "Psi_fraction": 0.984634378969265,
+        "chi_fraction": 0.015365621030734853,
+        "C3_component_fractions": [
+          5.29171311228949e-24,
+          7.066800891051098e-24,
+          1.0
+        ]
+      },
+      "two_layer_relative_cross_block": 0.005512938704688287,
+      "two_layer_residual_rank": 58,
+      "selected_stiffness_min": -3.2479778917125066,
+      "selected_stiffness_max": 984.997414553232
+    },
+    {
+      "flavor": "minus",
+      "undressed_rank": 1000,
+      "selected_native_mode_count": 1000,
+      "projection_min_singular": 5.255014144086964e-09,
+      "projection_condition": 190294444.99692163,
+      "configuration_relative_cross_block": 6.468233304325493e-15,
+      "tail_relative_norm": 0.09391669540754513,
+      "tail_channels": {
+        "Psi_fraction": 0.9846343789692953,
+        "chi_fraction": 0.015365621030704562,
+        "C3_component_fractions": [
+          1.1025711007623118e-23,
+          4.3166321517839165e-23,
+          1.0
+        ]
+      },
+      "two_layer_relative_cross_block": 0.0055129387046882914,
+      "two_layer_residual_rank": 58,
+      "selected_stiffness_min": -3.2479778917125066,
+      "selected_stiffness_max": 984.997414553232
+    }
+  ],
+  "configuration_verdict": "SAME_RANK_CONFIGURATION_DRESSING_PASS",
+  "two_layer_verdict": "SAME_RANK_TWO_LAYER_DRESSING_FAIL",
+  "claim_boundary": "Action-derived invariant-mode dressing only. A pass would still require the compressed Dirac generators, current, nonlinear moving branch and endurance gates."
+}

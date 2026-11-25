@@ -1,0 +1,95 @@
+{
+  "status": "V4_CANONICAL_TRANSLATION_FORCE_RCA",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "dt": 0.0009765625,
+  "rows": [
+    {
+      "axis": 0,
+      "pinning_norm": 0.8752077917859056,
+      "kinematic_norm": 6.478136099765569,
+      "local_norm": 6.218710555707058,
+      "area_norm": 0.6970957860677598,
+      "local_correlation_with_pinning": -0.028109069831273436,
+      "area_correlation_with_pinning": 0.9284235894327789,
+      "reconstruction_relative_error": 1.1972281011248714e-15,
+      "dominant_pinning_channel": {
+        "field": "Psi",
+        "site": [
+          2,
+          0,
+          1
+        ],
+        "component": 1,
+        "psi_power_fraction": 0.9995672710650455,
+        "chi_power_fraction": 0.00043272893495449345
+      }
+    },
+    {
+      "axis": 1,
+      "pinning_norm": 1.0965844779832052,
+      "kinematic_norm": 8.03155966636817,
+      "local_norm": 7.792314180301677,
+      "area_norm": 0.9384131398961323,
+      "local_correlation_with_pinning": 0.24318308144288073,
+      "area_correlation_with_pinning": 0.9456662041623188,
+      "reconstruction_relative_error": 1.538996869236113e-15,
+      "dominant_pinning_channel": {
+        "field": "Psi",
+        "site": [
+          0,
+          2,
+          0
+        ],
+        "component": 0,
+        "psi_power_fraction": 0.9996828648394119,
+        "chi_power_fraction": 0.00031713516058810994
+      }
+    },
+    {
+      "axis": 2,
+      "pinning_norm": 3.191609075460239,
+      "kinematic_norm": 7.508209285815702,
+      "local_norm": 8.298209335054691,
+      "area_norm": 0.9082632251407357,
+      "local_correlation_with_pinning": 0.5912500867893504,
+      "area_correlation_with_pinning": 0.5766279826263804,
+      "reconstruction_relative_error": 3.2007133857021653e-16,
+      "dominant_pinning_channel": {
+        "field": "Psi",
+        "site": [
+          0,
+          0,
+          0
+        ],
+        "component": 0,
+        "psi_power_fraction": 0.9992143880026616,
+        "chi_power_fraction": 0.0007856119973385204
+      }
+    }
+  ],
+  "two_term_inverse_fit": {
+    "basis": [
+      "local_potential",
+      "C19_area_bond"
+    ],
+    "response_rank": 2,
+    "singular_values": [
+      12.998753124511188,
+      1.215203883642067
+    ],
+    "incumbent_coefficients": [
+      1.0,
+      1.0
+    ],
+    "least_squares_coefficients": [
+      0.9860704591189788,
+      -0.39585727154692174
+    ],
+    "incumbent_relative_residual": 0.27320404913132823,
+    "best_relative_residual": 0.21356904017589115,
+    "explained_squared_fraction": 0.9543882650783486
+  },
+  "verdict": "EXISTING_TWO_ACTION_TERMS_CANNOT_CANCEL_TRANSLATION_PINNING",
+  "claim_boundary": "Continuous linear inverse response at the canonical rest orbit. Changing either coefficient would require re-solving the rest orbit and all V4/Lean gates; the least-squares values are not admitted coefficients."
+}

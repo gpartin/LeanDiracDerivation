@@ -1,0 +1,154 @@
+{
+  "status": "V4_FIXED_CHARGE_ACTION_SOLVABILITY_RANK",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "baseline_residual_norm": 1.429955932493048e-13,
+  "jacobian_shape": [
+    326,
+    326
+  ],
+  "jacobian_rank": 283,
+  "jacobian_nullity": 43,
+  "rank_relative_tolerance": 1e-09,
+  "smallest_retained_singular_value": 0.0014494146593392507,
+  "rows": [
+    {
+      "action": "uniform",
+      "action_response_norm": 116.71113377090009,
+      "cokernel_obstruction_norm": 5.174865884517097,
+      "cokernel_fraction": 0.04433909360074575
+    },
+    {
+      "action": "chi_equal_action",
+      "action_response_norm": 0.09750303573174611,
+      "cokernel_obstruction_norm": 0.00432319622766674,
+      "cokernel_fraction": 0.044339093600745665
+    },
+    {
+      "action": "psi_uniform",
+      "action_response_norm": 2.5768943590191937,
+      "cokernel_obstruction_norm": 0.043285205342237766,
+      "cokernel_fraction": 0.01679743105911132
+    },
+    {
+      "action": "two_wave_equal_action",
+      "action_response_norm": 2.5787383309521434,
+      "cokernel_obstruction_norm": 0.04280710370740713,
+      "cokernel_fraction": 0.01660001838635622
+    },
+    {
+      "action": "two_wave_equal_speed",
+      "action_response_norm": 116.73957825273519,
+      "cokernel_obstruction_norm": 5.1681204518903545,
+      "cokernel_fraction": 0.04427050816220733
+    },
+    {
+      "action": "joint_projector6",
+      "action_response_norm": 0.14954771376623566,
+      "cokernel_obstruction_norm": 0.008637738072542178,
+      "cokernel_fraction": 0.057759078056145954
+    },
+    {
+      "action": "joint_density6",
+      "action_response_norm": 6.463272096509769,
+      "cokernel_obstruction_norm": 0.01657011930609419,
+      "cokernel_fraction": 0.002563735374075032
+    },
+    {
+      "action": "inverse_mean_1",
+      "action_response_norm": 1132.0121324513623,
+      "cokernel_obstruction_norm": 3.057490318139117,
+      "cokernel_fraction": 0.00270093423072962
+    },
+    {
+      "action": "inverse_mean_2",
+      "action_response_norm": 1598.9175760870419,
+      "cokernel_obstruction_norm": 1.8064713664576537,
+      "cokernel_fraction": 0.0011298089366673602
+    },
+    {
+      "action": "inverse_mean_3",
+      "action_response_norm": 1710.4809891103569,
+      "cokernel_obstruction_norm": 1.0673259629081426,
+      "cokernel_fraction": 0.0006239917132684839
+    },
+    {
+      "action": "inverse_mean_4",
+      "action_response_norm": 1638.4174662322707,
+      "cokernel_obstruction_norm": 0.6306132121868572,
+      "cokernel_fraction": 0.00038489165623766496
+    },
+    {
+      "action": "inverse_mean_5",
+      "action_response_norm": 1480.2534239447682,
+      "cokernel_obstruction_norm": 0.3725881663311667,
+      "cokernel_fraction": 0.00025170566087139745
+    },
+    {
+      "action": "inverse_mean_6",
+      "action_response_norm": 1290.3821198494363,
+      "cokernel_obstruction_norm": 0.22013801647868875,
+      "cokernel_fraction": 0.00017059909083704195
+    },
+    {
+      "action": "inverse_mean_7",
+      "action_response_norm": 1098.2252231773175,
+      "cokernel_obstruction_norm": 0.13006517834200607,
+      "cokernel_fraction": 0.00011843215362119394
+    },
+    {
+      "action": "inverse_mean_8",
+      "action_response_norm": 918.7843020170776,
+      "cokernel_obstruction_norm": 0.07684702028774289,
+      "cokernel_fraction": 8.363989253955987e-05
+    },
+    {
+      "action": "inverse_product",
+      "action_response_norm": 1408.1213742164998,
+      "cokernel_obstruction_norm": 1.8064713664539311,
+      "cokernel_fraction": 0.0012828946421320246
+    },
+    {
+      "action": "normalized_joint",
+      "action_response_norm": 715.4550937636856,
+      "cokernel_obstruction_norm": 3.0574903180730484,
+      "cokernel_fraction": 0.0042734901808986715
+    }
+  ],
+  "positive_normalized_inverse_metric_combination": {
+    "solver_success": false,
+    "solver_message": "Iteration limit reached",
+    "coefficients_by_inverse_power": [
+      0.22050190486668916,
+      -0.40040306962289035,
+      -0.1418432523030009,
+      0.03272437229933285,
+      0.14917713147263886,
+      0.22596791858859777,
+      0.2760832617389644,
+      0.3084960985546008,
+      0.32929563440506804
+    ],
+    "vacuum_normalization": 1.0000000000000004,
+    "minimum_sampled_metric": 3.181650025703367e-06,
+    "asymptotic_metric": 0.22050190486668916,
+    "response_norm": 953.6929307450264,
+    "cokernel_obstruction_norm": 3.527100517231864e-06,
+    "cokernel_fraction": 3.698360765321483e-09
+  },
+  "positive_simple_action_cone": {
+    "solver_success": true,
+    "solver_message": "Optimization terminated successfully",
+    "coefficients": {
+      "chi_equal_action": 0.7586452511346972,
+      "psi_uniform": 0.017190359947559256,
+      "joint_projector6": 0.22416438891774365,
+      "joint_density6": 0.0,
+      "inverse_mean_1": 1.8991929442034897e-19,
+      "inverse_mean_2": 2.1173011009554263e-18
+    },
+    "obstruction_norm": 0.0035059271380688084,
+    "cokernel_fraction": 0.03777458243031811
+  },
+  "decision_rule": "Only an action with cokernel fraction numerically zero admits a smooth fixed-charge branch from this exact carrier."
+}

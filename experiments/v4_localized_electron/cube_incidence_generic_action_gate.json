@@ -1,0 +1,32 @@
+{
+  "status": "V4_CUBE_INCIDENCE_GENERIC_ACTION_GATE",
+  "canonical_action_changed": false,
+  "research_action_changed": false,
+  "side5_identity": {
+    "interval_action_absolute_difference": 0.0,
+    "DEL_relative_difference": 0.0,
+    "DEL_absolute_difference": 0.0
+  },
+  "rows": [
+    {
+      "side": 5,
+      "configuration_dimension": 1500,
+      "rest_DEL_RMS": 3.3508520511152586e-14,
+      "rest_DEL_maximum_absolute": 3.5172187477492267e-13
+    },
+    {
+      "side": 6,
+      "configuration_dimension": 2592,
+      "rest_DEL_RMS": 2.549079521192057e-14,
+      "rest_DEL_maximum_absolute": 3.5172187477492267e-13
+    },
+    {
+      "side": 7,
+      "configuration_dimension": 4116,
+      "rest_DEL_RMS": 2.0228477628327413e-14,
+      "rest_DEL_maximum_absolute": 3.5172187477492267e-13
+    }
+  ],
+  "verdict": "GENERIC_ACTION_IDENTITY_AND_REST_PASS",
+  "claim_boundary": "Exact formula identity on side five and rest-orbit transfer to larger boxes. It does not prove a moving branch, box-converged transport, or V4-006."
+}

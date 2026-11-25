@@ -1,0 +1,31 @@
+{
+  "status": "V4_DISCRETE_DIRAC_TRANSLATION_CLOCK",
+  "carrier_momentum": [
+    0.35,
+    0.0,
+    0.0
+  ],
+  "C19_first_symbol": [
+    0.34289780745545134,
+    0.0,
+    0.0
+  ],
+  "positive_energy": 19.003093929840944,
+  "group_velocity": [
+    0.01695033686662104,
+    0.0,
+    0.0
+  ],
+  "cell_crossing_time": 58.99587765534154,
+  "native_dt": 0.00390625,
+  "updates_per_cell": 15102.944679767434,
+  "speed_implied_by_one_cell_per_update": 256.0,
+  "maximum_axis_group_speed_grid_control": {
+    "momentum": 0.7850840041320893,
+    "speed": 0.026297590387854158
+  },
+  "minimum_cell_crossing_time_grid_control": 38.0262976664912,
+  "minimum_updates_per_cell_grid_control": 9734.732202621748,
+  "verdict": "CELL_CROSSING_INTERVAL_DERIVED_FROM_DISCRETE_DIRAC",
+  "claim_boundary": "Comparator timing only. The Dirac symbol is not inserted into the native action, and this does not prove a native handoff."
+}

@@ -1,0 +1,255 @@
+{
+  "status": "V4_TRANSFER_OSCILLATOR_LEADING_SPECTRUM",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "strength": 0.0,
+  "even_strength": 2.0,
+  "parallel_strength": 0.0,
+  "density_balance_strength": 0.5,
+  "spectral_area_strength": 0.0,
+  "loop_curvature_strength": 0.3,
+  "dt": 0.00390625,
+  "dt_divisor": 1,
+  "side": 5,
+  "phase_space_dimension": 3000,
+  "rest_DEL_rms": 3.63919792091303e-13,
+  "following_block_condition_number": 1212.662283614944,
+  "computed_eigenvalue_count": 32,
+  "arpack_converged": true,
+  "leading_moduli": [
+    1.000259246913751,
+    1.000259246913751,
+    1.000239404571396,
+    1.000239404571396,
+    1.0001324298270764,
+    1.0001294453497016,
+    1.0001142721245997,
+    1.0001142721245997,
+    1.0000000000001863,
+    1.0000000000001863,
+    1.0000000000000973,
+    1.0000000000000973,
+    1.0000000000000926,
+    1.0000000000000926,
+    1.0000000000000406,
+    1.0000000000000406,
+    1.0000000000000386,
+    1.0000000000000386,
+    1.0000000000000313,
+    1.0000000000000313,
+    1.0000000000000293,
+    1.0000000000000293,
+    1.000000000000027,
+    1.000000000000027,
+    1.0000000000000269,
+    1.0000000000000269,
+    1.0000000000000266,
+    1.0000000000000266,
+    1.0000000000000242,
+    1.0000000000000242,
+    1.0000000000000229,
+    1.0000000000000229
+  ],
+  "leading_spectral_radius": 1.000259246913751,
+  "leading_growth_rate": 0.06635860865962026,
+  "count_above_1_plus_1e_minus_7": 8,
+  "count_above_1_plus_1e_minus_6": 8,
+  "verdict": "LEADING_SPECTRUM_HAS_EXPONENTIAL_GROWTH",
+  "leading_mode_classification": {
+    "eigenvalue_real": 1.0002592467535936,
+    "eigenvalue_imag": 1.789966882452437e-05,
+    "modulus": 1.000259246913751,
+    "psi_power_fraction": 0.9079812110627652,
+    "chi_power_fraction": 0.09201878893723484,
+    "carrier_cube_power_fraction": 0.757692123002797,
+    "exterior_power_fraction": 0.24230787699720335,
+    "carrier_psi_power_fraction": 0.6924041795556374,
+    "carrier_chi_power_fraction": 0.06528794344715955,
+    "exterior_psi_power_fraction": 0.21557703150712806,
+    "exterior_chi_power_fraction": 0.026730845490075286,
+    "translation_subspace_power_fraction": 0.00860143975907823,
+    "psi_phase_power_fraction": 0.006890938574170919,
+    "chi_phase_power_fraction": 1.1154098343826545e-20,
+    "psi_amplitude_power_fraction": 5.931735675492137e-05,
+    "chi_contrast_amplitude_power_fraction": 0.0019315555448287125,
+    "largest_site_participation": [
+      {
+        "site": [
+          1,
+          2,
+          2
+        ],
+        "total_power_fraction": 0.1815158674566708,
+        "psi_power_fraction": 0.17772198056141414,
+        "chi_power_fraction": 0.0037938868952566893,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          2,
+          1,
+          1
+        ],
+        "total_power_fraction": 0.1430562272334853,
+        "psi_power_fraction": 0.13933868548666775,
+        "chi_power_fraction": 0.0037175417468175557,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          2,
+          2,
+          2
+        ],
+        "total_power_fraction": 0.14242435193581293,
+        "psi_power_fraction": 0.09928457909654365,
+        "chi_power_fraction": 0.043139772839269265,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          1,
+          1,
+          1
+        ],
+        "total_power_fraction": 0.11129061246902687,
+        "psi_power_fraction": 0.10477859181782563,
+        "chi_power_fraction": 0.006512020651201237,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          1,
+          2,
+          1
+        ],
+        "total_power_fraction": 0.05372471779608775,
+        "psi_power_fraction": 0.05154921617523301,
+        "chi_power_fraction": 0.0021755016208547385,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          2,
+          1,
+          2
+        ],
+        "total_power_fraction": 0.0501857552093196,
+        "psi_power_fraction": 0.04791979815285788,
+        "chi_power_fraction": 0.002265957056461722,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          1,
+          1,
+          2
+        ],
+        "total_power_fraction": 0.042794424228594856,
+        "psi_power_fraction": 0.04090207024304746,
+        "chi_power_fraction": 0.0018923539855473914,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          2,
+          2,
+          1
+        ],
+        "total_power_fraction": 0.03270016667379873,
+        "psi_power_fraction": 0.030909258022047782,
+        "chi_power_fraction": 0.0017909086517509454,
+        "is_carrier_corner": true
+      },
+      {
+        "site": [
+          3,
+          2,
+          2
+        ],
+        "total_power_fraction": 0.006266435234666963,
+        "psi_power_fraction": 0.004997013220047405,
+        "chi_power_fraction": 0.001269422014619558,
+        "is_carrier_corner": false
+      },
+      {
+        "site": [
+          0,
+          1,
+          1
+        ],
+        "total_power_fraction": 0.005915030461533916,
+        "psi_power_fraction": 0.004583955898227665,
+        "chi_power_fraction": 0.0013310745633062513,
+        "is_carrier_corner": false
+      },
+      {
+        "site": [
+          3,
+          1,
+          2
+        ],
+        "total_power_fraction": 0.0058600902761823765,
+        "psi_power_fraction": 0.004993799819053288,
+        "chi_power_fraction": 0.0008662904571290878,
+        "is_carrier_corner": false
+      },
+      {
+        "site": [
+          3,
+          1,
+          1
+        ],
+        "total_power_fraction": 0.005623665756751211,
+        "psi_power_fraction": 0.004330452805043331,
+        "chi_power_fraction": 0.0012932129517078802,
+        "is_carrier_corner": false
+      },
+      {
+        "site": [
+          0,
+          2,
+          2
+        ],
+        "total_power_fraction": 0.00546075658917715,
+        "psi_power_fraction": 0.004106139564512319,
+        "chi_power_fraction": 0.0013546170246648307,
+        "is_carrier_corner": false
+      },
+      {
+        "site": [
+          0,
+          2,
+          1
+        ],
+        "total_power_fraction": 0.0044307143828530475,
+        "psi_power_fraction": 0.0038785938180727225,
+        "chi_power_fraction": 0.0005521205647803255,
+        "is_carrier_corner": false
+      },
+      {
+        "site": [
+          3,
+          2,
+          1
+        ],
+        "total_power_fraction": 0.004392379850020709,
+        "psi_power_fraction": 0.0033914227130134402,
+        "chi_power_fraction": 0.001000957137007269,
+        "is_carrier_corner": false
+      },
+      {
+        "site": [
+          2,
+          0,
+          2
+        ],
+        "total_power_fraction": 0.00424539428749714,
+        "psi_power_fraction": 0.0032111753245934282,
+        "chi_power_fraction": 0.001034218962903712,
+        "is_carrier_corner": false
+      }
+    ]
+  },
+  "claim_boundary": "32 converged largest-modulus Ritz values of the complete side-five two-layer linearization. A favorable result is not a full dense spectrum or nonlinear long-time stability proof."
+}

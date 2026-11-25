@@ -1,0 +1,43 @@
+{
+  "status": "V4_C19_BARGMANN_JOINT_CONNECTION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis": [
+    "re_loop_square",
+    "im_loop_square",
+    "im_weighted_connection"
+  ],
+  "basis_DEL_norms": [
+    3.8771185600414455,
+    1.1559334209438359,
+    3.173239508391043e-13
+  ],
+  "numerically_active_rest_columns": [
+    "re_loop_square",
+    "im_loop_square"
+  ],
+  "normalized_rest_response_rank": 2,
+  "rest_preserving_dimension": 1,
+  "normalized_singular_values": [
+    1.3763819204711736,
+    0.3249196962329064
+  ],
+  "normalized_null_residuals": [
+    3.173239508391043e-13
+  ],
+  "nullspace_scaled_coordinates": [
+    [
+      0.0
+    ],
+    [
+      0.0
+    ],
+    [
+      1.0
+    ]
+  ],
+  "sender_reversal_max_error": 0.0,
+  "positive_square_terms_nonnegative": true,
+  "verdict": "JOINT_BARGMANN_BASIS_HAS_REST_PRESERVING_DIRECTION",
+  "claim_boundary": "Exact discrete rest-response rank for this three-element action basis only. A nonzero null direction would still require transport rank, symplectic nondegeneracy, stability, coefficient provenance, and Dirac-current closure."
+}

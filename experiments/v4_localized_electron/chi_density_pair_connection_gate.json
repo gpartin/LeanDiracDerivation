@@ -1,0 +1,83 @@
+{
+  "status": "V4_CHI_DENSITY_PAIR_CONNECTION_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "natural_scale": 22743.0,
+  "natural_scale_provenance": "B times chi0",
+  "combinations": [
+    {
+      "label": "Psi_density",
+      "Psi_density_coefficient": 22743.0,
+      "chi_density_coefficient": 0.0,
+      "minimum_mass_eigenvalue": 0.9709117454768242,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9394979287668206e-13,
+      "maximum_multiplier_modulus": 1.0002774655902738,
+      "maximum_growth_rate": 0.07102133857684617,
+      "growing_multiplier_count_at_1e_minus_7": 184
+    },
+    {
+      "label": "chi_density",
+      "Psi_density_coefficient": 0.0,
+      "chi_density_coefficient": 22743.0,
+      "minimum_mass_eigenvalue": 0.9972454906190772,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 2.0101954653182392e-13,
+      "maximum_multiplier_modulus": 1.002529462545141,
+      "maximum_growth_rate": 0.6467248228343812,
+      "growing_multiplier_count_at_1e_minus_7": 192
+    },
+    {
+      "label": "total_density",
+      "Psi_density_coefficient": 22743.0,
+      "chi_density_coefficient": 22743.0,
+      "minimum_mass_eigenvalue": 0.9709117454768211,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.8377982788942773e-13,
+      "maximum_multiplier_modulus": 1.001061779839355,
+      "maximum_growth_rate": 0.27167143675711636,
+      "growing_multiplier_count_at_1e_minus_7": 186
+    },
+    {
+      "label": "density_difference",
+      "Psi_density_coefficient": 22743.0,
+      "chi_density_coefficient": -22743.0,
+      "minimum_mass_eigenvalue": 0.9709117454768539,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 2.2157647377951824e-13,
+      "maximum_multiplier_modulus": 1.0018231423445045,
+      "maximum_growth_rate": 0.4662995040490891,
+      "growing_multiplier_count_at_1e_minus_7": 194
+    },
+    {
+      "label": "inertia_normalized_total",
+      "Psi_density_coefficient": 22743.0,
+      "chi_density_coefficient": 19.0,
+      "minimum_mass_eigenvalue": 0.9709117454768887,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.949568156172358e-13,
+      "maximum_multiplier_modulus": 1.0002764042186159,
+      "maximum_growth_rate": 0.07074970265789214,
+      "growing_multiplier_count_at_1e_minus_7": 184
+    },
+    {
+      "label": "inertia_normalized_difference",
+      "Psi_density_coefficient": 22743.0,
+      "chi_density_coefficient": -19.0,
+      "minimum_mass_eigenvalue": 0.9709117454767242,
+      "configuration_hull_rank": 1032,
+      "phase_space_dimension": 2064,
+      "hull_relative_cross_block": 1.9344390685696583e-13,
+      "maximum_multiplier_modulus": 1.0002785268850127,
+      "maximum_growth_rate": 0.07129295452181425,
+      "growing_multiplier_count_at_1e_minus_7": 184
+    }
+  ],
+  "verdict": "DENSITY_CONNECTION_COMBINATIONS_RETAIN_GROWTH",
+  "claim_boundary": "These are full finite-hull spectra of native sum/difference connections. No coefficient is fitted, no action is installed, and a pass would still require refinements and nonlinear motion."
+}

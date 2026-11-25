@@ -1,0 +1,80 @@
+{
+  "status": "V4_C19_BARGMANN_TRIANGLE_GATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate": "positive C19 Bargmann-loop phase potential",
+  "coefficient": 1.0,
+  "coefficient_provenance": "unit response-basis normalization only; not selected",
+  "rest_potential": 1174.1802340091338,
+  "rest_first_variation_norm": 295.918955761622,
+  "candidate_rest_DEL_rms": 0.029846072590941162,
+  "quiet_receiver": {
+    "receiver_psi_norm": 0.0,
+    "potential": 1.4720114936805386e-11,
+    "receiver_chi_gradient_norm": 2.1833458824842074e-10
+  },
+  "axis_rows": [
+    {
+      "axis": 0,
+      "fixed_charge_center_rank": 2,
+      "singular_values": [
+        9.565927180239975e-06,
+        6.9222286644311315e-06,
+        2.6149246090691692e-15
+      ],
+      "relative_third_singular_value": 2.733581972556444e-10,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ]
+    },
+    {
+      "axis": 1,
+      "fixed_charge_center_rank": 2,
+      "singular_values": [
+        9.678503040265612e-06,
+        6.940213427925603e-06,
+        1.6357541878982034e-15
+      ],
+      "relative_third_singular_value": 1.6900900698103336e-10,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ]
+    },
+    {
+      "axis": 2,
+      "fixed_charge_center_rank": 2,
+      "singular_values": [
+        9.772301838559432e-06,
+        6.475001259041757e-06,
+        3.4809983117518197e-15
+      ],
+      "relative_third_singular_value": 3.562106829341413e-10,
+      "component_labels": [
+        "plus_0",
+        "plus_1",
+        "plus_2",
+        "plus_3",
+        "minus_0",
+        "minus_1",
+        "minus_2",
+        "minus_3"
+      ]
+    }
+  ],
+  "verdict": "BARGMANN_TRIANGLE_TORQUES_PROVED_REST_ORBIT",
+  "claim_boundary": "Algebraic first-variation and fixed-charge tangent screen only. No coefficient is admitted and no nonlinear translation, stability, Dirac-current closure, or electron claim follows."
+}

@@ -1,0 +1,45 @@
+{
+  "status": "V4_CUBE_INCIDENCE_MEMORY_CHANNEL_ABLATION",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "rows": [
+    {
+      "resolved_memory_control_rank": 0,
+      "maximum_memory_cross_singular": 1.5126836325191017e-12,
+      "memory_control_absolute_singular_threshold": 1e-10,
+      "current_layer_relative_leakage": 6.0421720753052935e-06,
+      "fraction_of_leakage_remaining_after_bounded_control": 1.0,
+      "bounded_previous_graph_operator_norm": 0.0,
+      "action_ablation": "base_without_density_or_cube_connection"
+    },
+    {
+      "resolved_memory_control_rank": 16,
+      "maximum_memory_cross_singular": 9.989792419937656e-07,
+      "memory_control_absolute_singular_threshold": 1e-10,
+      "current_layer_relative_leakage": 6.045526524963443e-06,
+      "fraction_of_leakage_remaining_after_bounded_control": 0.9999618924808412,
+      "bounded_previous_graph_operator_norm": 1.0131092970983921,
+      "action_ablation": "base_plus_density_connection"
+    },
+    {
+      "resolved_memory_control_rank": 0,
+      "maximum_memory_cross_singular": 1.5096775416816022e-12,
+      "memory_control_absolute_singular_threshold": 1e-10,
+      "current_layer_relative_leakage": 6.0421811752990945e-06,
+      "fraction_of_leakage_remaining_after_bounded_control": 1.0,
+      "bounded_previous_graph_operator_norm": 0.0,
+      "action_ablation": "base_plus_cube_incidence_connection"
+    },
+    {
+      "resolved_memory_control_rank": 16,
+      "maximum_memory_cross_singular": 9.989819280736143e-07,
+      "memory_control_absolute_singular_threshold": 1e-10,
+      "current_layer_relative_leakage": 6.045406065643042e-06,
+      "fraction_of_leakage_remaining_after_bounded_control": 0.9999666650065456,
+      "bounded_previous_graph_operator_norm": 1.0127604094440767,
+      "action_ablation": "complete_research_action"
+    }
+  ],
+  "verdict": "PREPARATION_CHANNEL_RANK_DEFICIENT",
+  "claim_boundary": "Linear two-layer response around the exact rest orbit and the fixed all-center spatial image. This does not exclude a spatial phase-space tail or a deformed nonlinear moving branch."
+}

@@ -1,0 +1,49 @@
+{
+  "status": "V4_CANONICAL_TRANSFER_WAKE_FREDHOLM",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "canonical_DEL_jacobian_nullity": 693,
+  "rows": [
+    {
+      "mode": "transfer_even",
+      "added_force_norm": 534.5183825728948,
+      "null_solvability_norm": 3.749821887745862e-09,
+      "relative_null_obstruction": 7.015328209473658e-12,
+      "unit_first_order_correction_over_rest": 85.21674567564106,
+      "screen_strength": 0.0001,
+      "corrected_state_displacement_over_rest": 0.008521674567564108,
+      "corrected_orbit_residual_rms": 0.0012014451413293905,
+      "residual_over_strength_squared": 120144.51413293905,
+      "halo_psi_power_fraction": 7.135251358813544e-07,
+      "halo_chi_deviation_norm": 1.7791015579935958
+    },
+    {
+      "mode": "transfer_odd",
+      "added_force_norm": 534.5183825728948,
+      "null_solvability_norm": 3.749848717771643e-09,
+      "relative_null_obstruction": 7.015378404240866e-12,
+      "unit_first_order_correction_over_rest": 85.21674567564116,
+      "screen_strength": 0.0001,
+      "corrected_state_displacement_over_rest": 0.008521674567564117,
+      "corrected_orbit_residual_rms": 0.0012014537412446474,
+      "residual_over_strength_squared": 120145.37412446474,
+      "halo_psi_power_fraction": 7.135251358813309e-07,
+      "halo_chi_deviation_norm": 1.7791015579936043
+    },
+    {
+      "mode": "area_gradient",
+      "added_force_norm": 918.1482568050764,
+      "null_solvability_norm": 3.76070020664134e-09,
+      "relative_null_obstruction": 4.095961821816909e-12,
+      "unit_first_order_correction_over_rest": 1.5359469750681434,
+      "screen_strength": 0.0001,
+      "corrected_state_displacement_over_rest": 0.00015359469750681533,
+      "corrected_orbit_residual_rms": 2.235589950525972e-06,
+      "residual_over_strength_squared": 223.5589950525972,
+      "halo_psi_power_fraction": 3.9788989854524904e-32,
+      "halo_chi_deviation_norm": 4.0551688003373627e-13
+    }
+  ],
+  "verdict": "TRANSFER_WAKE_REST_BRANCH_OBSTRUCTED",
+  "claim_boundary": "Fredholm and one-step range correction at strength 1e-4. A pass is local existence evidence only, not a converged nonlinear branch, selected coefficient, stable action, or motion pass."
+}

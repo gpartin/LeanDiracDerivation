@@ -1,0 +1,34 @@
+{
+  "status": "V4_006_MOVEMENT_ACTION_REPAIR_VERDICT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "target_pattern": "the same localized eight-site Psi-chi carrier and fixed four-component readout during signed translation",
+  "baseline": {
+    "one_cycle_shape_error": 0.24154046719839933,
+    "one_cycle_leakage": 0.016305704109024755,
+    "one_cycle_norm_drift": 0.047946947849577315,
+    "ten_cycle_shape_error": 1.421016955193639,
+    "ten_cycle_leakage": 0.05069291483733074,
+    "ten_cycle_norm_drift": 0.44867995366436375
+  },
+  "best_shape_candidate": {
+    "action_delta": "unit complete-frame overlap null direction plus minus-one-half cube-incidence gradient null direction and a unit rest-null curl-overlap positive square",
+    "coefficient_provenance": "exact rest-force null vectors, C19 face-to-edge half weight, unit complete-frame normalization, and centered native chi0 clock; no Dirac coefficient fit",
+    "rest_DEL_rms": 3.5947324021280736e-13,
+    "one_cycle_shape_error": 0.20710508027660737,
+    "one_cycle_leakage": 0.021244301770668356,
+    "one_cycle_norm_drift": 0.027995490836394632,
+    "ten_cycle_shape_error": 1.2850124938370724,
+    "ten_cycle_leakage": 0.0781043559084476,
+    "ten_cycle_norm_drift": 0.21728740760529974
+  },
+  "ablations": {
+    "overlap_null_direction": "small one-cycle improvement in all metrics, but ten-cycle leakage rises slightly",
+    "cube_gradient_direction": "improves shape and norm but worsens leakage",
+    "curl_overlap_square": "improves norm but does not supply the missing signed turn",
+    "C19_triangle_current": "preserves rest but is incompatible with the localized carrier at unit and plus-or-minus chi0-normalized scales"
+  },
+  "verdict": "ACTION_CANDIDATES_IMPROVE_SELECTED_METRICS_BUT_V4_006_REMAINS_OPEN",
+  "promotion_consequence": "retain the prior stable action; do not admit or promote any tested movement term",
+  "claim_boundary": "Linearized rest and packet tests only. No integer handoff, two-cell translation, nonlinear endurance, or V4-006 pass."
+}

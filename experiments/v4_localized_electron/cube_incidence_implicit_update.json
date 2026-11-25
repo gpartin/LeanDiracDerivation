@@ -1,0 +1,32 @@
+{
+  "status": "V4_CUBE_INCIDENCE_IMPLICIT_UPDATE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "solver": "fixed-rest-Jacobian Newton with residual-decrease line search",
+  "rest_update": {
+    "converged": true,
+    "iterations": 2,
+    "residual_history_RMS": [
+      1.3346346408030583,
+      8.67178204861517e-05,
+      2.7507844228044918e-14
+    ],
+    "relative_next_layer_error": 1.9997720191608396e-17
+  },
+  "one_percent_001_update": {
+    "converged": true,
+    "iterations": 6,
+    "residual_history_RMS": [
+      1.3391397267388125,
+      0.012309004834268798,
+      0.00042091985773693455,
+      3.3785997365337197e-06,
+      1.1639270632480641e-07,
+      1.061464216197191e-09,
+      6.914896162892928e-11
+    ],
+    "one_update_corotating_perturbation_gain": 0.9999332474306778
+  },
+  "verdict": "IMPLICIT_VARIATIONAL_UPDATE_PASS",
+  "claim_boundary": "One exact-rest and one perturbed update. It does not establish 100-cycle stability, conservation, movement, current, or V4-006."
+}

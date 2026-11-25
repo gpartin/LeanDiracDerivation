@@ -1,0 +1,110 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_face_laplacian_plus_psi_area_oscillator",
+  "action_scale": 0.3157894736842105,
+  "amplitude_fraction_of_rest_norm": -0.0001,
+  "chi_lift": "zero",
+  "chi_scales": {
+    "plus": [
+      0.0,
+      0.0
+    ],
+    "minus": [
+      0.0,
+      0.0
+    ]
+  },
+  "requested_updates": 4,
+  "carrier_wave_number": 0.35,
+  "packet_width": 1.35,
+  "readout": "local",
+  "dirac_time_comparator": "centered",
+  "frequency_branch": "negative",
+  "face_gradient_coefficient": null,
+  "solver_tolerance_RMS": 2e-10,
+  "rest_roundoff_subtracted": true,
+  "all_solvers_converged": true,
+  "maximum_native_vs_dirac_relative_error": 0.0022848899019458422,
+  "maximum_outside_four_component_fraction": 8.429376028047788e-05,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 3,
+          "solver_residual_RMS": 8.244563049878345e-11,
+          "native_vs_dirac_relative_error": 0.00023096396620859912,
+          "outside_four_component_fraction": 8.582217242521122e-06,
+          "within_four_component_relative_error": 0.0002308045078894745,
+          "phase_amplitude_aligned_shape_error": 0.00017734633296451918,
+          "phase_plane_coefficients": [
+            0.9998531511914288,
+            1.8112407124833865e-05
+          ],
+          "native_norm_ratio": 0.999853167083652,
+          "nonlinear_vs_local_tangent_relative_error": 0.0011551848507030437
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 9.586164365811632e-11,
+          "native_vs_dirac_relative_error": 0.0006912435123321584,
+          "outside_four_component_fraction": 2.563755742969079e-05,
+          "within_four_component_relative_error": 0.0006907683285721811,
+          "phase_amplitude_aligned_shape_error": 0.0005298467627953276,
+          "phase_plane_coefficients": [
+            0.9995625313698381,
+            7.55062839820712e-05
+          ],
+          "native_norm_ratio": 0.9995626746519046,
+          "nonlinear_vs_local_tangent_relative_error": 0.001153585677293093
+        },
+        {
+          "step": 3,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 8.55300464830864e-11,
+          "native_vs_dirac_relative_error": 0.0013775301429101948,
+          "outside_four_component_fraction": 5.0968682821054836e-05,
+          "within_four_component_relative_error": 0.0013765885299740098,
+          "phase_amplitude_aligned_shape_error": 0.001054087080015689,
+          "phase_plane_coefficients": [
+            0.9991343103674933,
+            0.00019253878191719185
+          ],
+          "native_norm_ratio": 0.9991348849501168,
+          "nonlinear_vs_local_tangent_relative_error": 0.001151953040190135
+        },
+        {
+          "step": 4,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 9.665231862688504e-11,
+          "native_vs_dirac_relative_error": 0.0022848899019458422,
+          "outside_four_component_fraction": 8.429376028047788e-05,
+          "within_four_component_relative_error": 0.0022833389153464295,
+          "phase_amplitude_aligned_shape_error": 0.0017454810341281009,
+          "phase_plane_coefficients": [
+            0.9985776077490921,
+            0.000388353071410616
+          ],
+          "native_norm_ratio": 0.9985792087861889,
+          "nonlinear_vs_local_tangent_relative_error": 0.0011503092567358207
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_PASS",
+  "claim_boundary": "4 unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

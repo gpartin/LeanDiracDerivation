@@ -1,0 +1,146 @@
+{
+  "status": "V4_UNIT_GEOMETRIC_ACTION_ON_BARE_CANONICAL",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "baseline": "bare canonical V40 U_local+U_area; no transfer or density scaffolding",
+  "coefficient_rule": "unit weight for every normalized positive geometric identity",
+  "rows": [
+    {
+      "shift": {
+        "real": 1.00000005,
+        "imag": 0.0
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 1.0000000202809898,
+          "imag": 7.777989273265665e-15,
+          "modulus": 1.0000000202809898
+        },
+        {
+          "real": 1.0000000182795872,
+          "imag": -3.9431809428559626e-13,
+          "modulus": 1.0000000182795872
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-06
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.99999999999814,
+          "imag": 1.92885599302917e-06,
+          "modulus": 1.0000000000000002
+        },
+        {
+          "real": 0.9999999999981399,
+          "imag": 1.9288940873375872e-06,
+          "modulus": 1.0000000000000002
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 5e-06
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999981399,
+          "imag": 1.928863842875022e-06,
+          "modulus": 1.0000000000000002
+        },
+        {
+          "real": 0.9999999999981398,
+          "imag": 1.9289019371589296e-06,
+          "modulus": 1.0
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000001,
+        "imag": 1e-05
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999981398,
+          "imag": 1.9288652730494023e-06,
+          "modulus": 1.0
+        },
+        {
+          "real": 0.9999999999981399,
+          "imag": 1.9288271784177695e-06,
+          "modulus": 1.0
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.000005,
+        "imag": 5e-05
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999999981355,
+          "imag": 1.9288097704385417e-06,
+          "modulus": 0.9999999999999957
+        },
+        {
+          "real": 0.9999999999981353,
+          "imag": 1.9288494296734426e-06,
+          "modulus": 0.9999999999999954
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.00001,
+        "imag": 0.0001
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999999915744938,
+          "imag": 0.00012981144863111896,
+          "modulus": 0.9999999999999999
+        },
+        {
+          "real": 0.9999999887233725,
+          "imag": 0.00015017741182139476,
+          "modulus": 1.0
+        }
+      ]
+    },
+    {
+      "shift": {
+        "real": 1.0001,
+        "imag": 0.001
+      },
+      "converged": true,
+      "values": [
+        {
+          "real": 0.9999993923356342,
+          "imag": 0.0011024193223604852,
+          "modulus": 0.9999999999999999
+        },
+        {
+          "real": 0.9999993923471344,
+          "imag": 0.0011024088905318855,
+          "modulus": 1.0
+        }
+      ]
+    }
+  ],
+  "maximum_resolved_modulus": 1.0000000202809898,
+  "count_resolved_above_1_plus_1e_minus_7": 0,
+  "verdict": "UNIT_GEOMETRIC_BARE_CANONICAL_RESOLVED_BAND_PASS",
+  "claim_boundary": "Exact modes nearest seven complex shifts. No full contour, nonlinear, conservation, motion, or Dirac-regression claim."
+}

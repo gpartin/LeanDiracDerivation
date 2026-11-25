@@ -1,0 +1,172 @@
+{
+  "status": "V4_VACUUM_ACTIVATED_CHI_ORIENTATION_SCREEN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "candidate_action": "sum_C19 w a_i a_j ||Pchi_i-Pchi_j||_F^2/(4 chi0^2), a=((rhochi-rhoPsi)/chi0^2)^2",
+  "properties": {
+    "positive": true,
+    "native_fields_only": true,
+    "C19_cubic": true,
+    "reciprocal": true,
+    "phase_invariant": true,
+    "contains_prepared_geometry_or_Dirac_data": false
+  },
+  "exact_rest_energy": 0.0,
+  "exact_rest_force_norm": 0.0,
+  "hessian_symmetry_defect": 0.0,
+  "face_coefficients": {
+    "diagonal_symmetric": 0.14705479982595762,
+    "diagonal_antisymmetric": 0.14705479982595762,
+    "diagonal_reversed": 0.075,
+    "diagonal_conjugate": 0.075,
+    "edge_commutator": 0.10294520017404238
+  },
+  "rows": [
+    {
+      "strength": 0.0,
+      "minimum_generalized_stiffness": -25.211500767391705,
+      "negative_count_in_lowest_32": 32,
+      "lowest_generalized_stiffness": [
+        -25.211500767391705,
+        -25.211500767391584,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767375526,
+        -25.211500767325155,
+        -25.211500767325106
+      ]
+    },
+    {
+      "strength": 0.01,
+      "minimum_generalized_stiffness": -25.211500767391595,
+      "negative_count_in_lowest_32": 20,
+      "lowest_generalized_stiffness": [
+        -25.211500767391595,
+        -25.21150076739155,
+        -25.211500767375565,
+        -25.211500767375565,
+        -25.211500767375544,
+        -25.211500767375544,
+        -25.211500767325155,
+        -25.21150076732511
+      ]
+    },
+    {
+      "strength": 0.03,
+      "minimum_generalized_stiffness": -25.211500767391627,
+      "negative_count_in_lowest_32": 20,
+      "lowest_generalized_stiffness": [
+        -25.211500767391627,
+        -25.211500767391556,
+        -25.21150076737556,
+        -25.21150076737556,
+        -25.21150076737556,
+        -25.21150076737556,
+        -25.211500767325106,
+        -25.211500767325106
+      ]
+    },
+    {
+      "strength": 0.1,
+      "minimum_generalized_stiffness": -25.2115007673916,
+      "negative_count_in_lowest_32": 20,
+      "lowest_generalized_stiffness": [
+        -25.2115007673916,
+        -25.21150076739155,
+        -25.211500767375576,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767325123,
+        -25.2115007673251
+      ]
+    },
+    {
+      "strength": 0.3,
+      "minimum_generalized_stiffness": -25.211500767391648,
+      "negative_count_in_lowest_32": 20,
+      "lowest_generalized_stiffness": [
+        -25.211500767391648,
+        -25.21150076739162,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767375533,
+        -25.211500767325155,
+        -25.21150076732511
+      ]
+    },
+    {
+      "strength": 1.0,
+      "minimum_generalized_stiffness": -25.21150076739168,
+      "negative_count_in_lowest_32": 20,
+      "lowest_generalized_stiffness": [
+        -25.21150076739168,
+        -25.21150076739166,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.21150076737553,
+        -25.21150076732515,
+        -25.21150076732515
+      ]
+    },
+    {
+      "strength": 3.0,
+      "minimum_generalized_stiffness": -25.21150076739163,
+      "negative_count_in_lowest_32": 20,
+      "lowest_generalized_stiffness": [
+        -25.21150076739163,
+        -25.211500767391584,
+        -25.211500767375576,
+        -25.211500767375554,
+        -25.211500767375554,
+        -25.211500767375526,
+        -25.21150076732514,
+        -25.211500767325095
+      ]
+    },
+    {
+      "strength": 10.0,
+      "minimum_generalized_stiffness": -25.211500767391748,
+      "negative_count_in_lowest_32": 20,
+      "lowest_generalized_stiffness": [
+        -25.211500767391748,
+        -25.211500767391552,
+        -25.21150076737558,
+        -25.21150076737558,
+        -25.21150076737553,
+        -25.21150076737553,
+        -25.211500767325152,
+        -25.211500767325102
+      ]
+    }
+  ],
+  "best": {
+    "strength": 0.01,
+    "minimum_generalized_stiffness": -25.211500767391595,
+    "negative_count_in_lowest_32": 20,
+    "lowest_generalized_stiffness": [
+      -25.211500767391595,
+      -25.21150076739155,
+      -25.211500767375565,
+      -25.211500767375565,
+      -25.211500767375544,
+      -25.211500767375544,
+      -25.211500767325155,
+      -25.21150076732511
+    ]
+  },
+  "remaining_lowest_mode": {
+    "generalized_stiffness": -25.211500767391595,
+    "vacuum_activation_curvature": 1.1913670924872698e-15,
+    "Psi_fraction": 0.9999993059099485,
+    "chi_fraction": 6.940900514715089e-07,
+    "carrier_fraction": 0.9999999999999998,
+    "exterior_fraction": 2.220446049250313e-16
+  },
+  "exact_discrete_spectrum_at_positive_stiffness_candidate": null,
+  "verdict": "VACUUM_ACTIVATED_CHI_ORIENTATION_PARTIAL_RESPONSE",
+  "claim_boundary": "Exact-rest Hessian and lowest 32 generalized co-rotating stiffness values on side five. Exact discrete shift-invert is run only if the necessary stiffness gate passes. A favorable row still requires coefficient provenance, complete-contour spectrum, timestep/box refinement, Hamiltonian/Noether, nonlinear, and movement gates."
+}

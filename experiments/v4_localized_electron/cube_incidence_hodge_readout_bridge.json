@@ -1,0 +1,72 @@
+{
+  "status": "V4_C19_HODGE_READOUT_BRIDGE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "readout": "d[(chi dot conjugate(Psi)), (chi cross conjugate(Psi))]/chi0 with and without rho_Psi/chi0^2 activation",
+  "variants": [
+    {
+      "variant": "activated_relative",
+      "rows": [
+        {
+          "copy": "plus",
+          "input_real_dimension": 1000,
+          "mapped_real_rank": 32,
+          "smallest_retained_singular": 0.44872805068630733,
+          "largest_singular": 1.0033864247455553,
+          "condition_number": 2.2360679774997916,
+          "hodge_relative_cross_block": 0.9354143466934887
+        },
+        {
+          "copy": "minus",
+          "input_real_dimension": 1000,
+          "mapped_real_rank": 32,
+          "smallest_retained_singular": 0.4487280506863073,
+          "largest_singular": 1.0033864247455553,
+          "condition_number": 2.236067977499792,
+          "hodge_relative_cross_block": 0.9354143466934797
+        }
+      ],
+      "copy_subspace_overlap": {
+        "count": 32,
+        "minimum_singular": 0.9999999999999993,
+        "maximum_singular": 1.0000000000000004,
+        "count_above_1_minus_1e_minus_10": 32
+      },
+      "both_historical_copies_recoverable": false,
+      "both_copies_closed_under_hodge_operator": false
+    },
+    {
+      "variant": "relative",
+      "rows": [
+        {
+          "copy": "plus",
+          "input_real_dimension": 1000,
+          "mapped_real_rank": 500,
+          "smallest_retained_singular": 0.9645788568769369,
+          "largest_singular": 1.0000000000000027,
+          "condition_number": 1.0367218738732782,
+          "hodge_relative_cross_block": 0.8005077710896062
+        },
+        {
+          "copy": "minus",
+          "input_real_dimension": 1000,
+          "mapped_real_rank": 500,
+          "smallest_retained_singular": 0.9645788568769372,
+          "largest_singular": 1.0000000000000022,
+          "condition_number": 1.0367218738732773,
+          "hodge_relative_cross_block": 0.8005077710896056
+        }
+      ],
+      "copy_subspace_overlap": {
+        "count": 500,
+        "minimum_singular": 0.9999999999999996,
+        "maximum_singular": 1.0000000000000009,
+        "count_above_1_minus_1e_minus_10": 500
+      },
+      "both_historical_copies_recoverable": false,
+      "both_copies_closed_under_hodge_operator": false
+    }
+  ],
+  "verdict": "HODGE_READOUT_NOT_EQUIVALENT_TO_HISTORICAL_EMBEDDING",
+  "claim_boundary": "Linear differential at the exact localized rest orbit. Rank establishes recoverability, not mass/current equivalence or a nonlinear global coordinate chart."
+}

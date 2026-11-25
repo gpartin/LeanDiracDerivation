@@ -1,0 +1,38 @@
+{
+  "status": "SCALAR_MULTISITE_STIFFNESS_NO_IMPROVEMENT",
+  "canonical_action_changed": false,
+  "research_actions_admitted": false,
+  "baseline": {
+    "B": 229.0,
+    "bond_quartic": -0.8,
+    "bond_sextic": 0.03,
+    "box_side": 3,
+    "dt": 0.00390625,
+    "leading_growth_rate": 0.0755557825959246
+  },
+  "positive_c19_curvature": {
+    "action_term": "eta ||D19 (chi wedge Psi)||^2 / (2 chi0^4)",
+    "tested_eta": [0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0],
+    "best_growth_rate": 0.0755817090841145,
+    "best_eta": 0.001,
+    "verdict": "NO_IMPROVEMENT"
+  },
+  "positive_cube_plaquette_curvature": {
+    "action_term": "eta sum_plaquettes ||P_ab (chi wedge Psi)||^2 / (2 chi0^2 Nplaquette)",
+    "tested_eta": [0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0],
+    "best_growth_rate": 0.0776255246470103,
+    "best_eta": 0.01,
+    "exact_rest_orbit_preserved": false,
+    "verdict": "WORSE_AND_DEFORMS_REST_ORBIT"
+  },
+  "inadmissible_inverse_sign_probe": {
+    "purpose": "diagnostic only; negative quadratic plaquette energy is not bounded below",
+    "tested_eta": [-0.001, -0.003, -0.01, -0.03, -0.1, -0.3],
+    "best_growth_rate": 0.0752849695198819,
+    "best_eta": -0.003,
+    "relative_improvement": 0.003584273464794,
+    "exact_rest_orbit_preserved": false,
+    "verdict": "NEGLIGIBLE_IMPROVEMENT_THEN_WORSE"
+  },
+  "conclusion": "The unresolved mode is not repaired by scalar spatial stiffness, including two-hop C19 curvature and shared-corner plaquette curvature. The next admissible basis must change relative Psi-chi timing/orientation response, not merely penalize another spatial bend."
+}

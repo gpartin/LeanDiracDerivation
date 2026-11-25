@@ -1,0 +1,31 @@
+{
+  "status": "V4_DIRECT_PRONG_ARTIFACT_AUDIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "v4_006_status": "OPEN",
+  "files": {
+    "exact_translation_direct_prong_spacetime_gate.py": "234fe6a620cad00003bc721a26aeb62c451c734e7521052a3b0fcde7c8dc9764",
+    "exact_translation_current_prong_spacetime_gate.py": "126e8a664f8d53c79077bce4274dfee5e32bd763fc91d49cad3637fe45b14f8e",
+    "direct_prong_response_rank.py": "0a1faf3cbca2ae40ae6cd5c08931e751847778a8f25864b9ad4b4307fc2d591e",
+    "direct_prong_response_rank.json": "d53582729fff32b8d2f5960f5b3bbd80084ca9b952c11c74d6678f07d4f0ca24",
+    "exact_translation_direct_prong_connection_gate.py": "67f205fa9982d71e36d2622f4a6932befd2ce39075c4264b6943d41abfb80449",
+    "exact_translation_density_flow_prong_gate.py": "aa3a99b60f5b27702a01a3eecf9b97232bcae5c3f4ad80a8c1a8a385072ddfcd",
+    "density_flow_velocity_diagnostic.py": "21caa4befdd4cc8ef6b58b781a48cc42558ccae64e2483b347564c8ca6833af0",
+    "density_flow_velocity_diagnostic.json": "6351d660500d9d419592cef475973cd1f620dfe6f4241956dddcaabd3331f708",
+    "exact_translation_multichannel_prong_gate.py": "7beb6729571433e46de941c489ecc05b375376e69fbcfcf42ed68ab72fb5a1e6",
+    "exact_translation_multichannel_prong_psi_axis0_plus.json": "2efbe07f60e266920a0b8951c871f0ed035f1a3ef5f80af8a85f82777563a3bc",
+    "exact_translation_multichannel_prong_psi_axis0_minus.json": "6117cf507d7102204ec96b68a0bbc2f5eb3ed897830ddc34af17b1c0278a3d71",
+    "exact_translation_multichannel_prong_psi_axis1_plus.json": "e86c422f5d88a69bee769d0f57630e86bcd8804a6d988550f18c079e5822de22",
+    "exact_translation_multichannel_prong_psi_axis1_minus.json": "d487f18ecce35a5e4f89840264466ffbc34dc4e286d6e11e7826db4d867a8f5c",
+    "exact_translation_multichannel_prong_psi_axis2_plus.json": "388b538a65bdb04af405b98c2ab4dde2c6693181dfb1ae2f1dfa72f6a6d35989",
+    "exact_translation_multichannel_prong_psi_axis2_minus.json": "98a35bc2ffab79a7f39d7610fb7aa218ed2ff9567ad3fd692d6f6cd7432d8b7d"
+  },
+  "verification": {
+    "python_compile": "PASS",
+    "rest_orbit": "PASS_TO_EXISTING_NUMERICAL_TOLERANCE",
+    "all_signed_axes_profile_screen": "PASS_AS_DIAGNOSTIC_ONLY",
+    "converged_implicit_exact_update": "FAIL_OPEN",
+    "two_unreset_handoffs": "NOT_RUN_BECAUSE_PRECEDING_GATE_OPEN"
+  },
+  "claim_boundary": "The multichannel same-prong action is the current research incumbent, not an admitted or canonical action. V4-006 remains open."
+}

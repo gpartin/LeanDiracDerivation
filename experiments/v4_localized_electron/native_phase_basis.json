@@ -1,0 +1,154 @@
+{
+  "status": "V4_NATIVE_POSITIVE_BOND_PHASE_BASIS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "tested_families": [
+    "psi_difference",
+    "chi_difference",
+    "parallel_minus",
+    "parallel_plus",
+    "cross_minus",
+    "cross_plus"
+  ],
+  "labels": [
+    [
+      "psi_difference",
+      1
+    ],
+    [
+      "psi_difference",
+      2
+    ],
+    [
+      "chi_difference",
+      1
+    ],
+    [
+      "chi_difference",
+      2
+    ],
+    [
+      "parallel_minus",
+      1
+    ],
+    [
+      "parallel_minus",
+      2
+    ],
+    [
+      "parallel_plus",
+      1
+    ],
+    [
+      "parallel_plus",
+      2
+    ],
+    [
+      "cross_minus",
+      1
+    ],
+    [
+      "cross_minus",
+      2
+    ],
+    [
+      "cross_plus",
+      1
+    ],
+    [
+      "cross_plus",
+      2
+    ]
+  ],
+  "canonical_phase_torque_max_abs": 4.440892098500626e-16,
+  "canonical_quotient_curvatures": [
+    -16.0,
+    -15.999999999999996,
+    -4.000000000000003,
+    -4.0,
+    -3.999999999999997,
+    -3.999999999999997,
+    -3.2917106582015335e-15,
+    -1.6128295053679745e-15,
+    -1.490086226348095e-15,
+    -8.337895547545158e-16,
+    -7.47862665892337e-16,
+    2.701567068625372e-16,
+    8.649936927194901e-16,
+    1.3428538209033323e-15
+  ],
+  "candidate_gradient_norms": [
+    2.309401076758503,
+    1.632993161855452,
+    2.309401076758503,
+    2.309401076758503,
+    1.3333333333333335,
+    1.8856180831641267,
+    1.3333333333333335,
+    1.8856180831641267,
+    2.6666666666666665,
+    5.333333333333334,
+    2.6666666666666665,
+    5.333333333333334
+  ],
+  "solution": {
+    "feasible": false,
+    "iterations": 1,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "stationarity_rank": 6,
+    "stationary_nonnegative_cone_dimension": 6,
+    "stationary_positive_cone": {
+      "nonzero_stationary_positive_combination_exists": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "example_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.6666666666666666,
+        0.33333333333333337
+      ],
+      "example_candidate_curvatures": [
+        -3.5555555555555567,
+        -3.5555555555555554,
+        -0.8888888888888891,
+        -0.8888888888888886,
+        -0.8888888888888884,
+        -0.8888888888888882,
+        -5.212979707022144e-16,
+        -2.99907891353303e-16,
+        -1.5502642079284892e-16,
+        -1.33463491567422e-16,
+        -8.235534573345059e-18,
+        1.1722197662216296e-17,
+        3.2463749514511776e-16,
+        7.263979614646995e-16
+      ],
+      "example_base_plus_candidate_curvatures": [
+        -19.55555555555556,
+        -19.555555555555554,
+        -4.88888888888889,
+        -4.88888888888889,
+        -4.8888888888888875,
+        -4.888888888888886,
+        -3.876001674306973e-15,
+        -2.23301068777119e-15,
+        -1.788834912273726e-15,
+        -1.2443551283163248e-15,
+        -1.5923751893772388e-16,
+        -7.148847983805489e-17,
+        4.245908083361846e-16,
+        1.3603982713669649e-15
+      ]
+    },
+    "history": []
+  },
+  "verdict": "GENERIC_POSITIVE_BOND_BASIS_NO_GO",
+  "claim_boundary": "Phase-only inverse gate.  Feasibility does not establish an exact full-field orbit, bounded complete spectrum, coefficient provenance, transport, or Dirac behavior."
+}

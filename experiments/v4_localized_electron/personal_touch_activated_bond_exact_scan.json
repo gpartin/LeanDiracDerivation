@@ -1,0 +1,151 @@
+{
+  "status": "V4_ACTIVATED_BOND_EXACT_DISCRETE_SCAN",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "face_coefficients": {
+    "diagonal_symmetric": 0.14705479982595762,
+    "diagonal_antisymmetric": 0.14705479982595762,
+    "diagonal_reversed": 0.075,
+    "diagonal_conjugate": 0.075,
+    "edge_commutator": 0.10294520017404238
+  },
+  "activated_coefficients": {
+    "vacuum_vacuum_chi": 0.000753123914826186,
+    "carrier_vacuum_chi": 0.0967079843896992,
+    "carrier_carrier_chi": 0.0,
+    "carrier_carrier_Psi_tight_frame": 6.94406813381766
+  },
+  "rows": [
+    {
+      "scale": 0.25,
+      "converged_all_requested": true,
+      "converged_count": 4,
+      "leading_modulus": 1.0000372628565564,
+      "growth_rate": 0.009539113552222884,
+      "count_above_1_plus_1e_minus_7": 4,
+      "values": [
+        {
+          "real": 1.0000372624890277,
+          "imag": 2.711244692132353e-05,
+          "modulus": 1.0000372628565564
+        },
+        {
+          "real": 1.0000372624890277,
+          "imag": -2.711244692132353e-05,
+          "modulus": 1.0000372628565564
+        },
+        {
+          "real": 1.0000159028958464,
+          "imag": -1.2221191419777967e-07,
+          "modulus": 1.000015902895854
+        },
+        {
+          "real": 1.0000159028958464,
+          "imag": 1.2221191419777967e-07,
+          "modulus": 1.000015902895854
+        }
+      ]
+    },
+    {
+      "scale": 0.5,
+      "converged_all_requested": true,
+      "converged_count": 4,
+      "leading_modulus": 1.0000240994170588,
+      "growth_rate": 0.006169376428171698,
+      "count_above_1_plus_1e_minus_7": 4,
+      "values": [
+        {
+          "real": 1.0000240991235392,
+          "imag": 2.4229182528813537e-05,
+          "modulus": 1.0000240994170586
+        },
+        {
+          "real": 1.0000240991235392,
+          "imag": -2.4229182528813537e-05,
+          "modulus": 1.0000240994170586
+        },
+        {
+          "real": 1.0000133973038332,
+          "imag": -1.6235769198781937e-07,
+          "modulus": 1.0000133973038465
+        },
+        {
+          "real": 1.0000133973038332,
+          "imag": 1.6235769198781937e-07,
+          "modulus": 1.0000133973038465
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "converged_all_requested": true,
+      "converged_count": 4,
+      "leading_modulus": 1.0000143290442407,
+      "growth_rate": 0.003668209044717582,
+      "count_above_1_plus_1e_minus_7": 4,
+      "values": [
+        {
+          "real": 1.0000143290105679,
+          "imag": 8.206505005309479e-06,
+          "modulus": 1.000014329044241
+        },
+        {
+          "real": 1.0000143290105679,
+          "imag": -8.206505005309479e-06,
+          "modulus": 1.000014329044241
+        },
+        {
+          "real": 1.0000083284158503,
+          "imag": 4.576271589219998e-06,
+          "modulus": 1.0000083284263215
+        },
+        {
+          "real": 1.0000083284158503,
+          "imag": -4.576271589219998e-06,
+          "modulus": 1.0000083284263215
+        }
+      ]
+    },
+    {
+      "scale": 2.0,
+      "converged_all_requested": false,
+      "converged_count": 0,
+      "leading_modulus": null,
+      "growth_rate": null,
+      "count_above_1_plus_1e_minus_7": 0,
+      "values": []
+    }
+  ],
+  "best_complete_row": {
+    "scale": 1.0,
+    "converged_all_requested": true,
+    "converged_count": 4,
+    "leading_modulus": 1.0000143290442407,
+    "growth_rate": 0.003668209044717582,
+    "count_above_1_plus_1e_minus_7": 4,
+    "values": [
+      {
+        "real": 1.0000143290105679,
+        "imag": 8.206505005309479e-06,
+        "modulus": 1.000014329044241
+      },
+      {
+        "real": 1.0000143290105679,
+        "imag": -8.206505005309479e-06,
+        "modulus": 1.000014329044241
+      },
+      {
+        "real": 1.0000083284158503,
+        "imag": 4.576271589219998e-06,
+        "modulus": 1.0000083284263215
+      },
+      {
+        "real": 1.0000083284158503,
+        "imag": -4.576271589219998e-06,
+        "modulus": 1.0000083284263215
+      }
+    ]
+  },
+  "verdict": "ACTIVATED_BOND_CANDIDATE_RETAINS_TARGETED_GROWTH",
+  "claim_boundary": "Four multipliers nearest the formerly leading real shift. A targeted pass still requires complete contour count, coefficient provenance, refinements, conservation, nonlinear and movement gates."
+}

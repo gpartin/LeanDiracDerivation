@@ -1,0 +1,51 @@
+{
+  "status": "V4_C27_CHI_C19_REST_COMPLETION_RANGE",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "basis_names": [
+    "local_common_area_velocity",
+    "local_relative_area_velocity",
+    "body_common_area_velocity",
+    "body_relative_area_velocity",
+    "c19_common_area_velocity",
+    "c19_relative_area_velocity"
+  ],
+  "basis_force_rank": 2,
+  "basis_force_singular_values": [
+    9.119748927348153,
+    2.5293632597624374,
+    3.43489070318858e-14,
+    8.89015842139096e-15,
+    4.419102400349667e-16,
+    1.7626861827015327e-16
+  ],
+  "target_names": [
+    "joint_W_C27",
+    "direct_chi_C19"
+  ],
+  "coefficient_columns": {
+    "joint_W_C27": {
+      "local_common_area_velocity": 0.03241098833461079,
+      "local_relative_area_velocity": 0.03241098833461077,
+      "body_common_area_velocity": -0.026333928021875747,
+      "body_relative_area_velocity": -0.02633392802187575,
+      "c19_common_area_velocity": -0.04861648250191585,
+      "c19_relative_area_velocity": -0.048616482501916046
+    },
+    "direct_chi_C19": {
+      "local_common_area_velocity": 0.10324823398926382,
+      "local_relative_area_velocity": 0.10324823398926375,
+      "body_common_area_velocity": -7.304423887417125e-16,
+      "body_relative_area_velocity": -7.304423887417126e-16,
+      "c19_common_area_velocity": -0.15487235098389548,
+      "c19_relative_area_velocity": -0.15487235098389554
+    }
+  },
+  "relative_force_remainders": {
+    "joint_W_C27": 8.569750266408709e-14,
+    "direct_chi_C19": 0.8728608247595098
+  },
+  "both_targets_in_gyro_range": false,
+  "verdict": "CHI_C19_VACUUM_STIFFNESS_OUTSIDE_TESTED_GYRO_RANGE",
+  "claim_boundary": "Exact-rest force-range test only. It does not select the chi stiffness, prove spectrum improvement, retain transport rank, or establish nonlinear movement."
+}

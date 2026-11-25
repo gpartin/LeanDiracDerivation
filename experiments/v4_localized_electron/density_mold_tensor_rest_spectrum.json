@@ -1,0 +1,32 @@
+{
+  "status": "V4_DENSITY_MOLD_TENSOR_REST_GATE_PASS",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "mode": "local_plus_traceless",
+  "local_incumbent": {
+    "coefficient": 1.149584487534626,
+    "rest_del_rms_residual": 1.826759444415815e-12,
+    "following_block_condition_number": 1441.5440703264799,
+    "following_block_rank": 324,
+    "following_block_dimension": 324,
+    "smallest_singular_value": 255.3756276011992,
+    "spectral_radius": 1.0029405186319478,
+    "growth_rate_per_unit_time": 0.7516681634815284,
+    "reciprocal_pairing_defect": 1.2590373188459125e-11
+  },
+  "tensor_candidate": {
+    "coefficient": 1.149584487534626,
+    "rest_del_rms_residual": 2.1947984447357323e-12,
+    "following_block_condition_number": 1548.1157103687092,
+    "following_block_rank": 324,
+    "following_block_dimension": 324,
+    "smallest_singular_value": 255.35916920181498,
+    "spectral_radius": 1.0029404631200156,
+    "growth_rate_per_unit_time": 0.751653994091856,
+    "reciprocal_pairing_defect": 1.0593748100973244e-11
+  },
+  "relative_growth_improvement": 1.8850591738301656e-05,
+  "rest_growth_preserved": false,
+  "verdict": "ADVANCE_TO_FOUR_UPDATE_ORBIT",
+  "claim_boundary": "This is a side-three implicit linear rest spectrum, not a nonlinear stability or movement pass."
+}

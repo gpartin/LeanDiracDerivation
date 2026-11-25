@@ -1,0 +1,97 @@
+{
+  "status": "V4_LIVE_CLIFFORD_NONLINEAR_GATE",
+  "link_source": "joint_face_laplacian_plus_psi_area_oscillator",
+  "action_scale": 0.2631578947368421,
+  "amplitude_fraction_of_rest_norm": 0.0001,
+  "chi_lift": "zero",
+  "chi_scales": {
+    "plus": [
+      0.0,
+      0.0
+    ],
+    "minus": [
+      0.0,
+      0.0
+    ]
+  },
+  "requested_updates": 9,
+  "carrier_wave_number": 0.35,
+  "packet_width": 1.35,
+  "readout": "local",
+  "dirac_time_comparator": "centered",
+  "face_gradient_coefficient": null,
+  "solver_tolerance_RMS": 1e-10,
+  "rest_roundoff_subtracted": true,
+  "all_solvers_converged": false,
+  "maximum_native_vs_dirac_relative_error": 0.0022508538815019324,
+  "maximum_outside_four_component_fraction": 2.6563826422257765e-05,
+  "rows": [
+    {
+      "flavor": "plus",
+      "direction": "x",
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "converged": false,
+      "samples": [
+        {
+          "step": 1,
+          "solver_converged": true,
+          "newton_iterations": 7,
+          "solver_residual_RMS": 9.837867642975525e-11,
+          "native_vs_dirac_relative_error": 0.000757333191241504,
+          "outside_four_component_fraction": 8.88434669267799e-06,
+          "within_four_component_relative_error": 0.0007572811177671705,
+          "phase_amplitude_aligned_shape_error": 0.0006470507530866912,
+          "phase_plane_coefficients": [
+            0.9996171832378629,
+            -9.12699956914564e-05
+          ],
+          "native_norm_ratio": 0.9996173968220491,
+          "nonlinear_vs_local_tangent_relative_error": 0.0024473391071861837
+        },
+        {
+          "step": 2,
+          "solver_converged": true,
+          "newton_iterations": 4,
+          "solver_residual_RMS": 9.131721073381514e-11,
+          "native_vs_dirac_relative_error": 0.0022508538815019324,
+          "outside_four_component_fraction": 2.6563826422257765e-05,
+          "within_four_component_relative_error": 0.002250697482484579,
+          "phase_amplitude_aligned_shape_error": 0.0019278439742797936,
+          "phase_plane_coefficients": [
+            0.9988646843241034,
+            -0.00024661533360656137
+          ],
+          "native_norm_ratio": 0.9988665751697788,
+          "nonlinear_vs_local_tangent_relative_error": 0.002444711214100675
+        },
+        {
+          "step": 3,
+          "solver_converged": false,
+          "solver_residual_RMS": 1.0866702567330752e-10,
+          "solver_residual_history_RMS": [
+            0.003904757983544054,
+            0.00332276084133907,
+            5.855514349833832e-08,
+            1.5082566399920559e-10,
+            1.087864737327176e-10,
+            1.0874992575146186e-10,
+            1.0872279406676707e-10,
+            1.0869668946785411e-10,
+            1.0868705561304714e-10,
+            1.0867840681767069e-10,
+            1.0866879504679983e-10,
+            1.0866752586676688e-10,
+            1.0866702567330752e-10
+          ]
+        }
+      ]
+    }
+  ],
+  "verdict": "LIVE_CLIFFORD_NONLINEAR_SHORT_RUN_OPEN",
+  "claim_boundary": "9 unrestricted nonlinear small-amplitude updates. This is not a full-amplitude carrier handoff, long run, or V4-006 pass."
+}

@@ -1,0 +1,27 @@
+{
+  "status": "V4_REDUCED_TIGHT_FRAME_RELATIVE_ORBIT",
+  "canonical_action_changed": false,
+  "research_action_admitted": false,
+  "device": "cpu",
+  "rows": [
+    {
+      "axis": 0,
+      "sign": 1,
+      "updates_per_cell": 16,
+      "initial_relative_boundary_residual": 1.5979252161465047,
+      "final_relative_boundary_residual": 0.46556112359109514,
+      "endpoint_relative_residual": 0.2670881256268491,
+      "preceding_layer_relative_residual": 0.38132806472713154,
+      "unreset_second_cell_endpoint_residual": 2.4150029273208586,
+      "solved_dt": 0.02747686554485197,
+      "solved_translation_time": 0.4396298487176315,
+      "solved_psi_phase": 9.50065346170992,
+      "solved_chi_phase": 0.014953151130997088,
+      "optimizer_evaluations": 64,
+      "minimum_objective_trace": 0.46556112406870875,
+      "converged": false
+    }
+  ],
+  "verdict": "NO_ORBIT_CONVERGED_FROM_TESTED_SEEDS",
+  "claim_boundary": "Free one-cell shooting with fixed exact carrier at one layer. Nonconvergence is not a no-go for a deformed carrier or other periods. V4-006 passes only with two handoffs in both signs of all axes and the same-state Dirac-current gate."
+}
