@@ -1,0 +1,27 @@
+{
+  "stage": "V4-002",
+  "status": "LINEAR_STABILITY_SCREEN",
+  "action_module": "wake_stabilized_completed_action.py",
+  "action_module_sha256": "ac28d19da43539c0cef32f53b5fbe53338dacc53efed4a927fcd80905621f3db",
+  "action_description": "historical wake stabilization loop3",
+  "cache_file": "wake_stabilized_completed_loop_3_tangent_blocks.npz",
+  "cache_provenance": "Exact tangent cache inherited from checkpoint d56b63a; the recorded SHA-256 is the authoritative identity.",
+  "cache_sha256": "e36dffc3814ebd9b8577336498c405cfb3b770cec396856a34ae5cb2597ca833",
+  "dt": 0.00390625,
+  "state_dimension": 1500,
+  "box_side": 5,
+  "phase_space_dimension": 3000,
+  "eigensolver": "dense",
+  "computed_eigenvalue_count": 3000,
+  "eigensolver_converged": true,
+  "leading_multiplier_real": 1.0062290355400032,
+  "leading_multiplier_imag": 0.0,
+  "leading_multiplier_modulus": 1.0062290355400032,
+  "leading_growth_rate_per_unit_time": 1.5896871136359954,
+  "leading_mode_field_power_fractions": {
+    "Psi": 0.9751459736031013,
+    "chi": 0.02485402639689875
+  },
+  "verdict": "LINEAR_STABILITY_FAIL",
+  "claim_boundary": "This is a full two-layer tangent screen, not the nonlinear 100-cycle V4-002 acceptance gate."
+}

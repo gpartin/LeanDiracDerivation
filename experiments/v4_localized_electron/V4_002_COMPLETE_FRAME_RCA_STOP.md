@@ -44,24 +44,40 @@ timestep, and box-refinement tests.
 
 ## Root cause
 
-The clock-face omission was real and its repair removes most of the old
-instability. The remaining mode is predominantly an internal `Psi`
-amplitude/phase response. It is not controlled by further scalar clock tuning,
-the tested symplectic face response, triangle completion, or transverse
-material completion. The negative symplectic response couples to the correct
-mode but lacks sufficient independent response rank to remove it. This is a
-scoped obstruction for the tested complete-frame action vocabulary, not a
-universal no-go for reciprocal C19 dynamics.
+The earlier “stable orbit” did not establish perturbative stability. Its
+100-cycle zero-`chi`-charge run followed the exact unperturbed orbit; the later
+full two-layer audit already showed that nearby native perturbations grow at
+approximately `1.036`. The separately described Floquet-stable wake result
+covered a reduced/common channel rather than the full native phase space. A
+new dense audit of all retained wake caches confirms that none is stable; the
+best tested wake variant grows at `0.14999`.
+
+The movement additions did not destroy an already perturbatively stable
+full-system orbit. They improve it. The historical wake base tested here
+grows at `1.61850`; adding the live movement connection and six-face frame
+oscillator lowers this to `0.85391`; adding the matched parallel clock
+coordinate lowers it again to `0.06102`. The clock-face omission was therefore
+real and its repair removes most of the inherited instability.
+
+The remaining mode is predominantly an internal `Psi` amplitude/phase
+response already traced to negative bare-V40 generalized curvature. It is not
+controlled by further scalar clock tuning, the tested symplectic face
+response, triangle completion, or transverse material completion. The
+negative symplectic response couples to the correct mode but lacks sufficient
+independent response rank to remove it. This is a scoped obstruction for the
+tested complete-frame action vocabulary, not a universal no-go for reciprocal
+C19 dynamics.
 
 ## Corrective action
 
 Per the declared five-RCA rule, stop this stage rather than continue coefficient
 tuning. The next research attempt must derive a new independent in-plane
-`Psi` phase/amplitude response that is exactly rest-null, real, reciprocal,
-local, and cubic symmetric, then combine it with the retained complete-frame
-clock mechanism. The already-tested clock term remains the incumbent because
-it produced the major improvement; it must not be discarded or replaced by
-the superseded action.
+`Psi` phase/amplitude response that exerts zero force on the exact rest orbit
+but positive curvature on its perturbations, is real, reciprocal, local, and
+cubic symmetric, then combine it with the retained complete-frame clock
+mechanism. The already-tested clock term remains the incumbent because it
+produced the major improvement; it must not be discarded or replaced by the
+superseded action.
 
 ## Completion
 

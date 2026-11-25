@@ -65,16 +65,18 @@ satisfy, for both committed layers,
 `X(n+N) = exp(i phi) tau_cell X(n)` under unrestricted native evolution. It
 does not have to occupy a meaningful fractional center between endpoints.
 
-The earlier stability work is retained rather than silently discarded. The
+The earlier exact-orbit work is retained rather than silently discarded. The
 reduced tight-frame research action has a saved unrestricted 100-cycle
-zero-`chi`-charge rest result with maximum aligned shape residual
+zero-`chi`-charge trajectory with maximum aligned shape residual
 `5.64898e-14`, carrier fidelity at least `0.9999999999999997`, zero measured
-`Psi` exterior fraction, and interval-energy drift `2.08238e-15`. That is a
-real nonlinear **rest** stability pass for that declared action and branch. It
-is not a charged-branch pass and it does not transfer automatically to the
-later transport-action deltas. The common-velocity/wake candidate separately
-places its linearized multipliers on the unit circle to about `2e-15`; that is
-a tangent/Floquet result, not a nonlinear 100-cycle moving-carrier pass.
+`Psi` exterior fraction, and interval-energy drift `2.08238e-15`. That proves
+the exactly prepared orbit remains exact for that declared action and branch;
+it does **not** prove recovery from perturbations. The later full tangent audit
+found growing nearby modes and explicitly corrected the earlier stability
+interpretation. The common-velocity/wake candidate's unit-circle statement
+was likewise scoped to a reduced/common channel. The new full 3,000-dimensional
+audit finds every retained wake cache unstable, with the best at growth
+`0.14999`. Neither historical result is a V4-002 perturbative-stability pass.
 
 ## V4-001 result
 
