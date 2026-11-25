@@ -1,0 +1,19 @@
+{
+  "stage": "V4-003",
+  "status": "PASS",
+  "checks": {
+    "stage_gate_passes": true,
+    "same_frozen_action_as_v4_002": true,
+    "no_Dirac_or_comparator_import": true,
+    "native_graph_is_the_only_phase_source": true,
+    "chi_scale_is_not_fitted": true,
+    "both_copies_and_four_complex_components": true,
+    "native_graph_is_well_conditioned": true,
+    "pinv_recovery_is_not_the_only_evidence": true,
+    "full_native_update_remainder_is_controlled": true,
+    "surrounding_residual_is_not_discarded": true
+  },
+  "forbidden_imports": [],
+  "tautology_audit": "The Moore-Penrose recovery identity is bookkeeping only. The nontrivial evidence is the unrestricted exact-action update, its nonzero complementary residual, and its measured second-order convergence under an independently rebuilt tangent.",
+  "claim_boundary": "V4-003 proves a fixed linear readout and controlled local remainder at the declared localized envelope. It does not yet prove operational spin, Noether-current pullback, or cell translation; those are V4-004 through V4-006."
+}

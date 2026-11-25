@@ -1,0 +1,75 @@
+{
+  "stage": "V4-003",
+  "status": "FIXED_PHASE_SPACE_READOUT_AUDIT",
+  "action_module": "live_clifford_bond_action.py",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache": "tangent_blocks.npz",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "rest_cache": "personal_touch_bare_canonical_matrices.npz",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "chi_scale_source": "native_kinetic_normalization_1_over_sqrt_B",
+  "phase_source": "native_graph",
+  "dt": 0.00390625,
+  "packet_width": 1.35,
+  "readout_construction": "one Moore-Penrose left inverse of the fixed two-layer cubical Psi/chi envelope embedding; the previous-layer graph is derived from the exact native action tangent; no trajectory fit or evolving frame",
+  "rows": [
+    {
+      "copy": "plus",
+      "four_complex_components": true,
+      "real_component_count": 8,
+      "native_phase_rows": 3000,
+      "live_chi_scale": {
+        "real": 0.028903665650804,
+        "imag": 0.0
+      },
+      "readout_condition_number": 1.0002037092246483,
+      "cubical_coordinate_condition_number": 4.187945836535755,
+      "previous_layer_graph_condition_number": 1.0004074606944673,
+      "phase_source": "bounded least-squares invariant graph of exact native two-layer tangent",
+      "phase_embedding_sha256": "56675ed0998f783eab306bb276b01169be155c8ec4752af2e6d03a20b5874dcb",
+      "fixed_readout_sha256": "fc5b6063805d3e9428e637b2f34a95f8a48a5e9d2e00e62e370c26c4530d0ac7",
+      "exact_recovery_error": 1.890247996275708e-15,
+      "centered_time_inverse_defect": 3.3306691251459947e-16,
+      "readout_evolution_relative_error": 1.5001885537529168e-05,
+      "direct_phase_relative_error": 2.130991799740568e-05,
+      "complementary_sector_relative_residual": 1.5134804307940787e-05,
+      "complementary_power_fractions": {
+        "Psi": 0.9989722731026585,
+        "chi": 0.001027726897341476,
+        "eight_carrier_sites": 0.24912311437135135,
+        "surroundings": 0.7508768856286486
+      }
+    },
+    {
+      "copy": "minus",
+      "four_complex_components": true,
+      "real_component_count": 8,
+      "native_phase_rows": 3000,
+      "live_chi_scale": {
+        "real": 0.028903665650804,
+        "imag": 0.0
+      },
+      "readout_condition_number": 1.0001834046725526,
+      "cubical_coordinate_condition_number": 4.195666821367486,
+      "previous_layer_graph_condition_number": 1.0003668482382846,
+      "phase_source": "bounded least-squares invariant graph of exact native two-layer tangent",
+      "phase_embedding_sha256": "60d7e01e76abd5db144703f1f4563a021d6f0e8005869196efc2fb9d13d64eeb",
+      "fixed_readout_sha256": "97e537ee1cdae08f4ca31f7c87a970b165f3348f0d53df7f7992acb401b31021",
+      "exact_recovery_error": 1.7931485197243576e-15,
+      "centered_time_inverse_defect": 4.440892158358234e-16,
+      "readout_evolution_relative_error": 1.3765241045000477e-05,
+      "direct_phase_relative_error": 1.9552519775858163e-05,
+      "complementary_sector_relative_residual": 1.3886104842566414e-05,
+      "complementary_power_fractions": {
+        "Psi": 0.9990697609878025,
+        "chi": 0.0009302390121975106,
+        "eight_carrier_sites": 0.2504890973910355,
+        "surroundings": 0.7495109026089646
+      }
+    }
+  ],
+  "maximum_exact_recovery_error": 1.890247996275708e-15,
+  "maximum_complementary_sector_relative_residual": 1.5134804307940787e-05,
+  "maximum_readout_evolution_relative_error": 1.5001885537529168e-05,
+  "claim_boundary": "Fixed localized linear phase-space readout at one packet width. V4-003 requires a separate dt-refinement aggregate before PASS. This gate does not prove spin, current, or a complete cell crossing."
+}

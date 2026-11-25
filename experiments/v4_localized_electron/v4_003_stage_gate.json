@@ -1,0 +1,61 @@
+{
+  "stage": "V4-003",
+  "status": "PASS",
+  "objective": "One fixed localized two-layer Psi/chi map recovers four complex components for each cubical copy, while its explicitly retained complementary residual shrinks under timestep refinement.",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "coarse_evidence": "v4_003_dt_native.json",
+  "fine_evidence": "v4_003_dt_half_native.json",
+  "checks": {
+    "same_two_cubical_copies": true,
+    "same_action_rest_and_chi_preparation": true,
+    "all_four_complex_components": true,
+    "live_chi_is_in_the_fixed_embedding": true,
+    "lossless_left_inverse": true,
+    "readout_error_is_second_order": true,
+    "direct_phase_error_is_second_order": true,
+    "complementary_residual_shrinks": true,
+    "complement_is_measured_in_surroundings": true,
+    "no_fitted_evolving_frame": true
+  },
+  "rows": [
+    {
+      "copy": "plus",
+      "four_complex_components": true,
+      "nonzero_live_chi": true,
+      "coarse_exact_recovery_error": 1.890247996275708e-15,
+      "fine_exact_recovery_error": 2.0963640604490694e-15,
+      "coarse_readout_error": 1.5001885537529168e-05,
+      "fine_readout_error": 3.7573737086580914e-06,
+      "readout_refinement_ratio": 0.2504600971163613,
+      "coarse_direct_phase_error": 2.130991799740568e-05,
+      "fine_direct_phase_error": 5.337301880453209e-06,
+      "direct_phase_refinement_ratio": 0.2504609300281205,
+      "coarse_complementary_residual": 1.5134804307940787e-05,
+      "fine_complementary_residual": 3.7906506599296367e-06,
+      "complementary_refinement_ratio": 0.2504591789099509,
+      "coarse_surrounding_fraction": 0.7508768856286486,
+      "fine_surrounding_fraction": 0.750877911669843,
+      "readout_is_fixed_within_each_resolution": true
+    },
+    {
+      "copy": "minus",
+      "four_complex_components": true,
+      "nonzero_live_chi": true,
+      "coarse_exact_recovery_error": 1.7931485197243576e-15,
+      "fine_exact_recovery_error": 1.9716260474204998e-15,
+      "coarse_readout_error": 1.3765241045000477e-05,
+      "fine_readout_error": 3.4474286540752447e-06,
+      "readout_refinement_ratio": 0.25044448134290737,
+      "coarse_direct_phase_error": 1.9552519775858163e-05,
+      "fine_direct_phase_error": 4.896836031356007e-06,
+      "direct_phase_refinement_ratio": 0.25044526677335044,
+      "coarse_complementary_residual": 1.3886104842566414e-05,
+      "fine_complementary_residual": 3.477686831036502e-06,
+      "complementary_refinement_ratio": 0.2504436535993891,
+      "coarse_surrounding_fraction": 0.7495109026089646,
+      "fine_surrounding_fraction": 0.7494894044766218,
+      "readout_is_fixed_within_each_resolution": true
+    }
+  ],
+  "claim_boundary": "V4-003 proves a fixed linear readout and controlled local remainder at the declared localized envelope. It does not yet prove operational spin, Noether-current pullback, or cell translation; those are V4-004 through V4-006."
+}

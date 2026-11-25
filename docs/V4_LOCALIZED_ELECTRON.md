@@ -17,14 +17,38 @@ density, and current already derived for the free linear sector.
 |---|---|---|
 | V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS; CLEAN-BRANCH REBUILD RECORDED IN `v4_001_revalidation.json`** |
 | V4-002 | Physical-sector rest and launch stability of that same orbit | **PASS ON THE FROZEN V4 RESEARCH ACTION; SEE `v4_002_exact_1197/v4_002_stage_gate.json`** |
-| V4-003 | Fixed localized four-component readout with controlled remainder | **NEXT** |
-| V4-004 | Operational spin-one-half action on that localized carrier | **NOT STARTED; BLOCKED BY V4-003** |
-| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NOT STARTED; BLOCKED BY V4-003; HISTORICAL CONTROLS RETAINED** |
-| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-003; EXACT ENDPOINT CONTROL RETAINED** |
-| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-003** |
-| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-003; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
-| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-003** |
-| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-003** |
+| V4-003 | Fixed localized four-component readout with controlled remainder | **PASS; SEE `v4_003_stage_gate.json`** |
+| V4-004 | Operational spin-one-half action on that localized carrier | **NEXT** |
+| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NOT STARTED; BLOCKED BY V4-004; HISTORICAL CONTROLS RETAINED** |
+| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-004; EXACT ENDPOINT CONTROL RETAINED** |
+| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-004** |
+| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-004; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
+| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-004** |
+| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-004** |
+
+### 2026-11-25 V4-003 closure
+
+V4-003 now passes without importing the Dirac comparator into its native
+phase relation.  The spatial seed is the cubical four-component geometry at
+every center of the localized side-five envelope.  Its live-`chi` coordinate
+is fixed by the native kinetic normalization `1/sqrt(B)`, not by optimizing a
+closure or trajectory.  The exact V4 action tangent then derives the bounded
+map from the current layer to the previous committed layer.  One fixed left
+inverse of that two-layer embedding is the readout; it is never evolved or
+refitted during a run.
+
+For both cubical copies the readout recovers all four complex amplitudes to
+less than `2.1e-15`, while its condition number remains within `0.021%` of
+one.  At `dt=1/256`, the worst action-derived first-order evolution error is
+`1.50e-5` and the worst complementary native residual is `1.51e-5`.  At
+`dt=1/512` these fall to `3.76e-6` and `3.79e-6`; the refinement ratios are
+`0.25046` and `0.25046`.  The complementary content is retained explicitly,
+including its dominant surrounding-lattice contribution, rather than being
+projected away.
+
+This closes the fixed-readout gate only.  Operational `2pi`/`4pi` rotation is
+V4-004; Dirac transport/current comparison is V4-005; a complete cell
+crossing remains V4-006.
 
 ### 2026-11-25 V4-002 closure
 

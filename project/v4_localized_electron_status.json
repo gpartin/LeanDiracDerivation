@@ -2,15 +2,15 @@
   "version": "V4-research",
   "base_commit": "34502e7041091572052b1dd19b264bc129746d79",
   "base_status": "V3_RELEASED_ON_MAIN",
-  "action_changed": false,
+  "action_changed": true,
   "canonical_stencil": "C19",
   "first_theorem": "LeanDirac.V4.exact_localized_rest_seed",
   "axioms": ["propext", "Classical.choice", "Quot.sound"],
   "gates": {
     "V4-001": "PASS",
-    "V4-002": "FAIL_CANONICAL_ACTION_HESSIAN_REPAIR_REQUIRED",
-    "V4-003": "SCOPED_FIXED_CENTER_OBSTRUCTION_NONCOMPACT_OPEN",
-    "V4-004": "OPEN",
+    "V4-002": "PASS_FROZEN_V4_RESEARCH_ACTION",
+    "V4-003": "PASS_FIXED_NATIVE_PHASE_SPACE_READOUT",
+    "V4-004": "NEXT_OPERATIONAL_SPIN_HALF",
     "V4-005": "SCOPED_FIXED_CENTER_OBSTRUCTION_TRAVELING_FAMILY_OPEN",
     "V4-006": "OPEN",
     "V4-007": "OPEN",
@@ -18,5 +18,5 @@
     "V4-009": "OPEN",
     "V4-010": "OPEN"
   },
-  "claim_boundary": "Exact localized fixed-center native orbit only. The complete tangent proves that this orbit is spectrally unstable under the canonical action. A bounded research action reduces but does not eliminate the growth and is not admitted. Exact symbolic controls separately rule out a compact fixed-center Bloch/Clifford transport block, but do not rule out a noncompact joint-field bundle or translated relative-periodic family. Localized spin, translation, and same-carrier Dirac dynamics remain unproved."
+  "claim_boundary": "V4-001 through V4-003 pass on one frozen reciprocal V4 research action. The localized rest state is bounded in the declared physical launch sector and has a fixed native-action-derived four-component phase-space readout with an explicit second-order complementary remainder. Operational spin, Dirac current/transport, translation, and the cumulative Lean theorem remain open. Canonical V40 and public main are unchanged until V4-010."
 }

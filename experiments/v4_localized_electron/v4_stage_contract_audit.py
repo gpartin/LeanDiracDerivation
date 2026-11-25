@@ -22,6 +22,7 @@ def main() -> None:
     stability = load("unit_geometric_nonlinear_summary.json")
     reachability = load("v4_002_exact_1197/reach_100cycles_final.json")
     stage2 = load("v4_002_exact_1197/v4_002_stage_gate.json")
+    stage3 = load("v4_003_stage_gate.json")
     hop = load("v4_006_stable_action_exact_hop_xplus_16_screen.json")
     lock = (HERE / "EXACT_TRANSLATION_MAP_LOCK.md").read_text(
         encoding="utf-8")
@@ -50,9 +51,12 @@ def main() -> None:
     physical_growth = bool(
         reachability["physical_launches_exhibit_material_growth"])
     stage2_pass = stage2["status"] == "PASS" and not physical_growth
+    stage3_pass = stage2_pass and stage3["status"] == "PASS"
     result = {
         "status": "CURRENT_COHERENT_STAGE_AUDIT",
-        "release_boundary": "V4-002" if stage2_pass else "V4-001",
+        "release_boundary": (
+            "V4-003" if stage3_pass else "V4-002" if stage2_pass
+            else "V4-001"),
         "canonical_action_changed": False,
         "research_action_admitted": stage2_pass,
         "research_action_scope": (
@@ -65,8 +69,12 @@ def main() -> None:
                 if stage2_pass else
                 "FAIL_PHYSICAL_DIRAC_LAUNCH_GROWTH"
                 if physical_growth else "OPEN_PHYSICAL_SECTOR_STABILITY"),
-            "V4-003": "NEXT_FIXED_READOUT_WITH_CONTROLLED_REMAINDER",
-            "V4-004": "OPEN_OPERATIONAL_SPIN",
+            "V4-003": (
+                "PASS_FIXED_NATIVE_READOUT_WITH_CONTROLLED_REMAINDER"
+                if stage3_pass else
+                "NEXT_FIXED_READOUT_WITH_CONTROLLED_REMAINDER"),
+            "V4-004": "NEXT_OPERATIONAL_SPIN" if stage3_pass else
+                "BLOCKED_BY_V4_003",
             "V4-005": "PARTIAL_INTEGER_SHIFT_COVARIANCE_AND_CURRENT",
             "V4-006": (
                 "PASS_EXACT_ONE_CELL_HANDOFF" if hop_pass
@@ -88,14 +96,25 @@ def main() -> None:
                 "maximum_phase_aligned_relative_error"],
             "verdict": reachability["verdict"],
         },
+        "fixed_phase_space_readout": {
+            "artifact": "v4_003_stage_gate.json",
+            "status": stage3["status"],
+            "maximum_coarse_complementary_residual": max(
+                row["coarse_complementary_residual"]
+                for row in stage3["rows"]),
+            "maximum_fine_complementary_residual": max(
+                row["fine_complementary_residual"]
+                for row in stage3["rows"]),
+        },
         "finite_hop_screen": hop_row,
         "endpoint_locked": endpoint_locked,
         "neutral_translation_mode_required": False,
         "claim_boundary": (
-            "V4-002 passes bounded physical-sector stability on the frozen "
-            "B-normalized complete-frame research action. Its accumulated "
-            "Dirac-comparator mismatch is intentionally carried into "
-            "V4-003/V4-005. The exact rigid hop remains an optional stronger "
+            "V4-002 passes bounded physical-sector stability and V4-003 "
+            "passes a fixed native-action-derived four-component readout on "
+            "the frozen B-normalized complete-frame research action. Dirac "
+            "transport/current remains V4-005. The exact rigid hop remains "
+            "an optional stronger "
             "control; V4-006 uses a solved crossing time and permits "
             "Dirac-predicted spreading."),
     }
