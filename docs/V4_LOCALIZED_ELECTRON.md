@@ -19,12 +19,33 @@ density, and current already derived for the free linear sector.
 | V4-002 | Physical-sector rest and launch stability of that same orbit | **PASS ON THE FROZEN V4 RESEARCH ACTION; SEE `v4_002_exact_1197/v4_002_stage_gate.json`** |
 | V4-003 | Fixed localized four-component readout with controlled remainder | **PASS; SEE `v4_003_stage_gate.json`** |
 | V4-004 | Operational spin-one-half action on that localized carrier | **PASS; SEE `v4_004_stage_gate.json`, `v4_004_red_team.json`, AND `LeanDirac.V4.localized_readout_spin_half`** |
-| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NEXT; HISTORICAL CONTROLS RETAINED** |
-| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-005; EXACT ENDPOINT CONTROL RETAINED** |
-| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-005** |
-| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-005; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
-| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-005** |
-| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-005** |
+| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **PASS AT SHORT-TIME TANGENT ORDER; SEE `v4_005_stage_gate.json` AND `v4_005_red_team.json`** |
+| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NEXT; EXACT ENDPOINT CONTROL RETAINED** |
+| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-006** |
+| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-006; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
+| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-006** |
+| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-006** |
+
+### 2026-11-25 V4-005 closure
+
+V4-005 uses the exact V4-003 local `Psi`--`chi` carrier rule at every envelope
+center and advances both committed layers with the frozen V4 action.  For both
+cubical copies and both momentum signs of `x`, `y`, and `z`, the worst
+one-update native-state error against the independent exact C19/centered-time
+Dirac comparator is `4.632e-5` at `dt=1/256` and `1.158e-5` at `dt=1/512`.
+The ratio `0.25008` is the expected second-order refinement.  The readout
+current error likewise falls from `4.922%` to `1.220%` with ratio `0.24780`;
+all longitudinal signs agree.
+
+The current audit initially exposed an important scale distinction.  A phase
+variation at individual native sites includes the electron's internal corner
+circulation and is not the continuum Dirac current.  Pulling the local
+four-component phase variation through the already-frozen carrier map, then
+contracting it with the exact action momentum, gives the correct
+center-resolved Noether current.  Its aggregate error is `0.2670%` at the
+coarse step and `0.1451%` at the fine step, with every signed cut flux correct.
+This closes one local tangent interval only.  A complete unreset cell crossing
+is V4-006.
 
 ### 2026-11-25 V4-004 closure
 

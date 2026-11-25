@@ -1,0 +1,477 @@
+{
+  "stage": "V4-005",
+  "status": "SHORT_TIME_TRANSPORT_AUDIT",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache_sha256": "ee91408640c1688876406918be0c766d03c59483637903262c532c6aab06c7d2",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "dt": 0.001953125,
+  "wave_number": 0.35,
+  "packet_width": 1.35,
+  "chi_scale_source": "native_kinetic_normalization_1_over_sqrt_B",
+  "frequency_branch": "negative_matching_positive_phase_rest_orbit",
+  "readout": "translation-covariant all-center extension of the frozen V4-003 local cubical Psi/chi lift; one fixed minimum-norm map per copy, constructed before all cases",
+  "readouts": {
+    "plus": {
+      "raw_sha256": "3d7796c894260c16e6a5ba7c2ae5ffc5c809f656102027b25e316e5b8c7fe0af",
+      "ridge": 3.8688313067117997e-13,
+      "regularized_gram_condition": 141541.30218844672
+    },
+    "minus": {
+      "raw_sha256": "31dd8d6a6652140913aa27ddf0c0ef4b437b73eca61e57046a11c1d55b879fe5",
+      "ridge": 3.617160026990614e-13,
+      "regularized_gram_condition": 1269426.6423437195
+    }
+  },
+  "rows": [
+    {
+      "copy": "plus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 8.353459392378977e-06,
+      "outside_fixed_spatial_readout_fraction": 5.195752448179432e-07,
+      "density_relative_error": 2.4951421094859833e-05,
+      "readout_current_relative_error": 0.002364744185129759,
+      "native_readout_current": [
+        0.18306292975442023,
+        -7.760517931985428e-05,
+        0.00025487561936035196
+      ],
+      "dirac_current": [
+        0.18272275356042655,
+        1.0842021724855044e-19,
+        1.4365678785432934e-18
+      ],
+      "native_center_shift": [
+        7.850791258423584e-06,
+        -1.2878835907059738e-05,
+        4.6064617855279266e-05
+      ],
+      "dirac_center_shift": [
+        2.5850605545496563e-05,
+        0.0,
+        0.0
+      ],
+      "center_shift_absolute_error": 5.110583867664243e-05,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "plus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 7.523514704555339e-06,
+      "outside_fixed_spatial_readout_fraction": 3.263591853123239e-07,
+      "density_relative_error": 2.3433201678597383e-05,
+      "readout_current_relative_error": 0.0022014524518097897,
+      "native_readout_current": [
+        -0.18305239100084814,
+        -0.00011269127865876151,
+        -0.00020112007289222744
+      ],
+      "dirac_current": [
+        -0.18272275356042658,
+        -1.9058241313221758e-19,
+        1.2235390923088368e-18
+      ],
+      "native_center_shift": [
+        -2.024436968861565e-05,
+        -2.9372476539890613e-06,
+        3.9963275701104806e-05
+      ],
+      "dirac_center_shift": [
+        -2.5850605545496563e-05,
+        0.0,
+        0.0
+      ],
+      "center_shift_absolute_error": 4.046134833426038e-05,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "plus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 7.392307349444222e-06,
+      "outside_fixed_spatial_readout_fraction": 2.004871733951807e-07,
+      "density_relative_error": 1.0133884462741035e-05,
+      "readout_current_relative_error": 0.0014476008377179736,
+      "native_readout_current": [
+        0.0002512548654900401,
+        0.18275124936430878,
+        -0.0060255752941269424
+      ],
+      "dirac_current": [
+        -1.8973538018496328e-19,
+        0.18272275356042653,
+        -0.005947482778533798
+      ],
+      "native_center_shift": [
+        -2.952404469791503e-06,
+        3.301422794343978e-05,
+        4.237532932371835e-05
+      ],
+      "dirac_center_shift": [
+        0.0,
+        2.5850605545496563e-05,
+        -3.8869277618758247e-07
+      ],
+      "center_shift_absolute_error": 4.346027800388306e-05,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "plus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 8.43956162840616e-06,
+      "outside_fixed_spatial_readout_fraction": 5.558502963252269e-07,
+      "density_relative_error": 9.94411945861766e-06,
+      "readout_current_relative_error": 0.0015043876011298556,
+      "native_readout_current": [
+        -0.00022998401538509253,
+        -0.18281848339555137,
+        0.006064039346708172
+      ],
+      "dirac_current": [
+        -1.5949630396798475e-18,
+        -0.1827227535604265,
+        0.005947482778533796
+      ],
+      "native_center_shift": [
+        -5.2469473716953985e-06,
+        -4.384409315605353e-05,
+        3.761047727168787e-05
+      ],
+      "dirac_center_shift": [
+        0.0,
+        -2.5850605545496563e-05,
+        3.8869277618758247e-07
+      ],
+      "center_shift_absolute_error": 4.167442014164173e-05,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "plus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "native_vs_dirac_state_relative_error": 8.255148208577404e-06,
+      "outside_fixed_spatial_readout_fraction": 4.534864130410753e-07,
+      "density_relative_error": 7.295732580764802e-06,
+      "readout_current_relative_error": 0.0006471016318226804,
+      "native_readout_current": [
+        6.316550592552587e-05,
+        0.005855053682318213,
+        0.1826845104439375
+      ],
+      "dirac_current": [
+        1.0842021724855044e-19,
+        0.005947482778533801,
+        0.18272275356042653
+      ],
+      "native_center_shift": [
+        -3.1472196324600077e-06,
+        -6.96666234833998e-06,
+        6.854712116810546e-05
+      ],
+      "dirac_center_shift": [
+        0.0,
+        3.8869277618758247e-07,
+        2.5850605545496563e-05
+      ],
+      "center_shift_absolute_error": 4.3439598141955015e-05,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "plus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "native_vs_dirac_state_relative_error": 7.781817682433806e-06,
+      "outside_fixed_spatial_readout_fraction": 5.974646218194561e-07,
+      "density_relative_error": 1.448653376983114e-05,
+      "readout_current_relative_error": 0.0008264007785167605,
+      "native_readout_current": [
+        -0.0001228682797566562,
+        -0.00587712178665196,
+        -0.1826700416441804
+      ],
+      "dirac_current": [
+        -5.797940523955686e-19,
+        -0.005947482778533818,
+        -0.18272275356042655
+      ],
+      "native_center_shift": [
+        -1.1234631607237588e-06,
+        -1.6459102769594836e-06,
+        1.78731029367718e-05
+      ],
+      "dirac_center_shift": [
+        0.0,
+        -3.8869277574349326e-07,
+        -2.5850605545940653e-05
+      ],
+      "center_shift_absolute_error": 4.375620468916481e-05,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "minus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 1.158329120190796e-05,
+      "outside_fixed_spatial_readout_fraction": 1.1549612722790206e-06,
+      "density_relative_error": 9.095291434779233e-06,
+      "readout_current_relative_error": 0.006775775685362662,
+      "native_readout_current": [
+        0.18385537248622252,
+        -0.0002536797671034893,
+        0.000430910440775649
+      ],
+      "dirac_current": [
+        0.18272275356042655,
+        -7.724940478959219e-19,
+        1.8295911660692887e-18
+      ],
+      "native_center_shift": [
+        -1.6838901777394e-05,
+        -2.1052526935072535e-05,
+        -0.0001359826477767001
+      ],
+      "dirac_center_shift": [
+        2.5850605545496563e-05,
+        0.0,
+        0.0
+      ],
+      "center_shift_absolute_error": 0.00014407249363492382,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "minus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 1.0087444004492522e-05,
+      "outside_fixed_spatial_readout_fraction": 5.717354604922383e-07,
+      "density_relative_error": 4.4658111366554526e-05,
+      "readout_current_relative_error": 0.008175235644045703,
+      "native_readout_current": [
+        -0.18243891987722435,
+        0.0014091951029891945,
+        0.00040626435507923266
+      ],
+      "dirac_current": [
+        -0.18272275356042658,
+        -4.527391103074235e-19,
+        6.407804245978782e-19
+      ],
+      "native_center_shift": [
+        -0.00013897191948863963,
+        -1.2348459579314408e-06,
+        -0.00018835650723048047
+      ],
+      "dirac_center_shift": [
+        -2.5850605545496563e-05,
+        0.0,
+        0.0
+      ],
+      "center_shift_absolute_error": 0.00021971829766505337,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "minus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 1.068254120519632e-05,
+      "outside_fixed_spatial_readout_fraction": 7.592591624192163e-07,
+      "density_relative_error": 1.2438093754472637e-05,
+      "readout_current_relative_error": 0.004482002953652266,
+      "native_readout_current": [
+        0.0005230690917881441,
+        0.18321218119697782,
+        0.006345316656129534
+      ],
+      "dirac_current": [
+        -4.607859233063394e-19,
+        0.1827227535604265,
+        0.0059474827785338065
+      ],
+      "native_center_shift": [
+        -3.7594304001409284e-05,
+        1.770535453271549e-05,
+        -0.00012280801423614207
+      ],
+      "dirac_center_shift": [
+        0.0,
+        2.5850605545496563e-05,
+        3.8869277618758247e-07
+      ],
+      "center_shift_absolute_error": 0.0001290624090356808,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "minus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "native_vs_dirac_state_relative_error": 9.828306839015474e-06,
+      "outside_fixed_spatial_readout_fraction": 1.0718391685981084e-06,
+      "density_relative_error": 5.904203398523091e-06,
+      "readout_current_relative_error": 0.005667347229428212,
+      "native_readout_current": [
+        0.0007901930422448848,
+        -0.18209223101194602,
+        -0.005720451909664028
+      ],
+      "dirac_current": [
+        -4.929731753020028e-19,
+        -0.1827227535604265,
+        -0.005947482778533801
+      ],
+      "native_center_shift": [
+        -4.3565249745469714e-05,
+        -0.00010114707645314525,
+        -0.00015994585212197876
+      ],
+      "dirac_center_shift": [
+        0.0,
+        -2.5850605545496563e-05,
+        -3.8869277618758247e-07
+      ],
+      "center_shift_absolute_error": 0.00018173050546077763,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "minus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ],
+      "native_vs_dirac_state_relative_error": 1.0598604196786211e-05,
+      "outside_fixed_spatial_readout_fraction": 9.181561476483582e-07,
+      "density_relative_error": 3.5521890856776945e-05,
+      "readout_current_relative_error": 0.012197642215610207,
+      "native_readout_current": [
+        0.0019979900742787705,
+        -0.005003536782702789,
+        0.1830223448043531
+      ],
+      "dirac_current": [
+        -6.776263578034403e-20,
+        -0.0059474827785337995,
+        0.18272275356042653
+      ],
+      "native_center_shift": [
+        -5.2009827528731734e-05,
+        -5.690760279009055e-06,
+        -0.00013678563759045304
+      ],
+      "dirac_center_shift": [
+        0.0,
+        -3.8869277618758247e-07,
+        2.5850605545496563e-05
+      ],
+      "center_shift_absolute_error": 0.00017083232030487853,
+      "longitudinal_sign_matches": true
+    },
+    {
+      "copy": "minus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "native_vs_dirac_state_relative_error": 9.762275662721646e-06,
+      "outside_fixed_spatial_readout_fraction": 1.1034004353060265e-06,
+      "density_relative_error": 8.217047729352844e-05,
+      "readout_current_relative_error": 0.004340110684661911,
+      "native_readout_current": [
+        -0.0005790316017352407,
+        0.006333266099548258,
+        -0.18234135144396363
+      ],
+      "dirac_current": [
+        -8.97007891142304e-19,
+        0.005947482778533815,
+        -0.18272275356042653
+      ],
+      "native_center_shift": [
+        -3.8567222996999106e-05,
+        -1.4839169816038833e-05,
+        -0.00012316352040020462
+      ],
+      "dirac_center_shift": [
+        0.0,
+        3.8869277618758247e-07,
+        -2.5850605545496563e-05
+      ],
+      "center_shift_absolute_error": 0.00010577864570104708,
+      "longitudinal_sign_matches": true
+    }
+  ],
+  "maximum_state_relative_error": 1.158329120190796e-05,
+  "maximum_readout_current_relative_error": 0.012197642215610207,
+  "maximum_density_relative_error": 8.217047729352844e-05,
+  "maximum_center_shift_absolute_error": 0.00021971829766505337,
+  "all_longitudinal_signs_match": true,
+  "claim_boundary": "One unrestricted tangent update for both copies and both signs of all three axes. The independently prepared centered-C19 Dirac packet is comparator data only. The readout current here must be paired with the action-derived Noether current before V4-005 can pass."
+}

@@ -24,6 +24,8 @@ def main() -> None:
     stage2 = load("v4_002_exact_1197/v4_002_stage_gate.json")
     stage3 = load("v4_003_stage_gate.json")
     stage4 = load("v4_004_stage_gate.json")
+    stage5 = load("v4_005_stage_gate.json")
+    stage5_red_team = load("v4_005_red_team.json")
     hop = load("v4_006_stable_action_exact_hop_xplus_16_screen.json")
     lock = (HERE / "EXACT_TRANSLATION_MAP_LOCK.md").read_text(
         encoding="utf-8")
@@ -54,10 +56,16 @@ def main() -> None:
     stage2_pass = stage2["status"] == "PASS" and not physical_growth
     stage3_pass = stage2_pass and stage3["status"] == "PASS"
     stage4_pass = stage3_pass and stage4["status"] == "PASS"
+    stage5_pass = (
+        stage4_pass
+        and stage5["status"] == "PASS"
+        and stage5_red_team["status"] == "PASS"
+    )
     result = {
         "status": "CURRENT_COHERENT_STAGE_AUDIT",
         "release_boundary": (
-            "V4-004" if stage4_pass else "V4-003" if stage3_pass
+            "V4-005" if stage5_pass else "V4-004" if stage4_pass
+            else "V4-003" if stage3_pass
             else "V4-002" if stage2_pass
             else "V4-001"),
         "canonical_action_changed": False,
@@ -81,6 +89,8 @@ def main() -> None:
                 "NEXT_OPERATIONAL_SPIN" if stage3_pass else
                 "BLOCKED_BY_V4_003"),
             "V4-005": (
+                "PASS_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT"
+                if stage5_pass else
                 "NEXT_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT"
                 if stage4_pass else "BLOCKED_BY_V4_004"),
             "V4-006": (
@@ -120,15 +130,24 @@ def main() -> None:
             "graph_remainder_refinement_ratio": stage4[
                 "graph_remainder_refinement_ratio"],
         },
+        "short_time_transport_current": {
+            "artifact": "v4_005_stage_gate.json",
+            "status": stage5["status"],
+            "red_team_status": stage5_red_team["status"],
+            "Lean_theorem": stage5["Lean_theorem"],
+            "metrics": stage5["metrics"],
+        },
         "finite_hop_screen": hop_row,
         "endpoint_locked": endpoint_locked,
         "neutral_translation_mode_required": False,
         "claim_boundary": (
             "V4-002 passes bounded physical-sector stability, V4-003 passes "
             "a fixed native-action-derived four-component readout, and "
-            "V4-004 proves its cubical spin-one-half rotation law on the "
-            "frozen B-normalized complete-frame research action. Dirac "
-            "transport/current remains V4-005. The exact rigid hop remains "
+            "V4-004 proves its cubical spin-one-half rotation law, and "
+            "V4-005 closes short-time signed transport and center-resolved "
+            "Noether current on the frozen B-normalized complete-frame "
+            "research action. A complete cell crossing remains V4-006. The "
+            "exact rigid hop remains "
             "an optional stronger "
             "control; V4-006 uses a solved crossing time and permits "
             "Dirac-predicted spreading."),

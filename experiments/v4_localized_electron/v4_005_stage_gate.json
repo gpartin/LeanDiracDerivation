@@ -1,0 +1,29 @@
+{
+  "stage": "V4-005",
+  "status": "PASS",
+  "checks": {
+    "prior_chain_passes": true,
+    "same_frozen_action": true,
+    "same_fixed_native_lift_at_both_dt": true,
+    "both_copies_both_signs_three_axes": true,
+    "short_time_state_matches": true,
+    "readout_density_and_current_match": true,
+    "action_derived_projected_noether_current_matches": true,
+    "projected_charge_remainder_shrinks": true,
+    "Lean_theorem_declared": true
+  },
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "metrics": {
+    "coarse_state_error": 4.631849155325536e-05,
+    "fine_state_error": 1.158329120190796e-05,
+    "state_refinement_ratio": 0.25007919760491126,
+    "coarse_readout_current_error": 0.0492241051138838,
+    "fine_readout_current_error": 0.012197642215610207,
+    "readout_current_refinement_ratio": 0.2477981506700835,
+    "coarse_projected_noether_current_error": 0.0026700799335664955,
+    "fine_projected_noether_current_error": 0.0014513551696224815,
+    "projected_noether_refinement_ratio": 0.5435624422239181
+  },
+  "Lean_theorem": "LeanDirac.V4.localized_readout_transport_current",
+  "claim_boundary": "Both cubical copies and both signs of all three axes agree with the independent exact C19/centered-time Dirac comparator for one local tangent update. The action-derived Noether current is pulled through the same center-resolved native lift. V4-005 does not prove a full cell crossing or nonlinear long-time motion."
+}

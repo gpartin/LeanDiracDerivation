@@ -1,0 +1,20 @@
+{
+  "stage": "V4-005",
+  "status": "PASS",
+  "checks": {
+    "stage_gate_passes": true,
+    "Dirac_not_imported_by_action": true,
+    "comparator_not_used_by_native_solve": true,
+    "readout_fixed_before_cases": true,
+    "readout_not_fitted_to_target": true,
+    "Noether_current_comes_from_exact_action": true,
+    "microscopic_current_not_mislabeled_as_Dirac": true,
+    "both_copies_all_signed_axes": true,
+    "nonzero_errors_are_retained": true,
+    "transport_refines_at_second_order": true,
+    "Noether_current_error_shrinks": true
+  },
+  "action_forbidden_imports": [],
+  "circularity_audit": "The comparator prepares and evaluates test columns but never enters the action or native solve. The readout is fixed from the carrier map before any target is created. The projected Noether current is an automatic derivative of the exact action.",
+  "claim_boundary": "Both cubical copies and both signs of all three axes agree with the independent exact C19/centered-time Dirac comparator for one local tangent update. The action-derived Noether current is pulled through the same center-resolved native lift. V4-005 does not prove a full cell crossing or nonlinear long-time motion."
+}
