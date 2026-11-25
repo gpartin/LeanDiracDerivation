@@ -14,15 +14,32 @@ derived for the free linear sector.
 | Gate | Required result | Status |
 |---|---|---|
 | V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS; CLEAN-BRANCH REBUILD RECORDED IN `v4_001_revalidation.json`** |
-| V4-002 | Nonlinear rest stability of that same orbit | **RESEARCH-CANDIDATE PASS: REDUCED TIGHT-FRAME ACTION, ZERO-CHI-CHARGE BRANCH, 100 CYCLES; CANONICAL ACTION FAILS AND EVERY ACTION DELTA REOPENS THIS GATE** |
-| V4-003 | Lossless localized four-component readout, including both committed layers | **SCOPED FIXED-CENTER OBSTRUCTION; OPEN ON THE STABLE RESEARCH ACTION** |
-| V4-004 | Operational spin-one-half action on that localized carrier | **OPEN** |
-| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **PARTIAL: CURRENT/TANGENT CONTROLS EXIST; NO INFINITESIMAL OR FRACTIONAL TRANSLATION MODE IS REQUIRED** |
-| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **OPEN: EXACT ENDPOINT LOCKED; NO REPEATABLE FREE HANDOFF HAS CONVERGED** |
-| V4-007 | Repeat the identical handoff into the next cell in both directions | **OPEN; DEPENDS ON V4-006** |
-| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **OPEN; EXISTING TANGENT AGREEMENT IS SUPPORTING EVIDENCE ONLY** |
-| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **OPEN** |
-| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **OPEN** |
+| V4-002 | Nonlinear rest stability of that same orbit | **STOPPED AFTER 5 RCAS: ALL FIVE FULL TWO-LAYER TANGENT SCREENS FAIL; NO COHERENT FINAL ACTION** |
+| V4-003 | Lossless localized four-component readout, including both committed layers | **NOT STARTED; BLOCKED BY V4-002** |
+| V4-004 | Operational spin-one-half action on that localized carrier | **NOT STARTED; BLOCKED BY V4-002** |
+| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NOT STARTED; BLOCKED BY V4-002; HISTORICAL CONTROLS RETAINED** |
+| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-002; EXACT ENDPOINT CONTROL RETAINED** |
+| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-002** |
+| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-002; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
+| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-002** |
+| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-002** |
+
+### 2026-11-25 coherent-chain stop
+
+The clean `feature/v4-coherent-chain` rebuild passed V4-001. V4-002 then
+tested the movement incumbent and four reciprocal phase/timing variations
+with the full `Psi`--`chi`, two-committed-layer Floquet operator. Every test
+retained a multiplier outside the unit circle. The best case was the unchanged
+movement incumbent, with multiplier modulus `1.0030599618422145` and growth
+rate `0.7821541600324176`; approximately 97.0% of its leading mode power is in
+`Psi`. The four repairs worsened that result. The required nonlinear 100-cycle
+gate was not run because its necessary linear-stability gate failed.
+
+This triggers the declared five-RCA stop rule. V4-003 through V4-010 are
+dependency-blocked, not failed on their own merits. The scoped RCA and the
+next research route are recorded in
+`experiments/v4_localized_electron/V4_002_RCA_STOP.md`. No V4 release is
+promoted and `main` remains unchanged.
 
 ### 2026-11-25 gate correction
 

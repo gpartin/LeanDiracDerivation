@@ -1,0 +1,26 @@
+{
+  "stage": "V4-002",
+  "status": "LINEAR_STABILITY_SCREEN",
+  "action_module": "live_clifford_bond_action.py",
+  "action_module_sha256": "919f3ecb9d3d45afa8c978e01854d004bf47fe3dc6ff7faeeaa4dd304169cb5b",
+  "action_description": "movement incumbent plus negative symplectic face loop at -1/19 diagnostic",
+  "cache_file": "live_clifford_tangent_blocks_joint_face_laplacian_plus_psi_area_oscillator_0p315789473684_plaquette_0_spacetime_0_symplectic_m0p0526315789474.npz",
+  "cache_provenance": "Exact tangent cache inherited from checkpoint d56b63a; the recorded SHA-256 is the authoritative identity.",
+  "cache_sha256": "1e4ff77fa885c6325148d02279b75096e61126655820d72d7744034b653ec596",
+  "dt": 0.00390625,
+  "state_dimension": 1500,
+  "box_side": 5,
+  "phase_space_dimension": 3000,
+  "computed_eigenvalue_count": 12,
+  "arpack_converged": true,
+  "leading_multiplier_real": 1.0131395541511765,
+  "leading_multiplier_imag": 0.0,
+  "leading_multiplier_modulus": 1.0131395541511765,
+  "leading_growth_rate_per_unit_time": 3.34181862585883,
+  "leading_mode_field_power_fractions": {
+    "Psi": 0.9657341048180119,
+    "chi": 0.03426589518198802
+  },
+  "verdict": "LINEAR_STABILITY_FAIL",
+  "claim_boundary": "This is a full two-layer tangent screen, not the nonlinear 100-cycle V4-002 acceptance gate."
+}
