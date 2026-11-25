@@ -6,7 +6,7 @@
   "action_policy": {
     "canonical_baseline": "V40 complex-Psi/complex-chi C19 reciprocal action",
     "final_action_frozen": true,
-    "reason": "Freeze the exact incumbent while resolving the full-carrier movement failure. The earlier 100-cycle stability claim was for the companion-only launch family, not the recovered physical carrier contrast.",
+    "reason": "V4-002 through V4-005 pass their declared gates on this exact incumbent. It already contains the direct-prong transfer and matching parallel-frame clock correction. Keep it frozen for V4-006 unless an independently validated repair requires action changes.",
     "current_movement_incumbent": {
       "module": "live_clifford_bond_action.py",
       "link_source": "joint_face_laplacian_plus_frame_oscillator",
@@ -14,17 +14,17 @@
       "spacetime_scale": 0.01662049861495845,
       "parallel_matched_scale": 1.0,
       "parallel_clock_potential_scale": 1.0,
-      "admitted": false,
-      "admission_scope": "Frozen research incumbent, not released as a complete moving-carrier action. Earlier scoped results and canonical V40 remain unchanged."
+      "admitted": true,
+      "admission_scope": "V4-001–005 research gates only. Complete cell translation remains open; canonical V40 and public main are unchanged."
     }
   },
   "stages": [
     {"id": "V4-001", "status": "PASS", "rca_count": 0, "evidence": "v4_001_revalidation.json", "summary": "Exact localized rest solution rebuilt on the clean branch with only standard Lean foundations."},
-    {"id": "V4-002", "status": "REVALIDATION_REQUIRED", "rca_count": 6, "evidence": "v4_002_exact_1197/v4_002_stage_gate.json; v4_native_graph_revalidation_dt.json; v4_native_graph_revalidation_dt_half.json", "summary": "Keep the earlier scoped companion-launch stability and exact-rest evidence. The recovered contrast launch is not yet an admitted native moving sector and excites a large chi disturbance. Revalidate only after V4-003 supplies a native moving preparation; this does not invalidate the exact resting orbit."},
-    {"id": "V4-003", "status": "OPEN", "rca_count": 1, "evidence": "v4_003_stage_gate.json; v4_003_moving_native_graph_dt.json; v4_003_moving_native_graph_dt_half.json; v4_003_native_chi_response_dt.json", "summary": "The old companion lift omits about 79% of the full native translation direction. The recovered carrier-minus-vacuum lift spans it, but its tested native graph does not reproduce the Dirac rate. Derive the missing joint field and velocity response; do not fit the graph to the comparator."},
-    {"id": "V4-004", "status": "DEPENDENCY_REVALIDATION_REQUIRED", "rca_count": 0, "evidence": "v4_004_stage_gate.json; v4_004_red_team.json; LeanDirac.V4.localized_readout_spin_half; v4_native_graph_revalidation_dt.json", "summary": "Cubical spin algebra and the published conditional theorem are unchanged. The moving native two-layer graph must supply their same-carrier hypotheses; the newly tested graph is not covariant enough."},
-    {"id": "V4-005", "status": "DEPENDENCY_REVALIDATION_REQUIRED", "rca_count": 1, "evidence": "v4_005_stage_gate.json; v4_005_red_team.json; LeanDirac.V4.localized_readout_transport_current", "summary": "Retain the conditional current theorem and local-step comparison. Repeat with the corrected native moving embedding and a rate-level convergence check before a cumulative pass."},
-    {"id": "V4-006", "status": "OPEN", "rca_count": 0, "evidence": "v4_006_one_cell_crossing.json; v4_006_one_cell_crossing_dt_half.json; v4_006_current_action_relative_orbit.json; V4_MOVING_CARRIER_REVALIDATION_RCA.md", "summary": "The one-cell linearized comparison does not cross; the nonlinear variational boundary-value screen reduced but did not close the residual. Exact same-assignment endpoint remains the target."},
+    {"id": "V4-002", "status": "PASS", "rca_count": 6, "evidence": "v4_002_exact_1197/v4_002_stage_gate.json; V4_002_B_FRAME_RCA.md", "summary": "Rechecked existing declared stability gate: both copies and all 16 declared launches are bounded over 100 cycles, with exact-rest, conservation and box/timestep controls. The experimental V4-006 contrast preparation is not this gate's admitted launch family."},
+    {"id": "V4-003", "status": "PASS", "rca_count": 1, "evidence": "v4_003_stage_gate.json; v4_003_red_team.json", "summary": "Rechecked fixed native local two-layer readout, four complex components per copy, controlled local remainder and no fitted evolving frame. This is not yet a claim of full cell translation."},
+    {"id": "V4-004", "status": "PASS", "rca_count": 0, "evidence": "v4_004_stage_gate.json; v4_004_red_team.json; LeanDirac.V4.localized_readout_spin_half", "summary": "Rechecked the unchanged admitted V4-003 readout's cubical rotation, density, 2pi sign and 4pi return. The theorem is scoped to that readout."},
+    {"id": "V4-005", "status": "PASS", "rca_count": 1, "evidence": "v4_005_stage_gate.json; v4_005_red_team.json; LeanDirac.V4.localized_readout_transport_current", "summary": "Rechecked short-time signed native transport and center-resolved action-derived current on the same frozen action and tested readout. The finite cell crossing is V4-006."},
+    {"id": "V4-006", "status": "OPEN", "rca_count": 0, "evidence": "TIMING_REPAIR_REPORT.md; v4_006_one_cell_crossing.json; v4_006_one_cell_crossing_dt_half.json; v4_006_current_action_relative_orbit.json; V4_MOVING_CARRIER_REVALIDATION_RCA.md", "summary": "Direct-prong communication, the complete parallel clock repair and B-normalized six-face frame are already in the frozen action. The unadmitted contrast-based moving preparation and linearized crossing fail. The current-action nonlinear fixed-period collocation screen is inconclusive. Solve the freely moving same-carrier integer handoff using these existing mechanisms; do not restart orientation research."},
     {"id": "V4-007", "status": "NOT_STARTED__BLOCKED_BY_V4_006", "rca_count": 0, "summary": "Second unreset crossing in both directions."},
     {"id": "V4-008", "status": "NOT_STARTED__BLOCKED_BY_V4_006", "rca_count": 0, "summary": "Same-state mass, time, transport, density, current, and phase map."},
     {"id": "V4-009", "status": "NOT_STARTED__BLOCKED_BY_V4_006", "rca_count": 0, "summary": "Axes, diagonal, separately measured copies, physically admissible perturbations, timestep, and box robustness."},

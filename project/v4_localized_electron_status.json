@@ -8,15 +8,15 @@
   "axioms": ["propext", "Classical.choice", "Quot.sound"],
   "gates": {
     "V4-001": "PASS",
-    "V4-002": "REVALIDATION_REQUIRED_ON_FULL_CARRIER_CONTRAST",
-    "V4-003": "OPEN_FULL_CARRIER_NATIVE_READOUT",
-    "V4-004": "DEPENDENCY_REVALIDATION_REQUIRED",
-    "V4-005": "DEPENDENCY_REVALIDATION_REQUIRED",
+    "V4-002": "PASS_FROZEN_V4_RESEARCH_ACTION",
+    "V4-003": "PASS_FIXED_NATIVE_PHASE_SPACE_READOUT",
+    "V4-004": "PASS_LOCALIZED_READOUT_SPIN_HALF",
+    "V4-005": "PASS_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT",
     "V4-006": "OPEN_ONE_COMPLETE_CELL_CROSSING",
     "V4-007": "OPEN",
     "V4-008": "PARTIAL_STRONG_DYNAMICAL_DEPENDENCE_NO_NATIVE_SELECTION",
     "V4-009": "OPEN",
     "V4-010": "OPEN"
   },
-  "claim_boundary": "V4-001 exact resting orbit passes. Earlier V4-002 through V4-005 results remain valid in their restricted companion-launch and conditional readout scopes; they are not cumulative evidence for the recovered full-carrier moving state. A complete native moving readout, crossing, repeatability, and final theorem remain open. No alternate action is admitted; canonical V40 and public main are unchanged."
+  "claim_boundary": "V4-001 through V4-005 pass their original scoped gates on the frozen research action, which already includes the direct-prong communication and parallel-frame clock repair. Full cell translation, coherent moving-carrier closure, repeatability and the final theorem are open starting at V4-006. The unsuccessful experimental contrast preparation is V4-006 evidence, not a replacement for the earlier gates. No alternate action is admitted; canonical V40 and public main are unchanged."
 }

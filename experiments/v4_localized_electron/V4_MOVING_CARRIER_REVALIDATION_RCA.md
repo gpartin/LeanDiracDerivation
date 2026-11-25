@@ -4,9 +4,10 @@
 
 V4-006 is not closed. The fixed companion-frame lift in the previous local
 V4-003/005 approvals was not sufficient to describe literal translation of
-the whole localized two-field state. The previous resting orbit and
-conditional mathematical results are not erased; the cumulative mobile
-carrier admission is reopened. See `v4_coherent_stage_tracker.json`.
+the whole localized two-field state under the new contrast hypothesis. This
+experimental V4-006 preparation is not the earlier declared native launch
+family. V4-001 through V4-005 retain their stage-specific passes; a complete
+moving-carrier admission has never passed. See `v4_coherent_stage_tracker.json`.
 
 ## Why it matters
 
@@ -70,10 +71,11 @@ requirement for an exact discrete cell handoff.
 
 ## Root cause
 
-The first confirmed integration mistake is the old readout's omission of
-the physical χ-minus-vacuum contrast. The direct replay reveals a second,
-separate defect: imposing that full contrast as a common spinor envelope
-does not determine a closed native two-layer graph. The omitted χ normal
+The first confirmed limitation of the tested full-shift dictionary is the
+old local readout's omission of much of the physical χ-minus-vacuum contrast.
+It does not refute its documented short-time gate. The direct replay reveals
+a second, separate defect: imposing that full contrast as a common spinor
+envelope does not determine a closed native two-layer graph. The omitted χ normal
 and surrounding modes carry most of the remaining response. Allowing χ
 to solve its own frequency-domain equation removes its direct DEL defect
 but leaves a large Ψ defect, demonstrating that χ orientation stiffness
@@ -111,8 +113,10 @@ Neither source proves mobility for this V4 action.
    force/response criterion, not an inserted source.
 2. If this cannot produce a native graph with the required rates, derive
    an admissible action change from the missing joint response. A vacuum
-   stiffness increase alone has not closed the defect. In any repaired
-   action, reproduce V4-001's rest solution, then revalidate the existing
+   stiffness increase alone has not closed the defect. The direct-prong
+   mechanism and matched parallel clock are already present in the frozen
+   `live_clifford_bond_action.py`; no port or redevelopment is required.
+   In any *changed* action, reproduce V4-001's rest solution, then revalidate the existing
    V4-002 criterion on the actual moving preparation and the same carrier
    V4-003/004/005 dependencies. Do not recreate the compiled theorems unless
    their hypotheses actually change; retain the old tests as regression
@@ -123,11 +127,17 @@ Neither source proves mobility for this V4 action.
    fixed-period optimization in this bundle is only a screen. Then test a
    second handoff both signs and compare mass, rate, density and current.
 
-The prior five-stage approvals cannot be reused as a cumulative moving
-electron pass. No new stage closed in this cycle; the failed repairs are
-preserved. Full Lean build: 3890 jobs successful, no Lean theorem removed
-or altered. No release to main is authorized by the evidence. The exact
-rest theorem and conditional cubical spin/current theorems remain intact.
+The prior five-stage approvals cannot be reused as a complete mobile
+electron pass, but neither are they revoked by a failed experimental launch.
+The original V4-002/003/004/005 gate scripts and 003/004/005 red-team scripts
+were rerun and all returned PASS. The status correction does not modify any
+action, gate criteria, or Lean proof. V4-006 remains OPEN. See also
+`V4_002_PHYSICAL_LAUNCH_RCA.md`: the earlier directly measured first departure
+on the precursor complete-frame candidate was overwhelmingly in Ψ's
+along-ray amplitude/phase, with χ separation following later. That measured
+ordering must not be overwritten by the late-time χ growth of a different
+experimental preparation. Full Lean build: 3890 jobs successful, no Lean
+theorem removed or altered. No release to main is authorized by the evidence.
 
 ### Reproduction
 

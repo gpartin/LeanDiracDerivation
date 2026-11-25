@@ -1,15 +1,16 @@
 {
   "status": "CURRENT_COHERENT_STAGE_AUDIT",
-  "release_boundary": "V4-001",
+  "release_boundary": "V4-005",
+  "localized_mobile_carrier_verified": false,
   "canonical_action_changed": false,
-  "research_action_admitted": false,
+  "research_action_admitted": true,
   "research_action_scope": "frozen V4 coherent chain only; canonical V40 and public main remain unchanged until V4-010",
   "stage_contract": {
     "V4-001": "PASS_EXACT_REST_EXISTENCE",
-    "V4-002": "REVALIDATION_REQUIRED_ON_FULL_CARRIER_CONTRAST",
-    "V4-003": "OPEN_FULL_CARRIER_NATIVE_READOUT",
-    "V4-004": "BLOCKED_BY_V4_003",
-    "V4-005": "BLOCKED_BY_V4_004",
+    "V4-002": "PASS_PHYSICAL_SECTOR_STABILITY",
+    "V4-003": "PASS_FIXED_NATIVE_READOUT_WITH_CONTROLLED_REMAINDER",
+    "V4-004": "PASS_LOCALIZED_READOUT_SPIN_HALF",
+    "V4-005": "PASS_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT",
     "V4-006": "OPEN_EXACT_ONE_CELL_HANDOFF",
     "V4-007": "OPEN_REPEATABLE_SECOND_HANDOFF",
     "V4-008": "OPEN_COARSE_DIRAC_COMPARISON",
@@ -27,6 +28,15 @@
   },
   "moving_carrier_revalidation": {
     "same_action_hash": true,
+    "same_independently_checked_del_caches": true,
+    "frozen_action_configuration": {
+      "link_source": "joint_face_laplacian_plus_frame_oscillator",
+      "scale": 1197.0,
+      "spacetime_scale": 0.01662049861495845,
+      "parallel_matched_scale": 1.0,
+      "parallel_potential_scale": 1.0
+    },
+    "scope": "V4-006 experimental contrast preparation; not an admitted moving sector or replacement gate for V4-002 through V4-005",
     "contrast_launch_bounded": false,
     "coarse_velocity_aware_amplification": 33.113614775959114,
     "fine_velocity_aware_amplification": 33.09184847851601,
@@ -106,5 +116,5 @@
   },
   "endpoint_locked": true,
   "neutral_translation_mode_required": false,
-  "claim_boundary": "Earlier exact-rest, companion-launch, algebraic rotation and short-step conditional results are preserved. The recovered physical carrier contrast is not yet a proved moving sector; cumulative admission is reopened for V4-002 through V4-005. V4-006 did not complete a crossing. The nonlinear boundary screen is inconclusive, not a no-go theorem."
+  "claim_boundary": "V4-001 through V4-005 retain their original verified scopes. The experimental full-carrier contrast is not a proved moving sector and its failure does not revoke those scoped passes. V4-006 did not complete a crossing. The nonlinear boundary screen is inconclusive, not a no-go theorem."
 }

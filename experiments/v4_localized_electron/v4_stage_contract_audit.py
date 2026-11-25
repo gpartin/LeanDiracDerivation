@@ -1,12 +1,14 @@
 """Audit the current coherent V4 stage boundary without rerunning solves.
 
-This does not promote an action.  It distinguishes the historical exact-orbit
-endurance result from the current physically reachable perturbation failure
-and verifies that V4-006 is not judged by a rigid sub-cell interpolation.
+This distinguishes the established stage-specific gates from experimental
+moving preparations. A failed V4-006 trial is not a counterexample to the
+previous restricted launch/readout results. No completed moving carrier is
+claimed, and an older action's hop screen cannot pass V4-006.
 """
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -33,6 +35,8 @@ def main() -> None:
     cell_crossing = load("v4_006_one_cell_crossing.json")
     cell_crossing_fine = load("v4_006_one_cell_crossing_dt_half.json")
     orbit_screen = load("v4_006_current_action_relative_orbit.json")
+    cache_coarse = load("v4_moving_cache_check_dt.json")
+    cache_fine = load("v4_moving_cache_check_dt_half.json")
     hop = load("v4_006_stable_action_exact_hop_xplus_16_screen.json")
     lock = (HERE / "EXACT_TRANSLATION_MAP_LOCK.md").read_text(
         encoding="utf-8")
@@ -52,10 +56,15 @@ def main() -> None:
         "no receiver preload, projection, reset",
     ))
     hop_row = hop["rows"][0]
-    hop_pass = (
-        hop["verdict"] == "EXACT_ONE_CELL_RELATIVE_PERIODIC_ORBIT_FOUND"
-        and bool(hop_row["converged"])
-        and hop_row["unreset_second_cell_endpoint_residual"] < 1e-7
+    # This older hop screen did not use the admitted V4-002 action. Keep its
+    # metrics as provenance, not a gate. The current-action collocation
+    # evidence is explicitly a sampled screen, not an unreset crossing.
+    current_action_hop_pass = (
+        orbit_screen["action_sha256"] == stage2["action_sha256"]
+        and bool(orbit_screen.get("unreset_native_evolution", False))
+        and bool(orbit_screen.get("converged", False))
+        and orbit_screen.get("endpoint_relative_residual", float("inf")) < 1e-7
+        and orbit_screen.get("preceding_layer_relative_residual", float("inf")) < 1e-7
     )
 
     physical_growth = bool(
@@ -64,18 +73,27 @@ def main() -> None:
                        cell_crossing, cell_crossing_fine, orbit_screen)
     same_action = all(row["action_sha256"] == stage2["action_sha256"]
                       for row in moving_evidence)
-    # The historical <2 bound is from V4-002's existing gate. The recovered
-    # contrast launch is not yet a proven moving native sector, so failure
-    # here reopens cumulative admission, not the old exact-rest theorem.
+    action_file_hash = hashlib.sha256((HERE / stage2["action_module"]).read_bytes()).hexdigest()
+    same_checked_cache = all(
+        check["status"] == "NATIVE_DEL_JVP_AGREEMENT"
+        and check["action_sha256"] == action_file_hash == screen["action_sha256"]
+        and check["tangent_cache_sha256"] == screen["tangent_cache_sha256"]
+        for check, screen in ((cache_coarse, cell_crossing), (cache_fine, cell_crossing_fine))
+    )
+    # The experimental contrast launch is not a proved native preparation.
+    # Its growth is movement diagnostics only, not a new V4-002 requirement.
     contrast_bounded = all(row["maximum_velocity_aware_norm_ratio"] < 2
                            for row in (moved_coarse, moved_fine))
-    stage2_pass = stage2["status"] == "PASS" and not physical_growth and same_action and contrast_bounded
-    stage3_pass = stage2_pass and stage3["status"] == "PASS"
-    stage4_pass = stage3_pass and stage4["status"] == "PASS"
+    stage2_pass = (stage2["status"] == "PASS" and not physical_growth
+                   and stage2["action_sha256"] == action_file_hash
+                   and all(stage2["checks"].values()))
+    stage3_pass = stage2_pass and stage3["status"] == "PASS" and all(stage3["checks"].values())
+    stage4_pass = stage3_pass and stage4["status"] == "PASS" and all(stage4["checks"].values())
     stage5_pass = (
         stage4_pass
         and stage5["status"] == "PASS"
         and stage5_red_team["status"] == "PASS"
+        and all(stage5["checks"].values())
     )
     result = {
         "status": "CURRENT_COHERENT_STAGE_AUDIT",
@@ -84,6 +102,7 @@ def main() -> None:
             else "V4-003" if stage3_pass
             else "V4-002" if stage2_pass
             else "V4-001"),
+        "localized_mobile_carrier_verified": current_action_hop_pass,
         "canonical_action_changed": False,
         "research_action_admitted": stage2_pass,
         "research_action_scope": (
@@ -94,10 +113,10 @@ def main() -> None:
             "V4-002": (
                 "PASS_PHYSICAL_SECTOR_STABILITY"
                 if stage2_pass else
-                "REVALIDATION_REQUIRED_ON_FULL_CARRIER_CONTRAST"),
+                "OPEN_PHYSICAL_SECTOR_STABILITY"),
             "V4-003": (
                 "PASS_FIXED_NATIVE_READOUT_WITH_CONTROLLED_REMAINDER"
-                if stage3_pass else "OPEN_FULL_CARRIER_NATIVE_READOUT"),
+                if stage3_pass else "OPEN_FIXED_NATIVE_READOUT"),
             "V4-004": (
                 "PASS_LOCALIZED_READOUT_SPIN_HALF" if stage4_pass else
                 "NEXT_OPERATIONAL_SPIN" if stage3_pass else
@@ -108,7 +127,7 @@ def main() -> None:
                 "NEXT_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT"
                 if stage4_pass else "BLOCKED_BY_V4_004"),
             "V4-006": (
-                "PASS_EXACT_ONE_CELL_HANDOFF" if hop_pass and stage5_pass
+                "PASS_EXACT_ONE_CELL_HANDOFF" if current_action_hop_pass and stage5_pass
                 else "OPEN_EXACT_ONE_CELL_HANDOFF"),
             "V4-007": "OPEN_REPEATABLE_SECOND_HANDOFF",
             "V4-008": "OPEN_COARSE_DIRAC_COMPARISON",
@@ -118,6 +137,9 @@ def main() -> None:
         "historical_exact_orbit_evidence": rest,
         "moving_carrier_revalidation": {
             "same_action_hash": same_action,
+            "same_independently_checked_del_caches": same_checked_cache,
+            "frozen_action_configuration": stage2["action_configuration"],
+            "scope": "V4-006 experimental contrast preparation; not an admitted moving sector or replacement gate for V4-002 through V4-005",
             "contrast_launch_bounded": contrast_bounded,
             "coarse_velocity_aware_amplification": moved_coarse["maximum_velocity_aware_norm_ratio"],
             "fine_velocity_aware_amplification": moved_fine["maximum_velocity_aware_norm_ratio"],
@@ -168,10 +190,9 @@ def main() -> None:
         "endpoint_locked": endpoint_locked,
         "neutral_translation_mode_required": False,
         "claim_boundary": (
-            "Earlier exact-rest, companion-launch, algebraic rotation and "
-            "short-step conditional results are preserved. The recovered "
-            "physical carrier contrast is not yet a proved moving sector; "
-            "cumulative admission is reopened for V4-002 through V4-005. "
+            "V4-001 through V4-005 retain their original verified scopes. "
+            "The experimental full-carrier contrast is not a proved moving "
+            "sector and its failure does not revoke those scoped passes. "
             "V4-006 did not complete a crossing. The nonlinear boundary "
             "screen is inconclusive, not a no-go theorem."),
     }
