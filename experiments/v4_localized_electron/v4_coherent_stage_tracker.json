@@ -5,28 +5,29 @@
   "release_rule": "All stages must pass on one coherent action/carrier/readout chain before merge to main.",
   "action_policy": {
     "canonical_baseline": "V40 complex-Psi/complex-chi C19 reciprocal action",
-    "final_action_frozen": false,
-    "reason": "The saved 100-cycle rest pass and strongest short-time movement pass use different research actions.",
+    "final_action_frozen": true,
+    "reason": "V4-002 passes rest, 100-cycle physical-sector stability, nonlinear, Noether, discrete-energy, timestep, and box gates on one exact research action.",
     "current_movement_incumbent": {
       "module": "live_clifford_bond_action.py",
       "link_source": "joint_face_laplacian_plus_frame_oscillator",
-      "scale": 0.3157894736842105,
+      "scale": 1197.0,
       "spacetime_scale": 0.01662049861495845,
       "parallel_matched_scale": 1.0,
       "parallel_clock_potential_scale": 1.0,
-      "admitted": false
+      "admitted": true,
+      "admission_scope": "V4 research chain only; canonical V40 and public main remain unchanged until the complete V4 release passes"
     }
   },
   "stages": [
     {"id": "V4-001", "status": "PASS", "rca_count": 0, "evidence": "v4_001_revalidation.json", "summary": "Exact localized rest solution rebuilt on the clean branch with only standard Lean foundations."},
-    {"id": "V4-002", "status": "FAIL__PHYSICAL_DIRAC_LAUNCH_REACHES_GROWING_RESPONSE", "rca_count": 5, "evidence": "v4_002_reachable_sector_audit.json; V4_002_PHYSICAL_LAUNCH_RCA.md", "summary": "The exact 6/361 complete-frame action still fails on 16 physical launches. The first departure is 99.9999% Psi and, on the carrier, 96.365% is amplitude/phase along the already-correct Psi ray; the three-prong orientation-normal error is only 0.352%. The error grows to norm ratio 4.820 and shape error 4.654 over 100 cycles."},
-    {"id": "V4-003", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Fixed four-component phase-space readout with an explicit controlled complementary-sector remainder; exact zero finite-lattice remainder is not required."},
-    {"id": "V4-004", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Operational spin-half on the localized carrier."},
-    {"id": "V4-005", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Short-time Dirac transport and native current."},
-    {"id": "V4-006", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "One complete cell crossing against the independent Dirac comparator at a solved crossing time; neither a one-update jump nor rigid fractional snapshots are required."},
-    {"id": "V4-007", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Second unreset crossing in both directions."},
-    {"id": "V4-008", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Same-state mass, time, transport, density, current, and phase map."},
-    {"id": "V4-009", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Axes, diagonal, separately measured copies, physically admissible perturbations, timestep, and box robustness."},
-    {"id": "V4-010", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Cumulative analytic Lean theorem plus separate reproducible numerical and clean-release audits."}
+    {"id": "V4-002", "status": "PASS", "rca_count": 6, "evidence": "v4_002_exact_1197/v4_002_stage_gate.json; V4_002_B_FRAME_RCA.md", "summary": "The B-normalized complete six-face frame action keeps all 16 physical launches bounded for 100 cycles. Exact-action, rest, nonlinear, native Noether, discrete-energy, timestep, and side-5/7/9 checks pass. The 100-cycle Dirac comparator error remains a later mapping obligation."},
+    {"id": "V4-003", "status": "NEXT", "rca_count": 0, "summary": "Fixed four-component phase-space readout with an explicit controlled complementary-sector remainder; exact zero finite-lattice remainder is not required."},
+    {"id": "V4-004", "status": "NOT_STARTED__BLOCKED_BY_V4_003", "rca_count": 0, "summary": "Operational spin-half on the localized carrier."},
+    {"id": "V4-005", "status": "NOT_STARTED__BLOCKED_BY_V4_003", "rca_count": 0, "summary": "Short-time Dirac transport and native current."},
+    {"id": "V4-006", "status": "NOT_STARTED__BLOCKED_BY_V4_003", "rca_count": 0, "summary": "One complete cell crossing against the independent Dirac comparator at a solved crossing time; neither a one-update jump nor rigid fractional snapshots are required."},
+    {"id": "V4-007", "status": "NOT_STARTED__BLOCKED_BY_V4_003", "rca_count": 0, "summary": "Second unreset crossing in both directions."},
+    {"id": "V4-008", "status": "NOT_STARTED__BLOCKED_BY_V4_003", "rca_count": 0, "summary": "Same-state mass, time, transport, density, current, and phase map."},
+    {"id": "V4-009", "status": "NOT_STARTED__BLOCKED_BY_V4_003", "rca_count": 0, "summary": "Axes, diagonal, separately measured copies, physically admissible perturbations, timestep, and box robustness."},
+    {"id": "V4-010", "status": "NOT_STARTED__BLOCKED_BY_V4_003", "rca_count": 0, "summary": "Cumulative analytic Lean theorem plus separate reproducible numerical and clean-release audits."}
   ]
 }

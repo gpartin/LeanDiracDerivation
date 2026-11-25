@@ -41,6 +41,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--archive", default="live_face_noether_trajectory.npz")
     parser.add_argument("--output", default="live_face_noether_continuity_gate.json")
+    parser.add_argument(
+        "--charge-mode", choices=("full", "perturbation"), default="full",
+        help=("Conserve the full native state charge for stability, or "
+              "subtract the rotating rest orbit for the later small-signal "
+              "Dirac-current audit."))
     args = parser.parse_args()
     archive = np.load(HERE/args.archive)
     states = [torch.tensor(value, dtype=torch.float64)
@@ -71,11 +76,13 @@ def main() -> None:
                 rest_left, rest_right = rest_states[index-1], rest_states[index]
                 rest_grad_left, rest_grad_right = interval_gradients(
                     rest_left, rest_right)
-                charge = torch.dot(
-                    grad_right, generator(right, field, mask))
-                rest_charge = torch.dot(
-                    rest_grad_right, generator(rest_right, field, mask))
-                charges.append(float(charge-rest_charge))
+                charge = torch.dot(grad_right, generator(
+                    right, field, mask))
+                rest_charge = torch.dot(rest_grad_right, generator(
+                    rest_right, field, mask))
+                charges.append(float(
+                    charge-rest_charge
+                    if args.charge_mode == "perturbation" else charge))
                 variation = (
                     torch.dot(grad_left, generator(left, field, mask))
                     + torch.dot(grad_right, generator(right, field, mask)))
@@ -84,7 +91,9 @@ def main() -> None:
                               generator(rest_left, field, mask))
                     + torch.dot(rest_grad_right,
                                 generator(rest_right, field, mask)))
-                interval_variations.append(float(variation-rest_variation))
+                interval_variations.append(float(
+                    variation-rest_variation
+                    if args.charge_mode == "perturbation" else variation))
                 if index >= 2:
                     continuity_defects.append(
                         charges[-1]-charges[-2]-interval_variations[-1])
@@ -123,6 +132,7 @@ def main() -> None:
         "link_source": action.LINK_SOURCE,
         "action_scale": action.SCALE,
         "trajectory_updates": len(states)-2,
+        "charge_mode": args.charge_mode,
         "rows": rows,
         "maximum_global_charge_relative_drift": maximum_global,
         "maximum_local_continuity_relative_defect": maximum_continuity,
@@ -132,9 +142,10 @@ def main() -> None:
             else "LIVE_FACE_NOETHER_CONTINUITY_OPEN"),
         "claim_boundary": (
             "Exact discrete phase-charge and face-cut Ward identity on one "
-            "four-update nonlinear trajectory. Equality with the stable "
-            "four-component Dirac probability/current and long translation "
-            "remain separate gates."),
+            "four-update nonlinear trajectory. Full-state charge is the "
+            "V4-002 conservation check; rest-subtracted small-signal charge "
+            "and equality with the four-component Dirac probability/current "
+            "remain later mapping gates."),
     }
     path = HERE/args.output
     path.write_text(json.dumps(result, indent=2, allow_nan=False)+"\n",

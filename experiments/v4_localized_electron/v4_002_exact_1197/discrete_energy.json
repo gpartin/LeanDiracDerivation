@@ -1,0 +1,53 @@
+{
+  "status": "V4_002_DISCRETE_ENERGY_GATE",
+  "action_configuration": {
+    "link_source": "joint_face_laplacian_plus_frame_oscillator",
+    "scale": 1197.0,
+    "spacetime_scale": 0.01662049861495845,
+    "parallel_matched_scale": 1.0,
+    "parallel_potential_scale": 1.0
+  },
+  "trajectory_updates": 4,
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "relative_derivative_step": 0.0001,
+      "interval_energies": [
+        5651236018.312041,
+        5651236018.320666,
+        5651236018.328757,
+        5651236018.339491,
+        5651236018.350322
+      ],
+      "maximum_relative_drift": 6.77382557306844e-12
+    },
+    {
+      "relative_derivative_step": 5e-05,
+      "interval_energies": [
+        5651235986.522955,
+        5651235986.532622,
+        5651235986.5429735,
+        5651235986.550583,
+        5651235986.561756
+      ],
+      "maximum_relative_drift": 6.865965839963366e-12
+    },
+    {
+      "relative_derivative_step": 2.5e-05,
+      "interval_energies": [
+        5651235978.565905,
+        5651235978.573132,
+        5651235978.585228,
+        5651235978.588306,
+        5651235978.600177
+      ],
+      "maximum_relative_drift": 6.064548364016592e-12
+    }
+  ],
+  "successive_refinement_changes": [
+    5.6251564113496825e-09,
+    1.4089442537688026e-09
+  ],
+  "verdict": "DISCRETE_ENERGY_BOUNDED_PASS",
+  "claim_boundary": "Full-state autonomous discrete-Lagrangian interval energy on the short unrestricted nonlinear V4-002 trajectory. Dirac energy identification and long moving-carrier endurance are later gates."
+}

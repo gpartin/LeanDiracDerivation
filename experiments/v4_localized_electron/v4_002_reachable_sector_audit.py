@@ -55,23 +55,51 @@ def main() -> None:
     parser.add_argument("--rest-cache", type=Path, required=True)
     parser.add_argument("--action-module", type=Path,
                         default=Path("live_clifford_bond_action.py"))
+    parser.add_argument(
+        "--chi-scale-json", type=Path,
+        help=("Optional native envelope-closure artifact supplying one "
+              "complex chi/Psi tangent ratio per cubical flavor. When "
+              "omitted the historical Psi-only launch is retained."))
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--cycles", type=float, default=100.0)
     parser.add_argument("--wave-number", type=float, default=0.35)
     parser.add_argument("--packet-width", type=float, default=1.35)
     parser.add_argument("--sparse-tolerance", type=float, default=1e-11)
+    parser.add_argument("--dt", type=float)
+    parser.add_argument("--action-scale", type=float, default=6/19)
+    parser.add_argument("--spacetime-scale", type=float, default=6/361)
+    parser.add_argument("--parallel-matched-scale", type=float, default=1.0)
+    parser.add_argument("--parallel-clock-potential-scale", type=float,
+                        default=1.0)
     args = parser.parse_args()
 
     tangent_cache = args.tangent_cache.resolve()
     rest_cache = args.rest_cache.resolve()
     action_module = (args.action_module if args.action_module.is_absolute()
                      else HERE/args.action_module).resolve()
+    chi_scale_json = None
+    if args.chi_scale_json is not None:
+        chi_scale_json = (args.chi_scale_json
+                          if args.chi_scale_json.is_absolute()
+                          else HERE/args.chi_scale_json).resolve()
     if not tangent_cache.is_file():
         raise FileNotFoundError(tangent_cache)
     if not rest_cache.is_file():
         raise FileNotFoundError(rest_cache)
     if not action_module.is_file():
         raise FileNotFoundError(action_module)
+    if chi_scale_json is not None and not chi_scale_json.is_file():
+        raise FileNotFoundError(chi_scale_json)
+
+    chi_scales = {"plus": 0j, "minus": 0j}
+    if chi_scale_json is not None:
+        scale_evidence = json.loads(chi_scale_json.read_text(
+            encoding="utf-8"))
+        for row in scale_evidence["rows"]:
+            case = next(item for item in row["cases"]
+                        if item["envelope"] == "all_125_centers")
+            chi_scales[row["flavor"]] = complex(
+                case["chi_scale_real"], case["chi_scale_imag"])
 
     # Import the checked-in preparation/readout code, but point its historical
     # rest-state loader at the explicitly supplied immutable cache.
@@ -91,7 +119,7 @@ def main() -> None:
     if rest.shape != (dimension,):
         raise ValueError("rest state and tangent cache dimensions differ")
 
-    dt = native_time.DT
+    dt = native_time.DT if args.dt is None else args.dt
     theta = float(np.arccos(1-dt**2*native_time.CHI0**2/2))
     rotate_minus = native_spectrum.rotation_matrix(dimension, -theta)
     rotate_plus = native_spectrum.rotation_matrix(dimension, theta)
@@ -108,7 +136,8 @@ def main() -> None:
     for flavor, basis in dirac.flavor_bases().items():
         alpha, beta = dirac.compressed_clifford(basis)
         raw = envelope.raw_columns(
-            basis, psi_frame, chi_frame, sites, dirac.OFFSETS, 0j)
+            basis, psi_frame, chi_frame, sites, dirac.OFFSETS,
+            chi_scales[flavor])
         for axis in (0, 1, 2, 3):
             for sign in (-1, 1):
                 packet_previous, packet_current, _, momentum = dirac.packet(
@@ -358,21 +387,29 @@ def main() -> None:
     observed_growth_rate = float(
         np.log(final_sample["maximum_norm_ratio"])
         / max(final_elapsed_time, 1e-30))
-    # This is a diagnostic classification, not a newly fitted acceptance
-    # threshold.  Every one of the 16 independent physical preparations has
-    # amplified by more than a factor of two at the final sample.
-    material_growth = final_sample["minimum_norm_ratio"] > 2.0
+    # A factor-of-two envelope change was the predeclared material-growth
+    # screen used to reject the predecessor.  Apply it to *any* physical
+    # launch; the former minimum check could hide one growing case.
+    material_growth = maximum_norm_ratio > 2.0
     result = {
         "stage": "V4-002",
         "status": "PHYSICAL_SECTOR_REACHABILITY_AUDIT",
         "action_module": action_module.name,
         "action_module_sha256": sha256(action_module),
+        "chi_scale_source": (
+            None if chi_scale_json is None else chi_scale_json.name),
+        "chi_scales": {
+            flavor: {"real": float(value.real),
+                     "imag": float(value.imag)}
+            for flavor, value in chi_scales.items()
+        },
         "action_configuration": {
             "link_source": "joint_face_laplacian_plus_frame_oscillator",
-            "action_scale": 6/19,
-            "spacetime_scale": 6/361,
-            "parallel_matched_scale": 1.0,
-            "parallel_clock_potential_scale": 1.0,
+            "action_scale": args.action_scale,
+            "spacetime_scale": args.spacetime_scale,
+            "parallel_matched_scale": args.parallel_matched_scale,
+            "parallel_clock_potential_scale": (
+                args.parallel_clock_potential_scale),
         },
         "tangent_cache": tangent_cache.name,
         "tangent_cache_sha256": sha256(tangent_cache),

@@ -12,7 +12,9 @@ centered rest clock, so the term and its force are tested to vanish on the
 rest orbit while remaining active on spatial motion.  The link phases—not a
 fixed alpha matrix—derive the anticommuting cube connection.
 
-This module is an unadmitted action candidate.
+This module is the frozen V4 research action after the V4-002 gate.  It is not
+a canonical V40 promotion; later V4 stages must use this same configuration or
+explicitly reopen V4-002.
 """
 
 from __future__ import annotations
@@ -32,10 +34,12 @@ import triangle_movement_action as triangle
 
 SIDE = 5
 KAPPA = 1.0/63.0
-SCALE = float(os.environ.get("LFM_LIVE_CLIFFORD_SCALE", "1"))
+SCALE = float(os.environ.get(
+    "LFM_LIVE_CLIFFORD_SCALE", str(native_time.B)))
 PLAQUETTE_SCALE = float(os.environ.get("LFM_LIVE_PLAQUETTE_SCALE", "0"))
 SPACETIME_PLAQUETTE_SCALE = float(
-    os.environ.get("LFM_LIVE_SPACETIME_PLAQUETTE_SCALE", "0"))
+    os.environ.get("LFM_LIVE_SPACETIME_PLAQUETTE_SCALE",
+                   str(6/native_time.CHI0**2)))
 SYMPLECTIC_PLAQUETTE_SCALE = float(
     os.environ.get("LFM_LIVE_SYMPLECTIC_PLAQUETTE_SCALE", "0"))
 PARALLEL_OVERLAP_SCALE = float(
@@ -43,7 +47,7 @@ PARALLEL_OVERLAP_SCALE = float(
 PARALLEL_FACE_SCALE = float(
     os.environ.get("LFM_LIVE_PARALLEL_FACE_SCALE", "0"))
 PARALLEL_MATCHED_SCALE = float(
-    os.environ.get("LFM_LIVE_PARALLEL_MATCHED_SCALE", "0"))
+    os.environ.get("LFM_LIVE_PARALLEL_MATCHED_SCALE", "1"))
 PARALLEL_MATCHED_POTENTIAL_SCALE = float(
     os.environ.get("LFM_LIVE_PARALLEL_MATCHED_POTENTIAL_SCALE", "1"))
 TRIANGLE_DELTA_SCALE = float(
@@ -51,7 +55,9 @@ TRIANGLE_DELTA_SCALE = float(
 MATERIAL_AREA_SCALE = float(
     os.environ.get("LFM_LIVE_MATERIAL_AREA_SCALE", "0"))
 CHI_PAYLOAD = float(os.environ.get("LFM_LIVE_CLIFFORD_CHI_PAYLOAD", "1"))
-LINK_SOURCE = os.environ.get("LFM_LIVE_CLIFFORD_LINK", "psi_phase")
+LINK_SOURCE = os.environ.get(
+    "LFM_LIVE_CLIFFORD_LINK",
+    "joint_face_laplacian_plus_frame_oscillator")
 
 
 def norm2(value: torch.Tensor) -> torch.Tensor:

@@ -20,7 +20,8 @@ def load(name: str) -> dict:
 
 def main() -> None:
     stability = load("unit_geometric_nonlinear_summary.json")
-    reachability = load("v4_002_reachable_sector_audit.json")
+    reachability = load("v4_002_exact_1197/reach_100cycles_final.json")
+    stage2 = load("v4_002_exact_1197/v4_002_stage_gate.json")
     hop = load("v4_006_stable_action_exact_hop_xplus_16_screen.json")
     lock = (HERE / "EXACT_TRANSLATION_MAP_LOCK.md").read_text(
         encoding="utf-8")
@@ -48,17 +49,23 @@ def main() -> None:
 
     physical_growth = bool(
         reachability["physical_launches_exhibit_material_growth"])
+    stage2_pass = stage2["status"] == "PASS" and not physical_growth
     result = {
         "status": "CURRENT_COHERENT_STAGE_AUDIT",
-        "release_boundary": "V4-001",
+        "release_boundary": "V4-002" if stage2_pass else "V4-001",
         "canonical_action_changed": False,
-        "research_action_admitted": False,
+        "research_action_admitted": stage2_pass,
+        "research_action_scope": (
+            "frozen V4 coherent chain only; canonical V40 and public main "
+            "remain unchanged until V4-010"),
         "stage_contract": {
             "V4-001": "PASS_EXACT_REST_EXISTENCE",
             "V4-002": (
+                "PASS_PHYSICAL_SECTOR_STABILITY"
+                if stage2_pass else
                 "FAIL_PHYSICAL_DIRAC_LAUNCH_GROWTH"
                 if physical_growth else "OPEN_PHYSICAL_SECTOR_STABILITY"),
-            "V4-003": "OPEN_FIXED_READOUT_WITH_CONTROLLED_REMAINDER",
+            "V4-003": "NEXT_FIXED_READOUT_WITH_CONTROLLED_REMAINDER",
             "V4-004": "OPEN_OPERATIONAL_SPIN",
             "V4-005": "PARTIAL_INTEGER_SHIFT_COVARIANCE_AND_CURRENT",
             "V4-006": (
@@ -71,7 +78,7 @@ def main() -> None:
         },
         "historical_exact_orbit_evidence": rest,
         "physical_sector_reachability": {
-            "artifact": "v4_002_reachable_sector_audit.json",
+            "artifact": "v4_002_exact_1197/reach_100cycles_final.json",
             "case_count": reachability["case_count"],
             "one_step_dirac_sector_leakage": reachability[
                 "one_step_dirac_sector_leakage"],
@@ -85,11 +92,12 @@ def main() -> None:
         "endpoint_locked": endpoint_locked,
         "neutral_translation_mode_required": False,
         "claim_boundary": (
-            "The saved historical 100-cycle result proves only an exactly "
-            "prepared orbit. The current complete-frame action materially "
-            "amplifies all tested physical packet launches. The exact rigid "
-            "hop remains an optional stronger control; V4-006 instead uses a "
-            "solved crossing time and permits Dirac-predicted spreading."),
+            "V4-002 passes bounded physical-sector stability on the frozen "
+            "B-normalized complete-frame research action. Its accumulated "
+            "Dirac-comparator mismatch is intentionally carried into "
+            "V4-003/V4-005. The exact rigid hop remains an optional stronger "
+            "control; V4-006 uses a solved crossing time and permits "
+            "Dirac-predicted spreading."),
     }
     output = HERE / "v4_stage_contract_audit.json"
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

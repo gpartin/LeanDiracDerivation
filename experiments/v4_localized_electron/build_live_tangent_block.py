@@ -12,6 +12,7 @@ import cube_incidence_nonlinear_action as prior_action
 import edge_snap_action_rank as rank
 import live_clifford_bond_action as action
 import live_clifford_tangent_gate as gate
+import personal_touch_unit_geometric_canonical as canonical
 
 
 def main() -> None:
@@ -19,11 +20,18 @@ def main() -> None:
     parser.add_argument("--index", type=int, choices=(0, 1, 2), required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--chunk-size", type=int, default=32)
+    parser.add_argument("--rest-cache", type=Path)
+    parser.add_argument("--dt", type=float, default=gate.DT)
     args = parser.parse_args()
     rank.lock_inertia()
-    bare, _ = prior_action.expected_blocks()
-    rest = bare["rest"]
-    dt = gate.DT
+    if args.rest_cache is not None:
+        canonical.CACHE = args.rest_cache.resolve()
+        with np.load(canonical.CACHE) as archive:
+            rest = archive["rest"].copy()
+    else:
+        bare, _ = prior_action.expected_blocks()
+        rest = bare["rest"]
+    dt = args.dt
     theta = float(np.arccos(1-dt**2*rank.R**2/2))
     layers = (
         gate.phase_rotation_matrix(rest.size, -theta)@rest,

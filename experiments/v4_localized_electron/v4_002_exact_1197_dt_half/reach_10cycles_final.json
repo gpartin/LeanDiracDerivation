@@ -1,0 +1,1377 @@
+{
+  "stage": "V4-002",
+  "status": "PHYSICAL_SECTOR_REACHABILITY_AUDIT",
+  "action_module": "live_clifford_bond_action.py",
+  "action_module_sha256": "e96a7a5a4bbaf082130382a844e8e462889a8e7fd783a49563305f9173ff4134",
+  "chi_scale_source": "cube_incidence_dirac_envelope_gate.json",
+  "chi_scales": {
+    "plus": {
+      "real": 0.0003479600832739469,
+      "imag": -5.499963616435744e-09
+    },
+    "minus": {
+      "real": 0.0003044126836514495,
+      "imag": 1.3588621367613447e-08
+    }
+  },
+  "action_configuration": {
+    "link_source": "joint_face_laplacian_plus_frame_oscillator",
+    "action_scale": 1197.0,
+    "spacetime_scale": 0.0166204986149584,
+    "parallel_matched_scale": 1.0,
+    "parallel_clock_potential_scale": 1.0
+  },
+  "tangent_cache": "tangent_blocks.npz",
+  "tangent_cache_sha256": "ee91408640c1688876406918be0c766d03c59483637903262c532c6aab06c7d2",
+  "rest_cache": "personal_touch_bare_canonical_matrices.npz",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "dt": 0.001953125,
+  "cycles": 10.0,
+  "steps": 1694,
+  "case_count": 16,
+  "cases": [
+    {
+      "flavor": "plus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ]
+    }
+  ],
+  "initial_real_phase_space_rank": 32,
+  "one_step_dirac_sector_leakage": 5.42724419533115e-06,
+  "first_departure": {
+    "rows": [
+      {
+        "flavor": "plus",
+        "axis": "x",
+        "sign": -1,
+        "relative_configuration_error": 8.154290859768006e-06,
+        "field_power_fractions": {
+          "Psi": 0.9979167163483196,
+          "chi": 0.0020832836516804895
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.3524137086762426,
+          "surroundings": 0.6475862913237574
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4362885461990144,
+          "toward_chi_ray_in_plane": 0.561519624639137,
+          "outside_local_Psi_chi_plane": 0.0021918291618486497
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "plus",
+        "axis": "x",
+        "sign": 1,
+        "relative_configuration_error": 7.117463005990601e-06,
+        "field_power_fractions": {
+          "Psi": 0.9947195161694333,
+          "chi": 0.0052804838305666015
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.3884999757615108,
+          "surroundings": 0.6115000242384893
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4612910707825992,
+          "toward_chi_ray_in_plane": 0.5375497866513101,
+          "outside_local_Psi_chi_plane": 0.0011591425660906483
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "plus",
+        "axis": "y",
+        "sign": -1,
+        "relative_configuration_error": 7.131453462674475e-06,
+        "field_power_fractions": {
+          "Psi": 0.9977555300216284,
+          "chi": 0.0022444699783715095
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.3759001880069328,
+          "surroundings": 0.6240998119930671
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.46174375918272853,
+          "toward_chi_ray_in_plane": 0.5373393675937517,
+          "outside_local_Psi_chi_plane": 0.000916873223519694
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "plus",
+        "axis": "y",
+        "sign": 1,
+        "relative_configuration_error": 8.192691270071035e-06,
+        "field_power_fractions": {
+          "Psi": 0.9954294742034427,
+          "chi": 0.004570525796557263
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.3726955678535503,
+          "surroundings": 0.6273044321464497
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.45201174321221727,
+          "toward_chi_ray_in_plane": 0.545803711014504,
+          "outside_local_Psi_chi_plane": 0.002184545773278884
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "plus",
+        "axis": "z",
+        "sign": -1,
+        "relative_configuration_error": 7.961901487894928e-06,
+        "field_power_fractions": {
+          "Psi": 0.9969902094799127,
+          "chi": 0.0030097905200872663
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.3834736732444003,
+          "surroundings": 0.6165263267555997
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4765694207283332,
+          "toward_chi_ray_in_plane": 0.5217116203664267,
+          "outside_local_Psi_chi_plane": 0.0017189589052400939
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "plus",
+        "axis": "z",
+        "sign": 1,
+        "relative_configuration_error": 7.6267361497346e-06,
+        "field_power_fractions": {
+          "Psi": 0.9957563667757943,
+          "chi": 0.004243633224205782
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.4007450724317869,
+          "surroundings": 0.5992549275682132
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4467126534525916,
+          "toward_chi_ray_in_plane": 0.5513699083187577,
+          "outside_local_Psi_chi_plane": 0.0019174382286507089
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "plus",
+        "axis": "diagonal",
+        "sign": -1,
+        "relative_configuration_error": 7.762438893072245e-06,
+        "field_power_fractions": {
+          "Psi": 0.9981444090488365,
+          "chi": 0.0018555909511635414
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.3665542334152247,
+          "surroundings": 0.6334457665847754
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4569811731004278,
+          "toward_chi_ray_in_plane": 0.5415420564850638,
+          "outside_local_Psi_chi_plane": 0.0014767704145082726
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "plus",
+        "axis": "diagonal",
+        "sign": 1,
+        "relative_configuration_error": 7.486672407963507e-06,
+        "field_power_fractions": {
+          "Psi": 0.9945193522915763,
+          "chi": 0.005480647708423739
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.40460050747049753,
+          "surroundings": 0.5953994925295025
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.44889206295979106,
+          "toward_chi_ray_in_plane": 0.5494378619373259,
+          "outside_local_Psi_chi_plane": 0.0016700751028830227
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "x",
+        "sign": -1,
+        "relative_configuration_error": 1.1303679982171624e-05,
+        "field_power_fractions": {
+          "Psi": 0.9926028348300516,
+          "chi": 0.007397165169948318
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.25384505939814417,
+          "surroundings": 0.7461549406018558
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4079702796615531,
+          "toward_chi_ray_in_plane": 0.5869511128745781,
+          "outside_local_Psi_chi_plane": 0.005078607463868829
+        },
+        "maximum_departure_site": [
+          1,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "x",
+        "sign": 1,
+        "relative_configuration_error": 9.378353628302343e-06,
+        "field_power_fractions": {
+          "Psi": 0.9911176865144787,
+          "chi": 0.008882313485521248
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.31147569750409887,
+          "surroundings": 0.6885243024959012
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.3826611149954919,
+          "toward_chi_ray_in_plane": 0.6147453347904718,
+          "outside_local_Psi_chi_plane": 0.002593550214036266
+        },
+        "maximum_departure_site": [
+          1,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "y",
+        "sign": -1,
+        "relative_configuration_error": 1.0189081817100694e-05,
+        "field_power_fractions": {
+          "Psi": 0.9914324520654153,
+          "chi": 0.008567547934584726
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.26659656240467744,
+          "surroundings": 0.7334034375953227
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4011242109431309,
+          "toward_chi_ray_in_plane": 0.5952500896452751,
+          "outside_local_Psi_chi_plane": 0.003625699411593802
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          1
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "y",
+        "sign": 1,
+        "relative_configuration_error": 9.268986718325289e-06,
+        "field_power_fractions": {
+          "Psi": 0.9929844916808274,
+          "chi": 0.007015508319172675
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.21066749212716926,
+          "surroundings": 0.7893325078728308
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.3858009436812965,
+          "toward_chi_ray_in_plane": 0.608086273211557,
+          "outside_local_Psi_chi_plane": 0.00611278310714642
+        },
+        "maximum_departure_site": [
+          1,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "z",
+        "sign": -1,
+        "relative_configuration_error": 9.996098039991468e-06,
+        "field_power_fractions": {
+          "Psi": 0.9947128509121305,
+          "chi": 0.005287149087869578
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.25219371495833504,
+          "surroundings": 0.747806285041665
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4352270808168291,
+          "toward_chi_ray_in_plane": 0.560406858543637,
+          "outside_local_Psi_chi_plane": 0.004366060639534019
+        },
+        "maximum_departure_site": [
+          2,
+          1,
+          1
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "z",
+        "sign": 1,
+        "relative_configuration_error": 9.114714415014219e-06,
+        "field_power_fractions": {
+          "Psi": 0.9902846594435935,
+          "chi": 0.009715340556406538
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.26248229262151407,
+          "surroundings": 0.7375177073784859
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.4055400224519434,
+          "toward_chi_ray_in_plane": 0.5886387161328541,
+          "outside_local_Psi_chi_plane": 0.0058212614152022
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "diagonal",
+        "sign": -1,
+        "relative_configuration_error": 1.1279135482377438e-05,
+        "field_power_fractions": {
+          "Psi": 0.9935961381978914,
+          "chi": 0.00640386180210866
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.25343987558314796,
+          "surroundings": 0.7465601244168519
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.42502104899731513,
+          "toward_chi_ray_in_plane": 0.5713518932432142,
+          "outside_local_Psi_chi_plane": 0.0036270577594705697
+        },
+        "maximum_departure_site": [
+          2,
+          2,
+          1
+        ],
+        "maximum_site_is_carrier": true
+      },
+      {
+        "flavor": "minus",
+        "axis": "diagonal",
+        "sign": 1,
+        "relative_configuration_error": 9.215751207609471e-06,
+        "field_power_fractions": {
+          "Psi": 0.9911540351367275,
+          "chi": 0.008845964863272555
+        },
+        "location_power_fractions": {
+          "eight_carrier_sites": 0.2489250810931924,
+          "surroundings": 0.7510749189068076
+        },
+        "carrier_Psi_local_frame_power_fractions": {
+          "along_Psi_ray_amplitude_phase": 0.38871062687864766,
+          "toward_chi_ray_in_plane": 0.6065465273096988,
+          "outside_local_Psi_chi_plane": 0.004742845811653554
+        },
+        "maximum_departure_site": [
+          1,
+          2,
+          2
+        ],
+        "maximum_site_is_carrier": true
+      }
+    ],
+    "worst_case": {
+      "flavor": "minus",
+      "axis": "x",
+      "sign": -1,
+      "relative_configuration_error": 1.1303679982171624e-05,
+      "field_power_fractions": {
+        "Psi": 0.9926028348300516,
+        "chi": 0.007397165169948318
+      },
+      "location_power_fractions": {
+        "eight_carrier_sites": 0.25384505939814417,
+        "surroundings": 0.7461549406018558
+      },
+      "carrier_Psi_local_frame_power_fractions": {
+        "along_Psi_ray_amplitude_phase": 0.4079702796615531,
+        "toward_chi_ray_in_plane": 0.5869511128745781,
+        "outside_local_Psi_chi_plane": 0.005078607463868829
+      },
+      "maximum_departure_site": [
+        1,
+        2,
+        2
+      ],
+      "maximum_site_is_carrier": true
+    },
+    "interpretation": "Residual after one unrestricted native update and one common phase alignment. Local-frame fractions decompose the Psi residual on the eight occupied sites into its rest Psi ray, the in-plane chi companion, and the remaining C3 direction."
+  },
+  "maximum_phase_aligned_relative_error": 0.06509623812070027,
+  "maximum_phase_space_norm_ratio": 1.0123290743937234,
+  "final_minimum_phase_space_norm_ratio": 0.9935236943265813,
+  "observed_maximum_envelope_growth_rate_per_unit_time": 0.003705782310112659,
+  "physical_launches_exhibit_material_growth": false,
+  "samples": [
+    {
+      "step": 0,
+      "cycles": 0.0,
+      "maximum_phase_aligned_relative_error": 3.0191782003038454e-16,
+      "maximum_norm_ratio": 1.0,
+      "minimum_norm_ratio": 0.9999999999999999,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.8849934766463517e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.9226896003516597e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.4159606470417777e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.4267034248164865e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.4302052612715501e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.3978347814380288e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.3589307468746387e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.4059696830681997e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.528969687481868e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.5028223329908803e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.162292935742933e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.1663362636340849e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.183982927344752e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.2681406856337285e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 3.0191782003038454e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 3.01717090322226e-16,
+          "phase_space_norm_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "cycles": 0.005906140466300803,
+      "maximum_phase_aligned_relative_error": 7.994209315253767e-06,
+      "maximum_norm_ratio": 1.000002550355418,
+      "minimum_norm_ratio": 1.0000003116844505,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 5.76674139040511e-06,
+          "phase_space_norm_ratio": 1.0000003456922137
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 5.040084147132103e-06,
+          "phase_space_norm_ratio": 1.000000740641119
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 5.04356618820965e-06,
+          "phase_space_norm_ratio": 1.0000005137782702
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 5.794978689359927e-06,
+          "phase_space_norm_ratio": 1.000000535003245
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 5.631888075500451e-06,
+          "phase_space_norm_ratio": 1.0000005770644367
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 5.395259488275851e-06,
+          "phase_space_norm_ratio": 1.0000003116844505
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 5.4897622933434175e-06,
+          "phase_space_norm_ratio": 1.000000491927108
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 5.2942855070725834e-06,
+          "phase_space_norm_ratio": 1.0000005006737507
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 7.994209315253767e-06,
+          "phase_space_norm_ratio": 1.0000024301532893
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 6.669307320311157e-06,
+          "phase_space_norm_ratio": 1.0000016566180259
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 7.208159058804989e-06,
+          "phase_space_norm_ratio": 1.000002487427455
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 6.553120028629627e-06,
+          "phase_space_norm_ratio": 1.0000016219570687
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 7.0794207715743845e-06,
+          "phase_space_norm_ratio": 1.0000018622167257
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 6.496102030683624e-06,
+          "phase_space_norm_ratio": 1.0000020317316107
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 7.979866258335623e-06,
+          "phase_space_norm_ratio": 1.000002550355418
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 6.551907622051486e-06,
+          "phase_space_norm_ratio": 1.0000015666150532
+        }
+      ]
+    },
+    {
+      "step": 169,
+      "cycles": 0.9981377388048358,
+      "maximum_phase_aligned_relative_error": 0.016117327696430737,
+      "maximum_norm_ratio": 1.001458691659082,
+      "minimum_norm_ratio": 0.9986476754567185,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.012680981827559348,
+          "phase_space_norm_ratio": 0.9989149319100689
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.011386736628112078,
+          "phase_space_norm_ratio": 0.9986476754567185
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.012475275036443488,
+          "phase_space_norm_ratio": 0.9989964129369158
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.011212575562867238,
+          "phase_space_norm_ratio": 0.9989147295375451
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.01159614351302151,
+          "phase_space_norm_ratio": 0.9995885083033025
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.01240095918410523,
+          "phase_space_norm_ratio": 0.9988875908703023
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.012330406113597396,
+          "phase_space_norm_ratio": 0.9992029281050716
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.011123301078660571,
+          "phase_space_norm_ratio": 0.9988133845488518
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.015251495795923078,
+          "phase_space_norm_ratio": 1.0005586121006211
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.013604100580928443,
+          "phase_space_norm_ratio": 1.0003167488656413
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.01183989868028543,
+          "phase_space_norm_ratio": 0.9994345496743169
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.016117327696430737,
+          "phase_space_norm_ratio": 0.9999379967943165
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.0157159957346894,
+          "phase_space_norm_ratio": 1.001458691659082
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.01280217356161998,
+          "phase_space_norm_ratio": 0.9991796095884687
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.014811963861889555,
+          "phase_space_norm_ratio": 1.0004113471932223
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.014684914385502972,
+          "phase_space_norm_ratio": 0.9997546282788434
+        }
+      ]
+    },
+    {
+      "step": 339,
+      "cycles": 2.0021816180759724,
+      "maximum_phase_aligned_relative_error": 0.024525211283771383,
+      "maximum_norm_ratio": 1.0023596402510386,
+      "minimum_norm_ratio": 0.997019884680222,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.02053061546706133,
+          "phase_space_norm_ratio": 1.0005828633006024
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.018726732366504753,
+          "phase_space_norm_ratio": 0.9986454793235364
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.020117521788164328,
+          "phase_space_norm_ratio": 0.9998779832044629
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.018856077061045223,
+          "phase_space_norm_ratio": 0.9989914411599085
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.01934451622930562,
+          "phase_space_norm_ratio": 1.0001055240749295
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.019818269547717492,
+          "phase_space_norm_ratio": 0.9993933782153915
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.02020106292835642,
+          "phase_space_norm_ratio": 1.0004430381149971
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.018379337283819894,
+          "phase_space_norm_ratio": 0.9986814194358608
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.02367963483983541,
+          "phase_space_norm_ratio": 0.9985321491883848
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.022419861639737547,
+          "phase_space_norm_ratio": 1.0006483497667245
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.019722174933201584,
+          "phase_space_norm_ratio": 0.9980085209395219
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.024525211283771383,
+          "phase_space_norm_ratio": 1.0006545328067453
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.024479411827285715,
+          "phase_space_norm_ratio": 1.0023596402510386
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.020283218397632603,
+          "phase_space_norm_ratio": 0.997019884680222
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.023457802263006127,
+          "phase_space_norm_ratio": 0.9992267610479186
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.023082345729707923,
+          "phase_space_norm_ratio": 0.9994483571842042
+        }
+      ]
+    },
+    {
+      "step": 847,
+      "cycles": 5.002500974956781,
+      "maximum_phase_aligned_relative_error": 0.0382133511289713,
+      "maximum_norm_ratio": 1.0077325482789647,
+      "minimum_norm_ratio": 0.9978350406996878,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.03151973463068424,
+          "phase_space_norm_ratio": 1.0006244991251154
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.029772675056921105,
+          "phase_space_norm_ratio": 0.9978350406996878
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.03199821372475955,
+          "phase_space_norm_ratio": 0.999914102330368
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.028776046977590813,
+          "phase_space_norm_ratio": 0.9995456179698704
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.030738791838571446,
+          "phase_space_norm_ratio": 1.0016460730324923
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.031282672156373016,
+          "phase_space_norm_ratio": 0.9985894550019957
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.03194706034007585,
+          "phase_space_norm_ratio": 1.0011927649279166
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.029156821563008126,
+          "phase_space_norm_ratio": 0.9980080144327176
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.03791953805803748,
+          "phase_space_norm_ratio": 1.0029757160232813
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.037996095399901196,
+          "phase_space_norm_ratio": 1.0044794201416425
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.034067261082034575,
+          "phase_space_norm_ratio": 1.00104835311893
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.03692386390118457,
+          "phase_space_norm_ratio": 1.0039978221139907
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.03809135906390014,
+          "phase_space_norm_ratio": 1.0077325482789647
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.03295995751032724,
+          "phase_space_norm_ratio": 0.9980827686295493
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.0382133511289713,
+          "phase_space_norm_ratio": 1.0040565358644853
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.0366881901987381,
+          "phase_space_norm_ratio": 1.0020568978702553
+        }
+      ]
+    },
+    {
+      "step": 1693,
+      "cycles": 9.99909580944726,
+      "maximum_phase_aligned_relative_error": 0.06509623812070027,
+      "maximum_norm_ratio": 1.0123290743937234,
+      "minimum_norm_ratio": 0.9935236943265813,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.05262701613765602,
+          "phase_space_norm_ratio": 1.002160448336806
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.05454689580528004,
+          "phase_space_norm_ratio": 0.999943401067059
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.055361862680927645,
+          "phase_space_norm_ratio": 1.0009166725885172
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.050714525884624787,
+          "phase_space_norm_ratio": 1.0011067701676692
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.05584975358848063,
+          "phase_space_norm_ratio": 1.0032604521561865
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.05231801088231574,
+          "phase_space_norm_ratio": 0.9981577752325317
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.05587510017279279,
+          "phase_space_norm_ratio": 1.0028245484589056
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.051836388700723095,
+          "phase_space_norm_ratio": 0.9987898984317538
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.06227593980675781,
+          "phase_space_norm_ratio": 1.0045671808879872
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.06509623812070027,
+          "phase_space_norm_ratio": 1.0027194017688328
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.059053489389644366,
+          "phase_space_norm_ratio": 1.0000942476324048
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.05829102621637872,
+          "phase_space_norm_ratio": 1.0080943075929538
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.06294896703218408,
+          "phase_space_norm_ratio": 1.0123290743937234
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.05561735105697577,
+          "phase_space_norm_ratio": 0.9935236943265813
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.06377726578399334,
+          "phase_space_norm_ratio": 1.006773169493161
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.0599357373108389,
+          "phase_space_norm_ratio": 0.9999494992578748
+        }
+      ]
+    }
+  ],
+  "verdict": "NO_MATERIAL_GROWTH_IN_TESTED_PHYSICAL_LAUNCHES",
+  "claim_boundary": "Tests the declared two-layer packet preparations for both cubical copies, both momentum signs, three axes, and a diagonal. It does not prove stability against arbitrary native-state perturbations, nonlinear finite-amplitude evolution, or external forcing. Dirac is an independent comparator only."
+}

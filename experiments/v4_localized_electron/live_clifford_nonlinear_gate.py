@@ -14,6 +14,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.linalg import lu_factor, lu_solve
+from scipy.sparse.linalg import LinearOperator, gmres
 import torch
 
 import canonical_noncoplanar_bifurcation_audit as native_time
@@ -24,6 +25,7 @@ import current_action_localized_envelope_closure as envelope
 import live_clifford_bond_action as action
 import live_clifford_tangent_gate as tangent
 import live_face_compact_gradient_bridge as gradient_bridge
+import personal_touch_unit_geometric_canonical as canonical
 
 
 HERE = Path(__file__).resolve().parent
@@ -46,22 +48,29 @@ def relative_residual(previous: np.ndarray, current: np.ndarray,
 
 
 def solve_following(previous, current, guess, factor,
-                    tolerance=1e-10, maximum_iterations=48,
-                    base_residual=None):
+                    tolerance=1e-10, maximum_iterations=96,
+                    maximum_refreshes=8, base_residual=None,
+                    backward_scale=1.0, backward_tolerance=1e-12):
     following = guess.copy()
     history = []
+    backward_history = []
     active_factor = factor
     refreshes = 0
     for _iteration in range(maximum_iterations):
         value = relative_residual(
             previous, current, following, base_residual)
         rms = float(np.linalg.norm(value)/np.sqrt(value.size))
+        backward_error = float(
+            np.linalg.norm(value, ord=np.inf)
+            / max(backward_scale, 1e-300))
         history.append(rms)
-        if rms < tolerance:
-            return following, history, True, active_factor
+        backward_history.append(backward_error)
+        if rms < tolerance or backward_error < backward_tolerance:
+            return (following, history, backward_history, True,
+                    active_factor)
         correction = lu_solve(active_factor, -value)
         accepted = False
-        for power in range(10):
+        for power in range(16):
             trial = following+0.5**power*correction
             trial_rms = float(np.linalg.norm(
                 relative_residual(previous, current, trial, base_residual))
@@ -69,33 +78,52 @@ def solve_following(previous, current, guess, factor,
             if trial_rms < rms:
                 following = trial
                 accepted = True
-                if trial_rms/max(rms, 1e-300) > 0.7 and refreshes < 2:
-                    p = torch.tensor(previous, dtype=torch.float64)
-                    c = torch.tensor(current, dtype=torch.float64)
-                    f = torch.tensor(following, dtype=torch.float64)
-                    jacobian = torch.func.jacrev(
-                        lambda value: action.del_residual(
-                            p, c, value, native_time.DT))(f).detach().numpy()
-                    active_factor = lu_factor(jacobian)
-                    refreshes += 1
                 break
         if not accepted:
-            if refreshes >= 2:
+            if refreshes >= maximum_refreshes:
                 break
-            # The action is nonlinear in the live chi geometry.  A fixed
-            # rest-orbit Jacobian is only a preconditioner; refresh the exact
-            # following-layer Jacobian when its Newton direction ceases to
-            # decrease the DEL residual.  This changes the solver, not the
-            # action or state.
+            # The action is nonlinear in the live chi geometry.  The former
+            # implementation materialized a dense 1500-by-1500 Jacobian here,
+            # which can exhaust memory for a stiff but otherwise valid action.
+            # Apply that exact Jacobian matrix-free with a Hessian-vector
+            # product and use the rest-orbit factor only as a preconditioner.
+            # This changes the solver, never the action or state.
             p = torch.tensor(previous, dtype=torch.float64)
             c = torch.tensor(current, dtype=torch.float64)
             f = torch.tensor(following, dtype=torch.float64)
-            jacobian = torch.func.jacrev(
-                lambda value: action.del_residual(
-                    p, c, value, native_time.DT))(f).detach().numpy()
-            active_factor = lu_factor(jacobian)
+            def matvec(vector):
+                direction = torch.tensor(vector, dtype=torch.float64)
+                _, image = torch.func.jvp(
+                    lambda state: action.del_residual(
+                        p, c, state, native_time.DT),
+                    (f,), (direction,))
+                return image.detach().numpy()
+            operator = LinearOperator(
+                (following.size, following.size), matvec=matvec,
+                dtype=np.float64)
+            preconditioner = LinearOperator(
+                operator.shape,
+                matvec=lambda vector: lu_solve(active_factor, vector),
+                dtype=np.float64)
+            correction, info = gmres(
+                operator, -value, M=preconditioner, rtol=1e-8,
+                atol=0.0, restart=24, maxiter=8)
             refreshes += 1
-    return following, history, False, active_factor
+            if info < 0:
+                break
+            for power in range(16):
+                trial = following+0.5**power*correction
+                trial_rms = float(np.linalg.norm(
+                    relative_residual(
+                        previous, current, trial, base_residual))
+                    / np.sqrt(value.size))
+                if trial_rms < rms:
+                    following = trial
+                    accepted = True
+                    break
+            if not accepted:
+                break
+    return following, history, backward_history, False, active_factor
 
 
 def main() -> None:
@@ -108,6 +136,10 @@ def main() -> None:
     parser.add_argument("--updates", type=int, default=UPDATES)
     parser.add_argument("--amplitude", type=float, default=AMPLITUDE)
     parser.add_argument("--solver-tolerance", type=float, default=1e-10)
+    parser.add_argument("--solver-iterations", type=int, default=96)
+    parser.add_argument("--solver-refreshes", type=int, default=8)
+    parser.add_argument("--solver-backward-tolerance", type=float,
+                        default=1e-12)
     parser.add_argument("--raw-residual", action="store_true",
                         help="do not subtract the floating rest-orbit residual")
     parser.add_argument("--wave-number", type=float, default=0.35)
@@ -121,6 +153,8 @@ def main() -> None:
                         default="positive")
     parser.add_argument("--save-states",
                         help="optional NPZ path for the first trajectory")
+    parser.add_argument("--rest-cache", type=Path)
+    parser.add_argument("--tangent-cache", type=Path)
     args = parser.parse_args()
     scale_tag = format(action.SCALE, ".12g").replace(".", "p").replace("-", "m")
     plaquette_tag = format(
@@ -133,14 +167,27 @@ def main() -> None:
         ".12g").replace(".", "p").replace("-", "m")
     tangent.CACHE = (HERE
                      / f"live_clifford_tangent_blocks_{action.LINK_SOURCE}_{scale_tag}_plaquette_{plaquette_tag}_spacetime_{spacetime_tag}_symplectic_{symplectic_tag}.npz")
-    bare, _matrices = prior_action.expected_blocks()
-    rest = bare["rest"]
+    if args.rest_cache is not None:
+        canonical.CACHE = args.rest_cache.resolve()
+        with np.load(canonical.CACHE) as archive:
+            rest = archive["rest"].copy()
+    else:
+        bare, _matrices = prior_action.expected_blocks()
+        rest = bare["rest"]
     theta = float(np.arccos(1-native_time.DT**2*native_time.CHI0**2/2))
     rotation = native_spectrum.rotation_matrix(rest.size, theta)
     rest_layers = (rotation.T@rest, rest, rotation@rest)
-    previous_block, current_block, following_block = tangent.tangent_blocks(
-        rest_layers)
+    if args.tangent_cache is not None:
+        with np.load(args.tangent_cache.resolve()) as archive:
+            previous_block, current_block, following_block = (
+                archive[name].copy()
+                for name in ("previous", "current", "following"))
+    else:
+        previous_block, current_block, following_block = tangent.tangent_blocks(
+            rest_layers)
     factor = lu_factor(following_block)
+    block_norms = tuple(np.linalg.norm(block, ord=np.inf) for block in (
+        previous_block, current_block, following_block))
     psi_frame, chi_frame, sites = envelope.carrier_frames(rest)
     chi_scales = {name: 0j for name in gate.flavor_bases()}
     if args.chi_lift == "prior":
@@ -224,10 +271,19 @@ def main() -> None:
                 factor, -(previous_block@delta_previous
                           + current_block@delta_current))
             tangent_guess = rerotate@(rotation@rest+delta_following)
-            following, history, passed, solver_factor = solve_following(
+            backward_scale = (
+                block_norms[0]*np.linalg.norm(previous, ord=np.inf)
+                + block_norms[1]*np.linalg.norm(current, ord=np.inf)
+                + block_norms[2]*np.linalg.norm(tangent_guess, ord=np.inf))
+            (following, history, backward_history, passed,
+             solver_factor) = solve_following(
                 previous, current, tangent_guess, solver_factor,
                 tolerance=args.solver_tolerance,
-                base_residual=base_residual)
+                maximum_iterations=args.solver_iterations,
+                maximum_refreshes=args.solver_refreshes,
+                base_residual=base_residual,
+                backward_scale=backward_scale,
+                backward_tolerance=args.solver_backward_tolerance)
             if not passed:
                 converged = False
                 samples.append({
@@ -235,6 +291,8 @@ def main() -> None:
                     "solver_converged": False,
                     "solver_residual_RMS": history[-1],
                     "solver_residual_history_RMS": history,
+                    "solver_backward_error": backward_history[-1],
+                    "solver_backward_error_history": backward_history,
                 })
                 break
             perturbation = following-rest_next
@@ -256,6 +314,7 @@ def main() -> None:
                     "solver_converged": True,
                     "newton_iterations": len(history)-1,
                     "solver_residual_RMS": history[-1],
+                    "solver_backward_error": backward_history[-1],
                     "native_vs_dirac_relative_error": float(
                         np.linalg.norm(corotating-target)/np.linalg.norm(target)),
                     "outside_four_component_fraction": float(
@@ -322,6 +381,9 @@ def main() -> None:
              float(1/np.sqrt(native_time.B))]
             if args.readout == "face-gradient" else None),
         "solver_tolerance_RMS": args.solver_tolerance,
+        "solver_iteration_limit": args.solver_iterations,
+        "solver_refresh_limit": args.solver_refreshes,
+        "solver_backward_tolerance": args.solver_backward_tolerance,
         "rest_roundoff_subtracted": not args.raw_residual,
         "all_solvers_converged": complete,
         "maximum_native_vs_dirac_relative_error": maximum_error,

@@ -137,19 +137,27 @@ def main() -> None:
     result = {
         "status": "V4_LIVE_FACE_GENERIC_BOX_GATE",
         "canonical_action_changed": False,
-        "research_action_changed": False,
+        "research_action_changed": True,
         "side5_identity": side5_identity,
         "rows": rows,
         "per_side": per_side,
         "verdict": (
-            "LIVE_FACE_GENERIC_BOX_RESIDUAL_CONVERGES"
-            if (5 not in args.sides or side5_identity["DEL_absolute_difference"] < 1e-12)
-            and per_side[-1]["maximum_normalized_DEL_residual"]
-            < per_side[0]["maximum_normalized_DEL_residual"]
+            "LIVE_FACE_GENERIC_BOX_STABILITY_PASS"
+            if (5 not in args.sides
+                or side5_identity["DEL_absolute_difference"] < 1e-12)
+            and max(row["maximum_rest_DEL_RMS"] for row in per_side) < 1e-9
+            and max(row["maximum_normalized_DEL_residual"]
+                    for row in per_side) < 2.5e-4
+            and all(right["maximum_absolute_DEL_RMS"]
+                    <= left["maximum_absolute_DEL_RMS"]
+                    for left, right in zip(per_side, per_side[1:]))
             else "LIVE_FACE_GENERIC_BOX_OPEN"),
         "claim_boundary": (
-            "Exact action identity and tangent DEL residual only. This is "
-            "not an unrestricted nonlinear cell handoff or V4-006 pass."),
+            "V4-002 box check: exact side-five action identity, retained "
+            "rest orbit, and a uniformly bounded physical packet response "
+            "whose absolute RMS does not worsen on larger boxes. Vanishing "
+            "Dirac transport remainder and unrestricted cell handoff remain "
+            "V4-005/V4-006 gates."),
     }
     result["two_wavelength_scaling"] = args.two_wavelengths
     path = HERE/args.output

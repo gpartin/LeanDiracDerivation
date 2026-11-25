@@ -17,7 +17,9 @@ import density_mold_connection_probe as local
 import exact_translation_multichannel_prong_gate as common
 import exact_translation_per_prong_gate as relative
 import live_clifford_bond_action as live
+import overlap_material_action as overlap_material
 import personal_touch_unit_geometric_nonlinear as stable
+import triangle_movement_action as triangle
 
 
 def configure_side(side: int) -> None:
@@ -25,7 +27,10 @@ def configure_side(side: int) -> None:
         raise ValueError("localized periodic box must be odd and at least five")
     # Explicit list: no recursive module mutation or hidden shadow config.
     local.SIDE = side
+    live.SIDE = side
     completed.SIDE = side
+    overlap_material.SIDE = side
+    triangle.SIDE = side
     common.SIDE = side
     relative.SIDE = side
     common.precursor.SIDE = side

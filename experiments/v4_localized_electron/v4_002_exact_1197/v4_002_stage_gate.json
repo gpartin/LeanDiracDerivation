@@ -1,0 +1,63 @@
+{
+  "stage": "V4-002",
+  "status": "PASS",
+  "action_module": "live_clifford_bond_action.py",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "action_configuration": {
+    "link_source": "joint_face_laplacian_plus_frame_oscillator",
+    "scale": 1197.0,
+    "spacetime_scale": 0.01662049861495845,
+    "parallel_matched_scale": 1.0,
+    "parallel_potential_scale": 1.0
+  },
+  "inactive_optional_action_scales": {
+    "plaquette": 0.0,
+    "symplectic_plaquette": 0.0,
+    "parallel_overlap": 0.0,
+    "parallel_face": 0.0,
+    "triangle_delta": 0.0,
+    "material_area": 0.0
+  },
+  "coefficient_provenance": {
+    "scale": "existing native chi kinetic normalization B=chi0/kappa=1197",
+    "spacetime_scale": "six face channels divided by chi0^2",
+    "matched_frame_scales": "unit normalization of the parallel live frame",
+    "fitted_to_Dirac": false
+  },
+  "checks": {
+    "one_action_configuration": true,
+    "exact_action_cache": true,
+    "rest_orbit": true,
+    "physical_launches_100_cycles": true,
+    "second_order_timestep_refinement": true,
+    "unrestricted_nonlinear_short_run": true,
+    "native_noether_charge": true,
+    "discrete_energy": true,
+    "box_stability": true
+  },
+  "metrics": {
+    "maximum_exact_cache_relative_error": 2.8156597098825496e-16,
+    "rest_DEL_backward_error": 5.095756990581858e-21,
+    "one_step_leakage_dt": 2.170723249221828e-05,
+    "one_step_leakage_dt_over_2": 5.42724419533115e-06,
+    "leakage_refinement_ratio": 0.2500200888011282,
+    "maximum_100_cycle_norm_ratio": 1.2338742581925333,
+    "minimum_final_100_cycle_norm_ratio": 1.0055701811016362,
+    "maximum_100_cycle_Dirac_comparator_error_diagnostic": 0.5373139095151243,
+    "maximum_global_charge_relative_drift": 2.0193821829155241e-13,
+    "maximum_local_continuity_relative_defect": 1.1516606580828844e-13,
+    "energy_relative_drift": 6.064548364016592e-12
+  },
+  "evidence": [
+    "rest_gate.json",
+    "tangent_consistency_final.json",
+    "reach_10cycles_final.json",
+    "reach_100cycles_final.json",
+    "../v4_002_exact_1197_dt_half/reach_10cycles_final.json",
+    "nonlinear_all8_backward.json",
+    "noether_full_1e6.json",
+    "discrete_energy.json",
+    "box_refinement_final.json"
+  ],
+  "claim_boundary": "V4-002 establishes bounded physical-sector stability, native charge/energy behavior, and timestep/box robustness for the declared research action. Its accumulated 100-cycle Dirac comparator error is diagnostic here and remains a V4-003/V4-005 mapping obligation. This does not prove cell translation."
+}

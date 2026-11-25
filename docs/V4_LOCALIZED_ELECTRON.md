@@ -6,23 +6,53 @@ plan is controlling for V4 promotion.  This longer ledger retains the research
 history and must not be read as permission to combine passes obtained under
 different action hashes.
 
-V4 keeps the V40 two-field C19 action and every V2/V3 theorem unchanged. Its
-target is stronger: one freely evolving localized state must realize the rest
-mass, four-component readout, spin, translation, density, and current already
-derived for the free linear sector.
+V4 begins from the V40 two-field C19 action and retains every applicable V2/V3
+theorem. V4-002 freezes a declared reciprocal research extension of that
+action; canonical V40 remains unchanged unless the complete V4 chain passes
+and is promoted. The V4 target is stronger: one freely evolving localized
+state must realize the rest mass, four-component readout, spin, translation,
+density, and current already derived for the free linear sector.
 
 | Gate | Required result | Status |
 |---|---|---|
 | V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS; CLEAN-BRANCH REBUILD RECORDED IN `v4_001_revalidation.json`** |
-| V4-002 | Physical-sector rest and launch stability of that same orbit | **FAIL: THE ACTUAL TWO-LAYER DIRAC PACKET LAUNCHES REACH THE GROWING RESPONSE** |
-| V4-003 | Fixed localized four-component readout with controlled remainder | **NOT STARTED; BLOCKED BY V4-002** |
-| V4-004 | Operational spin-one-half action on that localized carrier | **NOT STARTED; BLOCKED BY V4-002** |
-| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NOT STARTED; BLOCKED BY V4-002; HISTORICAL CONTROLS RETAINED** |
-| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-002; EXACT ENDPOINT CONTROL RETAINED** |
-| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-002** |
-| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-002; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
-| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-002** |
-| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-002** |
+| V4-002 | Physical-sector rest and launch stability of that same orbit | **PASS ON THE FROZEN V4 RESEARCH ACTION; SEE `v4_002_exact_1197/v4_002_stage_gate.json`** |
+| V4-003 | Fixed localized four-component readout with controlled remainder | **NEXT** |
+| V4-004 | Operational spin-one-half action on that localized carrier | **NOT STARTED; BLOCKED BY V4-003** |
+| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NOT STARTED; BLOCKED BY V4-003; HISTORICAL CONTROLS RETAINED** |
+| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-003; EXACT ENDPOINT CONTROL RETAINED** |
+| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-003** |
+| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-003; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
+| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-003** |
+| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-003** |
+
+### 2026-11-25 V4-002 closure
+
+V4-002 now passes on one frozen V4 research action. The action keeps the
+complete six-face `Psi`--`chi` frame and uses the already-declared substrate
+kinetic normalization `B = chi0/kappa = 1197` for that interface channel. The
+spacetime-face normalization remains `6/chi0^2`, and the parallel-frame
+completion retains unit weight. No Dirac matrix, copy selector, corner label,
+projection, reset, receiver preload, or fitted Dirac velocity enters the
+action. Canonical V40 and public `main` are unchanged until the complete V4
+chain passes.
+
+The final tangent cache was rebuilt directly from this declared action after
+an inherited cache mismatch was found. It agrees with direct automatic
+differentiation to `2.82e-16`. Both cubical copies, both momentum signs, three
+axes, and a diagonal remain bounded for 100 internal cycles; the worst norm
+ratio is `1.23388` rather than the predecessor's `4.82008`. Halving `dt`
+reduces first-step sector leakage by a factor `0.25002`. The unrestricted
+nonlinear short run, full-state phase Noether identity, discrete-energy
+diagnostic, and side-5/7/9 box checks also pass.
+
+This is a stability pass, not a complete Dirac-motion pass. The maximum
+phase-aligned discrepancy from the independent Dirac comparator accumulates
+to `0.53731` over 100 cycles. V4-003 must now freeze the correct four-component
+phase-space readout, and V4-005 must test its short-time transport/current
+accuracy. The exact gate, evidence list, and claim boundary are in
+`experiments/v4_localized_electron/v4_002_exact_1197/v4_002_stage_gate.json`;
+the six-field RCA is in `V4_002_B_FRAME_RCA.md`.
 
 ### 2026-11-25 coherent-chain gate correction
 

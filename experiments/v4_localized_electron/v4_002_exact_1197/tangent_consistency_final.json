@@ -1,0 +1,36 @@
+{
+  "stage": "V4-002",
+  "status": "TANGENT_CACHE_CONSISTENCY",
+  "action_configuration": {
+    "link_source": "joint_face_laplacian_plus_frame_oscillator",
+    "scale": 1197.0,
+    "spacetime_scale": 0.01662049861495845,
+    "parallel_matched_scale": 1.0,
+    "parallel_potential_scale": 1.0
+  },
+  "rows": [
+    {
+      "block": "previous",
+      "native_image_norm": 1711622798.3480186,
+      "cached_image_norm": 1711622798.3480186,
+      "absolute_error": 4.1312633988257736e-07,
+      "relative_error": 2.413652939662339e-16
+    },
+    {
+      "block": "current",
+      "native_image_norm": 3423245113.0877805,
+      "cached_image_norm": 3423245113.0877805,
+      "absolute_error": 8.49118393145812e-07,
+      "relative_error": 2.480448711953039e-16
+    },
+    {
+      "block": "following",
+      "native_image_norm": 1711622307.1039388,
+      "cached_image_norm": 1711622307.1039388,
+      "absolute_error": 4.819345968648776e-07,
+      "relative_error": 2.8156597098825496e-16
+    }
+  ],
+  "maximum_relative_error": 2.8156597098825496e-16,
+  "verdict": "TANGENT_CACHE_MATCHES_ACTION"
+}
