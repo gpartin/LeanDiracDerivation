@@ -49,8 +49,13 @@ def main() -> None:
     run([
         "git", "diff", "--quiet", proof, "HEAD", "--",
         "LeanDirac", "LeanDirac.lean", "LeanDiracAudit.lean",
-        "README.md", "docs/LORENTZ_SPIN_CHAIN.md",
-        "docs/LORENTZ_SPIN_RED_TEAM.md",
+        "README.md", "docs", "lean-toolchain", "lake-manifest.json",
+        "lakefile.toml", "scripts/verify_release.py",
+        "experiments/v3_lorentz_spin/REPORT.md",
+        "experiments/v3_lorentz_spin/RCA.md",
+        "experiments/v3_lorentz_spin/AxiomAudit.lean",
+        "experiments/v3_lorentz_spin/PauliLubanskiRegression.lean",
+        "experiments/v3_lorentz_spin/verify.py",
     ])
 
     build = run(["lake", "build", *audit["lean_targets"]])
@@ -61,6 +66,12 @@ def main() -> None:
         raise SystemExit("compiled environment audit marker is missing")
     if "LEAN_DIRAC_V3_AXIOM_AUDIT_PASS" not in axioms:
         raise SystemExit("V3 axiom audit marker is missing")
+    regression = run([
+        "lake", "env", "lean",
+        str(HERE / "PauliLubanskiRegression.lean"),
+    ])
+    if "LEAN_DIRAC_V3_PAULI_LUBANSKI_REGRESSION_PASS" not in regression:
+        raise SystemExit("Pauli--Lubanski regression marker is missing")
     allowed = set(audit["allowed_axioms"])
     for theorem in audit["axiom_theorems"]:
         match = re.search(
@@ -72,6 +83,18 @@ def main() -> None:
         actual = {item.strip() for item in match.group(1).split(",") if item.strip()}
         if actual - allowed:
             raise SystemExit(f"nonstandard axioms for {theorem}: {actual - allowed}")
+    for theorem in audit["regression_axiom_theorems"]:
+        match = re.search(
+            rf"'{re.escape(theorem)}' depends on axioms:\s*\[([^\]]*)\]",
+            regression,
+        )
+        if not match:
+            raise SystemExit(f"missing regression axiom report for {theorem}")
+        actual = {item.strip() for item in match.group(1).split(",") if item.strip()}
+        if actual - allowed:
+            raise SystemExit(
+                f"nonstandard regression axioms for {theorem}: {actual - allowed}"
+            )
     print("V3_LORENTZ_SPIN_RELEASE_VERIFICATION_PASS")
 
 

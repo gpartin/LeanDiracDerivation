@@ -127,6 +127,74 @@ def cubicalSpinClosureAtScale (scale : ℝ) : Prop :=
 
 def cubicalUniformAmplitude : CubicalCell8 := fun _ => 1
 
+/-- Operational rotation criterion inside the local oriented-plane bivector
+family. A candidate scale is accepted only when its commutator rotates each
+native transport direction into the next oriented cube direction with unit
+physical-angle normalization. The comparison class is explicit: scalar
+multiples of the local plane bivectors already derived from `cubicalGamma`. -/
+def cubicalOperationalRotationAtScale (scale : ℝ) : Prop :=
+  (∀ amplitude : CubicalCell8,
+    (fun corner =>
+      scaledCubicalSpin scale 0 (cubicalGamma 1 amplitude) corner -
+        cubicalGamma 1 (scaledCubicalSpin scale 0 amplitude) corner) =
+      fun corner => I * cubicalGamma 2 amplitude corner) ∧
+  (∀ amplitude : CubicalCell8,
+    (fun corner =>
+      scaledCubicalSpin scale 1 (cubicalGamma 2 amplitude) corner -
+        cubicalGamma 2 (scaledCubicalSpin scale 1 amplitude) corner) =
+      fun corner => I * cubicalGamma 0 amplitude corner) ∧
+  (∀ amplitude : CubicalCell8,
+    (fun corner =>
+      scaledCubicalSpin scale 2 (cubicalGamma 0 amplitude) corner -
+        cubicalGamma 0 (scaledCubicalSpin scale 2 amplitude) corner) =
+      fun corner => I * cubicalGamma 1 amplitude corner)
+
+theorem cubical_operational_rotation_scale_half :
+    cubicalOperationalRotationAtScale (1 / 2) := by
+  constructor
+  · intro amplitude
+    funext corner
+    fin_cases corner <;>
+      simp [scaledCubicalSpin, cubicalSigma, cubicalPlaneBivector,
+        cubicalGamma, cubicalIncidenceSign, cubicalFlip,
+        cubicalFlip1, cubicalFlip2, cubicalBit0, cubicalBit1] <;>
+      ring_nf
+  constructor
+  · intro amplitude
+    funext corner
+    fin_cases corner <;>
+      simp [scaledCubicalSpin, cubicalSigma, cubicalPlaneBivector,
+        cubicalGamma, cubicalIncidenceSign, cubicalFlip, cubicalFlip0,
+        cubicalFlip2, cubicalBit0, cubicalBit1] <;>
+      ring_nf
+  · intro amplitude
+    funext corner
+    fin_cases corner <;>
+      simp [scaledCubicalSpin, cubicalSigma, cubicalPlaneBivector,
+        cubicalGamma, cubicalIncidenceSign, cubicalFlip, cubicalFlip0,
+        cubicalFlip1, cubicalBit0] <;>
+      ring_nf
+
+/-- Operational transport covariance fixes the half scale uniquely within the
+stated local plane-bivector class; the `1/2` is not supplied separately. -/
+theorem cubical_operational_rotation_scale_unique
+    (scale : ℝ) (hscale : cubicalOperationalRotationAtScale scale) :
+    scale = 1 / 2 := by
+  have hcomponent := congrFun (hscale.1 cubicalUniformAmplitude) 0
+  simp [cubicalUniformAmplitude, scaledCubicalSpin, cubicalSigma,
+    cubicalPlaneBivector, cubicalGamma, cubicalIncidenceSign,
+    cubicalFlip, cubicalFlip1, cubicalFlip2,
+    cubicalBit0, cubicalBit1] at hcomponent
+  apply_fun Complex.im at hcomponent
+  norm_num at hcomponent
+  linarith
+
+theorem exists_unique_cubical_operational_rotation_scale :
+    ∃! scale : ℝ, cubicalOperationalRotationAtScale scale := by
+  refine ⟨1 / 2, cubical_operational_rotation_scale_half, ?_⟩
+  intro scale hscale
+  exact cubical_operational_rotation_scale_unique scale hscale
+
 theorem cubical_scaled_spin_commutator_01
     (scale : ℝ) (amplitude : CubicalCell8) :
     (fun corner =>
@@ -198,6 +266,11 @@ theorem native_cubical_spin_scale_admissible :
     nativeCubicalSpinScale = 1 / 2 :=
   admissible_cubical_spin_scale_unique nativeCubicalSpinScale
     native_cubical_spin_scale_admissible
+
+theorem native_cubical_spin_is_operational_rotation :
+    cubicalOperationalRotationAtScale nativeCubicalSpinScale := by
+  rw [native_cubical_spin_scale_eq_half]
+  exact cubical_operational_rotation_scale_half
 
 def cubicalSpin
     (axis : Fin 3) (amplitude : CubicalCell8) : CubicalCell8 :=
@@ -903,8 +976,120 @@ def cubicalPauliLubanskiSpace
     (energy : ℂ) (momentum : Fin 3 → ℂ) (axis : Fin 3)
     (z : CubicalCell4) : CubicalCell4 :=
   fun component =>
-    energy * standardCubicalSpin axis z component +
+    energy * standardCubicalSpin axis z component -
       cubicalMomentumCrossBoost momentum axis z component
+
+/-- Infinitesimal momentum contribution to the time component of the
+Pauli--Lubanski vector under a boost in `axis`. -/
+def cubicalPauliLubanskiBoostVariationTime
+    (axis : Fin 3) (energy : ℂ) (z : CubicalCell4) : CubicalCell4 :=
+  cubicalPauliLubanskiTime (cubicalMomentumBoostSpace axis energy) z
+
+/-- Infinitesimal momentum contribution to a spatial Pauli--Lubanski
+component under a boost in `axis`. -/
+def cubicalPauliLubanskiBoostVariationSpace
+    (axis : Fin 3) (energy : ℂ) (momentum : Fin 3 → ℂ)
+    (other : Fin 3) (z : CubicalCell4) : CubicalCell4 :=
+  cubicalPauliLubanskiSpace
+    (cubicalMomentumBoostEnergy axis momentum)
+    (cubicalMomentumBoostSpace axis energy) other z
+
+/-- In the boost convention already fixed by
+`oriented_dirac_symbol_boost_covariant`, the repaired time component obeys
+the infinitesimal four-vector law for every boost axis. -/
+theorem cubical_pauli_lubanski_boost_covariant_time
+    (axis : Fin 3) (energy : ℂ) (momentum : Fin 3 → ℂ)
+    (z : CubicalCell4) :
+    (fun component =>
+      cubicalPauliLubanskiBoostVariationTime axis energy z component +
+        I * (standardCubicalBoost axis
+            (cubicalPauliLubanskiTime momentum z) component -
+          cubicalPauliLubanskiTime momentum
+            (standardCubicalBoost axis z) component) -
+        cubicalPauliLubanskiSpace energy momentum axis z component) =
+      fun _ => 0 := by
+  funext component
+  fin_cases axis <;> fin_cases component <;>
+    simp [cubicalPauliLubanskiBoostVariationTime,
+      cubicalPauliLubanskiTime, cubicalPauliLubanskiSpace,
+      cubicalMomentumCrossBoost, cubicalMomentumBoostSpace,
+      standardCubicalBoost, standardCubicalSpin,
+      standardCubicalPlaneBivector, standardCubicalGamma,
+      cubicalStandardAlphaX, cubicalStandardAlphaY,
+      cubicalStandardAlphaZ] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq]
+
+/-- The three repaired spatial components obey the infinitesimal four-vector
+law for every boost axis, including both parallel and transverse cases. -/
+theorem cubical_pauli_lubanski_boost_covariant_space
+    (axis other : Fin 3) (energy : ℂ) (momentum : Fin 3 → ℂ)
+    (z : CubicalCell4) :
+    (fun component =>
+      cubicalPauliLubanskiBoostVariationSpace
+          axis energy momentum other z component +
+        I * (standardCubicalBoost axis
+            (cubicalPauliLubanskiSpace energy momentum other z) component -
+          cubicalPauliLubanskiSpace energy momentum other
+            (standardCubicalBoost axis z) component) -
+        (if other = axis then
+          cubicalPauliLubanskiTime momentum z component
+        else 0)) = fun _ => 0 := by
+  funext component
+  fin_cases axis <;> fin_cases other <;> fin_cases component <;>
+    simp [cubicalPauliLubanskiBoostVariationSpace,
+      cubicalPauliLubanskiTime, cubicalPauliLubanskiSpace,
+      cubicalMomentumCrossBoost, cubicalMomentumBoostEnergy,
+      cubicalMomentumBoostSpace, standardCubicalBoost,
+      standardCubicalSpin, standardCubicalPlaneBivector,
+      standardCubicalGamma, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq]
+
+/-- The Pauli--Lubanski time component is a scalar under the already-derived
+infinitesimal spatial rotations, including the simultaneous momentum change. -/
+theorem cubical_pauli_lubanski_rotation_covariant_time
+    (axis : Fin 3) (momentum : Fin 3 → ℂ) (z : CubicalCell4) :
+    (fun component =>
+      cubicalPauliLubanskiTime
+          (cubicalMomentumRotation axis momentum) z component +
+        I * (standardCubicalSpin axis
+            (cubicalPauliLubanskiTime momentum z) component -
+          cubicalPauliLubanskiTime momentum
+            (standardCubicalSpin axis z) component)) =
+      fun _ => 0 := by
+  funext component
+  fin_cases axis <;> fin_cases component <;>
+    simp [cubicalPauliLubanskiTime, cubicalMomentumRotation,
+      standardCubicalSpin, standardCubicalPlaneBivector,
+      standardCubicalGamma, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq]
+
+/-- The repaired spatial components rotate covariantly together with their
+momentum argument in the orientation convention fixed by the Dirac symbol. -/
+theorem cubical_pauli_lubanski_rotation_covariant_space
+    (axis other : Fin 3) (energy : ℂ) (momentum : Fin 3 → ℂ)
+    (z : CubicalCell4) :
+    (fun component =>
+      cubicalPauliLubanskiSpace 0
+          (cubicalMomentumRotation axis momentum) other z component +
+        I * (standardCubicalSpin axis
+            (cubicalPauliLubanskiSpace energy momentum other z) component -
+          cubicalPauliLubanskiSpace energy momentum other
+            (standardCubicalSpin axis z) component) +
+        -cubicalMomentumRotation axis
+          (fun spatial =>
+            cubicalPauliLubanskiSpace energy momentum spatial z component)
+          other) = fun _ => 0 := by
+  funext component
+  fin_cases axis <;> fin_cases other <;> fin_cases component <;>
+    simp [cubicalPauliLubanskiSpace,
+      cubicalMomentumCrossBoost, cubicalMomentumRotation,
+      standardCubicalBoost, standardCubicalSpin,
+      standardCubicalPlaneBivector, standardCubicalGamma,
+      cubicalStandardAlphaX, cubicalStandardAlphaY,
+      cubicalStandardAlphaZ] <;>
+    ring_nf <;> norm_num [pow_succ, Complex.I_sq]
 
 /-- The derived Pauli--Lubanski vector is orthogonal to four-momentum for
 arbitrary energy and momentum. -/
@@ -967,6 +1152,10 @@ structure LorentzSpinHalfCertificate : Prop where
       fun corner => -amplitude corner
   uniqueNonzeroSpinScale :
     ∃! scale : ℝ, admissibleCubicalSpinScale scale
+  uniqueOperationalRotationScale :
+    ∃! scale : ℝ, cubicalOperationalRotationAtScale scale
+  nativeSpinMatchesOperationalRotation :
+    cubicalOperationalRotationAtScale nativeCubicalSpinScale
   spinCommutators :
     (∀ amplitude,
       (fun corner =>
@@ -1123,6 +1312,49 @@ structure LorentzSpinHalfCertificate : Prop where
           orientedCubicalDiracSymbol
             (cubicalMomentumBoostEnergy axis momentum) 0
             (cubicalMomentumBoostSpace axis energy) z component)
+  pauliLubanskiBoostCovariance :
+    (∀ axis energy momentum z,
+      (fun component =>
+        cubicalPauliLubanskiBoostVariationTime axis energy z component +
+          I * (standardCubicalBoost axis
+              (cubicalPauliLubanskiTime momentum z) component -
+            cubicalPauliLubanskiTime momentum
+              (standardCubicalBoost axis z) component) -
+          cubicalPauliLubanskiSpace energy momentum axis z component) =
+        fun _ => 0) ∧
+    (∀ axis other energy momentum z,
+      (fun component =>
+        cubicalPauliLubanskiBoostVariationSpace
+            axis energy momentum other z component +
+          I * (standardCubicalBoost axis
+              (cubicalPauliLubanskiSpace energy momentum other z) component -
+            cubicalPauliLubanskiSpace energy momentum other
+              (standardCubicalBoost axis z) component) -
+          (if other = axis then
+            cubicalPauliLubanskiTime momentum z component
+          else 0)) = fun _ => 0)
+  pauliLubanskiRotationCovariance :
+    (∀ axis momentum z,
+      (fun component =>
+        cubicalPauliLubanskiTime
+            (cubicalMomentumRotation axis momentum) z component +
+          I * (standardCubicalSpin axis
+              (cubicalPauliLubanskiTime momentum z) component -
+            cubicalPauliLubanskiTime momentum
+              (standardCubicalSpin axis z) component)) =
+        fun _ => 0) ∧
+    (∀ axis other energy momentum z,
+      (fun component =>
+        cubicalPauliLubanskiSpace 0
+            (cubicalMomentumRotation axis momentum) other z component +
+          I * (standardCubicalSpin axis
+              (cubicalPauliLubanskiSpace energy momentum other z) component -
+            cubicalPauliLubanskiSpace energy momentum other
+              (standardCubicalSpin axis z) component) +
+          -cubicalMomentumRotation axis
+            (fun spatial =>
+              cubicalPauliLubanskiSpace energy momentum spatial z component)
+            other) = fun _ => 0)
   pauliLubanskiOrthogonal : ∀ energy momentum z,
     (fun component =>
       energy * cubicalPauliLubanskiTime momentum z component -
@@ -1139,6 +1371,10 @@ theorem lorentz_spin_half_from_native_action :
   priorFreeDirac := complete_first_principles_free_dirac
   nativePlaneSquare := cubical_plane_bivector_square
   uniqueNonzeroSpinScale := exists_unique_admissible_cubical_spin_scale
+  uniqueOperationalRotationScale :=
+    exists_unique_cubical_operational_rotation_scale
+  nativeSpinMatchesOperationalRotation :=
+    native_cubical_spin_is_operational_rotation
   spinCommutators :=
     ⟨cubical_spin_commutator_01, cubical_spin_commutator_12,
       cubical_spin_commutator_20⟩
@@ -1184,6 +1420,12 @@ theorem lorentz_spin_half_from_native_action :
   fullDiracSymbolCovariance :=
     ⟨oriented_dirac_symbol_rotation_covariant,
       oriented_dirac_symbol_boost_covariant⟩
+  pauliLubanskiBoostCovariance :=
+    ⟨cubical_pauli_lubanski_boost_covariant_time,
+      cubical_pauli_lubanski_boost_covariant_space⟩
+  pauliLubanskiRotationCovariance :=
+    ⟨cubical_pauli_lubanski_rotation_covariant_time,
+      cubical_pauli_lubanski_rotation_covariant_space⟩
   pauliLubanskiOrthogonal := cubical_pauli_lubanski_orthogonal
   restPauliLubanskiCasimir := rest_pauli_lubanski_spin_half
 

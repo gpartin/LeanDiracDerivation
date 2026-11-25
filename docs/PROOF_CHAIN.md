@@ -20,20 +20,21 @@ Only this chain is active on `main`.
 | V2-014 | Compiled adversarial axiom/dependency audit | PASS |
 | V2-015 | Cumulative action-to-free-Dirac theorem | PASS |
 
-The local review branch adds a downstream, action-preserving consequence
+V3.1 adds a downstream, action-preserving consequence
 chain.  Its detailed falsification gates are in
 [`LORENTZ_SPIN_CHAIN.md`](LORENTZ_SPIN_CHAIN.md).
 
 | Extension gate | Derived result | Local status |
 |---|---|---|
 | LS-001 | Oriented spatial-plane bivectors from the native cubical gamma operators | PASS |
-| LS-002 | Unique nonzero rotation normalization selected by algebraic closure | PASS |
+| LS-002 | Unique nonzero rotation normalization selected by algebraic closure and, within the explicit local plane-bivector class, by native transport covariance | PASS |
 | LS-003 | Spin commutators, projections `+/-1/2`, and Casimir `3/4` | PASS |
 | LS-004 | The same rotation representation on both exhaustive cubical copies | PASS |
 | LS-005 | Density-preserving finite rotation, `2*pi` sign reversal, and `4*pi` return | PASS |
 | LS-006 | Rotation/boost Lorentz Lie algebra | PASS |
-| LS-007 | Mass invariance and infinitesimal gamma-four-vector covariance | PASS |
-| LS-008 | Cumulative Lorentz/spin certificate with standard Lean foundations only | PROOF PASS; release seal pending review |
+| LS-007 | Mass invariance and infinitesimal low-momentum Dirac-operator covariance | PASS |
+| LS-008 | All-axis Pauli--Lubanski four-vector covariance, orthogonality, and rest Casimir | PASS |
+| LS-009 | Cumulative Lorentz/spin certificate with standard Lean foundations only | PASS |
 
 The dependency route is strictly top-down:
 

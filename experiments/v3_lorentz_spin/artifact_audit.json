@@ -1,14 +1,15 @@
 {
-  "audit_version": "3.0.0-research",
-  "status": "PASS_WITH_SCOPED_CONTINUUM_CLAIMS",
-  "verified_date": "2026-11-22",
-  "proof_source_commit": "d081a63688be53b6bffc35570c09b7d2a35d589d",
+  "audit_version": "3.1.0-research",
+  "status": "PASS_WITH_SCOPED_OPERATOR_AND_REPRESENTATION_CLAIMS",
+  "verified_date": "2026-11-25",
+  "proof_source_commit": "5c0da00bf30e7489e7d5ddb442079dcf48856258",
   "required_files": [
     "REPORT.md",
     "RCA.md",
     "summary.json",
     "artifact_audit.json",
     "AxiomAudit.lean",
+    "PauliLubanskiRegression.lean",
     "verify.py"
   ],
   "lean_targets": ["LeanDirac", "LeanDiracAudit"],
@@ -18,8 +19,21 @@
     "LeanDirac.V2.standard_cubical_continuous_turn_add",
     "LeanDirac.V2.oriented_dirac_symbol_rotation_covariant",
     "LeanDirac.V2.oriented_dirac_symbol_boost_covariant",
+    "LeanDirac.V2.exists_unique_cubical_operational_rotation_scale",
+    "LeanDirac.V2.native_cubical_spin_is_operational_rotation",
+    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_time",
+    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_space",
+    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_time",
+    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_space",
     "LeanDirac.V2.cubical_pauli_lubanski_orthogonal",
     "LeanDirac.V2.rest_pauli_lubanski_spin_half",
     "LeanDirac.V2.lorentz_spin_half_from_native_action"
+  ],
+  "regression_axiom_theorems": [
+    "historical_plus_sign_fails_four_vector_law",
+    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_time",
+    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_space",
+    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_time",
+    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_space"
   ]
 }
