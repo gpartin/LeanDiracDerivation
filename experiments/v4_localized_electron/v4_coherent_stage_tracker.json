@@ -1,0 +1,29 @@
+{
+  "schema": "v4-coherent-stage-tracker-v1",
+  "date": "2026-11-25",
+  "branch": "feature/v4-coherent-chain",
+  "release_rule": "All stages must pass on one coherent action/carrier/readout chain before merge to main.",
+  "action_policy": {
+    "canonical_baseline": "V40 complex-Psi/complex-chi C19 reciprocal action",
+    "final_action_frozen": false,
+    "reason": "The saved 100-cycle rest pass and strongest short-time movement pass use different research actions.",
+    "current_movement_incumbent": {
+      "module": "live_clifford_bond_action.py",
+      "link_source": "joint_face_laplacian_plus_psi_area_oscillator",
+      "scale": 0.3157894736842105,
+      "admitted": false
+    }
+  },
+  "stages": [
+    {"id": "V4-001", "status": "PASS_REVALIDATION_REQUIRED", "rca_count": 0, "summary": "Exact localized rest solution."},
+    {"id": "V4-002", "status": "OPEN_SAME_ACTION_GAP", "rca_count": 0, "summary": "Nonlinear 100-cycle stability under the final action."},
+    {"id": "V4-003", "status": "OPEN", "rca_count": 0, "summary": "Lossless fixed four-component phase-space readout."},
+    {"id": "V4-004", "status": "OPEN", "rca_count": 0, "summary": "Operational spin-half on the localized carrier."},
+    {"id": "V4-005", "status": "PARTIAL_REVALIDATION_REQUIRED", "rca_count": 0, "summary": "Short-time Dirac transport and native current."},
+    {"id": "V4-006", "status": "OPEN", "rca_count": 0, "summary": "One complete cell crossing against the independent Dirac comparator."},
+    {"id": "V4-007", "status": "OPEN", "rca_count": 0, "summary": "Second unreset crossing in both directions."},
+    {"id": "V4-008", "status": "OPEN", "rca_count": 0, "summary": "Same-state mass, time, transport, density, current, and phase map."},
+    {"id": "V4-009", "status": "OPEN", "rca_count": 0, "summary": "Axes, diagonal, copies, perturbations, timestep, and box robustness."},
+    {"id": "V4-010", "status": "OPEN", "rca_count": 0, "summary": "Cumulative Lean theorem and clean release audit."}
+  ]
+}

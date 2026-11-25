@@ -1,5 +1,11 @@
 # V4 localized-electron gate ledger
 
+The executable release process and corrected same-action stage contracts are
+defined in [V4_COHERENT_RELEASE_PLAN.md](V4_COHERENT_RELEASE_PLAN.md).  That
+plan is controlling for V4 promotion.  This longer ledger retains the research
+history and must not be read as permission to combine passes obtained under
+different action hashes.
+
 V4 keeps the V40 two-field C19 action and every V2/V3 theorem unchanged. Its
 target is stronger: one freely evolving localized state must realize the rest
 mass, four-component readout, spin, translation, density, and current already
