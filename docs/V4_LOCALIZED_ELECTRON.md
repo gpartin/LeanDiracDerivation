@@ -13,7 +13,7 @@ derived for the free linear sector.
 
 | Gate | Required result | Status |
 |---|---|---|
-| V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS** |
+| V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS; CLEAN-BRANCH REBUILD RECORDED IN `v4_001_revalidation.json`** |
 | V4-002 | Nonlinear rest stability of that same orbit | **RESEARCH-CANDIDATE PASS: REDUCED TIGHT-FRAME ACTION, ZERO-CHI-CHARGE BRANCH, 100 CYCLES; CANONICAL ACTION FAILS AND EVERY ACTION DELTA REOPENS THIS GATE** |
 | V4-003 | Lossless localized four-component readout, including both committed layers | **SCOPED FIXED-CENTER OBSTRUCTION; OPEN ON THE STABLE RESEARCH ACTION** |
 | V4-004 | Operational spin-one-half action on that localized carrier | **OPEN** |

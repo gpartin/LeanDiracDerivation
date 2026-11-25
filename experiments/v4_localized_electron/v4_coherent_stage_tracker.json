@@ -15,7 +15,7 @@
     }
   },
   "stages": [
-    {"id": "V4-001", "status": "PASS_REVALIDATION_REQUIRED", "rca_count": 0, "summary": "Exact localized rest solution."},
+    {"id": "V4-001", "status": "PASS", "rca_count": 0, "evidence": "v4_001_revalidation.json", "summary": "Exact localized rest solution rebuilt on the clean branch with only standard Lean foundations."},
     {"id": "V4-002", "status": "OPEN_SAME_ACTION_GAP", "rca_count": 0, "summary": "Nonlinear 100-cycle stability under the final action."},
     {"id": "V4-003", "status": "OPEN", "rca_count": 0, "summary": "Lossless fixed four-component phase-space readout."},
     {"id": "V4-004", "status": "OPEN", "rca_count": 0, "summary": "Operational spin-half on the localized carrier."},

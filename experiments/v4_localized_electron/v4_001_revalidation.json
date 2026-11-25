@@ -1,0 +1,24 @@
+{
+  "stage": "V4-001",
+  "status": "PASS",
+  "date": "2026-11-25",
+  "branch": "feature/v4-coherent-chain",
+  "checkpoint": "fd189fe9b5d6d489c85507425ee33b999147dacc",
+  "source": "LeanDirac/V4/LocalizedRestSeed.lean",
+  "source_sha256": "082a89ffa9b0ad0209f902867cd76c8fae2092d5474482ae53f230d13973c5c7",
+  "theorem": "LeanDirac.V4.exact_localized_rest_seed",
+  "build_command": "lake build LeanDirac.V4.LocalizedRestSeed",
+  "build_result": "PASS",
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "proved": [
+    "exact unrestricted two-layer native recurrence on periodic C19 boxes of side at least three",
+    "zero local imbalance",
+    "nontrivial Psi and chi phase advance"
+  ],
+  "not_proved": [
+    "nonlinear stability",
+    "localized four-component readout",
+    "operational spin half",
+    "translation or Dirac motion"
+  ]
+}
