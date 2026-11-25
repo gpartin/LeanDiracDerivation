@@ -1,9 +1,8 @@
-"""Audit the corrected V4 stage boundary without rerunning expensive solves.
+"""Audit the current coherent V4 stage boundary without rerunning solves.
 
-This does not promote an action.  It verifies that the recorded nonlinear rest
-stability evidence is still present and that V4-006 is judged by a finite
-integer-cell relative-periodic endpoint rather than by a neutral translation
-mode.
+This does not promote an action.  It distinguishes the historical exact-orbit
+endurance result from the current physically reachable perturbation failure
+and verifies that V4-006 is not judged by a rigid sub-cell interpolation.
 """
 
 from __future__ import annotations
@@ -21,6 +20,7 @@ def load(name: str) -> dict:
 
 def main() -> None:
     stability = load("unit_geometric_nonlinear_summary.json")
+    reachability = load("v4_002_reachable_sector_audit.json")
     hop = load("v4_006_stable_action_exact_hop_xplus_16_screen.json")
     lock = (HERE / "EXACT_TRANSLATION_MAP_LOCK.md").read_text(
         encoding="utf-8")
@@ -46,16 +46,19 @@ def main() -> None:
         and hop_row["unreset_second_cell_endpoint_residual"] < 1e-7
     )
 
+    physical_growth = bool(
+        reachability["physical_launches_exhibit_material_growth"])
     result = {
-        "status": "PASS" if rest_pass and endpoint_locked else "FAIL",
+        "status": "CURRENT_COHERENT_STAGE_AUDIT",
+        "release_boundary": "V4-001",
         "canonical_action_changed": False,
         "research_action_admitted": False,
         "stage_contract": {
             "V4-001": "PASS_EXACT_REST_EXISTENCE",
             "V4-002": (
-                "PASS_REDUCED_TIGHT_FRAME_ZERO_CHI_CHARGE_100_CYCLE"
-                if rest_pass else "FAIL_STABILITY_EVIDENCE"),
-            "V4-003": "OPEN_LOCALIZED_FOUR_COMPONENT_READOUT",
+                "FAIL_PHYSICAL_DIRAC_LAUNCH_GROWTH"
+                if physical_growth else "OPEN_PHYSICAL_SECTOR_STABILITY"),
+            "V4-003": "OPEN_FIXED_READOUT_WITH_CONTROLLED_REMAINDER",
             "V4-004": "OPEN_OPERATIONAL_SPIN",
             "V4-005": "PARTIAL_INTEGER_SHIFT_COVARIANCE_AND_CURRENT",
             "V4-006": (
@@ -63,19 +66,30 @@ def main() -> None:
                 else "OPEN_EXACT_ONE_CELL_HANDOFF"),
             "V4-007": "OPEN_REPEATABLE_SECOND_HANDOFF",
             "V4-008": "OPEN_COARSE_DIRAC_COMPARISON",
-            "V4-009": "OPEN_ROBUSTNESS_ALL_AXES_AND_BOTH_COPIES",
-            "V4-010": "OPEN_CUMULATIVE_THEOREM",
+            "V4-009": "OPEN_PHYSICAL_ROBUSTNESS_AND_CONVERGENCE",
+            "V4-010": "OPEN_ANALYTIC_THEOREM_AND_RELEASE_AUDIT",
         },
-        "rest_stability_evidence": rest,
+        "historical_exact_orbit_evidence": rest,
+        "physical_sector_reachability": {
+            "artifact": "v4_002_reachable_sector_audit.json",
+            "case_count": reachability["case_count"],
+            "one_step_dirac_sector_leakage": reachability[
+                "one_step_dirac_sector_leakage"],
+            "maximum_phase_space_norm_ratio": reachability[
+                "maximum_phase_space_norm_ratio"],
+            "maximum_phase_aligned_relative_error": reachability[
+                "maximum_phase_aligned_relative_error"],
+            "verdict": reachability["verdict"],
+        },
         "finite_hop_screen": hop_row,
         "endpoint_locked": endpoint_locked,
         "neutral_translation_mode_required": False,
         "claim_boundary": (
-            "The saved 100-cycle result is a nonlinear rest-stability pass "
-            "only for the reduced tight-frame zero-chi-charge research "
-            "branch.  The 16-update exact-hop screen did not converge and "
-            "does not establish a no-go.  Every action delta must rerun "
-            "V4-002 before it can advance V4-006."),
+            "The saved historical 100-cycle result proves only an exactly "
+            "prepared orbit. The current complete-frame action materially "
+            "amplifies all tested physical packet launches. The exact rigid "
+            "hop remains an optional stronger control; V4-006 instead uses a "
+            "solved crossing time and permits Dirac-predicted spreading."),
     }
     output = HERE / "v4_stage_contract_audit.json"
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

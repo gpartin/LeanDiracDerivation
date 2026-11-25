@@ -1,5 +1,13 @@
 # V4-002 complete-frame five-RCA stop report
 
+> **Gate correction (2026-11-25):** This report is retained as the history of
+> the five action searches. Its demand that every arbitrary full-phase-space
+> multiplier lie on the unit circle is not the controlling V4-002 criterion.
+> The controlling test is now physical-sector reachability. That narrower test
+> still fails: `v4_002_reachable_sector_audit.json` shows the actual two-layer
+> Dirac packet launches growing to norm ratio `4.8200821871` and shape error
+> `4.6536528032` over 100 cycles.
+
 ## Issue
 
 The actual complete-frame clock-corrected movement action preserves the exact
@@ -12,9 +20,11 @@ the unit circle. V4-002 therefore remains open.
 
 V4 must use one action for the resting carrier and its Dirac movement. The
 clock correction cannot be credited as the final movement law while the same
-action destabilizes that carrier at rest. The nonlinear 100-cycle gate and
-V4-003 onward remain dependency-blocked until this necessary linear gate
-passes.
+action destabilizes that carrier at rest. The nonlinear 100-cycle gate was not
+run at that point. V4-003 onward were treated as dependency-blocked by that
+ambient linear gate. The controlling correction above now blocks them on the
+demonstrated growth of the actual carrier launch, not on the ambient spectrum
+alone.
 
 ## Symptoms
 
@@ -38,9 +48,11 @@ superseded rather than deleted.
 
 ## Expected symptoms
 
-Every multiplier must lie on the unit circle within `1e-7` before the same
-action enters the nonlinear 100-cycle perturbation, containment, conservation,
-timestep, and box-refinement tests.
+This report originally required every multiplier to lie on the unit circle
+within `1e-7`. That requirement is superseded. The current criterion requires
+bounded evolution of the physical carrier/rest/movement perturbations with
+containment, conservation, timestep, and box-refinement checks. The exact
+complete-frame action fails that narrower criterion as recorded above.
 
 ## Root cause
 

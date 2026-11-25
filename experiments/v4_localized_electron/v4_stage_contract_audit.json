@@ -1,20 +1,21 @@
 {
-  "status": "PASS",
+  "status": "CURRENT_COHERENT_STAGE_AUDIT",
+  "release_boundary": "V4-001",
   "canonical_action_changed": false,
   "research_action_admitted": false,
   "stage_contract": {
     "V4-001": "PASS_EXACT_REST_EXISTENCE",
-    "V4-002": "PASS_REDUCED_TIGHT_FRAME_ZERO_CHI_CHARGE_100_CYCLE",
-    "V4-003": "OPEN_LOCALIZED_FOUR_COMPONENT_READOUT",
+    "V4-002": "FAIL_PHYSICAL_DIRAC_LAUNCH_GROWTH",
+    "V4-003": "OPEN_FIXED_READOUT_WITH_CONTROLLED_REMAINDER",
     "V4-004": "OPEN_OPERATIONAL_SPIN",
     "V4-005": "PARTIAL_INTEGER_SHIFT_COVARIANCE_AND_CURRENT",
     "V4-006": "OPEN_EXACT_ONE_CELL_HANDOFF",
     "V4-007": "OPEN_REPEATABLE_SECOND_HANDOFF",
     "V4-008": "OPEN_COARSE_DIRAC_COMPARISON",
-    "V4-009": "OPEN_ROBUSTNESS_ALL_AXES_AND_BOTH_COPIES",
-    "V4-010": "OPEN_CUMULATIVE_THEOREM"
+    "V4-009": "OPEN_PHYSICAL_ROBUSTNESS_AND_CONVERGENCE",
+    "V4-010": "OPEN_ANALYTIC_THEOREM_AND_RELEASE_AUDIT"
   },
-  "rest_stability_evidence": {
+  "historical_exact_orbit_evidence": {
     "artifact": "personal_touch_unit_geometric_nonlinear_100cycle_zero_clock.json",
     "updates": 8500,
     "maximum_relative_shape_residual": 5.6489835245858705e-14,
@@ -22,6 +23,14 @@
     "maximum_Psi_exterior_fraction": 0.0,
     "maximum_chi_density_relative_residual": 0.0,
     "maximum_interval_energy_relative_drift": 2.0823712588111686e-15
+  },
+  "physical_sector_reachability": {
+    "artifact": "v4_002_reachable_sector_audit.json",
+    "case_count": 16,
+    "one_step_dirac_sector_leakage": 9.475248511794998e-05,
+    "maximum_phase_space_norm_ratio": 4.820082187094782,
+    "maximum_phase_aligned_relative_error": 4.653652803173281,
+    "verdict": "PHYSICAL_LAUNCH_MATERIAL_GROWTH_OBSERVED"
   },
   "finite_hop_screen": {
     "axis": 0,
@@ -42,5 +51,5 @@
   },
   "endpoint_locked": true,
   "neutral_translation_mode_required": false,
-  "claim_boundary": "The saved 100-cycle result is a nonlinear rest-stability pass only for the reduced tight-frame zero-chi-charge research branch.  The 16-update exact-hop screen did not converge and does not establish a no-go.  Every action delta must rerun V4-002 before it can advance V4-006."
+  "claim_boundary": "The saved historical 100-cycle result proves only an exactly prepared orbit. The current complete-frame action materially amplifies all tested physical packet launches. The exact rigid hop remains an optional stronger control; V4-006 instead uses a solved crossing time and permits Dirac-predicted spreading."
 }

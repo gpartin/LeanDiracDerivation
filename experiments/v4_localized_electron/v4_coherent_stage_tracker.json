@@ -9,21 +9,24 @@
     "reason": "The saved 100-cycle rest pass and strongest short-time movement pass use different research actions.",
     "current_movement_incumbent": {
       "module": "live_clifford_bond_action.py",
-      "link_source": "joint_face_laplacian_plus_psi_area_oscillator",
+      "link_source": "joint_face_laplacian_plus_frame_oscillator",
       "scale": 0.3157894736842105,
+      "spacetime_scale": 0.01662049861495845,
+      "parallel_matched_scale": 1.0,
+      "parallel_clock_potential_scale": 1.0,
       "admitted": false
     }
   },
   "stages": [
     {"id": "V4-001", "status": "PASS", "rca_count": 0, "evidence": "v4_001_revalidation.json", "summary": "Exact localized rest solution rebuilt on the clean branch with only standard Lean foundations."},
-    {"id": "V4-002", "status": "STOPPED_AFTER_5_CORRECTED_RCAS__COMPLETE_FRAME_LINEAR_STABILITY_FAIL", "rca_count": 5, "evidence": "V4_002_COMPLETE_FRAME_RCA_STOP.md", "summary": "The complete-frame clock repair reduces the rest growth rate from 0.782 to 0.0610, but the exact action and five corrective families all retain a Floquet multiplier outside the unit circle; the nonlinear 100-cycle gate was therefore not run."},
-    {"id": "V4-003", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Lossless fixed four-component phase-space readout."},
+    {"id": "V4-002", "status": "FAIL__PHYSICAL_DIRAC_LAUNCH_REACHES_GROWING_RESPONSE", "rca_count": 5, "evidence": "v4_002_reachable_sector_audit.json", "summary": "The ambient-spectrum requirement was narrowed to physically generated two-layer carrier launches. The exact 6/361 complete-frame action still fails: 16 launches covering both copies, both momentum signs, three axes and a diagonal grow to a maximum phase-space norm ratio 4.820 and shape error 4.654 over 100 cycles."},
+    {"id": "V4-003", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Fixed four-component phase-space readout with an explicit controlled complementary-sector remainder; exact zero finite-lattice remainder is not required."},
     {"id": "V4-004", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Operational spin-half on the localized carrier."},
     {"id": "V4-005", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Short-time Dirac transport and native current."},
-    {"id": "V4-006", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "One complete cell crossing against the independent Dirac comparator."},
+    {"id": "V4-006", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "One complete cell crossing against the independent Dirac comparator at a solved crossing time; neither a one-update jump nor rigid fractional snapshots are required."},
     {"id": "V4-007", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Second unreset crossing in both directions."},
     {"id": "V4-008", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Same-state mass, time, transport, density, current, and phase map."},
-    {"id": "V4-009", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Axes, diagonal, copies, perturbations, timestep, and box robustness."},
-    {"id": "V4-010", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Cumulative Lean theorem and clean release audit."}
+    {"id": "V4-009", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Axes, diagonal, separately measured copies, physically admissible perturbations, timestep, and box robustness."},
+    {"id": "V4-010", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Cumulative analytic Lean theorem plus separate reproducible numerical and clean-release audits."}
   ]
 }

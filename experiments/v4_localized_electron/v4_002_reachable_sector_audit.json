@@ -1,0 +1,1299 @@
+{
+  "stage": "V4-002",
+  "status": "PHYSICAL_SECTOR_REACHABILITY_AUDIT",
+  "action_module": "live_clifford_bond_action.py",
+  "action_module_sha256": "919f3ecb9d3d45afa8c978e01854d004bf47fe3dc6ff7faeeaa4dd304169cb5b",
+  "action_configuration": {
+    "link_source": "joint_face_laplacian_plus_frame_oscillator",
+    "action_scale": 0.3157894736842105,
+    "spacetime_scale": 0.01662049861495845,
+    "parallel_matched_scale": 1.0,
+    "parallel_clock_potential_scale": 1.0
+  },
+  "tangent_cache": "completed_spacetime_scan_0p016620498615.npz",
+  "tangent_cache_sha256": "9691e9ec70fdf73676490304b0e0259d04c4b0342fbf3a544a8e19a6f6b15778",
+  "rest_cache": "personal_touch_bare_canonical_matrices.npz",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "dt": 0.00390625,
+  "cycles": 100.0,
+  "steps": 8466,
+  "case_count": 16,
+  "cases": [
+    {
+      "flavor": "plus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ]
+    },
+    {
+      "flavor": "plus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": -1,
+      "momentum": [
+        -0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "x",
+      "axis_index": 0,
+      "sign": 1,
+      "momentum": [
+        0.35,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        -0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "y",
+      "axis_index": 1,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.35,
+        0.0
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": -1,
+      "momentum": [
+        0.0,
+        0.0,
+        -0.35
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "z",
+      "axis_index": 2,
+      "sign": 1,
+      "momentum": [
+        0.0,
+        0.0,
+        0.35
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": -1,
+      "momentum": [
+        -0.20207259421636903,
+        -0.20207259421636903,
+        -0.20207259421636903
+      ]
+    },
+    {
+      "flavor": "minus",
+      "axis": "diagonal",
+      "axis_index": 3,
+      "sign": 1,
+      "momentum": [
+        0.20207259421636903,
+        0.20207259421636903,
+        0.20207259421636903
+      ]
+    }
+  ],
+  "initial_real_phase_space_rank": 32,
+  "one_step_dirac_sector_leakage": 9.475248511794998e-05,
+  "maximum_phase_aligned_relative_error": 4.653652803173281,
+  "maximum_phase_space_norm_ratio": 4.820082187094782,
+  "final_minimum_phase_space_norm_ratio": 3.492081168326248,
+  "observed_maximum_envelope_growth_rate_per_unit_time": 0.047558999606720234,
+  "physical_launches_exhibit_material_growth": true,
+  "samples": [
+    {
+      "step": 0,
+      "cycles": 0.0,
+      "maximum_phase_aligned_relative_error": 3.015312685562979e-16,
+      "maximum_norm_ratio": 1.0,
+      "minimum_norm_ratio": 0.9999999999999997,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.8842004056912016e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.9228973608506993e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.41576654709086e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.424407290063476e-16,
+          "phase_space_norm_ratio": 0.9999999999999997
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.4304441211821442e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.4002103677198844e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.3565210591959863e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.3928226773075365e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.5254035368950294e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.5076967296721445e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.1647268451099603e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.165625223641899e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.1840121207793566e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.267860004774284e-16,
+          "phase_space_norm_ratio": 1.0
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 3.009908640337456e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 3.015312685562979e-16,
+          "phase_space_norm_ratio": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "cycles": 0.011812280932601607,
+      "maximum_phase_aligned_relative_error": 0.00013042372392889812,
+      "maximum_norm_ratio": 0.9999854556434804,
+      "minimum_norm_ratio": 0.9999369004236736,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 9.513529167459763e-05,
+          "phase_space_norm_ratio": 0.9999737015095735
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.00013007154138025315,
+          "phase_space_norm_ratio": 0.9999369004236736
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.00010122438031853414,
+          "phase_space_norm_ratio": 0.9999633905400507
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.00012598113106105898,
+          "phase_space_norm_ratio": 0.9999448263135852
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.00011294093051550303,
+          "phase_space_norm_ratio": 0.9999603852833711
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.00011626943916988565,
+          "phase_space_norm_ratio": 0.9999524665873306
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 9.375098430495313e-05,
+          "phase_space_norm_ratio": 0.9999760743839373
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.00013042372392889812,
+          "phase_space_norm_ratio": 0.9999381008187886
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.00010811537619203152,
+          "phase_space_norm_ratio": 0.999956693053345
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 9.393377570995246e-05,
+          "phase_space_norm_ratio": 0.9999804470048937
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.00010318411196073865,
+          "phase_space_norm_ratio": 0.9999660697017044
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.00011285791530928344,
+          "phase_space_norm_ratio": 0.9999646908044054
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.00010200704248533338,
+          "phase_space_norm_ratio": 0.9999854556434804
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.00010659654470160826,
+          "phase_space_norm_ratio": 0.999953170731001
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.00010037377769382043,
+          "phase_space_norm_ratio": 0.9999702945971866
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.0001066214813552248,
+          "phase_space_norm_ratio": 0.9999608750573542
+        }
+      ]
+    },
+    {
+      "step": 85,
+      "cycles": 1.0040438792711366,
+      "maximum_phase_aligned_relative_error": 0.1014918773436683,
+      "maximum_norm_ratio": 1.033443221999071,
+      "minimum_norm_ratio": 0.9865707286010518,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.0963627256447575,
+          "phase_space_norm_ratio": 0.9959652965620664
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.1014918773436683,
+          "phase_space_norm_ratio": 1.0058005061133952
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.09813176813312383,
+          "phase_space_norm_ratio": 1.0100652305092601
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.1009277202687055,
+          "phase_space_norm_ratio": 0.9942155221374827
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.0989590461499935,
+          "phase_space_norm_ratio": 1.0200915312197743
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.10071991987057229,
+          "phase_space_norm_ratio": 0.9865707286010518
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.0934177580625894,
+          "phase_space_norm_ratio": 1.0120641644568193
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.09916619232851041,
+          "phase_space_norm_ratio": 0.9911619695665043
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.09485626501215766,
+          "phase_space_norm_ratio": 1.0218201954726165
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.0841944488107951,
+          "phase_space_norm_ratio": 1.0220588142191396
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.09599174326024669,
+          "phase_space_norm_ratio": 1.0088698576000372
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.08857411655821314,
+          "phase_space_norm_ratio": 1.0276318154828479
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.0849449784571208,
+          "phase_space_norm_ratio": 1.0089299790583732
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.08956905122206883,
+          "phase_space_norm_ratio": 1.030511244317435
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.0959827148964406,
+          "phase_space_norm_ratio": 1.0080184681691784
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.08919952756653439,
+          "phase_space_norm_ratio": 1.033443221999071
+        }
+      ]
+    },
+    {
+      "step": 169,
+      "cycles": 1.9962754776096716,
+      "maximum_phase_aligned_relative_error": 0.19593161643139995,
+      "maximum_norm_ratio": 1.0634232335962164,
+      "minimum_norm_ratio": 0.9803219070686018,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.1843748741975791,
+          "phase_space_norm_ratio": 1.004803817625678
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.195754248251161,
+          "phase_space_norm_ratio": 1.0129604912321553
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.18858924552013004,
+          "phase_space_norm_ratio": 1.0268947272729554
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.195216351140043,
+          "phase_space_norm_ratio": 0.9946873890022987
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.18795107292036647,
+          "phase_space_norm_ratio": 1.0437403257038849
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.19593161643139995,
+          "phase_space_norm_ratio": 0.9803219070686018
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.1778322919274014,
+          "phase_space_norm_ratio": 1.0325372475073462
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.19355179433699063,
+          "phase_space_norm_ratio": 0.9853969946461073
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.1731100461419944,
+          "phase_space_norm_ratio": 1.0414818997190263
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.1586403752610098,
+          "phase_space_norm_ratio": 1.0409404788278183
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.1807716186622879,
+          "phase_space_norm_ratio": 1.0191664400415315
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.1668598425304149,
+          "phase_space_norm_ratio": 1.050835214119933
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.16126193002965158,
+          "phase_space_norm_ratio": 1.0133556547780367
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.1648897267910426,
+          "phase_space_norm_ratio": 1.06073324093608
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.18037623076955986,
+          "phase_space_norm_ratio": 1.0160055114810207
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.16706733278891098,
+          "phase_space_norm_ratio": 1.0634232335962164
+        }
+      ]
+    },
+    {
+      "step": 423,
+      "cycles": 4.99659483449048,
+      "maximum_phase_aligned_relative_error": 0.47803211699732057,
+      "maximum_norm_ratio": 1.185220900092772,
+      "minimum_norm_ratio": 1.0227517390154355,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.4578917535336241,
+          "phase_space_norm_ratio": 1.0469506664750325
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.47803211699732057,
+          "phase_space_norm_ratio": 1.0908349575526242
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.4649386433040149,
+          "phase_space_norm_ratio": 1.1064555271589986
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.4770797460864371,
+          "phase_space_norm_ratio": 1.0476687426395397
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.4587228675415794,
+          "phase_space_norm_ratio": 1.1327254508947477
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.4762487315765417,
+          "phase_space_norm_ratio": 1.0227517390154355
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.44039700508400526,
+          "phase_space_norm_ratio": 1.0990292191760378
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.4716310062420069,
+          "phase_space_norm_ratio": 1.0332244244722752
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.4312685775814479,
+          "phase_space_norm_ratio": 1.1487806669054674
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.38283335977950517,
+          "phase_space_norm_ratio": 1.1213134472367898
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.44368885285925813,
+          "phase_space_norm_ratio": 1.0977076106352965
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.4139258204231237,
+          "phase_space_norm_ratio": 1.157891898561797
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.39545896435220984,
+          "phase_space_norm_ratio": 1.0550612527511583
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.4021620921941209,
+          "phase_space_norm_ratio": 1.185220900092772
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.4450043633835356,
+          "phase_space_norm_ratio": 1.0840240375792145
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.4054882184523729,
+          "phase_space_norm_ratio": 1.183162520355994
+        }
+      ]
+    },
+    {
+      "step": 847,
+      "cycles": 10.005001949913561,
+      "maximum_phase_aligned_relative_error": 0.8883776360883632,
+      "maximum_norm_ratio": 1.353257569935793,
+      "minimum_norm_ratio": 1.1797548837607748,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.8350663480658274,
+          "phase_space_norm_ratio": 1.2303566608474985
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.8883776360883632,
+          "phase_space_norm_ratio": 1.3284302227950393
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.8598533606963541,
+          "phase_space_norm_ratio": 1.3340788704502213
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.8782424789755744,
+          "phase_space_norm_ratio": 1.2707403313464185
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.8515877038409545,
+          "phase_space_norm_ratio": 1.3415973419307632
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.8634322314829417,
+          "phase_space_norm_ratio": 1.2456308114941697
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.812535030319275,
+          "phase_space_norm_ratio": 1.2837853074844952
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.86551863393075,
+          "phase_space_norm_ratio": 1.2563592970776711
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.8176777775145795,
+          "phase_space_norm_ratio": 1.3340666547817936
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.7202759823526308,
+          "phase_space_norm_ratio": 1.2646662541750635
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.8468236044544157,
+          "phase_space_norm_ratio": 1.278363836970265
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.7739652155534676,
+          "phase_space_norm_ratio": 1.3295857590866316
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.760956539365342,
+          "phase_space_norm_ratio": 1.1797548837607748
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.7421106636667983,
+          "phase_space_norm_ratio": 1.353257569935793
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 0.8522824776090383,
+          "phase_space_norm_ratio": 1.2556086999372653
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 0.7438337283865245,
+          "phase_space_norm_ratio": 1.3494282413955545
+        }
+      ]
+    },
+    {
+      "step": 1693,
+      "cycles": 19.99819161889452,
+      "maximum_phase_aligned_relative_error": 1.431490153801719,
+      "maximum_norm_ratio": 1.66144447205675,
+      "minimum_norm_ratio": 1.410154527252013,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.2843909641150073,
+          "phase_space_norm_ratio": 1.4253434645488163
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.3750728711269882,
+          "phase_space_norm_ratio": 1.66144447205675
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.3165015801033961,
+          "phase_space_norm_ratio": 1.5713801046569456
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.3409547718021906,
+          "phase_space_norm_ratio": 1.559381393504844
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.3000731091087325,
+          "phase_space_norm_ratio": 1.4894186755701546
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.3201642561580067,
+          "phase_space_norm_ratio": 1.5856508190829137
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.2604334896933995,
+          "phase_space_norm_ratio": 1.4217182844127025
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.3396209299155664,
+          "phase_space_norm_ratio": 1.6148930228989582
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.3845904807730127,
+          "phase_space_norm_ratio": 1.6063567808110204
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.2504225829361537,
+          "phase_space_norm_ratio": 1.4554304049292508
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.4157362417417783,
+          "phase_space_norm_ratio": 1.562383473570464
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.324851613154647,
+          "phase_space_norm_ratio": 1.558718599329025
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.3346575744530813,
+          "phase_space_norm_ratio": 1.410154527252013
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.230356048891206,
+          "phase_space_norm_ratio": 1.5442366578182545
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.431490153801719,
+          "phase_space_norm_ratio": 1.532145721735513
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.2399913817282469,
+          "phase_space_norm_ratio": 1.5220249594352133
+        }
+      ]
+    },
+    {
+      "step": 4233,
+      "cycles": 50.0013851877026,
+      "maximum_phase_aligned_relative_error": 2.024998963070294,
+      "maximum_norm_ratio": 1.9295796343213574,
+      "minimum_norm_ratio": 1.652284440680978,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.63492813925393,
+          "phase_space_norm_ratio": 1.652284440680978
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.7068351063693041,
+          "phase_space_norm_ratio": 1.7944349280172884
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.685675797239957,
+          "phase_space_norm_ratio": 1.7665812106995014
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.6764089084484173,
+          "phase_space_norm_ratio": 1.6914748149139027
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.6603314269433829,
+          "phase_space_norm_ratio": 1.7229156975319013
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.6343587503169685,
+          "phase_space_norm_ratio": 1.675161287437788
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.646346207984198,
+          "phase_space_norm_ratio": 1.6856865067687932
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.6598256969979117,
+          "phase_space_norm_ratio": 1.6954213673714884
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 2.003250449125221,
+          "phase_space_norm_ratio": 1.8967266303136048
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.8957022589428714,
+          "phase_space_norm_ratio": 1.8006874562670196
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.9036562536402166,
+          "phase_space_norm_ratio": 1.7474034567719834
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 2.024998963070294,
+          "phase_space_norm_ratio": 1.9295796343213574
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.9906892245818228,
+          "phase_space_norm_ratio": 1.8658768607750729
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.7779817948101084,
+          "phase_space_norm_ratio": 1.662113691883507
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 1.9753483417966493,
+          "phase_space_norm_ratio": 1.8308309903708837
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 1.8703257720785254,
+          "phase_space_norm_ratio": 1.7619788238626555
+        }
+      ]
+    },
+    {
+      "step": 8466,
+      "cycles": 100.0027703754052,
+      "maximum_phase_aligned_relative_error": 4.653652803173281,
+      "maximum_norm_ratio": 4.820082187094782,
+      "minimum_norm_ratio": 3.492081168326248,
+      "rows": [
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 3.563559951544055,
+          "phase_space_norm_ratio": 3.6757880538689363
+        },
+        {
+          "flavor": "plus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 3.760313940066956,
+          "phase_space_norm_ratio": 3.9779766103288545
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 3.6808112483358486,
+          "phase_space_norm_ratio": 3.871768492704366
+        },
+        {
+          "flavor": "plus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 3.6612657175803314,
+          "phase_space_norm_ratio": 3.8059251182493816
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 3.8201229506252634,
+          "phase_space_norm_ratio": 3.937018346192887
+        },
+        {
+          "flavor": "plus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 3.2755507407010174,
+          "phase_space_norm_ratio": 3.492081168326248
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 3.696105504057414,
+          "phase_space_norm_ratio": 3.8176548283918272
+        },
+        {
+          "flavor": "plus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 3.4860555423397606,
+          "phase_space_norm_ratio": 3.697685139311959
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": -1,
+          "phase_aligned_relative_error": 4.574548864383434,
+          "phase_space_norm_ratio": 4.720518627913902
+        },
+        {
+          "flavor": "minus",
+          "axis": "x",
+          "sign": 1,
+          "phase_aligned_relative_error": 4.158836444256657,
+          "phase_space_norm_ratio": 4.32044952300628
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": -1,
+          "phase_aligned_relative_error": 3.999329787955425,
+          "phase_space_norm_ratio": 4.122141534354516
+        },
+        {
+          "flavor": "minus",
+          "axis": "y",
+          "sign": 1,
+          "phase_aligned_relative_error": 4.653652803173281,
+          "phase_space_norm_ratio": 4.820082187094782
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": -1,
+          "phase_aligned_relative_error": 4.540612067868484,
+          "phase_space_norm_ratio": 4.668953286198086
+        },
+        {
+          "flavor": "minus",
+          "axis": "z",
+          "sign": 1,
+          "phase_aligned_relative_error": 3.657578570131673,
+          "phase_space_norm_ratio": 3.8339186366805564
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": -1,
+          "phase_aligned_relative_error": 4.367630794074557,
+          "phase_space_norm_ratio": 4.4885511433366165
+        },
+        {
+          "flavor": "minus",
+          "axis": "diagonal",
+          "sign": 1,
+          "phase_aligned_relative_error": 4.012337165194202,
+          "phase_space_norm_ratio": 4.191835636993333
+        }
+      ]
+    }
+  ],
+  "verdict": "PHYSICAL_LAUNCH_MATERIAL_GROWTH_OBSERVED",
+  "claim_boundary": "Tests the declared two-layer packet preparations for both cubical copies, both momentum signs, three axes, and a diagonal. It does not prove stability against arbitrary native-state perturbations, nonlinear finite-amplitude evolution, or external forcing. Dirac is an independent comparator only."
+}
