@@ -1,0 +1,1074 @@
+{
+  "status": "V4_003_NATIVE_CHI_SCHUR_DIAGNOSTIC",
+  "dt": 0.001953125,
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache_sha256": "ee91408640c1688876406918be0c766d03c59483637903262c532c6aab06c7d2",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "rows": [
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 317,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 0.005709841370468461,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 6.825714500671524,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 6.8223952274851,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.6528916109787228,
+      "native_chi_response_over_Psi_norm": 12926.813469757612,
+      "native_chi_normal_response_over_Psi_norm": 0.5826359985227114
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 317,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 0.005617031163541305,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 6.926523993509995,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 6.922164720485734,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.8154886396213321,
+      "native_chi_response_over_Psi_norm": 12669.402983339696,
+      "native_chi_normal_response_over_Psi_norm": 0.535605561737176
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 317,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 0.0060315395044580385,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 8.3927655068128,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 8.385266047944592,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1835045596268812,
+      "native_chi_response_over_Psi_norm": 16806.24530388647,
+      "native_chi_normal_response_over_Psi_norm": 0.3015231960000967
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 317,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 0.006291906129747573,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 9.100597973995573,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 9.091954409279632,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0187979256380948,
+      "native_chi_response_over_Psi_norm": 18858.27281577455,
+      "native_chi_normal_response_over_Psi_norm": 0.0028462651114637702
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 336,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 0.00569039366586951,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 6.824543499813036,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 6.821225806860337,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.6528916109787225,
+      "native_chi_response_over_Psi_norm": 12926.813194403729,
+      "native_chi_normal_response_over_Psi_norm": 1.2107383268856293
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 336,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 0.005597853855532305,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 6.924805013370286,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 6.920448103573613,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.8154886396213326,
+      "native_chi_response_over_Psi_norm": 12669.4035455025,
+      "native_chi_normal_response_over_Psi_norm": 1.158152219715176
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 336,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 0.006011012898716193,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 8.389308577020723,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 8.381812558135412,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1835045596268816,
+      "native_chi_response_over_Psi_norm": 16806.245466424996,
+      "native_chi_normal_response_over_Psi_norm": 0.8503862592400772
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.0,
+      "free_operator_rank": 336,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 0.006270554364783388,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 9.096506400983955,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 9.087866506862945,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0187979256380948,
+      "native_chi_response_over_Psi_norm": 18858.272586809846,
+      "native_chi_normal_response_over_Psi_norm": 0.6472340104651764
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.6508382448901757e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.8938306651645517,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.8935927435308526,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0103731781622445,
+      "native_chi_response_over_Psi_norm": 0.7894539261391644,
+      "native_chi_normal_response_over_Psi_norm": 0.14235533042706253
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.6620471147810534e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9100633772263255,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9096153631462426,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1126872465059925,
+      "native_chi_response_over_Psi_norm": 0.7520928628100689,
+      "native_chi_normal_response_over_Psi_norm": 0.17977078886207726
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.8760973394062034e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9570568121477453,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9561815546963837,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.2324612039314915,
+      "native_chi_response_over_Psi_norm": 0.9426619609156273,
+      "native_chi_normal_response_over_Psi_norm": 0.21167511648130216
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.966681407812833e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9710067495759105,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9700170697761535,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.234628234105239,
+      "native_chi_response_over_Psi_norm": 1.0405795319609619,
+      "native_chi_normal_response_over_Psi_norm": 0.21756984041931757
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.3612068476893256e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.892202128221096,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.8919023059378185,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0720352842766423,
+      "native_chi_response_over_Psi_norm": 0.6905731148323057,
+      "native_chi_normal_response_over_Psi_norm": 0.15565297732598324
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.5856549527041878e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.8984009704759576,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.89816333375922,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.224815457311067,
+      "native_chi_response_over_Psi_norm": 0.7664966806675494,
+      "native_chi_normal_response_over_Psi_norm": 0.09991367451305831
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.7714232355753804e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9362729659630498,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9356752655371818,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.4189370542726565,
+      "native_chi_response_over_Psi_norm": 0.9454196290606329,
+      "native_chi_normal_response_over_Psi_norm": 0.15524722208540445
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.7863501222414855e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9569320462861226,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9561033747386423,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.3099137420450804,
+      "native_chi_response_over_Psi_norm": 1.0182231376742672,
+      "native_chi_normal_response_over_Psi_norm": 0.19682015712274692
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.3769109273247824e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.8828193281774276,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.882453817459551,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0889535757894975,
+      "native_chi_response_over_Psi_norm": 0.8017334653826059,
+      "native_chi_normal_response_over_Psi_norm": 0.19384231222332451
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.4593082718716764e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.8770101469818293,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.8765921815847633,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9294097507655302,
+      "native_chi_response_over_Psi_norm": 0.7826190489985244,
+      "native_chi_normal_response_over_Psi_norm": 0.2302191536467921
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.668699067562081e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9060033774160915,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9057032824518708,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9309697144475578,
+      "native_chi_response_over_Psi_norm": 0.894557547264156,
+      "native_chi_normal_response_over_Psi_norm": 0.2252934996580788
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.8299019177968937e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9085324773211771,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9081205100678513,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.169177257370387,
+      "native_chi_response_over_Psi_norm": 1.0236371519390817,
+      "native_chi_normal_response_over_Psi_norm": 0.16439645852661208
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.7629375206485448e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.8970474416344151,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.8964680729107819,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9124668514434535,
+      "native_chi_response_over_Psi_norm": 0.8906653816047255,
+      "native_chi_normal_response_over_Psi_norm": 0.2686986526247376
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.7184855193486674e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9043105656986856,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9038917839336782,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0539251186839964,
+      "native_chi_response_over_Psi_norm": 0.836754873223989,
+      "native_chi_normal_response_over_Psi_norm": 0.1427169164313288
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.683733055479885e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.881534266675306,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.880881856782066,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1067370788372344,
+      "native_chi_response_over_Psi_norm": 0.8559862797970973,
+      "native_chi_normal_response_over_Psi_norm": 0.22639640063220423
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.9168085827124578e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.8997193212883052,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.8990553316767798,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9430543077997675,
+      "native_chi_response_over_Psi_norm": 0.9849236697331949,
+      "native_chi_normal_response_over_Psi_norm": 0.2763756137320225
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.0746045854206104e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9082079363926638,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9081273257703124,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.075302105276176,
+      "native_chi_response_over_Psi_norm": 0.537927200918855,
+      "native_chi_normal_response_over_Psi_norm": 0.19324061862036507
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.793971057560777e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9386114455022118,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9380468540746706,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1136503764961272,
+      "native_chi_response_over_Psi_norm": 0.9034565338804639,
+      "native_chi_normal_response_over_Psi_norm": 0.18918837311427028
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.6959926557415466e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9366405348427383,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9360934311490294,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9302506250652526,
+      "native_chi_response_over_Psi_norm": 0.9379662624581205,
+      "native_chi_normal_response_over_Psi_norm": 0.24035265989869442
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.3238990170102004e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9390010019923889,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9387174926351446,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9467806903623326,
+      "native_chi_response_over_Psi_norm": 0.7251642527432096,
+      "native_chi_normal_response_over_Psi_norm": 0.20164093183348733
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.817604765385011e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9133907012036885,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9130945476258261,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.94570011313931,
+      "native_chi_response_over_Psi_norm": 0.9513632351691689,
+      "native_chi_normal_response_over_Psi_norm": 0.19393201748909844
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.72836507605755e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.8715692035594257,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.8714871705702298,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9343170351188647,
+      "native_chi_response_over_Psi_norm": 0.8949025671084594,
+      "native_chi_normal_response_over_Psi_norm": 0.1676441396917774
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.793798045175478e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.912714412158514,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9123789806499543,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1312603705700761,
+      "native_chi_response_over_Psi_norm": 0.9201593038346267,
+      "native_chi_normal_response_over_Psi_norm": 0.20606594760332692
+    },
+    {
+      "free_fields": "chi_only",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 750,
+      "free_operator_dimension": 750,
+      "free_DEL_relative_residual": 1.8036875525234583e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9748679230042727,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.97434392021715,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1332672150704932,
+      "native_chi_response_over_Psi_norm": 0.9644284876714025,
+      "native_chi_normal_response_over_Psi_norm": 0.1657046612702573
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.921499975769245e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.0454490524965003,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.04494589441254,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0103731781622438,
+      "native_chi_response_over_Psi_norm": 1.0873835241167777,
+      "native_chi_normal_response_over_Psi_norm": 0.7617358358175927
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 4.258666809622753e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.3000515587343917,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.2995767128118365,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.112687246505994,
+      "native_chi_response_over_Psi_norm": 1.9242714607206988,
+      "native_chi_normal_response_over_Psi_norm": 1.780994208154529
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 5.079701116627277e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.6058270201503033,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.604885035260202,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.2324612039314924,
+      "native_chi_response_over_Psi_norm": 2.485789659031097,
+      "native_chi_normal_response_over_Psi_norm": 2.310862538228646
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        -1.2566370614359172,
+        -0.0,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 4.8962760599842924e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.6445434437393749,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.643394927435181,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.2346282341052404,
+      "native_chi_response_over_Psi_norm": 2.4823320978167334,
+      "native_chi_normal_response_over_Psi_norm": 2.2652981747228966
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 4.170579483969157e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.2877112316194974,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.2871206811034916,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.072035284276642,
+      "native_chi_response_over_Psi_norm": 1.8011645761771544,
+      "native_chi_normal_response_over_Psi_norm": 1.6718177611093432
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 3.030237092423621e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.1010102668877932,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.1005696881742288,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.224815457311066,
+      "native_chi_response_over_Psi_norm": 1.2483678340824602,
+      "native_chi_normal_response_over_Psi_norm": 0.9906631099153506
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 4.687675592205696e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.5052683854309643,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.5043283312168088,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.4189370542726565,
+      "native_chi_response_over_Psi_norm": 2.151312887316347,
+      "native_chi_normal_response_over_Psi_norm": 1.9394126944908547
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        1.2566370614359172,
+        0.0,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 5.310210654165851e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.7645587875499034,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.7633684188812169,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.309913742045082,
+      "native_chi_response_over_Psi_norm": 2.6938534554327727,
+      "native_chi_normal_response_over_Psi_norm": 2.5028730397870653
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 3.306550718571575e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.0725560376275547,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.0722894033001285,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.088953575789497,
+      "native_chi_response_over_Psi_norm": 1.4875274282793172,
+      "native_chi_normal_response_over_Psi_norm": 1.2678270675569219
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 3.1777085861718305e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.0913421384736617,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.090940330090519,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9294097507655307,
+      "native_chi_response_over_Psi_norm": 1.4341883155933037,
+      "native_chi_normal_response_over_Psi_norm": 1.223544762182567
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 3.186622043517763e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.1157445699921718,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.1152916025279012,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9309697144475587,
+      "native_chi_response_over_Psi_norm": 1.4442320575165744,
+      "native_chi_normal_response_over_Psi_norm": 1.1560820548913846
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -1.2566370614359172,
+        -0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.4101815550976344e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9353789240900595,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9349354202542736,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1691772573703874,
+      "native_chi_response_over_Psi_norm": 1.1162233164276267,
+      "native_chi_normal_response_over_Psi_norm": 0.4749993213760332
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.561529402868892e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9630987070877011,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9624509816398455,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9124668514434541,
+      "native_chi_response_over_Psi_norm": 1.193521695420146,
+      "native_chi_normal_response_over_Psi_norm": 0.838515942830165
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.442962212169218e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9891793770111132,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.988719683279582,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.053925118683995,
+      "native_chi_response_over_Psi_norm": 1.087211503239304,
+      "native_chi_normal_response_over_Psi_norm": 0.709695695172582
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.1759889917952052e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9353075784499438,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9344221107264759,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1067370788372353,
+      "native_chi_response_over_Psi_norm": 0.882884117596792,
+      "native_chi_normal_response_over_Psi_norm": 0.3130502500904106
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        1.2566370614359172,
+        0.0
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.5425804428306033e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9232401072242609,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9223794252375538,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9430543077997677,
+      "native_chi_response_over_Psi_norm": 1.1242843201418948,
+      "native_chi_normal_response_over_Psi_norm": 0.6081476642880324
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.1374459534328693e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.966741581223339,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9666241441354456,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.0753021052761755,
+      "native_chi_response_over_Psi_norm": 0.9860928068633228,
+      "native_chi_normal_response_over_Psi_norm": 0.8488905293888588
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.5929471214468416e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9912434172803283,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9907222748499829,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1136503764961267,
+      "native_chi_response_over_Psi_norm": 1.2298490787997365,
+      "native_chi_normal_response_over_Psi_norm": 0.8561562262981123
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.2503662694584592e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9820993762700574,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9815723517007426,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9302506250652532,
+      "native_chi_response_over_Psi_norm": 1.0403207598627011,
+      "native_chi_normal_response_over_Psi_norm": 0.5108104448438207
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        -0.0,
+        -0.0,
+        -1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.0243437430772622e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9589854732768988,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.958728876635831,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9467806903623339,
+      "native_chi_response_over_Psi_norm": 0.8845174469503703,
+      "native_chi_normal_response_over_Psi_norm": 0.5450185565220735
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 3.3072375851961504e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.0603078130439512,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.0596183229495528,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9457001131393096,
+      "native_chi_response_over_Psi_norm": 1.2798067778217397,
+      "native_chi_normal_response_over_Psi_norm": 0.877775931299285
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "plus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 3.0188976088721403e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.0322948583737284,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.0318170166107266,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 0.9343170351188644,
+      "native_chi_response_over_Psi_norm": 1.139738667608835,
+      "native_chi_normal_response_over_Psi_norm": 0.7255615988737323
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 0,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 3.0269571491356317e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 1.0799932077669117,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 1.0791587938754694,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1312603705700766,
+      "native_chi_response_over_Psi_norm": 1.1378233337162624,
+      "native_chi_normal_response_over_Psi_norm": 0.7004079861372117
+    },
+    {
+      "free_fields": "chi_and_normal_Psi",
+      "copy": "minus",
+      "momentum": [
+        0.0,
+        0.0,
+        1.2566370614359172
+      ],
+      "band": 1,
+      "co_rotating_frequency": 0.02379206495226427,
+      "free_operator_rank": 1000,
+      "free_operator_dimension": 1000,
+      "free_DEL_relative_residual": 2.5555862225889138e-14,
+      "full_acceleration_deficit_over_prescribed_Psi_norm": 0.9991491477557292,
+      "Psi_acceleration_deficit_over_prescribed_Psi_norm": 0.9985465819665813,
+      "previous_naive_contrast_acceleration_deficit_over_Psi_norm": 1.1332672150704932,
+      "native_chi_response_over_Psi_norm": 1.0960129797195663,
+      "native_chi_normal_response_over_Psi_norm": 0.5462331066566771
+    }
+  ],
+  "claim_boundary": "Dirac frequency probes are inverse requirements only; no native graph, action change, movement or pass is inferred."
+}

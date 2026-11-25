@@ -1,0 +1,712 @@
+{
+  "stage": "V4-003",
+  "status": "MOVING_NATIVE_GRAPH_AUDIT",
+  "dt": 0.001953125,
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache_sha256": "ee91408640c1688876406918be0c766d03c59483637903262c532c6aab06c7d2",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "native_graph_selection": "near-rest spectral half of native compressed recurrence, checked by unrestricted native recurrence",
+  "rows": [
+    {
+      "lift": "legacy",
+      "packet_configuration_rank": 256,
+      "individual_packet_ranks": {
+        "plus": 128,
+        "minus": 128
+      },
+      "joint_rank_deficit": 0,
+      "all_center_plus_outside_minus_fraction": 4.629401913146451e-14,
+      "raw_translation_defects": [
+        0.7858910524819185,
+        0.7914305792515383,
+        0.7916393952964371
+      ],
+      "native_leakage_graph": {
+        "full_phase_invariance_relative": 0.00010856098694093621,
+        "configuration_cross_block_relative": 3.5699385766256785e-09,
+        "cross_block_per_dt_squared": 0.0009359028106012903,
+        "recurrence_graph_defect_per_dt_squared": 40.24794904576441,
+        "previous_graph_condition": 1.1299437022261103,
+        "phase_condition": 1.0629881837865534,
+        "retained_spectral_radius": 1.0000473005322357
+      },
+      "native_spectral_branch": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 6.11287191559479e-10,
+        "top_graph_condition": 1.0074345858999616
+      },
+      "Dirac_recurrence_consistency_diagnostic": [
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 2.1903809731810466,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.098661469831365,
+          "Psi_power_fraction": 0.9451619680600518,
+          "chi_power_fraction": 0.05483803193994819,
+          "chi_normal_power_fraction": 9.000474595995304e-05
+        },
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 1.9728350334479636,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.09404021533300734,
+          "Psi_power_fraction": 0.9219089311347587,
+          "chi_power_fraction": 0.07809106886524136,
+          "chi_normal_power_fraction": 1.441220767139561e-05
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 1.938373669305052,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.08848145564581834,
+          "Psi_power_fraction": 0.9257087065408341,
+          "chi_power_fraction": 0.07429129345916585,
+          "chi_normal_power_fraction": 2.0980241694859712e-05
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 2.2128034398595195,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.1090850301603967,
+          "Psi_power_fraction": 0.9468110411247258,
+          "chi_power_fraction": 0.053188958875274216,
+          "chi_normal_power_fraction": 3.320498689770939e-05
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 2.164751153746474,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.10391275278195225,
+          "Psi_power_fraction": 0.9297598038731937,
+          "chi_power_fraction": 0.0702401961268064,
+          "chi_normal_power_fraction": 5.0354030115531245e-06
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 2.040143404924034,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.09544901162050023,
+          "Psi_power_fraction": 0.9493477481062593,
+          "chi_power_fraction": 0.050652251893740584,
+          "chi_normal_power_fraction": 0.0001289808842649856
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 2.10328783114341,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.0935770375074206,
+          "Psi_power_fraction": 0.9297533284971883,
+          "chi_power_fraction": 0.07024667150281175,
+          "chi_normal_power_fraction": 4.128870886858835e-05
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 2.0359244132849654,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.09745595441083736,
+          "Psi_power_fraction": 0.9386713797126404,
+          "chi_power_fraction": 0.061328620287359754,
+          "chi_normal_power_fraction": 3.1956580674982406e-05
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 3.036021432954631,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.10076059098484365,
+          "Psi_power_fraction": 0.9081384548948611,
+          "chi_power_fraction": 0.09186154510513897,
+          "chi_normal_power_fraction": 0.0004426570523304236
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 2.643947782343362,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.09959991063698445,
+          "Psi_power_fraction": 0.8381031427593764,
+          "chi_power_fraction": 0.16189685724062364,
+          "chi_normal_power_fraction": 0.0003872455680466084
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 2.801027692416664,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.10875179464903484,
+          "Psi_power_fraction": 0.8813011321607519,
+          "chi_power_fraction": 0.11869886783924814,
+          "chi_normal_power_fraction": 0.0003381184372240041
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 2.5755359721289612,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.08129230108417343,
+          "Psi_power_fraction": 0.8513285110140381,
+          "chi_power_fraction": 0.14867148898596202,
+          "chi_normal_power_fraction": 0.0004902422301289574
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 2.778328892448789,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.09107625373316933,
+          "Psi_power_fraction": 0.8731333389991,
+          "chi_power_fraction": 0.12686666100090002,
+          "chi_normal_power_fraction": 0.00017152081506301105
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 2.5586075814864544,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.09482809028570416,
+          "Psi_power_fraction": 0.8551389428447843,
+          "chi_power_fraction": 0.1448610571552158,
+          "chi_normal_power_fraction": 0.0007158452017975923
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 3.0560295341317247,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.1059913597962022,
+          "Psi_power_fraction": 0.8994988932372833,
+          "chi_power_fraction": 0.10050110676271662,
+          "chi_normal_power_fraction": 0.0002544831109432566
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 2.589622340703579,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.09197379262800093,
+          "Psi_power_fraction": 0.8320271384001747,
+          "chi_power_fraction": 0.1679728615998253,
+          "chi_normal_power_fraction": 0.0005708956694615232
+        }
+      ],
+      "maximum_acceleration_deficit_over_state_norm": 3.0560295341317247,
+      "native_spectral_graph": {
+        "full_phase_invariance_relative": 7.048522313334935e-08,
+        "configuration_cross_block_relative": 9.968113190883592e-08,
+        "cross_block_per_dt_squared": 0.026130824585632224,
+        "recurrence_graph_defect_per_dt_squared": 9.718915386868138e-10,
+        "previous_graph_condition": 1.0149244448870247,
+        "phase_condition": 1.0074345858999627,
+        "retained_spectral_radius": 1.000002524198488
+      },
+      "independent_comparator": [
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "initial_span_relative_error": 1.7304721632833938e-15,
+          "previous_layer_difference_per_dt": 0.8230335619727495,
+          "native_Dirac_centered_rate_relative_error": 1.408302405052017,
+          "native_Dirac_step_relative_error": 0.0016058391102173168
+        },
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "initial_span_relative_error": 1.4526114575958065e-15,
+          "previous_layer_difference_per_dt": 0.8141550607824308,
+          "native_Dirac_centered_rate_relative_error": 1.474882400637352,
+          "native_Dirac_step_relative_error": 0.0015887518480522352
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "initial_span_relative_error": 1.688918962782904e-15,
+          "previous_layer_difference_per_dt": 0.8249984280349658,
+          "native_Dirac_centered_rate_relative_error": 1.4300260276110592,
+          "native_Dirac_step_relative_error": 0.0016096558261222006
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "initial_span_relative_error": 1.3882458643461603e-15,
+          "previous_layer_difference_per_dt": 0.7628422879623523,
+          "native_Dirac_centered_rate_relative_error": 1.431450646598508,
+          "native_Dirac_step_relative_error": 0.0014890086376751679
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "initial_span_relative_error": 1.4579481977431205e-15,
+          "previous_layer_difference_per_dt": 0.8881676348559712,
+          "native_Dirac_centered_rate_relative_error": 1.6224847254107073,
+          "native_Dirac_step_relative_error": 0.0017331071007540542
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "initial_span_relative_error": 1.3989810118386976e-15,
+          "previous_layer_difference_per_dt": 0.7067166510287216,
+          "native_Dirac_centered_rate_relative_error": 1.2537204714884564,
+          "native_Dirac_step_relative_error": 0.0013793774873136113
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "initial_span_relative_error": 1.440835575211198e-15,
+          "previous_layer_difference_per_dt": 0.9012213475641347,
+          "native_Dirac_centered_rate_relative_error": 1.5256369370982743,
+          "native_Dirac_step_relative_error": 0.0017582920732675212
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "initial_span_relative_error": 1.5678418846385292e-15,
+          "previous_layer_difference_per_dt": 0.7459121507212186,
+          "native_Dirac_centered_rate_relative_error": 1.3558093154893247,
+          "native_Dirac_step_relative_error": 0.0014560618759012212
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "initial_span_relative_error": 2.1307865773160056e-15,
+          "previous_layer_difference_per_dt": 1.255689320012498,
+          "native_Dirac_centered_rate_relative_error": 1.5883420664829535,
+          "native_Dirac_step_relative_error": 0.0024533924974948023
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "initial_span_relative_error": 2.0744126540324448e-15,
+          "previous_layer_difference_per_dt": 1.2815174536891176,
+          "native_Dirac_centered_rate_relative_error": 1.8304566618253184,
+          "native_Dirac_step_relative_error": 0.0025040956301002103
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "initial_span_relative_error": 1.930652596412903e-15,
+          "previous_layer_difference_per_dt": 1.202166730351442,
+          "native_Dirac_centered_rate_relative_error": 1.7805325466599686,
+          "native_Dirac_step_relative_error": 0.002346805480836373
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "initial_span_relative_error": 2.121238013953205e-15,
+          "previous_layer_difference_per_dt": 1.2106795603138958,
+          "native_Dirac_centered_rate_relative_error": 1.4509344691508341,
+          "native_Dirac_step_relative_error": 0.0023664775120687863
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "initial_span_relative_error": 2.2728039527037954e-15,
+          "previous_layer_difference_per_dt": 1.4037344257683468,
+          "native_Dirac_centered_rate_relative_error": 1.7465327368156423,
+          "native_Dirac_step_relative_error": 0.0027418897825266563
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "initial_span_relative_error": 2.389514799204123e-15,
+          "previous_layer_difference_per_dt": 0.997694743552547,
+          "native_Dirac_centered_rate_relative_error": 1.4074685093553523,
+          "native_Dirac_step_relative_error": 0.001949954083070237
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "initial_span_relative_error": 2.0988545839940502e-15,
+          "previous_layer_difference_per_dt": 1.3484991805544255,
+          "native_Dirac_centered_rate_relative_error": 1.782286542316567,
+          "native_Dirac_step_relative_error": 0.002632744778724007
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "initial_span_relative_error": 2.1827324068507227e-15,
+          "previous_layer_difference_per_dt": 1.1168110166550902,
+          "native_Dirac_centered_rate_relative_error": 1.5027971782535001,
+          "native_Dirac_step_relative_error": 0.002183174482947201
+        }
+      ],
+      "maximum_rate_relative_error": 1.8304566618253184
+    },
+    {
+      "lift": "contrast",
+      "packet_configuration_rank": 256,
+      "individual_packet_ranks": {
+        "plus": 128,
+        "minus": 128
+      },
+      "joint_rank_deficit": 0,
+      "all_center_plus_outside_minus_fraction": 0.467201525665695,
+      "raw_translation_defects": [
+        2.332450557514349e-15,
+        2.213144182211397e-15,
+        2.1839701320085068e-15
+      ],
+      "native_leakage_graph": {
+        "full_phase_invariance_relative": 7.54372055390081e-06,
+        "configuration_cross_block_relative": 6.184225768617518e-08,
+        "cross_block_per_dt_squared": 0.01621156801080006,
+        "recurrence_graph_defect_per_dt_squared": 2.7966176655063797,
+        "previous_graph_condition": 1.0112463562124399,
+        "phase_condition": 1.0056075632577217,
+        "retained_spectral_radius": 1.0000353764853671
+      },
+      "native_spectral_branch": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 1.1498391613937903e-06,
+        "top_graph_condition": 1.0418322280267813
+      },
+      "Dirac_recurrence_consistency_diagnostic": [
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 19.778445214142067,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8582304627723175,
+          "Psi_power_fraction": 0.029448473160474352,
+          "chi_power_fraction": 0.9705515268395256,
+          "chi_normal_power_fraction": 0.7242108284939239
+        },
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 19.890225407975283,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8528508539899832,
+          "Psi_power_fraction": 0.025122584091675264,
+          "chi_power_fraction": 0.9748774159083247,
+          "chi_normal_power_fraction": 0.6774799179390992
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 17.491502148620025,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8326191986663591,
+          "Psi_power_fraction": 0.03601322905508173,
+          "chi_power_fraction": 0.9639867709449182,
+          "chi_normal_power_fraction": 0.669115409325728
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 22.01565992308007,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8862960300617692,
+          "Psi_power_fraction": 0.02310514937046415,
+          "chi_power_fraction": 0.9768948506295358,
+          "chi_normal_power_fraction": 0.7597263392070484
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 20.01836659054157,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.9011777996674689,
+          "Psi_power_fraction": 0.018220264176565713,
+          "chi_power_fraction": 0.9817797358234343,
+          "chi_normal_power_fraction": 0.74375670488123
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 18.997086665203273,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8085397494181767,
+          "Psi_power_fraction": 0.024667380497542014,
+          "chi_power_fraction": 0.9753326195024579,
+          "chi_normal_power_fraction": 0.7025675123413078
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 18.67976557287145,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8666480954004281,
+          "Psi_power_fraction": 0.021203183529208868,
+          "chi_power_fraction": 0.9787968164707912,
+          "chi_normal_power_fraction": 0.7028515000042922
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 20.755929272689496,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8487429857393417,
+          "Psi_power_fraction": 0.017677607175313383,
+          "chi_power_fraction": 0.9823223928246866,
+          "chi_normal_power_fraction": 0.7065680811541517
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 22.184625552206857,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8845711308256408,
+          "Psi_power_fraction": 0.039945422043530646,
+          "chi_power_fraction": 0.9600545779564693,
+          "chi_normal_power_fraction": 0.6586577430437257
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 23.668796236339922,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.9375254658714401,
+          "Psi_power_fraction": 0.03186065473973936,
+          "chi_power_fraction": 0.9681393452602607,
+          "chi_normal_power_fraction": 0.6539320571437753
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 26.71982950359464,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.9351692390332947,
+          "Psi_power_fraction": 0.029090266210036516,
+          "chi_power_fraction": 0.9709097337899635,
+          "chi_normal_power_fraction": 0.6657997253281184
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 19.970220009847658,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8601220120450724,
+          "Psi_power_fraction": 0.034324908042826695,
+          "chi_power_fraction": 0.9656750919571734,
+          "chi_normal_power_fraction": 0.6027263353274909
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 23.28509900876819,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8504709860587462,
+          "Psi_power_fraction": 0.027499285020436214,
+          "chi_power_fraction": 0.9725007149795638,
+          "chi_normal_power_fraction": 0.5929331831130172
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 23.11619157086587,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.9551823407583616,
+          "Psi_power_fraction": 0.05110286958303517,
+          "chi_power_fraction": 0.9488971304169649,
+          "chi_normal_power_fraction": 0.6636827156006884
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "native_acceleration_deficit_over_state_norm": 24.77480015638755,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.8904284695924772,
+          "Psi_power_fraction": 0.031043333391603603,
+          "chi_power_fraction": 0.9689566666083964,
+          "chi_normal_power_fraction": 0.619746913653332
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "native_acceleration_deficit_over_state_norm": 21.806028378075048,
+          "native_acceleration_relative_to_Dirac_acceleration": 0.9366951798539404,
+          "Psi_power_fraction": 0.04382562269157615,
+          "chi_power_fraction": 0.9561743773084239,
+          "chi_normal_power_fraction": 0.6175284085496792
+        }
+      ],
+      "maximum_acceleration_deficit_over_state_norm": 26.71982950359464,
+      "native_spectral_graph": {
+        "full_phase_invariance_relative": 2.010404691829758e-06,
+        "configuration_cross_block_relative": 2.8431225014378946e-06,
+        "cross_block_per_dt_squared": 0.7453175083232214,
+        "recurrence_graph_defect_per_dt_squared": 8.290618553441883e-10,
+        "previous_graph_condition": 1.0854144087143667,
+        "phase_condition": 1.041832228026782,
+        "retained_spectral_radius": 1.000009518011861
+      },
+      "independent_comparator": [
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "initial_span_relative_error": 2.8730085069199265e-15,
+          "previous_layer_difference_per_dt": 14.233562624510395,
+          "native_Dirac_centered_rate_relative_error": 23.48453946785138,
+          "native_Dirac_step_relative_error": 0.02776963502187436
+        },
+        {
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "initial_span_relative_error": 2.91968544569427e-15,
+          "previous_layer_difference_per_dt": 13.900673895592027,
+          "native_Dirac_centered_rate_relative_error": 22.654139274182405,
+          "native_Dirac_step_relative_error": 0.027150307820506838
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "initial_span_relative_error": 3.076854698228105e-15,
+          "previous_layer_difference_per_dt": 14.650817220435941,
+          "native_Dirac_centered_rate_relative_error": 26.504539568078716,
+          "native_Dirac_step_relative_error": 0.028609582933905555
+        },
+        {
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "initial_span_relative_error": 3.1237234945858437e-15,
+          "previous_layer_difference_per_dt": 14.134268885910492,
+          "native_Dirac_centered_rate_relative_error": 21.64813838768517,
+          "native_Dirac_step_relative_error": 0.02758357297708833
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "initial_span_relative_error": 3.0471663285525945e-15,
+          "previous_layer_difference_per_dt": 13.773866253250876,
+          "native_Dirac_centered_rate_relative_error": 23.586904629446792,
+          "native_Dirac_step_relative_error": 0.026882752525369303
+        },
+        {
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "initial_span_relative_error": 3.074916348861101e-15,
+          "previous_layer_difference_per_dt": 14.789250709388291,
+          "native_Dirac_centered_rate_relative_error": 23.9023348181501,
+          "native_Dirac_step_relative_error": 0.02887485377782973
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "initial_span_relative_error": 2.959028125984991e-15,
+          "previous_layer_difference_per_dt": 14.315052800292841,
+          "native_Dirac_centered_rate_relative_error": 25.263317707054217,
+          "native_Dirac_step_relative_error": 0.027938301424386597
+        },
+        {
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "initial_span_relative_error": 2.656254147050623e-15,
+          "previous_layer_difference_per_dt": 14.295166712710776,
+          "native_Dirac_centered_rate_relative_error": 22.21734859554825,
+          "native_Dirac_step_relative_error": 0.027913087667841348
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "initial_span_relative_error": 2.1265792642276863e-15,
+          "previous_layer_difference_per_dt": 10.005661369812692,
+          "native_Dirac_centered_rate_relative_error": 15.190124872676376,
+          "native_Dirac_step_relative_error": 0.01955134075462801
+        },
+        {
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "initial_span_relative_error": 2.270070836895259e-15,
+          "previous_layer_difference_per_dt": 11.726779221670649,
+          "native_Dirac_centered_rate_relative_error": 17.63388020356318,
+          "native_Dirac_step_relative_error": 0.02287546678921623
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "initial_span_relative_error": 2.236861384137203e-15,
+          "previous_layer_difference_per_dt": 11.22934678641737,
+          "native_Dirac_centered_rate_relative_error": 14.927190502447285,
+          "native_Dirac_step_relative_error": 0.021905051747259395
+        },
+        {
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "initial_span_relative_error": 2.1001019292820088e-15,
+          "previous_layer_difference_per_dt": 10.7993264197658,
+          "native_Dirac_centered_rate_relative_error": 17.707701479489852,
+          "native_Dirac_step_relative_error": 0.02109778847785731
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "initial_span_relative_error": 1.8834646709061227e-15,
+          "previous_layer_difference_per_dt": 12.145919778725755,
+          "native_Dirac_centered_rate_relative_error": 16.85555526047422,
+          "native_Dirac_step_relative_error": 0.023719415023041337
+        },
+        {
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "initial_span_relative_error": 1.9610672107085208e-15,
+          "previous_layer_difference_per_dt": 9.573028288765533,
+          "native_Dirac_centered_rate_relative_error": 15.038939827544445,
+          "native_Dirac_step_relative_error": 0.01867923665434455
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "initial_span_relative_error": 2.015694340875276e-15,
+          "previous_layer_difference_per_dt": 11.321823473579574,
+          "native_Dirac_centered_rate_relative_error": 15.468786329255671,
+          "native_Dirac_step_relative_error": 0.022107806858102624
+        },
+        {
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "initial_span_relative_error": 2.023023036125078e-15,
+          "previous_layer_difference_per_dt": 10.65270581725078,
+          "native_Dirac_centered_rate_relative_error": 17.392523324446113,
+          "native_Dirac_step_relative_error": 0.020789962864854215
+        }
+      ],
+      "maximum_rate_relative_error": 26.504539568078716
+    }
+  ],
+  "action_changed": false,
+  "runtime_projection": false,
+  "claim_boundary": "A finite packet-space diagnostic, not a full nonlinear moving orbit or a stage pass."
+}

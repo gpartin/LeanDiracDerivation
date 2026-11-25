@@ -16,17 +16,38 @@ density, and current already derived for the free linear sector.
 | Gate | Required result | Status |
 |---|---|---|
 | V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS; CLEAN-BRANCH REBUILD RECORDED IN `v4_001_revalidation.json`** |
-| V4-002 | Physical-sector rest and launch stability of that same orbit | **PASS ON THE FROZEN V4 RESEARCH ACTION; SEE `v4_002_exact_1197/v4_002_stage_gate.json`** |
-| V4-003 | Fixed localized four-component readout with controlled remainder | **PASS; SEE `v4_003_stage_gate.json`** |
-| V4-004 | Operational spin-one-half action on that localized carrier | **PASS; SEE `v4_004_stage_gate.json`, `v4_004_red_team.json`, AND `LeanDirac.V4.localized_readout_spin_half`** |
-| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **PASS AT SHORT-TIME TANGENT ORDER; SEE `v4_005_stage_gate.json` AND `v4_005_red_team.json`** |
-| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NEXT; EXACT ENDPOINT CONTROL RETAINED** |
+| V4-002 | Physical-sector rest and launch stability of that same orbit | **REVALIDATION REQUIRED; prior companion-launch stability retained** |
+| V4-003 | Fixed localized four-component readout with controlled remainder | **OPEN; recovered full carrier contrast spans translation but its native graph has an unresolved rate defect** |
+| V4-004 | Operational spin-one-half action on that localized carrier | **DEPENDENCY REVALIDATION REQUIRED; existing cubical theorem retained** |
+| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **DEPENDENCY REVALIDATION REQUIRED; earlier short-step result retained as conditional** |
+| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **OPEN; native nonlinear orbit not found** |
 | V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-006** |
 | V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-006; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
 | V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-006** |
 | V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-006** |
 
-### 2026-11-25 V4-005 closure
+### 2026-11-25 full-carrier movement revalidation (controlling)
+
+Audit of the earlier movement research recovered the native carrier-minus-
+vacuum contrast, including the third component of complex `chi`. The
+companion-only embedding used in the earlier approvals cannot represent the
+full physical translation direction: its relative missing norm is about 79%
+on each of three axes. The recovered contrast lift represents those specific
+translation differences to roundoff and retains both cubical copies. However,
+the tested two-layer native graph does not evolve that contrast like Dirac.
+The worst 100-cycle velocity-aware amplification is 33.11 at the coarse step
+and 33.09 at the half step. This is a counterexample to admitting that tested
+moving preparation, not a proof of instability of every physical preparation.
+
+No action was changed. V4-001 and all existing Lean declarations are intact;
+the exact rest orbit and previous restricted stability/spin/current results
+are still evidence within their original scopes. The current cumulative
+release boundary is V4-001 until the moving record is repaired and the
+dependent gates are revalidated. See the six-field RCA, recovered mechanism
+tests, and current verdict in
+[`V4_MOVING_CARRIER_REVALIDATION_RCA.md`](../experiments/v4_localized_electron/V4_MOVING_CARRIER_REVALIDATION_RCA.md).
+
+### 2026-11-25 V4-005 historical scoped closure
 
 V4-005 uses the exact V4-003 local `Psi`--`chi` carrier rule at every envelope
 center and advances both committed layers with the frozen V4 action.  For both

@@ -1,0 +1,300 @@
+{
+  "status": "NATIVE_MOVING_GRAPH_REVALIDATION",
+  "dt": 0.00390625,
+  "cycles": 100,
+  "steps": 8466,
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "native_branch_diagnostics": {
+    "native_selected_dimension": 256,
+    "expected_dimension": 256,
+    "clock_branch_gap": 2.1944249440055273e-06,
+    "top_graph_condition": 1.1000910318706805
+  },
+  "spin": [
+    {
+      "axis": 0,
+      "angle": 1.5707963267948966,
+      "two_layer_graph_commutator": 0.03944784172411368,
+      "commutator_per_dt": 10.098647481373103
+    },
+    {
+      "axis": 0,
+      "angle": 6.283185307179586,
+      "two_layer_graph_commutator": 8.418538237391094e-16,
+      "commutator_per_dt": 2.1551457887721202e-13
+    },
+    {
+      "axis": 0,
+      "angle": 12.566370614359172,
+      "two_layer_graph_commutator": 9.203081443508407e-16,
+      "commutator_per_dt": 2.3559888495381523e-13
+    },
+    {
+      "axis": 1,
+      "angle": 1.5707963267948966,
+      "two_layer_graph_commutator": 0.06270971523626814,
+      "commutator_per_dt": 16.053687100484645
+    },
+    {
+      "axis": 1,
+      "angle": 6.283185307179586,
+      "two_layer_graph_commutator": 7.9274319887522985e-16,
+      "commutator_per_dt": 2.0294225891205884e-13
+    },
+    {
+      "axis": 1,
+      "angle": 12.566370614359172,
+      "two_layer_graph_commutator": 8.541483520302523e-16,
+      "commutator_per_dt": 2.186619781197446e-13
+    },
+    {
+      "axis": 2,
+      "angle": 1.5707963267948966,
+      "two_layer_graph_commutator": 0.018577309510813426,
+      "commutator_per_dt": 4.755791234768237
+    },
+    {
+      "axis": 2,
+      "angle": 6.283185307179586,
+      "two_layer_graph_commutator": 1.1014202394060171e-15,
+      "commutator_per_dt": 2.819635812879404e-13
+    },
+    {
+      "axis": 2,
+      "angle": 12.566370614359172,
+      "two_layer_graph_commutator": 9.957613697273393e-16,
+      "commutator_per_dt": 2.5491491065019886e-13
+    }
+  ],
+  "cases": [
+    {
+      "copy": "plus",
+      "axis": 0,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 543.0387118714638,
+      "minimum_phase_space_norm_ratio": 0.9807683383316227,
+      "maximum_velocity_aware_norm_ratio": 33.10410841823789
+    },
+    {
+      "copy": "plus",
+      "axis": 0,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 539.810870138825,
+      "minimum_phase_space_norm_ratio": 0.9843512104584543,
+      "maximum_velocity_aware_norm_ratio": 33.10708247926194
+    },
+    {
+      "copy": "plus",
+      "axis": 1,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 565.6863794773184,
+      "minimum_phase_space_norm_ratio": 0.980176581921412,
+      "maximum_velocity_aware_norm_ratio": 33.113614775959114
+    },
+    {
+      "copy": "plus",
+      "axis": 1,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 541.2400270349367,
+      "minimum_phase_space_norm_ratio": 0.983364080659908,
+      "maximum_velocity_aware_norm_ratio": 33.103529883345075
+    },
+    {
+      "copy": "plus",
+      "axis": 2,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 532.7536903678282,
+      "minimum_phase_space_norm_ratio": 0.9802161961067829,
+      "maximum_velocity_aware_norm_ratio": 33.10229283746471
+    },
+    {
+      "copy": "plus",
+      "axis": 2,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 566.244575762675,
+      "minimum_phase_space_norm_ratio": 0.9841809655750338,
+      "maximum_velocity_aware_norm_ratio": 33.11255729072339
+    },
+    {
+      "copy": "plus",
+      "axis": 3,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 550.5926015272062,
+      "minimum_phase_space_norm_ratio": 0.9786226181452113,
+      "maximum_velocity_aware_norm_ratio": 33.10734993026076
+    },
+    {
+      "copy": "plus",
+      "axis": 3,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 549.5750728106225,
+      "minimum_phase_space_norm_ratio": 0.9851299605591185,
+      "maximum_velocity_aware_norm_ratio": 33.10815733835109
+    },
+    {
+      "copy": "minus",
+      "axis": 0,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 380.26368834660366,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.05171499780209
+    },
+    {
+      "copy": "minus",
+      "axis": 0,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 458.88641087612785,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.09628686430654
+    },
+    {
+      "copy": "minus",
+      "axis": 1,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 437.3049319614311,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.083772711381535
+    },
+    {
+      "copy": "minus",
+      "axis": 1,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 414.1649154296027,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.075499498262054
+    },
+    {
+      "copy": "minus",
+      "axis": 2,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 473.175918865803,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.10038864926351
+    },
+    {
+      "copy": "minus",
+      "axis": 2,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 366.01684838333915,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.041176563384774
+    },
+    {
+      "copy": "minus",
+      "axis": 3,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 438.2373730395034,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.08462832905371
+    },
+    {
+      "copy": "minus",
+      "axis": 3,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 411.17217485071893,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 33.07341009293605
+    }
+  ],
+  "samples": [
+    {
+      "step": 0,
+      "time": 0.0,
+      "maximum_norm_ratio": 1.0,
+      "maximum_velocity_aware_ratio": 1.0,
+      "maximum_readout_complement": 3.3962962850757652e-15
+    },
+    {
+      "step": 846,
+      "time": 3.3046875,
+      "maximum_norm_ratio": 56.29848760353775,
+      "maximum_velocity_aware_ratio": 3.4628883699536677,
+      "maximum_readout_complement": 0.007891639261031463
+    },
+    {
+      "step": 1693,
+      "time": 6.61328125,
+      "maximum_norm_ratio": 112.85847625918372,
+      "maximum_velocity_aware_ratio": 6.693091109390172,
+      "maximum_readout_complement": 0.007827241155726687
+    },
+    {
+      "step": 2539,
+      "time": 9.91796875,
+      "maximum_norm_ratio": 169.38633839107754,
+      "maximum_velocity_aware_ratio": 9.968774725260412,
+      "maximum_readout_complement": 0.007821826881075007
+    },
+    {
+      "step": 3386,
+      "time": 13.2265625,
+      "maximum_norm_ratio": 226.0070798002887,
+      "maximum_velocity_aware_ratio": 13.261909867829873,
+      "maximum_readout_complement": 0.007872825253798269
+    },
+    {
+      "step": 4233,
+      "time": 16.53515625,
+      "maximum_norm_ratio": 282.6558092817871,
+      "maximum_velocity_aware_ratio": 16.561437683500028,
+      "maximum_readout_complement": 0.008003478470432358
+    },
+    {
+      "step": 5079,
+      "time": 19.83984375,
+      "maximum_norm_ratio": 339.26625461551487,
+      "maximum_velocity_aware_ratio": 19.86109303457839,
+      "maximum_readout_complement": 0.00823063047772385
+    },
+    {
+      "step": 5926,
+      "time": 23.1484375,
+      "maximum_norm_ratio": 395.9730914233287,
+      "maximum_velocity_aware_ratio": 23.167719731942828,
+      "maximum_readout_complement": 0.00855503424195523
+    },
+    {
+      "step": 6772,
+      "time": 26.453125,
+      "maximum_norm_ratio": 452.6467325521788,
+      "maximum_velocity_aware_ratio": 26.477057042693232,
+      "maximum_readout_complement": 0.00899372179296626
+    },
+    {
+      "step": 7619,
+      "time": 29.76171875,
+      "maximum_norm_ratio": 509.42283295639123,
+      "maximum_velocity_aware_ratio": 29.793766560857442,
+      "maximum_readout_complement": 0.00954361837407336
+    },
+    {
+      "step": 8466,
+      "time": 33.0703125,
+      "maximum_norm_ratio": 566.244575762675,
+      "maximum_velocity_aware_ratio": 33.113614775959114,
+      "maximum_readout_complement": 0.010212440175627403
+    }
+  ],
+  "late_secular_slope": {
+    "worst_case": {
+      "copy": "plus",
+      "axis": 2,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 566.244575762675,
+      "minimum_phase_space_norm_ratio": 0.9841809655750338,
+      "maximum_velocity_aware_norm_ratio": 33.11255729072339
+    },
+    "Psi_power_fraction": 0.004818251668547899,
+    "chi_power_fraction": 0.9951817483314521,
+    "exterior_chi_power_fraction": 0.819625651716468,
+    "chi_radial_power_fraction": 0.005945214440070469,
+    "global_phase_power_fraction": 0.46355283722187834,
+    "stationary_slope_native_update_defect_per_dt_squared": 0.012549434662435445
+  },
+  "maximum_norm_ratio": 566.244575762675,
+  "minimum_norm_ratio": 0.9786226181452113,
+  "maximum_velocity_aware_norm_ratio": 33.113614775959114,
+  "claim_boundary": "Full unrestricted tangent only, using the same native moving graph. The underlying exact cubical spin identity remains independent; graph commutation is tested rather than assumed."
+}

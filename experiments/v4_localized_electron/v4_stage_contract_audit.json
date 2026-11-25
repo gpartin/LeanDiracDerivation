@@ -1,15 +1,15 @@
 {
   "status": "CURRENT_COHERENT_STAGE_AUDIT",
-  "release_boundary": "V4-005",
+  "release_boundary": "V4-001",
   "canonical_action_changed": false,
-  "research_action_admitted": true,
+  "research_action_admitted": false,
   "research_action_scope": "frozen V4 coherent chain only; canonical V40 and public main remain unchanged until V4-010",
   "stage_contract": {
     "V4-001": "PASS_EXACT_REST_EXISTENCE",
-    "V4-002": "PASS_PHYSICAL_SECTOR_STABILITY",
-    "V4-003": "PASS_FIXED_NATIVE_READOUT_WITH_CONTROLLED_REMAINDER",
-    "V4-004": "PASS_LOCALIZED_READOUT_SPIN_HALF",
-    "V4-005": "PASS_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT",
+    "V4-002": "REVALIDATION_REQUIRED_ON_FULL_CARRIER_CONTRAST",
+    "V4-003": "OPEN_FULL_CARRIER_NATIVE_READOUT",
+    "V4-004": "BLOCKED_BY_V4_003",
+    "V4-005": "BLOCKED_BY_V4_004",
     "V4-006": "OPEN_EXACT_ONE_CELL_HANDOFF",
     "V4-007": "OPEN_REPEATABLE_SECOND_HANDOFF",
     "V4-008": "OPEN_COARSE_DIRAC_COMPARISON",
@@ -24,6 +24,31 @@
     "maximum_Psi_exterior_fraction": 0.0,
     "maximum_chi_density_relative_residual": 0.0,
     "maximum_interval_energy_relative_drift": 2.0823712588111686e-15
+  },
+  "moving_carrier_revalidation": {
+    "same_action_hash": true,
+    "contrast_launch_bounded": false,
+    "coarse_velocity_aware_amplification": 33.113614775959114,
+    "fine_velocity_aware_amplification": 33.09184847851601,
+    "coarse_native_rate_error": 31.06785694488162,
+    "fine_native_rate_error": 26.504539568078716,
+    "one_cell_dirac_center_shift": [
+      -1.0001170193452682,
+      0.0,
+      0.0
+    ],
+    "one_cell_native_center_shift": [
+      0.0139649200390779,
+      2.1443031889453987,
+      2.4586705592318623
+    ],
+    "one_cell_native_center_shift_half_dt": [
+      0.019474292011223415,
+      2.1408964785979974,
+      2.4581201000105795
+    ],
+    "nonlinear_collocation_initial_defect": 0.8046334639865419,
+    "nonlinear_collocation_final_defect": 0.40877850076760985
   },
   "physical_sector_reachability": {
     "artifact": "v4_002_exact_1197/reach_100cycles_final.json",
@@ -81,5 +106,5 @@
   },
   "endpoint_locked": true,
   "neutral_translation_mode_required": false,
-  "claim_boundary": "V4-002 passes bounded physical-sector stability, V4-003 passes a fixed native-action-derived four-component readout, and V4-004 proves its cubical spin-one-half rotation law, and V4-005 closes short-time signed transport and center-resolved Noether current on the frozen B-normalized complete-frame research action. A complete cell crossing remains V4-006. The exact rigid hop remains an optional stronger control; V4-006 uses a solved crossing time and permits Dirac-predicted spreading."
+  "claim_boundary": "Earlier exact-rest, companion-launch, algebraic rotation and short-step conditional results are preserved. The recovered physical carrier contrast is not yet a proved moving sector; cumulative admission is reopened for V4-002 through V4-005. V4-006 did not complete a crossing. The nonlinear boundary screen is inconclusive, not a no-go theorem."
 }

@@ -1,0 +1,180 @@
+{
+  "status": "NATIVE_MARGINAL_TRANSLATION_DIAGNOSTIC",
+  "dt": 0.00390625,
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "nullspace_tests": [
+    {
+      "tol": 1e-07,
+      "axis": 0,
+      "null_dimension": 732,
+      "translation_null_overlap": 0.4321789686368255,
+      "translation_stationary_defect": 0.4971939054991466,
+      "jordan_compatibility_defect": 0.17407616675472068
+    },
+    {
+      "tol": 1e-07,
+      "axis": 1,
+      "null_dimension": 732,
+      "translation_null_overlap": 0.32703065461764275,
+      "translation_stationary_defect": 0.23780899587111737,
+      "jordan_compatibility_defect": 0.17602706415625324
+    },
+    {
+      "tol": 1e-07,
+      "axis": 2,
+      "null_dimension": 732,
+      "translation_null_overlap": 0.3746171535198758,
+      "translation_stationary_defect": 0.3768470079152902,
+      "jordan_compatibility_defect": 0.208725681667134
+    },
+    {
+      "tol": 1e-09,
+      "axis": 0,
+      "null_dimension": 657,
+      "translation_null_overlap": 0.2376903284587374,
+      "translation_stationary_defect": 0.4971939054991466,
+      "jordan_compatibility_defect": 0.08280105551837362
+    },
+    {
+      "tol": 1e-09,
+      "axis": 1,
+      "null_dimension": 657,
+      "translation_null_overlap": 0.19319453066557968,
+      "translation_stationary_defect": 0.23780899587111737,
+      "jordan_compatibility_defect": 0.060641887339775664
+    },
+    {
+      "tol": 1e-09,
+      "axis": 2,
+      "null_dimension": 657,
+      "translation_null_overlap": 0.28615681077503435,
+      "translation_stationary_defect": 0.3768470079152902,
+      "jordan_compatibility_defect": 0.10296210714294399
+    },
+    {
+      "tol": 1e-11,
+      "axis": 0,
+      "null_dimension": 364,
+      "translation_null_overlap": 0.20669841124856383,
+      "translation_stationary_defect": 0.4971939054991466,
+      "jordan_compatibility_defect": 0.17935616114728822
+    },
+    {
+      "tol": 1e-11,
+      "axis": 1,
+      "null_dimension": 364,
+      "translation_null_overlap": 0.15555708263255716,
+      "translation_stationary_defect": 0.23780899587111737,
+      "jordan_compatibility_defect": 0.15052779352021647
+    },
+    {
+      "tol": 1e-11,
+      "axis": 2,
+      "null_dimension": 364,
+      "translation_null_overlap": 0.10027505919617306,
+      "translation_stationary_defect": 0.3768470079152902,
+      "jordan_compatibility_defect": 0.2599487444715444
+    }
+  ],
+  "secular_slope_translation_overlap": [
+    {
+      "copy": "plus",
+      "axis": 0,
+      "sign": -1,
+      "overlap": 0.0596799288308083
+    },
+    {
+      "copy": "plus",
+      "axis": 0,
+      "sign": 1,
+      "overlap": 0.05959764340865893
+    },
+    {
+      "copy": "plus",
+      "axis": 1,
+      "sign": -1,
+      "overlap": 0.05944176153068346
+    },
+    {
+      "copy": "plus",
+      "axis": 1,
+      "sign": 1,
+      "overlap": 0.05984949906485313
+    },
+    {
+      "copy": "plus",
+      "axis": 2,
+      "sign": -1,
+      "overlap": 0.05951455013198573
+    },
+    {
+      "copy": "plus",
+      "axis": 2,
+      "sign": 1,
+      "overlap": 0.05975496244508742
+    },
+    {
+      "copy": "plus",
+      "axis": 3,
+      "sign": -1,
+      "overlap": 0.05950210356117486
+    },
+    {
+      "copy": "plus",
+      "axis": 3,
+      "sign": 1,
+      "overlap": 0.05982485929622074
+    },
+    {
+      "copy": "minus",
+      "axis": 0,
+      "sign": -1,
+      "overlap": 0.06370851632657847
+    },
+    {
+      "copy": "minus",
+      "axis": 0,
+      "sign": 1,
+      "overlap": 0.06194942876003377
+    },
+    {
+      "copy": "minus",
+      "axis": 1,
+      "sign": -1,
+      "overlap": 0.06308079665220068
+    },
+    {
+      "copy": "minus",
+      "axis": 1,
+      "sign": 1,
+      "overlap": 0.06220402558391238
+    },
+    {
+      "copy": "minus",
+      "axis": 2,
+      "sign": -1,
+      "overlap": 0.06261841563338646
+    },
+    {
+      "copy": "minus",
+      "axis": 2,
+      "sign": 1,
+      "overlap": 0.06302742801970614
+    },
+    {
+      "copy": "minus",
+      "axis": 3,
+      "sign": -1,
+      "overlap": 0.06328374513472032
+    },
+    {
+      "copy": "minus",
+      "axis": 3,
+      "sign": 1,
+      "overlap": 0.06203163486777219
+    }
+  ],
+  "claim_boundary": "Local linear drift only, not an obstruction to finite integer-cell relative-periodic motion."
+}

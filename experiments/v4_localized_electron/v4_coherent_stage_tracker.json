@@ -6,7 +6,7 @@
   "action_policy": {
     "canonical_baseline": "V40 complex-Psi/complex-chi C19 reciprocal action",
     "final_action_frozen": true,
-    "reason": "V4-002 passes rest, 100-cycle physical-sector stability, nonlinear, Noether, discrete-energy, timestep, and box gates on one exact research action.",
+    "reason": "Freeze the exact incumbent while resolving the full-carrier movement failure. The earlier 100-cycle stability claim was for the companion-only launch family, not the recovered physical carrier contrast.",
     "current_movement_incumbent": {
       "module": "live_clifford_bond_action.py",
       "link_source": "joint_face_laplacian_plus_frame_oscillator",
@@ -14,17 +14,17 @@
       "spacetime_scale": 0.01662049861495845,
       "parallel_matched_scale": 1.0,
       "parallel_clock_potential_scale": 1.0,
-      "admitted": true,
-      "admission_scope": "V4 research chain only; canonical V40 and public main remain unchanged until the complete V4 release passes"
+      "admitted": false,
+      "admission_scope": "Frozen research incumbent, not released as a complete moving-carrier action. Earlier scoped results and canonical V40 remain unchanged."
     }
   },
   "stages": [
     {"id": "V4-001", "status": "PASS", "rca_count": 0, "evidence": "v4_001_revalidation.json", "summary": "Exact localized rest solution rebuilt on the clean branch with only standard Lean foundations."},
-    {"id": "V4-002", "status": "PASS", "rca_count": 6, "evidence": "v4_002_exact_1197/v4_002_stage_gate.json; V4_002_B_FRAME_RCA.md", "summary": "The B-normalized complete six-face frame action keeps all 16 physical launches bounded for 100 cycles. Exact-action, rest, nonlinear, native Noether, discrete-energy, timestep, and side-5/7/9 checks pass. The 100-cycle Dirac comparator error remains a later mapping obligation."},
-    {"id": "V4-003", "status": "PASS", "rca_count": 1, "evidence": "v4_003_stage_gate.json", "summary": "A native-action-derived two-layer graph gives a fixed, well-conditioned readout of all four complex amplitudes for both copies. Its explicit complementary residual converges at second order."},
-    {"id": "V4-004", "status": "PASS", "rca_count": 0, "evidence": "v4_004_stage_gate.json; v4_004_red_team.json; LeanDirac.V4.localized_readout_spin_half", "summary": "The same frozen V4-003 carrier/readout has the native cube-incidence spin-one-half law on both copies and all axes: density preservation, 2pi sign reversal, and 4pi return. The finite-step graph remainder is retained."},
-    {"id": "V4-005", "status": "PASS", "rca_count": 1, "evidence": "v4_005_stage_gate.json; v4_005_red_team.json; LeanDirac.V4.localized_readout_transport_current", "summary": "Both copies and signed x/y/z packets match the exact C19 centered-time Dirac comparator for one native update. The center-resolved Noether current is derived from the same action and frozen carrier lift; microscopic corner circulation is retained separately."},
-    {"id": "V4-006", "status": "NEXT", "rca_count": 0, "summary": "One complete cell crossing against the independent Dirac comparator at a solved crossing time; neither a one-update jump nor rigid fractional snapshots are required."},
+    {"id": "V4-002", "status": "REVALIDATION_REQUIRED", "rca_count": 6, "evidence": "v4_002_exact_1197/v4_002_stage_gate.json; v4_native_graph_revalidation_dt.json; v4_native_graph_revalidation_dt_half.json", "summary": "Keep the earlier scoped companion-launch stability and exact-rest evidence. The recovered contrast launch is not yet an admitted native moving sector and excites a large chi disturbance. Revalidate only after V4-003 supplies a native moving preparation; this does not invalidate the exact resting orbit."},
+    {"id": "V4-003", "status": "OPEN", "rca_count": 1, "evidence": "v4_003_stage_gate.json; v4_003_moving_native_graph_dt.json; v4_003_moving_native_graph_dt_half.json; v4_003_native_chi_response_dt.json", "summary": "The old companion lift omits about 79% of the full native translation direction. The recovered carrier-minus-vacuum lift spans it, but its tested native graph does not reproduce the Dirac rate. Derive the missing joint field and velocity response; do not fit the graph to the comparator."},
+    {"id": "V4-004", "status": "DEPENDENCY_REVALIDATION_REQUIRED", "rca_count": 0, "evidence": "v4_004_stage_gate.json; v4_004_red_team.json; LeanDirac.V4.localized_readout_spin_half; v4_native_graph_revalidation_dt.json", "summary": "Cubical spin algebra and the published conditional theorem are unchanged. The moving native two-layer graph must supply their same-carrier hypotheses; the newly tested graph is not covariant enough."},
+    {"id": "V4-005", "status": "DEPENDENCY_REVALIDATION_REQUIRED", "rca_count": 1, "evidence": "v4_005_stage_gate.json; v4_005_red_team.json; LeanDirac.V4.localized_readout_transport_current", "summary": "Retain the conditional current theorem and local-step comparison. Repeat with the corrected native moving embedding and a rate-level convergence check before a cumulative pass."},
+    {"id": "V4-006", "status": "OPEN", "rca_count": 0, "evidence": "v4_006_one_cell_crossing.json; v4_006_one_cell_crossing_dt_half.json; v4_006_current_action_relative_orbit.json; V4_MOVING_CARRIER_REVALIDATION_RCA.md", "summary": "The one-cell linearized comparison does not cross; the nonlinear variational boundary-value screen reduced but did not close the residual. Exact same-assignment endpoint remains the target."},
     {"id": "V4-007", "status": "NOT_STARTED__BLOCKED_BY_V4_006", "rca_count": 0, "summary": "Second unreset crossing in both directions."},
     {"id": "V4-008", "status": "NOT_STARTED__BLOCKED_BY_V4_006", "rca_count": 0, "summary": "Same-state mass, time, transport, density, current, and phase map."},
     {"id": "V4-009", "status": "NOT_STARTED__BLOCKED_BY_V4_006", "rca_count": 0, "summary": "Axes, diagonal, separately measured copies, physically admissible perturbations, timestep, and box robustness."},

@@ -26,6 +26,13 @@ def main() -> None:
     stage4 = load("v4_004_stage_gate.json")
     stage5 = load("v4_005_stage_gate.json")
     stage5_red_team = load("v4_005_red_team.json")
+    moved_coarse = load("v4_native_graph_revalidation_dt.json")
+    moved_fine = load("v4_native_graph_revalidation_dt_half.json")
+    graph_coarse = load("v4_003_moving_native_graph_dt.json")
+    graph_fine = load("v4_003_moving_native_graph_dt_half.json")
+    cell_crossing = load("v4_006_one_cell_crossing.json")
+    cell_crossing_fine = load("v4_006_one_cell_crossing_dt_half.json")
+    orbit_screen = load("v4_006_current_action_relative_orbit.json")
     hop = load("v4_006_stable_action_exact_hop_xplus_16_screen.json")
     lock = (HERE / "EXACT_TRANSLATION_MAP_LOCK.md").read_text(
         encoding="utf-8")
@@ -53,7 +60,16 @@ def main() -> None:
 
     physical_growth = bool(
         reachability["physical_launches_exhibit_material_growth"])
-    stage2_pass = stage2["status"] == "PASS" and not physical_growth
+    moving_evidence = (moved_coarse, moved_fine, graph_coarse, graph_fine,
+                       cell_crossing, cell_crossing_fine, orbit_screen)
+    same_action = all(row["action_sha256"] == stage2["action_sha256"]
+                      for row in moving_evidence)
+    # The historical <2 bound is from V4-002's existing gate. The recovered
+    # contrast launch is not yet a proven moving native sector, so failure
+    # here reopens cumulative admission, not the old exact-rest theorem.
+    contrast_bounded = all(row["maximum_velocity_aware_norm_ratio"] < 2
+                           for row in (moved_coarse, moved_fine))
+    stage2_pass = stage2["status"] == "PASS" and not physical_growth and same_action and contrast_bounded
     stage3_pass = stage2_pass and stage3["status"] == "PASS"
     stage4_pass = stage3_pass and stage4["status"] == "PASS"
     stage5_pass = (
@@ -78,12 +94,10 @@ def main() -> None:
             "V4-002": (
                 "PASS_PHYSICAL_SECTOR_STABILITY"
                 if stage2_pass else
-                "FAIL_PHYSICAL_DIRAC_LAUNCH_GROWTH"
-                if physical_growth else "OPEN_PHYSICAL_SECTOR_STABILITY"),
+                "REVALIDATION_REQUIRED_ON_FULL_CARRIER_CONTRAST"),
             "V4-003": (
                 "PASS_FIXED_NATIVE_READOUT_WITH_CONTROLLED_REMAINDER"
-                if stage3_pass else
-                "NEXT_FIXED_READOUT_WITH_CONTROLLED_REMAINDER"),
+                if stage3_pass else "OPEN_FULL_CARRIER_NATIVE_READOUT"),
             "V4-004": (
                 "PASS_LOCALIZED_READOUT_SPIN_HALF" if stage4_pass else
                 "NEXT_OPERATIONAL_SPIN" if stage3_pass else
@@ -94,7 +108,7 @@ def main() -> None:
                 "NEXT_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT"
                 if stage4_pass else "BLOCKED_BY_V4_004"),
             "V4-006": (
-                "PASS_EXACT_ONE_CELL_HANDOFF" if hop_pass
+                "PASS_EXACT_ONE_CELL_HANDOFF" if hop_pass and stage5_pass
                 else "OPEN_EXACT_ONE_CELL_HANDOFF"),
             "V4-007": "OPEN_REPEATABLE_SECOND_HANDOFF",
             "V4-008": "OPEN_COARSE_DIRAC_COMPARISON",
@@ -102,6 +116,19 @@ def main() -> None:
             "V4-010": "OPEN_ANALYTIC_THEOREM_AND_RELEASE_AUDIT",
         },
         "historical_exact_orbit_evidence": rest,
+        "moving_carrier_revalidation": {
+            "same_action_hash": same_action,
+            "contrast_launch_bounded": contrast_bounded,
+            "coarse_velocity_aware_amplification": moved_coarse["maximum_velocity_aware_norm_ratio"],
+            "fine_velocity_aware_amplification": moved_fine["maximum_velocity_aware_norm_ratio"],
+            "coarse_native_rate_error": graph_coarse["rows"][1]["maximum_rate_relative_error"],
+            "fine_native_rate_error": graph_fine["rows"][1]["maximum_rate_relative_error"],
+            "one_cell_dirac_center_shift": cell_crossing["Dirac_center_shift"],
+            "one_cell_native_center_shift": cell_crossing["native_center_shift"],
+            "one_cell_native_center_shift_half_dt": cell_crossing_fine["native_center_shift"],
+            "nonlinear_collocation_initial_defect": orbit_screen["initial_acceleration_defect_over_contrast_norm"],
+            "nonlinear_collocation_final_defect": orbit_screen["final_acceleration_defect_over_contrast_norm"],
+        },
         "physical_sector_reachability": {
             "artifact": "v4_002_exact_1197/reach_100cycles_final.json",
             "case_count": reachability["case_count"],
@@ -141,16 +168,12 @@ def main() -> None:
         "endpoint_locked": endpoint_locked,
         "neutral_translation_mode_required": False,
         "claim_boundary": (
-            "V4-002 passes bounded physical-sector stability, V4-003 passes "
-            "a fixed native-action-derived four-component readout, and "
-            "V4-004 proves its cubical spin-one-half rotation law, and "
-            "V4-005 closes short-time signed transport and center-resolved "
-            "Noether current on the frozen B-normalized complete-frame "
-            "research action. A complete cell crossing remains V4-006. The "
-            "exact rigid hop remains "
-            "an optional stronger "
-            "control; V4-006 uses a solved crossing time and permits "
-            "Dirac-predicted spreading."),
+            "Earlier exact-rest, companion-launch, algebraic rotation and "
+            "short-step conditional results are preserved. The recovered "
+            "physical carrier contrast is not yet a proved moving sector; "
+            "cumulative admission is reopened for V4-002 through V4-005. "
+            "V4-006 did not complete a crossing. The nonlinear boundary "
+            "screen is inconclusive, not a no-go theorem."),
     }
     output = HERE / "v4_stage_contract_audit.json"
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

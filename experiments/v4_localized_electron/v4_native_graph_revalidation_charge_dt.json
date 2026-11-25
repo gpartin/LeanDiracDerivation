@@ -1,0 +1,310 @@
+{
+  "status": "NATIVE_MOVING_GRAPH_REVALIDATION",
+  "dt": 0.00390625,
+  "cycles": 100,
+  "steps": 8466,
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "native_branch_diagnostics": {
+    "native_selected_dimension": 256,
+    "expected_dimension": 256,
+    "clock_branch_gap": 2.194459874994642e-06,
+    "top_graph_condition": 1.1000694161610582
+  },
+  "one_time_native_charge_preparation": {
+    "approximate_stationary_null_dimension": 657,
+    "incompatible_charge_rank": 405,
+    "null_tolerance": 1e-09,
+    "stationary_null_residual": 4.28330123071654e-11,
+    "maximum_initial_incompatible_charge": 0.26106938404692076,
+    "maximum_corrected_incompatible_charge": 3.266892999382792e-15,
+    "maximum_initial_velocity_relative_change": 0.46874230996000193,
+    "maximum_incompatible_charge_drift": 3.8280310488796025e-09
+  },
+  "spin": [
+    {
+      "axis": 0,
+      "angle": 1.5707963267948966,
+      "two_layer_graph_commutator": 0.03943958745238093,
+      "commutator_per_dt": 10.096534387809518
+    },
+    {
+      "axis": 0,
+      "angle": 6.283185307179586,
+      "two_layer_graph_commutator": 9.825418885592519e-16,
+      "commutator_per_dt": 2.515307234711685e-13
+    },
+    {
+      "axis": 0,
+      "angle": 12.566370614359172,
+      "two_layer_graph_commutator": 7.825585014880675e-16,
+      "commutator_per_dt": 2.0033497638094528e-13
+    },
+    {
+      "axis": 1,
+      "angle": 1.5707963267948966,
+      "two_layer_graph_commutator": 0.06269667205723042,
+      "commutator_per_dt": 16.05034804665099
+    },
+    {
+      "axis": 1,
+      "angle": 6.283185307179586,
+      "two_layer_graph_commutator": 8.935598589859285e-16,
+      "commutator_per_dt": 2.287513239003977e-13
+    },
+    {
+      "axis": 1,
+      "angle": 12.566370614359172,
+      "two_layer_graph_commutator": 7.591119445025895e-16,
+      "commutator_per_dt": 1.9433265779266292e-13
+    },
+    {
+      "axis": 2,
+      "angle": 1.5707963267948966,
+      "two_layer_graph_commutator": 0.018573488542514997,
+      "commutator_per_dt": 4.754813066883839
+    },
+    {
+      "axis": 2,
+      "angle": 6.283185307179586,
+      "two_layer_graph_commutator": 7.542304023963248e-16,
+      "commutator_per_dt": 1.9308298301345915e-13
+    },
+    {
+      "axis": 2,
+      "angle": 12.566370614359172,
+      "two_layer_graph_commutator": 8.184435660748319e-16,
+      "commutator_per_dt": 2.0952155291515698e-13
+    }
+  ],
+  "cases": [
+    {
+      "copy": "plus",
+      "axis": 0,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 316.84998348122593,
+      "minimum_phase_space_norm_ratio": 0.9849796863742734,
+      "maximum_velocity_aware_norm_ratio": 21.83766135699035
+    },
+    {
+      "copy": "plus",
+      "axis": 0,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 312.8096662535305,
+      "minimum_phase_space_norm_ratio": 0.9884644251289847,
+      "maximum_velocity_aware_norm_ratio": 21.700482052947624
+    },
+    {
+      "copy": "plus",
+      "axis": 1,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 330.1095363765688,
+      "minimum_phase_space_norm_ratio": 0.9867025452829198,
+      "maximum_velocity_aware_norm_ratio": 21.842785141573714
+    },
+    {
+      "copy": "plus",
+      "axis": 1,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 314.2862693778387,
+      "minimum_phase_space_norm_ratio": 0.9861127454558,
+      "maximum_velocity_aware_norm_ratio": 21.741096414947204
+    },
+    {
+      "copy": "plus",
+      "axis": 2,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 308.28230843239896,
+      "minimum_phase_space_norm_ratio": 0.98431218003177,
+      "maximum_velocity_aware_norm_ratio": 21.669870298642774
+    },
+    {
+      "copy": "plus",
+      "axis": 2,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 330.935015666802,
+      "minimum_phase_space_norm_ratio": 0.9883824333063013,
+      "maximum_velocity_aware_norm_ratio": 21.87509191344595
+    },
+    {
+      "copy": "plus",
+      "axis": 3,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 320.868641448778,
+      "minimum_phase_space_norm_ratio": 0.984197731767131,
+      "maximum_velocity_aware_norm_ratio": 21.81344848799758
+    },
+    {
+      "copy": "plus",
+      "axis": 3,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 319.9094005603561,
+      "minimum_phase_space_norm_ratio": 0.9886755715772186,
+      "maximum_velocity_aware_norm_ratio": 21.79186286341288
+    },
+    {
+      "copy": "minus",
+      "axis": 0,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 230.68384873008503,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.577366403631924
+    },
+    {
+      "copy": "minus",
+      "axis": 0,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 273.12929717343275,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.2476184780641
+    },
+    {
+      "copy": "minus",
+      "axis": 1,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 263.2829342457288,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.45483929490895
+    },
+    {
+      "copy": "minus",
+      "axis": 1,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 247.2046557950816,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.285230956848462
+    },
+    {
+      "copy": "minus",
+      "axis": 2,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 286.1544024233741,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.5721980024966
+    },
+    {
+      "copy": "minus",
+      "axis": 2,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 216.9559894025354,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.098908863384153
+    },
+    {
+      "copy": "minus",
+      "axis": 3,
+      "sign": -1,
+      "maximum_phase_space_norm_ratio": 265.88201078440625,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.61466475007026
+    },
+    {
+      "copy": "minus",
+      "axis": 3,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 242.95476138342565,
+      "minimum_phase_space_norm_ratio": 1.0,
+      "maximum_velocity_aware_norm_ratio": 22.077877299972695
+    }
+  ],
+  "samples": [
+    {
+      "step": 0,
+      "time": 0.0,
+      "maximum_norm_ratio": 1.0,
+      "maximum_velocity_aware_ratio": 1.0,
+      "maximum_readout_complement": 0.01707505609069618
+    },
+    {
+      "step": 846,
+      "time": 3.3046875,
+      "maximum_norm_ratio": 33.24390515214345,
+      "maximum_velocity_aware_ratio": 2.4561148441576663,
+      "maximum_readout_complement": 0.30391274967893744
+    },
+    {
+      "step": 1693,
+      "time": 6.61328125,
+      "maximum_norm_ratio": 65.97685515928882,
+      "maximum_velocity_aware_ratio": 4.600107246492835,
+      "maximum_readout_complement": 0.3063211008618566
+    },
+    {
+      "step": 2539,
+      "time": 9.91796875,
+      "maximum_norm_ratio": 98.96778484914218,
+      "maximum_velocity_aware_ratio": 6.8191582595534435,
+      "maximum_readout_complement": 0.30674225492907325
+    },
+    {
+      "step": 3386,
+      "time": 13.2265625,
+      "maximum_norm_ratio": 131.5686582328689,
+      "maximum_velocity_aware_ratio": 9.030175600449688,
+      "maximum_readout_complement": 0.30691163870669097
+    },
+    {
+      "step": 4233,
+      "time": 16.53515625,
+      "maximum_norm_ratio": 164.84931540640932,
+      "maximum_velocity_aware_ratio": 11.288312398403114,
+      "maximum_readout_complement": 0.3061350362830012
+    },
+    {
+      "step": 5079,
+      "time": 19.83984375,
+      "maximum_norm_ratio": 197.87536925390785,
+      "maximum_velocity_aware_ratio": 13.541237148784832,
+      "maximum_readout_complement": 0.30598243500645744
+    },
+    {
+      "step": 5926,
+      "time": 23.1484375,
+      "maximum_norm_ratio": 230.76349923235713,
+      "maximum_velocity_aware_ratio": 15.787856552621001,
+      "maximum_readout_complement": 0.3057276214474609
+    },
+    {
+      "step": 6772,
+      "time": 26.453125,
+      "maximum_norm_ratio": 264.16215353020056,
+      "maximum_velocity_aware_ratio": 18.057357184572645,
+      "maximum_readout_complement": 0.30492294114470775
+    },
+    {
+      "step": 7619,
+      "time": 29.76171875,
+      "maximum_norm_ratio": 297.3436526324591,
+      "maximum_velocity_aware_ratio": 20.32280479849531,
+      "maximum_readout_complement": 0.30444048661167206
+    },
+    {
+      "step": 8466,
+      "time": 33.0703125,
+      "maximum_norm_ratio": 330.935015666802,
+      "maximum_velocity_aware_ratio": 22.61466475007026,
+      "maximum_readout_complement": 0.30376973368057375
+    }
+  ],
+  "late_secular_slope": {
+    "worst_case": {
+      "copy": "plus",
+      "axis": 2,
+      "sign": 1,
+      "maximum_phase_space_norm_ratio": 330.935015666802,
+      "minimum_phase_space_norm_ratio": 0.9883824333063013,
+      "maximum_velocity_aware_norm_ratio": 21.87509191344595
+    },
+    "Psi_power_fraction": 0.03030340311687177,
+    "chi_power_fraction": 0.9696965968831283,
+    "exterior_chi_power_fraction": 0.4782877602017417,
+    "chi_radial_power_fraction": 0.02129932588217684,
+    "global_phase_power_fraction": 0.008399775600233842,
+    "stationary_slope_native_update_defect_per_dt_squared": 0.06326508709311701
+  },
+  "maximum_norm_ratio": 330.935015666802,
+  "minimum_norm_ratio": 0.984197731767131,
+  "maximum_velocity_aware_norm_ratio": 22.61466475007026,
+  "claim_boundary": "Full unrestricted tangent only, using the same native moving graph or explicitly labeled one-time conserved-charge diagnostic. The underlying exact cubical spin identity remains independent; graph commutation is tested rather than assumed."
+}

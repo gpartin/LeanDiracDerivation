@@ -1,0 +1,185 @@
+{
+  "status": "RECIPROCAL_VACUUM_ORIENTATION_TANGENT_PROBE_NOT_ADMITTED",
+  "baseline_action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "baseline_tangent_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "rest_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "dt": 0.00390625,
+  "cycles": 10,
+  "checks": [
+    {
+      "kind": "dyad",
+      "rest_square_norm": 0.0,
+      "rest_gradient_norm": 0.0,
+      "jacobian_relative_defect": 2.367373875065477e-09
+    },
+    {
+      "kind": "complex_field",
+      "rest_square_norm": 0.0,
+      "rest_gradient_norm": 0.0,
+      "jacobian_relative_defect": 1.6761812385100075e-09
+    }
+  ],
+  "rows": [
+    {
+      "kind": "dyad",
+      "strength": 0,
+      "native_graph": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 2.194417718743245e-06,
+        "top_graph_condition": 1.1000955101859247
+      },
+      "graph": {
+        "full_phase_invariance_relative": 9.271779613980696e-06,
+        "configuration_cross_block_relative": 1.3111800974973466e-05,
+        "cross_block_per_dt_squared": 0.8593573170700175,
+        "recurrence_graph_defect_per_dt_squared": 2.2846862336678432e-10,
+        "previous_graph_condition": 1.2102102139597253,
+        "phase_condition": 1.1000955101859233,
+        "retained_spectral_radius": 1.0000189049152661
+      },
+      "maximum_velocity_aware_norm_ratio": 3.4666202579173437,
+      "worst_case": [
+        "minus",
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "dyad",
+      "strength": 1,
+      "native_graph": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 1.5099017782391539e-06,
+        "top_graph_condition": 1.117614044262456
+      },
+      "graph": {
+        "full_phase_invariance_relative": 9.896015851706883e-06,
+        "configuration_cross_block_relative": 1.3994391879824703e-05,
+        "cross_block_per_dt_squared": 0.9172266439250811,
+        "recurrence_graph_defect_per_dt_squared": 2.3116996006937018e-10,
+        "previous_graph_condition": 1.2490612809293171,
+        "phase_condition": 1.117614044262458,
+        "retained_spectral_radius": 1.0000200794091756
+      },
+      "maximum_velocity_aware_norm_ratio": 3.467666383567992,
+      "worst_case": [
+        "minus",
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "dyad",
+      "strength": 19,
+      "native_graph": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 9.031711076548882e-07,
+        "top_graph_condition": 1.0334268632383412
+      },
+      "graph": {
+        "full_phase_invariance_relative": 8.108166259560777e-06,
+        "configuration_cross_block_relative": 1.1466620794840154e-05,
+        "cross_block_per_dt_squared": 0.7514840488854486,
+        "recurrence_graph_defect_per_dt_squared": 2.2557042719631252e-10,
+        "previous_graph_condition": 1.0679710563234863,
+        "phase_condition": 1.0334268632383408,
+        "retained_spectral_radius": 1.0000281123002992
+      },
+      "maximum_velocity_aware_norm_ratio": 3.4003054873403737,
+      "worst_case": [
+        "minus",
+        2,
+        -1
+      ]
+    },
+    {
+      "kind": "dyad",
+      "strength": 1197,
+      "native_graph": {
+        "native_selected_dimension": 257,
+        "expected_dimension": 256,
+        "clock_branch_gap": 0.0,
+        "branch_not_separated": true
+      }
+    },
+    {
+      "kind": "complex_field",
+      "strength": 1,
+      "native_graph": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 1.4609777210916151e-06,
+        "top_graph_condition": 1.0534631477434697
+      },
+      "graph": {
+        "full_phase_invariance_relative": 5.9082994314119485e-06,
+        "configuration_cross_block_relative": 8.35550242359476e-06,
+        "cross_block_per_dt_squared": 0.5475986277836978,
+        "recurrence_graph_defect_per_dt_squared": 2.2932232016475311e-10,
+        "previous_graph_condition": 1.1097846834019496,
+        "phase_condition": 1.053463147743469,
+        "retained_spectral_radius": 1.0000198971159278
+      },
+      "maximum_velocity_aware_norm_ratio": 3.4707464297108817,
+      "worst_case": [
+        "minus",
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "complex_field",
+      "strength": 19,
+      "native_graph": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 4.5858308076243275e-07,
+        "top_graph_condition": 1.020182575976562
+      },
+      "graph": {
+        "full_phase_invariance_relative": 5.722999785878045e-06,
+        "configuration_cross_block_relative": 8.093525607521257e-06,
+        "cross_block_per_dt_squared": 0.5304196937568735,
+        "recurrence_graph_defect_per_dt_squared": 2.2169746699058608e-10,
+        "previous_graph_condition": 1.0407724414854562,
+        "phase_condition": 1.020182575976562,
+        "retained_spectral_radius": 1.0000232853939017
+      },
+      "maximum_velocity_aware_norm_ratio": 3.2661531601080425,
+      "worst_case": [
+        "plus",
+        2,
+        -1
+      ]
+    },
+    {
+      "kind": "complex_field",
+      "strength": 1197,
+      "native_graph": {
+        "native_selected_dimension": 256,
+        "expected_dimension": 256,
+        "clock_branch_gap": 3.3598603965571483e-06,
+        "top_graph_condition": 1.0653680207824743
+      },
+      "graph": {
+        "full_phase_invariance_relative": 7.447589775335005e-05,
+        "configuration_cross_block_relative": 0.00010532287114892865,
+        "cross_block_per_dt_squared": 6.902695704719694,
+        "recurrence_graph_defect_per_dt_squared": 2.2672122116550286e-10,
+        "previous_graph_condition": 1.1350093622013075,
+        "phase_condition": 1.0653680207824752,
+        "retained_spectral_radius": 1.0001385878278293
+      },
+      "maximum_velocity_aware_norm_ratio": 3.4256166918045796,
+      "worst_case": [
+        "minus",
+        2,
+        1
+      ]
+    }
+  ],
+  "claim_boundary": "Rest-null reciprocal C19 potential differences, exact Hessians at zero square residual, diagnostic strengths only. No change to incumbent action or physical claim."
+}
