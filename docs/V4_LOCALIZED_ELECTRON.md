@@ -18,13 +18,29 @@ density, and current already derived for the free linear sector.
 | V4-001 | Exact unrestricted localized rest orbit on all periodic boxes `L >= 3` | **PASS; CLEAN-BRANCH REBUILD RECORDED IN `v4_001_revalidation.json`** |
 | V4-002 | Physical-sector rest and launch stability of that same orbit | **PASS ON THE FROZEN V4 RESEARCH ACTION; SEE `v4_002_exact_1197/v4_002_stage_gate.json`** |
 | V4-003 | Fixed localized four-component readout with controlled remainder | **PASS; SEE `v4_003_stage_gate.json`** |
-| V4-004 | Operational spin-one-half action on that localized carrier | **NEXT** |
-| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NOT STARTED; BLOCKED BY V4-004; HISTORICAL CONTROLS RETAINED** |
-| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-004; EXACT ENDPOINT CONTROL RETAINED** |
-| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-004** |
-| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-004; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
-| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-004** |
-| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-004** |
+| V4-004 | Operational spin-one-half action on that localized carrier | **PASS; SEE `v4_004_stage_gate.json`, `v4_004_red_team.json`, AND `LeanDirac.V4.localized_readout_spin_half`** |
+| V4-005 | Integer cell-shift covariance and signed native current for the same readout | **NEXT; HISTORICAL CONTROLS RETAINED** |
+| V4-006 | Exact free one-cell relative-periodic handoff of both committed layers | **NOT STARTED; BLOCKED BY V4-005; EXACT ENDPOINT CONTROL RETAINED** |
+| V4-007 | Repeat the identical handoff into the next cell in both directions | **NOT STARTED; BLOCKED BY V4-005** |
+| V4-008 | Coarse-grained agreement of that hopping state with Dirac mass, transport, density, and current | **NOT STARTED; BLOCKED BY V4-005; HISTORICAL TANGENT EVIDENCE IS NOT A PASS** |
+| V4-009 | Robustness, all three axes, diagonal control, and both cubical copies | **NOT STARTED; BLOCKED BY V4-005** |
+| V4-010 | Cumulative localized Dirac-electron theorem and clean release audit | **NOT STARTED; BLOCKED BY V4-005** |
+
+### 2026-11-25 V4-004 closure
+
+V4-004 applies the cube-incidence rotation generators to the exact carrier
+embedding and fixed readout frozen by V4-003.  The one-half scale is not an
+input spinor rule: it is the unique nonzero solution of the native cubical
+closure relation already proved in Lean.  Both exhaustive cubical copies and
+all three rotation axes preserve the four-component density to `2.5e-16`,
+reverse sign after `2pi` to `2.6e-16`, and return after `4pi` to `3.4e-16`.
+The fixed-readout covariance defect is below `6.8e-15`.
+
+The quarter-turn mismatch between the current- and previous-layer graphs is
+not hidden.  It falls from `3.2862e-4` at `dt=1/256` to `1.6450e-4` at
+`dt=1/512`, a refinement ratio of `0.50060`.  Thus this gate establishes the
+localized readout's operational spin-one-half transformation, not a free
+torque trajectory.  Translation and native current remain V4-005 onward.
 
 ### 2026-11-25 V4-003 closure
 

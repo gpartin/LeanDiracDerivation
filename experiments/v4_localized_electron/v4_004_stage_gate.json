@@ -1,0 +1,20 @@
+{
+  "stage": "V4-004",
+  "status": "PASS",
+  "checks": {
+    "same_frozen_action": true,
+    "exact_same_v4_003_readout": true,
+    "both_copies_three_axes": true,
+    "density_preserved": true,
+    "two_pi_sign_reversal": true,
+    "four_pi_return": true,
+    "fixed_readout_covariant": true,
+    "finite_step_graph_remainder_shrinks": true,
+    "Lean_theorem_declared": true
+  },
+  "coarse_evidence": "v4_004_dt.json",
+  "fine_evidence": "v4_004_dt_half.json",
+  "graph_remainder_refinement_ratio": 0.5005953628909128,
+  "Lean_theorem": "LeanDirac.V4.localized_readout_spin_half",
+  "claim_boundary": "The same V4-003 localized readout has the native cubical density-preserving 2pi sign reversal and 4pi return. The quarter-turn two-layer graph mismatch is retained as a finite-step diagnostic. This does not prove an externally torqued trajectory, translation, or current."
+}

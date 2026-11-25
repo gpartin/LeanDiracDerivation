@@ -1,6 +1,6 @@
 {
   "status": "CURRENT_COHERENT_STAGE_AUDIT",
-  "release_boundary": "V4-003",
+  "release_boundary": "V4-004",
   "canonical_action_changed": false,
   "research_action_admitted": true,
   "research_action_scope": "frozen V4 coherent chain only; canonical V40 and public main remain unchanged until V4-010",
@@ -8,8 +8,8 @@
     "V4-001": "PASS_EXACT_REST_EXISTENCE",
     "V4-002": "PASS_PHYSICAL_SECTOR_STABILITY",
     "V4-003": "PASS_FIXED_NATIVE_READOUT_WITH_CONTROLLED_REMAINDER",
-    "V4-004": "NEXT_OPERATIONAL_SPIN",
-    "V4-005": "PARTIAL_INTEGER_SHIFT_COVARIANCE_AND_CURRENT",
+    "V4-004": "PASS_LOCALIZED_READOUT_SPIN_HALF",
+    "V4-005": "NEXT_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT",
     "V4-006": "OPEN_EXACT_ONE_CELL_HANDOFF",
     "V4-007": "OPEN_REPEATABLE_SECOND_HANDOFF",
     "V4-008": "OPEN_COARSE_DIRAC_COMPARISON",
@@ -39,6 +39,12 @@
     "maximum_coarse_complementary_residual": 1.5134804307940787e-05,
     "maximum_fine_complementary_residual": 3.7906506599296367e-06
   },
+  "localized_spin_readout": {
+    "artifact": "v4_004_stage_gate.json",
+    "status": "PASS",
+    "Lean_theorem": "LeanDirac.V4.localized_readout_spin_half",
+    "graph_remainder_refinement_ratio": 0.5005953628909128
+  },
   "finite_hop_screen": {
     "axis": 0,
     "sign": 1,
@@ -58,5 +64,5 @@
   },
   "endpoint_locked": true,
   "neutral_translation_mode_required": false,
-  "claim_boundary": "V4-002 passes bounded physical-sector stability and V4-003 passes a fixed native-action-derived four-component readout on the frozen B-normalized complete-frame research action. Dirac transport/current remains V4-005. The exact rigid hop remains an optional stronger control; V4-006 uses a solved crossing time and permits Dirac-predicted spreading."
+  "claim_boundary": "V4-002 passes bounded physical-sector stability, V4-003 passes a fixed native-action-derived four-component readout, and V4-004 proves its cubical spin-one-half rotation law on the frozen B-normalized complete-frame research action. Dirac transport/current remains V4-005. The exact rigid hop remains an optional stronger control; V4-006 uses a solved crossing time and permits Dirac-predicted spreading."
 }

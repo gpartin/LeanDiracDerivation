@@ -1,0 +1,80 @@
+{
+  "stage": "V4-004",
+  "status": "OPERATIONAL_SPIN_AUDIT",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "rest_cache_sha256": "142af61ef28a8a727da343742792bedc1c83541f1dcea825c2bcbe415024d80d",
+  "dt": 0.00390625,
+  "rotation_source": "native cubical incidence plane bivectors with unique nonzero closure scale; LeanDirac.V2.LorentzSpin",
+  "chi_scale_source": "native_kinetic_normalization_1_over_sqrt_B",
+  "rows": [
+    {
+      "copy": "plus",
+      "phase_embedding_sha256": "56675ed0998f783eab306bb276b01169be155c8ec4752af2e6d03a20b5874dcb",
+      "fixed_readout_sha256": "fc5b6063805d3e9428e637b2f34a95f8a48a5e9d2e00e62e370c26c4530d0ac7",
+      "axes": [
+        {
+          "axis": 0,
+          "density_unitarity_defect": 2.220446049250313e-16,
+          "two_pi_sign_reversal_defect": 2.535772158592562e-16,
+          "four_pi_return_defect": 3.305967299940934e-16,
+          "fixed_readout_covariance_defect": 4.360155899543692e-15,
+          "two_layer_graph_rotation_commutator_relative": 0.00028353444568649346
+        },
+        {
+          "axis": 1,
+          "density_unitarity_defect": 2.220446049250313e-16,
+          "two_pi_sign_reversal_defect": 2.535772158592562e-16,
+          "four_pi_return_defect": 3.305967299940934e-16,
+          "fixed_readout_covariance_defect": 6.698325247860121e-15,
+          "two_layer_graph_rotation_commutator_relative": 0.00016466156252884572
+        },
+        {
+          "axis": 2,
+          "density_unitarity_defect": 2.4441574809578864e-16,
+          "two_pi_sign_reversal_defect": 2.535772158592562e-16,
+          "four_pi_return_defect": 3.305967299940934e-16,
+          "fixed_readout_covariance_defect": 5.489511475229208e-15,
+          "two_layer_graph_rotation_commutator_relative": 0.0002026501618807687
+        }
+      ]
+    },
+    {
+      "copy": "minus",
+      "phase_embedding_sha256": "60d7e01e76abd5db144703f1f4563a021d6f0e8005869196efc2fb9d13d64eeb",
+      "fixed_readout_sha256": "97e537ee1cdae08f4ca31f7c87a970b165f3348f0d53df7f7992acb401b31021",
+      "axes": [
+        {
+          "axis": 0,
+          "density_unitarity_defect": 2.220446049250313e-16,
+          "two_pi_sign_reversal_defect": 2.535772158592562e-16,
+          "four_pi_return_defect": 3.305967299940934e-16,
+          "fixed_readout_covariance_defect": 4.8378054035723066e-15,
+          "two_layer_graph_rotation_commutator_relative": 0.0003286149942692343
+        },
+        {
+          "axis": 1,
+          "density_unitarity_defect": 2.220446049250313e-16,
+          "two_pi_sign_reversal_defect": 2.535772158592562e-16,
+          "four_pi_return_defect": 3.305967299940934e-16,
+          "fixed_readout_covariance_defect": 2.9529140415086237e-15,
+          "two_layer_graph_rotation_commutator_relative": 0.0002627301513761109
+        },
+        {
+          "axis": 2,
+          "density_unitarity_defect": 2.4441574809578864e-16,
+          "two_pi_sign_reversal_defect": 2.535772158592562e-16,
+          "four_pi_return_defect": 3.305967299940934e-16,
+          "fixed_readout_covariance_defect": 4.151182114975588e-15,
+          "two_layer_graph_rotation_commutator_relative": 0.0002903765505965413
+        }
+      ]
+    }
+  ],
+  "maximum_density_unitarity_defect": 2.4441574809578864e-16,
+  "maximum_two_pi_sign_reversal_defect": 2.535772158592562e-16,
+  "maximum_four_pi_return_defect": 3.305967299940934e-16,
+  "maximum_fixed_readout_covariance_defect": 6.698325247860121e-15,
+  "maximum_two_layer_graph_rotation_commutator_relative": 0.0003286149942692343,
+  "claim_boundary": "Operational linear rotation of the same localized V4-003 phase-space carrier. This is not free dynamical rotation under an external torque and does not prove translation or current."
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "V4-004",
+  "status": "PASS",
+  "checks": {
+    "stage_gate_passes": true,
+    "same_action_as_v4_003": true,
+    "same_frozen_readout_as_v4_003": true,
+    "no_Dirac_or_comparator_import": true,
+    "native_cubical_rotation_source": true,
+    "both_copies_and_three_axes": true,
+    "spin_endpoints_and_density_exact": true,
+    "finite_step_mismatch_is_disclosed_and_refines": true,
+    "Lean_claim_is_scoped_to_readout": true,
+    "Lean_scale_is_derived_not_assumed": true
+  },
+  "forbidden_imports": [],
+  "first_principles_audit": "The rotation generators are the cube-incidence bivectors and the nonzero one-half scale is selected by the proved closure equation. The numerical bridge reuses the exact V4-003 action, embedding, and fixed readout. No Dirac comparator, runtime projection, copy selector, or action term is added.",
+  "remaining_gap": "The nonzero quarter-turn graph commutator is retained and halves with dt. V4-004 proves the localized readout's rotation law, not a free torque experiment, translation, or current."
+}

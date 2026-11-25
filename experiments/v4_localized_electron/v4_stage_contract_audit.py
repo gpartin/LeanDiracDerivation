@@ -23,6 +23,7 @@ def main() -> None:
     reachability = load("v4_002_exact_1197/reach_100cycles_final.json")
     stage2 = load("v4_002_exact_1197/v4_002_stage_gate.json")
     stage3 = load("v4_003_stage_gate.json")
+    stage4 = load("v4_004_stage_gate.json")
     hop = load("v4_006_stable_action_exact_hop_xplus_16_screen.json")
     lock = (HERE / "EXACT_TRANSLATION_MAP_LOCK.md").read_text(
         encoding="utf-8")
@@ -52,10 +53,12 @@ def main() -> None:
         reachability["physical_launches_exhibit_material_growth"])
     stage2_pass = stage2["status"] == "PASS" and not physical_growth
     stage3_pass = stage2_pass and stage3["status"] == "PASS"
+    stage4_pass = stage3_pass and stage4["status"] == "PASS"
     result = {
         "status": "CURRENT_COHERENT_STAGE_AUDIT",
         "release_boundary": (
-            "V4-003" if stage3_pass else "V4-002" if stage2_pass
+            "V4-004" if stage4_pass else "V4-003" if stage3_pass
+            else "V4-002" if stage2_pass
             else "V4-001"),
         "canonical_action_changed": False,
         "research_action_admitted": stage2_pass,
@@ -73,9 +76,13 @@ def main() -> None:
                 "PASS_FIXED_NATIVE_READOUT_WITH_CONTROLLED_REMAINDER"
                 if stage3_pass else
                 "NEXT_FIXED_READOUT_WITH_CONTROLLED_REMAINDER"),
-            "V4-004": "NEXT_OPERATIONAL_SPIN" if stage3_pass else
-                "BLOCKED_BY_V4_003",
-            "V4-005": "PARTIAL_INTEGER_SHIFT_COVARIANCE_AND_CURRENT",
+            "V4-004": (
+                "PASS_LOCALIZED_READOUT_SPIN_HALF" if stage4_pass else
+                "NEXT_OPERATIONAL_SPIN" if stage3_pass else
+                "BLOCKED_BY_V4_003"),
+            "V4-005": (
+                "NEXT_SHORT_TIME_DIRAC_TRANSPORT_AND_NATIVE_CURRENT"
+                if stage4_pass else "BLOCKED_BY_V4_004"),
             "V4-006": (
                 "PASS_EXACT_ONE_CELL_HANDOFF" if hop_pass
                 else "OPEN_EXACT_ONE_CELL_HANDOFF"),
@@ -106,13 +113,21 @@ def main() -> None:
                 row["fine_complementary_residual"]
                 for row in stage3["rows"]),
         },
+        "localized_spin_readout": {
+            "artifact": "v4_004_stage_gate.json",
+            "status": stage4["status"],
+            "Lean_theorem": stage4["Lean_theorem"],
+            "graph_remainder_refinement_ratio": stage4[
+                "graph_remainder_refinement_ratio"],
+        },
         "finite_hop_screen": hop_row,
         "endpoint_locked": endpoint_locked,
         "neutral_translation_mode_required": False,
         "claim_boundary": (
-            "V4-002 passes bounded physical-sector stability and V4-003 "
-            "passes a fixed native-action-derived four-component readout on "
-            "the frozen B-normalized complete-frame research action. Dirac "
+            "V4-002 passes bounded physical-sector stability, V4-003 passes "
+            "a fixed native-action-derived four-component readout, and "
+            "V4-004 proves its cubical spin-one-half rotation law on the "
+            "frozen B-normalized complete-frame research action. Dirac "
             "transport/current remains V4-005. The exact rigid hop remains "
             "an optional stronger "
             "control; V4-006 uses a solved crossing time and permits "
