@@ -42,6 +42,15 @@ after 100 internal cycles the maximum phase-space norm ratio is
 `4.8200821871` and the maximum phase-aligned shape error is `4.6536528032`.
 The physically prepared packet therefore excites the growing native response.
 
+The first-departure decomposition shows what that response is. In the worst
+one-update case, `99.999908%` of the residual power is `Psi`; only
+`0.0000915%` is `chi`. On the occupied corners, `96.3650%` of the `Psi`
+residual changes amplitude/phase along the already-correct `Psi` ray, while
+only `0.3519%` leaves the local `Psi`--`chi` plane. The three-prong orientation
+link is therefore not the first failure. The missing response is signed
+along-ray amplitude/phase control during transport. The focused RCA is
+`experiments/v4_localized_electron/V4_002_PHYSICAL_LAUNCH_RCA.md`.
+
 The stage remains failed for a claim-relevant reason, not because an unrelated
 full-lattice disturbance was declared mandatory. The corrected acceptance
 criteria for all later stages are recorded in

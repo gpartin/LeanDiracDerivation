@@ -19,7 +19,7 @@
   },
   "stages": [
     {"id": "V4-001", "status": "PASS", "rca_count": 0, "evidence": "v4_001_revalidation.json", "summary": "Exact localized rest solution rebuilt on the clean branch with only standard Lean foundations."},
-    {"id": "V4-002", "status": "FAIL__PHYSICAL_DIRAC_LAUNCH_REACHES_GROWING_RESPONSE", "rca_count": 5, "evidence": "v4_002_reachable_sector_audit.json", "summary": "The ambient-spectrum requirement was narrowed to physically generated two-layer carrier launches. The exact 6/361 complete-frame action still fails: 16 launches covering both copies, both momentum signs, three axes and a diagonal grow to a maximum phase-space norm ratio 4.820 and shape error 4.654 over 100 cycles."},
+    {"id": "V4-002", "status": "FAIL__PHYSICAL_DIRAC_LAUNCH_REACHES_GROWING_RESPONSE", "rca_count": 5, "evidence": "v4_002_reachable_sector_audit.json; V4_002_PHYSICAL_LAUNCH_RCA.md", "summary": "The exact 6/361 complete-frame action still fails on 16 physical launches. The first departure is 99.9999% Psi and, on the carrier, 96.365% is amplitude/phase along the already-correct Psi ray; the three-prong orientation-normal error is only 0.352%. The error grows to norm ratio 4.820 and shape error 4.654 over 100 cycles."},
     {"id": "V4-003", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Fixed four-component phase-space readout with an explicit controlled complementary-sector remainder; exact zero finite-lattice remainder is not required."},
     {"id": "V4-004", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Operational spin-half on the localized carrier."},
     {"id": "V4-005", "status": "NOT_STARTED__BLOCKED_BY_V4_002", "rca_count": 0, "summary": "Short-time Dirac transport and native current."},

@@ -183,6 +183,80 @@ def main() -> None:
         np.linalg.norm(first_leakage)
         / max(np.linalg.norm(first_native_phase), 1e-30))
 
+    carrier_set = set(sites)
+    first_departure_rows = []
+    for index, case in enumerate(cases):
+        expected = expected_first_now[index]
+        expected_i = expected_first_i_now[index]
+        alignment = np.column_stack((expected, expected_i))
+        coefficients, *_ = np.linalg.lstsq(
+            alignment, q_following[:, index], rcond=1e-12)
+        coefficient_norm = np.linalg.norm(coefficients)
+        aligned = alignment@(
+            coefficients/max(coefficient_norm, 1e-30))
+        residual = (q_following[:, index]-aligned).reshape(
+            dirac.SIDE, dirac.SIDE, dirac.SIDE, 12)
+        residual_psi = residual[..., :3]+1j*residual[..., 3:6]
+        residual_chi = residual[..., 6:9]+1j*residual[..., 9:12]
+        psi_power = np.sum(np.abs(residual_psi)**2, axis=-1)
+        chi_power = np.sum(np.abs(residual_chi)**2, axis=-1)
+        total_power = float(np.sum(psi_power)+np.sum(chi_power))
+        carrier_psi_power = 0.0
+        carrier_chi_power = 0.0
+        psi_frame_power = 0.0
+        chi_frame_power = 0.0
+        normal_power = 0.0
+        for corner, site in enumerate(sites):
+            carrier_psi_power += float(psi_power[site])
+            carrier_chi_power += float(chi_power[site])
+            departure = residual_psi[site]
+            psi_component = np.vdot(psi_frame[corner], departure)
+            chi_component = np.vdot(chi_frame[corner], departure)
+            represented = (psi_component*psi_frame[corner]
+                           + chi_component*chi_frame[corner])
+            psi_frame_power += float(abs(psi_component)**2)
+            chi_frame_power += float(abs(chi_component)**2)
+            normal_power += float(np.vdot(
+                departure-represented,
+                departure-represented).real)
+        site_power = psi_power+chi_power
+        maximum_site = tuple(
+            int(value) for value in np.unravel_index(
+                int(np.argmax(site_power)), site_power.shape))
+        exterior_power = max(
+            total_power-carrier_psi_power-carrier_chi_power, 0.0)
+        first_departure_rows.append({
+            "flavor": case["flavor"],
+            "axis": case["axis"],
+            "sign": case["sign"],
+            "relative_configuration_error": float(
+                np.sqrt(total_power)/max(np.linalg.norm(expected), 1e-30)),
+            "field_power_fractions": {
+                "Psi": float(np.sum(psi_power)/max(total_power, 1e-300)),
+                "chi": float(np.sum(chi_power)/max(total_power, 1e-300)),
+            },
+            "location_power_fractions": {
+                "eight_carrier_sites": float(
+                    (carrier_psi_power+carrier_chi_power)
+                    / max(total_power, 1e-300)),
+                "surroundings": float(
+                    exterior_power/max(total_power, 1e-300)),
+            },
+            "carrier_Psi_local_frame_power_fractions": {
+                "along_Psi_ray_amplitude_phase": float(
+                    psi_frame_power/max(carrier_psi_power, 1e-300)),
+                "toward_chi_ray_in_plane": float(
+                    chi_frame_power/max(carrier_psi_power, 1e-300)),
+                "outside_local_Psi_chi_plane": float(
+                    normal_power/max(carrier_psi_power, 1e-300)),
+            },
+            "maximum_departure_site": list(maximum_site),
+            "maximum_site_is_carrier": maximum_site in carrier_set,
+        })
+    first_departure_worst = max(
+        first_departure_rows,
+        key=lambda row: row["relative_configuration_error"])
+
     steps = int(np.ceil(args.cycles*2*np.pi/native_time.CHI0/dt))
     requested_cycles = (0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 50.0,
                         args.cycles)
@@ -313,6 +387,15 @@ def main() -> None:
                   for case in cases],
         "initial_real_phase_space_rank": int(phase_basis.shape[1]),
         "one_step_dirac_sector_leakage": one_step_dirac_sector_leakage,
+        "first_departure": {
+            "rows": first_departure_rows,
+            "worst_case": first_departure_worst,
+            "interpretation": (
+                "Residual after one unrestricted native update and one common "
+                "phase alignment. Local-frame fractions decompose the Psi "
+                "residual on the eight occupied sites into its rest Psi ray, "
+                "the in-plane chi companion, and the remaining C3 direction."),
+        },
         "maximum_phase_aligned_relative_error": maximum_shape_error,
         "maximum_phase_space_norm_ratio": maximum_norm_ratio,
         "final_minimum_phase_space_norm_ratio": (
