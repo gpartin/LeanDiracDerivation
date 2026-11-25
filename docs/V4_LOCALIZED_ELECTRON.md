@@ -50,6 +50,21 @@ to be ported from the older action into it. See the six-field RCA, recovered
 mechanism tests, and current verdict in
 [`V4_MOVING_CARRIER_REVALIDATION_RCA.md`](../experiments/v4_localized_electron/V4_MOVING_CARRIER_REVALIDATION_RCA.md).
 
+### V4-006 native phase-charge refinement
+
+The phase-corrected frozen action's six-face oscillator carries almost
+all native phase charge. Its ordinary frame rate dominates the tested
+handoff force residual, although its static force vanishes at the resting
+clock. A native two-charge geometry calculation derives a receiver
+precursor with two signed phases near opposite quarter turns and a chi
+tilt without moving or altering the existing core. The charge-capacity
+continuation reduces a sampled nonlinear handoff defect, but the fixed
+Dirac-speed and independent holdout tests fail, and an unrestricted first
+layer solve has not converged. Replacements of the six-face oscillator
+were tested and rejected. The original action and scoped V4-001–005 passes
+remain intact. V4-006 stays open. Full derivation and evidence:
+[`V4_006_FACE_CHARGE_CLOCK_RCA.md`](../experiments/v4_localized_electron/V4_006_FACE_CHARGE_CLOCK_RCA.md).
+
 ### 2026-11-25 V4-005 historical scoped closure
 
 V4-005 uses the exact V4-003 local `Psi`--`chi` carrier rule at every envelope

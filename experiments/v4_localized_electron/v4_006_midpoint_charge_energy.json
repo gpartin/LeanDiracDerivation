@@ -1,0 +1,45 @@
+{
+  "status": "V4_006_MATCHED_MIDPOINT_TWO_CHARGE_DIAGNOSTIC",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "dt": 0.00390625,
+  "phase_charge_rest": [
+    297227477.7057462,
+    113638802.28262633
+  ],
+  "Routhian_rest": 5648637177.669779,
+  "rows": [
+    {
+      "seed": "Psi_norm_preserved",
+      "charge_relative_at_rest_clock": [
+        -0.3426093460140093,
+        -0.6925496835447909
+      ],
+      "phase_root": [
+        0.10261052064682387,
+        1.2979856967957457e-05
+      ],
+      "native_charge_root_defect": 9.92634452067544e-14,
+      "fixed_two_charge_Routhian_delta": 370053000.07956123,
+      "relative_to_rest_Routhian": 0.06551190817184305,
+      "Psi_norm_ratio": 1.0,
+      "chi_contrast_norm_ratio": 0.8048047606823051
+    },
+    {
+      "seed": "face_charge_preserved",
+      "charge_relative_at_rest_clock": [
+        -1.8048190130980774e-15,
+        1.0490192360026885e-15
+      ],
+      "phase_root": [
+        0.07423579507567761,
+        -1.7224274639578717e-20
+      ],
+      "native_charge_root_defect": 5.615378922549592e-16,
+      "fixed_two_charge_Routhian_delta": 1345238.585896492,
+      "relative_to_rest_Routhian": 0.00023815276916961422,
+      "Psi_norm_ratio": 1.06920650977531,
+      "chi_contrast_norm_ratio": 1.3647787285690993
+    }
+  ],
+  "claim_boundary": "Exact two-charge Routh reduction restricted to two diagnostic midpoint seeds. This is not the optimal physical barrier or a native trajectory."
+}

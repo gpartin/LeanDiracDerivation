@@ -1,0 +1,371 @@
+{
+  "status": "V4_006_MATERIAL_FACE_DERIVATIVE_ACTION_PROBE_NOT_ADMITTED",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "candidate_sha256": "ab578f2ced5c3d68e0741d81c73605ce9eadb7873943dd97efbbeeb2f52bf987",
+  "state_sha256": "cfb55d40556c0f05ca12817bf083c9513f51d8c565c7a210db18d59d00bb9973",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "rows": [
+    {
+      "mode": "Psi",
+      "rest_raw_DEL_norm": 77.47032033597641,
+      "rest_preconditioned_acceleration_defect": 0.1766545461554114,
+      "incumbent_rest_raw_DEL_norm": 1.0364401809569762e-08,
+      "path": [
+        {
+          "fraction": 0.0,
+          "incumbent_defect": 0.08599950134512233,
+          "candidate_defect": 0.28384235343324943,
+          "correction_response_fraction_against_defect": -0.4573204125509126
+        },
+        {
+          "fraction": 0.2,
+          "incumbent_defect": 0.5165180307097132,
+          "candidate_defect": 0.48904856800498153,
+          "correction_response_fraction_against_defect": 0.1381709439427257
+        },
+        {
+          "fraction": 0.4,
+          "incumbent_defect": 1.30275038083683,
+          "candidate_defect": 1.222562871998485,
+          "correction_response_fraction_against_defect": 0.08426334636032534
+        },
+        {
+          "fraction": 0.6,
+          "incumbent_defect": 1.1763186720494214,
+          "candidate_defect": 1.129061833584275,
+          "correction_response_fraction_against_defect": 0.074214959783914
+        },
+        {
+          "fraction": 0.8,
+          "incumbent_defect": 0.3109374107800182,
+          "candidate_defect": 0.4513463968791742,
+          "correction_response_fraction_against_defect": -0.21320700058419922
+        }
+      ],
+      "small_momentum_probes": [
+        {
+          "copy": "plus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 2.1898798130480555,
+          "candidate_acceleration_defect_in_incumbent_units": 2.9648641892698793,
+          "response_fraction_against_defect": -0.023473237686722895
+        },
+        {
+          "copy": "plus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 1.971572334000559,
+          "candidate_acceleration_defect_in_incumbent_units": 2.5540210100683947,
+          "response_fraction_against_defect": 0.08463916754761878
+        },
+        {
+          "copy": "minus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 3.0346314823601466,
+          "candidate_acceleration_defect_in_incumbent_units": 4.034472794056651,
+          "response_fraction_against_defect": 0.02914450674015284
+        },
+        {
+          "copy": "minus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 2.6435614678767165,
+          "candidate_acceleration_defect_in_incumbent_units": 3.7757847129337248,
+          "response_fraction_against_defect": -0.00017046891813222203
+        }
+      ],
+      "maximum_path_incumbent_defect": 1.30275038083683,
+      "maximum_path_candidate_defect": 1.222562871998485,
+      "maximum_small_momentum_incumbent_defect": 3.0346314823601466,
+      "maximum_small_momentum_candidate_defect": 4.034472794056651
+    },
+    {
+      "mode": "W",
+      "rest_raw_DEL_norm": 52.17823252654124,
+      "rest_preconditioned_acceleration_defect": 0.1202556541656486,
+      "incumbent_rest_raw_DEL_norm": 1.0364401809569762e-08,
+      "path": [
+        {
+          "fraction": 0.0,
+          "incumbent_defect": 0.08599950134512233,
+          "candidate_defect": 0.16482168493655996,
+          "correction_response_fraction_against_defect": 0.18702304741637643
+        },
+        {
+          "fraction": 0.2,
+          "incumbent_defect": 0.5165180307097132,
+          "candidate_defect": 0.5367633739938881,
+          "correction_response_fraction_against_defect": -0.03011966767063783
+        },
+        {
+          "fraction": 0.4,
+          "incumbent_defect": 1.30275038083683,
+          "candidate_defect": 1.486135360591872,
+          "correction_response_fraction_against_defect": -0.1192678554866409
+        },
+        {
+          "fraction": 0.6,
+          "incumbent_defect": 1.1763186720494214,
+          "candidate_defect": 1.1843868163346716,
+          "correction_response_fraction_against_defect": 0.014411968048655348
+        },
+        {
+          "fraction": 0.8,
+          "incumbent_defect": 0.3109374107800182,
+          "candidate_defect": 0.3520984794274026,
+          "correction_response_fraction_against_defect": -0.07767064325597663
+        }
+      ],
+      "small_momentum_probes": [
+        {
+          "copy": "plus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 2.1898798130480555,
+          "candidate_acceleration_defect_in_incumbent_units": 3.9193259797632805,
+          "response_fraction_against_defect": 0.09421237472060193
+        },
+        {
+          "copy": "plus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 1.971572334000559,
+          "candidate_acceleration_defect_in_incumbent_units": 3.072342514440066,
+          "response_fraction_against_defect": -0.02289689143027802
+        },
+        {
+          "copy": "minus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 3.0346314823601466,
+          "candidate_acceleration_defect_in_incumbent_units": 4.302708265155992,
+          "response_fraction_against_defect": -0.03200349090942803
+        },
+        {
+          "copy": "minus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 2.6435614678767165,
+          "candidate_acceleration_defect_in_incumbent_units": 4.067122720295017,
+          "response_fraction_against_defect": -0.08106033328952955
+        }
+      ],
+      "maximum_path_incumbent_defect": 1.30275038083683,
+      "maximum_path_candidate_defect": 1.486135360591872,
+      "maximum_small_momentum_incumbent_defect": 3.0346314823601466,
+      "maximum_small_momentum_candidate_defect": 4.302708265155992
+    },
+    {
+      "mode": "chi",
+      "rest_raw_DEL_norm": 1.2251929039924594e-08,
+      "rest_preconditioned_acceleration_defect": 4.064735898064167e-12,
+      "incumbent_rest_raw_DEL_norm": 1.0364401809569762e-08,
+      "path": [
+        {
+          "fraction": 0.0,
+          "incumbent_defect": 0.08599950134512233,
+          "candidate_defect": 1.6297838850453512,
+          "correction_response_fraction_against_defect": -0.709154306379538
+        },
+        {
+          "fraction": 0.2,
+          "incumbent_defect": 0.5165180307097132,
+          "candidate_defect": 0.968299787237201,
+          "correction_response_fraction_against_defect": -0.17026239680842598
+        },
+        {
+          "fraction": 0.4,
+          "incumbent_defect": 1.30275038083683,
+          "candidate_defect": 4.38007152709307,
+          "correction_response_fraction_against_defect": -0.5874121455453939
+        },
+        {
+          "fraction": 0.6,
+          "incumbent_defect": 1.1763186720494214,
+          "candidate_defect": 4.613550515961123,
+          "correction_response_fraction_against_defect": -0.9449450645059367
+        },
+        {
+          "fraction": 0.8,
+          "incumbent_defect": 0.3109374107800182,
+          "candidate_defect": 0.8069011572820194,
+          "correction_response_fraction_against_defect": 0.4325527787370071
+        }
+      ],
+      "small_momentum_probes": [
+        {
+          "copy": "plus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 2.1898798130480555,
+          "candidate_acceleration_defect_in_incumbent_units": 748.8040972081945,
+          "response_fraction_against_defect": -24.058776549551364
+        },
+        {
+          "copy": "plus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 1.971572334000559,
+          "candidate_acceleration_defect_in_incumbent_units": 951.6772738912363,
+          "response_fraction_against_defect": -47.56288938251779
+        },
+        {
+          "copy": "minus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 3.0346314823601466,
+          "candidate_acceleration_defect_in_incumbent_units": 795.7977691161616,
+          "response_fraction_against_defect": -19.814366973374387
+        },
+        {
+          "copy": "minus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 2.6435614678767165,
+          "candidate_acceleration_defect_in_incumbent_units": 1520.2105793444787,
+          "response_fraction_against_defect": -78.01760588777955
+        }
+      ],
+      "maximum_path_incumbent_defect": 1.30275038083683,
+      "maximum_path_candidate_defect": 4.613550515961123,
+      "maximum_small_momentum_incumbent_defect": 3.0346314823601466,
+      "maximum_small_momentum_candidate_defect": 1520.2105793444787
+    },
+    {
+      "mode": "Psi_W",
+      "rest_raw_DEL_norm": 112.87220082203272,
+      "rest_preconditioned_acceleration_defect": 0.19064038654024235,
+      "incumbent_rest_raw_DEL_norm": 1.0364401809569762e-08,
+      "path": [
+        {
+          "fraction": 0.0,
+          "incumbent_defect": 0.08599950134512233,
+          "candidate_defect": 0.36329780378851856,
+          "correction_response_fraction_against_defect": -0.2702973651345816
+        },
+        {
+          "fraction": 0.2,
+          "incumbent_defect": 0.5165180307097132,
+          "candidate_defect": 0.5051420916909768,
+          "correction_response_fraction_against_defect": 0.10805127627207803
+        },
+        {
+          "fraction": 0.4,
+          "incumbent_defect": 1.30275038083683,
+          "candidate_defect": 1.4100784699849938,
+          "correction_response_fraction_against_defect": -0.03500450912636135
+        },
+        {
+          "fraction": 0.6,
+          "incumbent_defect": 1.1763186720494214,
+          "candidate_defect": 1.135827858210531,
+          "correction_response_fraction_against_defect": 0.08862692783259564
+        },
+        {
+          "fraction": 0.8,
+          "incumbent_defect": 0.3109374107800182,
+          "candidate_defect": 0.5172399415417984,
+          "correction_response_fraction_against_defect": -0.2908776438400689
+        }
+      ],
+      "small_momentum_probes": [
+        {
+          "copy": "plus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 2.1898798130480555,
+          "candidate_acceleration_defect_in_incumbent_units": 5.322506975615247,
+          "response_fraction_against_defect": 0.07073913703387154
+        },
+        {
+          "copy": "plus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 1.971572334000559,
+          "candidate_acceleration_defect_in_incumbent_units": 4.104721551264173,
+          "response_fraction_against_defect": 0.061742276117352564
+        },
+        {
+          "copy": "minus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 3.0346314823601466,
+          "candidate_acceleration_defect_in_incumbent_units": 6.152775332700004,
+          "response_fraction_against_defect": -0.0028589841692747736
+        },
+        {
+          "copy": "minus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 2.6435614678767165,
+          "candidate_acceleration_defect_in_incumbent_units": 6.084191528098274,
+          "response_fraction_against_defect": -0.08123080220766199
+        }
+      ],
+      "maximum_path_incumbent_defect": 1.30275038083683,
+      "maximum_path_candidate_defect": 1.4100784699849938,
+      "maximum_small_momentum_incumbent_defect": 3.0346314823601466,
+      "maximum_small_momentum_candidate_defect": 6.152775332700004
+    },
+    {
+      "mode": "all",
+      "rest_raw_DEL_norm": 112.87220082203284,
+      "rest_preconditioned_acceleration_defect": 0.19064038654019685,
+      "incumbent_rest_raw_DEL_norm": 1.0364401809569762e-08,
+      "path": [
+        {
+          "fraction": 0.0,
+          "incumbent_defect": 0.08599950134512233,
+          "candidate_defect": 1.8174015767250649,
+          "correction_response_fraction_against_defect": -0.9794516715144013
+        },
+        {
+          "fraction": 0.2,
+          "incumbent_defect": 0.5165180307097132,
+          "candidate_defect": 0.9437296294813426,
+          "correction_response_fraction_against_defect": -0.06221112053619269
+        },
+        {
+          "fraction": 0.4,
+          "incumbent_defect": 1.30275038083683,
+          "candidate_defect": 4.487591988703785,
+          "correction_response_fraction_against_defect": -0.6224166546719417
+        },
+        {
+          "fraction": 0.6,
+          "incumbent_defect": 1.1763186720494214,
+          "candidate_defect": 4.686640051550924,
+          "correction_response_fraction_against_defect": -0.8563181366731407
+        },
+        {
+          "fraction": 0.8,
+          "incumbent_defect": 0.3109374107800182,
+          "candidate_defect": 0.7164996819332613,
+          "correction_response_fraction_against_defect": 0.14167513489699365
+        }
+      ],
+      "small_momentum_probes": [
+        {
+          "copy": "plus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 2.1898798130480555,
+          "candidate_acceleration_defect_in_incumbent_units": 750.727566066569,
+          "response_fraction_against_defect": -23.98803741251745
+        },
+        {
+          "copy": "plus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 1.971572334000559,
+          "candidate_acceleration_defect_in_incumbent_units": 950.1420047005856,
+          "response_fraction_against_defect": -47.50114710640041
+        },
+        {
+          "copy": "minus",
+          "sign": -1,
+          "incumbent_acceleration_defect": 3.0346314823601466,
+          "candidate_acceleration_defect_in_incumbent_units": 797.3781949764747,
+          "response_fraction_against_defect": -19.81722595754363
+        },
+        {
+          "copy": "minus",
+          "sign": 1,
+          "incumbent_acceleration_defect": 2.6435614678767165,
+          "candidate_acceleration_defect_in_incumbent_units": 1521.3349002570908,
+          "response_fraction_against_defect": -78.09883668998707
+        }
+      ],
+      "maximum_path_incumbent_defect": 1.30275038083683,
+      "maximum_path_candidate_defect": 4.686640051550924,
+      "maximum_small_momentum_incumbent_defect": 3.0346314823601466,
+      "maximum_small_momentum_candidate_defect": 1521.3349002570908
+    }
+  ],
+  "claim_boundary": "Native reciprocal action replacements only, evaluated on matched rest and handoff data. Residual preconditioning uses the unchanged action for comparison, not a claim that the changed action evolves those data."
+}

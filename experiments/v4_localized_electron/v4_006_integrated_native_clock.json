@@ -1,0 +1,467 @@
+{
+  "status": "V4_006_INTEGRATED_NATIVE_PHASE_MOMENTUM_CHART",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "state_sha256": "ebb5ac6699bfdd865706f1b761db439db4a85060f0ee776b4d1c4f4196a2fee8",
+  "phase_root_sha256": "1284ac7fd62a122d8e8b1506372e3e15bd6d935ab377c13d1d7da0e7aa7a5f16",
+  "dt": 0.00390625,
+  "period_updates": 17564,
+  "mean_phase_step_correction": [
+    -0.0003353908661426015,
+    -1.5908233506267966e-06
+  ],
+  "total_phase_over_handoff": [
+    1298.042633953415,
+    -0.027941221330409056
+  ],
+  "periodic_phase_coefficients": [
+    [
+      0.006109977003150635,
+      0.0009786751244930856
+    ],
+    [
+      -0.002766777686247291,
+      0.0003696639953023623
+    ],
+    [
+      -1.9664330920326267,
+      0.007691013232969831
+    ],
+    [
+      -0.9614267873534831,
+      -0.0034831051698465685
+    ]
+  ],
+  "phase_difference_matrix_rank": 5,
+  "maximum_interval_phase_fit_error": 8.041027766215481e-07,
+  "tests": {
+    "collocation": {
+      "baseline_summary": {
+        "max_acceleration_defect": 0.360740911559902,
+        "max_charge_defect": 0.17008251128771815
+      },
+      "corrected_summary": {
+        "max_acceleration_defect": 6.855849852443277,
+        "max_charge_defect": 3.945288602514171e-05
+      },
+      "baseline": [
+        {
+          "fraction": 0.0,
+          "acceleration_defect": 0.3218848822195352,
+          "charge_in_relative_defect": [
+            0.035297568471333626,
+            0.060818425816173555
+          ],
+          "charge_out_relative_defect": [
+            0.03529026708244851,
+            0.06090925244764483
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.2,
+          "acceleration_defect": 0.360740911559902,
+          "charge_in_relative_defect": [
+            -6.475766658948741e-05,
+            -0.027338979883960023
+          ],
+          "charge_out_relative_defect": [
+            -5.2699197160823e-05,
+            -0.027402006099426727
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.4,
+          "acceleration_defect": 0.30065701761979347,
+          "charge_in_relative_defect": [
+            -0.00029670983741125534,
+            0.16999298621341777
+          ],
+          "charge_out_relative_defect": [
+            -0.0003204763601687863,
+            0.17008251128771815
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.6,
+          "acceleration_defect": 0.3018031912376722,
+          "charge_in_relative_defect": [
+            -0.0004319331312648277,
+            0.15736405911610327
+          ],
+          "charge_out_relative_defect": [
+            -0.00041255149817984535,
+            0.15732849679468752
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.8,
+          "acceleration_defect": 0.3130542140183214,
+          "charge_in_relative_defect": [
+            -9.895548985994836e-05,
+            -0.057959633496020034
+          ],
+          "charge_out_relative_defect": [
+            -0.00010036678917594896,
+            -0.05803545344071398
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        }
+      ],
+      "corrected": [
+        {
+          "fraction": 0.0,
+          "acceleration_defect": 6.855849852443277,
+          "charge_in_relative_defect": [
+            3.5457325880950293e-06,
+            -3.944443337869035e-05
+          ],
+          "charge_out_relative_defect": [
+            -3.5345327061020315e-06,
+            3.945288602514171e-05
+          ],
+          "incoming_phase": [
+            0.07251227060104531,
+            -1.3313815804330284e-06
+          ],
+          "outgoing_phase": [
+            0.07251227123541655,
+            -1.3316960484955015e-06
+          ]
+        },
+        {
+          "fraction": 0.2,
+          "acceleration_defect": 0.3640823122755114,
+          "charge_in_relative_defect": [
+            -1.1165840920373758e-05,
+            2.6066625445498073e-05
+          ],
+          "charge_out_relative_defect": [
+            1.1158472213127964e-05,
+            -2.6088116332759525e-05
+          ],
+          "incoming_phase": [
+            0.07424152451229041,
+            7.869344776531112e-07
+          ],
+          "outgoing_phase": [
+            0.07424205172846482,
+            7.871607967702582e-07
+          ]
+        },
+        {
+          "fraction": 0.4,
+          "acceleration_defect": 0.31001904744783154,
+          "charge_in_relative_defect": [
+            1.4838801061149941e-05,
+            -5.11136346798428e-06
+          ],
+          "charge_out_relative_defect": [
+            -1.48372151574585e-05,
+            5.142460597391124e-06
+          ],
+          "incoming_phase": [
+            0.07425712540060497,
+            -4.539894850614317e-06
+          ],
+          "outgoing_phase": [
+            0.07425680633193349,
+            -4.542126204272788e-06
+          ]
+        },
+        {
+          "fraction": 0.6,
+          "acceleration_defect": 0.3223245701809808,
+          "charge_in_relative_defect": [
+            -1.2645514774936067e-05,
+            -2.152310996578308e-05
+          ],
+          "charge_out_relative_defect": [
+            1.2651273502806392e-05,
+            2.1498747538978225e-05
+          ],
+          "incoming_phase": [
+            0.07426314001588612,
+            -4.633670783895405e-06
+          ],
+          "outgoing_phase": [
+            0.07426346122500722,
+            -4.631353731639231e-06
+          ]
+        },
+        {
+          "fraction": 0.8,
+          "acceleration_defect": 0.3117265120716856,
+          "charge_in_relative_defect": [
+            5.874949348295569e-06,
+            3.859306812588744e-05
+          ],
+          "charge_out_relative_defect": [
+            -5.8851934424575635e-06,
+            -3.858467340455084e-05
+          ],
+          "incoming_phase": [
+            0.07424388354709467,
+            1.7638959841466494e-06
+          ],
+          "outgoing_phase": [
+            0.07424335355610044,
+            1.7638984345059334e-06
+          ]
+        }
+      ]
+    },
+    "holdout": {
+      "baseline_summary": {
+        "max_acceleration_defect": 0.6573435872657265,
+        "max_charge_defect": 0.2113825831839703
+      },
+      "corrected_summary": {
+        "max_acceleration_defect": 6.22186184466302,
+        "max_charge_defect": 0.09225126894758874
+      },
+      "baseline": [
+        {
+          "fraction": 0.1,
+          "acceleration_defect": 0.4391806467018154,
+          "charge_in_relative_defect": [
+            0.0034395548497969776,
+            0.10403845257665703
+          ],
+          "charge_out_relative_defect": [
+            0.0034220494271650264,
+            0.10399041068444072
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.30000000000000004,
+          "acceleration_defect": 0.4052225625670048,
+          "charge_in_relative_defect": [
+            0.02038885279820349,
+            -0.01936595829911826
+          ],
+          "charge_out_relative_defect": [
+            0.020392214193330215,
+            -0.019286733979133566
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.5,
+          "acceleration_defect": 0.6573435872657265,
+          "charge_in_relative_defect": [
+            -0.028653695651526097,
+            0.2113825831839703
+          ],
+          "charge_out_relative_defect": [
+            -0.02865224788061057,
+            0.21135776866620093
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.7,
+          "acceleration_defect": 0.4865433061743695,
+          "charge_in_relative_defect": [
+            0.011749197386158622,
+            0.07578646656134057
+          ],
+          "charge_out_relative_defect": [
+            0.011743947161714874,
+            0.0757246735058221
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        },
+        {
+          "fraction": 0.9,
+          "acceleration_defect": 0.5063605963918423,
+          "charge_in_relative_defect": [
+            0.018278217172879228,
+            -0.09794184187544215
+          ],
+          "charge_out_relative_defect": [
+            0.01829720278688456,
+            -0.0978932439688593
+          ],
+          "incoming_phase": [
+            0.07423897968152719,
+            0.0
+          ],
+          "outgoing_phase": [
+            0.07423897968152719,
+            0.0
+          ]
+        }
+      ],
+      "corrected": [
+        {
+          "fraction": 0.1,
+          "acceleration_defect": 4.141333862574852,
+          "charge_in_relative_defect": [
+            -0.01869559738165467,
+            0.07665900744649104
+          ],
+          "charge_out_relative_defect": [
+            -0.018700443246429117,
+            0.07665026999533334
+          ],
+          "incoming_phase": [
+            0.07312221103441106,
+            -5.928430628465122e-07
+          ],
+          "outgoing_phase": [
+            0.07312282680737772,
+            -5.918856883940189e-07
+          ]
+        },
+        {
+          "fraction": 0.30000000000000004,
+          "acceleration_defect": 1.7634877185549602,
+          "charge_in_relative_defect": [
+            0.02880634641904155,
+            -0.03932804976149396
+          ],
+          "charge_out_relative_defect": [
+            0.028808596177777184,
+            -0.039316428834110184
+          ],
+          "incoming_phase": [
+            0.07467424485683966,
+            -6.015457375894416e-07
+          ],
+          "outgoing_phase": [
+            0.07467419401044693,
+            -6.033379991717568e-07
+          ]
+        },
+        {
+          "fraction": 0.5,
+          "acceleration_defect": 1.6729396704252577,
+          "charge_in_relative_defect": [
+            -0.034389300540549686,
+            -0.02471510451509394
+          ],
+          "charge_out_relative_defect": [
+            -0.03438780376677616,
+            -0.024733069727419954
+          ],
+          "incoming_phase": [
+            0.07391917749938526,
+            -6.834132683926823e-06
+          ],
+          "outgoing_phase": [
+            0.07391917969756095,
+            -6.8341966671643104e-06
+          ]
+        },
+        {
+          "fraction": 0.7,
+          "acceleration_defect": 2.4194459937328734,
+          "charge_in_relative_defect": [
+            0.020223073216367526,
+            0.06978697409089551
+          ],
+          "charge_out_relative_defect": [
+            0.020218912025938094,
+            0.06979862959151699
+          ],
+          "incoming_phase": [
+            0.07468067948472726,
+            -2.4851101419134534e-07
+          ],
+          "outgoing_phase": [
+            0.07468072852278136,
+            -2.46335175012007e-07
+          ]
+        },
+        {
+          "fraction": 0.9,
+          "acceleration_defect": 6.22186184466302,
+          "charge_in_relative_defect": [
+            -0.004168924723445474,
+            -0.09225098483457465
+          ],
+          "charge_out_relative_defect": [
+            -0.004162768338164419,
+            -0.09225126894758874
+          ],
+          "incoming_phase": [
+            0.0731216312015602,
+            3.2291574542191617e-07
+          ],
+          "outgoing_phase": [
+            0.07312101503875408,
+            3.216387766048091e-07
+          ]
+        }
+      ]
+    }
+  },
+  "claim_boundary": "Integrated cyclic phase chart from native phase charges only. A charge-consistent phase chart is not a native orbit unless the full DEL vanishes on all layers and free release succeeds."
+}

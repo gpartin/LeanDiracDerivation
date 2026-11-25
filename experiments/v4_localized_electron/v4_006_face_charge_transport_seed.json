@@ -1,0 +1,107 @@
+{
+  "status": "V4_006_NATIVE_FACE_CHARGE_PREPARATION",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_raw_sha256": "5df770deed55eda30942d9a5db50e19d0a5087b698c865f5600a37193c693b8e",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "nodes": 5,
+  "phase_charge_rest": [
+    297227477.7057462,
+    113638802.28262633
+  ],
+  "face_charge_formula": [
+    296845957.2091872,
+    113638802.28262629
+  ],
+  "face_charge_ad": [
+    296845957.20918727,
+    113638802.28262633
+  ],
+  "face_charge_formula_relative_defect": 2.3440245024412565e-16,
+  "fixed_charge_routhian_rest": 5648637177.669779,
+  "rows": [
+    {
+      "time_fraction": 0.0,
+      "transfer_seed_fraction": 0.0,
+      "geometric_Psi_scale": 1.0,
+      "geometric_chi_contrast_scale": 1.0,
+      "exact_charge_Psi_scale": 1.0,
+      "exact_charge_chi_contrast_scale": 1.0,
+      "geometric_seed_charge_defect": 0.0,
+      "full_charge_defect": 0.0,
+      "Psi_norm_ratio": 1.0,
+      "chi_contrast_norm_ratio": 1.0,
+      "face_Psi_norm_ratio": 1.0,
+      "face_W_norm_ratio": 1.0,
+      "fixed_charge_Routhian_delta": 0.0,
+      "phase_roots_evaluations": 6
+    },
+    {
+      "time_fraction": 0.2,
+      "transfer_seed_fraction": 0.09549150281252627,
+      "geometric_Psi_scale": 1.0992644774432534,
+      "geometric_chi_contrast_scale": 1.1100981573061806,
+      "exact_charge_Psi_scale": 1.0993001213277427,
+      "exact_charge_chi_contrast_scale": 1.110066099699478,
+      "geometric_seed_charge_defect": 4.060601364987068e-05,
+      "full_charge_defect": 1.3112740450033607e-16,
+      "Psi_norm_ratio": 1.0148082060603438,
+      "chi_contrast_norm_ratio": 1.0403203104927006,
+      "face_Psi_norm_ratio": 1.0000648514767847,
+      "face_W_norm_ratio": 1.0000015468193262,
+      "fixed_charge_Routhian_delta": 28279.758863449097,
+      "phase_roots_evaluations": 8
+    },
+    {
+      "time_fraction": 0.4,
+      "transfer_seed_fraction": 0.3454915028125263,
+      "geometric_Psi_scale": 1.3502091525494242,
+      "geometric_chi_contrast_scale": 1.5321706867864893,
+      "exact_charge_Psi_scale": 1.3505396227716877,
+      "exact_charge_chi_contrast_scale": 1.5319241381867374,
+      "geometric_seed_charge_defect": 0.0003150029079756573,
+      "full_charge_defect": 2.3960146342044933e-16,
+      "Psi_norm_ratio": 1.0574156292017327,
+      "chi_contrast_norm_ratio": 1.2645115939051532,
+      "face_Psi_norm_ratio": 1.000489569580731,
+      "face_W_norm_ratio": 1.0000304753777731,
+      "fixed_charge_Routhian_delta": 700842.5776777267,
+      "phase_roots_evaluations": 8
+    },
+    {
+      "time_fraction": 0.6,
+      "transfer_seed_fraction": 0.6545084971874737,
+      "geometric_Psi_scale": 1.3502091525494242,
+      "geometric_chi_contrast_scale": 1.5011628649936513,
+      "exact_charge_Psi_scale": 1.3505727358558408,
+      "exact_charge_chi_contrast_scale": 1.5008897970526691,
+      "geometric_seed_charge_defect": 0.000344538460852447,
+      "full_charge_defect": 2.6225480900067213e-16,
+      "Psi_norm_ratio": 1.057441555351639,
+      "chi_contrast_norm_ratio": 1.2388946046594016,
+      "face_Psi_norm_ratio": 1.000538631009055,
+      "face_W_norm_ratio": 1.0000292545543066,
+      "fixed_charge_Routhian_delta": 616970.8043956757,
+      "phase_roots_evaluations": 8
+    },
+    {
+      "time_fraction": 0.8,
+      "transfer_seed_fraction": 0.9045084971874737,
+      "geometric_Psi_scale": 1.0992644774432534,
+      "geometric_chi_contrast_scale": 1.1017822099635386,
+      "exact_charge_Psi_scale": 1.0993153073705757,
+      "exact_charge_chi_contrast_scale": 1.101736260114724,
+      "geometric_seed_charge_defect": 5.762323268233035e-05,
+      "full_charge_defect": 4.2196238749431135e-16,
+      "Psi_norm_ratio": 1.0148222249079593,
+      "chi_contrast_norm_ratio": 1.032513837251592,
+      "face_Psi_norm_ratio": 1.000092482025121,
+      "face_W_norm_ratio": 1.0000015237341273,
+      "fixed_charge_Routhian_delta": 27187.95231628418,
+      "phase_roots_evaluations": 8
+    }
+  ],
+  "state_sha256": "cfb55d40556c0f05ca12817bf083c9513f51d8c565c7a210db18d59d00bb9973",
+  "claim_boundary": "Static phase-momentum-preserving seed through geometric native charge constraints. No unrestricted moving trajectory, energy gate, or Dirac motion pass is inferred."
+}

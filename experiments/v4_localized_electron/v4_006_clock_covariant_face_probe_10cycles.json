@@ -1,0 +1,1529 @@
+{
+  "status": "V4_006_CLOCK_COVARIANT_FACE_REPLACEMENT_PROBE_NOT_ADMITTED",
+  "incumbent_action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "candidate_sha256": "93db73b5339ef23d1da2d02c6d7289b304ab92566d435fb26bf607fdf5e25017",
+  "rest_raw_sha256": "5df770deed55eda30942d9a5db50e19d0a5087b698c865f5600a37193c693b8e",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "cycles": 10.0,
+  "steps": 847,
+  "rows": [
+    {
+      "mode": "baseline",
+      "delta_jvp_relative_errors": [],
+      "steps_completed": 847,
+      "stopped_due_to_growth": false,
+      "cases": [
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 3.260396470605467e-05,
+          "one_step_acceleration_error": 2.136733430975999,
+          "max_norm_ratio": 1.0052515649464506,
+          "max_velocity_norm_ratio": 1.0119537803265843,
+          "final_Dirac_error": 0.052877619965238716
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 2.852299944120726e-05,
+          "one_step_acceleration_error": 1.869283291378959,
+          "max_norm_ratio": 1.0130421038531199,
+          "max_velocity_norm_ratio": 1.0064598183623628,
+          "final_Dirac_error": 0.05471156870194547
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 2.8518209108648522e-05,
+          "one_step_acceleration_error": 1.8689693521443895,
+          "max_norm_ratio": 1.003571050953179,
+          "max_velocity_norm_ratio": 1.0042036739948952,
+          "final_Dirac_error": 0.055533390261251765
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 3.276711439976501e-05,
+          "one_step_acceleration_error": 2.1474256093029997,
+          "max_norm_ratio": 1.0059871256398736,
+          "max_velocity_norm_ratio": 1.011613039387027,
+          "final_Dirac_error": 0.050848539940225784
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 3.183830966077072e-05,
+          "one_step_acceleration_error": 2.08655546192827,
+          "max_norm_ratio": 1.0078814398422495,
+          "max_velocity_norm_ratio": 1.0140919432179014,
+          "final_Dirac_error": 0.056127223772344526
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 3.053368976113713e-05,
+          "one_step_acceleration_error": 2.001055892185883,
+          "max_norm_ratio": 1.0031054821379404,
+          "max_velocity_norm_ratio": 1.0000035056217036,
+          "final_Dirac_error": 0.05238245554608206
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 3.1034211631409745e-05,
+          "one_step_acceleration_error": 2.033858093476069,
+          "max_norm_ratio": 1.0061914888351684,
+          "max_velocity_norm_ratio": 1.0074680627185986,
+          "final_Dirac_error": 0.05615203054547135
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 2.993601274090433e-05,
+          "one_step_acceleration_error": 1.961886530987906,
+          "max_norm_ratio": 1.0107659079698352,
+          "max_velocity_norm_ratio": 1.0027787561279173,
+          "final_Dirac_error": 0.05191594987669629
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 4.524130150512493e-05,
+          "one_step_acceleration_error": 2.9649339354398676,
+          "max_norm_ratio": 1.0173268830443403,
+          "max_velocity_norm_ratio": 1.0129161560799163,
+          "final_Dirac_error": 0.06233966445054184
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 3.79580352061241e-05,
+          "one_step_acceleration_error": 2.487617795268549,
+          "max_norm_ratio": 1.0049492183642197,
+          "max_velocity_norm_ratio": 1.0004920828958777,
+          "final_Dirac_error": 0.06529920992980938
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 4.077520627286872e-05,
+          "one_step_acceleration_error": 2.6722439182987245,
+          "max_norm_ratio": 1.0100732072492793,
+          "max_velocity_norm_ratio": 1.0091635960319487,
+          "final_Dirac_error": 0.059100071600912955
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 3.707901877516094e-05,
+          "one_step_acceleration_error": 2.4300105744489473,
+          "max_norm_ratio": 1.011316023885307,
+          "max_velocity_norm_ratio": 1.0016613282777094,
+          "final_Dirac_error": 0.058424637554089276
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 4.009748858480763e-05,
+          "one_step_acceleration_error": 2.6278290118939527,
+          "max_norm_ratio": 1.013093290094497,
+          "max_velocity_norm_ratio": 1.0,
+          "final_Dirac_error": 0.06328990851280429
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 3.704593987298324e-05,
+          "one_step_acceleration_error": 2.4278427155158298,
+          "max_norm_ratio": 1.0102001139582582,
+          "max_velocity_norm_ratio": 1.0201605181437243,
+          "final_Dirac_error": 0.055751404478450256
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 4.5145181903831606e-05,
+          "one_step_acceleration_error": 2.958634641249508,
+          "max_norm_ratio": 1.0120137250474124,
+          "max_velocity_norm_ratio": 1.001756698235553,
+          "final_Dirac_error": 0.06389694186164274
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 3.728418307384199e-05,
+          "one_step_acceleration_error": 2.443456221927309,
+          "max_norm_ratio": 1.008587241114933,
+          "max_velocity_norm_ratio": 1.0030745411094393,
+          "final_Dirac_error": 0.06008393435428942
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 3.339844809240555e-05,
+          "one_step_acceleration_error": 2.18880069418389,
+          "max_norm_ratio": 1.0091598595905626,
+          "max_velocity_norm_ratio": 1.011969124272943,
+          "final_Dirac_error": 0.08187788379117912
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 3.006499440871066e-05,
+          "one_step_acceleration_error": 1.9703394735692619,
+          "max_norm_ratio": 1.014149579422576,
+          "max_velocity_norm_ratio": 1.0073363221561165,
+          "final_Dirac_error": 0.09181922010369661
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 2.9552148408762958e-05,
+          "one_step_acceleration_error": 1.9367295981166892,
+          "max_norm_ratio": 1.007932258038335,
+          "max_velocity_norm_ratio": 1.004371093187248,
+          "final_Dirac_error": 0.08585554810473114
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 3.3736372700732916e-05,
+          "one_step_acceleration_error": 2.2109469213152324,
+          "max_norm_ratio": 1.0078637057613946,
+          "max_velocity_norm_ratio": 1.0116456715073647,
+          "final_Dirac_error": 0.08046153477768823
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 3.299605462711635e-05,
+          "one_step_acceleration_error": 2.162429436042697,
+          "max_norm_ratio": 1.0136496426199204,
+          "max_velocity_norm_ratio": 1.0142626244907913,
+          "final_Dirac_error": 0.09126721647219536
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 3.112524263938906e-05,
+          "one_step_acceleration_error": 2.0398239016150015,
+          "max_norm_ratio": 1.003750382619184,
+          "max_velocity_norm_ratio": 1.0,
+          "final_Dirac_error": 0.07817278535088272
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 3.206456758293555e-05,
+          "one_step_acceleration_error": 2.101383501115264,
+          "max_norm_ratio": 1.011407147591424,
+          "max_velocity_norm_ratio": 1.0076418270618757,
+          "final_Dirac_error": 0.0909488002430235
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 3.104409654829808e-05,
+          "one_step_acceleration_error": 2.034505911389263,
+          "max_norm_ratio": 1.0114131475711616,
+          "max_velocity_norm_ratio": 1.0032674989653696,
+          "final_Dirac_error": 0.08643872929328322
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 4.631849155303704e-05,
+          "one_step_acceleration_error": 3.0355286624198357,
+          "max_norm_ratio": 1.0235710225417651,
+          "max_velocity_norm_ratio": 1.011784584602434,
+          "final_Dirac_error": 0.10420108404977398
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 4.035066683095232e-05,
+          "one_step_acceleration_error": 2.644421301433291,
+          "max_norm_ratio": 1.0121131996023331,
+          "max_velocity_norm_ratio": 1.0004212415834388,
+          "final_Dirac_error": 0.11734319074789888
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 4.2726519238889214e-05,
+          "one_step_acceleration_error": 2.8001251648398435,
+          "max_norm_ratio": 1.0155848852464298,
+          "max_velocity_norm_ratio": 1.008264932784094,
+          "final_Dirac_error": 0.11159605086502988
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 3.928384219865859e-05,
+          "one_step_acceleration_error": 2.574505882331289,
+          "max_norm_ratio": 1.0195837070951979,
+          "max_velocity_norm_ratio": 1.0024406106059784,
+          "final_Dirac_error": 0.11337723349499763
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 4.235469015187769e-05,
+          "one_step_acceleration_error": 2.7757569737934564,
+          "max_norm_ratio": 1.0246536590515893,
+          "max_velocity_norm_ratio": 1.0,
+          "final_Dirac_error": 0.1266329295563181
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 3.904221537302603e-05,
+          "one_step_acceleration_error": 2.558670626686634,
+          "max_norm_ratio": 1.01402066491703,
+          "max_velocity_norm_ratio": 1.0186190860533773,
+          "final_Dirac_error": 0.09615743842684715
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 4.659909454279472e-05,
+          "one_step_acceleration_error": 3.053918259956595,
+          "max_norm_ratio": 1.0205065912552933,
+          "max_velocity_norm_ratio": 1.0011045420119353,
+          "final_Dirac_error": 0.1197936589548029
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 3.952011153534185e-05,
+          "one_step_acceleration_error": 2.5899900295801634,
+          "max_norm_ratio": 1.013506137566221,
+          "max_velocity_norm_ratio": 1.00311175272321,
+          "final_Dirac_error": 0.10784327511292761
+        }
+      ],
+      "summaries": {
+        "original_002": {
+          "one_step_state_error": 4.524130150512493e-05,
+          "one_step_acceleration_error": 2.9649339354398676,
+          "max_norm_ratio": 1.0173268830443403,
+          "max_velocity_norm_ratio": 1.0201605181437243,
+          "final_Dirac_error": 0.06529920992980938
+        },
+        "fixed_005": {
+          "one_step_state_error": 4.659909454279472e-05,
+          "one_step_acceleration_error": 3.053918259956595,
+          "max_norm_ratio": 1.0246536590515893,
+          "max_velocity_norm_ratio": 1.0186190860533773,
+          "final_Dirac_error": 0.1266329295563181
+        }
+      }
+    },
+    {
+      "mode": "Psi",
+      "delta_jvp_relative_errors": [
+        7.194591734806551e-16,
+        2.1261562904397567e-14,
+        5.028186286320071e-16
+      ],
+      "steps_completed": 847,
+      "stopped_due_to_growth": false,
+      "cases": [
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.00017908120347852693,
+          "one_step_acceleration_error": 11.736265751168741,
+          "max_norm_ratio": 1.0465219278444846,
+          "max_velocity_norm_ratio": 1.1218315070804292,
+          "final_Dirac_error": 0.174632298779651
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00015980387875556755,
+          "one_step_acceleration_error": 10.472906998124875,
+          "max_norm_ratio": 1.0421651010075494,
+          "max_velocity_norm_ratio": 1.0662176485008366,
+          "final_Dirac_error": 0.189679514941895
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00017119620085359776,
+          "one_step_acceleration_error": 11.219514219141383,
+          "max_norm_ratio": 1.0439613868793882,
+          "max_velocity_norm_ratio": 1.041665097790328,
+          "final_Dirac_error": 0.16110514280247812
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00017192751686615033,
+          "one_step_acceleration_error": 11.267441745340028,
+          "max_norm_ratio": 1.051291029572684,
+          "max_velocity_norm_ratio": 1.1220025334625443,
+          "final_Dirac_error": 0.1955850566732035
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.00017536146690600612,
+          "one_step_acceleration_error": 11.492489095152017,
+          "max_norm_ratio": 1.0585265898150316,
+          "max_velocity_norm_ratio": 1.143355403726986,
+          "final_Dirac_error": 0.1784884225570657
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00017106594178061167,
+          "one_step_acceleration_error": 11.210977560534166,
+          "max_norm_ratio": 1.048458230518088,
+          "max_velocity_norm_ratio": 1.0324068601447463,
+          "final_Dirac_error": 0.1882859128953892
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.00017931870460454675,
+          "one_step_acceleration_error": 11.751830624963576,
+          "max_norm_ratio": 1.0495316118478117,
+          "max_velocity_norm_ratio": 1.1234053623391071,
+          "final_Dirac_error": 0.1686457456502953
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.00016367823303337016,
+          "one_step_acceleration_error": 10.726816680074947,
+          "max_norm_ratio": 1.0483371265518728,
+          "max_velocity_norm_ratio": 1.0885231286344597,
+          "final_Dirac_error": 0.1989283388864861
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.00025693318469280325,
+          "one_step_acceleration_error": 16.838373192027554,
+          "max_norm_ratio": 1.060445695443589,
+          "max_velocity_norm_ratio": 1.1459106265690568,
+          "final_Dirac_error": 0.2742005004357245
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00021605020552015365,
+          "one_step_acceleration_error": 14.15906626896879,
+          "max_norm_ratio": 1.046932733026454,
+          "max_velocity_norm_ratio": 1.0271295503437077,
+          "final_Dirac_error": 0.25596113441136675
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00020504582036974357,
+          "one_step_acceleration_error": 13.437882883751515,
+          "max_norm_ratio": 1.0435560194790143,
+          "max_velocity_norm_ratio": 1.0790027047276718,
+          "final_Dirac_error": 0.25934745753006216
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00024598005461785746,
+          "one_step_acceleration_error": 16.120548859435907,
+          "max_norm_ratio": 1.0249995747177663,
+          "max_velocity_norm_ratio": 1.0997159038970368,
+          "final_Dirac_error": 0.21967915739117222
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.00023587864640496153,
+          "one_step_acceleration_error": 15.458542970795559,
+          "max_norm_ratio": 1.0447603799056036,
+          "max_velocity_norm_ratio": 1.0520344366300305,
+          "final_Dirac_error": 0.22017466847067077
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00021361394373542035,
+          "one_step_acceleration_error": 13.999403416644508,
+          "max_norm_ratio": 1.0409060216373052,
+          "max_velocity_norm_ratio": 1.141329855256078,
+          "final_Dirac_error": 0.23503574038351413
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.00024590803730918903,
+          "one_step_acceleration_error": 16.115829133095012,
+          "max_norm_ratio": 1.0544542486459643,
+          "max_velocity_norm_ratio": 1.0932874888677568,
+          "final_Dirac_error": 0.26005542172834606
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.00023518596257554093,
+          "one_step_acceleration_error": 15.41314724335065,
+          "max_norm_ratio": 1.0385593961083996,
+          "max_velocity_norm_ratio": 1.1025145575647906,
+          "final_Dirac_error": 0.23632396580805776
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.00017907001361982234,
+          "one_step_acceleration_error": 11.735532412588677,
+          "max_norm_ratio": 1.047494636515291,
+          "max_velocity_norm_ratio": 1.122501254169836,
+          "final_Dirac_error": 0.17765779925512482
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00016033607169033885,
+          "one_step_acceleration_error": 10.507784794298047,
+          "max_norm_ratio": 1.0425327980769477,
+          "max_velocity_norm_ratio": 1.0673472327808122,
+          "final_Dirac_error": 0.18996173589789236
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00017122609189556518,
+          "one_step_acceleration_error": 11.22147315846776,
+          "max_norm_ratio": 1.0449175955382817,
+          "max_velocity_norm_ratio": 1.042170821619295,
+          "final_Dirac_error": 0.16497063790705765
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00017215824848732677,
+          "one_step_acceleration_error": 11.282562972865447,
+          "max_norm_ratio": 1.0518738451106766,
+          "max_velocity_norm_ratio": 1.1216021242969125,
+          "final_Dirac_error": 0.1984030048352607
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.00017550314883180864,
+          "one_step_acceleration_error": 11.501774361841411,
+          "max_norm_ratio": 1.060390490291793,
+          "max_velocity_norm_ratio": 1.1430656392749052,
+          "final_Dirac_error": 0.18651182087640678
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00017099337517167498,
+          "one_step_acceleration_error": 11.206221835250892,
+          "max_norm_ratio": 1.0481066781725472,
+          "max_velocity_norm_ratio": 1.0317456240660523,
+          "final_Dirac_error": 0.18573115510857827
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.0001793396461372374,
+          "one_step_acceleration_error": 11.75320304924999,
+          "max_norm_ratio": 1.0509773010936105,
+          "max_velocity_norm_ratio": 1.123812155859865,
+          "final_Dirac_error": 0.17404255738967764
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.0001640242812585701,
+          "one_step_acceleration_error": 10.74949529656165,
+          "max_norm_ratio": 1.0480928522765112,
+          "max_velocity_norm_ratio": 1.0887599789479312,
+          "final_Dirac_error": 0.19659405483800024
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.00025638808223012985,
+          "one_step_acceleration_error": 16.80264935703379,
+          "max_norm_ratio": 1.064682324540065,
+          "max_velocity_norm_ratio": 1.145430937132159,
+          "final_Dirac_error": 0.2803703964169545
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00021613739089955798,
+          "one_step_acceleration_error": 14.164780049993432,
+          "max_norm_ratio": 1.0513342266332135,
+          "max_velocity_norm_ratio": 1.0282805274574436,
+          "final_Dirac_error": 0.2725967479912477
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00020516814592992308,
+          "one_step_acceleration_error": 13.445899611663439,
+          "max_norm_ratio": 1.042976023119214,
+          "max_velocity_norm_ratio": 1.0795889792919258,
+          "final_Dirac_error": 0.2616632823248616
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.0002459042591627959,
+          "one_step_acceleration_error": 16.115581528492992,
+          "max_norm_ratio": 1.0331039821196908,
+          "max_velocity_norm_ratio": 1.0993065233390105,
+          "final_Dirac_error": 0.23646915466882573
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.00023621790951812636,
+          "one_step_acceleration_error": 15.480776918179929,
+          "max_norm_ratio": 1.0498846925014458,
+          "max_velocity_norm_ratio": 1.055041348352286,
+          "final_Dirac_error": 0.23782157447424931
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00021331858185950878,
+          "one_step_acceleration_error": 13.980046580744768,
+          "max_norm_ratio": 1.0440471931494821,
+          "max_velocity_norm_ratio": 1.1390934316692716,
+          "final_Dirac_error": 0.23783488803428476
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.0002456737106685091,
+          "one_step_acceleration_error": 16.10047230237141,
+          "max_norm_ratio": 1.0562791873815345,
+          "max_velocity_norm_ratio": 1.0937989731672362,
+          "final_Dirac_error": 0.2679885757904562
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.00023482860759028093,
+          "one_step_acceleration_error": 15.38972762703665,
+          "max_norm_ratio": 1.044660080104651,
+          "max_velocity_norm_ratio": 1.1009719760382848,
+          "final_Dirac_error": 0.2514979595341843
+        }
+      ],
+      "summaries": {
+        "original_002": {
+          "one_step_state_error": 0.00025693318469280325,
+          "one_step_acceleration_error": 16.838373192027554,
+          "max_norm_ratio": 1.060445695443589,
+          "max_velocity_norm_ratio": 1.1459106265690568,
+          "final_Dirac_error": 0.2742005004357245
+        },
+        "fixed_005": {
+          "one_step_state_error": 0.00025638808223012985,
+          "one_step_acceleration_error": 16.80264935703379,
+          "max_norm_ratio": 1.064682324540065,
+          "max_velocity_norm_ratio": 1.145430937132159,
+          "final_Dirac_error": 0.2803703964169545
+        }
+      }
+    },
+    {
+      "mode": "W",
+      "delta_jvp_relative_errors": [
+        7.023526117912093e-16,
+        2.2245174371704557e-14,
+        5.281511277186627e-16
+      ],
+      "steps_completed": 847,
+      "stopped_due_to_growth": false,
+      "cases": [
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.00025296133672508863,
+          "one_step_acceleration_error": 16.57807416361541,
+          "max_norm_ratio": 3.043492323410535,
+          "max_velocity_norm_ratio": 3.1333568097845235,
+          "final_Dirac_error": 2.501093706839657
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00022317604050396176,
+          "one_step_acceleration_error": 14.626064990467638,
+          "max_norm_ratio": 2.3457005621025777,
+          "max_velocity_norm_ratio": 2.4641105625914825,
+          "final_Dirac_error": 1.767491114272781
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00020864647236635046,
+          "one_step_acceleration_error": 13.673855213001143,
+          "max_norm_ratio": 2.4230379060394136,
+          "max_velocity_norm_ratio": 2.568153915748098,
+          "final_Dirac_error": 1.7968210385062022
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00022999759310017386,
+          "one_step_acceleration_error": 15.073122261412994,
+          "max_norm_ratio": 2.8759114351784896,
+          "max_velocity_norm_ratio": 2.9867417729221666,
+          "final_Dirac_error": 2.4911867500380596
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.000241067436799576,
+          "one_step_acceleration_error": 15.798595538097013,
+          "max_norm_ratio": 2.040809340873732,
+          "max_velocity_norm_ratio": 1.927758416894849,
+          "final_Dirac_error": 1.2212630756935954
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.0001947219349525066,
+          "one_step_acceleration_error": 12.761296729047473,
+          "max_norm_ratio": 3.6347132902067663,
+          "max_velocity_norm_ratio": 4.004527728985476,
+          "final_Dirac_error": 3.285973043548114
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.00025357555433105304,
+          "one_step_acceleration_error": 16.61832752863989,
+          "max_norm_ratio": 2.324048954258832,
+          "max_velocity_norm_ratio": 2.279153279822314,
+          "final_Dirac_error": 1.5712307514719803
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.0002249055685947394,
+          "one_step_acceleration_error": 14.739411343424841,
+          "max_norm_ratio": 3.192266025141182,
+          "max_velocity_norm_ratio": 3.4275197630278296,
+          "final_Dirac_error": 2.859537187140152
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.0003138623498427695,
+          "one_step_acceleration_error": 20.56928295929574,
+          "max_norm_ratio": 4.614770907083551,
+          "max_velocity_norm_ratio": 4.4351097698268465,
+          "final_Dirac_error": 3.958553066100897
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00023774876008325556,
+          "one_step_acceleration_error": 15.581102740816236,
+          "max_norm_ratio": 5.068254247278257,
+          "max_velocity_norm_ratio": 5.363719137729885,
+          "final_Dirac_error": 4.435144742033912
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00028150323380039257,
+          "one_step_acceleration_error": 18.448595930342528,
+          "max_norm_ratio": 7.056560097253416,
+          "max_velocity_norm_ratio": 7.505329067621977,
+          "final_Dirac_error": 6.4617641272173385
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00032937456756817194,
+          "one_step_acceleration_error": 21.585891660147716,
+          "max_norm_ratio": 1.5820895859289656,
+          "max_velocity_norm_ratio": 1.442750297513252,
+          "final_Dirac_error": 1.0688251673861853
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.0003056490181489903,
+          "one_step_acceleration_error": 20.03101405341223,
+          "max_norm_ratio": 4.120653223597422,
+          "max_velocity_norm_ratio": 4.050175002884149,
+          "final_Dirac_error": 3.5162782787203573
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00031116218893113227,
+          "one_step_acceleration_error": 20.392325213790684,
+          "max_norm_ratio": 4.161012463676932,
+          "max_velocity_norm_ratio": 4.159471086133019,
+          "final_Dirac_error": 3.517485051928621
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.0002786832665274312,
+          "one_step_acceleration_error": 18.26378655514173,
+          "max_norm_ratio": 5.882275152940596,
+          "max_velocity_norm_ratio": 5.965228369867157,
+          "final_Dirac_error": 5.266977201449571
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.00027110032364316666,
+          "one_step_acceleration_error": 17.76683081027857,
+          "max_norm_ratio": 2.4915084208928278,
+          "max_velocity_norm_ratio": 2.465142810396384,
+          "final_Dirac_error": 1.7574719840992383
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.0002530155852206562,
+          "one_step_acceleration_error": 16.581629393020926,
+          "max_norm_ratio": 3.0227671347469984,
+          "max_velocity_norm_ratio": 3.1087666136710226,
+          "final_Dirac_error": 2.4786190793533556
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00022326711131683726,
+          "one_step_acceleration_error": 14.632033407260247,
+          "max_norm_ratio": 2.3254428747123086,
+          "max_velocity_norm_ratio": 2.435581152498799,
+          "final_Dirac_error": 1.7405928065039105
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00020875156568996234,
+          "one_step_acceleration_error": 13.680742609057372,
+          "max_norm_ratio": 2.414137092619963,
+          "max_velocity_norm_ratio": 2.5556550088201395,
+          "final_Dirac_error": 1.7863898320948046
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.0002300167788294879,
+          "one_step_acceleration_error": 15.074379617369319,
+          "max_norm_ratio": 2.839128381129232,
+          "max_velocity_norm_ratio": 2.9409335879979706,
+          "final_Dirac_error": 2.452292583749046
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.00024107202727850183,
+          "one_step_acceleration_error": 15.798896379723896,
+          "max_norm_ratio": 2.024191464444898,
+          "max_velocity_norm_ratio": 1.9051025351073043,
+          "final_Dirac_error": 1.1984864647140883
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00019486805191219325,
+          "one_step_acceleration_error": 12.770872650117497,
+          "max_norm_ratio": 3.609850589769596,
+          "max_velocity_norm_ratio": 3.9749681656521987,
+          "final_Dirac_error": 3.2601035510450793
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.00025362417441384034,
+          "one_step_acceleration_error": 16.62151389438544,
+          "max_norm_ratio": 2.311001511685106,
+          "max_velocity_norm_ratio": 2.2625732397813842,
+          "final_Dirac_error": 1.5548293982843686
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.00022499475582157954,
+          "one_step_acceleration_error": 14.745256317523037,
+          "max_norm_ratio": 3.1625265197047203,
+          "max_velocity_norm_ratio": 3.390474355638435,
+          "final_Dirac_error": 2.8275084476271806
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.0003140882922753936,
+          "one_step_acceleration_error": 20.584090322560193,
+          "max_norm_ratio": 4.586771012777017,
+          "max_velocity_norm_ratio": 4.399704739226571,
+          "final_Dirac_error": 3.932096811934083
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.0002379625169584185,
+          "one_step_acceleration_error": 15.595111511386914,
+          "max_norm_ratio": 5.026250612868516,
+          "max_velocity_norm_ratio": 5.317079336421418,
+          "final_Dirac_error": 4.394910032646532
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00028187421046422465,
+          "one_step_acceleration_error": 18.472908256983427,
+          "max_norm_ratio": 6.985396434297422,
+          "max_velocity_norm_ratio": 7.422302120987694,
+          "final_Dirac_error": 6.391650417998086
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00032937652516429203,
+          "one_step_acceleration_error": 21.586019953167042,
+          "max_norm_ratio": 1.6104753623767538,
+          "max_velocity_norm_ratio": 1.4698924245490634,
+          "final_Dirac_error": 1.1058560089838647
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.00030573371397163494,
+          "one_step_acceleration_error": 20.036564678845068,
+          "max_norm_ratio": 4.068995720110437,
+          "max_velocity_norm_ratio": 3.9957124678396796,
+          "final_Dirac_error": 3.4659921447483604
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.0003114180299847987,
+          "one_step_acceleration_error": 20.409092013083768,
+          "max_norm_ratio": 4.138479391429659,
+          "max_velocity_norm_ratio": 4.12738594657922,
+          "final_Dirac_error": 3.496468251598463
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.00027901056223525125,
+          "one_step_acceleration_error": 18.285236206649426,
+          "max_norm_ratio": 5.82505785574616,
+          "max_velocity_norm_ratio": 5.900792226372113,
+          "final_Dirac_error": 5.2108511973268925
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.00027131294098334225,
+          "one_step_acceleration_error": 17.780764900284318,
+          "max_norm_ratio": 2.479705879807583,
+          "max_velocity_norm_ratio": 2.4483053939060175,
+          "final_Dirac_error": 1.7482233002686656
+        }
+      ],
+      "summaries": {
+        "original_002": {
+          "one_step_state_error": 0.00032937456756817194,
+          "one_step_acceleration_error": 21.585891660147716,
+          "max_norm_ratio": 7.056560097253416,
+          "max_velocity_norm_ratio": 7.505329067621977,
+          "final_Dirac_error": 6.4617641272173385
+        },
+        "fixed_005": {
+          "one_step_state_error": 0.00032937652516429203,
+          "one_step_acceleration_error": 21.586019953167042,
+          "max_norm_ratio": 6.985396434297422,
+          "max_velocity_norm_ratio": 7.422302120987694,
+          "final_Dirac_error": 6.391650417998086
+        }
+      }
+    },
+    {
+      "mode": "both",
+      "delta_jvp_relative_errors": [
+        6.636912476348173e-16,
+        2.105661259491179e-14,
+        5.045052041117181e-16
+      ],
+      "steps_completed": 847,
+      "stopped_due_to_growth": false,
+      "cases": [
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.00033836173989674405,
+          "one_step_acceleration_error": 22.174874985873018,
+          "max_norm_ratio": 3.981344659883639,
+          "max_velocity_norm_ratio": 4.534976951316281,
+          "final_Dirac_error": 3.513749669147647
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.0003185498578134118,
+          "one_step_acceleration_error": 20.876483481659754,
+          "max_norm_ratio": 3.6712278711493282,
+          "max_velocity_norm_ratio": 4.021032461054967,
+          "final_Dirac_error": 3.1455127342676223
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.0003325524762535499,
+          "one_step_acceleration_error": 21.794159083752646,
+          "max_norm_ratio": 3.8920598635600903,
+          "max_velocity_norm_ratio": 4.194050100862665,
+          "final_Dirac_error": 3.457475136529999
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.0003096321741449913,
+          "one_step_acceleration_error": 20.29205416476615,
+          "max_norm_ratio": 4.535081016716381,
+          "max_velocity_norm_ratio": 5.5183818883141305,
+          "final_Dirac_error": 4.144608266169155
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.0003168077281383107,
+          "one_step_acceleration_error": 20.76231127127233,
+          "max_norm_ratio": 2.793745608152158,
+          "max_velocity_norm_ratio": 2.8207501988413806,
+          "final_Dirac_error": 2.2128772287648912
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00032499528643891264,
+          "one_step_acceleration_error": 21.29889109206058,
+          "max_norm_ratio": 5.0067860611293655,
+          "max_velocity_norm_ratio": 6.005672495777856,
+          "final_Dirac_error": 4.672208890793647
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.00034183800790928837,
+          "one_step_acceleration_error": 22.402695686343122,
+          "max_norm_ratio": 3.1591503742696374,
+          "max_velocity_norm_ratio": 3.2111154088050493,
+          "final_Dirac_error": 2.6503825646362498
+        },
+        {
+          "preparation": "original_002",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.0003179766362933271,
+          "one_step_acceleration_error": 20.838916836119484,
+          "max_norm_ratio": 4.761593630613321,
+          "max_velocity_norm_ratio": 5.724136046044786,
+          "final_Dirac_error": 4.399166194978703
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.0004573886035411166,
+          "one_step_acceleration_error": 29.975419521670617,
+          "max_norm_ratio": 8.900592264581197,
+          "max_velocity_norm_ratio": 10.346189753894423,
+          "final_Dirac_error": 8.412116517406467
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.00040622916666791756,
+          "one_step_acceleration_error": 26.622634666748645,
+          "max_norm_ratio": 12.543836208511868,
+          "max_velocity_norm_ratio": 15.415938701649193,
+          "final_Dirac_error": 12.055846452149005
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00039113622296774533,
+          "one_step_acceleration_error": 25.633503508414158,
+          "max_norm_ratio": 14.82558959514477,
+          "max_velocity_norm_ratio": 18.406190647588925,
+          "final_Dirac_error": 14.33280902747106
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.0004825556724342629,
+          "one_step_acceleration_error": 31.624768548651854,
+          "max_norm_ratio": 4.815265957317078,
+          "max_velocity_norm_ratio": 5.231587877543221,
+          "final_Dirac_error": 4.3786932301496435
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.00046658123131905634,
+          "one_step_acceleration_error": 30.577867575725676,
+          "max_norm_ratio": 11.84004868622292,
+          "max_velocity_norm_ratio": 13.774874958061137,
+          "final_Dirac_error": 11.365006027969585
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.000407931218647641,
+          "one_step_acceleration_error": 26.7341803452918,
+          "max_norm_ratio": 6.582722062431636,
+          "max_velocity_norm_ratio": 7.69933682991636,
+          "final_Dirac_error": 6.127684688964224
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.0004396456589651517,
+          "one_step_acceleration_error": 28.812617905940183,
+          "max_norm_ratio": 13.978285063771702,
+          "max_velocity_norm_ratio": 16.759310853436915,
+          "final_Dirac_error": 13.480923722256176
+        },
+        {
+          "preparation": "original_002",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.0004287915572978352,
+          "one_step_acceleration_error": 28.101283499070927,
+          "max_norm_ratio": 6.604872254980423,
+          "max_velocity_norm_ratio": 7.763092537637673,
+          "final_Dirac_error": 6.153828360572071
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.00033835331793860064,
+          "one_step_acceleration_error": 22.17432304442413,
+          "max_norm_ratio": 3.9580874981593,
+          "max_velocity_norm_ratio": 4.502262329447791,
+          "final_Dirac_error": 3.4895587710033644
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.0003185803334303779,
+          "one_step_acceleration_error": 20.878480731693244,
+          "max_norm_ratio": 3.6449393096890113,
+          "max_velocity_norm_ratio": 3.9759397922478867,
+          "final_Dirac_error": 3.115898465645523
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00033254871066261296,
+          "one_step_acceleration_error": 21.793912301985003,
+          "max_norm_ratio": 3.9015482758580085,
+          "max_velocity_norm_ratio": 4.205461872586583,
+          "final_Dirac_error": 3.4680845717540403
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00030962835942326475,
+          "one_step_acceleration_error": 20.29180416316308,
+          "max_norm_ratio": 4.4694322127663,
+          "max_velocity_norm_ratio": 5.424401816099401,
+          "final_Dirac_error": 4.076632735631295
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.0003167992952088886,
+          "one_step_acceleration_error": 20.761758610809725,
+          "max_norm_ratio": 2.7927752319350865,
+          "max_velocity_norm_ratio": 2.8150038757602496,
+          "final_Dirac_error": 2.2143205601171547
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00032500168112128963,
+          "one_step_acceleration_error": 21.299310173964837,
+          "max_norm_ratio": 4.974498561666374,
+          "max_velocity_norm_ratio": 5.9606482928522295,
+          "final_Dirac_error": 4.639207922943235
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.0003418273589916154,
+          "one_step_acceleration_error": 22.401997798874508,
+          "max_norm_ratio": 3.1655724705522887,
+          "max_velocity_norm_ratio": 3.2197043235194664,
+          "final_Dirac_error": 2.658924506781348
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "plus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.0003179964817743381,
+          "one_step_acceleration_error": 20.840217429563022,
+          "max_norm_ratio": 4.714244453658866,
+          "max_velocity_norm_ratio": 5.655976120415888,
+          "final_Dirac_error": 4.349841710156334
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": -1,
+          "one_step_state_error": 0.0004572881875850959,
+          "one_step_acceleration_error": 29.968838661576847,
+          "max_norm_ratio": 8.780054389727553,
+          "max_velocity_norm_ratio": 10.19702873019938,
+          "final_Dirac_error": 8.293858295527103
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 0,
+          "sign": 1,
+          "one_step_state_error": 0.0004061828534872856,
+          "one_step_acceleration_error": 26.61959948614275,
+          "max_norm_ratio": 12.474230350803882,
+          "max_velocity_norm_ratio": 15.330796888736444,
+          "final_Dirac_error": 11.988117822076118
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": -1,
+          "one_step_state_error": 0.00039121771970318764,
+          "one_step_acceleration_error": 25.638844478468105,
+          "max_norm_ratio": 14.68891745906946,
+          "max_velocity_norm_ratio": 18.23209059261788,
+          "final_Dirac_error": 14.197561607978535
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 1,
+          "sign": 1,
+          "one_step_state_error": 0.00048235954904034224,
+          "one_step_acceleration_error": 31.61191540590787,
+          "max_norm_ratio": 4.7650414582091996,
+          "max_velocity_norm_ratio": 5.168714915406224,
+          "final_Dirac_error": 4.331477398343665
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": -1,
+          "one_step_state_error": 0.0004664924406909541,
+          "one_step_acceleration_error": 30.572048593122368,
+          "max_norm_ratio": 11.753434271199295,
+          "max_velocity_norm_ratio": 13.674668758602683,
+          "final_Dirac_error": 11.279961894651859
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 2,
+          "sign": 1,
+          "one_step_state_error": 0.00040792279026272,
+          "one_step_acceleration_error": 26.73362798265762,
+          "max_norm_ratio": 6.495190929166211,
+          "max_velocity_norm_ratio": 7.581400240404313,
+          "final_Dirac_error": 6.042723411954619
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": -1,
+          "one_step_state_error": 0.0004396357022533229,
+          "one_step_acceleration_error": 28.81196538287377,
+          "max_norm_ratio": 13.862904621054158,
+          "max_velocity_norm_ratio": 16.619296336984984,
+          "final_Dirac_error": 13.367020005986546
+        },
+        {
+          "preparation": "fixed_005",
+          "copy": "minus",
+          "axis": 3,
+          "sign": 1,
+          "one_step_state_error": 0.0004287098921208051,
+          "one_step_acceleration_error": 28.095931490029084,
+          "max_norm_ratio": 6.560381340923478,
+          "max_velocity_norm_ratio": 7.707629776150238,
+          "final_Dirac_error": 6.111540067835967
+        }
+      ],
+      "summaries": {
+        "original_002": {
+          "one_step_state_error": 0.0004825556724342629,
+          "one_step_acceleration_error": 31.624768548651854,
+          "max_norm_ratio": 14.82558959514477,
+          "max_velocity_norm_ratio": 18.406190647588925,
+          "final_Dirac_error": 14.33280902747106
+        },
+        "fixed_005": {
+          "one_step_state_error": 0.00048235954904034224,
+          "one_step_acceleration_error": 31.61191540590787,
+          "max_norm_ratio": 14.68891745906946,
+          "max_velocity_norm_ratio": 18.23209059261788,
+          "final_Dirac_error": 14.197561607978535
+        }
+      }
+    }
+  ],
+  "claim_boundary": "Exact change to full native DEL tangent, independently JVP checked. Action variants are research replacements, no nonlinear or movement pass is inferred."
+}

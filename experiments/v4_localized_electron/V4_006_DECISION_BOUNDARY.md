@@ -3,6 +3,24 @@
 V4-006 is **open**, but it is no longer an undifferentiated receiver-orientation
 problem. Two different motion questions were being mixed.
 
+### Current controlling refinement — native face charge
+
+The prior direct-prong and parallel clock mechanisms are already installed
+in the frozen V4-002–005 research action, which still passes those scoped
+gates. Its B-normalized six-face oscillator carries 99.87% of the native
+rest Psi phase momentum and dominates the tested moving force residual.
+The receiving shape must preserve both phase momenta, not simply the
+rest clock or total Psi norm. The two-charge face-capacity chart reduces
+the nonlinear boundary residual, but does not close it at the independent
+Dirac crossing time. Native geometry derives two initial receiver phases
+near opposite quarter turns and an associated chi tilt without modifying
+the action; the first nonlinear implicit release did not converge. Do not
+infer that the precursor actually moves or reverses. Clock-neutral and
+material-derivative substitutions were screened and rejected.
+See [`V4_006_FACE_CHARGE_CLOCK_RCA.md`](V4_006_FACE_CHARGE_CLOCK_RCA.md)
+for the exact equation, evidence and next inverse requirement. No change
+to the passing prior stages or canonical action follows from this work.
+
 ## Active endpoint, retired interpolation: exact compact translation
 
 The exact eight-site rest carrier remains the required **endpoint** of a

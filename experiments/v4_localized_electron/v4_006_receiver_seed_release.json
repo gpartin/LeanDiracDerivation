@@ -1,0 +1,120 @@
+{
+  "status": "V4_006_CHARGE_DERIVED_RECEIVER_FREE_RELEASE_DIAGNOSTIC",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "initial_seed_amplitude": 0.01,
+  "initial_seed_rate_per_step": 5.693463903438852e-05,
+  "rows": [
+    {
+      "phase_branch": -1,
+      "initial_native_phase": [
+        0.07424359861520276,
+        -1.5482658050644762e-05
+      ],
+      "incoming_charge_root_defect": 6.587589397807984e-14,
+      "initial_receiver_phase": -4.7414197002610345,
+      "steps_completed": 0,
+      "samples": [
+        {
+          "step": 0,
+          "receiver_Psi_coefficient": [
+            0.00029026642283444754,
+            0.009995786382460107
+          ],
+          "receiver_signed_initial_phase_amplitude": 0.01,
+          "receiver_Psi_amplitude": 0.01,
+          "chi_receiver_tilt_norm": 1.6686010230312647,
+          "chi_receiver_alignment_to_shifted_frame_real": 0.08922726637898992,
+          "chi_receiver_alignment_to_shifted_frame_abs": 0.5680644897072015,
+          "charge_relative_defect": [
+            2.0053544589978642e-16,
+            -3.559504164721209e-14
+          ],
+          "Psi_core_fidelity": 0.9999500024998752,
+          "next_layer_DEL_scaled_error": 0.04456184881005492,
+          "next_layer_solver_history": [
+            0.3766798319856213,
+            0.1022089042137866,
+            0.08420012537862084,
+            0.07356882866589777,
+            0.06737374064141005,
+            0.06292305557627667,
+            0.05998667143506924,
+            0.05853883933340387,
+            0.05594276311265628,
+            0.05374363976761198,
+            0.051920817114943965,
+            0.050421353758548615,
+            0.04916425806443002,
+            0.04806136450377652,
+            0.047049233755464846,
+            0.046119353053632246,
+            0.04532958501490729,
+            0.0447812709627962
+          ]
+        }
+      ],
+      "receiver_amplitude_change": 0.0,
+      "receiver_amplitude_expected_seed_change": 0.0,
+      "claim": "unrestricted native evolution after two prepared layers"
+    },
+    {
+      "phase_branch": 1,
+      "initial_native_phase": [
+        0.07422799152802387,
+        1.5482674460224986e-05
+      ],
+      "incoming_charge_root_defect": 1.7416515021323302e-13,
+      "initial_receiver_phase": -1.5422114674305374,
+      "steps_completed": 0,
+      "samples": [
+        {
+          "step": 0,
+          "receiver_Psi_coefficient": [
+            0.00028580966769666417,
+            -0.009995914807252568
+          ],
+          "receiver_signed_initial_phase_amplitude": 0.010000000000000002,
+          "receiver_Psi_amplitude": 0.010000000000000002,
+          "chi_receiver_tilt_norm": 1.6686019103581395,
+          "chi_receiver_alignment_to_shifted_frame_real": 0.0892272663789894,
+          "chi_receiver_alignment_to_shifted_frame_abs": 0.5680644897072015,
+          "charge_relative_defect": [
+            2.0053544589978642e-16,
+            -1.5526456898790964e-13
+          ],
+          "Psi_core_fidelity": 0.9999500024998752,
+          "next_layer_DEL_scaled_error": 0.06821182292838103,
+          "next_layer_solver_history": [
+            0.373828200866565,
+            0.09100271950041364,
+            0.08349327354050301,
+            0.08123713910350996,
+            0.07950900248843489,
+            0.07752173153215469,
+            0.07589429842253771,
+            0.07313271402798789,
+            0.07109118371400407,
+            0.0699573988627191,
+            0.06982692321922214,
+            0.06934731726746719,
+            0.06907113015405747,
+            0.06898205340643923,
+            0.06877538535760234,
+            0.06859776067644492,
+            0.0684464587207841,
+            0.06831871703327352
+          ]
+        }
+      ],
+      "receiver_amplitude_change": 0.0,
+      "receiver_amplitude_expected_seed_change": 0.0,
+      "claim": "unrestricted native evolution after two prepared layers"
+    }
+  ],
+  "claim_boundary": "Native nonlinear first pushes on charge-derived precursor; no runtime projection or Dirac force. This is not a complete cell handoff or proof that the precursor forms from quiet vacuum."
+}
