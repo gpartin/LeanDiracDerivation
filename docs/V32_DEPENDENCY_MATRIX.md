@@ -22,6 +22,10 @@ finite-C19 scalar spectrum do not select the number `1197`. This does not make
 `B` irrelevant to the full framework: it remains the kinetic normalization of
 the live chi field outside the decoupled linear free sector.
 
+This boundary is exported as the Lean theorem
+`v32_free_transverse_tangent_uniform_in_B` and as the `arbitraryB` field of
+`V32RobustnessCertificate`; it is not inferred only from this table.
+
 The physical-unit row is intentionally negative. V3.2 proves
 `E_rest,physical = 19 * E_native_unit` and proves that the unchanged
 dimensionless theory does not choose `E_native_unit`. Therefore it does not
@@ -31,3 +35,8 @@ Route 1 also keeps the finite-spacing distinction explicit. The exact C19
 second-order spectrum is proved, while the local four-component Dirac root is
 the continuum root with a controlled remainder. Lean proves that identifying
 the two globally at finite spacing would be false.
+
+The rest specialization is also checked jointly for both exhaustive copies by
+`v32_two_copy_rest_sector`: both copies carry the same positive rest mass on
+both rest-spin basis states, unit-density explicit rest spinors, zero rest
+current, native mass `19`, and gap `38`.

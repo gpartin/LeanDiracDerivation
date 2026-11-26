@@ -38,6 +38,11 @@ theorem audit, claim-status audit, and semantic axiom audit all pass through
 `scripts/verify_v32_research.py`. The verifier reports
 `V32_RELEASE_CANDIDATE_PASS`.
 
+The release-integration follow-up additionally exposes V3.2 through the
+default `LeanDirac` import, runs the V3.2 verifier in GitHub CI, exports a
+combined two-copy rest-sector theorem, and machine-checks the arbitrary-`B`
+free-transverse boundary.
+
 ## Decisive Stage-2 result
 
 Stage 2 now proves the exact finite-C19 energy branches are real,

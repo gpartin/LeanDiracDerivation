@@ -6,6 +6,11 @@ The seventeen-module chain compiles and contains no `sorry`, `admit`, custom
 axiom, equation change, MeV input, or measured electron mass. The cumulative
 theorem depends only on `propext`, `Classical.choice`, and `Quot.sound`.
 
+The release-hardening pass also verifies that the default `LeanDirac` facade
+exports V3.2, GitHub CI runs the V3.2 verifier, both exhaustive copies share
+one explicit rest-sector certificate, and the claimed independence from a
+numerical `B` is represented by a quantified Lean theorem.
+
 The implementation red team has closed the previously identified critical and
 high proof gaps under the Route-1 claim boundary. The cumulative build,
 repository/source lock, forbidden-token scan, required-theorem check, claim
@@ -85,3 +90,8 @@ release blocker because it is explicitly part of the narrowed claim.
   MeV value follows without one independent dimensionful anchor.
 - Exact centered-step and integrated finite-packet transport references are
   exported for the V4 team.
+- Both exhaustive copies are jointly certified to have the same rest mass,
+  unit-density rest representatives, zero rest current, native mass `19`, and
+  gap `38`.
+- The arbitrary-`B` free-transverse boundary is an exported theorem rather
+  than a prose-only dependency assertion.

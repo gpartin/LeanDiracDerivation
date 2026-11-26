@@ -46,17 +46,39 @@ def main() -> None:
     proof = audit["proof_source_commit"]
     run(["git", "cat-file", "-e", f"{proof}^{{commit}}"])
     run(["git", "merge-base", "--is-ancestor", proof, "HEAD"])
-    run([
-        "git", "diff", "--quiet", proof, "HEAD", "--",
+    changed = run([
+        "git", "diff", "--name-only", proof, "HEAD", "--",
         "LeanDirac", "LeanDirac.lean", "LeanDiracAudit.lean",
         "README.md", "docs", "lean-toolchain", "lake-manifest.json",
         "lakefile.toml", "scripts/verify_release.py",
-        "experiments/v3_lorentz_spin/REPORT.md",
-        "experiments/v3_lorentz_spin/RCA.md",
-        "experiments/v3_lorentz_spin/AxiomAudit.lean",
-        "experiments/v3_lorentz_spin/PauliLubanskiRegression.lean",
+        "experiments/v3_lorentz_spin",
+    ]).splitlines()
+    allowed_extensions = {
+        "LeanDirac.lean",
+        "README.md",
+        "experiments/v3_lorentz_spin/artifact_audit.json",
+        "experiments/v3_lorentz_spin/summary.json",
         "experiments/v3_lorentz_spin/verify.py",
-    ])
+    }
+    forbidden_changes = []
+    for name in changed:
+        normalized = name.replace("\\", "/")
+        is_v32_module = (
+            normalized.startswith("LeanDirac/V2/V32")
+            and normalized.endswith(".lean")
+        )
+        is_v32_doc = normalized.startswith("docs/V32")
+        if (
+            normalized not in allowed_extensions
+            and not is_v32_module
+            and not is_v32_doc
+        ):
+            forbidden_changes.append(normalized)
+    if forbidden_changes:
+        raise SystemExit(
+            "sealed V3.1 source changed outside the V3.2 extension boundary:\n"
+            + "\n".join(forbidden_changes)
+        )
 
     build = run(["lake", "build", *audit["lean_targets"]])
     if "Build completed successfully" not in build:

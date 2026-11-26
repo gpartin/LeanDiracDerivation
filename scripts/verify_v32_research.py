@@ -61,10 +61,25 @@ def claim_audit() -> None:
         raise RuntimeError("open stage status(es): " + ", ".join(present))
 
 
+def release_integration_audit() -> None:
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    workflow = (ROOT / ".github" / "workflows" / "lean.yml").read_text(
+        encoding="utf-8"
+    )
+    facade = (ROOT / "LeanDirac.lean").read_text(encoding="utf-8")
+    if "v32_complete_free_fermion" not in readme:
+        raise RuntimeError("README does not expose the V3.2 cumulative theorem")
+    if "scripts/verify_v32_research.py" not in workflow:
+        raise RuntimeError("GitHub CI does not run the V3.2 verifier")
+    if "V32CompleteFreeFermion" not in facade:
+        raise RuntimeError("default LeanDirac facade does not import V3.2")
+
+
 def main() -> int:
     source_audit()
     framework_lock_audit()
     claim_audit()
+    release_integration_audit()
     output = run(
         "lake",
         "build",
@@ -87,6 +102,8 @@ def main() -> int:
         "v32_rest_spinors_are_positive_energy",
         "v32_group_velocity_is_current_over_density",
         "v32_group_speed_bounded_by_lattice_speed_sq",
+        "v32_two_copy_rest_sector",
+        "v32_free_transverse_tangent_uniform_in_B",
     )
     missing = [name for name in required if name not in all_v32]
     if missing:

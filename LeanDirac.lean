@@ -1,10 +1,8 @@
-module
-
-import LeanDirac.V2
+import LeanDirac.V2.V32CompleteFreeFermion
 
 /-!
-Production facade for the V2 first-principles derivation through the complete
-free linearized Dirac equation and its downstream cubical Lorentz/spin-one-half
-representation.
+Production facade for the first-principles free linearized Dirac derivation,
+its cubical Lorentz/spin-one-half representation, and the V3.2 Route-1
+free-fermion spectral closure.
 -/
 
