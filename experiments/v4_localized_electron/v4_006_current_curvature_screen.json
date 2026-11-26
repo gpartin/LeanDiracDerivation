@@ -1,0 +1,49 @@
+{
+  "status": "V4_006_FIXED_MIDPOINT_TWO_ADVANCE_SCREEN_STOPPED_NO_ROOT",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "state_sha256": "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d",
+  "warm_start_sha256": "6a0d0bb85c58242ccdbf5205803c6a40a8cbbb60fd752d47dcf9e1df61712d45",
+  "energy_ratio_constraint": 1.0217531155412793,
+  "dt": 0.00390625,
+  "period_updates": 17564,
+  "axis": 0,
+  "sign": -1,
+  "fraction": 0.5,
+  "observed_console_iterations": [
+    {
+      "iteration": 0,
+      "constraint_norm": 0.0180749839854791,
+      "energy_relative_to_rest": 1.0217531155400137
+    },
+    {
+      "iteration": 1,
+      "constraint_norm": 0.01723309329021136,
+      "energy_relative_to_rest": 1.0219860394982656
+    },
+    {
+      "iteration": 2,
+      "constraint_norm": 0.01696176966113065,
+      "energy_relative_to_rest": 1.0221886598899246
+    },
+    {
+      "iteration": 3,
+      "constraint_norm": 0.016668785611911492,
+      "energy_relative_to_rest": 1.0222248372628098
+    }
+  ],
+  "observed_rejected_full_step_constraint_norms": [
+    0.8353805610968432,
+    0.7959446807442289,
+    0.6963972606299853,
+    0.5724290100480267
+  ],
+  "last_observed_second_advance_mismatch_over_midpoint_current": [
+    -0.01502255264078171,
+    0.0034793024592704117
+  ],
+  "stop_reason": "After three accepted corrections progress was only 7.8% in norm and had worsened early currents/energy; stop the expensive fixed-shape line search and do not label this a root. Last input is the committed first-advance archive.",
+  "partial_run_no_output_state": true,
+  "claim_boundary": "Manual record of the last observed console iterations before cancelling a narrowly scoped inverse search. No new curvature-matched state or free-evolution result; not a no-go for other initial data or actions."
+}

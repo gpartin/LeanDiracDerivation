@@ -3,7 +3,24 @@
 V4-006 is **open**, but it is no longer an undifferentiated receiver-orientation
 problem. Two different motion questions were being mixed.
 
-### Current controlling refinement — cross-face exchange and through-current
+### Current controlling refinement — sustained current needs a native clock response
+
+The inverse initial-data solve now matches both cut currents and their
+first advance through the actual implicit equations at the previous
+launch's native energy. After three unreset updates Psi retains 94.90%
+of the midpoint target (previously 64.86%); after five it retains
+83.78% while chi reaches 105.12%. No full crossing is claimed.
+
+Lean verifies the exact current-interference identity: the two
+clock components of the matched face term beat at twice the rest
+phase, and nonzero sustained current needs native drive. The tested
+Psi term provides only about 13–25% of its constant-rate drive;
+the direct-prong coupling is the largest positive contribution,
+but varying its coefficient in either direction does not preserve both
+current advances at fixed initial layers. No action change is admitted.
+See [the current-advance and clock-drive RCA](V4_006_CURRENT_ADVANCE_CLOCK_DRIVE_RCA.md).
+
+### Prior refinement — cross-face exchange and through-current
 
 The native shared-field phase equations now resolve exchange across
 the six faces; the exact wedge product/clock identity is proved in Lean.

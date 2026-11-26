@@ -1,0 +1,203 @@
+{
+  "status": "V4_006_NATIVE_PRONG_CLOCK_DRIVE_COEFFICIENT_RESPONSE",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "state_sha256": "6a0d0bb85c58242ccdbf5205803c6a40a8cbbb60fd752d47dcf9e1df61712d45",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "native_tangent_solve_relative_defects": [
+    1.7142411846265148e-07,
+    1.753270739394837e-07
+  ],
+  "rest_prong_raw_DEL_norm": 4.374652081222733e-09,
+  "rows": [
+    {
+      "step": 0,
+      "current": [
+        6722289.185752869,
+        2798231.4034118652
+      ],
+      "current_coefficient_derivative": [
+        139616.657109797,
+        698726.0490493774
+      ],
+      "charge": [
+        297227477.70574605,
+        113638802.28261518
+      ],
+      "charge_coefficient_derivative": [
+        4895172.847594002,
+        11747746.360303313
+      ]
+    },
+    {
+      "step": 1,
+      "current": [
+        6723520.306804657,
+        2799399.757827759
+      ],
+      "current_coefficient_derivative": [
+        25707.230485022068,
+        489127.2263183594
+      ],
+      "charge": [
+        297227477.70576763,
+        113638802.28527206
+      ],
+      "charge_coefficient_derivative": [
+        4895172.854688954,
+        11747746.371060837
+      ]
+    },
+    {
+      "step": 2,
+      "current": [
+        6606623.683231354,
+        2812411.869125366
+      ],
+      "current_coefficient_derivative": [
+        -70229.64590483904,
+        338085.3236923218
+      ],
+      "charge": [
+        297227477.70576775,
+        113638802.28523397
+      ],
+      "charge_coefficient_derivative": [
+        4895172.874587218,
+        11747746.36744711
+      ]
+    }
+  ],
+  "baseline_first_current_advance": [
+    1231.12105178833,
+    1168.3544158935547
+  ],
+  "first_advance_coefficient_derivative": [
+    -113909.42662477493,
+    -209598.82273101807
+  ],
+  "baseline_second_current_difference": [
+    -118127.74462509155,
+    11843.756881713867
+  ],
+  "second_difference_coefficient_derivative": [
+    17972.550234913826,
+    58556.92010498047
+  ],
+  "finite_positive_scale_controls": [
+    {
+      "scale": 0.9,
+      "exact_candidate_DEL_defects": [
+        8.603965463022892e-08,
+        1.2179222244633104e-11
+      ],
+      "Newton_traces": [
+        [
+          0.009979215358780037,
+          8.604002778904626e-08
+        ],
+        [
+          0.029950798172861226,
+          2.538839238120475e-07,
+          1.1992854635424858e-11
+        ]
+      ],
+      "current_rates": [
+        [
+          6708327.520042419,
+          2728358.798522949
+        ],
+        [
+          6721480.412162781,
+          2749691.4927368164
+        ],
+        [
+          6614623.196567535,
+          2777116.6014404297
+        ]
+      ],
+      "charges": [
+        [
+          296737960.42098665,
+          112464027.64658475
+        ],
+        [
+          296737960.42073023,
+          112464027.64846194
+        ],
+        [
+          296737960.42073023,
+          112464027.64841354
+        ]
+      ],
+      "first_current_advance": [
+        13152.892120361328,
+        21332.694213867188
+      ],
+      "second_current_difference": [
+        -120010.10771560669,
+        6092.414489746094
+      ],
+      "linear_prediction_relative_defect": 0.021453418742193673,
+      "rest_raw_DEL_norm": 9.973626786863868e-09
+    },
+    {
+      "scale": 1.1,
+      "exact_candidate_DEL_defects": [
+        7.700417736839893e-08,
+        1.1012139247857765e-11
+      ],
+      "Newton_traces": [
+        [
+          0.00997922976964166,
+          7.7004321226195e-08
+        ],
+        [
+          0.029951921717847923,
+          2.2431352958596193e-07,
+          1.14271214102718e-11
+        ]
+      ],
+      "current_rates": [
+        [
+          6736250.851463318,
+          2868104.0083465576
+        ],
+        [
+          6726580.636833191,
+          2847516.1257019043
+        ],
+        [
+          6600502.903930664,
+          2844724.7553710938
+        ]
+      ],
+      "charges": [
+        [
+          297716994.99050546,
+          114813576.91864502
+        ],
+        [
+          297716994.9904475,
+          114813576.91773212
+        ],
+        [
+          297716994.99044764,
+          114813576.91778135
+        ]
+      ],
+      "first_current_advance": [
+        -9670.214630126953,
+        -20587.88264465332
+      ],
+      "second_current_difference": [
+        -116407.5182723999,
+        17796.512313842773
+      ],
+      "linear_prediction_relative_defect": 0.02150934889064961,
+      "rest_raw_DEL_norm": 1.0758771773460594e-08
+    }
+  ],
+  "claim_boundary": "Derivative of actual native currents through two implicit roots when varying one existing positive metric coefficient. Fixed initial pair, not an action promotion or physical coefficient selection."
+}

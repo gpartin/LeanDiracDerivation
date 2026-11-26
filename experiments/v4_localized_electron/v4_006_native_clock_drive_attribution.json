@@ -1,0 +1,398 @@
+{
+  "status": "V4_006_NATIVE_METRIC_CLOCK_DRIVE_ATTRIBUTION",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "state_sha256": "6a0d0bb85c58242ccdbf5205803c6a40a8cbbb60fd752d47dcf9e1df61712d45",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "theta": 0.07423579507567751,
+  "current_prefactor": 863043.8584213256,
+  "rows": [
+    {
+      "centered_layer": 2,
+      "metric_rank": 1500,
+      "metric_dimension": 1500,
+      "smallest_nonzero_equilibrated_eigenvalue": 5.274602156865765e-06,
+      "force_partition_relative_error": 6.494639888823083e-13,
+      "native_face_metric_relative_error": 3.918260706143224e-09,
+      "inverse_defect_reconstruction_relative_error": 1.059102805194587e-11,
+      "drive_partition_absolute_error": 4.0671461265202127e-13,
+      "direct_drive_real": [
+        -0.08375089496451557,
+        0.01880860838796449,
+        0.017610363037245006
+      ],
+      "direct_drive_imag": [
+        -0.15830224911617996,
+        -0.0037456268089901545,
+        -0.003991862778352118
+      ],
+      "direct_current_rate_native_drive": -143299.57674195652,
+      "term_contributions": {
+        "core": {
+          "Psi_clock_defect_norm": 0.0009929527076096329,
+          "chi_clock_defect_norm": 0.011158175083508949,
+          "drive_real": [
+            0.03721323983725888,
+            0.010798931758623913,
+            0.010571319500634932
+          ],
+          "drive_imag": [
+            -0.020293255300098262,
+            0.000916580417132648,
+            0.0005747262007183007
+          ],
+          "direct_current_rate_drive": -16226.906336566479
+        },
+        "prong": {
+          "Psi_clock_defect_norm": 0.005041195595520978,
+          "chi_clock_defect_norm": 0.010558796654110386,
+          "drive_real": [
+            -0.13876543290420973,
+            -0.0026612086124428846,
+            -0.002839978469682128
+          ],
+          "drive_imag": [
+            -0.14614747806350037,
+            -0.011916478304512909,
+            -0.011740246899580059
+          ],
+          "direct_current_rate_drive": -146548.47476422283
+        },
+        "spacetime": {
+          "Psi_clock_defect_norm": 2.9896694056374586e-06,
+          "chi_clock_defect_norm": 1.1746372027701205e-06,
+          "drive_real": [
+            -9.459023604691517e-05,
+            -4.737767817546883e-05,
+            -4.495823030650596e-05
+          ],
+          "drive_imag": [
+            4.801579096452152e-05,
+            1.4269136072095345e-05,
+            1.4636055804657933e-05
+          ],
+          "direct_current_rate_drive": 66.38618182489438
+        },
+        "parallel": {
+          "Psi_clock_defect_norm": 1.2800934751768078e-05,
+          "chi_clock_defect_norm": 9.218892659247378e-07,
+          "drive_real": [
+            -1.697521184690679e-05,
+            -2.768136537397055e-06,
+            -1.844171224551442e-06
+          ],
+          "drive_imag": [
+            -1.0525479648706981e-05,
+            1.7151412073923566e-07,
+            1.6806368427144114e-06
+          ],
+          "direct_current_rate_drive": -7.4854630538774005
+        },
+        "wedge_mixed": {
+          "Psi_clock_defect_norm": 0.0007509668721544611,
+          "chi_clock_defect_norm": 0.005982145634741085,
+          "drive_real": [
+            0.017912863063244456,
+            0.010721030912500047,
+            0.009925824252397996
+          ],
+          "drive_imag": [
+            0.008100995610661979,
+            0.007239831171291032,
+            0.007157341969919302
+          ],
+          "direct_current_rate_drive": 19416.90636702998
+        },
+        "numerical_DEL": {
+          "Psi_clock_defect_norm": 5.650107828123968e-11,
+          "chi_clock_defect_norm": 1.0731699397918123e-10,
+          "drive_real": [
+            4.869401431552289e-10,
+            1.4399209689180958e-10,
+            1.554095160937255e-10
+          ],
+          "drive_imag": [
+            -1.6741900921157793e-09,
+            -7.430911788675054e-10,
+            -7.42027980726867e-10
+          ],
+          "direct_current_rate_drive": -0.0027266224465421203
+        },
+        "metric_null": {
+          "Psi_clock_defect_norm": 3.879422837965403e-15,
+          "chi_clock_defect_norm": 4.172881061412404e-14,
+          "drive_real": [
+            1.5461893917989578e-13,
+            2.8912419333670947e-14,
+            2.6872926627008464e-14
+          ],
+          "drive_imag": [
+            3.6012859361278515e-14,
+            -6.147859998861804e-15,
+            -5.946632075648495e-15
+          ],
+          "direct_current_rate_drive": 2.0642599990310853e-08
+        }
+      }
+    },
+    {
+      "centered_layer": 3,
+      "metric_rank": 1500,
+      "metric_dimension": 1500,
+      "smallest_nonzero_equilibrated_eigenvalue": 5.2781642468457e-06,
+      "force_partition_relative_error": 5.098770072642459e-13,
+      "native_face_metric_relative_error": 4.4363710005824575e-09,
+      "inverse_defect_reconstruction_relative_error": 1.0101913519580653e-11,
+      "drive_partition_absolute_error": 2.617098112460267e-13,
+      "direct_drive_real": [
+        -0.09888813168605023,
+        0.017629437635323764,
+        0.016345728030876472
+      ],
+      "direct_drive_imag": [
+        -0.14594580015312075,
+        -0.004051840020069475,
+        -0.004189651744354178
+      ],
+      "direct_current_rate_native_drive": -133070.39533605278,
+      "term_contributions": {
+        "core": {
+          "Psi_clock_defect_norm": 0.000998091338710313,
+          "chi_clock_defect_norm": 0.011177551929710377,
+          "drive_real": [
+            0.03698644630289273,
+            0.010948395481405467,
+            0.01061741364951114
+          ],
+          "drive_imag": [
+            -0.021781132084005346,
+            0.0001682686967821867,
+            -5.978881169130951e-05
+          ],
+          "direct_current_rate_drive": -18704.449375974567
+        },
+        "prong": {
+          "Psi_clock_defect_norm": 0.005046510918808502,
+          "chi_clock_defect_norm": 0.010601020672330893,
+          "drive_real": [
+            -0.15368470860093375,
+            -0.004022344784780288,
+            -0.004182423263704356
+          ],
+          "drive_imag": [
+            -0.13235053095082364,
+            -0.011490221313982793,
+            -0.011318748082430344
+          ],
+          "direct_current_rate_drive": -133909.4538504042
+        },
+        "spacetime": {
+          "Psi_clock_defect_norm": 2.830412391974432e-06,
+          "chi_clock_defect_norm": 1.289875439112021e-06,
+          "drive_real": [
+            -7.887265195813398e-05,
+            -4.183303439006178e-05,
+            -3.9351173575378e-05
+          ],
+          "drive_imag": [
+            6.151052122601447e-05,
+            2.1847420699806774e-05,
+            2.1786041238411324e-05
+          ],
+          "direct_current_rate_drive": 90.74386891984618
+        },
+        "parallel": {
+          "Psi_clock_defect_norm": 1.2815180920387521e-05,
+          "chi_clock_defect_norm": 8.994070918415208e-07,
+          "drive_real": [
+            -1.7051877624416414e-05,
+            -2.6864091527654954e-06,
+            -1.702976889889421e-06
+          ],
+          "drive_imag": [
+            -1.003628650921018e-05,
+            2.928803992524598e-07,
+            1.7681898343904767e-06
+          ],
+          "direct_current_rate_drive": -6.882961426210107
+        },
+        "wedge_mixed": {
+          "Psi_clock_defect_norm": 0.0007508481068366525,
+          "chi_clock_defect_norm": 0.005986870706552219,
+          "drive_real": [
+            0.017906055141502352,
+            0.010747906382314149,
+            0.009951791795622318
+          ],
+          "drive_imag": [
+            0.008134388647407821,
+            0.007247972296072019,
+            0.007165330918700329
+          ],
+          "direct_current_rate_drive": 19459.646983231098
+        },
+        "numerical_DEL": {
+          "Psi_clock_defect_norm": 1.0886734107041842e-14,
+          "chi_clock_defect_norm": 6.266631884678731e-14,
+          "drive_real": [
+            -7.165101845174604e-14,
+            -2.2403953692240464e-14,
+            -3.0189392652424374e-14
+          ],
+          "drive_imag": [
+            -6.176933964319176e-13,
+            -7.940870183631432e-14,
+            -6.397660179402465e-14
+          ],
+          "direct_current_rate_drive": -6.568442978640167e-07
+        },
+        "metric_null": {
+          "Psi_clock_defect_norm": 3.735631373756136e-15,
+          "chi_clock_defect_norm": 3.497686959367134e-14,
+          "drive_real": [
+            5.084647980435619e-14,
+            -2.1597307275911248e-14,
+            -2.005860755271982e-14
+          ],
+          "drive_imag": [
+            -3.424344141578217e-14,
+            1.611905053877649e-14,
+            1.5390466678866233e-14
+          ],
+          "direct_current_rate_drive": -2.3594964885936977e-09
+        }
+      }
+    },
+    {
+      "centered_layer": 4,
+      "metric_rank": 1500,
+      "metric_dimension": 1500,
+      "smallest_nonzero_equilibrated_eigenvalue": 5.284474354193989e-06,
+      "force_partition_relative_error": 6.103058952908958e-13,
+      "native_face_metric_relative_error": 3.806050127731811e-09,
+      "inverse_defect_reconstruction_relative_error": 1.097928382980695e-11,
+      "drive_partition_absolute_error": 2.774243973110152e-13,
+      "direct_drive_real": [
+        -0.11258058726169282,
+        0.016516366704263194,
+        0.015202981593124304
+      ],
+      "direct_drive_imag": [
+        -0.13196886839827573,
+        -0.0038911737932838253,
+        -0.0039942816966408445
+      ],
+      "direct_current_rate_native_drive": -120700.41530537824,
+      "term_contributions": {
+        "core": {
+          "Psi_clock_defect_norm": 0.0009947160148802332,
+          "chi_clock_defect_norm": 0.01117206519813103,
+          "drive_real": [
+            0.03676781040860046,
+            0.011043967811133353,
+            0.010681791578090207
+          ],
+          "drive_imag": [
+            -0.022711790561406396,
+            -0.000246748599928015,
+            -0.0004461549910090984
+          ],
+          "direct_current_rate_drive": -20199.27754640958
+        },
+        "prong": {
+          "Psi_clock_defect_norm": 0.005051737793963879,
+          "chi_clock_defect_norm": 0.010610965693071404,
+          "drive_real": [
+            -0.16717527785218128,
+            -0.005266892879585969,
+            -0.005424419657594021
+          ],
+          "drive_imag": [
+            -0.11748723731267188,
+            -0.010927266924602295,
+            -0.01074917642980553
+          ],
+          "direct_current_rate_drive": -120104.35991502971
+        },
+        "spacetime": {
+          "Psi_clock_defect_norm": 2.680830209466341e-06,
+          "chi_clock_defect_norm": 1.4035892860858583e-06,
+          "drive_real": [
+            -6.17848948543864e-05,
+            -3.534174125873271e-05,
+            -3.289084964271105e-05
+          ],
+          "drive_imag": [
+            7.11361355215101e-05,
+            2.7861161107645138e-05,
+            2.739587471194127e-05
+          ],
+          "direct_current_rate_drive": 109.08285027232765
+        },
+        "parallel": {
+          "Psi_clock_defect_norm": 1.284578864102466e-05,
+          "chi_clock_defect_norm": 8.808744134646923e-07,
+          "drive_real": [
+            -1.7064711022288584e-05,
+            -2.6084112810971505e-06,
+            -1.5726546006185338e-06
+          ],
+          "drive_imag": [
+            -9.643608378628876e-06,
+            4.1147449465067654e-07,
+            1.8571078622825477e-06
+          ],
+          "direct_current_rate_drive": -6.364970913721894
+        },
+        "wedge_mixed": {
+          "Psi_clock_defect_norm": 0.0007506788314178539,
+          "chi_clock_defect_norm": 0.005994243523702775,
+          "drive_real": [
+            0.017905729787539633,
+            0.010777241925224505,
+            0.009980073176841561
+          ],
+          "drive_imag": [
+            0.00816866694858158,
+            0.007254569095604305,
+            0.007171796741591234
+          ],
+          "direct_current_rate_drive": 19500.504276593438
+        },
+        "numerical_DEL": {
+          "Psi_clock_defect_norm": 7.168436084233364e-15,
+          "chi_clock_defect_norm": 4.4262839322899366e-14,
+          "drive_real": [
+            8.55730417081979e-14,
+            -2.67841304690819e-15,
+            -8.47585890362268e-15
+          ],
+          "drive_imag": [
+            1.713421071691812e-13,
+            5.773159728050814e-14,
+            3.514549762329011e-14
+          ],
+          "direct_current_rate_drive": 2.2803275962606808e-07
+        },
+        "metric_null": {
+          "Psi_clock_defect_norm": 2.0156648534589086e-15,
+          "chi_clock_defect_norm": 2.6876923630876877e-14,
+          "drive_real": [
+            -2.704086954352647e-14,
+            -2.7755575615628914e-16,
+            2.5326962749261384e-16
+          ],
+          "drive_imag": [
+            1.1021739076966242e-13,
+            2.9330704531815854e-14,
+            2.7845781236379707e-14
+          ],
+          "direct_current_rate_drive": 1.4446825708333594e-07
+        }
+      }
+    }
+  ],
+  "claim_boundary": "Exact native face metric decomposition of actual two-field DEL roots; inverse and null partition are numerical diagnostics, not an installed force or an action correction."
+}

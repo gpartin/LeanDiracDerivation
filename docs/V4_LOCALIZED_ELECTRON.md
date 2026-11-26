@@ -1279,3 +1279,16 @@ gave 13.81% and 22.41%. Psi's decay and the energy excess remain open;
 the equal-weight parallel face completion failed and is not installed.
 V4-001–005 are unchanged, V4-006 is OPEN. See
 [the complete RCA](../experiments/v4_localized_electron/V4_006_CROSS_FACE_EXCHANGE_RCA.md).
+
+## Current advance and the native clock-drive requirement (2026-11-25)
+
+Matching the first native current advance as well as the two initial
+currents improves the midpoint launch at the same prior energy. Psi
+retains 94.90% after three updates and 83.78% after five; chi reaches
+105.12% after five. Lean verifies the adjoint differentiation rule,
+the two-layer clock-frequency decomposition and its driven current
+recurrence. The existing direct-prong metric is the largest measured
+positive drive contribution, but changing its bare coefficient
+trades the first advance against the later current bend. No new
+action is admitted. These remain local tests, with V4-006 OPEN and
+V4-001–005 unchanged. See [the derivation and RCA](../experiments/v4_localized_electron/V4_006_CURRENT_ADVANCE_CLOCK_DRIVE_RCA.md).

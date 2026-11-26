@@ -1,0 +1,77 @@
+{
+  "status": "RESEARCH_EVIDENCE_INTEGRITY_PASS__NOT_MOVEMENT_PASS",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "state_artifacts": {
+    "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d": "v4_006_antiphase_handoff.npz",
+    "99e7e559cccd093dbc6af03bcb088fa6449417576d406f86bb9c1e48beffbec4": "v4_006_current_inverse_launch.npz",
+    "8a526c240df5791d22134df82bba45c703130710d91cc1ef6cda1907a3fd3a63": "v4_006_current_advance_inverse.npz",
+    "6a0d0bb85c58242ccdbf5205803c6a40a8cbbb60fd752d47dcf9e1df61712d45": "v4_006_current_advance_inverse_matched_energy.npz"
+  },
+  "source_hashes": {
+    "v4_006_current_advance_inverse.py": "1d48c3103a2c4ecb8750dd4f517547791c2292255a853d8d65cd34eaf125df1b",
+    "v4_006_current_curvature_inverse.py": "8cc913922cd6d478e881818831b43be38e0fd7e51b2d27cfcd239d63a06ea100",
+    "v4_006_clock_interference_drive.py": "ef57817c69d8a33a484dbda0fdc356d26cc123487f9987042b6d6a3baa3f6a8b",
+    "v4_006_native_clock_drive_attribution.py": "561d921d09977983dfa45e2a6d2a2800d2168b50acc7eade4e823ec15180f71c",
+    "v4_006_prong_clock_drive_response.py": "17af080d263fc91810ba52f9d7596fddbac53157cd86164778ef0b29e64bd8fa"
+  },
+  "research_Lean_sources": {
+    "LeanDirac/V4/CurrentAdvanceSensitivity.lean": "8fa5075f1e21610b29ec36bc78d89b159a9af2a74c7bd7284bc4122ef437fe2b",
+    "LeanDirac/V4/FacePhaseMomentum.lean": "711f0a520e39a8605011d46df84bd349d41f5354b59d0a693074240e7add7a2c"
+  },
+  "reports": {
+    "v4_006_current_advance_inverse.json": {
+      "sha256": "46997840623db3aa967acd7d30047b4b7848c0d1d65e551e9f6d93928f0235fe",
+      "source": "v4_006_current_advance_inverse.py",
+      "status": "V4_006_NATIVE_CURRENT_AND_ADVANCE_INITIAL_DATA_SCREEN"
+    },
+    "v4_006_current_advance_inverse_matched_energy.json": {
+      "sha256": "ad4c294366e214f54be923cbe1888a59639c8b0b6ade4e48412e10d3a71db2f2",
+      "source": "v4_006_current_advance_inverse.py",
+      "status": "V4_006_NATIVE_CURRENT_AND_ADVANCE_INITIAL_DATA_SCREEN"
+    },
+    "v4_006_current_curvature_screen.json": {
+      "sha256": "fa42daabd50b79f4dac0faf7b169aaecbb6a3476d8f58f966bd50e8a8522a2d3",
+      "source": "v4_006_current_curvature_inverse.py",
+      "status": "V4_006_FIXED_MIDPOINT_TWO_ADVANCE_SCREEN_STOPPED_NO_ROOT"
+    },
+    "v4_006_clock_interference_drive_old.json": {
+      "sha256": "e91647f1d496eeb25281e7c715b68ffb66e0da23cd2fe35516865ea39b70d8b5",
+      "source": "v4_006_clock_interference_drive.py",
+      "status": "V4_006_NATIVE_CLOCK_INTERFERENCE_AND_REQUIRED_DRIVE_DIAGNOSTIC"
+    },
+    "v4_006_clock_interference_drive_advance.json": {
+      "sha256": "d044c2c366c4a187eb9da95135e152709450739c2956505a61a5796877a5b1ef",
+      "source": "v4_006_clock_interference_drive.py",
+      "status": "V4_006_NATIVE_CLOCK_INTERFERENCE_AND_REQUIRED_DRIVE_DIAGNOSTIC"
+    },
+    "v4_006_clock_interference_drive_matched_energy.json": {
+      "sha256": "934720740ef9f88420afb6e10c5b7a4178a3fa8473002ec0a6d8acc7cedee783",
+      "source": "v4_006_clock_interference_drive.py",
+      "status": "V4_006_NATIVE_CLOCK_INTERFERENCE_AND_REQUIRED_DRIVE_DIAGNOSTIC"
+    },
+    "v4_006_native_clock_drive_attribution.json": {
+      "sha256": "cd14747a4f87a5862b30f332ba0d692db536c02bbfc7433cc9a8b36264f70bbe",
+      "source": "v4_006_native_clock_drive_attribution.py",
+      "status": "V4_006_NATIVE_METRIC_CLOCK_DRIVE_ATTRIBUTION"
+    },
+    "v4_006_prong_clock_drive_response.json": {
+      "sha256": "bfdd17fbaa4f5dbd43b8a743b2c3df129c88c48da3fc0b8499b7192be6d6af9a",
+      "source": "v4_006_prong_clock_drive_response.py",
+      "status": "V4_006_NATIVE_PRONG_CLOCK_DRIVE_COEFFICIENT_RESPONSE"
+    }
+  },
+  "stage_status": {
+    "V4-001": "PASS",
+    "V4-002": "PASS",
+    "V4-003": "PASS",
+    "V4-004": "PASS",
+    "V4-005": "PASS",
+    "V4-006": "OPEN",
+    "V4-007": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-008": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-009": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-010": "NOT_STARTED__BLOCKED_BY_V4_006"
+  },
+  "claim_boundary": "Checks finite evidence, action and state provenance, and status scope. Lean proof and physical motion are separate checks."
+}

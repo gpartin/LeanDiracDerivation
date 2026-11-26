@@ -1,0 +1,716 @@
+{
+  "status": "V4_006_NATIVE_CLOCK_INTERFERENCE_AND_REQUIRED_DRIVE_DIAGNOSTIC",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "state_sha256": "6a0d0bb85c58242ccdbf5205803c6a40a8cbbb60fd752d47dcf9e1df61712d45",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "theta": 0.07423579507567751,
+  "clock_beat_real": 0.9889983256580308,
+  "current_prefactor": 863043.8584213256,
+  "channels": {
+    "Psi": {
+      "intervals": [
+        {
+          "interval": -1,
+          "positive_coordinate_norm": 34.05884710282232,
+          "negative_coordinate_norm": 0.6265569844673405,
+          "reconstruction_error": 1.4501835126783594e-14,
+          "direct_momentum_rate_by_axis": [
+            3274692.307830751,
+            812276.3180656286,
+            809386.3290142182
+          ],
+          "counterrotating_current_by_axis": [
+            3274692.3078290797,
+            812276.3180656318,
+            809386.3290142309
+          ],
+          "frequency_current_relative_defect": 4.816932184165136e-13
+        },
+        {
+          "interval": 0,
+          "positive_coordinate_norm": 34.05776666268541,
+          "negative_coordinate_norm": 0.6248573363036876,
+          "reconstruction_error": 1.335776147311038e-14,
+          "direct_momentum_rate_by_axis": [
+            3339785.0103660226,
+            838260.7855893568,
+            836107.7550524037
+          ],
+          "counterrotating_current_by_axis": [
+            3339785.010365513,
+            838260.7855893272,
+            836107.7550524363
+          ],
+          "frequency_current_relative_defect": 1.4430379911720396e-13
+        },
+        {
+          "interval": 1,
+          "positive_coordinate_norm": 34.05959676941999,
+          "negative_coordinate_norm": 0.6236635883914707,
+          "reconstruction_error": 1.3586807429636306e-14,
+          "direct_momentum_rate_by_axis": [
+            3349912.4062852263,
+            843731.8764174336,
+            842398.8777036876
+          ],
+          "counterrotating_current_by_axis": [
+            3349912.406285472,
+            843731.8764173309,
+            842398.8777033968
+          ],
+          "frequency_current_relative_defect": 1.1092250935588654e-13
+        },
+        {
+          "interval": 2,
+          "positive_coordinate_norm": 34.0643113389633,
+          "negative_coordinate_norm": 0.6229333387004936,
+          "reconstruction_error": 1.746446062673898e-14,
+          "direct_momentum_rate_by_axis": [
+            3306183.846048951,
+            827936.9575754609,
+            827697.5346819592
+          ],
+          "counterrotating_current_by_axis": [
+            3306183.8460485265,
+            827936.9575753644,
+            827697.5346821767
+          ],
+          "frequency_current_relative_defect": 1.3879060969949364e-13
+        },
+        {
+          "interval": 3,
+          "positive_coordinate_norm": 34.07185414168743,
+          "negative_coordinate_norm": 0.6226466615675293,
+          "reconstruction_error": 1.3699144856500719e-14,
+          "direct_momentum_rate_by_axis": [
+            3213009.9049454927,
+            791774.1416044934,
+            792826.0927056149
+          ],
+          "counterrotating_current_by_axis": [
+            3213009.9049464585,
+            791774.1416042479,
+            792826.092705888
+          ],
+          "frequency_current_relative_defect": 3.036484416467611e-13
+        },
+        {
+          "interval": 4,
+          "positive_coordinate_norm": 34.08214055239243,
+          "negative_coordinate_norm": 0.6227752041844496,
+          "reconstruction_error": 1.1258841574748532e-14,
+          "direct_momentum_rate_by_axis": [
+            3075172.459536493,
+            736353.2583676624,
+            738860.4062194368
+          ],
+          "counterrotating_current_by_axis": [
+            3075172.4595383494,
+            736353.2583674085,
+            738860.4062197905
+          ],
+          "frequency_current_relative_defect": 5.872474311024166e-13
+        },
+        {
+          "interval": 5,
+          "positive_coordinate_norm": 34.09505838999478,
+          "negative_coordinate_norm": 0.6232876770091214,
+          "reconstruction_error": 1.1810284383654908e-14,
+          "direct_momentum_rate_by_axis": [
+            2898079.470900595,
+            663149.3024189117,
+            667244.5110774866
+          ],
+          "counterrotating_current_by_axis": [
+            2898079.470900683,
+            663149.3024184373,
+            667244.5110777403
+          ],
+          "frequency_current_relative_defect": 1.7892092225631066e-13
+        }
+      ],
+      "advances": [
+        {
+          "centered_layer": 1,
+          "native_defect_norm": 0.004771585447233321,
+          "corotating_N_required_defect_norm": 0.013786351799591857,
+          "corotating_N_defect_relative_mismatch": 0.7243868352425077,
+          "corotating_N_native_defect_fraction": 0.29752770223719094,
+          "frequency_update_error": 3.903160366342438e-14,
+          "drive_identity_absolute_error": 2.7384800040260956e-13,
+          "interference_drive": {
+            "real": [
+              -0.06789335717737988,
+              0.020015546575989827,
+              0.018722951415441884
+            ],
+            "imag": [
+              -0.1716072372296792,
+              -0.004357263320590027,
+              -0.0044547267570367866
+            ]
+          },
+          "current_rate_change_observed": 117798.5960983344,
+          "current_rate_change_unforced_rotation": 273508.3021668001,
+          "current_rate_change_native_drive": -155709.70606869156
+        },
+        {
+          "centered_layer": 2,
+          "native_defect_norm": 0.004735167926680232,
+          "corotating_N_required_defect_norm": 0.013748953848406983,
+          "corotating_N_defect_relative_mismatch": 0.7235606528496573,
+          "corotating_N_native_defect_fraction": 0.2975363777460997,
+          "frequency_update_error": 3.4197266009089585e-14,
+          "drive_identity_absolute_error": 1.602020341037335e-13,
+          "interference_drive": {
+            "real": [
+              -0.08375089496451557,
+              0.01880860838796449,
+              0.017610363037245006
+            ],
+            "imag": [
+              -0.15830224911617996,
+              -0.0037456268089901545,
+              -0.003991862778352118
+            ]
+          },
+          "current_rate_change_observed": 21889.609398923032,
+          "current_rate_change_unforced_rotation": 165189.18614079413,
+          "current_rate_change_native_drive": -143299.57674195652
+        },
+        {
+          "centered_layer": 3,
+          "native_defect_norm": 0.004712945993467256,
+          "corotating_N_required_defect_norm": 0.013722687396853754,
+          "corotating_N_defect_relative_mismatch": 0.72264600538445,
+          "corotating_N_native_defect_fraction": 0.29786754881278815,
+          "frequency_update_error": 3.5263255054831734e-14,
+          "drive_identity_absolute_error": 1.2911122897753253e-13,
+          "interference_drive": {
+            "real": [
+              -0.09888813168605023,
+              0.017629437635323764,
+              0.016345728030876472
+            ],
+            "imag": [
+              -0.14594580015312075,
+              -0.004051840020069475,
+              -0.004189651744354178
+            ]
+          },
+          "current_rate_change_observed": -74224.82210013215,
+          "current_rate_change_unforced_rotation": 58845.573235844204,
+          "current_rate_change_native_drive": -133070.39533605278
+        },
+        {
+          "centered_layer": 4,
+          "native_defect_norm": 0.004691913737015716,
+          "corotating_N_required_defect_norm": 0.013706619458276845,
+          "corotating_N_defect_relative_mismatch": 0.7214996580966042,
+          "corotating_N_native_defect_fraction": 0.2983072104680349,
+          "frequency_update_error": 3.120182011082035e-14,
+          "drive_identity_absolute_error": 1.7620817360100834e-13,
+          "interference_drive": {
+            "real": [
+              -0.11258058726169282,
+              0.016516366704263194,
+              0.015202981593124304
+            ],
+            "imag": [
+              -0.13196886839827573,
+              -0.0038911737932838253,
+              -0.0039942816966408445
+            ]
+          },
+          "current_rate_change_observed": -164208.199049473,
+          "current_rate_change_unforced_rotation": -43507.7837442036,
+          "current_rate_change_native_drive": -120700.41530537824
+        },
+        {
+          "centered_layer": 5,
+          "native_defect_norm": 0.004674826059615942,
+          "corotating_N_required_defect_norm": 0.013700311601360524,
+          "corotating_N_defect_relative_mismatch": 0.7202019667154202,
+          "corotating_N_native_defect_fraction": 0.29887025060562694,
+          "frequency_update_error": 3.180316968975644e-14,
+          "drive_identity_absolute_error": 1.5737642240504878e-13,
+          "interference_drive": {
+            "real": [
+              -0.12482944667985671,
+              0.015505054591884587,
+              0.014168042495590269
+            ],
+            "imag": [
+              -0.11700594980381443,
+              -0.003532952592581934,
+              -0.0036125715930791225
+            ]
+          },
+          "current_rate_change_observed": -247224.0151310459,
+          "current_rate_change_unforced_rotation": -140075.84799059373,
+          "current_rate_change_native_drive": -107148.16714057176
+        },
+        {
+          "centered_layer": 6,
+          "native_defect_norm": 0.004662081480891523,
+          "corotating_N_required_defect_norm": 0.01370313996938137,
+          "corotating_N_defect_relative_mismatch": 0.7187939143394063,
+          "corotating_N_native_defect_fraction": 0.29954245870463714,
+          "frequency_update_error": 2.988396025688017e-14,
+          "drive_identity_absolute_error": 1.1157489385057211e-13,
+          "interference_drive": {
+            "real": [
+              -0.13559539581401936,
+              0.014609713261160034,
+              0.013249454539719235
+            ],
+            "imag": [
+              -0.10126760618127723,
+              -0.0030321698937586516,
+              -0.003090824678412596
+            ]
+          },
+          "current_rate_change_observed": -321912.83972868754,
+          "current_rate_change_unforced_rotation": -229230.04129618112,
+          "current_rate_change_native_drive": -92682.79843244028
+        }
+      ],
+      "second_difference": [
+        {
+          "centered_interval": 0,
+          "current_rate": 5014153.551007276,
+          "observed_second_difference": -95908.98669941071,
+          "natural_beat_second_difference": -110328.16893762093,
+          "native_drive_second_difference": 14419.182238209023,
+          "constant_rate_required_drive": 110328.16893762093,
+          "drive_fraction_of_constant_rate_requirement": 0.13069356971166238,
+          "identity_error": 1.90084392670542e-09
+        },
+        {
+          "centered_interval": 1,
+          "current_rate": 5036043.1604062,
+          "observed_second_difference": -96114.43149905652,
+          "natural_beat_second_difference": -110809.81364578067,
+          "native_drive_second_difference": 14695.382146725691,
+          "constant_rate_required_drive": 110809.81364578067,
+          "drive_fraction_of_constant_rate_requirement": 0.13261805667954257,
+          "identity_error": 2.1227606339380145e-09
+        },
+        {
+          "centered_interval": 2,
+          "current_rate": 4961818.3383060675,
+          "observed_second_difference": -89983.3769493401,
+          "natural_beat_second_difference": -109176.61900410816,
+          "native_drive_second_difference": 19193.24205476742,
+          "constant_rate_required_drive": 109176.61900410816,
+          "drive_fraction_of_constant_rate_requirement": 0.17579993069802982,
+          "identity_error": 4.874891601502895e-10
+        },
+        {
+          "centered_interval": 3,
+          "current_rate": 4797610.139256595,
+          "observed_second_difference": -83015.81608157326,
+          "natural_beat_second_difference": -105563.48874366104,
+          "native_drive_second_difference": 22547.672662088316,
+          "constant_rate_required_drive": 105563.48874366104,
+          "drive_fraction_of_constant_rate_requirement": 0.2135934775407115,
+          "identity_error": 6.002665031701326e-10
+        },
+        {
+          "centered_interval": 4,
+          "current_rate": 4550386.124125549,
+          "observed_second_difference": -74688.82459764183,
+          "natural_beat_second_difference": -100123.73253568937,
+          "native_drive_second_difference": 25434.907938047367,
+          "constant_rate_required_drive": 100123.73253568937,
+          "drive_fraction_of_constant_rate_requirement": 0.25403475573566964,
+          "identity_error": 8.767528925091028e-10
+        }
+      ],
+      "no_drive_initial_current_rate": 5014153.551007276,
+      "no_drive_beat_period_steps": 42.3191083275553,
+      "no_drive_first_nonpositive_step": 13,
+      "no_drive_two_cycle_average_current_rate": 21216.306706664513
+    },
+    "W": {
+      "intervals": [
+        {
+          "interval": -1,
+          "positive_coordinate_norm": 25.43710606865892,
+          "negative_coordinate_norm": 0.4963512640494572,
+          "reconstruction_error": 1.6247122107696295e-14,
+          "direct_momentum_rate_by_axis": [
+            1228786.9068010151,
+            167334.69896319805,
+            166750.66074525076
+          ],
+          "counterrotating_current_by_axis": [
+            1228786.906801037,
+            167334.6989631453,
+            166750.66074524538
+          ],
+          "frequency_current_relative_defect": 4.585460463649611e-14
+        },
+        {
+          "interval": 0,
+          "positive_coordinate_norm": 25.4368879312425,
+          "negative_coordinate_norm": 0.4956731578186068,
+          "reconstruction_error": 1.4699720628774067e-14,
+          "direct_momentum_rate_by_axis": [
+            1221971.064252913,
+            172350.2036710961,
+            171921.57808022783
+          ],
+          "counterrotating_current_by_axis": [
+            1221971.0642525118,
+            172350.2036710838,
+            171921.5780802373
+          ],
+          "frequency_current_relative_defect": 3.2220931541026157e-13
+        },
+        {
+          "interval": 1,
+          "positive_coordinate_norm": 25.43871017002569,
+          "negative_coordinate_norm": 0.49511536863154526,
+          "reconstruction_error": 1.2658511726687585e-14,
+          "direct_momentum_rate_by_axis": [
+            1201583.5043527782,
+            173124.29538578284,
+            172867.75391055655
+          ],
+          "counterrotating_current_by_axis": [
+            1201583.5043529798,
+            173124.2953858562,
+            172867.75391052652
+          ],
+          "frequency_current_relative_defect": 1.7668498220041387e-13
+        },
+        {
+          "interval": 2,
+          "positive_coordinate_norm": 25.442553331772285,
+          "negative_coordinate_norm": 0.4946334058984515,
+          "reconstruction_error": 1.3111051337963501e-14,
+          "direct_momentum_rate_by_axis": [
+            1168062.7076919973,
+            169518.3991375016,
+            169489.5906116499
+          ],
+          "counterrotating_current_by_axis": [
+            1168062.707692097,
+            169518.39913754418,
+            169489.5906116096
+          ],
+          "frequency_current_relative_defect": 9.696429867374452e-14
+        },
+        {
+          "interval": 3,
+          "positive_coordinate_norm": 25.448377044817004,
+          "negative_coordinate_norm": 0.4942098261232651,
+          "reconstruction_error": 8.609218754435027e-15,
+          "direct_momentum_rate_by_axis": [
+            1122760.739391476,
+            161732.72527848725,
+            161971.54271010053
+          ],
+          "counterrotating_current_by_axis": [
+            1122760.7393919793,
+            161732.72527843635,
+            161971.54270996447
+          ],
+          "frequency_current_relative_defect": 4.572327632009195e-13
+        },
+        {
+          "interval": 4,
+          "positive_coordinate_norm": 25.456119405187113,
+          "negative_coordinate_norm": 0.4938239092902676,
+          "reconstruction_error": 1.2798412988534217e-14,
+          "direct_momentum_rate_by_axis": [
+            1067122.7086407542,
+            150011.9457690103,
+            150551.15615792538
+          ],
+          "counterrotating_current_by_axis": [
+            1067122.7086417726,
+            150011.94576892932,
+            150551.15615790492
+          ],
+          "frequency_current_relative_defect": 9.39102583201789e-13
+        },
+        {
+          "interval": 5,
+          "positive_coordinate_norm": 25.465697719793276,
+          "negative_coordinate_norm": 0.4934569258398366,
+          "reconstruction_error": 1.3494226109054226e-14,
+          "direct_momentum_rate_by_axis": [
+            1002759.7368458807,
+            134675.9160956182,
+            135541.80986251263
+          ],
+          "counterrotating_current_by_axis": [
+            1002759.7368465554,
+            134675.91609553742,
+            135541.8098625241
+          ],
+          "frequency_current_relative_defect": 6.656930378786998e-13
+        }
+      ],
+      "advances": [
+        {
+          "centered_layer": 1,
+          "native_defect_norm": 0.0038419650870753453,
+          "corotating_N_required_defect_norm": 0.010921389932593775,
+          "corotating_N_defect_relative_mismatch": 0.7259716299312939,
+          "corotating_N_native_defect_fraction": 0.29835842174432314,
+          "frequency_update_error": 3.721490634524363e-14,
+          "drive_identity_absolute_error": 3.6223044749675615e-13,
+          "interference_drive": {
+            "real": [
+              -0.08393061298434677,
+              0.0040738919169974784,
+              0.0038104024429949715
+            ],
+            "imag": [
+              -0.002315627500780078,
+              -0.0012266000453645676,
+              -0.0012407776879352211
+            ]
+          },
+          "current_rate_change_observed": 3370.579494405174,
+          "current_rate_change_unforced_rotation": 7498.522786786807,
+          "current_rate_change_native_drive": -4127.943292069684
+        },
+        {
+          "centered_layer": 2,
+          "native_defect_norm": 0.00380409916409341,
+          "corotating_N_required_defect_norm": 0.010906469324751623,
+          "corotating_N_defect_relative_mismatch": 0.7244030648115503,
+          "corotating_N_native_defect_fraction": 0.2984483465747391,
+          "frequency_update_error": 3.5336313351263055e-14,
+          "drive_identity_absolute_error": 7.093252733078634e-14,
+          "interference_drive": {
+            "real": [
+              -0.0868920762664343,
+              0.003799777701590137,
+              0.0035559612353908768
+            ],
+            "imag": [
+              0.0007230768236724736,
+              -0.0011308718310953578,
+              -0.0011754813777921994
+            ]
+          },
+          "current_rate_change_observed": -18667.292354470403,
+          "current_rate_change_unforced_rotation": -17300.85539408824,
+          "current_rate_change_native_drive": -1366.4369604433948
+        },
+        {
+          "centered_layer": 3,
+          "native_defect_norm": 0.0037798676621383824,
+          "corotating_N_required_defect_norm": 0.010894196094776576,
+          "corotating_N_defect_relative_mismatch": 0.7235995039596888,
+          "corotating_N_native_defect_fraction": 0.29839305341903727,
+          "frequency_update_error": 2.724184291450056e-14,
+          "drive_identity_absolute_error": 2.5753941223354383e-14,
+          "interference_drive": {
+            "real": [
+              -0.08967489717744337,
+              0.003527692832162487,
+              0.003266870203125133
+            ],
+            "imag": [
+              0.0032785518031186595,
+              -0.0012175754783160658,
+              -0.0012398220229616133
+            ]
+          },
+          "current_rate_change_observed": -40504.856208111814,
+          "current_rate_change_unforced_rotation": -41213.548385139235,
+          "current_rate_change_native_drive": 708.6921770201095
+        },
+        {
+          "centered_layer": 4,
+          "native_defect_norm": 0.0037510234248326352,
+          "corotating_N_required_defect_norm": 0.010883591300707655,
+          "corotating_N_defect_relative_mismatch": 0.7228576974119045,
+          "corotating_N_native_defect_fraction": 0.2981299858576922,
+          "frequency_update_error": 2.318581880493257e-14,
+          "drive_identity_absolute_error": 7.814954519580979e-14,
+          "interference_drive": {
+            "real": [
+              -0.09227920148563866,
+              0.003266168773344711,
+              0.002999698358841764
+            ],
+            "imag": [
+              0.006106268140125812,
+              -0.001203524708911552,
+              -0.0012186199966990677
+            ]
+          },
+          "current_rate_change_observed": -60605.69006087054,
+          "current_rate_change_unforced_rotation": -63785.25016475715,
+          "current_rate_change_native_drive": 3179.560103824417
+        },
+        {
+          "centered_layer": 5,
+          "native_defect_norm": 0.0037213478045376672,
+          "corotating_N_required_defect_norm": 0.01087427112721876,
+          "corotating_N_defect_relative_mismatch": 0.722356824561117,
+          "corotating_N_native_defect_fraction": 0.2976561488341323,
+          "frequency_update_error": 4.331658221704238e-14,
+          "drive_identity_absolute_error": 1.6724931274161734e-13,
+          "interference_drive": {
+            "real": [
+              -0.09467268506526938,
+              0.0030233127687858477,
+              0.0027523971035094755
+            ],
+            "imag": [
+              0.0090370857046774,
+              -0.001143312208949053,
+              -0.0011536040680316384
+            ]
+          },
+          "current_rate_change_observed": -78779.19681177342,
+          "current_rate_change_unforced_rotation": -84596.25864119917,
+          "current_rate_change_native_drive": 5817.061829292825
+        },
+        {
+          "centered_layer": 6,
+          "native_defect_norm": 0.0036915854032314897,
+          "corotating_N_required_defect_norm": 0.010865779664579316,
+          "corotating_N_defect_relative_mismatch": 0.7221460940168173,
+          "corotating_N_native_defect_fraction": 0.2969655634022158,
+          "frequency_update_error": 3.504091499867368e-14,
+          "drive_identity_absolute_error": 9.798253632275328e-14,
+          "interference_drive": {
+            "real": [
+              -0.09684344506482097,
+              0.002802950774710815,
+              0.0025276275083902164
+            ],
+            "imag": [
+              0.01202989440959517,
+              -0.001047895682204092,
+              -0.0010539403410214018
+            ]
+          },
+          "current_rate_change_observed": -94708.34776398985,
+          "current_rate_change_unforced_rotation": -103276.69758047347,
+          "current_rate_change_native_drive": 8568.349816404685
+        }
+      ],
+      "second_difference": [
+        {
+          "centered_interval": 0,
+          "current_rate": 1566242.846003833,
+          "observed_second_difference": -22037.871848875657,
+          "natural_beat_second_difference": -34462.58746434635,
+          "native_drive_second_difference": 12424.715615470877,
+          "constant_rate_required_drive": 34462.58746434635,
+          "drive_fraction_of_constant_rate_requirement": 0.36052764837593826,
+          "identity_error": 1.6370904631912708e-11
+        },
+        {
+          "centered_interval": 1,
+          "current_rate": 1547575.5536493626,
+          "observed_second_difference": -21837.56385364174,
+          "natural_beat_second_difference": -34051.84452168592,
+          "native_drive_second_difference": 12214.280668044457,
+          "constant_rate_required_drive": 34051.84452168592,
+          "drive_fraction_of_constant_rate_requirement": 0.35869659454910857,
+          "identity_error": 2.2737367544323206e-10
+        },
+        {
+          "centered_interval": 2,
+          "current_rate": 1507070.6974412506,
+          "observed_second_difference": -20100.833852758165,
+          "natural_beat_second_difference": -33160.60204714604,
+          "native_drive_second_difference": 13059.768194387274,
+          "constant_rate_required_drive": 33160.60204714604,
+          "drive_fraction_of_constant_rate_requirement": 0.3938338687524299,
+          "identity_error": 3.92901711165905e-10
+        },
+        {
+          "centered_interval": 3,
+          "current_rate": 1446465.0073803803,
+          "observed_second_difference": -18173.506750903325,
+          "natural_beat_second_difference": -31827.073916506015,
+          "native_drive_second_difference": 13653.567165603088,
+          "constant_rate_required_drive": 31827.073916506015,
+          "drive_fraction_of_constant_rate_requirement": 0.4289922222011787,
+          "identity_error": 3.9108272176235914e-10
+        },
+        {
+          "centered_interval": 4,
+          "current_rate": 1367685.8105686067,
+          "observed_second_difference": -15929.150952216238,
+          "natural_beat_second_difference": -30093.667780015956,
+          "native_drive_second_difference": 14164.516827799509,
+          "constant_rate_required_drive": 30093.667780015956,
+          "drive_fraction_of_constant_rate_requirement": 0.47068097286584715,
+          "identity_error": 3.3651303965598345e-10
+        }
+      ],
+      "no_drive_initial_current_rate": 1566242.846003833,
+      "no_drive_beat_period_steps": 42.3191083275553,
+      "no_drive_first_nonpositive_step": 11,
+      "no_drive_two_cycle_average_current_rate": 6667.915329798152
+    }
+  },
+  "full_native_current": [
+    {
+      "interval": -1,
+      "native_Psi_rate": 6603027.307808399,
+      "native_chi_rate": 2810019.469203949,
+      "matched_Psi_rate": 6459227.221420062,
+      "other_Psi_rate": 143800.08638833743
+    },
+    {
+      "interval": 0,
+      "native_Psi_rate": 6722289.1857533455,
+      "native_chi_rate": 2798231.4034366608,
+      "matched_Psi_rate": 6580396.3970120195,
+      "other_Psi_rate": 141892.78874132596
+    },
+    {
+      "interval": 1,
+      "native_Psi_rate": 6723520.306807041,
+      "native_chi_rate": 2799399.7578163147,
+      "matched_Psi_rate": 6583618.714055465,
+      "other_Psi_rate": 139901.59275157657
+    },
+    {
+      "interval": 2,
+      "native_Psi_rate": 6606623.683222294,
+      "native_chi_rate": 2812411.8691101074,
+      "matched_Psi_rate": 6468889.03574752,
+      "other_Psi_rate": 137734.64747477416
+    },
+    {
+      "interval": 3,
+      "native_Psi_rate": 6379488.705029488,
+      "native_chi_rate": 2838493.3626327515,
+      "matched_Psi_rate": 6244075.146635665,
+      "other_Psi_rate": 135413.55839382298
+    },
+    {
+      "interval": 4,
+      "native_Psi_rate": 6051009.752757549,
+      "native_chi_rate": 2880410.7736797333,
+      "matched_Psi_rate": 5918071.934691282,
+      "other_Psi_rate": 132937.8180662673
+    },
+    {
+      "interval": 5,
+      "native_Psi_rate": 5631753.4588775635,
+      "native_chi_rate": 2941545.6623954773,
+      "matched_Psi_rate": 5501450.747201005,
+      "other_Psi_rate": 130302.71167655848
+    }
+  ],
+  "claim_boundary": "Exact two-layer decomposition and driven-current recurrence of native matched face channels. The unforced continuation is an algebraic diagnostic, not an alternate native action or physical worldline; the two clock coordinates are not the historical Clifford copies."
+}

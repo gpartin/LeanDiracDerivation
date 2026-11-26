@@ -13,6 +13,7 @@ public import Mathlib.Analysis.Calculus.Deriv.Add
 public import Mathlib.Tactic.Ring
 public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.LinearCombination
 
 @[expose] public section
 
@@ -291,6 +292,106 @@ theorem inflow_change_clock_split (k c : ℝ)
   dsimp
   ring
 
+
+/-- The exact direct matched-face current is an interference between
+the two centered-clock frequency coordinates. Same-frequency pairs
+cancel. These are phase-space coordinates of one field, not a new native
+register or an identification of the two Clifford copies. -/
+theorem counterrotating_inflow (k c s : ℝ) (pi ni pj nj : Plane)
+    (h : c^2 + s^2 = 1) :
+    inflow k c (add pi ni) (add pj nj)
+      (add (mul (c, s) pi) (mul (c, -s) ni))
+      (add (mul (c, s) pj) (mul (c, -s) nj)) =
+    2*k*s^2 * (cross pj (mul (c, -s) ni) +
+      cross nj (mul (c, s) pi)) := by
+  unfold inflow leftMomentum rightMomentum mul cross add sub scale
+  dsimp
+  linear_combination (-k*c*((pj.1+nj.1)*(pi.2+ni.2) -
+    (pj.2+nj.2)*(pi.1+ni.1)) + 2*k*s*(pj.1*ni.1 + pj.2*ni.2 -
+      nj.1*pi.1 - nj.2*pi.2))*h
+
+
+/-- Unit phase rotation of the interference produces a centered scalar
+oscillator for its imaginary/current coordinate. No sustained nonzero
+constant current is obtained by rotating a fixed two-frequency mixture. -/
+theorem unit_interference_beat (a b x y : ℝ) (h : a^2+b^2=1) :
+    (mul (a,b) (mul (a,b) (x,y))).2 -
+      2*a*(mul (a,b) (x,y)).2 + y = 0 := by
+  unfold mul
+  dsimp
+  linear_combination -y*h
+
+/-- Exact forced beat: the drive is the change in the complex interference
+not produced by its unit clock rotation. The corresponding scalar current
+requires this drive in order to remain constant and nonzero. -/
+theorem driven_interference_beat (a b : ℝ) (z d0 d1 : Plane)
+    (h : a^2+b^2=1) :
+    let z1 := add (mul (a,b) z) d0
+    let z2 := add (mul (a,b) z1) d1
+    z2.2 - 2*a*z1.2 + z.2 =
+      d1.2 - (mul (a,-b) d0).2 := by
+  unfold add mul
+  dsimp
+  linear_combination -z.2*h
+
+/-- At a nonzero matched rest clock, a constant nonzero face current cannot
+satisfy the unforced interference recurrence, because that would require
+the clock to have unit real multiplier. This does not forbid a driven
+native moving branch. -/
+theorem constant_current_requires_drive (a j : ℝ)
+    (ha : a ≠ 1) (hj : j ≠ 0) :
+    j - 2*a*j+j ≠ 0 := by
+  intro h
+  have hf : (1-a)*j = 0 := by linarith
+  rcases mul_eq_zero.mp hf with h1 | h2
+  · apply ha
+    linarith
+  · exact hj h2
+
+
+/-- Unscaled frequency coordinates derived from two committed layers.
+Dividing both by 2 i sin(theta) gives the lossless readout when sin is
+nonzero. Writing them unscaled avoids any choice of phase convention. -/
+def rawPositive (c s : ℝ) (l r : Plane) : Plane := sub r (mul (c,-s) l)
+def rawNegative (c s : ℝ) (l r : Plane) : Plane := sub (mul (c,s) l) r
+
+theorem raw_frequency_reconstruct (c s : ℝ) (l r : Plane) :
+    add (rawPositive c s l r) (rawNegative c s l r) = mul (0,2*s) l ∧
+    add (mul (c,s) (rawPositive c s l r))
+      (mul (c,-s) (rawNegative c s l r)) = mul (0,2*s) r := by
+  unfold rawPositive rawNegative mul add sub
+  constructor <;> apply Prod.ext <;> dsimp <;> ring
+
+/-- The actual three-layer centered clock defect drives the two native
+frequency coordinates with equal and opposite increments. -/
+theorem raw_frequency_advance (c s : ℝ) (l m r : Plane)
+    (h : c^2+s^2=1) :
+    rawPositive c s m r =
+      add (mul (c,s) (rawPositive c s l m)) (clockDefect c l m r) ∧
+    rawNegative c s m r =
+      sub (mul (c,-s) (rawNegative c s l m)) (clockDefect c l m r) := by
+  unfold rawPositive rawNegative clockDefect mul add sub scale
+  constructor <;> apply Prod.ext <;> dsimp
+  · linear_combination l.1*h
+  · linear_combination l.2*h
+  · linear_combination -l.1*h
+  · linear_combination -l.2*h
+
+
+/-- Exact co-rotation deficit of the negative clock coordinate. In the
+normalized two-layer readout the required clock defect for zero relative
+envelope motion is 4 sin²(theta) N. This is a diagnostic consequence of
+the clock equation, not an installed response term. -/
+theorem raw_negative_corotation_defect (c s : ℝ) (l m r : Plane)
+    (h : c^2+s^2=1) :
+    sub (rawNegative c s m r)
+      (mul (c,s) (rawNegative c s l m)) =
+    sub (mul (0,-2*s) (rawNegative c s l m))
+      (clockDefect c l m r) := by
+  rw [(raw_frequency_advance c s l m r h).2]
+  unfold sub mul
+  apply Prod.ext <;> dsimp <;> ring
+
 end
 end LeanDirac.V4.FacePhaseMomentum
 
@@ -311,3 +412,14 @@ end LeanDirac.V4.FacePhaseMomentum
 #print axioms LeanDirac.V4.FacePhaseMomentum.oriented_balance_is_negative_variation
 
 #print axioms LeanDirac.V4.FacePhaseMomentum.inflow_change_clock_split
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.counterrotating_inflow
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.unit_interference_beat
+#print axioms LeanDirac.V4.FacePhaseMomentum.driven_interference_beat
+#print axioms LeanDirac.V4.FacePhaseMomentum.constant_current_requires_drive
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.raw_frequency_reconstruct
+#print axioms LeanDirac.V4.FacePhaseMomentum.raw_frequency_advance
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.raw_negative_corotation_defect

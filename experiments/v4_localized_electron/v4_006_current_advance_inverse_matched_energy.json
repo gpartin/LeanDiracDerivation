@@ -1,0 +1,567 @@
+{
+  "status": "V4_006_NATIVE_CURRENT_AND_ADVANCE_INITIAL_DATA_SCREEN",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "state_sha256": "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d",
+  "warm_start_sha256": "99e7e559cccd093dbc6af03bcb088fa6449417576d406f86bb9c1e48beffbec4",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "fraction": 0.5,
+  "period_updates": 17564,
+  "expected_chart_receiver_rate_by_step": [
+    [
+      6722289.1857562065,
+      2798231.403420925
+    ],
+    [
+      6723520.310556412,
+      2799399.764454603
+    ],
+    [
+      6724750.354336262,
+      2800567.632922411
+    ]
+  ],
+  "expected_first_rate_advance": [
+    1231.1248002052307,
+    1168.3610336780548
+  ],
+  "energy_ratio_constraint": 1.02175311554128,
+  "rest_interval_energy": 5651232717.01036,
+  "warm_start_interval_energy_relative_to_rest": 1.0217531155412793,
+  "initial_native_DEL_defect": 1.5424746957494514e-11,
+  "trace": [
+    {
+      "iteration": 0,
+      "residual": [
+        2.0053544589978642e-16,
+        -4.43210627211136e-13,
+        -3.901356067326289e-12,
+        -2.6983888433656697e-09,
+        -0.10316337761725669,
+        -0.0060064107498425745,
+        -6.661338147750939e-16
+      ],
+      "norm": 0.10333808325828639,
+      "energy_relative_to_rest": 1.0217531155412793,
+      "adjoints": [
+        {
+          "row": 0,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 1,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 2,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 3,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 4,
+          "adjoint_relative_defect": 1.1910728970372825e-06,
+          "iterations": 12
+        },
+        {
+          "row": 5,
+          "adjoint_relative_defect": 8.339818342621231e-07,
+          "iterations": 12
+        },
+        {
+          "row": 6,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        }
+      ],
+      "singular_values": [
+        1725.577820290449,
+        1370.4416619489182,
+        55.407089026507684,
+        46.7670218027368,
+        6.5290488230797115,
+        2.7253600661574144,
+        0.5525244205342063
+      ],
+      "accepted_scale": 0.5,
+      "accepted_native_DEL_defect": 3.5540622942744375e-10,
+      "accepted_newton_trace": [
+        0.9120239960412705,
+        0.7309395637851448,
+        5.9083976039613596e-05,
+        3.5547384933927274e-10
+      ]
+    },
+    {
+      "iteration": 1,
+      "residual": [
+        -2.7447737685057043e-09,
+        2.02217107754231e-06,
+        -1.2391275403807924e-05,
+        -0.03315347189287333,
+        -0.052280962564752724,
+        0.0025191638095048083,
+        0.0007763710694550507
+      ],
+      "norm": 0.06196289890909005,
+      "energy_relative_to_rest": 1.022529486610735,
+      "adjoints": [
+        {
+          "row": 0,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 1,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 2,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 3,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 4,
+          "adjoint_relative_defect": 1.2065410521849745e-06,
+          "iterations": 12
+        },
+        {
+          "row": 5,
+          "adjoint_relative_defect": 8.449507241877929e-07,
+          "iterations": 12
+        },
+        {
+          "row": 6,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        }
+      ],
+      "singular_values": [
+        1740.1475974442048,
+        1406.3398608002349,
+        61.55244191817638,
+        46.772250298630695,
+        6.455181917637497,
+        2.7989138564969385,
+        0.5523693492849588
+      ],
+      "accepted_scale": 1.0,
+      "accepted_native_DEL_defect": 2.3068726033093984e-10,
+      "accepted_newton_trace": [
+        0.8830074860530213,
+        0.706787964228728,
+        2.6753468384454763e-05,
+        2.3071852631290673e-10
+      ]
+    },
+    {
+      "iteration": 2,
+      "residual": [
+        -7.878574231987134e-09,
+        -3.2432266248828008e-06,
+        -2.9409870715413984e-05,
+        0.014595886023666238,
+        -1.8824800951932607e-05,
+        0.003920929578962814,
+        0.0008271863067792484
+      ],
+      "norm": 0.015136018122259613,
+      "energy_relative_to_rest": 1.0225803018480593,
+      "adjoints": [
+        {
+          "row": 0,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 1,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 2,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 3,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 4,
+          "adjoint_relative_defect": 1.2071963906625321e-06,
+          "iterations": 12
+        },
+        {
+          "row": 5,
+          "adjoint_relative_defect": 8.578456869559297e-07,
+          "iterations": 12
+        },
+        {
+          "row": 6,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        }
+      ],
+      "singular_values": [
+        1747.2853560705623,
+        1435.8126230486948,
+        66.71901794216981,
+        46.78283156240494,
+        6.445166096439671,
+        2.8013369827119217,
+        0.5516741191805598
+      ],
+      "accepted_scale": 1.0,
+      "accepted_native_DEL_defect": 1.0493490086256078e-11,
+      "accepted_newton_trace": [
+        0.03864618152711297,
+        0.028389098542115385,
+        1.7924522412229002e-07,
+        1.058351220261235e-11
+      ]
+    },
+    {
+      "iteration": 3,
+      "residual": [
+        -1.1145960618556029e-11,
+        8.919395178338887e-08,
+        -8.038708709852479e-09,
+        5.3749614983638175e-05,
+        5.010796041591334e-07,
+        0.00010264800422105358,
+        9.25612332425274e-06
+      ],
+      "norm": 0.00011623927391979121,
+      "energy_relative_to_rest": 1.0217623716646043,
+      "adjoints": [
+        {
+          "row": 0,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 1,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 2,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 3,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 4,
+          "adjoint_relative_defect": 1.2086161694584679e-06,
+          "iterations": 12
+        },
+        {
+          "row": 5,
+          "adjoint_relative_defect": 8.597481879175003e-07,
+          "iterations": 12
+        },
+        {
+          "row": 6,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        }
+      ],
+      "singular_values": [
+        1740.078168718765,
+        1417.5332639901512,
+        64.78385956559713,
+        46.78310974138212,
+        6.443635730119317,
+        2.745279914018967,
+        0.5508341900970495
+      ],
+      "accepted_scale": 1.0,
+      "accepted_native_DEL_defect": 2.015427854790835e-09,
+      "accepted_newton_trace": [
+        0.0005169610428029497,
+        0.0004451574854719679,
+        2.0158760456768223e-09
+      ]
+    },
+    {
+      "iteration": 4,
+      "residual": [
+        -1.0026772294989322e-15,
+        1.825424598049179e-11,
+        -1.0640062001798969e-12,
+        -1.6018733592857786e-08,
+        6.717425810469084e-11,
+        3.2277996131241976e-08,
+        1.3975025581203226e-09
+      ],
+      "norm": 3.6061429814941253e-08,
+      "energy_relative_to_rest": 1.0217531169387826,
+      "adjoints": [
+        {
+          "row": 0,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 1,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 2,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 3,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        },
+        {
+          "row": 4,
+          "adjoint_relative_defect": 1.2086337999621092e-06,
+          "iterations": 12
+        },
+        {
+          "row": 5,
+          "adjoint_relative_defect": 8.597956990413795e-07,
+          "iterations": 12
+        },
+        {
+          "row": 6,
+          "adjoint_relative_defect": 0.0,
+          "iterations": 0
+        }
+      ],
+      "singular_values": [
+        1740.0014204444474,
+        1417.319935495956,
+        64.76837114780511,
+        46.78313191954688,
+        6.443643195226892,
+        2.7446329525630078,
+        0.5508242885035678
+      ],
+      "accepted_scale": 1.0,
+      "accepted_native_DEL_defect": 9.979530876207743e-08,
+      "accepted_newton_trace": [
+        1.0780941530488232e-07,
+        9.979453906195855e-08
+      ]
+    },
+    {
+      "iteration": 5,
+      "residual": [
+        -2.0053544589978642e-16,
+        -9.782104375725073e-14,
+        -4.965362267506186e-13,
+        -3.2377257987968248e-12,
+        -5.576101826409447e-10,
+        -2.364988289400091e-09,
+        -1.2663203818874536e-12
+      ],
+      "norm": 2.429837662753896e-09,
+      "energy_relative_to_rest": 1.0217531155400137
+    }
+  ],
+  "final_residual": [
+    -2.0053544589978642e-16,
+    -9.782104375725073e-14,
+    -4.965362267506186e-13,
+    -3.2377257987968248e-12,
+    -5.576101826409447e-10,
+    -2.364988289400091e-09,
+    -1.2663203818874536e-12
+  ],
+  "final_constraint_norm": 2.429837662753896e-09,
+  "backward_DEL_defect": 1.1236779736674555e-11,
+  "backward_trace": [
+    33.73508982313082,
+    13.35911161396916,
+    0.030264930536565163,
+    1.0560087811731199e-06,
+    1.1225977681370756e-11
+  ],
+  "initial_pair": {
+    "global_charge_relative_defect": [
+      -4.0107089179957283e-16,
+      2.622548090006722e-14
+    ],
+    "receiver_inflow_rate": [
+      6603027.307808399,
+      2810019.469203949
+    ],
+    "interval_energy_relative_to_rest": 1.02175301323287,
+    "flux_fraction_of_midpoint_target": [
+      0.9822587403409377,
+      1.0042126844008015
+    ]
+  },
+  "initial_layer_change_relative_rest_contrast": 0.0002170067201253118,
+  "native_steps": [
+    {
+      "step": 0,
+      "global_charge_relative_defect": [
+        -2.0053544589978642e-16,
+        -9.650976971224737e-14
+      ],
+      "receiver_inflow_rate": [
+        6722289.1857533455,
+        2798231.4034366608
+      ],
+      "interval_energy_relative_to_rest": 1.0217531155398027,
+      "flux_fraction_of_midpoint_target": [
+        0.9999999999995745,
+        1.0000000000056235
+      ],
+      "exact_full_DEL_defect": 1.1236779736674555e-11
+    },
+    {
+      "global_charge_relative_defect": [
+        7.299490230752225e-14,
+        2.328311307048418e-11
+      ],
+      "receiver_inflow_rate": [
+        6723520.306807041,
+        2799399.7578163147
+      ],
+      "interval_energy_relative_to_rest": 1.0217526894620863,
+      "flux_fraction_of_midpoint_target": [
+        1.0001831401501504,
+        1.0004175331582517
+      ],
+      "step": 1,
+      "exact_full_DEL_defect": 9.979530876207743e-08,
+      "newton_trace": [
+        9.979453906195855e-08
+      ],
+      "flux_fraction_of_consecutive_chart_target": [
+        0.9999999994423501,
+        0.9999999976286743
+      ]
+    },
+    {
+      "global_charge_relative_defect": [
+        7.279436686162248e-14,
+        2.2946902405345316e-11
+      ],
+      "receiver_inflow_rate": [
+        6606623.683222294,
+        2812411.8691101074
+      ],
+      "interval_energy_relative_to_rest": 1.0217517405810839,
+      "flux_fraction_of_midpoint_target": [
+        0.9827937330070543,
+        1.0050676529724618
+      ],
+      "step": 2,
+      "exact_full_DEL_defect": 1.172532949147408e-11,
+      "newton_trace": [
+        224.36234276353704,
+        98.34660650712236,
+        0.059005210098677305,
+        5.431945975811726e-07,
+        1.2024260672379441e-11
+      ],
+      "flux_fraction_of_consecutive_chart_target": [
+        0.9824340436611454,
+        1.0042292269782955
+      ]
+    },
+    {
+      "global_charge_relative_defect": [
+        7.259383141572269e-14,
+        2.2907301929186216e-11
+      ],
+      "receiver_inflow_rate": [
+        6379488.705029488,
+        2838493.3626327515
+      ],
+      "interval_energy_relative_to_rest": 1.0217502788925823,
+      "flux_fraction_of_midpoint_target": [
+        0.9490053951482665,
+        1.0143883594339642
+      ],
+      "step": 3,
+      "exact_full_DEL_defect": 1.2132732067140959e-11,
+      "newton_trace": [
+        224.32797287770185,
+        98.13602009366413,
+        0.04113988564478216,
+        1.7795257722387015e-07,
+        1.1829060308346734e-11
+      ]
+    },
+    {
+      "global_charge_relative_defect": [
+        7.259383141572269e-14,
+        2.246369791976158e-11
+      ],
+      "receiver_inflow_rate": [
+        6051009.752757549,
+        2880410.7736797333
+      ],
+      "interval_energy_relative_to_rest": 1.0217483200315298,
+      "flux_fraction_of_midpoint_target": [
+        0.9001412443813003,
+        1.0293683253494836
+      ],
+      "step": 4,
+      "exact_full_DEL_defect": 1.0205587064605455e-11,
+      "newton_trace": [
+        224.33836698076993,
+        97.95322304787935,
+        0.03186390431265443,
+        1.0310004011578279e-07,
+        1.0198156787535577e-11
+      ]
+    },
+    {
+      "global_charge_relative_defect": [
+        7.23932959698229e-14,
+        2.276529095011235e-11
+      ],
+      "receiver_inflow_rate": [
+        5631753.4588775635,
+        2941545.6623954773
+      ],
+      "interval_energy_relative_to_rest": 1.0217458850579297,
+      "flux_fraction_of_midpoint_target": [
+        0.8377731607873448,
+        1.0512160140863782
+      ],
+      "step": 5,
+      "exact_full_DEL_defect": 1.153864492461564e-11,
+      "newton_trace": [
+        224.38913107487556,
+        97.79514360480371,
+        0.028692084252315044,
+        1.0160078942918204e-07,
+        1.1402628155784704e-11
+      ]
+    }
+  ],
+  "claim_boundary": "Both currents and first free advance are an inverse initial-data screen at one midpoint. Targets are measured on the prior chart at the independent comparator crossing interval, not a proven Dirac-current map of the translating nonlinear carrier. No action change or runtime constraint; this is not a full-cell orbit.",
+  "output_state_sha256": "6a0d0bb85c58242ccdbf5205803c6a40a8cbbb60fd752d47dcf9e1df61712d45"
+}
