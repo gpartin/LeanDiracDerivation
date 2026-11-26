@@ -1,4 +1,4 @@
-import LeanDirac.V2.V32CompleteFreeFermion
+import LeanDirac.V32CompleteFreeFermion
 
 /-!
 Production facade for the first-principles free linearized Dirac derivation,

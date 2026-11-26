@@ -14,10 +14,10 @@ The default import is unambiguous:
 ```lean
 import LeanDirac
 
-#check LeanDirac.V2.complete_first_principles_free_dirac
-#check LeanDirac.V2.lorentz_spin_half_from_native_action
-#check LeanDirac.V2.v32_complete_free_fermion
-#check LeanDirac.V2.v32_two_copy_rest_sector
+#check LeanDirac.complete_first_principles_free_dirac
+#check LeanDirac.lorentz_spin_half_from_native_action
+#check LeanDirac.v32_complete_free_fermion
+#check LeanDirac.v32_two_copy_rest_sector
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -49,7 +49,7 @@ action is stated in [docs/FRAMEWORK.md](docs/FRAMEWORK.md).
 ## Result
 
 The cumulative theorem is
-`LeanDirac.V2.complete_first_principles_free_dirac`. Its dependency chain
+`LeanDirac.complete_first_principles_free_dirac`. Its dependency chain
 derives:
 
 - reciprocal native field variation from the action;
@@ -98,7 +98,7 @@ four-vector laws are proved for all axes before obtaining its rest Casimir
 `-3 m^2 / 4`.
 
 The cumulative local theorem is
-`LeanDirac.V2.lorentz_spin_half_from_native_action`.  The exact chain and
+`LeanDirac.lorentz_spin_half_from_native_action`.  The exact chain and
 claim boundary are documented in
 [docs/LORENTZ_SPIN_CHAIN.md](docs/LORENTZ_SPIN_CHAIN.md).
 
@@ -112,7 +112,7 @@ dynamical rule selecting one copy.
 
 V3.2 changes no action, governing equation, C19 geometry, vacuum, or V3.1
 readout. Its cumulative theorem is
-`LeanDirac.V2.v32_complete_free_fermion`. The machine-checked chain adds:
+`LeanDirac.v32_complete_free_fermion`. The machine-checked chain adds:
 
 - the exact continuum free-Dirac energy branches and spectral projectors;
 - the exact finite-C19 scalar spectrum, global gap, and no-extra-zero audit;

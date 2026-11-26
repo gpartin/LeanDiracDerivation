@@ -51,7 +51,7 @@ Lean module when implemented.
 
 ### V32-001 — Framework and claim lock
 
-**Module:** `LeanDirac/V2/V32FrameworkLock.lean`
+**Module:** `LeanDirac/V32FrameworkLock.lean`
 
 Import the sealed V3.1 cumulative certificates and prove a V3.2 starting
 certificate that records the unchanged action, C19 symbol, mass, readout,
@@ -62,7 +62,7 @@ audits confirm no changed premise.
 
 ### V32-002 — Global Hamiltonian spectrum
 
-**Module:** `LeanDirac/V2/V32GlobalSpectrum.lean`
+**Module:** `LeanDirac/V32GlobalSpectrum.lean`
 
 Prove Hermiticity and the square relation for the exact continuum/root
 Hamiltonian. Separately prove the unchanged action's exact finite-C19 scalar
@@ -76,7 +76,7 @@ and their nonzero finite-spacing difference is explicitly certified.
 
 ### V32-003 — Projectors, completeness, and unitary evolution
 
-**Module:** `LeanDirac/V2/V32SpectralProjectors.lean`
+**Module:** `LeanDirac/V32SpectralProjectors.lean`
 
 Construct positive- and negative-energy projectors from the derived
 Hamiltonian. Prove idempotence, orthogonality, completeness, branch
@@ -88,7 +88,7 @@ one-particle evolution on each branch.
 
 ### V32-004 — Full Brillouin-zone and doubler audit
 
-**Module:** `LeanDirac/V2/V32BrillouinZoneAudit.lean`
+**Module:** `LeanDirac/V32BrillouinZoneAudit.lean`
 
 Classify every zero, degeneracy, and low-energy cone of the exact lattice
 symbol over the full Brillouin zone. Distinguish momentum-space fermion
@@ -100,7 +100,7 @@ equations in this stage.
 
 ### V32-005 — Two-copy equivalence and mixing classification
 
-**Module:** `LeanDirac/V2/V32CopyClassification.lean`
+**Module:** `LeanDirac/V32CopyClassification.lean`
 
 Prove the exact unitary equivalence between the two exhaustive cubical copies,
 identify the native symmetry that exchanges them, compute the commutant of the
@@ -112,7 +112,7 @@ sectors, or unresolved species; no measurement-selection story is assumed.
 
 ### V32-006 — Irreducible massive spin-one-half particle sector
 
-**Module:** `LeanDirac/V2/V32IrreducibleParticle.lean`
+**Module:** `LeanDirac/V32IrreducibleParticle.lean`
 
 Combine the mass-shell and Pauli--Lubanski invariants with the positive-energy
 projector. Prove that each two-state positive-energy little-group sector is an
@@ -124,7 +124,7 @@ not only a list of matrices with the right commutators.
 
 ### V32-007 — Finite continuum Lorentz covariance
 
-**Module:** `LeanDirac/V2/V32FiniteLorentz.lean`
+**Module:** `LeanDirac/V32FiniteLorentz.lean`
 
 Exponentiate the already-derived rotation and boost generators. Prove the
 finite state transformation group laws and retain the already-proved
@@ -137,7 +137,7 @@ observable covariance is not claimed.
 
 ### V32-008 — C, P, T, and CPT structure
 
-**Module:** `LeanDirac/V2/V32DiscreteSymmetries.lean`
+**Module:** `LeanDirac/V32DiscreteSymmetries.lean`
 
 Define parity, time reversal, and charge conjugation from the derived cubical
 representation and prove their squares, Hamiltonian covariance or branch
@@ -149,7 +149,7 @@ CPT theorem is claimed.
 
 ### V32-009 — Free nonrelativistic limit
 
-**Module:** `LeanDirac/V2/V32NonrelativisticLimit.lean`
+**Module:** `LeanDirac/V32NonrelativisticLimit.lean`
 
 Remove the native rest-energy phase, eliminate the lower component with a
 controlled remainder, and derive the free Schrodinger generator. Prove the
@@ -161,7 +161,7 @@ Dirac sector without inserting a Schrodinger equation.
 
 ### V32-010 — Uniform continuum operator convergence
 
-**Module:** `LeanDirac/V2/V32ContinuumOperatorConvergence.lean`
+**Module:** `LeanDirac/V32ContinuumOperatorConvergence.lean`
 
 Prove the exact finite-C19 scalar split, its uniform bounded-momentum
 fourth-order envelope, low-momentum current-remainder convergence, and the
@@ -174,7 +174,7 @@ finite-time nonlinear packet convergence.
 
 ### V32-011 — Leading lattice artifacts and anisotropy
 
-**Module:** `LeanDirac/V2/V32LatticeArtifacts.lean`
+**Module:** `LeanDirac/V32LatticeArtifacts.lean`
 
 Derive the finite-C19 dispersion correction and identify the first geometric
 order at which directional anisotropy actually occurs. The audit found that
@@ -186,7 +186,7 @@ axis/face values, and the global fourth-order remainder envelope.
 
 ### V32-012 — Rest-mass certificate and physical-scale identifiability
 
-**Module:** `LeanDirac/V2/V32ScaleIdentifiability.lean`
+**Module:** `LeanDirac/V32ScaleIdentifiability.lean`
 
 Construct one `NativeRestMassCertificate` and prove, for both exhaustive
 cubical copies:
@@ -220,7 +220,7 @@ an input.
 
 ### V32-013 — Vacuum, normalization, and readout robustness
 
-**Module:** `LeanDirac/V2/V32Robustness.lean`
+**Module:** `LeanDirac/V32Robustness.lean`
 
 Prove or delimit invariance under vacuum-orientation changes, identify every
 result independent of `B = 1197`, and extend the existing scoped readout and
@@ -231,7 +231,7 @@ declared framework constant is silently promoted to a derived necessity.
 
 ### V32-014 — Exact transport observables for V4
 
-**Module:** `LeanDirac/V2/V32TransportObservables.lean`
+**Module:** `LeanDirac/V32TransportObservables.lean`
 
 Derive exact phase velocity, group velocity, Hamiltonian momentum derivative,
 Noether/Dirac current velocity, rest behavior, branch signs, and speed bounds
@@ -243,7 +243,7 @@ targets.
 
 ### V32-015 — Centered-step transfer spectrum for V4
 
-**Module:** `LeanDirac/V2/V32CenteredStepTransport.lean`
+**Module:** `LeanDirac/V32CenteredStepTransport.lean`
 
 Derive the exact one-step/two-layer transfer spectrum of the centered update,
 its stable unit-modulus root, recurrence polynomial, exact step angle,
@@ -255,7 +255,7 @@ rate is claimed than has been proved.
 
 ### V32-016 — Finite packet benchmark contract for V4
 
-**Module:** `LeanDirac/V2/V32PacketBenchmarks.lean`
+**Module:** `LeanDirac/V32PacketBenchmarks.lean`
 
 Export the arbitrary finite positive-frequency spectral-packet theorems
 already derived from the exact Fourier basis: integrated charge/current,
@@ -269,7 +269,7 @@ LFM system itself.
 
 ### V32-017 — Cumulative certificate, hostile audit, and release gate
 
-**Module:** `LeanDirac/V2/V32CompleteFreeFermion.lean`
+**Module:** `LeanDirac/V32CompleteFreeFermion.lean`
 
 Assemble the sixteen prior certificates into one cumulative theorem. Run the
 sealed source audit, semantic axiom audit, declaration-provenance audit,

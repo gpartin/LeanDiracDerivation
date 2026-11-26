@@ -1,10 +1,10 @@
 module
 
-import LeanDirac.V2
+import LeanDirac.LorentzSpin
 import LeanDirac.EnvironmentAudit
 
-/-! Compiled-environment audit for the V2 cumulative theorem. -/
+/-! Compiled-environment audit for the cumulative theorem. -/
 
 #audit_lean_dirac_environment
-#print axioms LeanDirac.V2.complete_first_principles_free_dirac
-#print axioms LeanDirac.V2.lorentz_spin_half_from_native_action
+#print axioms LeanDirac.complete_first_principles_free_dirac
+#print axioms LeanDirac.lorentz_spin_half_from_native_action

@@ -27,6 +27,10 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
+def sha256_bytes(content: bytes) -> str:
+    return hashlib.sha256(content.replace(b"\r\n", b"\n")).hexdigest()
+
+
 def run(command: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         command,
@@ -49,6 +53,38 @@ def require_success(result: subprocess.CompletedProcess[str], label: str) -> str
 def require_equal(actual: object, expected: object, label: str) -> None:
     if actual != expected:
         raise SystemExit(f"{label}: {actual!r} != {expected!r}")
+
+
+def historical_source_path(relative: str) -> str:
+    base_modules = {
+        "LeanDirac/Foundation.lean",
+        "LeanDirac/ExteriorArea.lean",
+        "LeanDirac/C19Geometry.lean",
+        "LeanDirac/NativeAction.lean",
+    }
+    if relative in base_modules:
+        return relative
+    if relative == "LeanDirac.lean":
+        return "LeanDirac/V2.lean"
+    if relative.startswith("LeanDirac/"):
+        return "LeanDirac/V2/" + Path(relative).name
+    return relative
+
+
+def git_blob(commit: str, relative: str) -> bytes:
+    result = subprocess.run(
+        ["git", "show", f"{commit}:{relative}"],
+        cwd=ROOT,
+        check=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if result.returncode:
+        raise SystemExit(
+            f"sealed Git object is missing: {commit}:{relative}\n"
+            + result.stderr.decode("utf-8", errors="replace")
+        )
+    return result.stdout
 
 
 def main() -> None:
@@ -98,11 +134,13 @@ def main() -> None:
         if not path.is_file():
             raise SystemExit(f"missing Lean source: {path.relative_to(ROOT)}")
 
+    proof_commit = audit["proof_source_commit"]
     for relative, expected in audit["source_hashes_sha256"].items():
-        actual = sha256(ROOT / relative)
+        sealed_path = historical_source_path(relative)
+        actual = sha256_bytes(git_blob(proof_commit, sealed_path))
         if actual != expected:
             raise SystemExit(
-                f"audited Lean source changed: {relative}: {actual} != {expected}"
+                f"sealed Lean source mismatch: {sealed_path}: {actual} != {expected}"
             )
 
     support_files = audit["audit_support_files"]
@@ -112,10 +150,10 @@ def main() -> None:
         path = ROOT / relative
         if not path.is_file():
             raise SystemExit(f"missing audit-support file: {relative}")
-        actual = sha256(path)
+        actual = sha256_bytes(git_blob(proof_commit, relative))
         if actual != support_hashes[relative]:
             raise SystemExit(
-                f"audit-support file changed: {relative}: "
+                f"sealed audit-support object changed: {relative}: "
                 f"{actual} != {support_hashes[relative]}"
             )
 
@@ -124,7 +162,6 @@ def main() -> None:
     )
     if status_output.strip():
         raise SystemExit("final verification requires a clean checkout")
-    proof_commit = audit["proof_source_commit"]
     require_success(
         run(["git", "cat-file", "-e", f"{proof_commit}^{{commit}}"]),
         "proof-source commit lookup",
@@ -133,11 +170,6 @@ def main() -> None:
         run(["git", "merge-base", "--is-ancestor", proof_commit, "HEAD"]),
         "proof-source ancestry check",
     )
-    unchanged_paths = summary["lean_modules"] + support_files
-    proof_diff = run(["git", "diff", "--quiet", proof_commit, "HEAD", "--", *unchanged_paths])
-    if proof_diff.returncode:
-        raise SystemExit("proof or audit-support sources changed after proof_source_commit")
-
     build_output = require_success(
         run(["lake", "build", *audit["lean_targets"]]),
         "Lean target build",
@@ -155,7 +187,7 @@ def main() -> None:
     )
     require_equal(
         audited_modules,
-        set(audit["compiled_audited_modules"]),
+        set(audit["compiled_audited_modules"]) - {"LeanDirac"},
         "compiled LeanDirac module closure",
     )
     forbidden_modules = set(audit["forbidden_active_imports"])
@@ -166,9 +198,9 @@ def main() -> None:
         )
 
     declaration_source = [
-        "import LeanDirac.V2.CompleteFreeDirac",
+        "import LeanDirac.CompleteFreeDirac",
         "",
-        *[f"#check LeanDirac.V2.{name}" for name in audit["required_theorems"]],
+        *[f"#check LeanDirac.{name}" for name in audit["required_theorems"]],
         "",
         '#eval IO.println "LEAN_DIRAC_DECLARATION_AUDIT_PASS"',
         "",

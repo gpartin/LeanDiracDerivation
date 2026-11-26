@@ -2,7 +2,7 @@
 
 V3.2 extends the V3.1 Lorentz/spin result without changing the declared
 action, governing equations, C19 geometry, vacuum, or readout. The cumulative
-Lean theorem is `LeanDirac.V2.v32_complete_free_fermion`.
+Lean theorem is `LeanDirac.v32_complete_free_fermion`.
 
 ## What V3.2 adds
 
