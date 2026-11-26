@@ -3,7 +3,24 @@
 V4-006 is **open**, but it is no longer an undifferentiated receiver-orientation
 problem. Two different motion questions were being mixed.
 
-### Current controlling refinement — exact one-face phase transfer
+### Current controlling refinement — cross-face exchange and through-current
+
+The native shared-field phase equations now resolve exchange across
+the six faces; the exact wedge product/clock identity is proved in Lean.
+Unrestricted local updates show opposed x and transverse phase exchange.
+The whole-cube trial still lacks net influx, not just routing among faces.
+A backward-solved initial pair matching both global charges and receiver
+currents sustains roughly 65% Psi and 100% chi of the trial's midpoint
+required rate after three unrestricted updates, versus 14% and 22% for
+the former preparation. This is a local advance; the Psi flux decays
+and the approximately 2.175% energy excess needs interpretation. The
+equal-B parallel face completion is rejected; the frozen action remains.
+The exact current-advance split identifies direct Psi as 78.2% of the
+first three updates' current decay, predominantly the centered-clock
+term. The next inverse requirement is current AND current advance.
+See [the cross-face RCA](V4_006_CROSS_FACE_EXCHANGE_RCA.md).
+
+### Prior refinement — exact one-face phase transfer
 
 The action-derived signed phase current now explains why a same-phase
 receiver was not accumulating the required native phase momentum. The

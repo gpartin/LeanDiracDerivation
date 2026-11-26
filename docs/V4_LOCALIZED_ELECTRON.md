@@ -1264,3 +1264,18 @@ orientations store most of the endpoint phase momentum. Both new
 face-frame material-transport replacements were rejected. The frozen action
 and V4-001–005 scopes remain unchanged; V4-006 stays OPEN.
 See [the exact derivation and RCA](../experiments/v4_localized_electron/V4_006_PHASE_MOMENTUM_TRANSFER_RCA.md).
+
+## Native cross-face exchange and current-correct initial layers (2026-11-25)
+
+The exact native phase balance now separates the three face orientations
+and the mixed motion of complex Psi and chi. The sum/difference phase
+generators of the wedge and parallel overlap are verified in Lean. Solved
+local updates exhibit actual cross-axis exchange but insufficient total
+receiver influx. The inverse initial-layer solve matches both conserved
+charges and the midpoint's required through-current, then allows three
+unrestricted native updates. After the third, Psi retains 64.86% and
+chi 100.50% of the trial's required midpoint rate. The former preparation
+gave 13.81% and 22.41%. Psi's decay and the energy excess remain open;
+the equal-weight parallel face completion failed and is not installed.
+V4-001–005 are unchanged, V4-006 is OPEN. See
+[the complete RCA](../experiments/v4_localized_electron/V4_006_CROSS_FACE_EXCHANGE_RCA.md).

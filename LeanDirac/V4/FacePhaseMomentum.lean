@@ -93,6 +93,24 @@ theorem right_momentum_is_variation (k c : ℝ) (li lj ri rj : Plane) :
     simp only [Pi.add_apply, id_eq]
   · norm_num
 
+/-- The left time endpoint has the same independent variational meaning. -/
+theorem left_momentum_is_variation (k c : ℝ) (li lj ri rj : Plane) :
+    HasDerivAt (fun t => intervalAction k c li (phaseVariation lj t) ri rj)
+      (leftMomentum k c li lj ri rj) 0 := by
+  rw [show (fun t => intervalAction k c li (phaseVariation lj t) ri rj) =
+    (fun t => intervalAction k c li lj ri rj + t * leftMomentum k c li lj ri rj +
+      (k * c / 2) * t ^ 2 * normSq lj) from
+      funext (fun t => left_variation_expansion k c t li lj ri rj)]
+  have hconst := hasDerivAt_const (𝕜 := ℝ) 0 (intervalAction k c li lj ri rj)
+  have hlinear := (hasDerivAt_id (0 : ℝ)).mul_const (leftMomentum k c li lj ri rj)
+  have hquadratic := (HasDerivAt.const_mul (k * c / 2)
+    (hasDerivAt_pow 2 (0 : ℝ))).mul_const (normSq lj)
+  have h := HasDerivAt.add (HasDerivAt.add hconst hlinear) hquadratic
+  convert h using 1
+  · funext t
+    simp only [Pi.add_apply, id_eq]
+  · norm_num
+
 /-- The signed inflow to j is the shared phase variation of both time
 endpoints of j. Swapping the face reverses its sign. -/
 def inflow (k c : ℝ) (li lj ri rj : Plane) : ℝ :=
@@ -153,6 +171,126 @@ theorem constant_antiphase_difference_clock_del_zero
   simp only [sub, scale]
   apply Prod.ext <;> dsimp <;> ring
 
+
+/-- Addition and multiplication in the real-coordinate complex plane.
+The native wedge is a difference of such bilinear products. -/
+def add (z w : Plane) : Plane := (z.1 + w.1, z.2 + w.2)
+def mul (z w : Plane) : Plane :=
+  (z.1 * w.1 - z.2 * w.2, z.1 * w.2 + z.2 * w.1)
+
+/-- The actual centered clock defect, not an independently introduced force. -/
+def clockDefect (c : ℝ) (l m r : Plane) : Plane :=
+  sub (add l r) (scale (2 * c) m)
+
+/-- For one incident face, the storage change minus the signed inflow is
+the phase contraction of the clock defect. Sum both incident bonds for an
+axis, then the three axes for the common site's equation. -/
+theorem oriented_phase_balance (k c : ℝ) (li lj mi mj ri rj : Plane) :
+    rightMomentum k c mi mj ri rj -
+      rightMomentum k c li lj mi mj -
+      inflow k c mi mj ri rj =
+    k * cross mj (sub (clockDefect c lj mj rj) (clockDefect c li mi ri)) := by
+  unfold inflow rightMomentum leftMomentum cross clockDefect add sub scale
+  dsimp
+  ring
+
+/-- The balance defect is the negative derivative of the actual
+two-interval action when only this site's middle phase is varied. -/
+theorem oriented_balance_is_negative_variation
+    (k c : ℝ) (li lj mi mj ri rj : Plane) :
+    HasDerivAt (fun t => intervalAction k c li lj mi (phaseVariation mj t) +
+        intervalAction k c mi (phaseVariation mj t) ri rj)
+      (-(k * cross mj (sub (clockDefect c lj mj rj) (clockDefect c li mi ri)))) 0 := by
+  have h := HasDerivAt.add
+    (right_momentum_is_variation k c li lj mi mj)
+    (left_momentum_is_variation k c mi mj ri rj)
+  convert h using 1
+  unfold rightMomentum leftMomentum cross clockDefect add sub scale
+  dsimp
+  ring
+
+/-- For one complex product, the exact finite-layer defect splits into
+the wave defect, the live companion defect, and the product of their
+increments. No small-velocity or frozen-companion assumption is used.
+Apply this to each product difference in chi wedge Psi. -/
+theorem product_clock_defect
+    (c : ℝ) (xl x xr yl y yr : Plane) :
+    clockDefect c (mul xl yl) (mul x y) (mul xr yr) =
+      add (mul x (clockDefect c yl y yr))
+        (add (mul (clockDefect 1 xl x xr) y)
+          (add (mul (sub xl x) (sub yl y))
+            (mul (sub xr x) (sub yr y)))) := by
+  unfold clockDefect mul add sub scale
+  apply Prod.ext <;> dsimp <;> ring
+
+/-- The corresponding wedge component: two complex products with their
+native orientation. This is the exact shared-field curvature split
+that contributes to both native phase charges. -/
+theorem wedge_component_clock_defect (c : ℝ)
+    (xl x xr yl y yr ul u ur vl v vr : Plane) :
+    clockDefect c (sub (mul xl yl) (mul ul vl))
+      (sub (mul x y) (mul u v)) (sub (mul xr yr) (mul ur vr)) =
+    add (sub (mul x (clockDefect c yl y yr)) (mul u (clockDefect c vl v vr)))
+      (add (sub (mul (clockDefect 1 xl x xr) y) (mul (clockDefect 1 ul u ur) v))
+        (add (sub (mul (sub xl x) (sub yl y)) (mul (sub ul u) (sub vl v)))
+          (sub (mul (sub xr x) (sub yr y)) (mul (sub ur u) (sub vr v))))) := by
+  unfold clockDefect mul add sub scale
+  apply Prod.ext <;> dsimp <;> ring
+
+/-- If the companion is the same at the three native layers, the curvature
+term vanishes: its wedge defect is entirely due to the wave clock. -/
+theorem held_companion_clock_defect (c : ℝ) (x yl y yr : Plane) :
+    clockDefect c (mul x yl) (mul x y) (mul x yr) =
+      mul x (clockDefect c yl y yr) := by
+  unfold clockDefect mul add sub scale
+  apply Prod.ext <;> dsimp <;> ring
+
+
+/-- Native infinitesimal phase rotation and complex conjugation. -/
+def phaseTangent (z : Plane) : Plane := (-z.2, z.1)
+def conjugate (z : Plane) : Plane := (z.1, -z.2)
+
+/-- Both fields generate the same phase tangent on their bilinear product.
+A wedge component is a difference of two such products. -/
+theorem product_phase_generators (x y : Plane) :
+    mul (phaseTangent x) y = phaseTangent (mul x y) ∧
+    mul x (phaseTangent y) = phaseTangent (mul x y) := by
+  unfold mul phaseTangent
+  constructor <;> apply Prod.ext <;> dsimp <;> ring
+
+/-- In the Hermitian parallel overlap, the chi generator has the opposite
+sign to the Psi generator. Thus parallel contributions can change the
+difference charge, not its sum. -/
+theorem conjugate_product_phase_generators (x y : Plane) :
+    mul (conjugate (phaseTangent x)) y =
+      scale (-1) (phaseTangent (mul (conjugate x) y)) ∧
+    mul (conjugate x) (phaseTangent y) =
+      phaseTangent (mul (conjugate x) y) := by
+  unfold mul conjugate phaseTangent scale
+  constructor <;> apply Prod.ext <;> dsimp <;> ring
+
+/-- Exact two-charge split once the identical wedge and opposite parallel
+phase tangents are derived. A wedge-only response cannot alter the
+difference of the two field charges. -/
+theorem two_charge_split (p chi w s : ℝ) :
+    (p+w+s) - (chi+w-s) = p-chi+2*s ∧
+    (p+w+s) + (chi+w-s) = p+chi+2*w := by
+  constructor <;> ring
+
+
+/-- Exact change in signed face current between two consecutive native
+intervals, split into the centered clock term and its clock defects. This
+relates current decay to the same three-layer field motion. -/
+theorem inflow_change_clock_split (k c : ℝ)
+    (li lj mi mj ri rj : Plane) :
+    inflow k c mi mj ri rj - inflow k c li lj mi mj =
+      k * ((1 - c^2) * (cross mj (sub ri li) + cross (sub rj lj) mi) -
+        c/2 * (cross (sub rj lj) (clockDefect c li mi ri) +
+          cross (clockDefect c lj mj rj) (sub ri li))) := by
+  unfold inflow leftMomentum rightMomentum cross clockDefect add sub scale
+  dsimp
+  ring
+
 end
 end LeanDirac.V4.FacePhaseMomentum
 
@@ -160,3 +298,16 @@ end LeanDirac.V4.FacePhaseMomentum
 #print axioms LeanDirac.V4.FacePhaseMomentum.inflow_antisymmetric
 #print axioms LeanDirac.V4.FacePhaseMomentum.antiphase_pair_exact_transfer
 #print axioms LeanDirac.V4.FacePhaseMomentum.constant_antiphase_difference_clock_del_zero
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.oriented_phase_balance
+#print axioms LeanDirac.V4.FacePhaseMomentum.wedge_component_clock_defect
+#print axioms LeanDirac.V4.FacePhaseMomentum.held_companion_clock_defect
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.product_phase_generators
+#print axioms LeanDirac.V4.FacePhaseMomentum.conjugate_product_phase_generators
+#print axioms LeanDirac.V4.FacePhaseMomentum.two_charge_split
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.left_momentum_is_variation
+#print axioms LeanDirac.V4.FacePhaseMomentum.oriented_balance_is_negative_variation
+
+#print axioms LeanDirac.V4.FacePhaseMomentum.inflow_change_clock_split

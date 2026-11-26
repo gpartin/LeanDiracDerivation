@@ -1,0 +1,140 @@
+{
+  "status": "V4_006_TWO_CHARGE_CURRENT_INVERSE_LAUNCH_SCREEN",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "state_sha256": "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "fraction": 0.5,
+  "axis": 0,
+  "sign": -1,
+  "period_updates": 17564,
+  "energy_constraint": false,
+  "initial_inverse_residual": 1.2322540811573852,
+  "final_inverse_residual": 2.7850539457196077e-12,
+  "inverse_trace": [
+    1.2322540811573852,
+    0.8925879621672895,
+    0.011243096682443884,
+    3.003628008087962e-07,
+    2.7850539457196077e-12
+  ],
+  "target_receiver_rate": [
+    6722289.18572855,
+    2798231.395866394
+  ],
+  "old_receiver_rate": [
+    1006528.0182671547,
+    319411.82865428925
+  ],
+  "following_layer_correction_relative_to_rest_contrast": 0.0012237148252717356,
+  "correction_relative_to_original_slow_motion": 7.015970303092382,
+  "backward_DEL_defect": 2.960326277975025e-11,
+  "backward_trace": [
+    113.06376324250901,
+    45.12864671780602,
+    0.0895078286112078,
+    1.0926265276309859e-05,
+    2.9722064806099286e-11
+  ],
+  "native_initial_pair": {
+    "global_charge_relative_defect": [
+      -2.0053544589978642e-16,
+      -5.469324041709019e-13
+    ],
+    "receiver_inflow_rate": [
+      7297485.29221487,
+      2827142.4144148827
+    ],
+    "interval_energy_relative_to_rest": 1.0217529977559183
+  },
+  "native_steps": [
+    {
+      "step": 0,
+      "global_charge_relative_defect": [
+        0.0,
+        -4.3993244209862763e-13
+      ],
+      "receiver_inflow_rate": [
+        6722289.185727119,
+        2798231.395878315
+      ],
+      "interval_energy_relative_to_rest": 1.0217531155412793,
+      "exact_full_DEL_defect": 2.960326277975025e-11
+    },
+    {
+      "global_charge_relative_defect": [
+        0.0,
+        -7.037607799533039e-13
+      ],
+      "receiver_inflow_rate": [
+        6030026.252812862,
+        2782592.429719448
+      ],
+      "interval_energy_relative_to_rest": 1.0217526989982257,
+      "step": 1,
+      "exact_full_DEL_defect": 1.5424746957494514e-11,
+      "newton_trace": [
+        223.8724171794266,
+        98.67316270182631,
+        0.08699097781935505,
+        4.095689464819313e-06,
+        1.5146127338932504e-11
+      ],
+      "flux_fraction_of_target": [
+        0.8970197630912153,
+        0.9944111247661476
+      ]
+    },
+    {
+      "global_charge_relative_defect": [
+        -2.0053544589978642e-16,
+        -3.4722536711689e-13
+      ],
+      "receiver_inflow_rate": [
+        5235507.053977013,
+        2785458.7692923546
+      ],
+      "interval_energy_relative_to_rest": 1.0217517540806478,
+      "step": 2,
+      "exact_full_DEL_defect": 1.1797925413404244e-11,
+      "newton_trace": [
+        223.83952685269776,
+        98.44325991935985,
+        0.060483097972847615,
+        5.493771863006533e-07,
+        1.1742530492014285e-11
+      ],
+      "flux_fraction_of_target": [
+        0.778828001790226,
+        0.9954354644891386
+      ]
+    },
+    {
+      "global_charge_relative_defect": [
+        -2.0053544589978642e-16,
+        -8.37248477734646e-13
+      ],
+      "receiver_inflow_rate": [
+        4360110.317939281,
+        2812171.8235225677
+      ],
+      "interval_energy_relative_to_rest": 1.0217502908908587,
+      "step": 3,
+      "exact_full_DEL_defect": 1.093076472118664e-11,
+      "newton_trace": [
+        223.8720933026821,
+        98.24864915285328,
+        0.038433386758459934,
+        1.6311756854095784e-07,
+        1.1023054328216806e-11
+      ],
+      "flux_fraction_of_target": [
+        0.6486049911681597,
+        1.0049818709334641
+      ]
+    }
+  ],
+  "claim_boundary": "Inverse prepared midpoint current from native action. Only initial data are changed. Three unrestricted updates do not certify a complete crossing.",
+  "output_state_sha256": "99e7e559cccd093dbc6af03bcb088fa6449417576d406f86bb9c1e48beffbec4"
+}

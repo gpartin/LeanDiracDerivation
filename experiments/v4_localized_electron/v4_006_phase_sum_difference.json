@@ -1,0 +1,105 @@
+{
+  "status": "V4_006_NATIVE_PHASE_SUM_DIFFERENCE_TERM_DECOMPOSITION",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "state_sha256": "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "dt": 0.00390625,
+  "axis": 0,
+  "sign": -1,
+  "period_updates": 17564,
+  "samples": 17,
+  "term_balance_identity_defect": 3.154945084944639e-16,
+  "terms": {
+    "core_action": {
+      "receiver_storage": [
+        190470.16853464936,
+        225069.22283637355
+      ],
+      "receiver_inflow": [
+        5693.13191679855,
+        25015.951017700158
+      ],
+      "unbalanced": [
+        184777.0366178508,
+        200053.27181867338
+      ],
+      "sum_difference_deficit_half": [
+        192415.1542182621,
+        -7638.117600411293
+      ]
+    },
+    "direct_prong_one_form": {
+      "receiver_storage": [
+        8795.671833818371,
+        0.6532505107809806
+      ],
+      "receiver_inflow": [
+        10.539275891457265,
+        0.09576904021308978
+      ],
+      "unbalanced": [
+        8785.132557926914,
+        0.5574814705678909
+      ],
+      "sum_difference_deficit_half": [
+        4392.845019698741,
+        4392.287538228173
+      ]
+    },
+    "matched_six_face_oscillator": {
+      "receiver_storage": [
+        143884530.15551975,
+        56753358.65129921
+      ],
+      "receiver_inflow": [
+        29564915.22428328,
+        5610539.179310595
+      ],
+      "unbalanced": [
+        114319614.93123648,
+        51142819.47198861
+      ],
+      "sum_difference_deficit_half": [
+        82731217.20161255,
+        31588397.729623932
+      ]
+    },
+    "spacetime_plaquette": {
+      "receiver_storage": [
+        3.781904151282933e-05,
+        3.781904177414808e-05
+      ],
+      "receiver_inflow": [
+        -1.2338388400381117e-12,
+        6.890946087703251e-13
+      ],
+      "unbalanced": [
+        3.781904274666817e-05,
+        3.781904108505347e-05
+      ],
+      "sum_difference_deficit_half": [
+        3.781904191586082e-05,
+        8.308073501351546e-13
+      ]
+    },
+    "parallel_material_completion": {
+      "receiver_storage": [
+        0.06696869943853961,
+        -0.0669688178683279
+      ],
+      "receiver_inflow": [
+        -0.06181781086552859,
+        0.02679302240430787
+      ],
+      "unbalanced": [
+        0.1287865103040682,
+        -0.09376184027263576
+      ],
+      "sum_difference_deficit_half": [
+        0.017512335015716224,
+        0.11127417528835198
+      ]
+    }
+  },
+  "claim_boundary": "Exact native local phase variation of each existing action term on the retained collocation screen, not a freely evolved handoff."
+}

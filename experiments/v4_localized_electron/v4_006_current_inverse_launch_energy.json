@@ -1,0 +1,70 @@
+{
+  "status": "V4_006_TWO_CHARGE_CURRENT_INVERSE_LAUNCH_SCREEN",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "state_sha256": "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "tangent_cache_sha256": "0c953ff819727c38359afc7020801dee0851dbf438a36f62aac2d0fc9f8f4ef4",
+  "dt": 0.00390625,
+  "fraction": 0.5,
+  "axis": 0,
+  "sign": -1,
+  "period_updates": 17564,
+  "energy_constraint": true,
+  "initial_inverse_residual": 1.2329900048802658,
+  "final_inverse_residual": 0.0685619032611834,
+  "inverse_trace": [
+    1.2329900048802658,
+    0.8897411243457659,
+    0.12274902820307461,
+    0.09784498343551001,
+    0.09774844364347429,
+    0.08778890017178564,
+    0.07855760812769913,
+    0.07599254149987408
+  ],
+  "target_receiver_rate": [
+    6722289.18572855,
+    2798231.395866394
+  ],
+  "old_receiver_rate": [
+    1006528.0182671547,
+    319411.82865428925
+  ],
+  "following_layer_correction_relative_to_rest_contrast": 0.0012582344838382288,
+  "correction_relative_to_original_slow_motion": 7.213883161851468,
+  "backward_DEL_defect": 7.69000362644965e-08,
+  "backward_trace": [
+    115.07138149073369,
+    46.60671212483185,
+    0.022317149114627025,
+    7.690024337555576e-08
+  ],
+  "native_initial_pair": {
+    "global_charge_relative_defect": [
+      2.4538620105250315e-09,
+      -1.6798606196972282e-05
+    ],
+    "receiver_inflow_rate": [
+      7256803.702850819,
+      2708183.3290348053
+    ],
+    "interval_energy_relative_to_rest": 1.0037231915593396
+  },
+  "native_steps": [
+    {
+      "step": 0,
+      "global_charge_relative_defect": [
+        2.451625438696911e-09,
+        -1.6798558420571324e-05
+      ],
+      "receiver_inflow_rate": [
+        6722253.777593613,
+        2606662.4385561943
+      ],
+      "interval_energy_relative_to_rest": 1.0037233113766177,
+      "exact_full_DEL_defect": 7.69000362644965e-08
+    }
+  ],
+  "claim_boundary": "Inverse prepared midpoint current from native action. Only initial data are changed. Three unrestricted updates do not certify a complete crossing.",
+  "output_state_sha256": "787a94857eb968df9f5cacf0604f1ae9c00691be9121b746de4f034c75d15a25"
+}

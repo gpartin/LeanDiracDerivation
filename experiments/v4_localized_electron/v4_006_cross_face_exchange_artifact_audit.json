@@ -1,0 +1,78 @@
+{
+  "status": "RESEARCH_EVIDENCE_INTEGRITY_PASS__NOT_MOVEMENT_PASS",
+  "action_sha256": "8868f69e48f8759ef58ca34a871069acfd61947b67143a36fd7366205919c4d3",
+  "rest_cache_sha256": "6cbdb7af4853b703d96f2634cbab8e7ae8ee7d22e828c5bccfa42de6e22dedb3",
+  "sources": {
+    "v4_006_oriented_phase_exchange.py": "61014ea83778bf746c907a925785e48b0b7b91b5c14bb3d418baef0525346558",
+    "v4_006_parallel_face_charge_completion.py": "4383aa34c029ea79e4f044869b35cb6821a2d808ea27b9731fcf991eb0906b6d",
+    "v4_006_phase_sum_difference.py": "b1dcfd1e1a251c4b0b531c50e95a348120bab67b68e9d5feb937c053fbdb04b7",
+    "v4_006_current_inverse_launch.py": "1bfe7239148f53761c8a87ee0d93631b6d24f5367835f0a632bdbb8f8b99bfff",
+    "v4_006_inverse_launch_current_decay.py": "20c7eee76f133b4b3b9089d9f7eb0569070238ad24fa853892be1371b7417aec"
+  },
+  "state_artifacts": {
+    "99f29a63aa124bf85b7e53f9637fe9cd19f70024d403d9e09777bbe74947375d": "v4_006_antiphase_handoff.npz",
+    "f1725953a1bf03854e76ec3ef58a33f1591da0877f19016efd4f97a7d0396583": "v4_006_antiphase_phase_balanced_handoff.npz",
+    "ebb5ac6699bfdd865706f1b761db439db4a85060f0ee776b4d1c4f4196a2fee8": "v4_006_face_capacity_matched_speed.npz",
+    "99e7e559cccd093dbc6af03bcb088fa6449417576d406f86bb9c1e48beffbec4": "v4_006_current_inverse_launch.npz",
+    "787a94857eb968df9f5cacf0604f1ae9c00691be9121b746de4f034c75d15a25": "v4_006_current_inverse_launch_energy.npz"
+  },
+  "reports": {
+    "v4_006_oriented_phase_exchange_antiphase.json": {
+      "sha256": "6bebf7676fde427c3ee835e27edb45afcfec128bfee1cfa214e0f282ed46a674",
+      "source": "v4_006_oriented_phase_exchange.py",
+      "status": "V4_006_ORIENTED_NATIVE_PHASE_EXCHANGE_DIAGNOSTIC"
+    },
+    "v4_006_oriented_phase_exchange_matched.json": {
+      "sha256": "7491fcf2be42350eef8172a24ecddbf293319d47762d1051ae9cd7e6b01a339a",
+      "source": "v4_006_oriented_phase_exchange.py",
+      "status": "V4_006_ORIENTED_NATIVE_PHASE_EXCHANGE_DIAGNOSTIC"
+    },
+    "v4_006_oriented_phase_exchange_balanced.json": {
+      "sha256": "59c6e176e28bf2725c953b9b0fc5bc75b90bd5d7ace05f56aac7378a5264a7a6",
+      "source": "v4_006_oriented_phase_exchange.py",
+      "status": "V4_006_ORIENTED_NATIVE_PHASE_EXCHANGE_DIAGNOSTIC"
+    },
+    "v4_006_parallel_face_charge_completion.json": {
+      "sha256": "6e0843152d256e2b5e7e022ea638f29c84a6a44c2973e8c484346e238f09ff76",
+      "source": "v4_006_parallel_face_charge_completion.py",
+      "status": "V4_006_EQUAL_NATIVE_PARALLEL_FACE_COMPLETION_NOT_ADMITTED"
+    },
+    "v4_006_phase_sum_difference.json": {
+      "sha256": "ab7521a6bb69fb0a969251de1ba3d1bc9fa343df01189f23735d7f6c4a10ef79",
+      "source": "v4_006_phase_sum_difference.py",
+      "status": "V4_006_NATIVE_PHASE_SUM_DIFFERENCE_TERM_DECOMPOSITION"
+    },
+    "v4_006_current_inverse_launch.json": {
+      "sha256": "796612bfcccf17a8961b888e452b5f57f7871351e3793b1cfcff0b84d0eec9c0",
+      "source": "v4_006_current_inverse_launch.py",
+      "status": "V4_006_TWO_CHARGE_CURRENT_INVERSE_LAUNCH_SCREEN"
+    },
+    "v4_006_current_inverse_launch_energy.json": {
+      "sha256": "2c4fe61b12e7d5df581bcf12406b6ef5c92194a208cf1d50a5993ec36e47a27d",
+      "source": "v4_006_current_inverse_launch.py",
+      "status": "V4_006_TWO_CHARGE_CURRENT_INVERSE_LAUNCH_SCREEN"
+    },
+    "v4_006_inverse_launch_current_decay.json": {
+      "sha256": "2a3c1c3765e825b4f7a13e70bc384570dc621e1a5f837eef7ed7acf3733f5e43",
+      "source": "v4_006_inverse_launch_current_decay.py",
+      "status": "V4_006_CURRENT_DECAY_CHANNEL_DECOMPOSITION"
+    }
+  },
+  "stage_status": {
+    "V4-001": "PASS",
+    "V4-002": "PASS",
+    "V4-003": "PASS",
+    "V4-004": "PASS",
+    "V4-005": "PASS",
+    "V4-006": "OPEN",
+    "V4-007": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-008": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-009": "NOT_STARTED__BLOCKED_BY_V4_006",
+    "V4-010": "NOT_STARTED__BLOCKED_BY_V4_006"
+  },
+  "research_lean_source": {
+    "path": "LeanDirac/V4/FacePhaseMomentum.lean",
+    "sha256": "933faafd29593b291c08399aab3e63097860ebe247c2685821536042170fd343"
+  },
+  "claim_boundary": "Integrity and scope only; independently compile the Lean research proof and chain."
+}
