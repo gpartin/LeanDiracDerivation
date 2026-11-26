@@ -141,6 +141,24 @@ See [the V3.2 release notes](docs/V32_RELEASE_NOTES.md),
 [hostile audit](docs/V32_RED_TEAM.md), and
 [dependency matrix](docs/V32_DEPENDENCY_MATRIX.md).
 
+## Prior work and attribution
+
+The oriented-cube construction belongs to the established
+Dirac--Kähler/discrete-differential-form lineage. Appendix A of F. L.
+Teixeira’s 2013 review was the direct design clue for looking for a Clifford
+algebra in oriented cube incidence rather than inserting standard Dirac
+matrices. Foundational and contextual sources include Dirac; Iwanenko and
+Landau; Kähler; Becher and Joos; Rabin; Nielsen and Ninomiya; Noether;
+Clifford; Fierz and Pauli; Wigner; Lubański; and Schrödinger.
+The Lean 4 and mathlib projects are also credited as the formal-verification
+infrastructure on which the checked artifact depends.
+
+The exact attribution, DOI links, and boundary between this prior art and the
+repository’s claimed contribution are recorded in
+[docs/V32_RELATED_WORK.md](docs/V32_RELATED_WORK.md). Citation metadata for the
+software artifact and the same reference set is in
+[CITATION.cff](CITATION.cff).
+
 ## Reproduce
 
 Install Lean through `elan`, then run:
