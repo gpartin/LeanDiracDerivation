@@ -29,3 +29,5 @@ jobs:
         run: python scripts/verify_v32_research.py
       - name: Verify V3.3 free-spinor observable closure
         run: python scripts/verify_v33_research.py
+      - name: Verify V3.5 covariant-observable closure
+        run: python scripts/verify_v35_research.py

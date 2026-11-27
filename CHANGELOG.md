@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.5.0-research
+
+- Closed the antiparticle spin-sum/projector/negative-pole relation.
+- Proved two-sided inverses for arbitrary words generated from the existing
+  cubical finite rotations and boosts.
+- Proved exact finite boost, rotation, and arbitrary generated-word covariance
+  of the free momentum-space Dirac residual and its solution space.
+- Added the five standard bilinear classes and a machine-checked
+  sixteen-channel Fierz completeness identity.
+- Derived the Fierz `1/4` and tensor `1/2` normalizations from channel and
+  ordered-pair counts rather than inserting them in the completeness target.
+- Proved the arbitrary-momentum Pauli--Lubanski invariant, the on-shell
+  spin-one-half value, and agreement with positive-norm V3.4 helicity.
+- Added strict cumulative verification, two hostile reviews, and explicit
+  claim boundaries. No action, governing equation, field, coefficient,
+  physical scale, or measured electron input changed.
+
 ## 2.0.0-research
 
 - Replaced the mixed V1/V2 checkout with one V2-only production tree.
