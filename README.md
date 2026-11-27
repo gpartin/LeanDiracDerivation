@@ -1,4 +1,4 @@
-# Lean LFM-to-Dirac Derivation V3.4
+# Lean LFM-to-Dirac Derivation V3.5
 
 [![Lean proof](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml/badge.svg)](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml)
 
@@ -13,6 +13,9 @@ and free-resolvent closure without changing those dynamics. V3.4 closes the
 covariant free-spinor package with native-derived on-shell spinors, exact
 covariant spin sums, arbitrary-momentum helicity projectors, the non-forward
 Gordon identity, and a projector/residue decomposition of the free resolvent.
+V3.5 completes the negative-branch residue relation, finite generated
+Lorentz covariance, the sixteen-channel bilinear/Fierz package, and the
+arbitrary-momentum Pauli--Lubanski spin invariant.
 
 The default import is unambiguous:
 
@@ -25,6 +28,7 @@ import LeanDirac
 #check LeanDirac.v32_two_copy_rest_sector
 #check LeanDirac.v33_complete_free_spinor
 #check LeanDirac.v34_complete_covariant_free_spinor
+#check LeanDirac.v35_complete_covariant_observables
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -187,6 +191,39 @@ quantization, packet transport, a MeV calibration, or an exact finite-spacing
 Dirac root. See the [V3.4 plan](docs/V34_COVARIANT_FREE_SPINOR_CLOSURE_PLAN.md)
 and [stage status](docs/V34_STAGE_STATUS.md).
 
+## V3.5 covariant-observable closure
+
+V3.5 continues from the unchanged V3.4 certificate. Its eight-stage chain:
+
+- connects the antiparticle spin sum to the negative-energy projector and
+  negative propagator pole;
+- builds finite transformation words only from the existing cubical rotors
+  and boosts and proves exact composition and inverse laws;
+- proves finite rotation/boost covariance of the free Dirac residual and
+  covariance under arbitrary words generated from those transformations;
+- derives gamma-five from the cubical gamma operators and defines the standard
+  scalar,
+  pseudoscalar, vector, axial-vector, and tensor bilinears;
+- proves the sixteen-channel Fierz completeness identity in the same cubical
+  representation;
+- evaluates the Pauli--Lubanski square at arbitrary momentum, obtains
+  `-3 m^2 / 4` on shell, and identifies V3.4 helicity with its normalized time
+  component.
+
+The cumulative theorem is
+`LeanDirac.v35_complete_covariant_observables`. The transformation result is
+an exact free momentum-space theorem; it is not finite-packet transport or a
+nonlinear substrate evolution result. V3.5 still does not prove a localized
+or interacting electron, electromagnetic coupling, physical charge, `g = 2`,
+fermionic quantization/statistics, or an MeV calibration. See the
+[V3.5 plan](docs/V35_COVARIANT_OBSERVABLE_CLOSURE_PLAN.md) and
+[stage status](docs/V35_STAGE_STATUS.md).
+
+The finite covariance theorem is for the free Dirac residual and its solution
+space. The bilinear branch proves the five standard definitions, their
+Clifford relations, and Fierz completeness; it does not separately prove the
+finite transformation law of every individual bilinear.
+
 See [the V3.3 plan](docs/V33_FREE_SPINOR_OBSERVABLE_CLOSURE_PLAN.md),
 [dependency matrix](docs/V33_DEPENDENCY_MATRIX.md), and
 [release notes](docs/V33_RELEASE_NOTES.md).
@@ -217,11 +254,12 @@ Install Lean through `elan`, then run:
 lake build LeanDirac LeanDiracAudit
 python scripts/verify_release.py
 python scripts/verify_v32_research.py
+python scripts/verify_v35_research.py
 ```
 
-The verifier compiles the complete dependency closure, checks the sealed
-sources, rejects `sorry` and custom axioms, and admits only `propext`,
-`Classical.choice`, and `Quot.sound`.
+The V3.5 verifier compiles the complete dependency closure, reruns the
+V3.2--V3.4 suites, checks the stage sources, rejects `sorry` and custom axioms,
+and admits only `propext`, `Classical.choice`, and `Quot.sound`.
 
 See [the proof chain](docs/PROOF_CHAIN.md), [claims](docs/CLAIMS.md), and
 [reproducibility instructions](docs/REPRODUCIBILITY.md).

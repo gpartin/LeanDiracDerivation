@@ -119,13 +119,15 @@ def main() -> None:
         is_cumulative_extension_module = (
             (normalized.startswith("LeanDirac/V32") or
              normalized.startswith("LeanDirac/V33") or
-             normalized.startswith("LeanDirac/V34"))
+             normalized.startswith("LeanDirac/V34") or
+             normalized.startswith("LeanDirac/V35"))
             and normalized.endswith(".lean")
         )
         is_cumulative_extension_doc = (
             normalized.startswith("docs/V32") or
             normalized.startswith("docs/V33") or
-            normalized.startswith("docs/V34")
+            normalized.startswith("docs/V34") or
+            normalized.startswith("docs/V35")
         )
         is_namespace_only_change = exact_namespace_migration(proof, normalized)
         if (
