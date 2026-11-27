@@ -1,3 +1,7 @@
+import LeanDirac.V34SpinorSectorBasis
+import LeanDirac.V34CovariantSpinSums
+import LeanDirac.V34MomentumHelicity
+import LeanDirac.V34NonforwardGordon
 import LeanDirac.V34PropagatorResidues
 
 /-!
@@ -11,7 +15,6 @@ scope remains the free linearized sector of the declared LFM action.
 namespace LeanDirac
 
 structure V34CompleteCovariantFreeSpinorCertificate : Prop where
-  priorFreeFermion : V32CompleteFreeFermionCertificate
   priorFreeSpinor : V33CompleteFreeSpinorCertificate
   covariantSpinors : V34CovariantSpinorCertificate
   sectorBasis : V34SpinorSectorBasisCertificate
@@ -22,7 +25,6 @@ structure V34CompleteCovariantFreeSpinorCertificate : Prop where
 
 theorem v34_complete_covariant_free_spinor :
     V34CompleteCovariantFreeSpinorCertificate where
-  priorFreeFermion := v32_complete_free_fermion
   priorFreeSpinor := v33_complete_free_spinor
   covariantSpinors := v34_covariant_spinors
   sectorBasis := v34_spinor_sector_basis

@@ -24,3 +24,10 @@ New machine-checked results:
 V3.4 remains a free linearized result. It does not prove an interacting or
 localized electron, electromagnetic emergence, form factors, `g = 2`, charge
 quantization, transport, or conversion of native mass `19` into MeV.
+
+Post-implementation organization cleanup strengthened the cumulative
+certificate to expose the unique two-plus-two decomposition, both branch
+Gram relations, and the native-to-native Gordon theorem. It also replaced the
+artificial serial import chain with the actual dependency graph, reused the
+existing covariant gamma definitions, factored shared spin-sum normalization,
+and removed superseded helpers. No scientific claim or equation changed.

@@ -98,6 +98,12 @@ Documentation must distinguish scientific handoffs from release wrappers.
 V3.4 does not add separate framework-lock, scope-audit, or packet-benchmark
 modules whose only purpose is to repackage an existing certificate.
 
+The modules follow the mathematical dependency graph rather than stage-number
+order. Independent helicity, Gordon, and propagator branches import their
+actual prerequisites directly, and the cumulative module assembles them
+explicitly. Stage certificates must expose their strongest advertised result;
+an unbundled theorem does not by itself satisfy a cumulative release claim.
+
 ## Verification and hostile review
 
 After all seven modules compile, `scripts/verify_v34_research.py` must build

@@ -1,5 +1,6 @@
 import LeanDirac.V33CompleteFreeSpinor
 import LeanDirac.CanonicalSpectralReadout
+import LeanDirac.CovariantFreeDirac
 
 /-!
 # V3.4 Stage 1: covariant operators and native-derived spinors
@@ -33,10 +34,10 @@ def v34CovariantMomentum
 
 def v34Gamma (mu : Fin 4) (z : CubicalCell4) : CubicalCell4 :=
   match mu with
-  | 0 => cubicalStandardBeta z
-  | 1 => cubicalStandardBeta (cubicalStandardAlphaX z)
-  | 2 => cubicalStandardBeta (cubicalStandardAlphaY z)
-  | _ => cubicalStandardBeta (cubicalStandardAlphaZ z)
+  | 0 => cubicalGammaTime z
+  | 1 => cubicalGammaSpace 0 z
+  | 2 => cubicalGammaSpace 1 z
+  | _ => cubicalGammaSpace 2 z
 
 def v34MomentumSlash
     (energy px py pz : ℝ) (z : CubicalCell4) : CubicalCell4 :=
@@ -98,7 +99,8 @@ theorem v34_dirac_residual_is_hamiltonian_residual
   funext component
   fin_cases component <;>
     simp [v34DiracResidual, v34MomentumSlash, v34CovariantMomentum,
-      v34Gamma, cubicalStandardHamiltonian, cubicalStandardSpatial,
+      v34Gamma, cubicalGammaTime, cubicalGammaSpace, cubicalAlpha,
+      cubicalStandardHamiltonian, cubicalStandardSpatial,
       cubicalStandardBeta, cubicalStandardAlphaX,
       cubicalStandardAlphaY, cubicalStandardAlphaZ,
       Fin.sum_univ_four] <;> ring
@@ -116,19 +118,6 @@ theorem v34_positive_spinor_covariant_equation
     mass energy px py pz hdenom hshell (v34TwoChannelBasis spin)]
   funext component
   fin_cases component <;> simp [cubicalStandardBeta]
-
-theorem v34_negative_branch_is_energy_eigenstate
-    (mass energy px py pz : ℝ)
-    (hdenom : energy + mass ≠ 0)
-    (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2)
-    (spin : Fin 2) :
-    cubicalStandardHamiltonian (mass : ℂ)
-        (px : ℂ) (py : ℂ) (pz : ℂ)
-        (v34NegativeBranchSpinor mass energy px py pz spin) =
-      fun component => -(energy : ℂ) *
-        v34NegativeBranchSpinor mass energy px py pz spin component := by
-  exact normalized_negative_frequency_is_energy_eigenstate
-    mass energy px py pz hdenom hshell (v34TwoChannelBasis spin)
 
 theorem v34_antiparticle_spinor_covariant_equation
     (mass energy px py pz : ℝ)
@@ -153,7 +142,8 @@ theorem v34_antiparticle_spinor_covariant_equation
     have hcomponent := congrFun hnegative' component
     fin_cases component <;>
       simp [v34AntiparticleResidual, v34MomentumSlash,
-        v34CovariantMomentum, v34Gamma,
+        v34CovariantMomentum, v34Gamma, cubicalGammaTime,
+        cubicalGammaSpace, cubicalAlpha,
         cubicalStandardHamiltonian, cubicalStandardSpatial,
         cubicalStandardBeta, cubicalStandardAlphaX,
         cubicalStandardAlphaY, cubicalStandardAlphaZ,
@@ -165,7 +155,6 @@ theorem v34_antiparticle_spinor_covariant_equation
     simpa [cubicalStandardBeta, z] using hcomponent
 
 structure V34CovariantSpinorCertificate : Prop where
-  prior : V33CompleteFreeSpinorCertificate
   positiveEquation : ∀ mass energy px py pz,
     energy + mass ≠ 0 →
     energy^2 = mass^2 + px^2 + py^2 + pz^2 → ∀ spin,
@@ -178,7 +167,6 @@ structure V34CovariantSpinorCertificate : Prop where
           (v34AntiparticleSpinor mass energy px py pz spin) = 0
 
 theorem v34_covariant_spinors : V34CovariantSpinorCertificate where
-  prior := v33_complete_free_spinor
   positiveEquation := v34_positive_spinor_covariant_equation
   negativeEquation := v34_antiparticle_spinor_covariant_equation
 

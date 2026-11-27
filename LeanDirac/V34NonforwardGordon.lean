@@ -1,4 +1,4 @@
-import LeanDirac.V34MomentumHelicity
+import LeanDirac.V34CovariantSpinors
 
 /-!
 # V3.4 Stage 5: non-forward Gordon identity
@@ -51,6 +51,7 @@ theorem v34_nonforward_clifford_identity
   fin_cases mu <;> fin_cases component <;>
     simp [v34MomentumSlash, v34ContravariantMomentum,
       v34CovariantMomentum, v34Gamma, v34Sigma,
+      cubicalGammaTime, cubicalGammaSpace, cubicalAlpha,
       cubicalStandardBeta, cubicalStandardAlphaX,
       cubicalStandardAlphaY, cubicalStandardAlphaZ,
       Fin.sum_univ_four] <;>
@@ -78,6 +79,7 @@ theorem v34_bilinear_dirac_residual_is_hamiltonian_residual
           v32ContinuumHamiltonian mass px py pz right component) := by
   simp [v34DiracBilinear, v34DiracAdjointComponent,
     v34MomentumSlash, v34CovariantMomentum, v34Gamma,
+    cubicalGammaTime, cubicalGammaSpace, cubicalAlpha,
     v32ContinuumHamiltonian, cubicalCell4Inner,
     cubicalStandardHamiltonian, cubicalStandardSpatial,
     cubicalStandardBeta, cubicalStandardAlphaX,
@@ -154,7 +156,8 @@ theorem v34_nonforward_gordon_identity
         (mass : ℂ) * v34DiracBilinear left (v34Gamma mu) right := by
     rw [hright]
     fin_cases mu <;>
-      simp [v34DiracBilinear, v34Gamma, cubicalStandardBeta,
+      simp [v34DiracBilinear, v34Gamma, cubicalGammaTime,
+        cubicalGammaSpace, cubicalAlpha, cubicalStandardBeta,
         cubicalStandardAlphaX, cubicalStandardAlphaY,
         cubicalStandardAlphaZ, Fin.sum_univ_four] <;> ring
   have hraw := v34_nonforward_clifford_identity
@@ -190,29 +193,6 @@ theorem v34_nonforward_gordon_identity
     _ = _ := by
       simp [v34DiracBilinear, Fin.sum_univ_four]
       ring
-
-theorem v34_nonforward_gordon_with_native_incoming
-    (mass outEnergy outPx outPy outPz inEnergy inPx inPy inPz : ℝ)
-    (left : CubicalCell4) (spin : Fin 2) (mu : Fin 4)
-    (hleft : v34LeftOnShell mass outEnergy outPx outPy outPz left)
-    (hdenom : inEnergy + mass ≠ 0)
-    (hshell : inEnergy^2 = mass^2 + inPx^2 + inPy^2 + inPz^2) :
-    (2 * mass : ℂ) * v34DiracBilinear left (v34Gamma mu)
-        (v34PositiveSpinor mass inEnergy inPx inPy inPz spin) =
-      ((v34ContravariantMomentum outEnergy outPx outPy outPz mu +
-          v34ContravariantMomentum inEnergy inPx inPy inPz mu : ℝ) : ℂ) *
-        v34DiracBilinear left (fun z => z)
-          (v34PositiveSpinor mass inEnergy inPx inPy inPz spin) +
-      ∑ nu : Fin 4,
-        I * ((v34CovariantMomentum outEnergy outPx outPy outPz nu -
-          v34CovariantMomentum inEnergy inPx inPy inPz nu : ℝ) : ℂ) *
-            v34DiracBilinear left (v34Sigma mu nu)
-              (v34PositiveSpinor mass inEnergy inPx inPy inPz spin) := by
-  exact v34_nonforward_gordon_identity
-    mass outEnergy outPx outPy outPz inEnergy inPx inPy inPz
-    left (v34PositiveSpinor mass inEnergy inPx inPy inPz spin) mu hleft
-    (v34_positive_spinor_right_on_shell
-      mass inEnergy inPx inPy inPz hdenom hshell spin)
 
 theorem v34_nonforward_gordon_for_native_spinors
     (mass outEnergy outPx outPy outPz inEnergy inPx inPy inPz : ℝ)
@@ -280,11 +260,37 @@ structure V34NonforwardGordonCertificate : Prop where
     energy^2 = mass^2 + px^2 + py^2 + pz^2 → ∀ spin,
       v34LeftOnShell mass energy px py pz
         (v34PositiveSpinor mass energy px py pz spin)
+  nativeGordon : ∀ (mass outEnergy outPx outPy outPz
+      inEnergy inPx inPy inPz : ℝ),
+    ∀ (outSpin inSpin : Fin 2) (mu : Fin 4),
+    outEnergy + mass ≠ 0 →
+    outEnergy^2 = mass^2 + outPx^2 + outPy^2 + outPz^2 →
+    inEnergy + mass ≠ 0 →
+    inEnergy^2 = mass^2 + inPx^2 + inPy^2 + inPz^2 →
+    (2 * mass : ℂ) *
+        v34DiracBilinear
+          (v34PositiveSpinor mass outEnergy outPx outPy outPz outSpin)
+          (v34Gamma mu)
+          (v34PositiveSpinor mass inEnergy inPx inPy inPz inSpin) =
+      ((v34ContravariantMomentum outEnergy outPx outPy outPz mu +
+          v34ContravariantMomentum inEnergy inPx inPy inPz mu : ℝ) : ℂ) *
+        v34DiracBilinear
+          (v34PositiveSpinor mass outEnergy outPx outPy outPz outSpin)
+          (fun z => z)
+          (v34PositiveSpinor mass inEnergy inPx inPy inPz inSpin) +
+      ∑ nu : Fin 4,
+        I * ((v34CovariantMomentum outEnergy outPx outPy outPz nu -
+          v34CovariantMomentum inEnergy inPx inPy inPz nu : ℝ) : ℂ) *
+            v34DiracBilinear
+              (v34PositiveSpinor mass outEnergy outPx outPy outPz outSpin)
+              (v34Sigma mu nu)
+              (v34PositiveSpinor mass inEnergy inPx inPy inPz inSpin)
 
 theorem v34_nonforward_gordon : V34NonforwardGordonCertificate where
   clifford := v34_nonforward_clifford_identity
   gordon := v34_nonforward_gordon_identity
   nativeLeftOnShell := v34_positive_spinor_left_on_shell
+  nativeGordon := v34_nonforward_gordon_for_native_spinors
 
 #print axioms v34_nonforward_gordon
 

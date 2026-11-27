@@ -1,6 +1,7 @@
 """Strict local verifier for the V3.4 research branch."""
 
 from pathlib import Path
+import re
 import subprocess
 import sys
 
@@ -16,6 +17,60 @@ STAGES = [
     "V34CompleteCovariantFreeSpinor",
 ]
 
+REQUIRED_DECLARATIONS = {
+    "V34CovariantSpinors": (
+        "v34_positive_spinor_covariant_equation",
+        "v34_antiparticle_spinor_covariant_equation",
+    ),
+    "V34SpinorSectorBasis": (
+        "v34_positive_spinors_energy_orthogonal",
+        "v34_negative_spinors_energy_orthogonal",
+        "v34_every_spinor_has_unique_two_plus_two_coordinates",
+    ),
+    "V34CovariantSpinSums": (
+        "v34_positive_covariant_spin_sum",
+        "v34_antiparticle_covariant_spin_sum",
+    ),
+    "V34MomentumHelicity": (
+        "v34_helicity_projector_is_eigenbranch",
+    ),
+    "V34NonforwardGordon": (
+        "v34_nonforward_gordon_for_native_spinors",
+        "nativeGordon",
+    ),
+    "V34PropagatorResidues": (
+        "v34_resolvent_spectral_decomposition",
+        "v34_positive_spin_sum_is_projector_beta",
+    ),
+    "V34CompleteCovariantFreeSpinor": (
+        "priorFreeSpinor",
+        "sectorBasis",
+        "nonforwardGordon",
+    ),
+}
+
+REQUIRED_IMPORTS = {
+    "V34MomentumHelicity": {"LeanDirac.V34CovariantSpinors"},
+    "V34NonforwardGordon": {"LeanDirac.V34CovariantSpinors"},
+    "V34PropagatorResidues": {
+        "LeanDirac.V34CovariantSpinSums",
+        "LeanDirac.V33FreePropagator",
+    },
+    "V34CompleteCovariantFreeSpinor": {
+        "LeanDirac.V34SpinorSectorBasis",
+        "LeanDirac.V34CovariantSpinSums",
+        "LeanDirac.V34MomentumHelicity",
+        "LeanDirac.V34NonforwardGordon",
+        "LeanDirac.V34PropagatorResidues",
+    },
+}
+
+FORBIDDEN_SERIAL_IMPORTS = {
+    "V34MomentumHelicity": {"LeanDirac.V34CovariantSpinSums"},
+    "V34NonforwardGordon": {"LeanDirac.V34MomentumHelicity"},
+    "V34PropagatorResidues": {"LeanDirac.V34NonforwardGordon"},
+}
+
 
 def fail(message: str) -> None:
     print(f"[FAIL] {message}")
@@ -29,8 +84,22 @@ for name in STAGES:
     source = path.read_text(encoding="utf-8")
     if "sorry" in source or "admit" in source:
         fail(f"unfinished proof marker in {path.name}")
-    if "\naxiom " in source or "\nconstant " in source:
-        fail(f"new axiom or opaque constant declaration in {path.name}")
+    if re.search(r"(?m)^\s*(axiom|constant|opaque)\s+", source):
+        fail(f"new axiom or opaque declaration in {path.name}")
+    for declaration in REQUIRED_DECLARATIONS.get(name, ()):
+        if declaration not in source:
+            fail(f"{path.name} omits required declaration: {declaration}")
+    imports = {
+        line.removeprefix("import ").strip()
+        for line in source.splitlines()
+        if line.startswith("import ")
+    }
+    missing_imports = REQUIRED_IMPORTS.get(name, set()) - imports
+    if missing_imports:
+        fail(f"{path.name} omits direct imports: {sorted(missing_imports)}")
+    serial_imports = FORBIDDEN_SERIAL_IMPORTS.get(name, set()) & imports
+    if serial_imports:
+        fail(f"{path.name} restores artificial serial imports: {sorted(serial_imports)}")
 
 plan = (ROOT / "docs" / "V34_COVARIANT_FREE_SPINOR_CLOSURE_PLAN.md").read_text(
     encoding="utf-8"

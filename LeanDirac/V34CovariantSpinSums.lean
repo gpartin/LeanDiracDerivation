@@ -72,12 +72,31 @@ private theorem v34_ratio_square_momentum_square
   field_simp [hdenom]
   nlinarith
 
-theorem v34_positive_covariant_spin_sum
+private structure V34SpinSumNormalizationFacts
+    (mass energy px py pz : ℝ) : Prop where
+  scaleSq :
+    (positiveFrequencyScale mass energy : ℂ)^2 =
+      ((energy : ℂ) + (mass : ℂ)) / 2
+  scaleRatio :
+    (positiveFrequencyScale mass energy : ℂ) *
+      (positiveFrequencyRatio mass energy : ℂ) = 1 / 2
+  lowerSq :
+    (positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2 +
+        (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 +
+        (positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2 =
+      ((energy : ℂ) - (mass : ℂ)) / 2
+  crossLeft : ∀ z : ℂ,
+    (positiveFrequencyRatio mass energy : ℂ) * z *
+        (positiveFrequencyScale mass energy : ℂ) = z / 2
+  crossRight : ∀ z : ℂ,
+    (positiveFrequencyRatio mass energy : ℂ) *
+        (positiveFrequencyScale mass energy : ℂ) * z = z / 2
+
+private theorem v34_spin_sum_normalization_facts
     (mass energy px py pz : ℝ)
     (hpositive : 0 < energy + mass)
     (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2) :
-    v34PositiveSpinSum mass energy px py pz =
-      v34PositiveCovariantNumerator mass energy px py pz := by
+    V34SpinSumNormalizationFacts mass energy px py pz := by
   have hscale := positive_frequency_scale_square mass energy
     (le_of_lt hpositive)
   have hcross := v34_scale_ratio_half mass energy hpositive
@@ -90,9 +109,7 @@ theorem v34_positive_covariant_spin_sum
       (positiveFrequencyScale mass energy : ℂ) *
         (positiveFrequencyRatio mass energy : ℂ) = (1 / 2 : ℂ) := by
     calc
-      (positiveFrequencyScale mass energy : ℂ) *
-          (positiveFrequencyRatio mass energy : ℂ) =
-        ((positiveFrequencyScale mass energy *
+      _ = ((positiveFrequencyScale mass energy *
           positiveFrequencyRatio mass energy : ℝ) : ℂ) := by push_cast; rfl
       _ = (((1 / 2 : ℝ)) : ℂ) := by rw [hcross]
       _ = (1 / 2 : ℂ) := by norm_num
@@ -107,40 +124,45 @@ theorem v34_positive_covariant_spin_sum
           (positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2 =
         ((energy : ℂ) - (mass : ℂ)) / 2 := by
     linear_combination hlowerC
-  have hcrossLeft (z : ℂ) :
-      (positiveFrequencyRatio mass energy : ℂ) * z *
-          (positiveFrequencyScale mass energy : ℂ) = z / 2 := by
+  refine ⟨hscaleC, hcrossC, hlowerExpanded, ?_, ?_⟩
+  · intro z
     calc
       _ = z * ((positiveFrequencyScale mass energy : ℂ) *
           (positiveFrequencyRatio mass energy : ℂ)) := by ring
-      _ = z * (1 / 2 : ℂ) := by rw [hcrossC]
-      _ = z / 2 := by ring
-  have hcrossRight (z : ℂ) :
-      (positiveFrequencyRatio mass energy : ℂ) *
-          (positiveFrequencyScale mass energy : ℂ) * z = z / 2 := by
+      _ = z / 2 := by rw [hcrossC]; ring
+  · intro z
     calc
       _ = ((positiveFrequencyScale mass energy : ℂ) *
           (positiveFrequencyRatio mass energy : ℂ)) * z := by ring
-      _ = (1 / 2 : ℂ) * z := by rw [hcrossC]
-      _ = z / 2 := by ring
+      _ = z / 2 := by rw [hcrossC]; ring
+
+theorem v34_positive_covariant_spin_sum
+    (mass energy px py pz : ℝ)
+    (hpositive : 0 < energy + mass)
+    (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2) :
+    v34PositiveSpinSum mass energy px py pz =
+      v34PositiveCovariantNumerator mass energy px py pz := by
+  have facts := v34_spin_sum_normalization_facts
+    mass energy px py pz hpositive hshell
   have hlowerNegativeX :
       -((positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2) -
           (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 -
           (positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2 =
         (energy : ℂ) * (-1 / 2) + (mass : ℂ) * (1 / 2) := by
-    linear_combination -hlowerExpanded
+    linear_combination -facts.lowerSq
   have hlowerNegativeZ :
       -((positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2) -
           (positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2 -
           (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 =
         (energy : ℂ) * (-1 / 2) + (mass : ℂ) * (1 / 2) := by
-    linear_combination -hlowerExpanded
+    linear_combination -facts.lowerSq
   funext row column
   fin_cases row <;> fin_cases column <;>
     simp [v34PositiveSpinSum, v34PositiveCovariantNumerator,
       v34CovariantOuterEntry, v34DiracAdjointComponent,
       v34PositiveSpinor, v34TwoChannelBasis, v34OperatorEntry,
       v34MomentumSlash, v34CovariantMomentum, v34Gamma,
+      cubicalGammaTime, cubicalGammaSpace, cubicalAlpha,
       normalizedPositiveFrequencyEmbedding, positivePauliSpatial,
       cubicalStandardBeta, cubicalStandardAlphaX,
       cubicalStandardAlphaY, cubicalStandardAlphaZ,
@@ -148,18 +170,18 @@ theorem v34_positive_covariant_spin_sum
     ring_nf
   all_goals try rw [Complex.I_sq]
   all_goals try ring_nf
-  all_goals try rw [hscaleC]
-  all_goals try rw [hcrossC]
-  all_goals try rw [hcrossLeft]
-  all_goals try rw [hcrossRight]
+  all_goals try rw [facts.scaleSq]
+  all_goals try rw [facts.scaleRatio]
+  all_goals try rw [facts.crossLeft]
+  all_goals try rw [facts.crossRight]
   all_goals try rw [hlowerNegativeX]
   all_goals try rw [hlowerNegativeZ]
   all_goals first
     | assumption
     | rfl
-    | linear_combination hcrossC
-    | linear_combination hlowerExpanded
-    | linear_combination hscaleC
+    | linear_combination facts.scaleRatio
+    | linear_combination facts.lowerSq
+    | linear_combination facts.scaleSq
     | ring
 
 theorem v34_antiparticle_covariant_spin_sum
@@ -168,57 +190,15 @@ theorem v34_antiparticle_covariant_spin_sum
     (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2) :
     v34AntiparticleSpinSum mass energy px py pz =
       v34AntiparticleCovariantNumerator mass energy px py pz := by
-  have hscale := positive_frequency_scale_square mass energy
-    (le_of_lt hpositive)
-  have hcross := v34_scale_ratio_half mass energy hpositive
-  have hlower := v34_ratio_square_momentum_square
+  have facts := v34_spin_sum_normalization_facts
     mass energy px py pz hpositive hshell
-  have hscaleC :
-      (positiveFrequencyScale mass energy : ℂ)^2 =
-        (((energy + mass) / 2 : ℝ) : ℂ) := by exact_mod_cast hscale
-  have hcrossC :
-      (positiveFrequencyScale mass energy : ℂ) *
-        (positiveFrequencyRatio mass energy : ℂ) = (1 / 2 : ℂ) := by
-    calc
-      (positiveFrequencyScale mass energy : ℂ) *
-          (positiveFrequencyRatio mass energy : ℂ) =
-        ((positiveFrequencyScale mass energy *
-          positiveFrequencyRatio mass energy : ℝ) : ℂ) := by push_cast; rfl
-      _ = (((1 / 2 : ℝ)) : ℂ) := by rw [hcross]
-      _ = (1 / 2 : ℂ) := by norm_num
-  have hlowerC :
-      (positiveFrequencyRatio mass energy : ℂ)^2 *
-          ((px : ℂ)^2 + (py : ℂ)^2 + (pz : ℂ)^2) =
-        (((energy - mass) / 2 : ℝ) : ℂ) := by exact_mod_cast hlower
-  push_cast at hscaleC hlowerC
-  have hlowerExpanded :
-      (positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2 +
-          (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 +
-          (positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2 =
-        ((energy : ℂ) - (mass : ℂ)) / 2 := by
-    linear_combination hlowerC
-  have hcrossLeft (z : ℂ) :
-      (positiveFrequencyRatio mass energy : ℂ) * z *
-          (positiveFrequencyScale mass energy : ℂ) = z / 2 := by
-    calc
-      _ = z * ((positiveFrequencyScale mass energy : ℂ) *
-          (positiveFrequencyRatio mass energy : ℂ)) := by ring
-      _ = z * (1 / 2 : ℂ) := by rw [hcrossC]
-      _ = z / 2 := by ring
-  have hcrossRight (z : ℂ) :
-      (positiveFrequencyRatio mass energy : ℂ) *
-          (positiveFrequencyScale mass energy : ℂ) * z = z / 2 := by
-    calc
-      _ = ((positiveFrequencyScale mass energy : ℂ) *
-          (positiveFrequencyRatio mass energy : ℂ)) * z := by ring
-      _ = (1 / 2 : ℂ) * z := by rw [hcrossC]
-      _ = z / 2 := by ring
   funext row column
   fin_cases row <;> fin_cases column <;>
     simp [v34AntiparticleSpinSum, v34AntiparticleCovariantNumerator,
       v34CovariantOuterEntry, v34DiracAdjointComponent,
       v34AntiparticleSpinor, v34TwoChannelBasis, v34OperatorEntry,
       v34MomentumSlash, v34CovariantMomentum, v34Gamma,
+      cubicalGammaTime, cubicalGammaSpace, cubicalAlpha,
       normalizedNegativeFrequencyEmbedding, positivePauliSpatial,
       cubicalStandardBeta, cubicalStandardAlphaX,
       cubicalStandardAlphaY, cubicalStandardAlphaZ,
@@ -226,17 +206,17 @@ theorem v34_antiparticle_covariant_spin_sum
     ring_nf
   all_goals try rw [Complex.I_sq]
   all_goals try ring_nf
-  all_goals try rw [hscaleC]
-  all_goals try rw [hcrossC]
-  all_goals try rw [hcrossLeft]
-  all_goals try rw [hcrossRight]
-  all_goals try rw [hlowerExpanded]
+  all_goals try rw [facts.scaleSq]
+  all_goals try rw [facts.scaleRatio]
+  all_goals try rw [facts.crossLeft]
+  all_goals try rw [facts.crossRight]
+  all_goals try rw [facts.lowerSq]
   all_goals first
     | assumption
     | rfl
-    | linear_combination hcrossC
-    | linear_combination hlowerExpanded
-    | linear_combination hscaleC
+    | linear_combination facts.scaleRatio
+    | linear_combination facts.lowerSq
+    | linear_combination facts.scaleSq
     | ring
 
 structure V34CovariantSpinSumCertificate : Prop where

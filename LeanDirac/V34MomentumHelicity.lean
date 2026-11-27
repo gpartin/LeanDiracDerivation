@@ -1,4 +1,4 @@
-import LeanDirac.V34CovariantSpinSums
+import LeanDirac.V34CovariantSpinors
 
 /-!
 # V3.4 Stage 4: arbitrary-momentum helicity

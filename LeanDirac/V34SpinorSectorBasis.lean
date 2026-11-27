@@ -14,72 +14,6 @@ namespace LeanDirac
 noncomputable section
 open Complex BigOperators
 
-def v34PositiveBranchRead
-    (mass energy : ℝ) (z : CubicalCell4) : UniformCell2
-  | 0 => z 0 / (positiveFrequencyScale mass energy : ℂ)
-  | _ => z 1 / (positiveFrequencyScale mass energy : ℂ)
-
-def v34NegativeBranchRead
-    (mass energy : ℝ) (z : CubicalCell4) : UniformCell2
-  | 0 => z 2 / (positiveFrequencyScale mass energy : ℂ)
-  | _ => z 3 / (positiveFrequencyScale mass energy : ℂ)
-
-theorem v34_positive_frequency_scale_ne_zero
-    (mass energy : ℝ) (hpositive : 0 < energy + mass) :
-    positiveFrequencyScale mass energy ≠ 0 := by
-  have hsquare := positive_frequency_scale_square mass energy
-    (le_of_lt hpositive)
-  intro hzero
-  rw [hzero] at hsquare
-  norm_num at hsquare
-  nlinarith
-
-theorem v34_positive_branch_read_left_inverse
-    (mass energy px py pz : ℝ) (hpositive : 0 < energy + mass)
-    (q : UniformCell2) :
-    v34PositiveBranchRead mass energy
-        (normalizedPositiveFrequencyEmbedding mass energy px py pz q) = q := by
-  have hscale := v34_positive_frequency_scale_ne_zero mass energy hpositive
-  funext component
-  fin_cases component <;>
-    simp [v34PositiveBranchRead, normalizedPositiveFrequencyEmbedding,
-      hscale]
-
-theorem v34_negative_branch_read_left_inverse
-    (mass energy px py pz : ℝ) (hpositive : 0 < energy + mass)
-    (q : UniformCell2) :
-    v34NegativeBranchRead mass energy
-        (normalizedNegativeFrequencyEmbedding mass energy px py pz q) = q := by
-  have hscale := v34_positive_frequency_scale_ne_zero mass energy hpositive
-  funext component
-  fin_cases component <;>
-    simp [v34NegativeBranchRead, normalizedNegativeFrequencyEmbedding,
-      hscale]
-
-theorem v34_positive_embedding_injective
-    (mass energy px py pz : ℝ) (hpositive : 0 < energy + mass) :
-    Function.Injective
-      (normalizedPositiveFrequencyEmbedding mass energy px py pz) := by
-  intro first second heq
-  have := congrArg (v34PositiveBranchRead mass energy) heq
-  simpa [v34_positive_branch_read_left_inverse mass energy px py pz
-    hpositive] using this
-
-theorem v34_negative_embedding_injective
-    (mass energy px py pz : ℝ) (hpositive : 0 < energy + mass) :
-    Function.Injective
-      (normalizedNegativeFrequencyEmbedding mass energy px py pz) := by
-  intro first second heq
-  have := congrArg (v34NegativeBranchRead mass energy) heq
-  simpa [v34_negative_branch_read_left_inverse mass energy px py pz
-    hpositive] using this
-
-theorem v34_two_channel_basis_resolves (q : UniformCell2) :
-    (fun component =>
-      ∑ spin : Fin 2, q spin * v34TwoChannelBasis spin component) = q := by
-  funext component
-  fin_cases component <;> simp [v34TwoChannelBasis]
-
 theorem v34_positive_spinors_span_branch
     (mass energy px py pz : ℝ) (q : UniformCell2) :
     (fun component =>
@@ -112,7 +46,7 @@ theorem v34_positive_negative_inner_orthogonal
       normalizedNegativeFrequencyEmbedding, positivePauliSpatial,
       Fin.sum_univ_four, Complex.mul_re, Complex.mul_im] <;> ring
 
-theorem v34_positive_spinor_orthonormal
+theorem v34_positive_spinors_energy_orthogonal
     (mass energy px py pz : ℝ)
     (hpositive : 0 < energy + mass)
     (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2)
@@ -138,7 +72,7 @@ theorem v34_positive_spinor_orthonormal
     ring_nf
     linear_combination hcoeffC
 
-theorem v34_negative_spinor_orthonormal
+theorem v34_negative_spinors_energy_orthogonal
     (mass energy px py pz : ℝ)
     (hpositive : 0 < energy + mass)
     (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2)
@@ -210,14 +144,6 @@ theorem v34_every_spinor_has_unique_two_plus_two_coordinates
         _ = negative := rfl
 
 structure V34SpinorSectorBasisCertificate : Prop where
-  positiveInjective : ∀ mass energy px py pz,
-    0 < energy + mass →
-      Function.Injective
-        (normalizedPositiveFrequencyEmbedding mass energy px py pz)
-  negativeInjective : ∀ mass energy px py pz,
-    0 < energy + mass →
-      Function.Injective
-        (normalizedNegativeFrequencyEmbedding mass energy px py pz)
   positiveSpan : ∀ mass energy px py pz q,
     (fun component =>
       ∑ spin : Fin 2, q spin *
@@ -232,13 +158,37 @@ structure V34SpinorSectorBasisCertificate : Prop where
     cubicalCell4Inner
         (normalizedPositiveFrequencyEmbedding mass energy px py pz positive)
         (normalizedNegativeFrequencyEmbedding mass energy px py pz negative) = 0
+  positiveGram : ∀ mass energy px py pz,
+    0 < energy + mass →
+    energy^2 = mass^2 + px^2 + py^2 + pz^2 → ∀ first second,
+      cubicalCell4Inner
+          (v34PositiveSpinor mass energy px py pz first)
+          (v34PositiveSpinor mass energy px py pz second) =
+        if first = second then (energy : ℂ) else 0
+  negativeGram : ∀ mass energy px py pz,
+    0 < energy + mass →
+    energy^2 = mass^2 + px^2 + py^2 + pz^2 → ∀ first second,
+      cubicalCell4Inner
+          (v34NegativeBranchSpinor mass energy px py pz first)
+          (v34NegativeBranchSpinor mass energy px py pz second) =
+        if first = second then (energy : ℂ) else 0
+  uniqueCoordinates : ∀ mass energy px py pz,
+    energy ≠ 0 → 0 < energy + mass →
+    energy^2 = mass^2 + px^2 + py^2 + pz^2 → ∀ z,
+      ∃! coordinates : UniformCell2 × UniformCell2,
+        (fun component =>
+          normalizedPositiveFrequencyEmbedding mass energy px py pz
+              coordinates.1 component +
+            normalizedNegativeFrequencyEmbedding mass energy px py pz
+              coordinates.2 component) = z
 
 theorem v34_spinor_sector_basis : V34SpinorSectorBasisCertificate where
-  positiveInjective := v34_positive_embedding_injective
-  negativeInjective := v34_negative_embedding_injective
   positiveSpan := v34_positive_spinors_span_branch
   negativeSpan := v34_negative_spinors_span_branch
   branchOrthogonal := v34_positive_negative_inner_orthogonal
+  positiveGram := v34_positive_spinors_energy_orthogonal
+  negativeGram := v34_negative_spinors_energy_orthogonal
+  uniqueCoordinates := v34_every_spinor_has_unique_two_plus_two_coordinates
 
 #print axioms v34_spinor_sector_basis
 

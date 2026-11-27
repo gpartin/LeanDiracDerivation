@@ -17,3 +17,15 @@
 
 All hypotheses are algebraic domain conditions. No measured electron value,
 physical-unit anchor, standard spinor, or independent Dirac matrix is used.
+
+## Module dependency shape
+
+- `V34CovariantSpinors` is the common covariant base.
+- `V34SpinorSectorBasis` and `V34MomentumHelicity` depend on that base.
+- `V34CovariantSpinSums` depends on the sector basis.
+- `V34NonforwardGordon` depends directly on the covariant base.
+- `V34PropagatorResidues` depends on the covariant spin sums and the prior
+  V3.3 propagator.
+- `V34CompleteCovariantFreeSpinor` explicitly assembles every branch.
+
+Imports do not impose a scientific ordering between independent branches.

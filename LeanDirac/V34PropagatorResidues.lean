@@ -1,4 +1,5 @@
-import LeanDirac.V34NonforwardGordon
+import LeanDirac.V34CovariantSpinSums
+import LeanDirac.V33FreePropagator
 
 /-!
 # V3.4 Stage 6: propagator poles, projectors, and spin sums
@@ -50,40 +51,23 @@ theorem v34_resolvent_spectral_decomposition
   field_simp [henergy, hplus, hminus, hquad]
   ring
 
-def v34PositivePoleNumerator
+abbrev v34PositivePoleNumerator
     (mass px py pz energy : ℝ) (z : CubicalCell4) : CubicalCell4 :=
-  fun component =>
-    ((energy : ℂ) * z component +
-      v32ContinuumHamiltonian mass px py pz z component) /
-        (2 * energy : ℂ)
+  v32PositiveProjector mass px py pz energy z
 
-def v34NegativePoleNumerator
+abbrev v34NegativePoleNumerator
     (mass px py pz energy : ℝ) (z : CubicalCell4) : CubicalCell4 :=
-  fun component =>
-    ((energy : ℂ) * z component -
-      v32ContinuumHamiltonian mass px py pz z component) /
-        (2 * energy : ℂ)
+  v32NegativeProjector mass px py pz energy z
 
 theorem v34_positive_pole_is_projector
-    (mass px py pz energy : ℝ) (henergy : energy ≠ 0)
-    (z : CubicalCell4) :
+    (mass px py pz energy : ℝ) (z : CubicalCell4) :
     v34PositivePoleNumerator mass px py pz energy z =
-      v32PositiveProjector mass px py pz energy z := by
-  funext component
-  simp [v34PositivePoleNumerator, v32PositiveProjector,
-    v32SpectralProjector]
-  field_simp [henergy]
+      v32PositiveProjector mass px py pz energy z := rfl
 
 theorem v34_negative_pole_is_projector
-    (mass px py pz energy : ℝ) (henergy : energy ≠ 0)
-    (z : CubicalCell4) :
+    (mass px py pz energy : ℝ) (z : CubicalCell4) :
     v34NegativePoleNumerator mass px py pz energy z =
-      v32NegativeProjector mass px py pz energy z := by
-  funext component
-  simp [v34NegativePoleNumerator, v32NegativeProjector,
-    v32SpectralProjector]
-  field_simp [henergy]
-  ring
+      v32NegativeProjector mass px py pz energy z := rfl
 
 theorem v34_positive_spin_sum_is_projector_beta
     (mass energy px py pz : ℝ) (henergy : energy ≠ 0) :
@@ -96,6 +80,7 @@ theorem v34_positive_spin_sum_is_projector_beta
   fin_cases row <;> fin_cases column <;>
     simp [v34PositiveCovariantNumerator, v34OperatorEntry,
       v34MomentumSlash, v34CovariantMomentum, v34Gamma,
+      cubicalGammaTime, cubicalGammaSpace, cubicalAlpha,
       v32PositiveProjector, v32SpectralProjector,
       v32ContinuumHamiltonian, cubicalStandardHamiltonian,
       cubicalStandardSpatial, cubicalStandardBeta,
@@ -114,11 +99,11 @@ structure V34PropagatorResidueCertificate : Prop where
           (px : ℂ) (py : ℂ) (pz : ℂ) z =
         v34SpectralResolvent spectralEnergy mass px py pz energy z
   positivePole : ∀ (mass px py pz energy : ℝ),
-    energy ≠ 0 → ∀ z,
+    ∀ z,
       v34PositivePoleNumerator mass px py pz energy z =
         v32PositiveProjector mass px py pz energy z
   negativePole : ∀ (mass px py pz energy : ℝ),
-    energy ≠ 0 → ∀ z,
+    ∀ z,
       v34NegativePoleNumerator mass px py pz energy z =
         v32NegativeProjector mass px py pz energy z
   spinSumProjector : ∀ (mass energy px py pz : ℝ),
