@@ -106,6 +106,7 @@ def main() -> None:
         "LeanDirac.lean",
         "LeanDiracAudit.lean",
         "README.md",
+        "docs/CLAIMS.md",
         "docs/REPRODUCIBILITY.md",
         "experiments/v3_lorentz_spin/AxiomAudit.lean",
         "experiments/v3_lorentz_spin/artifact_audit.json",
@@ -117,12 +118,14 @@ def main() -> None:
         normalized = name.replace("\\", "/")
         is_cumulative_extension_module = (
             (normalized.startswith("LeanDirac/V32") or
-             normalized.startswith("LeanDirac/V33"))
+             normalized.startswith("LeanDirac/V33") or
+             normalized.startswith("LeanDirac/V34"))
             and normalized.endswith(".lean")
         )
         is_cumulative_extension_doc = (
             normalized.startswith("docs/V32") or
-            normalized.startswith("docs/V33")
+            normalized.startswith("docs/V33") or
+            normalized.startswith("docs/V34")
         )
         is_namespace_only_change = exact_namespace_migration(proof, normalized)
         if (
