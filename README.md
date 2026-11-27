@@ -1,4 +1,4 @@
-# Lean LFM-to-Dirac Derivation V3.3
+# Lean LFM-to-Dirac Derivation V3.4
 
 [![Lean proof](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml/badge.svg)](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml)
 
@@ -9,7 +9,10 @@ representation carried by both exhaustive cubical copies. V3.2 adds the
 free-fermion spectral, rest-sector, symmetry, continuum-error, and transport
 closure while preserving the same action and governing equations. V3.3 adds
 free-spinor basis, bilinear-observable, axis-aligned helicity, forward Gordon,
-and free-resolvent closure without changing those dynamics.
+and free-resolvent closure without changing those dynamics. V3.4 closes the
+covariant free-spinor package with native-derived on-shell spinors, exact
+covariant spin sums, arbitrary-momentum helicity projectors, the non-forward
+Gordon identity, and a projector/residue decomposition of the free resolvent.
 
 The default import is unambiguous:
 
@@ -21,6 +24,7 @@ import LeanDirac
 #check LeanDirac.v32_complete_free_fermion
 #check LeanDirac.v32_two_copy_rest_sector
 #check LeanDirac.v33_complete_free_spinor
+#check LeanDirac.v34_complete_covariant_free_spinor
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -157,6 +161,31 @@ The cumulative theorem is `LeanDirac.v33_complete_free_spinor`. The Gordon
 result is not the non-forward electromagnetic vertex; the propagator is not
 interacting; and V3.3 does not claim `g = 2`, charge quantization, localization,
 transport, a physical electron, or a MeV calibration.
+
+## V3.4 covariant free-spinor closure
+
+V3.4 changes no action, equation, coefficient, C19 geometry, vacuum, readout,
+or scale. Its cumulative theorem is
+`LeanDirac.v34_complete_covariant_free_spinor`. The seven-stage chain proves:
+
+- positive- and negative-energy covariant branch spinors derived from the
+  existing native frequency embeddings;
+- exact two-channel injectivity, branch resolution, and orthogonality;
+- covariant particle and antiparticle spin sums with the repository's stated
+  normalization;
+- arbitrary nonzero-momentum helicity whose square is `1/4`, together with
+  complete idempotent helicity projectors;
+- the unequal-momentum Gordon identity from the derived gamma algebra and
+  explicit on-shell conditions;
+- spectral decomposition of the free resolvent into the existing V3.2 energy
+  projectors, identification of both pole numerators, and agreement of the
+  positive spin sum with the positive projector after beta conversion.
+
+This is still a covariant free linearized theorem. It does not prove an
+interacting or localized electron, electromagnetic emergence, `g = 2`, charge
+quantization, packet transport, a MeV calibration, or an exact finite-spacing
+Dirac root. See the [V3.4 plan](docs/V34_COVARIANT_FREE_SPINOR_CLOSURE_PLAN.md)
+and [stage status](docs/V34_STAGE_STATUS.md).
 
 See [the V3.3 plan](docs/V33_FREE_SPINOR_OBSERVABLE_CLOSURE_PLAN.md),
 [dependency matrix](docs/V33_DEPENDENCY_MATRIX.md), and

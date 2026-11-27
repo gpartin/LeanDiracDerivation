@@ -1,4 +1,4 @@
-import LeanDirac.V33CompleteFreeSpinor
+import LeanDirac.V34CompleteCovariantFreeSpinor
 
 /-!
 Production facade for the first-principles free linearized Dirac derivation,

@@ -1,0 +1,261 @@
+import LeanDirac.V34SpinorSectorBasis
+
+/-!
+# V3.4 Stage 3: covariant spin sums
+
+The sums are built from the two native-channel branch bases.  With the
+repository normalization `u^dagger u = energy` and `ubar u = mass`, the
+standard covariant numerators carry a factor of one half.
+-/
+
+namespace LeanDirac
+
+noncomputable section
+open Complex BigOperators
+
+def v34OperatorEntry
+    (operator : CubicalCell4 → CubicalCell4)
+    (row column : Fin 4) : ℂ :=
+  operator (standardCell4Basis column) row
+
+def v34CovariantOuterEntry
+    (left right : CubicalCell4) (row column : Fin 4) : ℂ :=
+  left row * v34DiracAdjointComponent right column
+
+def v34PositiveSpinSum
+    (mass energy px py pz : ℝ) (row column : Fin 4) : ℂ :=
+  ∑ spin : Fin 2,
+    v34CovariantOuterEntry
+      (v34PositiveSpinor mass energy px py pz spin)
+      (v34PositiveSpinor mass energy px py pz spin) row column
+
+def v34AntiparticleSpinSum
+    (mass energy px py pz : ℝ) (row column : Fin 4) : ℂ :=
+  ∑ spin : Fin 2,
+    v34CovariantOuterEntry
+      (v34AntiparticleSpinor mass energy px py pz spin)
+      (v34AntiparticleSpinor mass energy px py pz spin) row column
+
+def v34PositiveCovariantNumerator
+    (mass energy px py pz : ℝ) (row column : Fin 4) : ℂ :=
+  (1 / 2 : ℂ) *
+    (v34OperatorEntry (v34MomentumSlash energy px py pz) row column +
+      (mass : ℂ) * standardCell4Basis column row)
+
+def v34AntiparticleCovariantNumerator
+    (mass energy px py pz : ℝ) (row column : Fin 4) : ℂ :=
+  (1 / 2 : ℂ) *
+    (v34OperatorEntry (v34MomentumSlash energy px py pz) row column -
+      (mass : ℂ) * standardCell4Basis column row)
+
+private theorem v34_scale_ratio_half
+    (mass energy : ℝ) (hpositive : 0 < energy + mass) :
+    positiveFrequencyScale mass energy *
+        positiveFrequencyRatio mass energy = 1 / 2 := by
+  have hdenom : energy + mass ≠ 0 := ne_of_gt hpositive
+  have hscale := positive_frequency_scale_square mass energy
+    (le_of_lt hpositive)
+  rw [positiveFrequencyRatio]
+  field_simp [hdenom]
+  nlinarith
+
+private theorem v34_ratio_square_momentum_square
+    (mass energy px py pz : ℝ)
+    (hpositive : 0 < energy + mass)
+    (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2) :
+    positiveFrequencyRatio mass energy ^ 2 *
+        (px^2 + py^2 + pz^2) = (energy - mass) / 2 := by
+  have hdenom : energy + mass ≠ 0 := ne_of_gt hpositive
+  have hscale := positive_frequency_scale_square mass energy
+    (le_of_lt hpositive)
+  rw [positiveFrequencyRatio]
+  field_simp [hdenom]
+  nlinarith
+
+theorem v34_positive_covariant_spin_sum
+    (mass energy px py pz : ℝ)
+    (hpositive : 0 < energy + mass)
+    (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2) :
+    v34PositiveSpinSum mass energy px py pz =
+      v34PositiveCovariantNumerator mass energy px py pz := by
+  have hscale := positive_frequency_scale_square mass energy
+    (le_of_lt hpositive)
+  have hcross := v34_scale_ratio_half mass energy hpositive
+  have hlower := v34_ratio_square_momentum_square
+    mass energy px py pz hpositive hshell
+  have hscaleC :
+      (positiveFrequencyScale mass energy : ℂ)^2 =
+        (((energy + mass) / 2 : ℝ) : ℂ) := by exact_mod_cast hscale
+  have hcrossC :
+      (positiveFrequencyScale mass energy : ℂ) *
+        (positiveFrequencyRatio mass energy : ℂ) = (1 / 2 : ℂ) := by
+    calc
+      (positiveFrequencyScale mass energy : ℂ) *
+          (positiveFrequencyRatio mass energy : ℂ) =
+        ((positiveFrequencyScale mass energy *
+          positiveFrequencyRatio mass energy : ℝ) : ℂ) := by push_cast; rfl
+      _ = (((1 / 2 : ℝ)) : ℂ) := by rw [hcross]
+      _ = (1 / 2 : ℂ) := by norm_num
+  have hlowerC :
+      (positiveFrequencyRatio mass energy : ℂ)^2 *
+          ((px : ℂ)^2 + (py : ℂ)^2 + (pz : ℂ)^2) =
+        (((energy - mass) / 2 : ℝ) : ℂ) := by exact_mod_cast hlower
+  push_cast at hscaleC hlowerC
+  have hlowerExpanded :
+      (positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2 +
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 +
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2 =
+        ((energy : ℂ) - (mass : ℂ)) / 2 := by
+    linear_combination hlowerC
+  have hcrossLeft (z : ℂ) :
+      (positiveFrequencyRatio mass energy : ℂ) * z *
+          (positiveFrequencyScale mass energy : ℂ) = z / 2 := by
+    calc
+      _ = z * ((positiveFrequencyScale mass energy : ℂ) *
+          (positiveFrequencyRatio mass energy : ℂ)) := by ring
+      _ = z * (1 / 2 : ℂ) := by rw [hcrossC]
+      _ = z / 2 := by ring
+  have hcrossRight (z : ℂ) :
+      (positiveFrequencyRatio mass energy : ℂ) *
+          (positiveFrequencyScale mass energy : ℂ) * z = z / 2 := by
+    calc
+      _ = ((positiveFrequencyScale mass energy : ℂ) *
+          (positiveFrequencyRatio mass energy : ℂ)) * z := by ring
+      _ = (1 / 2 : ℂ) * z := by rw [hcrossC]
+      _ = z / 2 := by ring
+  have hlowerNegativeX :
+      -((positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2) -
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 -
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2 =
+        (energy : ℂ) * (-1 / 2) + (mass : ℂ) * (1 / 2) := by
+    linear_combination -hlowerExpanded
+  have hlowerNegativeZ :
+      -((positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2) -
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2 -
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 =
+        (energy : ℂ) * (-1 / 2) + (mass : ℂ) * (1 / 2) := by
+    linear_combination -hlowerExpanded
+  funext row column
+  fin_cases row <;> fin_cases column <;>
+    simp [v34PositiveSpinSum, v34PositiveCovariantNumerator,
+      v34CovariantOuterEntry, v34DiracAdjointComponent,
+      v34PositiveSpinor, v34TwoChannelBasis, v34OperatorEntry,
+      v34MomentumSlash, v34CovariantMomentum, v34Gamma,
+      normalizedPositiveFrequencyEmbedding, positivePauliSpatial,
+      cubicalStandardBeta, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ,
+      standardCell4Basis, Fin.sum_univ_four] <;>
+    ring_nf
+  all_goals try rw [Complex.I_sq]
+  all_goals try ring_nf
+  all_goals try rw [hscaleC]
+  all_goals try rw [hcrossC]
+  all_goals try rw [hcrossLeft]
+  all_goals try rw [hcrossRight]
+  all_goals try rw [hlowerNegativeX]
+  all_goals try rw [hlowerNegativeZ]
+  all_goals first
+    | assumption
+    | rfl
+    | linear_combination hcrossC
+    | linear_combination hlowerExpanded
+    | linear_combination hscaleC
+    | ring
+
+theorem v34_antiparticle_covariant_spin_sum
+    (mass energy px py pz : ℝ)
+    (hpositive : 0 < energy + mass)
+    (hshell : energy^2 = mass^2 + px^2 + py^2 + pz^2) :
+    v34AntiparticleSpinSum mass energy px py pz =
+      v34AntiparticleCovariantNumerator mass energy px py pz := by
+  have hscale := positive_frequency_scale_square mass energy
+    (le_of_lt hpositive)
+  have hcross := v34_scale_ratio_half mass energy hpositive
+  have hlower := v34_ratio_square_momentum_square
+    mass energy px py pz hpositive hshell
+  have hscaleC :
+      (positiveFrequencyScale mass energy : ℂ)^2 =
+        (((energy + mass) / 2 : ℝ) : ℂ) := by exact_mod_cast hscale
+  have hcrossC :
+      (positiveFrequencyScale mass energy : ℂ) *
+        (positiveFrequencyRatio mass energy : ℂ) = (1 / 2 : ℂ) := by
+    calc
+      (positiveFrequencyScale mass energy : ℂ) *
+          (positiveFrequencyRatio mass energy : ℂ) =
+        ((positiveFrequencyScale mass energy *
+          positiveFrequencyRatio mass energy : ℝ) : ℂ) := by push_cast; rfl
+      _ = (((1 / 2 : ℝ)) : ℂ) := by rw [hcross]
+      _ = (1 / 2 : ℂ) := by norm_num
+  have hlowerC :
+      (positiveFrequencyRatio mass energy : ℂ)^2 *
+          ((px : ℂ)^2 + (py : ℂ)^2 + (pz : ℂ)^2) =
+        (((energy - mass) / 2 : ℝ) : ℂ) := by exact_mod_cast hlower
+  push_cast at hscaleC hlowerC
+  have hlowerExpanded :
+      (positiveFrequencyRatio mass energy : ℂ)^2 * (px : ℂ)^2 +
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (py : ℂ)^2 +
+          (positiveFrequencyRatio mass energy : ℂ)^2 * (pz : ℂ)^2 =
+        ((energy : ℂ) - (mass : ℂ)) / 2 := by
+    linear_combination hlowerC
+  have hcrossLeft (z : ℂ) :
+      (positiveFrequencyRatio mass energy : ℂ) * z *
+          (positiveFrequencyScale mass energy : ℂ) = z / 2 := by
+    calc
+      _ = z * ((positiveFrequencyScale mass energy : ℂ) *
+          (positiveFrequencyRatio mass energy : ℂ)) := by ring
+      _ = z * (1 / 2 : ℂ) := by rw [hcrossC]
+      _ = z / 2 := by ring
+  have hcrossRight (z : ℂ) :
+      (positiveFrequencyRatio mass energy : ℂ) *
+          (positiveFrequencyScale mass energy : ℂ) * z = z / 2 := by
+    calc
+      _ = ((positiveFrequencyScale mass energy : ℂ) *
+          (positiveFrequencyRatio mass energy : ℂ)) * z := by ring
+      _ = (1 / 2 : ℂ) * z := by rw [hcrossC]
+      _ = z / 2 := by ring
+  funext row column
+  fin_cases row <;> fin_cases column <;>
+    simp [v34AntiparticleSpinSum, v34AntiparticleCovariantNumerator,
+      v34CovariantOuterEntry, v34DiracAdjointComponent,
+      v34AntiparticleSpinor, v34TwoChannelBasis, v34OperatorEntry,
+      v34MomentumSlash, v34CovariantMomentum, v34Gamma,
+      normalizedNegativeFrequencyEmbedding, positivePauliSpatial,
+      cubicalStandardBeta, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ,
+      standardCell4Basis, Fin.sum_univ_four] <;>
+    ring_nf
+  all_goals try rw [Complex.I_sq]
+  all_goals try ring_nf
+  all_goals try rw [hscaleC]
+  all_goals try rw [hcrossC]
+  all_goals try rw [hcrossLeft]
+  all_goals try rw [hcrossRight]
+  all_goals try rw [hlowerExpanded]
+  all_goals first
+    | assumption
+    | rfl
+    | linear_combination hcrossC
+    | linear_combination hlowerExpanded
+    | linear_combination hscaleC
+    | ring
+
+structure V34CovariantSpinSumCertificate : Prop where
+  positive : ∀ mass energy px py pz,
+    0 < energy + mass →
+    energy^2 = mass^2 + px^2 + py^2 + pz^2 →
+      v34PositiveSpinSum mass energy px py pz =
+        v34PositiveCovariantNumerator mass energy px py pz
+  antiparticle : ∀ mass energy px py pz,
+    0 < energy + mass →
+    energy^2 = mass^2 + px^2 + py^2 + pz^2 →
+      v34AntiparticleSpinSum mass energy px py pz =
+        v34AntiparticleCovariantNumerator mass energy px py pz
+
+theorem v34_covariant_spin_sums : V34CovariantSpinSumCertificate where
+  positive := v34_positive_covariant_spin_sum
+  antiparticle := v34_antiparticle_covariant_spin_sum
+
+#print axioms v34_covariant_spin_sums
+
+end
+end LeanDirac

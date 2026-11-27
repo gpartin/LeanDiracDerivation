@@ -91,6 +91,8 @@ def framework_lock_audit() -> None:
     forbidden = [
         path for path in changed
         if not Path(path).name.startswith("V32")
+        and not Path(path).name.startswith("V33")
+        and not Path(path).name.startswith("V34")
         and path not in migrated
         and path != "LeanDirac/V2.lean"
     ]
@@ -120,7 +122,8 @@ def release_integration_audit() -> None:
     if "scripts/verify_v32_research.py" not in workflow:
         raise RuntimeError("GitHub CI does not run the V3.2 verifier")
     if ("V32CompleteFreeFermion" not in facade and
-            "V33CompleteFreeSpinor" not in facade):
+            "V33CompleteFreeSpinor" not in facade and
+            "V34CompleteCovariantFreeSpinor" not in facade):
         raise RuntimeError("default LeanDirac facade does not include V3.2 cumulatively")
 
 
