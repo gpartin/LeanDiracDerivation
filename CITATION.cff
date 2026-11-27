@@ -1,40 +1,202 @@
 cff-version: 1.2.0
-message: "If you use this formal research artifact, please cite it using this metadata."
-title: "Lean LFM-to-Dirac Derivation V2"
+message: "If you use this formal research artifact, please cite it using this metadata. See docs/V32_RELATED_WORK.md for the current prior-work attribution."
+title: "Lean LFM-to-Dirac Derivation V3.2"
 type: software
 authors:
   - family-names: "Partin"
-    given-names: "G. D."
-version: "2.0.0-research"
+    given-names: "Greg"
+    orcid: "https://orcid.org/0009-0004-0327-6528"
+version: "3.2.0-research"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
+keywords:
+  - Lean 4
+  - Dirac equation
+  - lattice field theory
+  - Dirac-Kähler
+  - Clifford algebra
+  - formal verification
 abstract: >-
-  A Lean 4 derivation of the complete free linearized Dirac equation from a
-  declared reciprocal complex-Psi/complex-chi C19 lattice action. The formal
-  chain derives the action variation, exact native vacuum, finite-lattice
-  tangent, cubical Clifford root, four-component readout, mass, time and three
-  transport terms, and density/current bridge with controlled lattice and
-  timestep corrections. It contains no external or maintained prepared
-  background and makes no nonlinear localized-electron claim.
+  A Lean 4 derivation of the free linearized Dirac equation and its scoped
+  Lorentz/spin-one-half and free-fermion spectral consequences from a declared
+  reciprocal complex-Psi/complex-chi C19 lattice action. The chain derives the
+  action variation, exact native vacuum, finite-lattice tangent, cubical
+  Kähler-Dirac/Clifford root, four-component readout, mass, time and three
+  transport terms, density/current bridge, spin representation, spectral
+  projectors, discrete symmetries, nonrelativistic limit, and controlled
+  finite-C19 remainders. It does not claim a nonlinear localized electron,
+  electromagnetic coupling, an SI/MeV mass prediction, or exact finite-spacing
+  four-component Dirac factorization.
 references:
   - type: article
     authors:
-      - family-names: "Teixeira"
-        given-names: "F. L."
-    title: "Differential Forms in Lattice Field Theories: An Overview"
-    journal: "International Scholarly Research Notices"
-    year: 2013
-    doi: "10.1155/2013/487270"
+      - family-names: "Dirac"
+        given-names: "P. A. M."
+    title: "The quantum theory of the electron"
+    journal: "Proceedings of the Royal Society of London. Series A"
+    volume: 117
+    issue: 778
+    start: 610
+    end: 624
+    year: 1928
+    doi: "10.1098/rspa.1928.0023"
+  - type: article
+    authors:
+      - family-names: "Iwanenko"
+        given-names: "D."
+      - family-names: "Landau"
+        given-names: "L."
+    title: "Zur Theorie des magnetischen Elektrons. I"
+    journal: "Zeitschrift für Physik"
+    volume: 48
+    start: 340
+    end: 348
+    year: 1928
+    doi: "10.1007/BF01339119"
+  - type: article
+    authors:
+      - family-names: "Kähler"
+        given-names: "Erich"
+    title: "Der innere Differentialkalkül"
+    journal: "Rendiconti di Matematica e delle sue Applicazioni"
+    volume: 21
+    start: 425
+    end: 523
+    year: 1962
   - type: article
     authors:
       - family-names: "Becher"
         given-names: "P."
       - family-names: "Joos"
         given-names: "H."
-    title: "The Dirac-Kahler equation and fermions on the lattice"
-    journal: "Zeitschrift fur Physik C"
+    title: "The Dirac-Kähler equation and fermions on the lattice"
+    journal: "Zeitschrift für Physik C"
     volume: 15
     start: 343
     end: 365
     year: 1982
     doi: "10.1007/BF01614426"
+  - type: article
+    authors:
+      - family-names: "Rabin"
+        given-names: "J. M."
+    title: "Homology theory of lattice fermion doubling"
+    journal: "Nuclear Physics B"
+    volume: 201
+    issue: 2
+    start: 315
+    end: 332
+    year: 1982
+    doi: "10.1016/0550-3213(82)90434-5"
+  - type: article
+    authors:
+      - family-names: "Nielsen"
+        given-names: "H. B."
+      - family-names: "Ninomiya"
+        given-names: "M."
+    title: "A no-go theorem for regularizing chiral fermions"
+    journal: "Physics Letters B"
+    volume: 105
+    issue: "2-3"
+    start: 219
+    end: 223
+    year: 1981
+    doi: "10.1016/0370-2693(81)91026-1"
+  - type: article
+    authors:
+      - family-names: "Teixeira"
+        given-names: "F. L."
+    title: "Differential Forms in Lattice Field Theories: An Overview"
+    journal: "International Scholarly Research Notices"
+    volume: 2013
+    year: 2013
+    doi: "10.1155/2013/487270"
+  - type: article
+    authors:
+      - family-names: "Noether"
+        given-names: "Emmy"
+    title: "Invariante Variationsprobleme"
+    journal: "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse"
+    start: 235
+    end: 257
+    year: 1918
+  - type: article
+    authors:
+      - family-names: "Clifford"
+        given-names: "William Kingdon"
+    title: "Applications of Grassmann's Extensive Algebra"
+    journal: "American Journal of Mathematics"
+    volume: 1
+    issue: 4
+    start: 350
+    end: 358
+    year: 1878
+    doi: "10.2307/2369379"
+  - type: article
+    authors:
+      - family-names: "Fierz"
+        given-names: "M."
+      - family-names: "Pauli"
+        given-names: "Wolfgang"
+    title: "On relativistic wave equations for particles of arbitrary spin in an electromagnetic field"
+    journal: "Proceedings of the Royal Society of London. Series A"
+    volume: 173
+    start: 211
+    end: 232
+    year: 1939
+    doi: "10.1098/rspa.1939.0140"
+  - type: article
+    authors:
+      - family-names: "Lubański"
+        given-names: "J. K."
+    title: "Sur la théorie des particules élémentaires de spin quelconque. I"
+    journal: "Physica"
+    volume: 9
+    issue: 3
+    start: 310
+    end: 324
+    year: 1942
+    doi: "10.1016/S0031-8914(42)90113-7"
+  - type: article
+    authors:
+      - family-names: "Wigner"
+        given-names: "E. P."
+    title: "On Unitary Representations of the Inhomogeneous Lorentz Group"
+    journal: "Annals of Mathematics"
+    volume: 40
+    issue: 1
+    start: 149
+    end: 204
+    year: 1939
+    doi: "10.2307/1968551"
+  - type: article
+    authors:
+      - family-names: "Schrödinger"
+        given-names: "Erwin"
+    title: "Quantisierung als Eigenwertproblem"
+    journal: "Annalen der Physik"
+    volume: 384
+    issue: 4
+    start: 361
+    end: 376
+    year: 1926
+    doi: "10.1002/andp.19263840404"
+  - type: conference-paper
+    authors:
+      - family-names: "de Moura"
+        given-names: "Leonardo"
+      - family-names: "Ullrich"
+        given-names: "Sebastian"
+    title: "The Lean 4 Theorem Prover and Programming Language"
+    collection-title: "Automated Deduction -- CADE 28"
+    start: 625
+    end: 635
+    year: 2021
+    doi: "10.1007/978-3-030-79876-5_37"
+  - type: conference-paper
+    authors:
+      - name: "The mathlib Community"
+    title: "The Lean Mathematical Library"
+    collection-title: "Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs"
+    year: 2020
+    doi: "10.1145/3372885.3373824"

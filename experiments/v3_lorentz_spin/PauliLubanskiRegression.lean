@@ -1,7 +1,7 @@
-import LeanDirac.V2.LorentzSpin
+import LeanDirac.LorentzSpin
 
 open Complex
-open LeanDirac.V2
+open LeanDirac
 
 noncomputable section
 

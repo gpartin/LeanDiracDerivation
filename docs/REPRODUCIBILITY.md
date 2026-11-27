@@ -25,6 +25,14 @@ declaration, runs the historical-sign moving-frame regression, audits compiled
 axiom dependencies, and verifies all release-facing source, documentation,
 audit, and reproduction seals.
 
+The cumulative source tree is flattened under `LeanDirac/`; release-version
+directories are not part of the production API. Because V2 and V3.1 were
+originally published under `LeanDirac/V2` and the `LeanDirac.V2` namespace,
+the verifier also compares every migrated pre-V3.2 module against its sealed
+source after applying only that path/namespace substitution. Any additional
+change to a migrated theorem source fails the seal audit. The original layout
+remains reproducible from the corresponding Git tags.
+
 Expected final markers:
 
 ```text

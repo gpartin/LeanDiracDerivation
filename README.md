@@ -1,19 +1,23 @@
-# Lean LFM-to-Dirac Derivation V3
+# Lean LFM-to-Dirac Derivation V3.2
 
 [![Lean proof](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml/badge.svg)](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml)
 
 This repository contains one cumulative production proof line. V2 derives the
 complete free linearized Dirac equation from the declared two-field C19 lattice
 action. V3 continues from that theorem and derives the Lorentz/spin-one-half
-representation carried by both exhaustive cubical copies.
+representation carried by both exhaustive cubical copies. V3.2 adds the
+free-fermion spectral, rest-sector, symmetry, continuum-error, and transport
+closure while preserving the same action and governing equations.
 
 The default import is unambiguous:
 
 ```lean
 import LeanDirac
 
-#check LeanDirac.V2.complete_first_principles_free_dirac
-#check LeanDirac.V2.lorentz_spin_half_from_native_action
+#check LeanDirac.complete_first_principles_free_dirac
+#check LeanDirac.lorentz_spin_half_from_native_action
+#check LeanDirac.v32_complete_free_fermion
+#check LeanDirac.v32_two_copy_rest_sector
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -45,7 +49,7 @@ action is stated in [docs/FRAMEWORK.md](docs/FRAMEWORK.md).
 ## Result
 
 The cumulative theorem is
-`LeanDirac.V2.complete_first_principles_free_dirac`. Its dependency chain
+`LeanDirac.complete_first_principles_free_dirac`. Its dependency chain
 derives:
 
 - reciprocal native field variation from the action;
@@ -94,7 +98,7 @@ four-vector laws are proved for all axes before obtaining its rest Casimir
 `-3 m^2 / 4`.
 
 The cumulative local theorem is
-`LeanDirac.V2.lorentz_spin_half_from_native_action`.  The exact chain and
+`LeanDirac.lorentz_spin_half_from_native_action`.  The exact chain and
 claim boundary are documented in
 [docs/LORENTZ_SPIN_CHAIN.md](docs/LORENTZ_SPIN_CHAIN.md).
 
@@ -104,6 +108,57 @@ invariance at finite lattice spacing, unrestricted uniqueness of physical
 rotations, a localized nonlinear electron, electromagnetic coupling, or a
 dynamical rule selecting one copy.
 
+## V3.2 free-fermion spectral closure
+
+V3.2 changes no action, governing equation, C19 geometry, vacuum, or V3.1
+readout. Its cumulative theorem is
+`LeanDirac.v32_complete_free_fermion`. The machine-checked chain adds:
+
+- the exact continuum free-Dirac energy branches and spectral projectors;
+- the exact finite-C19 scalar spectrum, global gap, and no-extra-zero audit;
+- a proof that the existing local four-component root is not an exact global
+  finite-spacing factorization, together with the explicit controlled
+  continuum remainder;
+- the two-copy commutant, rest-spin irreducibility, and a combined two-copy
+  rest-sector certificate;
+- represented free-sector C, P, T, and CPT identities;
+- the free Schrodinger limit and its first correction;
+- centered-step and finite spectral-packet transport references for later
+  transport work;
+- native rest mass `19` and rest gap `38`, plus a proof that an absolute MeV
+  conversion cannot be selected without an independent dimensionful anchor;
+- an explicit theorem that the free transverse tangent result is uniform in
+  the arbitrary live-chi kinetic normalization `B`.
+
+The finite-spacing distinction is part of the result: V3.2 proves the exact
+C19 second-order spectrum, but does not relabel the continuum cubical root as
+an exact finite-C19 local Dirac operator. It also does not claim a nonlinear
+localized electron, electromagnetic coupling, `g = 2`, a MeV prediction, or
+V4 transport closure.
+
+See [the V3.2 release notes](docs/V32_RELEASE_NOTES.md),
+[stage status](docs/V32_STAGE_STATUS.md),
+[hostile audit](docs/V32_RED_TEAM.md), and
+[dependency matrix](docs/V32_DEPENDENCY_MATRIX.md).
+
+## Prior work and attribution
+
+The oriented-cube construction belongs to the established
+Dirac--Kähler/discrete-differential-form lineage. Appendix A of F. L.
+Teixeira’s 2013 review was the direct design clue for looking for a Clifford
+algebra in oriented cube incidence rather than inserting standard Dirac
+matrices. Foundational and contextual sources include Dirac; Iwanenko and
+Landau; Kähler; Becher and Joos; Rabin; Nielsen and Ninomiya; Noether;
+Clifford; Fierz and Pauli; Wigner; Lubański; and Schrödinger.
+The Lean 4 and mathlib projects are also credited as the formal-verification
+infrastructure on which the checked artifact depends.
+
+The exact attribution, DOI links, and boundary between this prior art and the
+repository’s claimed contribution are recorded in
+[docs/V32_RELATED_WORK.md](docs/V32_RELATED_WORK.md). Citation metadata for the
+software artifact and the same reference set is in
+[CITATION.cff](CITATION.cff).
+
 ## Reproduce
 
 Install Lean through `elan`, then run:
@@ -111,6 +166,7 @@ Install Lean through `elan`, then run:
 ```bash
 lake build LeanDirac LeanDiracAudit
 python scripts/verify_release.py
+python scripts/verify_v32_research.py
 ```
 
 The verifier compiles the complete dependency closure, checks the sealed

@@ -28,6 +28,54 @@ def run(command: list[str]) -> str:
     return output
 
 
+def git_text(commit: str, path: str) -> str:
+    return run(["git", "show", f"{commit}:{path}"]).replace("\r\n", "\n")
+
+
+def normalized_namespace(text: str) -> str:
+    return text.replace("LeanDirac/V2", "LeanDirac").replace(
+        "LeanDirac.V2", "LeanDirac"
+    )
+
+
+def exact_namespace_migration(proof: str, path: str) -> bool:
+    destination = ROOT / path
+    if not destination.is_file():
+        return False
+    try:
+        old = git_text(proof, path)
+    except SystemExit:
+        return False
+    current = destination.read_text(encoding="utf-8").replace("\r\n", "\n")
+    return normalized_namespace(old) == current
+
+
+def migrated_module_paths(proof: str) -> set[str]:
+    listing = run([
+        "git", "ls-tree", "-r", "--name-only", proof, "LeanDirac/V2"
+    ]).splitlines()
+    migrated: set[str] = set()
+    failures: list[str] = []
+    for old_path in listing:
+        if old_path == "LeanDirac/V2.lean" or not old_path.endswith(".lean"):
+            continue
+        new_path = "LeanDirac/" + Path(old_path).name
+        migrated.add(new_path)
+        destination = ROOT / new_path
+        if not destination.is_file():
+            failures.append(f"missing migrated module: {new_path}")
+            continue
+        expected = normalized_namespace(git_text(proof, old_path))
+        current = destination.read_text(encoding="utf-8").replace("\r\n", "\n")
+        if expected != current:
+            failures.append(f"non-mechanical source change: {new_path}")
+    if failures:
+        raise SystemExit("V3.1 namespace migration audit failed:\n" + "\n".join(failures))
+    if (ROOT / "LeanDirac" / "V2").exists():
+        raise SystemExit("obsolete LeanDirac/V2 production directory still exists")
+    return migrated
+
+
 def main() -> None:
     summary = json.loads((HERE / "summary.json").read_text(encoding="utf-8"))
     audit = json.loads((HERE / "artifact_audit.json").read_text(encoding="utf-8"))
@@ -46,17 +94,47 @@ def main() -> None:
     proof = audit["proof_source_commit"]
     run(["git", "cat-file", "-e", f"{proof}^{{commit}}"])
     run(["git", "merge-base", "--is-ancestor", proof, "HEAD"])
-    run([
-        "git", "diff", "--quiet", proof, "HEAD", "--",
+    migrated_modules = migrated_module_paths(proof)
+    changed = run([
+        "git", "diff", "--name-only", proof, "HEAD", "--",
         "LeanDirac", "LeanDirac.lean", "LeanDiracAudit.lean",
         "README.md", "docs", "lean-toolchain", "lake-manifest.json",
         "lakefile.toml", "scripts/verify_release.py",
-        "experiments/v3_lorentz_spin/REPORT.md",
-        "experiments/v3_lorentz_spin/RCA.md",
+        "experiments/v3_lorentz_spin",
+    ]).splitlines()
+    allowed_extensions = {
+        "LeanDirac.lean",
+        "LeanDiracAudit.lean",
+        "README.md",
+        "docs/REPRODUCIBILITY.md",
         "experiments/v3_lorentz_spin/AxiomAudit.lean",
-        "experiments/v3_lorentz_spin/PauliLubanskiRegression.lean",
+        "experiments/v3_lorentz_spin/artifact_audit.json",
+        "experiments/v3_lorentz_spin/summary.json",
         "experiments/v3_lorentz_spin/verify.py",
-    ])
+    }
+    forbidden_changes = []
+    for name in changed:
+        normalized = name.replace("\\", "/")
+        is_v32_module = (
+            normalized.startswith("LeanDirac/V32")
+            and normalized.endswith(".lean")
+        )
+        is_v32_doc = normalized.startswith("docs/V32")
+        is_namespace_only_change = exact_namespace_migration(proof, normalized)
+        if (
+            normalized not in allowed_extensions
+            and not is_v32_module
+            and not is_v32_doc
+            and normalized not in migrated_modules
+            and normalized != "LeanDirac/V2.lean"
+            and not is_namespace_only_change
+        ):
+            forbidden_changes.append(normalized)
+    if forbidden_changes:
+        raise SystemExit(
+            "sealed V3.1 source changed outside the V3.2 extension boundary:\n"
+            + "\n".join(forbidden_changes)
+        )
 
     build = run(["lake", "build", *audit["lean_targets"]])
     if "Build completed successfully" not in build:

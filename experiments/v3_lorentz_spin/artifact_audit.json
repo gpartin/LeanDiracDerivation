@@ -15,25 +15,25 @@
   "lean_targets": ["LeanDirac", "LeanDiracAudit"],
   "allowed_axioms": ["propext", "Classical.choice", "Quot.sound"],
   "axiom_theorems": [
-    "LeanDirac.V2.complete_first_principles_free_dirac",
-    "LeanDirac.V2.standard_cubical_continuous_turn_add",
-    "LeanDirac.V2.oriented_dirac_symbol_rotation_covariant",
-    "LeanDirac.V2.oriented_dirac_symbol_boost_covariant",
-    "LeanDirac.V2.exists_unique_cubical_operational_rotation_scale",
-    "LeanDirac.V2.native_cubical_spin_is_operational_rotation",
-    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_time",
-    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_space",
-    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_time",
-    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_space",
-    "LeanDirac.V2.cubical_pauli_lubanski_orthogonal",
-    "LeanDirac.V2.rest_pauli_lubanski_spin_half",
-    "LeanDirac.V2.lorentz_spin_half_from_native_action"
+    "LeanDirac.complete_first_principles_free_dirac",
+    "LeanDirac.standard_cubical_continuous_turn_add",
+    "LeanDirac.oriented_dirac_symbol_rotation_covariant",
+    "LeanDirac.oriented_dirac_symbol_boost_covariant",
+    "LeanDirac.exists_unique_cubical_operational_rotation_scale",
+    "LeanDirac.native_cubical_spin_is_operational_rotation",
+    "LeanDirac.cubical_pauli_lubanski_boost_covariant_time",
+    "LeanDirac.cubical_pauli_lubanski_boost_covariant_space",
+    "LeanDirac.cubical_pauli_lubanski_rotation_covariant_time",
+    "LeanDirac.cubical_pauli_lubanski_rotation_covariant_space",
+    "LeanDirac.cubical_pauli_lubanski_orthogonal",
+    "LeanDirac.rest_pauli_lubanski_spin_half",
+    "LeanDirac.lorentz_spin_half_from_native_action"
   ],
   "regression_axiom_theorems": [
     "historical_plus_sign_fails_four_vector_law",
-    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_time",
-    "LeanDirac.V2.cubical_pauli_lubanski_boost_covariant_space",
-    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_time",
-    "LeanDirac.V2.cubical_pauli_lubanski_rotation_covariant_space"
+    "LeanDirac.cubical_pauli_lubanski_boost_covariant_time",
+    "LeanDirac.cubical_pauli_lubanski_boost_covariant_space",
+    "LeanDirac.cubical_pauli_lubanski_rotation_covariant_time",
+    "LeanDirac.cubical_pauli_lubanski_rotation_covariant_space"
   ]
 }
