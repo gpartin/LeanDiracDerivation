@@ -11,3 +11,12 @@
   axiom audit, sealed reproduction artifact, and concise documentation.
 - Derived the complete free linearized Dirac equation without an external,
   prepared, period-two, maintained, or Dirac-shaped background.
+# V3.3 research branch
+
+- Added cumulative free-spinor basis and outer-product completeness.
+- Added on-shell positive/negative projected states and spectral resolution.
+- Added normalized scalar, density, and current bilinears.
+- Added axis-aligned moving helicity states and forward Gordon relations.
+- Added the two-sided free resolvent away from the mass-shell pole.
+- Added strict verification and two hostile red-team records.
+

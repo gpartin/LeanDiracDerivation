@@ -27,3 +27,5 @@ jobs:
         run: python scripts/verify_release.py
       - name: Verify V3.2 Route-1 closure
         run: python scripts/verify_v32_research.py
+      - name: Verify V3.3 free-spinor observable closure
+        run: python scripts/verify_v33_research.py

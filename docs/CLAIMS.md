@@ -43,6 +43,16 @@ The Pauli--Lubanski construction obeys its infinitesimal boost and rotation
 four-vector laws for all axes; an explicit regression proves that the
 historical opposite cross-product sign fails in a moving frame.
 
+In V3.4, the same unchanged free chain constructs positive- and
+negative-frequency covariant spinors from the native two-channel embeddings,
+proves that each branch has exactly two independent amplitudes, and derives
+their covariant spin sums. It extends the axis-only helicity result to every
+nonzero momentum direction, proves the unequal-momentum Gordon identity from
+the derived Clifford algebra under explicit on-shell hypotheses, and
+decomposes the free resolvent into the already-proved spectral projectors.
+The algebraic pole numerators and the covariant spin sum identify those same
+positive/negative free sectors.
+
 ## Not claimed
 
 - a derivation of the native action itself;
@@ -59,7 +69,10 @@ historical opposite cross-product sign fails in a moving frame.
 - unrestricted uniqueness of physical spatial rotations outside the explicit
   local plane-bivector comparison class;
 - a nonlinear localized carrier realizing operational Stern--Gerlach spin;
-- electromagnetic coupling, a magnetic moment, or a `g`-factor calculation.
+- electromagnetic coupling, a magnetic moment, or a `g`-factor calculation;
+- an interacting electromagnetic vertex or form factors (the V3.4 Gordon
+  identity is a free on-shell algebraic identity);
+- a claim that the free propagator poles are interacting particles.
 
 Those are separate questions and are not premises of the free-equation
 derivation.
