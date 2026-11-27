@@ -32,6 +32,23 @@ theorem v32_projectors_complete
   simp [v32PositiveProjector, v32NegativeProjector, v32SpectralProjector]
   ring
 
+private theorem v32_hamiltonian_of_spectral_projector
+    (sign mass px py pz energy : ℝ) (z : CubicalCell4) :
+    v32ContinuumHamiltonian mass px py pz
+        (v32SpectralProjector sign mass px py pz energy z) =
+      fun component =>
+        (1 / 2 : ℂ) *
+          (v32ContinuumHamiltonian mass px py pz z component +
+            (sign / energy : ℝ) *
+              v32ContinuumHamiltonian mass px py pz
+                (v32ContinuumHamiltonian mass px py pz z) component) := by
+  funext component
+  fin_cases component <;>
+    simp [v32SpectralProjector, v32ContinuumHamiltonian,
+      cubicalStandardHamiltonian, cubicalStandardSpatial,
+      cubicalStandardBeta, cubicalStandardAlphaX,
+      cubicalStandardAlphaY, cubicalStandardAlphaZ] <;> ring
+
 theorem v32_spectral_projector_idempotent
     (sign mass px py pz energy : ℝ)
     (hsign : sign^2 = 1)
@@ -43,19 +60,9 @@ theorem v32_spectral_projector_idempotent
   have hsq := v32_continuum_hamiltonian_square mass px py pz z
   funext component
   have hsqc := congrFun hsq component
-  have hlinear :
-      v32ContinuumHamiltonian mass px py pz
-          (v32SpectralProjector sign mass px py pz energy z) component =
-        (1 / 2 : ℂ) *
-          (v32ContinuumHamiltonian mass px py pz z component +
-            (sign / energy : ℝ) *
-              v32ContinuumHamiltonian mass px py pz
-                (v32ContinuumHamiltonian mass px py pz z) component) := by
-    fin_cases component <;>
-      simp [v32SpectralProjector, v32ContinuumHamiltonian,
-        cubicalStandardHamiltonian, cubicalStandardSpatial,
-        cubicalStandardBeta, cubicalStandardAlphaX,
-        cubicalStandardAlphaY, cubicalStandardAlphaZ] <;> ring
+  have hlinear := congrFun
+    (v32_hamiltonian_of_spectral_projector
+      sign mass px py pz energy z) component
   simp only [v32SpectralProjector]
   rw [hlinear, hsqc]
   have hsignC : (sign : ℂ)^2 = 1 := by exact_mod_cast hsign
@@ -107,12 +114,12 @@ theorem v32_projectors_orthogonal
             (1 / energy : ℝ) *
               v32ContinuumHamiltonian mass px py pz
                 (v32ContinuumHamiltonian mass px py pz z) component) := by
-    fin_cases component <;>
-      simp [v32NegativeProjector, v32SpectralProjector,
-        v32ContinuumHamiltonian, cubicalStandardHamiltonian,
-        cubicalStandardSpatial, cubicalStandardBeta,
-        cubicalStandardAlphaX, cubicalStandardAlphaY,
-        cubicalStandardAlphaZ] <;> ring
+    change v32ContinuumHamiltonian mass px py pz
+        (v32SpectralProjector (-1) mass px py pz energy z) component = _
+    rw [congrFun (v32_hamiltonian_of_spectral_projector
+      (-1) mass px py pz energy z) component]
+    push_cast
+    ring
   simp only [v32PositiveProjector, v32NegativeProjector,
     v32SpectralProjector]
   have hlinear' := hlinear
@@ -145,19 +152,9 @@ theorem v32_spectral_projector_is_eigenbranch
   have hsq := v32_continuum_hamiltonian_square mass px py pz z
   funext component
   have hsqc := congrFun hsq component
-  have hlinear :
-      v32ContinuumHamiltonian mass px py pz
-          (v32SpectralProjector sign mass px py pz energy z) component =
-        (1 / 2 : ℂ) *
-          (v32ContinuumHamiltonian mass px py pz z component +
-            (sign / energy : ℝ) *
-              v32ContinuumHamiltonian mass px py pz
-                (v32ContinuumHamiltonian mass px py pz z) component) := by
-    fin_cases component <;>
-      simp [v32SpectralProjector, v32ContinuumHamiltonian,
-        cubicalStandardHamiltonian, cubicalStandardSpatial,
-        cubicalStandardBeta, cubicalStandardAlphaX,
-        cubicalStandardAlphaY, cubicalStandardAlphaZ] <;> ring
+  have hlinear := congrFun
+    (v32_hamiltonian_of_spectral_projector
+      sign mass px py pz energy z) component
   rw [hlinear, hsqc]
   simp only [v32SpectralProjector]
   have hsignC : (sign : ℂ)^2 = 1 := by exact_mod_cast hsign

@@ -29,23 +29,35 @@ here were written for this specific C19 action and checked independently.
 
 ## Dirac and differential-form fermion lineage
 
+This bibliography uses English-language originals, verified English
+translations, or English-language modern treatments for every source relied on
+substantively. Kähler's original German paper remains explicitly credited as
+the primary historical source, but it is marked as not directly consulted
+because this project did not verify an English edition. Its role in the
+lineage is documented through the English treatments by Teixeira and by
+Becher--Joos below. The Iwanenko--Landau paper is handled through those same
+English treatments rather than presented as a directly read source.
+
 - P. A. M. Dirac, “The quantum theory of the electron,” *Proceedings of the
   Royal Society A* **117**(778), 610–624 (1928).
   [DOI 10.1098/rspa.1928.0023](https://doi.org/10.1098/rspa.1928.0023).
-- D. Iwanenko and L. Landau, “Zur Theorie des magnetischen Elektrons. I,”
-  *Zeitschrift für Physik* **48**, 340–348 (1928).
-  [DOI 10.1007/BF01339119](https://doi.org/10.1007/BF01339119).
 - E. Kähler, “Der innere Differentialkalkül,” *Rendiconti di Matematica e
-  delle sue Applicazioni* **21**, 425–523 (1962).
+  delle sue Applicazioni* **21**, 425–523 (1962). Original German primary
+  source; bibliographically credited, not directly consulted here.
+- J. G. Vargas, “The Foundations of Quantum Mechanics and the Evolution of
+  the Cartan-Kähler Calculus,” *Foundations of Physics* **38**(7), 610–647
+  (2008). This peer-reviewed English treatment states that Kähler's work had
+  not been translated and gives an English account of the calculus.
+  [DOI 10.1007/s10701-008-9223-3](https://doi.org/10.1007/s10701-008-9223-3).
 - P. Becher and H. Joos, “The Dirac-Kähler equation and fermions on the
   lattice,” *Zeitschrift für Physik C* **15**, 343–365 (1982).
   [DOI 10.1007/BF01614426](https://doi.org/10.1007/BF01614426).
 
-Ivanenko and Landau supplied the 1928 differential-form precursor; Kähler’s
-later exterior-calculus formulation gave the construction its common modern
-name. Becher and Joos developed the lattice Dirac--Kähler connection. The
-repository’s `cubicalKahlerDirac` definition and incidence square belong to
-this lineage.
+Vargas gives an English exposition of Kähler's untranslated calculus.
+Teixeira reviews the earlier differential-form lineage and Kähler's
+exterior-calculus construction. Becher and Joos develop the lattice
+Dirac--Kähler connection directly in English. The repository's
+`cubicalKahlerDirac` definition and incidence square belong to this lineage.
 
 ## Lattice doubling and the exact scope here
 
@@ -68,9 +80,9 @@ is not an exact global factorization of the finite-C19 symbol.
 - W. K. Clifford, “Applications of Grassmann’s Extensive Algebra,” *American
   Journal of Mathematics* **1**(4), 350–358 (1878).
   [DOI 10.2307/2369379](https://doi.org/10.2307/2369379).
-- E. Noether, “Invariante Variationsprobleme,” *Nachrichten von der
-  Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische
-  Klasse*, 235–257 (1918).
+- E. Noether, translated by M. A. Tavel, “Invariant Variation Problems,”
+  *Transport Theory and Statistical Physics* **1**, 186–207 (1971).
+  [DOI 10.1080/00411457108231446](https://doi.org/10.1080/00411457108231446).
 - M. Fierz and W. Pauli, “On relativistic wave equations for particles of
   arbitrary spin in an electromagnetic field,” *Proceedings of the Royal
   Society A* **173**, 211–232 (1939).
@@ -78,12 +90,14 @@ is not an exact global factorization of the finite-C19 symbol.
 - E. P. Wigner, “On Unitary Representations of the Inhomogeneous Lorentz
   Group,” *Annals of Mathematics* **40**(1), 149–204 (1939).
   [DOI 10.2307/1968551](https://doi.org/10.2307/1968551).
-- J. K. Lubański, “Sur la théorie des particules élémentaires de spin
-  quelconque. I,” *Physica* **9**(3), 310–324 (1942).
-  [DOI 10.1016/S0031-8914(42)90113-7](https://doi.org/10.1016/S0031-8914(42)90113-7).
-- E. Schrödinger, “Quantisierung als Eigenwertproblem,” *Annalen der Physik*
-  **384**(4), 361–376 (1926).
-  [DOI 10.1002/andp.19263840404](https://doi.org/10.1002/andp.19263840404).
+- S. I. Kryuchkov, N. A. Lanfear, and S. K. Suslov, “The role of the
+  Pauli--Lubański vector for the Dirac, Weyl, Proca, Maxwell and Fierz--Pauli
+  equations,” *Physica Scripta* **91**, 035301 (2016).
+  [DOI 10.1088/0031-8949/91/3/035301](https://doi.org/10.1088/0031-8949/91/3/035301).
+- E. Schrödinger, *Collected Papers on Wave Mechanics*, translated by J. F.
+  Shearer and W. M. Deans, Blackie & Son, London and Glasgow (1928). This
+  English collection includes “Quantisation as a Problem of Proper Values,
+  Part I.”
 
 These sources provide the historical and mathematical setting for the named
 Clifford, Noether, Lorentz/spin, Pauli--Lubański, irreducible-particle, and
