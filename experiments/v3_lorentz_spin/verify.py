@@ -115,16 +115,20 @@ def main() -> None:
     forbidden_changes = []
     for name in changed:
         normalized = name.replace("\\", "/")
-        is_v32_module = (
-            normalized.startswith("LeanDirac/V32")
+        is_cumulative_extension_module = (
+            (normalized.startswith("LeanDirac/V32") or
+             normalized.startswith("LeanDirac/V33"))
             and normalized.endswith(".lean")
         )
-        is_v32_doc = normalized.startswith("docs/V32")
+        is_cumulative_extension_doc = (
+            normalized.startswith("docs/V32") or
+            normalized.startswith("docs/V33")
+        )
         is_namespace_only_change = exact_namespace_migration(proof, normalized)
         if (
             normalized not in allowed_extensions
-            and not is_v32_module
-            and not is_v32_doc
+            and not is_cumulative_extension_module
+            and not is_cumulative_extension_doc
             and normalized not in migrated_modules
             and normalized != "LeanDirac/V2.lean"
             and not is_namespace_only_change
@@ -132,7 +136,7 @@ def main() -> None:
             forbidden_changes.append(normalized)
     if forbidden_changes:
         raise SystemExit(
-            "sealed V3.1 source changed outside the V3.2 extension boundary:\n"
+            "sealed V3.1 source changed outside the cumulative extension boundary:\n"
             + "\n".join(forbidden_changes)
         )
 

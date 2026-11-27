@@ -1,4 +1,4 @@
-# Lean LFM-to-Dirac Derivation V3.2
+# Lean LFM-to-Dirac Derivation V3.3
 
 [![Lean proof](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml/badge.svg)](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml)
 
@@ -7,7 +7,9 @@ complete free linearized Dirac equation from the declared two-field C19 lattice
 action. V3 continues from that theorem and derives the Lorentz/spin-one-half
 representation carried by both exhaustive cubical copies. V3.2 adds the
 free-fermion spectral, rest-sector, symmetry, continuum-error, and transport
-closure while preserving the same action and governing equations.
+closure while preserving the same action and governing equations. V3.3 adds
+free-spinor basis, bilinear-observable, axis-aligned helicity, forward Gordon,
+and free-resolvent closure without changing those dynamics.
 
 The default import is unambiguous:
 
@@ -18,6 +20,7 @@ import LeanDirac
 #check LeanDirac.lorentz_spin_half_from_native_action
 #check LeanDirac.v32_complete_free_fermion
 #check LeanDirac.v32_two_copy_rest_sector
+#check LeanDirac.v33_complete_free_spinor
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -140,6 +143,24 @@ See [the V3.2 release notes](docs/V32_RELEASE_NOTES.md),
 [stage status](docs/V32_STAGE_STATUS.md),
 [hostile audit](docs/V32_RED_TEAM.md), and
 [dependency matrix](docs/V32_DEPENDENCY_MATRIX.md).
+
+## V3.3 free-spinor observable closure
+
+V3.3 remains downstream of the unchanged V3.2 action and equations. It proves
+a complete orthonormal four-component basis and outer-product resolution,
+constructs both on-shell energy branches from the V3.2 projectors, derives the
+normalized scalar/density/current bilinears, proves exact axis-aligned moving
+helicity states, proves the forward equal-momentum Gordon relations, and
+constructs a two-sided free momentum-space resolvent away from its pole.
+
+The cumulative theorem is `LeanDirac.v33_complete_free_spinor`. The Gordon
+result is not the non-forward electromagnetic vertex; the propagator is not
+interacting; and V3.3 does not claim `g = 2`, charge quantization, localization,
+transport, a physical electron, or a MeV calibration.
+
+See [the V3.3 plan](docs/V33_FREE_SPINOR_OBSERVABLE_CLOSURE_PLAN.md),
+[dependency matrix](docs/V33_DEPENDENCY_MATRIX.md), and
+[release notes](docs/V33_RELEASE_NOTES.md).
 
 ## Prior work and attribution
 
