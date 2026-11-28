@@ -1,4 +1,4 @@
-# Lean LFM-to-Dirac Derivation V3.5
+# Lean LFM-to-Dirac Derivation V3.6 Research
 
 [![Lean proof](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml/badge.svg)](https://github.com/gpartin/LeanDiracDerivation/actions/workflows/lean.yml)
 
@@ -16,6 +16,12 @@ Gordon identity, and a projector/residue decomposition of the free resolvent.
 V3.5 completes the negative-branch residue relation, finite generated
 Lorentz covariance, the sixteen-channel bilinear/Fierz package, and the
 arbitrary-momentum Pauli--Lubanski spin invariant.
+V3.6 revises the research action's unresolved relative `Psi`/`chi` kinetic
+normalization. It selects one common standard Euclidean cubical Clifford
+kinetic metric for the two native grades, derives `B = 1` within that metric
+class and hence `kappa = chi0/B = 19`, and proves
+that the entire cumulative free Dirac chain survives this change. The former
+`B = 1197` value and the C19-weight `B = 19` value remain explicit controls.
 
 The default import is unambiguous:
 
@@ -29,6 +35,7 @@ import LeanDirac
 #check LeanDirac.v33_complete_free_spinor
 #check LeanDirac.v34_complete_covariant_free_spinor
 #check LeanDirac.v35_complete_covariant_observables
+#check LeanDirac.v36_complete_geometrically_normalized_action
 ```
 
 The checked-out tree does not contain the historical numbered V1 proof or its
@@ -39,19 +46,21 @@ history at tag `v1-legacy-final`.
 
 At each lattice site the native fields are `Psi_i, chi_i : C^3`. The declared
 geometry is C19: six face bonds of weight 2 and twelve edge bonds of weight 1.
-The geometric normalization is `chi0 = 19`, identified with the nineteen
-C19 cube modes (center, six faces, and twelve edges). The chi kinetic
-normalization is declared as `B = 1197`; equivalently the existing
-parameterization writes `kappa = 1/63` and `B = chi0 / kappa`. V2 does not
-yet derive this remaining dimensionless normalization.
+The vacuum normalization is `chi0 = 19`, identified with the nineteen C19
+cube modes (center, six faces, and twelve edges). V3.6 keeps both native fields
+as `C^3` arrays, represents `Psi` in the vector grade, and maps `chi`'s three
+coordinates to the corresponding oriented-bivector grade for the kinetic
+metric comparison. Unit blades in those grades have
+equal norm, so the live research action uses `B = 1` and the equivalent
+parameterization `kappa = chi0/B = 19`.
 
-That declaration belongs to the full substrate dynamics, but it is not an
-independently established prerequisite for the free-Dirac result. The
+The earlier `(kappa,B)=(1/63,1197)` pair is retained as a historical control,
+not as the live action. The C19-weight pair `(1,19)` is a second ablation. The
 finite-lattice transverse theorem is uniform in `B`: at the proved vacuum its
 linear transverse `Psi` sector has no linear `chi` motion, and its Dirac mass
-and transport generator contain no numerical use of `1197`. The value of `B`
-remains relevant to live-`chi` inertia, nonlinear response, and any future
-localized moving-electron construction.
+and transport generator contain no numerical use of any candidate value. The
+value of `B` remains relevant to live-`chi` inertia, nonlinear response, and
+any future localized moving-electron construction.
 
 The proof starts from one real reciprocal action `L = T - U`, derives both
 Euler--Lagrange equations, and derives the centered two-layer update. The full
@@ -86,8 +95,8 @@ revealing which one was accessed is a physical hypothesis; it is not itself
 a theorem in this repository.
 
 The theorem is a free linear tangent result. It does not claim a nonlinear
-localized electron or any later physical consequence, and it does not derive
-or require the numerical value `B = 1197` within that transverse free sector.
+localized electron or any later physical consequence. V3.6 proves that this
+result remains valid for the geometrically normalized live action `B = 1`.
 
 ## V3 Lorentz and spin extension
 
@@ -218,6 +227,45 @@ or interacting electron, electromagnetic coupling, physical charge, `g = 2`,
 fermionic quantization/statistics, or an MeV calibration. See the
 [V3.5 plan](docs/V35_COVARIANT_OBSERVABLE_CLOSURE_PLAN.md) and
 [stage status](docs/V35_STAGE_STATUS.md).
+
+## V3.6 geometrically normalized action
+
+V3.6 changes the action's live relative kinetic normalization and compares it
+with two controls:
+
+| Interpretation under audit | `kappa` | `B` |
+|---|---:|---:|
+| Historical 63-mode control | `1/63` | `1197` |
+| C19 kinetic-weight ablation | `1` | `19` |
+| **Live common Clifford metric** | **`19`** | **`1`** |
+
+Lean proves that the oriented cube Hodge map between vector coordinates and
+plane-bivector coordinates is invertible and norm-preserving. Constructing
+the kinetic term from that one standard Euclidean Clifford metric gives equal
+unit-blade weights and therefore `B = 1`. The two fields remain distinct
+native fields; the Hodge map represents `chi`'s coordinates and does not
+identify the fields. Only their kinetic metric is shared.
+The `B = 19` result requires a separate C19 kinetic-multiplicity postulate and
+is therefore retained only as an ablation. Cube symmetry alone preserves the
+tested kinetic metric for arbitrary `B` and is not misreported as the reason
+for the live value.
+
+The inherited radial potential gives exact squared small-response values
+`38/63`, `38`, and `722` for the three candidate pairs. Faster response is a
+consequence, not the selection rule. The existing free transverse Dirac
+tangent is formally valid for every candidate and therefore survives the
+action change but cannot itself justify it.
+
+The cumulative theorem is
+`LeanDirac.v36_complete_geometrically_normalized_action`. V3.6 does not derive
+nonlinear electron mobility, an Einstein limit, or repository-wide promotion
+of this V3.6 research action to canonical v40.1. See the
+[V3.6 plan](docs/V36_GEOMETRICALLY_NORMALIZED_ACTION_PLAN.md),
+[decision matrix](docs/V36_DEPENDENCY_AND_DECISION_MATRIX.md), and
+[stage status](docs/V36_STAGE_STATUS.md). The
+[release notes](docs/V36_RELEASE_NOTES.md) and two hostile reviews
+([technical](docs/V36_RED_TEAM_1_TECHNICAL.md),
+[release](docs/V36_RED_TEAM_2_RELEASE.md)) record the verification boundary.
 
 The finite covariance theorem is for the free Dirac residual and its solution
 space. The bilinear branch proves the five standard definitions, their

@@ -52,3 +52,21 @@ native action
 ```
 
 No historical V1 module is imported by this route.
+
+## V3.6 geometrically normalized research action
+
+| Extension gate | Derived result | Local status |
+|---|---|---|
+| V36-001 | Cube Hodge map, inverse, norm isometry, all-unit-blade relation, and dual wedge representation | PASS |
+| V36-002 | Live research action `(kappa,B)=(19,1)` and two named controls | PASS |
+| V36-003 | Full inherited free-Dirac chain and transverse tangent uniform in `B` | PASS |
+| V36-004 | Scoped common-metric uniqueness and common-turn non-selection | PASS |
+| V36-005 | Native site-potential radial slice and exact response squares | PASS |
+| V36-006 | Revised-action decision surface with nonlinear validation obligations open | PASS |
+| V36-007 | Cumulative geometrically normalized research-action theorem | PASS |
+
+V3.6 intentionally changes the research action's relative kinetic
+normalization from `B = 1197` to the cubical unit-blade norm ratio `B = 1`.
+It recompiles the cumulative V2--V3.5 theorem chain under that revision. This
+does not promote the branch action to repository-wide canonical v40.1 and
+does not close nonlinear electron transport or Einstein-limit validation.

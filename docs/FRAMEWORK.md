@@ -24,24 +24,32 @@ C19 contains six face neighbors with relative weight 2 and twelve edge
 neighbors with relative weight 1. The constants are
 
 \[
-\chi_0=19,\qquad \kappa=\frac1{63},\qquad B=\frac{\chi_0}{\kappa}=1197.
+\chi_0=19,\qquad B=1,\qquad \kappa=\frac{\chi_0}{B}=19.
 \]
 
-Here `chi0 = 19` is the declared geometric C19 mode count: one center, six
-faces, and twelve edges. Once that value is fixed, `kappa = 1/63` is an
-equivalent parameterization of the single remaining chi kinetic
-normalization `B = 1197`. The present derivation does not derive `B` from
-the lattice action or from a known measured constant; it must therefore be
-treated as a declared dimensionless framework constant.
+Here `chi0 = 19` is the C19 mode count: one center, six faces, and twelve
+edges. V3.6 selects one common Euclidean kinetic metric for the two cubical
+grade representations and computes the *relative* coefficient from their
+unit-blade norm ratio. In plane order
+`(01,02,12)`, the Euclidean Hodge map sends vector coordinates `(x,y,z)` to
+bivector coordinates `(z,-y,x)`. Lean proves this map is invertible and
+norm-preserving. Constructing both kinetic terms from this one standard
+Euclidean cubical Clifford metric assigns corresponding unit vector and unit
+bivector blades equal weight, fixing `B = 1` and therefore `kappa = 19`.
 
-The role of this declaration must be kept separate from the free-Dirac
-theorem. `B` weights the kinetic response of the full live `chi` field. The
-finite-periodic transverse action theorem is proved for arbitrary `B`, and at
-the selected exact vacuum the linear transverse `Psi` sector has a vanishing
-`Psi`--`chi` cross Hessian. Consequently the derived free-Dirac mass and
-transport generator do not select or require the numerical value `1197`.
-That value remains part of the full nonlinear substrate and can affect
-nonlinear `chi` response, localization, and a future moving-electron branch.
+This does not identify or combine the two physical fields. Both remain native
+`C^3` arrays. `Psi` is represented in the vector grade, while `chi`'s three
+coordinates are mapped to the bivector grade for the metric comparison. It
+selects one shared kinetic metric for those representations. The historical pair
+`(kappa,B)=(1/63,1197)` and the C19-weight ablation `(1,19)` are retained as
+controls, not as live action values. No measured constant or mobility result
+is used to choose `B = 1`.
+
+The free-periodic transverse theorem is proved for arbitrary `B`, and at the
+selected exact vacuum its linear `Psi` sector has a vanishing `Psi`--`chi`
+cross Hessian. Consequently the complete free-Dirac chain survives the V3.6
+action change. This does not make `B` irrelevant: it changes live-`chi`
+inertia, nonlinear response, localization, and future moving-electron tests.
 
 ## Action
 
@@ -51,7 +59,7 @@ L=T-U,
 
 \[
 T=\frac12\sum_i\|\dot\Psi_i\|^2+
-\frac B2\sum_i\|\dot\chi_i\|^2,
+\frac12\sum_i\|\dot\chi_i\|^2,
 \]
 
 \[
@@ -71,7 +79,7 @@ The native equations are derived by variation:
 
 \[
 \ddot\Psi_i=-\frac{\delta U}{\delta\Psi_i^\dagger},\qquad
-B\ddot\chi_i=-\frac{\delta U}{\delta\chi_i^\dagger}.
+ \ddot\chi_i=-\frac{\delta U}{\delta\chi_i^\dagger}.
 \]
 
 The native synchronous centered update is

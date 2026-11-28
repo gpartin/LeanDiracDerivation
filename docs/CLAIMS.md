@@ -35,10 +35,11 @@ V3.5 does not claim a separate finite transformation theorem for each
 bilinear class.
 
 The free transverse reduction is uniform in the substrate kinetic parameter
-`B`. In particular, the proof does not use the numerical value `B = 1197` to
-obtain the free-Dirac mass, Clifford transport, or current. This is a scope
-result, not a claim that `B` is irrelevant to the full theory: it continues to
-control live-`chi` inertia outside this decoupled linear sector.
+`B`. V3.6 specializes it to the revised live action `B = 1` and recompiles the
+entire cumulative chain. The free-Dirac mass, Clifford transport, and current
+therefore survive the revision. This is not a claim that `B` is irrelevant to
+the full theory: it controls live-`chi` inertia outside this decoupled linear
+sector.
 
 In V3.1, the same incidence-derived operators also determine a unique nonzero
 spin normalization. The same half normalization is uniquely selected within
@@ -67,13 +68,30 @@ decomposes the free resolvent into the already-proved spectral projectors.
 The algebraic pole numerators and the covariant spin sum identify those same
 positive/negative free sectors.
 
+In V3.6, the oriented cube Hodge map between vector coordinates and the
+`(01,02,12)` bivector coordinates is proved invertible and Euclidean
+norm-preserving. Both physical fields remain native `C^3` arrays; the map is
+a representation of `chi`'s coordinates for the kinetic comparison, not an
+identification of the fields. The research action is reconstructed with the one standard
+Euclidean Clifford kinetic metric on those two grades, uniquely giving equal
+unit-blade weight `B = 1` within that metric class. A separately C19-weighted
+metric would give `B = 19`, but requires an independent kinetic-multiplicity
+postulate and is only an ablation. A common nontrivial cubical turn preserves
+the metric for arbitrary `B`, so symmetry alone is not presented as the
+selection mechanism. All three values retain the same free transverse Dirac
+tangent but have distinct radial-response consequences.
+
 ## Not claimed
 
-- a derivation of the native action itself;
+- a derivation of every term in the native action (V3.6 addresses only its
+  relative kinetic normalization);
 - dynamic cosmological selection or an origin story for one vacuum
   orientation (explicitly outside the target theorem);
-- derivation of the chi kinetic normalization `B = 1197`, or a proof that this
-  value is required for free Dirac emergence;
+- a derivation or promotion of the historical `B = 1197` value;
+- uniqueness of `B = 1` outside the explicitly selected standard Euclidean
+  cubical Clifford kinetic-metric class;
+- validation of the revised action by nonlinear electron mobility or by an
+  operational Einstein/continuum limit;
 - a nonlinear localized electron or its motion;
 - electromagnetic interaction or later particle properties;
 - exact continuum symmetry at finite lattice spacing;

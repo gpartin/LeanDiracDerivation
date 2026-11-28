@@ -13,7 +13,7 @@ public import LeanDirac.C19Geometry
 
 namespace LeanDirac
 
-/-! Frozen noncanonical DIRAC-002 action. -/
+/-! Native two-field action used by the cumulative Dirac derivation. -/
 
 noncomputable section
 open BigOperators
@@ -51,6 +51,33 @@ def c19Hamiltonian [Fintype Site]
     (chi0 B : ℝ) (state : State Site) (velocity : Velocity Site)
     (geometry : C19Lattice Site) : ℝ :=
   hamiltonian (Edge := C19Edge Site) chi0 B state velocity (c19Bond geometry)
+
+/-- V3.6 research action.  Its chi kinetic weight is no longer an
+independent numeric declaration: it is the equal-grade value fixed in
+`Foundation` by the Euclidean cubical Clifford metric. -/
+def v36ResearchC19Lagrangian [Fintype Site]
+    (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) : ℝ :=
+  c19Lagrangian chi0 chiKineticNormalization state velocity geometry
+
+def v36ResearchC19Hamiltonian [Fintype Site]
+    (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) : ℝ :=
+  c19Hamiltonian chi0 chiKineticNormalization state velocity geometry
+
+theorem v36_research_c19_lagrangian_uses_equal_grade_kinetic_weight
+    [Fintype Site] (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) :
+    v36ResearchC19Lagrangian state velocity geometry =
+      c19Lagrangian chi0 1 state velocity geometry := by
+  simp [v36ResearchC19Lagrangian, chi_kinetic_normalization_eq_one]
+
+theorem v36_research_c19_hamiltonian_uses_equal_grade_kinetic_weight
+    [Fintype Site] (state : State Site) (velocity : Velocity Site)
+    (geometry : C19Lattice Site) :
+    v36ResearchC19Hamiltonian state velocity geometry =
+      c19Hamiltonian chi0 1 state velocity geometry := by
+  simp [v36ResearchC19Hamiltonian, chi_kinetic_normalization_eq_one]
 
 theorem site_potential_nonnegative
     (chi0 : ℝ) (state : State Site) (site : Site) :

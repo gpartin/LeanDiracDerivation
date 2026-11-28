@@ -1,5 +1,25 @@
 # Changelog
 
+## 3.6.0-research (unreleased)
+
+- Revised the live action's chi kinetic normalization from `B = 1197` to the
+  equal-grade Euclidean cubical Clifford value `B = 1`, equivalently changing
+  `kappa` from `1/63` to `19`.
+- Formalized the legacy, C19-weight, and common-metric normalization pairs.
+- Specialized the existing arbitrary-`B` free transverse tangent theorem to
+  all three candidates.
+- Derived the oriented cube vector--bivector Hodge isometry and the vector
+  representation of the native antisymmetric product.
+- Proved scoped uniqueness of `B = 1` under a common inherited metric and
+  `B = 19` under a C19-weighted metric.
+- Proved that a common nontrivial cubical turn preserves the relative kinetic
+  metric for arbitrary `B`, so this symmetry alone does not select a value.
+- Derived the inherited radial restoring coefficient and exact candidate
+  response squares without using mobility performance as an input.
+- Rebuilt the complete V2--V3.5 theorem chain under the revised action.
+- Kept nonlinear electron validation, Einstein-limit normalization, and
+  repository-wide canonical framework promotion explicitly open.
+
 ## 3.5.0-research
 
 - Closed the antiparticle spin-sum/projector/negative-pole relation.
