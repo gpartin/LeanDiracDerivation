@@ -84,8 +84,7 @@ theorem positive_packet_pointwise_native_density_is_not_dirac_density :
   · norm_num [packetScopeDiracAtOrigin, packetScopeAmplitude,
       normalizedPositiveFrequencyEmbedding, positiveFrequencyScale,
       positiveFrequencyRatio, positivePauliSpatial,
-      cubicalCell4Density, Complex.normSq, Fin.sum_univ_four] <;>
-      split <;> norm_num <;> omega
+      cubicalCell4Density, Complex.normSq, Fin.sum_univ_four]
   · norm_num [packetScopeNativeAtOrigin, packetScopeAmplitude,
       nativePhaseOfFrequencyAmplitudes, uniformNativePhaseDensity,
       uniformScalarPhasePair, uniformCell2Density,

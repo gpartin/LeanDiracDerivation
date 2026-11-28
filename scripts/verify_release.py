@@ -1,4 +1,4 @@
-"""Single entry point for the cumulative V3 proof audit."""
+"""Authoritative entry point for the cumulative V3.6 release audit."""
 
 from __future__ import annotations
 
@@ -16,8 +16,8 @@ def run(*command: str) -> None:
 
 
 def main() -> int:
-    run(sys.executable, "experiments/v3_lorentz_spin/verify.py")
-    print("V3_RELEASE_VERIFICATION_PASS")
+    run(sys.executable, "scripts/verify_v36_research.py")
+    print("V36_RELEASE_VERIFICATION_PASS")
     return 0
 
 

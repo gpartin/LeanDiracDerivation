@@ -6,7 +6,7 @@
 - `elan`
 - Python 3
 
-The exact Lean and Mathlib versions are pinned by `lean-toolchain` and
+The exact Lean and Mathlib revisions are pinned by `lean-toolchain` and
 `lake-manifest.json`.
 
 ## Clean reproduction
@@ -14,29 +14,40 @@ The exact Lean and Mathlib versions are pinned by `lean-toolchain` and
 ```bash
 git clone https://github.com/gpartin/LeanDiracDerivation.git
 cd LeanDiracDerivation
-lake build LeanDirac LeanDiracAudit
 python scripts/verify_release.py
 ```
 
-The verifier requires a clean checkout and full Git history because it checks
-the sealed proof-source commit as an ancestor of the current revision. It then
-builds the cumulative V3.1 dependency closure, checks every required
-declaration, runs the historical-sign moving-frame regression, audits compiled
-axiom dependencies, and verifies all release-facing source, documentation,
-audit, and reproduction seals.
+`scripts/verify_release.py` is the only authoritative current release command.
+It delegates to the V3.6 verifier, which:
 
-The cumulative source tree is flattened under `LeanDirac/`; release-version
-directories are not part of the production API. Because V2 and V3.1 were
-originally published under `LeanDirac/V2` and the `LeanDirac.V2` namespace,
-the verifier also compares every migrated pre-V3.2 module against its sealed
-source after applying only that path/namespace substitution. Any additional
-change to a migrated theorem source fails the seal audit. The original layout
-remains reproducible from the corresponding Git tags.
+1. checks all seven V3.6 handoff modules and the revised foundation/action;
+2. checks the direct live-action theorem and current release metadata;
+3. builds the complete `LeanDirac` facade;
+4. builds `LeanDiracAudit`, whose compiler-environment audit examines every
+   declaration in every imported production module;
+5. rejects `sorryAx`, custom axioms, and nonstandard axiom dependencies; and
+6. confirms that the cumulative V3.6 theorem and direct live-action theorem
+   use only `propext`, `Classical.choice`, and `Quot.sound`.
 
 Expected final markers:
 
 ```text
-LEAN_DIRAC_V3_PAULI_LUBANSKI_REGRESSION_PASS
-V3_LORENTZ_SPIN_RELEASE_VERIFICATION_PASS
-V3_RELEASE_VERIFICATION_PASS
+[PASS] V3.6 geometrically normalized action verification
+V36_RELEASE_VERIFICATION_PASS
 ```
+
+## Historical verifiers
+
+The `verify_v32_research.py` through `verify_v35_research.py` scripts preserve
+the release seals used by those versions. They intentionally reject changes to
+the then-sealed foundation and native action. V3.6 deliberately revises those
+files, so historical verifiers are evidence for their tagged releases, not
+valid gates for the current V3.6 tree.
+
+## Production and challenge surfaces
+
+`import LeanDirac` is the production facade. `Challenge.lean` is a preserved
+V2 external-submission challenge and intentionally contains theorem holes;
+`Solution.lean` supplies its answers. Neither is imported by `LeanDirac` or
+`LeanDiracAudit`. See `HISTORICAL_SUBMISSION_ARTIFACTS.md` for the complete
+classification.

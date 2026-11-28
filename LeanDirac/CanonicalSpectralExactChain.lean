@@ -246,7 +246,7 @@ theorem canonical_spectral_verlet_local_defect_is_little_o_dt_sq
     by_cases hdt : dt = 0
     · subst dt
       simp
-    · rw [if_neg hdt,
+    · rw [ite_eq_right hdt,
         congrFun (canonical_spectral_verlet_local_defect_scale
           mass energy dt momentum phase) component]
       push_cast

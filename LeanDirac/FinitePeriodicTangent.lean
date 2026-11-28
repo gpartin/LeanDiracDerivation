@@ -78,10 +78,7 @@ private theorem periodic_quantized_step_sum
   push_cast
   apply Finset.sum_congr rfl
   intro axis _
-  simpa using congrArg
-    (fun value : ZMod L =>
-      value * (c19Coord axis direction : ZMod L))
-    (ZMod.natCast_zmod_val (mode axis)).symm
+  simp
 
 private theorem periodic_quantized_phase
     (L : ℕ) [NeZero L] (mode : PeriodicCubicMomentum L)
@@ -236,7 +233,7 @@ theorem c19_complex_difference_is_transport_symbol
       (c19_character_normSq_one momentum direction)]]
   simp_rw [mul_add]
   rw [Finset.sum_add_distrib, c19_conjugate_difference_sum]
-  ring
+  ring_nf
 
 theorem periodic_mode_field_density
     {L : ℕ} [NeZero L] {momentum : LatticeMomentum}
@@ -266,7 +263,7 @@ theorem periodic_mode_density_sum
       periodicSiteCount L * uniformCell2Density position := by
   simp_rw [periodic_mode_field_density]
   simp [periodicSiteCount, uniformCell2Density, Fin.sum_univ_succ]
-  ring
+  ring_nf
 
 theorem periodic_mode_quartic_sum
     {L : ℕ} [NeZero L] {momentum : LatticeMomentum}
@@ -405,7 +402,7 @@ theorem periodic_c19_lagrangian_tangent_exact
   · subst eps
     simp [periodicC19LagrangianTangentQuotient]
   · unfold periodicC19LagrangianTangentQuotient
-    rw [if_neg heps,
+    rw [ite_eq_right heps,
       periodic_c19_lagrangian_mode_expansion r B eps hr,
       periodic_c19_lagrangian_mode_expansion r B (-eps) hr,
       periodic_c19_lagrangian_mode_expansion r B 0 hr]
@@ -553,7 +550,7 @@ theorem periodic_c19_transverse_potential_first_variation
   simp only [Finset.mul_sum]
   rw [mul_add]
   rw [Finset.mul_sum, Finset.mul_sum]
-  ring
+  ring_nf
 
 def periodicC19ScalarDifference
     {L : ℕ} [NeZero L]
@@ -884,7 +881,7 @@ theorem periodic_c19_second_transverse_potential_first_variation
   simp only [Finset.mul_sum]
   rw [mul_add]
   rw [Finset.mul_sum, Finset.mul_sum]
-  ring
+  ring_nf
 
 theorem periodic_c19_second_transverse_potential_hessian_is_force
     {L : ℕ} [NeZero L]
@@ -1061,7 +1058,8 @@ theorem periodic_c19_transverse_chi_cross_hessian_zero
       r eps first second chiDirection
         (c19Bond (periodicC19Geometry L))
   rw [hfun]
-  convert hquad using 1 <;> norm_num
+  convert hquad using 1
+  all_goals norm_num
 
 /-- The actual sitewise linearized C19 force diagonalizes on every finite
 periodic Fourier character with eigenvalue `r^2 + c19TransportSymbol`. -/

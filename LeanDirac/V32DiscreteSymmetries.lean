@@ -101,7 +101,8 @@ theorem v32_cpt_preserves_density (z : CubicalCell4) :
     cubicalCell4Density (v32CPT z) = cubicalCell4Density z := by
   simp [cubicalCell4Density, v32CPT, v32ChargeConjugate,
     v32Parity, v32TimeReverse, cubicalStandardBeta,
-    Complex.normSq, Fin.sum_univ_four] <;> ring
+    Complex.normSq, Fin.sum_univ_four]
+  all_goals ring
 
 theorem v32_cpt_commutes_spin
     (axis : Fin 3) (z : CubicalCell4) :

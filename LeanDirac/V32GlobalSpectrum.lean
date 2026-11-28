@@ -172,7 +172,8 @@ theorem v32_odd_periodic_transport_vanishes_at_pi_axis
         if other = (0 : Fin 3) then 2 * Real.pi else 0) =
         v32PiAxisMomentum := by
     funext other
-    fin_cases other <;> simp [negativePi, v32PiAxisMomentum] <;> ring
+    fin_cases other <;> simp [negativePi, v32PiAxisMomentum]
+    all_goals ring
   have hperiod := hperiodic negativePi component (0 : Fin 3)
   rw [hshift] at hperiod
   have hoddAt := hodd v32PiAxisMomentum component

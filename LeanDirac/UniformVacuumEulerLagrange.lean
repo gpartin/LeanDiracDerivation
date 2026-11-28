@@ -251,7 +251,7 @@ theorem uniform_character_tangent_quotient_exact
   · subst eps
     simp [uniformCharacterTangentQuotient]
   · unfold uniformCharacterTangentQuotient
-    rw [if_neg heps,
+    rw [ite_eq_right heps,
       uniform_character_action_density_expansion
         r eps hr position velocity momentum site,
       uniform_character_action_density_expansion

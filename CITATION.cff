@@ -1,12 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this formal research artifact, please cite it using this metadata. See docs/V32_RELATED_WORK.md for the current prior-work attribution."
-title: "Lean LFM-to-Dirac Derivation V3.2"
+title: "Lean LFM-to-Dirac Derivation V3.6"
 type: software
 authors:
   - family-names: "Partin"
     given-names: "Greg"
     orcid: "https://orcid.org/0009-0004-0327-6528"
-version: "3.2.0-research"
+version: "3.6.0-research"
+date-released: "2026-11-28"
 repository-code: "https://github.com/gpartin/LeanDiracDerivation"
 license: MIT
 keywords:
@@ -17,16 +18,15 @@ keywords:
   - Clifford algebra
   - formal verification
 abstract: >-
-  A Lean 4 derivation of the free linearized Dirac equation and its scoped
-  Lorentz/spin-one-half and free-fermion spectral consequences from a declared
-  reciprocal complex-Psi/complex-chi C19 lattice action. The chain derives the
-  action variation, exact native vacuum, finite-lattice tangent, cubical
-  Kähler-Dirac/Clifford root, four-component readout, mass, time and three
-  transport terms, density/current bridge, spin representation, spectral
-  projectors, discrete symmetries, nonrelativistic limit, and controlled
-  finite-C19 remainders. It does not claim a nonlinear localized electron,
-  electromagnetic coupling, an SI/MeV mass prediction, or exact finite-spacing
-  four-component Dirac factorization.
+  A cumulative Lean 4 derivation of the free linearized Dirac equation and its
+  scoped Lorentz, spin-one-half, spectral, spinor, and covariant-observable
+  consequences from a reciprocal complex-Psi/complex-chi C19 lattice action.
+  V3.6 selects a common Euclidean cubical Clifford kinetic metric, derives the
+  relative chi kinetic normalization B = 1 within that declared metric class,
+  and directly proves that the live revised action retains the complete
+  finite-periodic action-to-free-Dirac result. It does not claim a nonlinear
+  localized electron, electromagnetic coupling, an SI/MeV mass prediction,
+  nonlinear mobility, or Einstein closure.
 references:
   - type: article
     authors:

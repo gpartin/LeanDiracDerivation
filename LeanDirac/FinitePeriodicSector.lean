@@ -220,12 +220,12 @@ theorem periodic_full_native_tangent_generator_intertwines
       fin_cases component
       · simp only [periodicNativeTransverseTangentGenerator,
           periodicFullNativeTangentEmbed, periodicNativeTangentState,
-          periodicNativeTangentVelocity, if_pos]
+          periodicNativeTangentVelocity, ite_eq_left]
         exact periodic_c19_linearized_force_is_modal_acceleration
           r mode phase.1 0 site
       · simp only [periodicNativeTransverseTangentGenerator,
           periodicFullNativeTangentEmbed, periodicNativeTangentState,
-          periodicNativeTangentVelocity, Fin.isValue, if_pos]
+          periodicNativeTangentVelocity, Fin.isValue, ite_eq_left]
         exact periodic_c19_linearized_force_is_modal_acceleration
           r mode phase.1 1 site
       · simp [periodicNativeTransverseTangentGenerator,

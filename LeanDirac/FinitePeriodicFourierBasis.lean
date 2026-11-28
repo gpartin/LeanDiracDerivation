@@ -72,8 +72,7 @@ theorem periodic_quantized_add_char_bijective
     Function.Bijective (periodicQuantizedAddChar L) := by
   rw [Fintype.bijective_iff_injective_and_card]
   refine ⟨periodic_quantized_add_char_injective L, ?_⟩
-  simpa [PeriodicCubicMomentum] using
-    (AddChar.card_eq (α := PeriodicCubicSite L)).symm
+  simp [PeriodicCubicMomentum]
 
 /-- The complete Fourier basis of scalar fields on the actual finite cubic
 torus.  Through `periodic_quantized_add_char_bijective`, its basis labels are
