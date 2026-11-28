@@ -256,7 +256,8 @@ theorem cubical_exterior_derivative_square_zero (amplitude : CubicalCell8) :
     simp [cubicalExteriorDerivative, cubicalCoboundaryAxis,
       cubicalAxisBit, cubicalIncidenceSign, cubicalFlip,
       cubicalFlip0, cubicalFlip1, cubicalFlip2,
-      cubicalBit0, cubicalBit1, cubicalBit2, Fin.sum_univ_succ] <;>
+      cubicalBit0, cubicalBit1, cubicalBit2, Fin.sum_univ_succ]
+  all_goals
     ring
 
 /-- The reverse incidence map is nilpotent for the same geometric reason. -/
@@ -269,7 +270,8 @@ theorem cubical_exterior_coderivative_square_zero
     simp [cubicalExteriorCoderivative, cubicalBoundaryAxis,
       cubicalAxisBit, cubicalIncidenceSign, cubicalFlip,
       cubicalFlip0, cubicalFlip1, cubicalFlip2,
-      cubicalBit0, cubicalBit1, cubicalBit2, Fin.sum_univ_succ] <;>
+      cubicalBit0, cubicalBit1, cubicalBit2, Fin.sum_univ_succ]
+  all_goals
     ring
 
 /-- Summing the three oriented axis-incidence crossings is precisely the

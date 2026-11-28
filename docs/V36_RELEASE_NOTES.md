@@ -16,6 +16,11 @@ covariant-observable theorem graph recompiles under the revised foundation.
 The free transverse tangent theorem is uniform in `B`, so this no-regression
 result does not use the new number to manufacture the Dirac operator.
 
+The theorem `v36_live_research_action_mode_to_free_dirac` closes the direct
+formal link: its tangent quotient is defined from
+`v36ResearchC19Lagrangian`, and its conclusion is the complete
+finite-periodic action-to-free-Dirac statement with controlled remainder.
+
 The release also keeps the boundary explicit: choosing one common Euclidean
 kinetic metric is the V3.6 action-design premise. Lean proves the coefficient
 uniquely within that class, not among every possible two-field action.
@@ -26,7 +31,7 @@ repository-wide canonical v40.1 framework.
 Run:
 
 ```text
-c:\Papers\.venv\Scripts\python.exe -X utf8 -u scripts\verify_v36_research.py
+python scripts/verify_release.py
 ```
 
 The strict verifier builds the cumulative facade and environment audit,

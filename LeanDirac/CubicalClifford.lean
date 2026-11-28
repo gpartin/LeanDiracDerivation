@@ -6,7 +6,7 @@ Authors: G. D. Partin
 
 module
 
-public import Mathlib.Data.Complex.Basic
+public import Mathlib.Basic.Complex.Basic
 public import Mathlib.Tactic
 
 @[expose] public section

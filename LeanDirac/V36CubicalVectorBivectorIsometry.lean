@@ -1,4 +1,4 @@
-import LeanDirac.V35CompleteCovariantObservables
+import LeanDirac.NativeAction
 
 /-!
 # V3.6 Stage 1: cubical vector--bivector kinetic geometry
@@ -10,28 +10,6 @@ vector coordinates `(x, y, z)` to bivector coordinates `(z, -y, x)`.
 namespace LeanDirac
 
 noncomputable section
-
-theorem cube_bivector_to_vector_left_inverse (v : C3) :
-    cubicalBivectorToVector (cubicalVectorToBivector v) = v := by
-  funext component
-  fin_cases component <;>
-    simp [cubicalVectorToBivector, cubicalBivectorToVector]
-
-theorem cube_vector_to_bivector_left_inverse (b : C3) :
-    cubicalVectorToBivector (cubicalBivectorToVector b) = b := by
-  funext component
-  fin_cases component <;>
-    simp [cubicalVectorToBivector, cubicalBivectorToVector]
-
-theorem cube_vector_bivector_density_isometry (v : C3) :
-    density (cubicalVectorToBivector v) = density v := by
-  simp [density, cubicalVectorToBivector, Fin.sum_univ_three]
-  ring
-
-theorem cube_bivector_vector_density_isometry (b : C3) :
-    density (cubicalBivectorToVector b) = density b := by
-  simp [density, cubicalBivectorToVector, Fin.sum_univ_three]
-  ring
 
 theorem cube_corresponding_unit_blades_have_equal_weight
     (selected : Fin 3) :

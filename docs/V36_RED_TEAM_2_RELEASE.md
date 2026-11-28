@@ -1,5 +1,8 @@
 # V3.6 Hostile Red Team 2: Release and Verification
 
+Historical status: superseded by `V36_RED_TEAM_3_RELEASE_HARDENING.md`, which
+audits the direct live-action theorem and repaired current release gate.
+
 Date: 2026-11-28
 
 ## Scope

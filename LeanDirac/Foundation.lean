@@ -62,6 +62,28 @@ def cubicalBivectorToVector (b : C3) : C3
   | 1 => -b 1
   | _ => b 0
 
+theorem cube_bivector_to_vector_left_inverse (v : C3) :
+    cubicalBivectorToVector (cubicalVectorToBivector v) = v := by
+  funext component
+  fin_cases component <;>
+    simp [cubicalVectorToBivector, cubicalBivectorToVector]
+
+theorem cube_vector_to_bivector_left_inverse (b : C3) :
+    cubicalVectorToBivector (cubicalBivectorToVector b) = b := by
+  funext component
+  fin_cases component <;>
+    simp [cubicalVectorToBivector, cubicalBivectorToVector]
+
+theorem cube_vector_bivector_density_isometry (v : C3) :
+    density (cubicalVectorToBivector v) = density v := by
+  simp [density, cubicalVectorToBivector, Fin.sum_univ_three]
+  ring
+
+theorem cube_bivector_vector_density_isometry (b : C3) :
+    density (cubicalBivectorToVector b) = density b := by
+  simp [density, cubicalBivectorToVector, Fin.sum_univ_three]
+  ring
+
 structure CubicalVectorBivectorFiber where
   vector : C3
   bivector : C3
@@ -87,8 +109,10 @@ def kappa : ℝ := chi0 / chiKineticNormalization
 
 theorem chi_kinetic_normalization_eq_one :
     chiKineticNormalization = 1 := by
-  norm_num [chiKineticNormalization, density, cubicalVectorToBivector,
-    cubicalReferenceUnitVector, Fin.sum_univ_three, Complex.normSq]
+  rw [chiKineticNormalization,
+    cube_vector_bivector_density_isometry cubicalReferenceUnitVector]
+  norm_num [density, cubicalReferenceUnitVector, Fin.sum_univ_three,
+    Complex.normSq]
 
 theorem kappa_eq_nineteen : kappa = 19 := by
   rw [kappa, chi_kinetic_normalization_eq_one]

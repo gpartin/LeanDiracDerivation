@@ -29,6 +29,8 @@ REQUIRED_DECLARATIONS = {
     ),
     "V36FreeDiracNormalizationIndependence": (
         "v36_free_dirac_normalization_independence",
+        "v36_live_research_action_mode_to_free_dirac",
+        "periodicV36ResearchLagrangianTangentQuotient",
     ),
     "V36KineticMetricClassification": (
         "v36_kinetic_metric_classification",
@@ -48,6 +50,7 @@ REQUIRED_DECLARATIONS = {
     ),
     "V36CompleteGeometricallyNormalizedAction": (
         "v36_complete_geometrically_normalized_action",
+        "liveActionToFreeDirac",
     ),
 }
 
@@ -86,6 +89,7 @@ for path_name, source in (
 for required in (
     "def chiKineticNormalization",
     "density (cubicalVectorToBivector cubicalReferenceUnitVector)",
+    "theorem cube_vector_bivector_density_isometry",
     "theorem kappa_eq_nineteen",
     "def v36ResearchKinetic",
 ):
@@ -112,6 +116,32 @@ for required in (
 ):
     if required not in plan:
         fail(f"plan omits required section: {required}")
+
+release_files = {
+    "README.md": (
+        "V3.6",
+        "v36_live_research_action_mode_to_free_dirac",
+        "python scripts/verify_release.py",
+    ),
+    "docs/REPRODUCIBILITY.md": (
+        "V36_RELEASE_VERIFICATION_PASS",
+        "python scripts/verify_release.py",
+    ),
+    "docs/PROOF_CHAIN.md": (
+        "V3.2",
+        "V3.3",
+        "V3.4",
+        "V3.5",
+        "V3.6",
+    ),
+    "CITATION.cff": ("3.6.0-research",),
+    ".zenodo.json": ("V3.6",),
+}
+for relative_path, required_fragments in release_files.items():
+    source = (ROOT / relative_path).read_text(encoding="utf-8")
+    for required in required_fragments:
+        if required not in source:
+            fail(f"{relative_path} omits release marker: {required}")
 
 # The V3.2--V3.5 release verifiers intentionally reject any change to the
 # older framework lock. V3.6 deliberately changes Foundation and NativeAction,
@@ -151,6 +181,8 @@ for expected in ("propext", "Classical.choice", "Quot.sound"):
 
 if "v36_complete_geometrically_normalized_action" not in combined:
     fail("axiom audit did not print the revised-action cumulative theorem")
+if "v36_live_research_action_mode_to_free_dirac" not in combined:
+    fail("axiom audit did not print the direct live-action theorem")
 
 print("[PASS] V3.6 geometrically normalized action verification")
 sys.exit(0)

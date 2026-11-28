@@ -21,6 +21,7 @@ structure V36GeometricallyNormalizedActionCertificate : Prop where
     V36NormalizationRelation v36LegacyKappa v36LegacyB
   freeDiracUniformInCandidateB :
     V36FreeDiracNormalizationIndependenceCertificate
+  liveActionToFreeDirac : V36LiveActionModeToFreeDirac
   cubeMetricResult : V36KineticMetricClassificationCertificate
   nonlinearRadialConsequence : V36RadialResponseCertificate
 
@@ -31,9 +32,11 @@ theorem v36_complete_geometrically_normalized_action :
   liveActionValue := v36_live_foundation_is_equal_metric_pair
   historicalValueIsControl := v36_legacy_pair_exact.2.2
   freeDiracUniformInCandidateB := v36_free_dirac_normalization_independence
+  liveActionToFreeDirac := v36_live_research_action_mode_to_free_dirac
   cubeMetricResult := v36_kinetic_metric_classification
   nonlinearRadialConsequence := v36_radial_response
 
 #print axioms v36_complete_geometrically_normalized_action
+#print axioms v36_live_research_action_mode_to_free_dirac
 
 end LeanDirac

@@ -41,6 +41,11 @@ therefore survive the revision. This is not a claim that `B` is irrelevant to
 the full theory: it controls live-`chi` inertia outside this decoupled linear
 sector.
 
+The specialization is exposed as the direct theorem
+`v36_live_research_action_mode_to_free_dirac`. Its tangent quotient is defined
+from `v36ResearchC19Lagrangian`, so the revised action and free-Dirac
+conclusion are formally joined rather than merely packaged as separate facts.
+
 In V3.1, the same incidence-derived operators also determine a unique nonzero
 spin normalization. The same half normalization is uniquely selected within
 the explicitly stated class of scalar multiples of local oriented-plane

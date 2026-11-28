@@ -170,7 +170,7 @@ theorem uniform_verlet_local_defect_is_little_o_dt_sq
     by_cases hdt : dt = 0
     · subst dt
       simp
-    · rw [if_neg hdt,
+    · rw [ite_eq_right hdt,
         congrFun (uniform_verlet_local_defect_readout_scale
           r dt momentum phase) component]
       push_cast

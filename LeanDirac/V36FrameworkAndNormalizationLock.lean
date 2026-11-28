@@ -1,5 +1,6 @@
 import LeanDirac.V36CubicalVectorBivectorIsometry
 import LeanDirac.V32Robustness
+import LeanDirac.V35CompleteCovariantObservables
 
 /-!
 # V3.6 Stage 2: geometrically normalized action lock

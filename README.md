@@ -35,6 +35,7 @@ import LeanDirac
 #check LeanDirac.v33_complete_free_spinor
 #check LeanDirac.v34_complete_covariant_free_spinor
 #check LeanDirac.v35_complete_covariant_observables
+#check LeanDirac.v36_live_research_action_mode_to_free_dirac
 #check LeanDirac.v36_complete_geometrically_normalized_action
 ```
 
@@ -267,14 +268,16 @@ of this V3.6 research action to canonical v40.1. See the
 ([technical](docs/V36_RED_TEAM_1_TECHNICAL.md),
 [release](docs/V36_RED_TEAM_2_RELEASE.md)) record the verification boundary.
 
+The direct theorem
+`LeanDirac.v36_live_research_action_mode_to_free_dirac` names the live
+`v36ResearchC19Lagrangian` in its tangent quotient and proves the full
+finite-periodic action-to-free-Dirac conclusion for that action. This avoids
+inferring the connection merely from two certificates packaged side by side.
+
 The finite covariance theorem is for the free Dirac residual and its solution
 space. The bilinear branch proves the five standard definitions, their
 Clifford relations, and Fierz completeness; it does not separately prove the
 finite transformation law of every individual bilinear.
-
-See [the V3.3 plan](docs/V33_FREE_SPINOR_OBSERVABLE_CLOSURE_PLAN.md),
-[dependency matrix](docs/V33_DEPENDENCY_MATRIX.md), and
-[release notes](docs/V33_RELEASE_NOTES.md).
 
 ## Prior work and attribution
 
@@ -299,15 +302,30 @@ software artifact and the same reference set is in
 Install Lean through `elan`, then run:
 
 ```bash
-lake build LeanDirac LeanDiracAudit
 python scripts/verify_release.py
-python scripts/verify_v32_research.py
-python scripts/verify_v35_research.py
 ```
 
-The V3.5 verifier compiles the complete dependency closure, reruns the
-V3.2--V3.4 suites, checks the stage sources, rejects `sorry` and custom axioms,
-and admits only `propext`, `Classical.choice`, and `Quot.sound`.
+This is the one authoritative V3.6 release command. It builds the cumulative
+facade and compiled environment audit, checks the V3.6 proof and release
+surfaces, rejects unfinished proofs and custom axioms in the audited production
+closure, and admits only `propext`, `Classical.choice`, and `Quot.sound`.
+
+## Repository map
+
+- `LeanDirac/`: cumulative production proof modules;
+- `scripts/verify_release.py`: authoritative current release gate;
+- `docs/`: current proof map plus versioned plans, audits, and release records;
+- `Challenge.lean`, `Solution.lean`, `comparator.json`, and
+  `formalization.yaml`: preserved V2 external-submission interface, not the
+  current V3.6 production entry point;
+- `project/dirac_v2_stage_status.json` and `experiments/`: preserved historical
+  release evidence.
+
+The challenge file intentionally contains theorem holes for an external solver;
+`Solution.lean` fills them. Neither file is imported by the production facade
+or counted by the production no-`sorry` claim. See
+[the historical-artifact map](docs/HISTORICAL_SUBMISSION_ARTIFACTS.md) and
+[documentation index](docs/INDEX.md).
 
 See [the proof chain](docs/PROOF_CHAIN.md), [claims](docs/CLAIMS.md), and
 [reproducibility instructions](docs/REPRODUCIBILITY.md).
